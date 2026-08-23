@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* PulseStock dark theme — the only theme for MVP (design.md §2) */
+    --background: 213 31% 6%; /* #0A0E13 abyss */
+    --foreground: 210 37% 94%; /* #E9EFF5 */
+    --card: 217 31% 12%; /* #151D27 */
+    --card-foreground: 210 37% 94%;
+    --popover: 213 30% 9%; /* #10161E */
+    --popover-foreground: 210 37% 94%;
+    --primary: 80 84% 62%; /* #C6F04D lime */
+    --primary-foreground: 213 31% 6%;
+    --secondary: 217 31% 12%;
+    --secondary-foreground: 210 37% 94%;
+    --muted: 217 31% 12%;
+    --muted-foreground: 213 15% 63%; /* #93A1B0 */
+    --accent: 80 84% 62%;
+    --accent-foreground: 213 31% 6%;
+    --destructive: 350 95% 67%; /* #FB5D7A */
+    --destructive-foreground: 210 37% 94%;
+    --border: 215 25% 18%; /* #232E3B hairline */
+    --input: 215 25% 18%;
+    --ring: 80 84% 62%; /* lime focus ring */
+    --radius: 0.75rem; /* 12px cards */
+    --sidebar-background: 213 30% 9%;
+    --sidebar-foreground: 210 37% 94%;
+    --sidebar-primary: 80 84% 62%;
+    --sidebar-primary-foreground: 213 31% 6%;
+    --sidebar-accent: 217 31% 12%;
+    --sidebar-accent-foreground: 210 37% 94%;
+    --sidebar-border: 215 25% 18%;
+    --sidebar-ring: 80 84% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-abyss text-text-primary font-sans antialiased;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  /* All numeric/data text uses tabular figures */
+  .tnum,
+  code,
+  kbd {
+    font-variant-numeric: tabular-nums;
+  }
+  ::selection {
+    background: rgba(198, 240, 77, 0.25);
+  }
+  /* Slim scrollbars for dense UI */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232e3b;
+    border-radius: 8px;
+    border: 2px solid #0a0e13;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *:focus-visible {
+    outline: 2px solid #c6f04d;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Faint dotted grid backdrop, masked to fade toward bottom (design.md §5) */
+  .dotted-grid {
+    background-image: radial-gradient(circle, #232e3b 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.35;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+  }
+  /* Soft radial aurora glow behind page headers */
+  .aurora {
+    background: radial-gradient(
+      600px 240px at 30% 0%,
+      rgba(198, 240, 77, 0.05),
+      transparent
+    );
+  }
+  .font-display {
+    font-family: "Space Grotesk", Inter, sans-serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
