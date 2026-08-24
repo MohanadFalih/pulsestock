@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-08-24T15:56:15.445741+00:00",
+ "syncedAt": "2026-08-24T16:55:53.233235+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -192,20 +192,20 @@
    "sku": "K-20011",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-08-19",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-08-24",
+   "lastOrderDate": "2026-08-24",
+   "orders": 1,
+   "units": 1,
+   "revenue": 79000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -274,15 +274,15 @@
    "odooCreatedDate": "2026-08-18",
    "firstOrderDate": "2026-08-18",
    "lastOrderDate": "2026-08-24",
-   "orders": 18,
-   "units": 18,
-   "revenue": 1368000,
+   "orders": 19,
+   "units": 19,
+   "revenue": 1444000,
    "delivered": 9,
    "returned": 0,
    "unitsBoughtFromSupplier": 18,
    "returnedStock": 1,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 2.57,
+   "orderVelocity7d": 2.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -2197,17 +2197,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-18",
    "firstOrderDate": "2026-07-21",
-   "lastOrderDate": "2026-08-21",
-   "orders": 11,
-   "units": 11,
-   "revenue": 462000,
+   "lastOrderDate": "2026-08-24",
+   "orders": 12,
+   "units": 12,
+   "revenue": 504000,
    "delivered": 11,
    "returned": 0,
    "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 42000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -8889,6 +8889,13 @@
      70000
     ]
    },
+   "7272": {
+    "2026-08-24": [
+     1,
+     1,
+     79000
+    ]
+   },
    "7271": {
     "2026-08-19": [
      4,
@@ -8928,9 +8935,9 @@
      76000
     ],
     "2026-08-24": [
-     1,
-     1,
-     76000
+     2,
+     2,
+     152000
     ]
    },
    "7268": {
@@ -11107,6 +11114,11 @@
      42000
     ],
     "2026-08-21": [
+     1,
+     1,
+     42000
+    ],
+    "2026-08-24": [
      1,
      1,
      42000
@@ -21374,7 +21386,7 @@
    "2026-08-21": 30,
    "2026-08-22": 36,
    "2026-08-23": 43,
-   "2026-08-24": 23
+   "2026-08-24": 26
   }
  }
 }
