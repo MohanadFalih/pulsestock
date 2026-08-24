@@ -119,6 +119,19 @@ function validDaily(d: LiveDailyData | undefined): d is LiveDailyData {
       }
     }
   }
+  // moves cells feed returnsValue/returnPct — one bad cell (NaN, string,
+  // wrong length) poisons the shared Y domain and blanks the whole hero
+  // chart. Sanitize instead of rejecting the whole daily block: a bad
+  // moves cell just means "no delivery data that day" → [0, 0].
+  for (const [iso, cell] of Object.entries(d.moves)) {
+    if (
+      !Array.isArray(cell) ||
+      cell.length !== 2 ||
+      cell.some((n) => typeof n !== "number" || !Number.isFinite(n))
+    ) {
+      d.moves[iso] = [0, 0];
+    }
+  }
   if (d.orders != null) {
     if (typeof d.orders !== "object") return false;
     for (const v of Object.values(d.orders)) {

@@ -681,6 +681,11 @@ function shiftIso(iso: string, delta: number): string {
  * per-product docs (an over-count, labeled as a fallback); `units`/`revenue`
  * are summed over byProduct cells ([1] and [2]).
  */
+/** Coerce to a finite number; anything else (NaN, string, null) → 0. */
+function num(v: unknown): number {
+  return typeof v === "number" && Number.isFinite(v) ? v : 0;
+}
+
 function portfolioDay(iso: string): { orders: number; units: number; revenue: number } {
   let docs = 0;
   let units = 0;
@@ -689,12 +694,12 @@ function portfolioDay(iso: string): { orders: number; units: number; revenue: nu
     for (const perDay of Object.values(liveDaily.byProduct)) {
       const b = perDay[iso];
       if (b) {
-        docs += b[0];
-        units += b[1];
-        revenue += b[2];
+        docs += num(b[0]);
+        units += num(b[1]);
+        revenue += num(b[2]);
       }
     }
-    return { orders: liveDaily.orders?.[iso] ?? docs, units, revenue };
+    return { orders: num(liveDaily.orders?.[iso] ?? docs), units, revenue };
   }
   return { orders: 0, units: 0, revenue: 0 };
 }
@@ -722,14 +727,14 @@ export function getPortfolioSeries(windowDays: number = SERIES_DAYS): DailyPoint
   }
   const days = isoDaysEndingAt(ld.to, windowDays);
   // Average IQD per UNIT (not per order doc) for the returns-value estimate.
-  const totalUnits = sum(products.map((p) => p.units));
-  const totalRevenue = sum(products.map((p) => p.revenue));
+  const totalUnits = sum(products.map((p) => num(p.units)));
+  const totalRevenue = sum(products.map((p) => num(p.revenue)));
   const avgUnit = totalUnits > 0 ? totalRevenue / totalUnits : 0;
   return days.map((iso, i) => {
     const { orders, revenue } = portfolioDay(iso);
     const mv = ld.moves[iso];
-    const delivered = mv?.[0] ?? 0;
-    const returnedUnits = mv?.[1] ?? 0;
+    const delivered = num(mv?.[0]);
+    const returnedUnits = num(mv?.[1]);
     const date = new Date(`${iso}T00:00:00`);
     return {
       day: i + 1,
@@ -771,8 +776,8 @@ export function getReturnTrend(windowDays: number = SERIES_DAYS): ReturnTrendPoi
   }
   return isoDaysEndingAt(ld.to, windowDays).map((iso, i) => {
     const mv = ld.moves[iso];
-    const delivered = mv?.[0] ?? 0;
-    const returned = mv?.[1] ?? 0;
+    const delivered = num(mv?.[0]);
+    const returned = num(mv?.[1]);
     const date = new Date(`${iso}T00:00:00`);
     return {
       day: i + 1,
