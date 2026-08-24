@@ -33,6 +33,7 @@ import {
   getSparklines,
   globalKpis,
   hasLiveDaily,
+  debugHeroSeries,
   needsAttentionList,
   products,
   stageCounts,
@@ -534,6 +535,10 @@ function HeroChart() {
             {mode === "revenue" ? "Revenue vs Ad Spend" : "Orders by Channel"}
           </h2>
           <p className="text-[11.5px] text-text-muted">Daily · last 30 days · from Odoo</p>
+          {/* TEMP diagnostic — remove after hero chart fix is confirmed */}
+          <p className="font-mono text-[10px] text-amber-400">
+            {debugHeroSeries(windowDays)}
+          </p>
         </div>
         <div className="ml-auto flex items-center gap-3">
           <div className="flex items-center gap-2.5">
