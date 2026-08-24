@@ -33,7 +33,6 @@ import {
   getSparklines,
   globalKpis,
   hasLiveDaily,
-  debugHeroSeries,
   needsAttentionList,
   products,
   stageCounts,
@@ -60,7 +59,7 @@ import ChartTooltip from "@/components/ChartTooltip";
 import RoasChip from "@/components/RoasChip";
 import ScaleLight, { SCALE_LIGHT_META } from "@/components/ScaleLight";
 import { cn } from "@/lib/utils";
-import { fmtMoney } from "@/lib/money";
+import { compact, fmtMoney } from "@/lib/money";
 import { isLiveMode, liveSyncLabel, loadLiveData } from "@/data/liveSync";
 import { useAdsVersion, useWindowDays } from "@/data/windowStore";
 import {
@@ -535,10 +534,6 @@ function HeroChart() {
             {mode === "revenue" ? "Revenue vs Ad Spend" : "Orders by Channel"}
           </h2>
           <p className="text-[11.5px] text-text-muted">Daily · last 30 days · from Odoo</p>
-          {/* TEMP diagnostic — remove after hero chart fix is confirmed */}
-          <p className="font-mono text-[10px] text-amber-400">
-            {debugHeroSeries(windowDays)}
-          </p>
         </div>
         <div className="ml-auto flex items-center gap-3">
           <div className="flex items-center gap-2.5">
@@ -615,103 +610,107 @@ function HeroChart() {
               tickLine={false}
             />
             <YAxis
+              domain={[0, "auto"]}
               tick={{ fill: "#5B6875", fontSize: 10.5, fontFamily: "JetBrains Mono" }}
               axisLine={false}
               tickLine={false}
               tickFormatter={(v: number) =>
-                mode === "revenue" ? fmtMoney(v) : `${v}`
+                mode === "revenue" ? compact(v) : `${v}`
               }
             />
             <Tooltip
               content={<HeroTooltip mode={mode} live={live} />}
               cursor={{ stroke: "#33414F", strokeWidth: 1 }}
             />
-            {mode === "revenue" ? (
-              <>
-                <Bar
-                  dataKey="returnsValue"
-                  name={live ? "Returns (est. value)" : "Returns"}
-                  fill="#FB5D7A"
-                  fillOpacity={0.5}
-                  barSize={6}
-                  radius={[2, 2, 0, 0]}
-                  hide={!show("returnsValue")}
-                  isAnimationActive
-                  animationDuration={700}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="revenue"
-                  name="Revenue"
-                  stroke="#C6F04D"
-                  strokeWidth={2.5}
-                  fill="url(#gradLime)"
-                  hide={!show("revenue")}
-                  isAnimationActive
-                  animationDuration={900}
-                  animationEasing="ease-out"
-                />
-                {/* No daily ad spend in live mode — hide the series entirely
-                    rather than plotting zeros. */}
-                {!live && (
-                  <Area
-                    type="monotone"
-                    dataKey="adSpend"
-                    name="Ad spend"
-                    stroke="#3EE6D8"
-                    strokeWidth={2}
-                    fill="url(#gradCyan)"
-                    hide={!show("adSpend")}
-                    isAnimationActive
-                    animationDuration={900}
-                    animationEasing="ease-out"
-                  />
-                )}
-              </>
-            ) : (
-              <>
-                {/* Channel split exists only in mock data; Odoo doesn't tag it. */}
-                {!live && (
-                  <Area
-                    type="monotone"
-                    dataKey="websiteOrders"
-                    name="Website orders"
-                    stroke="#8B7CFF"
-                    strokeWidth={2}
-                    fill="url(#gradViolet)"
-                    hide={!show("websiteOrders")}
-                    isAnimationActive
-                    animationDuration={900}
-                    animationEasing="ease-out"
-                  />
-                )}
-                {!live && (
-                  <Area
-                    type="monotone"
-                    dataKey="chatOrders"
-                    name="Chat orders"
-                    stroke="#3EE6D8"
-                    strokeWidth={2}
-                    fill="url(#gradCyan)"
-                    hide={!show("chatOrders")}
-                    isAnimationActive
-                    animationDuration={900}
-                    animationEasing="ease-out"
-                  />
-                )}
-                <Area
-                  type="monotone"
-                  dataKey="orders"
-                  name="Orders"
-                  stroke="#C6F04D"
-                  strokeWidth={2.5}
-                  fill="url(#gradLime)"
-                  hide={!show("orders")}
-                  isAnimationActive
-                  animationDuration={900}
-                  animationEasing="ease-out"
-                />
-              </>
+            {/*
+              NOTE: Recharts v2 only detects series as DIRECT children —
+              never wrap Bar/Area in a <>fragment</>, it silently drops them.
+            */}
+            {mode === "revenue" && (
+              <Bar
+                dataKey="returnsValue"
+                name={live ? "Returns (est. value)" : "Returns"}
+                fill="#FB5D7A"
+                fillOpacity={0.5}
+                barSize={6}
+                radius={[2, 2, 0, 0]}
+                hide={!show("returnsValue")}
+                isAnimationActive
+                animationDuration={700}
+              />
+            )}
+            {mode === "revenue" && (
+              <Area
+                type="monotone"
+                dataKey="revenue"
+                name="Revenue"
+                stroke="#C6F04D"
+                strokeWidth={2.5}
+                fill="url(#gradLime)"
+                hide={!show("revenue")}
+                isAnimationActive
+                animationDuration={900}
+                animationEasing="ease-out"
+              />
+            )}
+            {/* No daily ad spend in live mode — hide the series entirely
+                rather than plotting zeros. */}
+            {mode === "revenue" && !live && (
+              <Area
+                type="monotone"
+                dataKey="adSpend"
+                name="Ad spend"
+                stroke="#3EE6D8"
+                strokeWidth={2}
+                fill="url(#gradCyan)"
+                hide={!show("adSpend")}
+                isAnimationActive
+                animationDuration={900}
+                animationEasing="ease-out"
+              />
+            )}
+            {/* Channel split exists only in mock data; Odoo doesn't tag it. */}
+            {mode === "orders" && !live && (
+              <Area
+                type="monotone"
+                dataKey="websiteOrders"
+                name="Website orders"
+                stroke="#8B7CFF"
+                strokeWidth={2}
+                fill="url(#gradViolet)"
+                hide={!show("websiteOrders")}
+                isAnimationActive
+                animationDuration={900}
+                animationEasing="ease-out"
+              />
+            )}
+            {mode === "orders" && !live && (
+              <Area
+                type="monotone"
+                dataKey="chatOrders"
+                name="Chat orders"
+                stroke="#3EE6D8"
+                strokeWidth={2}
+                fill="url(#gradCyan)"
+                hide={!show("chatOrders")}
+                isAnimationActive
+                animationDuration={900}
+                animationEasing="ease-out"
+              />
+            )}
+            {mode === "orders" && (
+              <Area
+                type="monotone"
+                dataKey="orders"
+                name="Orders"
+                stroke="#C6F04D"
+                strokeWidth={2.5}
+                fill="url(#gradLime)"
+                hide={!show("orders")}
+                isAnimationActive
+                animationDuration={900}
+                animationEasing="ease-out"
+              />
             )}
           </ComposedChart>
         </ResponsiveContainer>

@@ -18,7 +18,7 @@ export function getCurrency(): string {
 }
 
 /** Compact magnitude: 12,400 → "12,400" · 1,240,000 → "1.2M". */
-function compact(n: number): string {
+export function compact(n: number): string {
   const abs = Math.abs(n);
   if (abs >= 1_000_000) {
     return `${(n / 1_000_000).toFixed(abs >= 10_000_000 ? 0 : 1)}M`;

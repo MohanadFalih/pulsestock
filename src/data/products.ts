@@ -658,36 +658,6 @@ export function hasLiveDaily(): boolean {
   return liveDaily != null;
 }
 
-/**
- * TEMPORARY diagnostic for the blank hero chart: exposes what the chart
- * actually sees after live.json loads in the browser. Remove once fixed.
- */
-export function debugHeroSeries(windowDays: number): string {
-  if (!liveDaily) return "liveDaily=null (mock mode)";
-  const ld = liveDaily;
-  const days = isoDaysEndingAt(ld.to, windowDays);
-  const series = getPortfolioSeries(windowDays);
-  const revSum = series.reduce((a, p) => a + p.revenue, 0);
-  const retMax = Math.max(...series.map((p) => p.returnsValue));
-  const firstPid = Object.keys(ld.byProduct)[0];
-  const sampleKeys = firstPid
-    ? Object.keys(ld.byProduct[firstPid]).slice(0, 3).join(",")
-    : "none";
-  const nonFinite = series.filter(
-    (p) => !Number.isFinite(p.revenue) || !Number.isFinite(p.returnsValue)
-  ).length;
-  return [
-    `n=${series.length}`,
-    `Σrev=${Math.round(revSum).toLocaleString()}`,
-    `maxRet=${Math.round(retMax).toLocaleString()}`,
-    `nonFinite=${nonFinite}`,
-    `to=${ld.to}`,
-    `days[0]=${days[0]}`,
-    `pid=${firstPid ?? "?"}`,
-    `keys=${sampleKeys}`,
-  ].join(" · ");
-}
-
 /** `count` ISO day strings (oldest → newest) ending at `toIso` (UTC days). */
 function isoDaysEndingAt(toIso: string, count: number): string[] {
   const end = Date.parse(`${toIso}T00:00:00Z`);
