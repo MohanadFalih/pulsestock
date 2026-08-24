@@ -37,12 +37,23 @@ needs Odoo credentials in a `.env` that is **never committed**):
 ODOO_URL=https://your-odoo-host
 ODOO_DB=your_db
 ODOO_USER=your_user
-ODOO_PASS=your_api_key
+ODOO_API_KEY=your_api_key
 
 python3 scripts/odoo_sync.py   # writes public/data/live.json
 git add public/data/live.json && git commit -m "data refresh" && git push
 # Vercel auto-redeploys with fresh numbers
 ```
+
+### Automatic refresh (GitHub Actions)
+
+`.github/workflows/odoo-sync.yml` runs the sync **every hour** and commits the
+fresh `live.json`, which triggers a Vercel redeploy. One-time setup:
+
+1. Repo → **Settings → Secrets and variables → Actions → New repository secret**
+2. Add these four secrets (values = your `.env`): `ODOO_URL`, `ODOO_DB`,
+   `ODOO_USER`, `ODOO_API_KEY`
+3. Done. The **Actions** tab shows each hourly run; use **Run workflow** there
+   for a manual refresh anytime.
 
 The audit scripts (`scripts/audit_*.py`) are diagnostics for the sync logic;
 they also read `.env` and are safe to keep in the repo (they contain no secrets).

@@ -100,6 +100,12 @@ def log(msg):
 
 
 def load_env(path):
+    # GitHub Actions (or any CI) provides credentials as environment variables;
+    # locally we fall back to the .env file next to the repo root.
+    ci_keys = ("ODOO_URL", "ODOO_DB", "ODOO_USER", "ODOO_API_KEY")
+    if all(os.environ.get(k) for k in ci_keys):
+        log("credentials: environment variables (CI mode)")
+        return {k: os.environ[k] for k in ci_keys}
     env = {}
     with open(path) as f:
         for line in f:
