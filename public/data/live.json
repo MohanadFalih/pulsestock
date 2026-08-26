@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-08-26T11:45:50.852150+00:00",
+ "syncedAt": "2026-08-26T13:17:34.930152+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10,20 +10,20 @@
    "sku": "H-1886",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-08-26",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-08-26",
+   "lastOrderDate": "2026-08-26",
+   "orders": 1,
+   "units": 1,
+   "revenue": 76000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3601,17 +3601,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-06-27",
    "firstOrderDate": "2026-06-27",
-   "lastOrderDate": "2026-08-23",
-   "orders": 41,
-   "units": 43,
-   "revenue": 3913000,
+   "lastOrderDate": "2026-08-26",
+   "orders": 42,
+   "units": 44,
+   "revenue": 3999450,
    "delivered": 42,
    "returned": 12,
    "unitsBoughtFromSupplier": 35,
    "returnedStock": 1,
    "unitPrice": 91000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -6617,17 +6617,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-04-27",
    "firstOrderDate": "2026-04-27",
-   "lastOrderDate": "2026-08-25",
-   "orders": 118,
-   "units": 124,
-   "revenue": 11651300,
+   "lastOrderDate": "2026-08-26",
+   "orders": 119,
+   "units": 125,
+   "revenue": 11740600,
    "delivered": 122,
    "returned": 35,
    "unitsBoughtFromSupplier": 94,
    "returnedStock": 5,
    "unitPrice": 94000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -8777,6 +8777,13 @@
   "from": "2026-05-28",
   "to": "2026-08-26",
   "byProduct": {
+   "7281": {
+    "2026-08-26": [
+     1,
+     1,
+     76000
+    ]
+   },
    "7280": {
     "2026-08-25": [
      1,
@@ -13311,6 +13318,11 @@
      1,
      1,
      91000
+    ],
+    "2026-08-26": [
+     1,
+     1,
+     86450
     ]
    },
    "7140": {
@@ -18609,6 +18621,11 @@
      1,
      1,
      89300
+    ],
+    "2026-08-26": [
+     1,
+     1,
+     89300
     ]
    },
    "6982": {
@@ -21468,7 +21485,7 @@
    "2026-08-23": 42,
    "2026-08-24": 40,
    "2026-08-25": 35,
-   "2026-08-26": 8
+   "2026-08-26": 11
   }
  }
 }
