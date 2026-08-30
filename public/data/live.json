@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-08-30T00:20:53.286475+00:00",
+ "syncedAt": "2026-08-30T06:40:04.807221+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1605,7 +1605,7 @@
    "revenue": 3193000,
    "delivered": 28,
    "returned": 7,
-   "unitsBoughtFromSupplier": 24,
+   "unitsBoughtFromSupplier": 25,
    "returnedStock": 2,
    "unitPrice": 103000.0,
    "orderVelocity7d": 1.0,
@@ -1813,7 +1813,7 @@
    "revenue": 736000,
    "delivered": 7,
    "returned": 1,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 1,
    "unitPrice": 89000.0,
    "orderVelocity7d": 0.86,
@@ -8403,6 +8403,32 @@
    }
   },
   {
+   "odooId": 4629,
+   "name": "D-6781",
+   "sku": "D-6781",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-07-05",
+   "orders": 120,
+   "units": 125,
+   "revenue": 4592000,
+   "delivered": 125,
+   "returned": 35,
+   "unitsBoughtFromSupplier": 40,
+   "returnedStock": 0,
+   "unitPrice": 26000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 56,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4542,
    "name": "L-1637",
    "sku": "L-1637",
@@ -8455,6 +8481,32 @@
    }
   },
   {
+   "odooId": 4562,
+   "name": "L-1907",
+   "sku": "L-1907",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-14",
+   "lastOrderDate": "2026-08-22",
+   "orders": 182,
+   "units": 194,
+   "revenue": 10024000,
+   "delivered": 190,
+   "returned": 34,
+   "unitsBoughtFromSupplier": 174,
+   "returnedStock": 6,
+   "unitPrice": 59000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 8,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4625,
    "name": "D-6777",
    "sku": "D-6777",
@@ -8474,32 +8526,6 @@
    "unitPrice": 49000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 14,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4518,
-   "name": "L-1153",
-   "sku": "L-1153",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-09",
-   "lastOrderDate": "2026-08-06",
-   "orders": 80,
-   "units": 90,
-   "revenue": 4215000,
-   "delivered": 91,
-   "returned": 13,
-   "unitsBoughtFromSupplier": 39,
-   "returnedStock": 9,
-   "unitPrice": 72000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 24,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -8585,32 +8611,6 @@
    }
   },
   {
-   "odooId": 4548,
-   "name": "L-1727",
-   "sku": "L-1727",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-06-01",
-   "orders": 53,
-   "units": 60,
-   "revenue": 1939000,
-   "delivered": 55,
-   "returned": 13,
-   "unitsBoughtFromSupplier": 26,
-   "returnedStock": 13,
-   "unitPrice": 61000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 90,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4597,
    "name": "L-7300",
    "sku": "L-7300",
@@ -8637,25 +8637,51 @@
    }
   },
   {
-   "odooId": 4562,
-   "name": "L-1907",
-   "sku": "L-1907",
+   "odooId": 4518,
+   "name": "L-1153",
+   "sku": "L-1153",
    "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-08-22",
-   "orders": 182,
-   "units": 194,
-   "revenue": 10024000,
-   "delivered": 190,
-   "returned": 34,
-   "unitsBoughtFromSupplier": 174,
-   "returnedStock": 6,
-   "unitPrice": 59000.0,
+   "firstOrderDate": "2025-07-09",
+   "lastOrderDate": "2026-08-06",
+   "orders": 80,
+   "units": 90,
+   "revenue": 4215000,
+   "delivered": 91,
+   "returned": 13,
+   "unitsBoughtFromSupplier": 39,
+   "returnedStock": 9,
+   "unitPrice": 72000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
+   "daysSinceLastOrder": 24,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4548,
+   "name": "L-1727",
+   "sku": "L-1727",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-06-01",
+   "orders": 53,
+   "units": 60,
+   "revenue": 1939000,
+   "delivered": 55,
+   "returned": 13,
+   "unitsBoughtFromSupplier": 26,
+   "returnedStock": 13,
+   "unitPrice": 61000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 90,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -8680,32 +8706,6 @@
    "unitsBoughtFromSupplier": 54,
    "returnedStock": 1,
    "unitPrice": 31000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 56,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4629,
-   "name": "D-6781",
-   "sku": "D-6781",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-07-05",
-   "orders": 120,
-   "units": 125,
-   "revenue": 4592000,
-   "delivered": 125,
-   "returned": 35,
-   "unitsBoughtFromSupplier": 40,
-   "returnedStock": 0,
-   "unitPrice": 26000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 56,
    "supplierStock": {
@@ -20850,6 +20850,13 @@
      110000
     ]
    },
+   "4629": {
+    "2026-07-05": [
+     1,
+     1,
+     26000
+    ]
+   },
    "4542": {
     "2026-06-04": [
      1,
@@ -20867,120 +20874,6 @@
      1,
      1,
      69000
-    ]
-   },
-   "4625": {
-    "2026-08-16": [
-     1,
-     1,
-     49000
-    ]
-   },
-   "4518": {
-    "2026-08-06": [
-     1,
-     1,
-     72000
-    ]
-   },
-   "4598": {
-    "2026-06-29": [
-     1,
-     1,
-     74000
-    ]
-   },
-   "4577": {
-    "2026-06-03": [
-     1,
-     1,
-     66000
-    ],
-    "2026-06-16": [
-     2,
-     2,
-     132000
-    ],
-    "2026-06-18": [
-     1,
-     1,
-     66000
-    ],
-    "2026-06-28": [
-     1,
-     1,
-     66000
-    ],
-    "2026-06-30": [
-     1,
-     1,
-     66000
-    ],
-    "2026-07-03": [
-     1,
-     1,
-     66000
-    ],
-    "2026-07-30": [
-     1,
-     1,
-     66000
-    ],
-    "2026-08-06": [
-     2,
-     2,
-     132000
-    ]
-   },
-   "4588": {
-    "2026-06-22": [
-     1,
-     1,
-     59000
-    ],
-    "2026-06-27": [
-     1,
-     1,
-     59000
-    ],
-    "2026-06-29": [
-     1,
-     1,
-     59000
-    ],
-    "2026-07-01": [
-     1,
-     1,
-     59000
-    ],
-    "2026-07-06": [
-     1,
-     1,
-     59000
-    ]
-   },
-   "4548": {
-    "2026-06-01": [
-     1,
-     1,
-     49000
-    ]
-   },
-   "4597": {
-    "2026-06-08": [
-     1,
-     1,
-     64000
-    ],
-    "2026-06-11": [
-     2,
-     2,
-     128000
-    ],
-    "2026-08-23": [
-     1,
-     1,
-     64000
     ]
    },
    "4562": {
@@ -21065,18 +20958,125 @@
      118000
     ]
    },
+   "4625": {
+    "2026-08-16": [
+     1,
+     1,
+     49000
+    ]
+   },
+   "4598": {
+    "2026-06-29": [
+     1,
+     1,
+     74000
+    ]
+   },
+   "4577": {
+    "2026-06-03": [
+     1,
+     1,
+     66000
+    ],
+    "2026-06-16": [
+     2,
+     2,
+     132000
+    ],
+    "2026-06-18": [
+     1,
+     1,
+     66000
+    ],
+    "2026-06-28": [
+     1,
+     1,
+     66000
+    ],
+    "2026-06-30": [
+     1,
+     1,
+     66000
+    ],
+    "2026-07-03": [
+     1,
+     1,
+     66000
+    ],
+    "2026-07-30": [
+     1,
+     1,
+     66000
+    ],
+    "2026-08-06": [
+     2,
+     2,
+     132000
+    ]
+   },
+   "4588": {
+    "2026-06-22": [
+     1,
+     1,
+     59000
+    ],
+    "2026-06-27": [
+     1,
+     1,
+     59000
+    ],
+    "2026-06-29": [
+     1,
+     1,
+     59000
+    ],
+    "2026-07-01": [
+     1,
+     1,
+     59000
+    ],
+    "2026-07-06": [
+     1,
+     1,
+     59000
+    ]
+   },
+   "4597": {
+    "2026-06-08": [
+     1,
+     1,
+     64000
+    ],
+    "2026-06-11": [
+     2,
+     2,
+     128000
+    ],
+    "2026-08-23": [
+     1,
+     1,
+     64000
+    ]
+   },
+   "4518": {
+    "2026-08-06": [
+     1,
+     1,
+     72000
+    ]
+   },
+   "4548": {
+    "2026-06-01": [
+     1,
+     1,
+     49000
+    ]
+   },
    "4637": {
     "2026-07-05": [
      1,
      1,
      31000
-    ]
-   },
-   "4629": {
-    "2026-07-05": [
-     1,
-     1,
-     26000
     ]
    }
   },
