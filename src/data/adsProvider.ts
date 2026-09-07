@@ -87,6 +87,7 @@ export type AdsHealth =
   | "in_review"
   | "gathering_data"
   | "traffic"
+  | "paused"
   | "dead";
 
 export const ADS_HEALTH_ORDER: AdsHealth[] = [
@@ -97,6 +98,7 @@ export const ADS_HEALTH_ORDER: AdsHealth[] = [
   "in_review",
   "gathering_data",
   "traffic",
+  "paused",
   "dead",
 ];
 
@@ -108,8 +110,20 @@ export const ADS_HEALTH_META: Record<AdsHealth, { label: string; color: string }
   in_review: { label: "In Review", color: "#45B7F5" },
   gathering_data: { label: "Gathering Data", color: "#8B7CFF" },
   traffic: { label: "Traffic Obj", color: "#67E8F9" },
+  paused: { label: "Paused", color: "#94A3B8" },
   dead: { label: "Dead", color: "#8A95A1" },
 };
+
+/**
+ * Meta delivery states that mean "not delivering because someone paused it"
+ * (ad toggle off, or a parent ad set / campaign paused). DELETED/ARCHIVED are
+ * deliberately excluded — those keep the endpoint's verdict.
+ */
+const PAUSED_STATUSES = new Set(["PAUSED", "ADSET_PAUSED", "CAMPAIGN_PAUSED"]);
+
+export function isAdPaused(a: { effectiveStatus: string }): boolean {
+  return PAUSED_STATUSES.has(a.effectiveStatus);
+}
 
 /**
  * Traffic-objective ads (e.g. "DM_SHOP_Traffic" — landing-page-view
@@ -255,12 +269,13 @@ function normalizeAd(raw: Raw): MetaAd {
   const name = str(raw.name, "Untitled ad");
   const adset = str(raw.adset);
   const campaign = str(raw.campaign);
+  const effectiveStatus = str(raw.effectiveStatus, str(raw.status, "UNKNOWN"));
   return {
     id: str(raw.id),
     name,
     sku: skuOrNull(raw.sku),
     status: str(raw.status, "UNKNOWN"),
-    effectiveStatus: str(raw.effectiveStatus, str(raw.status, "UNKNOWN")),
+    effectiveStatus,
     adset,
     campaign,
     spent: num(raw.spent),
@@ -277,9 +292,14 @@ function normalizeAd(raw: Raw): MetaAd {
     healthRoas: numOrNull(raw.healthRoas),
     healthCpa: numOrNull(raw.healthCpa),
     healthFrequency: numOrNull(raw.healthFrequency),
-    health: isTrafficAd({ name, campaign, adset })
-      ? "traffic"
-      : health(raw.health),
+    // Client-side overrides of the endpoint's purchase-CPA verdict:
+    // paused ads aren't delivering (a "healthy" badge on a paused ad is a
+    // wrong signal), and traffic-obj ads are judged on the wrong metric.
+    health: isAdPaused({ effectiveStatus })
+      ? "paused"
+      : isTrafficAd({ name, campaign, adset })
+        ? "traffic"
+        : health(raw.health),
   };
 }
 
@@ -299,12 +319,14 @@ function normalizeProduct(raw: Raw): AdsProduct {
     healthSpent: num(raw.healthSpent),
     healthRoas: numOrNull(raw.healthRoas),
     healthCpa: numOrNull(raw.healthCpa),
-    // Traffic-only products: the endpoint's purchase-CPA verdict is
-    // meaningless — show the neutral traffic state instead.
+    // Whole-product overrides: if NOTHING is delivering, the endpoint's
+    // purchase-CPA verdict is stale/meaningless — say so honestly.
     health:
-      ads.length > 0 && ads.every((a) => isTrafficAd(a))
-        ? "traffic"
-        : health(raw.health),
+      ads.length > 0 && ads.every((a) => isAdPaused(a))
+        ? "paused"
+        : ads.length > 0 && ads.every((a) => isTrafficAd(a))
+          ? "traffic"
+          : health(raw.health),
     adCount: num(raw.adCount),
     ads,
   };
@@ -314,10 +336,13 @@ function normalizePayload(payload: Raw): AdsData | null {
   if (!Array.isArray(payload.products) || !Array.isArray(payload.ads)) return null;
   const summary = (payload.summary ?? {}) as Raw;
   const config = (payload.config ?? {}) as Raw;
-  const rawCounts = (summary.healthCounts ?? {}) as Raw;
+  const ads = payload.ads.map((a) => normalizeAd(a as Raw));
+  // Counts are computed client-side AFTER reclassification — the endpoint's
+  // raw healthCounts would still count traffic/paused ads as "kill" etc.
   const healthCounts = Object.fromEntries(
-    ADS_HEALTH_ORDER.map((h) => [h, num(rawCounts[h])])
+    ADS_HEALTH_ORDER.map((h) => [h, 0])
   ) as Record<AdsHealth, number>;
+  for (const a of ads) healthCounts[a.health] += 1;
   return {
     source: str(payload.source, "meta-marketing-api"),
     currency: str(payload.currency, "USD"),
@@ -354,7 +379,7 @@ function normalizePayload(payload: Raw): AdsData | null {
         : [],
     },
     products: payload.products.map((p) => normalizeProduct(p as Raw)),
-    ads: payload.ads.map((a) => normalizeAd(a as Raw)),
+    ads,
   };
 }
 
