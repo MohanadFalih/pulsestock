@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-07T18:27:34.260629+00:00",
+ "syncedAt": "2026-09-07T19:58:59.390012+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1496,15 +1496,15 @@
    "odooCreatedDate": "2026-08-10",
    "firstOrderDate": "2026-08-10",
    "lastOrderDate": "2026-09-07",
-   "orders": 55,
-   "units": 56,
-   "revenue": 5096000,
+   "orders": 56,
+   "units": 57,
+   "revenue": 5187000,
    "delivered": 55,
    "returned": 14,
    "unitsBoughtFromSupplier": 49,
    "returnedStock": 6,
    "unitPrice": 91000.0,
-   "orderVelocity7d": 0.29,
+   "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -2197,17 +2197,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-28",
    "firstOrderDate": "2026-07-28",
-   "lastOrderDate": "2026-09-04",
-   "orders": 29,
-   "units": 30,
-   "revenue": 2935100,
+   "lastOrderDate": "2026-09-07",
+   "orders": 30,
+   "units": 31,
+   "revenue": 3033100,
    "delivered": 28,
    "returned": 6,
    "unitsBoughtFromSupplier": 30,
    "returnedStock": 6,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2483,17 +2483,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-07-24",
    "firstOrderDate": "2026-07-24",
-   "lastOrderDate": "2026-09-04",
-   "orders": 12,
-   "units": 12,
-   "revenue": 1092000,
+   "lastOrderDate": "2026-09-07",
+   "orders": 13,
+   "units": 13,
+   "revenue": 1181000,
    "delivered": 9,
    "returned": 1,
    "unitsBoughtFromSupplier": 12,
    "returnedStock": 1,
    "unitPrice": 89000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -5473,17 +5473,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-06-06",
    "firstOrderDate": "2026-06-07",
-   "lastOrderDate": "2026-09-06",
-   "orders": 13,
-   "units": 14,
-   "revenue": 826000,
+   "lastOrderDate": "2026-09-07",
+   "orders": 14,
+   "units": 16,
+   "revenue": 944000,
    "delivered": 14,
    "returned": 7,
    "unitsBoughtFromSupplier": 11,
    "returnedStock": 4,
    "unitPrice": 59000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9979,9 +9979,9 @@
      91000
     ],
     "2026-09-07": [
-     1,
-     1,
-     91000
+     2,
+     2,
+     182000
     ]
    },
    "7250": {
@@ -10902,6 +10902,11 @@
      1,
      1,
      98000
+    ],
+    "2026-09-07": [
+     1,
+     1,
+     98000
     ]
    },
    "7223": {
@@ -11239,6 +11244,11 @@
      178000
     ],
     "2026-09-04": [
+     1,
+     1,
+     89000
+    ],
+    "2026-09-07": [
      1,
      1,
      89000
@@ -16909,6 +16919,11 @@
      1,
      1,
      59000
+    ],
+    "2026-09-07": [
+     1,
+     2,
+     118000
     ]
    },
    "7089": {
@@ -22226,10 +22241,79 @@
    "2026-09-04": 38,
    "2026-09-05": 55,
    "2026-09-06": 37,
-   "2026-09-07": 31
+   "2026-09-07": 34
   }
  },
  "ordersDetail": [
+  {
+   "id": "S31903",
+   "d": "2026-09-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-7077",
+     "qty": 1,
+     "price": 91000,
+     "discPct": 0,
+     "del": 0
+    },
+    {
+     "sku": "T-7069",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "قبل وبعد (مختلط)"
+  },
+  {
+   "id": "S31902",
+   "d": "2026-09-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -52000,
+   "lines": [
+    {
+     "sku": "L-1435",
+     "qty": 1,
+     "price": 59000,
+     "discPct": 42.3,
+     "del": 0
+    },
+    {
+     "sku": "L-1435",
+     "qty": 1,
+     "price": 59000,
+     "discPct": 42.3,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S31901",
+   "d": "2026-09-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -45000,
+   "lines": [
+    {
+     "sku": "K-5036",
+     "qty": 1,
+     "price": 89000,
+     "discPct": 47.9,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S31900",
    "d": "2026-09-07",
