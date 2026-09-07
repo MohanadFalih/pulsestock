@@ -21,7 +21,7 @@
  */
 
 import { ALERT_THRESHOLDS } from "./decisionEngine";
-import { isTrafficAd } from "./adsProvider";
+import { isTrafficAd, isAdNotDelivering } from "./adsProvider";
 import type { Product } from "./products";
 import type { OpsPayload, OpsStockItem } from "./opsData";
 
@@ -198,12 +198,10 @@ function adsRules(
     const trafficOnly =
       meta != null && meta.adCount > 0 && conversionAds.length === 0;
 
-    // Delivery state — an ad only "delivers" when effectiveStatus is ACTIVE
-    // (Meta reports ADSET_PAUSED/CAMPAIGN_PAUSED for ads whose toggle is on
-    // but a parent is off, which is exactly how ads quietly stop).
-    const liveConvAds = conversionAds.filter(
-      (ad) => ad.effectiveStatus === "ACTIVE"
-    );
+    // Delivery state — an ad only counts as running when it is actually
+    // delivering: not paused at any level AND spending in the health window
+    // (catches "Completed" schedules that Meta's API may report as ACTIVE).
+    const liveConvAds = conversionAds.filter((ad) => !isAdNotDelivering(ad));
 
     // STOPPED — conversion ads exist but none are delivering. Kill/scale are
     // meaningless while nothing runs: a stopped bleeder is already handled,

@@ -126,6 +126,26 @@ export function isAdPaused(a: { effectiveStatus: string }): boolean {
 }
 
 /**
+ * "Not delivering" — the ground truth for "is this ad working?":
+ *  1. paused by status (ad / ad set / campaign off), OR
+ *  2. it spent money in the selected range but delivered NOTHING in the
+ *     health window — this catches "Completed" schedules, which Meta's API
+ *     may still report as ACTIVE even though delivery has stopped.
+ * A brand-new ad (spent 0, healthSpent 0) is deliberately NOT caught: it
+ * keeps the endpoint's gathering_data verdict.
+ */
+export function isAdNotDelivering(a: {
+  effectiveStatus: string;
+  spent: number;
+  healthSpent: number;
+}): boolean {
+  return (
+    PAUSED_STATUSES.has(a.effectiveStatus) ||
+    (a.spent > 0 && a.healthSpent === 0)
+  );
+}
+
+/**
  * Traffic-objective ads (e.g. "DM_SHOP_Traffic" — landing-page-view
  * campaigns) burn budget with zero purchases BY DESIGN. The endpoint judges
  * every ad on purchase CPA, so traffic ads come back health='kill' and land
@@ -270,6 +290,8 @@ function normalizeAd(raw: Raw): MetaAd {
   const adset = str(raw.adset);
   const campaign = str(raw.campaign);
   const effectiveStatus = str(raw.effectiveStatus, str(raw.status, "UNKNOWN"));
+  const spent = num(raw.spent);
+  const healthSpent = num(raw.healthSpent);
   return {
     id: str(raw.id),
     name,
@@ -278,7 +300,7 @@ function normalizeAd(raw: Raw): MetaAd {
     effectiveStatus,
     adset,
     campaign,
-    spent: num(raw.spent),
+    spent,
     impressions: num(raw.impressions),
     purchases: num(raw.purchases),
     purchaseValue: num(raw.purchaseValue),
@@ -287,15 +309,15 @@ function normalizeAd(raw: Raw): MetaAd {
     cpm: numOrNull(raw.cpm),
     ctr: numOrNull(raw.ctr),
     frequency: numOrNull(raw.frequency),
-    healthSpent: num(raw.healthSpent),
+    healthSpent,
     healthPurchases: num(raw.healthPurchases),
     healthRoas: numOrNull(raw.healthRoas),
     healthCpa: numOrNull(raw.healthCpa),
     healthFrequency: numOrNull(raw.healthFrequency),
     // Client-side overrides of the endpoint's purchase-CPA verdict:
-    // paused ads aren't delivering (a "healthy" badge on a paused ad is a
-    // wrong signal), and traffic-obj ads are judged on the wrong metric.
-    health: isAdPaused({ effectiveStatus })
+    // a non-delivering ad with a "healthy"/"gathering" badge is a wrong
+    // signal, and traffic-obj ads are judged on the wrong metric.
+    health: isAdNotDelivering({ effectiveStatus, spent, healthSpent })
       ? "paused"
       : isTrafficAd({ name, campaign, adset })
         ? "traffic"
@@ -322,7 +344,7 @@ function normalizeProduct(raw: Raw): AdsProduct {
     // Whole-product overrides: if NOTHING is delivering, the endpoint's
     // purchase-CPA verdict is stale/meaningless — say so honestly.
     health:
-      ads.length > 0 && ads.every((a) => isAdPaused(a))
+      ads.length > 0 && ads.every((a) => isAdNotDelivering(a))
         ? "paused"
         : ads.length > 0 && ads.every((a) => isTrafficAd(a))
           ? "traffic"
