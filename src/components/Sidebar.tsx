@@ -2,14 +2,17 @@ import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
+  Boxes,
   ChevronsLeft,
   ChevronsRight,
   LayoutDashboard,
+  ListChecks,
   LogOut,
   Megaphone,
   Package,
   Settings,
   Truck,
+  Wallet,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -37,6 +40,9 @@ function navItems(): NavItem[] {
     { label: "Products", to: "/products", icon: Package, count: globalKpis.totalProducts },
     { label: "Decisions", to: "/decisions", icon: Zap, count: globalKpis.needsAttention, countTone: "amber" },
     { label: "Ads", to: "/ads", icon: Megaphone, count: getAdsSnapshot()?.summary.totalAds },
+    { label: "Daily Tasks", to: "/tasks", icon: ListChecks },
+    { label: "Finance", to: "/finance", icon: Wallet },
+    { label: "Inventory", to: "/inventory", icon: Boxes },
     { label: "Suppliers", to: "/suppliers", icon: Truck, disabled: true },
     { label: "Settings", to: "/settings", icon: Settings, disabled: true },
   ];

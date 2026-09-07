@@ -6,6 +6,9 @@ import Products from "@/pages/Products";
 import ProductDetail from "@/pages/ProductDetail";
 import Decisions from "@/pages/Decisions";
 import Ads from "@/pages/Ads";
+import Tasks from "@/pages/Tasks";
+import Finance from "@/pages/Finance";
+import Inventory from "@/pages/Inventory";
 
 export default function App() {
   return (
@@ -17,6 +20,9 @@ export default function App() {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/decisions" element={<Decisions />} />
           <Route path="/ads" element={<Ads />} />
+          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/finance" element={<Finance />} />
+          <Route path="/inventory" element={<Inventory />} />
           <Route path="*" element={<Overview />} />
         </Routes>
       </Layout>

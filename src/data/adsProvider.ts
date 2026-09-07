@@ -86,6 +86,7 @@ export type AdsHealth =
   | "kill"
   | "in_review"
   | "gathering_data"
+  | "traffic"
   | "dead";
 
 export const ADS_HEALTH_ORDER: AdsHealth[] = [
@@ -95,6 +96,7 @@ export const ADS_HEALTH_ORDER: AdsHealth[] = [
   "kill",
   "in_review",
   "gathering_data",
+  "traffic",
   "dead",
 ];
 
@@ -105,8 +107,27 @@ export const ADS_HEALTH_META: Record<AdsHealth, { label: string; color: string }
   kill: { label: "Kill", color: "#FB5D7A" },
   in_review: { label: "In Review", color: "#45B7F5" },
   gathering_data: { label: "Gathering Data", color: "#8B7CFF" },
+  traffic: { label: "Traffic Obj", color: "#67E8F9" },
   dead: { label: "Dead", color: "#8A95A1" },
 };
+
+/**
+ * Traffic-objective ads (e.g. "DM_SHOP_Traffic" — landing-page-view
+ * campaigns) burn budget with zero purchases BY DESIGN. The endpoint judges
+ * every ad on purchase CPA, so traffic ads come back health='kill' and land
+ * on the kill list — wrong recommendations. The bridge payload carries no
+ * objective field, so we detect them by the "traffic" naming convention in
+ * campaign/adset/ad name and reclassify them client-side.
+ */
+export function isTrafficAd(a: {
+  name: string;
+  campaign?: string;
+  adset?: string;
+}): boolean {
+  return `${a.name} ${a.campaign ?? ""} ${a.adset ?? ""}`
+    .toLowerCase()
+    .includes("traffic");
+}
 
 /** One Meta ad (raw USD metrics; health metrics cover `healthWindow`). */
 export interface MetaAd {
@@ -231,14 +252,17 @@ function health(v: unknown): AdsHealth {
 }
 
 function normalizeAd(raw: Raw): MetaAd {
+  const name = str(raw.name, "Untitled ad");
+  const adset = str(raw.adset);
+  const campaign = str(raw.campaign);
   return {
     id: str(raw.id),
-    name: str(raw.name, "Untitled ad"),
+    name,
     sku: skuOrNull(raw.sku),
     status: str(raw.status, "UNKNOWN"),
     effectiveStatus: str(raw.effectiveStatus, str(raw.status, "UNKNOWN")),
-    adset: str(raw.adset),
-    campaign: str(raw.campaign),
+    adset,
+    campaign,
     spent: num(raw.spent),
     impressions: num(raw.impressions),
     purchases: num(raw.purchases),
@@ -253,11 +277,16 @@ function normalizeAd(raw: Raw): MetaAd {
     healthRoas: numOrNull(raw.healthRoas),
     healthCpa: numOrNull(raw.healthCpa),
     healthFrequency: numOrNull(raw.healthFrequency),
-    health: health(raw.health),
+    health: isTrafficAd({ name, campaign, adset })
+      ? "traffic"
+      : health(raw.health),
   };
 }
 
 function normalizeProduct(raw: Raw): AdsProduct {
+  const ads = Array.isArray(raw.ads)
+    ? raw.ads.map((a) => normalizeAd(a as Raw))
+    : [];
   return {
     sku: str(raw.sku),
     spent: num(raw.spent),
@@ -270,9 +299,14 @@ function normalizeProduct(raw: Raw): AdsProduct {
     healthSpent: num(raw.healthSpent),
     healthRoas: numOrNull(raw.healthRoas),
     healthCpa: numOrNull(raw.healthCpa),
-    health: health(raw.health),
+    // Traffic-only products: the endpoint's purchase-CPA verdict is
+    // meaningless — show the neutral traffic state instead.
+    health:
+      ads.length > 0 && ads.every((a) => isTrafficAd(a))
+        ? "traffic"
+        : health(raw.health),
     adCount: num(raw.adCount),
-    ads: Array.isArray(raw.ads) ? raw.ads.map((a) => normalizeAd(a as Raw)) : [],
+    ads,
   };
 }
 
@@ -310,10 +344,13 @@ function normalizePayload(payload: Raw): AdsData | null {
       avgROAS: numOrNull(summary.avgROAS),
       healthCounts,
       killList: Array.isArray(summary.killList)
-        ? summary.killList.map((k) => {
-            const r = k as Raw;
-            return { name: str(r.name, "Untitled ad"), sku: skuOrNull(r.sku), spent: num(r.spent) };
-          })
+        ? summary.killList
+            .map((k) => {
+              const r = k as Raw;
+              return { name: str(r.name, "Untitled ad"), sku: skuOrNull(r.sku), spent: num(r.spent) };
+            })
+            // Traffic-objective ads never belong on a kill list.
+            .filter((k) => !k.name.toLowerCase().includes("traffic"))
         : [],
     },
     products: payload.products.map((p) => normalizeProduct(p as Raw)),

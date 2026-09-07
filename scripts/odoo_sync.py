@@ -52,6 +52,17 @@ Note: sale.order.line has no product_tmpl_id field on this install, so every
 read_group groups by product_id and results are rolled up to templates via a
 variant->template map built once.
 
+Extra top-level blocks (Cash P&L page, compact keys — see sections 6c/6d)
+--------------------------------------------------------------------------
+  ordersDetail  confirmed orders (sale/done) from the last 120 local days,
+                order-line granularity: {id, d, src?, ful?, st, fee, disc,
+                lines:[{sku, qty, price, discPct, route?, del, ret?}]}
+  stockDetail   every variant with qty_available > 0 OR created in the last
+                180 days: {sku, model, qty, cost, created}
+Field names (source, "نوع التجهيز") are discovered at runtime via fields_get,
+never hardcoded. Delivery-fee lines fold into order `fee`; discount lines
+("خصم", loyalty) fold into order `disc` (negative).
+
 Stage inference (connector owns `stage`; the frontend owns rates/alerts)
 ------------------------------------------------------------------------
   orders == 0                                   -> 'created'
@@ -73,6 +84,7 @@ alerts and scale readiness from those raw fields.
 import datetime
 import json
 import os
+import re
 import sys
 import time
 import urllib.request
@@ -87,6 +99,9 @@ RECENT_ORDER_DAYS = 90     # selection window B (covers the whole daily series)
 MAX_PRODUCTS = 400         # safety cap only — the full active set is ~320
 VELOCITY_DAYS = 7
 DAILY_DAYS = 90            # daily time-series depth for window selectors
+ORDERS_DETAIL_DAYS = 120   # ordersDetail window (Cash P&L page)
+STOCK_DETAIL_CREATE_DAYS = 180  # stockDetail: variants created within this window
+TURKEY_ROUTE_NAME = "Order from Turkey"  # stock.route name => line route "turkey"
 RPC_TIMEOUT = 60
 # All dates/days are bucketed in the shop's local timezone (Iraq = UTC+3,
 # no DST) so dashboard days match what the user sees in the Odoo UI.
@@ -188,10 +203,12 @@ def main():
     # Delivery-fee products are linked from delivery.carrier; discount lines
     # come from loyalty rewards; plus exact-name manual discounts.
     pseudo_variant_ids = set()
+    carrier_variant_ids = set()   # delivery-fee products (folded into order fee)
     try:
         for c in odoo.kw("delivery.carrier", "search_read", [[]],
                          {"fields": ["product_id"]}):
             if c.get("product_id"):
+                carrier_variant_ids.add(c["product_id"][0])
                 pseudo_variant_ids.add(c["product_id"][0])
     except Exception as e:
         log(f"  warning: delivery.carrier lookup failed ({e})")
@@ -436,6 +453,218 @@ def main():
     log(f"  shop stock: {shop_units:.0f} units across {shop_products} variants, "
         f"≈{shop_value:,.0f} {currency} (valued at cost)")
 
+    # ── 6c. ordersDetail — order-line detail for the Cash P&L page ─────────
+    # Confirmed sale orders (state sale/done) created in the last
+    # ORDERS_DETAIL_DAYS local days, with per-line granularity. Field names
+    # are discovered at runtime via fields_get (never hardcoded guesses):
+    #   src  <- sale.order.source_id (utm.source) when present
+    #   ful  <- the custom field labeled "نوع التجهيز" (x_studio_*), selection
+    #           labels mapped via fields_get; falls back to line-route
+    #           derivation ("turkey" when any line routes Order from Turkey)
+    log("building ordersDetail (confirmed orders, last "
+        f"{ORDERS_DETAIL_DAYS}d)…")
+    so_fields = odoo.kw("sale.order", "fields_get", [],
+                        {"attributes": ["string", "type", "selection"]})
+    src_field = "source_id" if "source_id" in so_fields else None
+    ful_field = None
+    ful_labels = {}
+    for fname, fdef in sorted(so_fields.items()):
+        if "تجهيز" in (fdef.get("string") or ""):
+            ful_field = fname
+            if fdef.get("type") == "selection":
+                ful_labels = dict(fdef.get("selection") or [])
+            break
+    log(f"  sale.order fields: src={src_field} ful={ful_field}")
+
+    sol_fields = odoo.kw("sale.order.line", "fields_get", [],
+                         {"attributes": ["type"]})
+    line_fields = ["order_id", "product_id", "name", "display_type",
+                   "product_uom_qty", "qty_delivered", "price_unit",
+                   "price_total"]
+    has_route = "route_id" in sol_fields
+    if has_route:
+        line_fields.append("route_id")
+
+    detail_from = days_ago(ORDERS_DETAIL_DAYS)
+    order_fields = ["name", "create_date", "state"]
+    if src_field:
+        order_fields.append(src_field)
+    if ful_field:
+        order_fields.append(ful_field)
+    orders = odoo.kw(
+        "sale.order", "search_read",
+        [[["state", "in", ["sale", "done"]],
+          ["create_date", ">=", detail_from]]],
+        {"fields": order_fields, "limit": 20000, "order": "create_date desc"})
+    order_ids = [o["id"] for o in orders]
+    log(f"  {len(orders)} confirmed orders since {detail_from}")
+
+    # Order lines, chunked by order id.
+    lines = []
+    for i in range(0, len(order_ids), 400):
+        chunk = order_ids[i:i + 400]
+        lines.extend(odoo.kw(
+            "sale.order.line", "search_read",
+            [[["order_id", "in", chunk]]],
+            {"fields": line_fields, "limit": 20000}))
+    log(f"  {len(lines)} order lines fetched")
+
+    # SKU lookup: default_code beats display-name prefix.
+    line_variant_ids = sorted({ln["product_id"][0] for ln in lines
+                               if ln.get("product_id")})
+    sku_of_variant = {}
+    for i in range(0, len(line_variant_ids), 200):
+        chunk = line_variant_ids[i:i + 200]
+        for v in odoo.kw("product.product", "read",
+                         [chunk, ["default_code"]]):
+            sku_of_variant[v["id"]] = v.get("default_code") or None
+
+    # Returned qty per sale line (cheap: one read_group on stock.move).
+    ret_by_line = {}
+    try:
+        for r in odoo.read_group(
+                "stock.move",
+                [("origin_returned_move_id", "!=", False),
+                 ("state", "=", "done"),
+                 ("sale_line_id", "!=", False)],
+                ["product_uom_qty:sum"], ["sale_line_id"]):
+            if r.get("sale_line_id"):
+                ret_by_line[r["sale_line_id"][0]] = \
+                    r.get("product_uom_qty") or 0.0
+    except Exception as e:
+        log(f"  warning: per-line returns lookup failed ({e})")
+
+    def line_sku(ln):
+        pid = ln["product_id"][0]
+        code = sku_of_variant.get(pid)
+        if code:
+            return code
+        return (ln["product_id"][1] or "").split(" (")[0].strip()
+
+    def is_discount_line(ln):
+        pid = ln["product_id"][0] if ln.get("product_id") else None
+        pname = (ln["product_id"][1] if ln.get("product_id") else "") or ""
+        if pid is not None and pid in pseudo_variant_ids \
+                and pid not in carrier_variant_ids:
+            return True
+        return pname.strip() in PSEUDO_NAMES
+
+    pct_re = re.compile(r"(\d+(?:[.,]\d+)?)\s*%")
+    lines_by_order = {}
+    for ln in lines:
+        if ln.get("display_type"):          # sections/notes are not products
+            continue
+        oid = ln["order_id"][0] if ln.get("order_id") else None
+        if oid is not None:
+            lines_by_order.setdefault(oid, []).append(ln)
+
+    orders_detail = []
+    for o in orders:
+        oid = o["id"]
+        olines = lines_by_order.get(oid, [])
+        fee = 0.0
+        disc = 0.0
+        disc_pcts = []
+        product_lines = []
+        any_turkey = False
+        for ln in olines:
+            pid = ln["product_id"][0] if ln.get("product_id") else None
+            total = ln.get("price_total") or 0.0
+            if pid is not None and pid in carrier_variant_ids:
+                fee += total
+                continue
+            if is_discount_line(ln):
+                disc += total
+                m = pct_re.search(ln.get("name") or "")
+                if m:
+                    disc_pcts.append(float(m.group(1).replace(",", ".")))
+                continue
+            qty = ln.get("product_uom_qty") or 0.0
+            price = round(total / qty) if qty else round(
+                ln.get("price_unit") or 0.0)
+            route = None
+            if has_route and ln.get("route_id") \
+                    and ln["route_id"][1] == TURKEY_ROUTE_NAME:
+                route = "turkey"
+                any_turkey = True
+            entry = {"sku": line_sku(ln),
+                     "qty": round(qty),
+                     "price": price,
+                     "discPct": 0,
+                     "del": round(ln.get("qty_delivered") or 0.0)}
+            if route:
+                entry["route"] = route
+            ret = ret_by_line.get(ln["id"], 0.0)
+            if ret:
+                entry["ret"] = round(ret)
+            product_lines.append(entry)
+        # Attach the discount percent to product lines only when unambiguous
+        # (every discount line in the order shows the same percent).
+        if disc_pcts and len(set(disc_pcts)) == 1:
+            pct = round(disc_pcts[0], 1)
+            for entry in product_lines:
+                entry["discPct"] = pct
+
+        src = o[src_field][1] if src_field and o.get(src_field) else None
+        ful = None
+        if ful_field and o.get(ful_field):
+            fv = o[ful_field]
+            if isinstance(fv, list):          # many2one -> display name
+                ful = fv[1]
+            else:                             # selection -> label
+                ful = ful_labels.get(fv, fv)
+        if not ful and any_turkey:
+            ful = "turkey"
+        rec = {"id": o.get("name") or str(oid),
+               "d": local_day(o.get("create_date")),
+               "st": o.get("state"),
+               "fee": round(fee),
+               "disc": round(disc),
+               "lines": product_lines}
+        if src:
+            rec["src"] = src
+        if ful:
+            rec["ful"] = ful
+        orders_detail.append(rec)
+    log(f"  ordersDetail: {len(orders_detail)} orders, "
+        f"{sum(len(o['lines']) for o in orders_detail)} product lines")
+
+    # ── 6d. stockDetail — per-variant stock for the Cash P&L page ──────────
+    # Every variant with qty_available > 0 OR created in the last
+    # STOCK_DETAIL_CREATE_DAYS days. sku = variant display name, model = name
+    # before " (", cost = standard_price (AVCO) in IQD.
+    log("building stockDetail…")
+    stock_detail = []
+    offset = 0
+    sd_domain = ["|", ["qty_available", ">", 0],
+                 ["create_date", ">=", days_ago(STOCK_DETAIL_CREATE_DAYS)]]
+    while True:
+        batch = odoo.kw(
+            "product.product", "search_read", [sd_domain],
+            {"fields": ["name", "qty_available", "standard_price",
+                        "create_date"],
+             "limit": 2000, "offset": offset})
+        for v in batch:
+            if v["id"] in pseudo_variant_ids:
+                continue
+            name = (v.get("name") or "").strip()
+            if name in PSEUDO_NAMES:
+                continue
+            stock_detail.append({
+                "sku": name,
+                "model": name.split(" (")[0].strip(),
+                "qty": round(v.get("qty_available") or 0.0),
+                "cost": round(v.get("standard_price") or 0.0),
+                "created": local_day(v.get("create_date")),
+            })
+        if len(batch) < 2000:
+            break
+        offset += 2000
+    sd_units = sum(i["qty"] for i in stock_detail if i["qty"] > 0)
+    sd_value = sum(i["qty"] * i["cost"] for i in stock_detail if i["qty"] > 0)
+    log(f"  stockDetail: {len(stock_detail)} variants, "
+        f"{sd_units:.0f} on-hand units, ≈{sd_value:,.0f} {currency} at cost")
+
     # ── 7. Assemble records ─────────────────────────────────────────────────
     log("assembling live.json records…")
     products = []
@@ -527,6 +756,8 @@ def main():
             "orders": {day: n for day, n in sorted(daily_orders.items())
                        if day >= daily_from},
         },
+        "ordersDetail": orders_detail,
+        "stockDetail": stock_detail,
     }
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     tmp = OUT_PATH + ".tmp"
@@ -539,6 +770,20 @@ def main():
         stages[p["stage"]] = stages.get(p["stage"], 0) + 1
     log(f"done in {time.time() - t0:.1f}s — {len(products)} products → {OUT_PATH}")
     log(f"stage mix: {stages}")
+
+    # ── Verification summary (reconcile vs ground truth) ────────────────────
+    if orders_detail:
+        n_ord = len(orders_detail)
+        qty_sum = sum(l["qty"] for o in orders_detail for l in o["lines"])
+        del_sum = sum(l["del"] for o in orders_detail for l in o["lines"])
+        log(f"VERIFY ordersDetail: {n_ord} orders / {ORDERS_DETAIL_DAYS}d "
+            f"= {n_ord / ORDERS_DETAIL_DAYS:.1f}/day "
+            f"(expect ~4,300 orders, ~44/day)")
+        log(f"VERIFY delivery rate: {del_sum}/{qty_sum} = "
+            f"{(100.0 * del_sum / qty_sum if qty_sum else 0):.1f}% "
+            "(expect ~72%)")
+    log(f"VERIFY stock: {sd_units:.0f} units ≈{sd_value:,.0f} {currency} "
+        "(expect ~2,034 units ≈60.5M IQD)")
 
 
 if __name__ == "__main__":
