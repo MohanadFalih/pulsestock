@@ -11,6 +11,7 @@ import {
   Minus,
   OctagonX,
   PartyPopper,
+  PauseCircle,
   PhoneCall,
   Plus,
   Rocket,
@@ -49,6 +50,7 @@ const riseChild = {
 
 type GroupKey =
   | "stop-loss"
+  | "stopped"
   | "tests"
   | "scale"
   | "publishing"
@@ -58,6 +60,7 @@ type GroupKey =
 
 const GROUP_ORDER: GroupKey[] = [
   "stop-loss",
+  "stopped",
   "tests",
   "scale",
   "publishing",
@@ -89,6 +92,15 @@ const GROUP_CONFIG: Record<
     missingKey: "ads",
     missingMessage:
       "Meta ads sync pending — stop-loss rules need spend & purchase data.",
+  },
+  stopped: {
+    title: "Stopped — switched-off winners",
+    caption: "Ads paused in Meta while still selling — restart or ignore if intentional",
+    icon: PauseCircle,
+    color: "#FBBF24",
+    rules: ["stopped"],
+    missingKey: "ads",
+    missingMessage: "Meta ads sync pending — delivery-state checks need ad statuses.",
   },
   tests: {
     title: "Ad tests — organic winners",

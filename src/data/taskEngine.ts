@@ -34,6 +34,7 @@ export type TaskPriority = "critical" | "high" | "normal" | "low";
 /** Rule identifier — drives the display grouping on the Tasks page. */
 export type TaskRule =
   | "kill"
+  | "stopped"
   | "scale"
   | "test"
   | "publish"
@@ -196,6 +197,44 @@ function adsRules(
     const convPurchases = conversionAds.reduce((a, ad) => a + ad.purchases, 0);
     const trafficOnly =
       meta != null && meta.adCount > 0 && conversionAds.length === 0;
+
+    // Delivery state — an ad only "delivers" when effectiveStatus is ACTIVE
+    // (Meta reports ADSET_PAUSED/CAMPAIGN_PAUSED for ads whose toggle is on
+    // but a parent is off, which is exactly how ads quietly stop).
+    const liveConvAds = conversionAds.filter(
+      (ad) => ad.effectiveStatus === "ACTIVE"
+    );
+
+    // STOPPED — conversion ads exist but none are delivering. Kill/scale are
+    // meaningless while nothing runs: a stopped bleeder is already handled,
+    // and scaling a paused ad is a wrong recommendation. If the health window
+    // still shows purchases, the ad was working when it stopped — flag a
+    // restart so a winner never sits paused unnoticed.
+    if (meta && conversionAds.length > 0 && liveConvAds.length === 0) {
+      const stoppedPurchases = conversionAds.reduce(
+        (a, ad) => a + ad.healthPurchases,
+        0
+      );
+      const stoppedSpent = conversionAds.reduce((a, ad) => a + ad.healthSpent, 0);
+      if (stoppedPurchases > 0) {
+        const cpp = stoppedSpent > 0 ? stoppedSpent / stoppedPurchases : null;
+        tasks.push({
+          id: `stopped:${p.sku}`,
+          rule: "stopped",
+          section: "ads",
+          priority: "high",
+          title: `${p.sku} ads are OFF — was selling${
+            cpp != null ? ` at $${cpp.toFixed(2)}/purchase` : ""
+          }`,
+          detail: `${stoppedPurchases} purchase${
+            stoppedPurchases === 1 ? "" : "s"
+          } in the health window, then delivery stopped (ad or ad set paused in Meta). Restart it if the stop wasn't intentional — winners pay for the tests.`,
+          sku: p.sku,
+          link: "/ads",
+        });
+      }
+      continue;
+    }
 
     // KILL — real conversion-ad spend, zero purchases. Traffic spend excluded.
     if (
