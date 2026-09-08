@@ -10,7 +10,8 @@ on:
     # Two attempts per hour — GitHub's hosted scheduler is best-effort and
     # silently skips runs under load (observed: multi-hour gaps). Firing at
     # :17 and :47 keeps worst-case data age near 30-60 min.
-    - cron: "17 * * * *"
+    - cron: "7 * * * *"
+    - cron: "27 * * * *"
     - cron: "47 * * * *"
   workflow_dispatch:            # "Run workflow" button in the Actions tab
 
