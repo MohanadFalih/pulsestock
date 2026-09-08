@@ -34,6 +34,7 @@ export type TaskPriority = "critical" | "high" | "normal" | "low";
 /** Rule identifier — drives the display grouping on the Tasks page. */
 export type TaskRule =
   | "kill"
+  | "stop-returns"
   | "stopped"
   | "scale"
   | "test"
@@ -88,6 +89,9 @@ export interface TaskEngineConfig {
   /** Return rate % (with enough orders) that triggers a listing review. */
   reviewReturnRate: number;
   reviewMinOrders: number;
+  /** Confident return rate % above which live ads must pause — every extra
+   *  order loses money after delivery + return costs. */
+  stopReturnRate: number;
   /** Days since the last supplier-stock check before it counts as unknown. */
   supplierStaleDays: number;
 }
@@ -106,6 +110,7 @@ export const DEFAULT_TASK_CONFIG: TaskEngineConfig = {
   ],
   reviewReturnRate: ALERT_THRESHOLDS.RETURN_RATE_WATCH, // 35%
   reviewMinOrders: 10,
+  stopReturnRate: 30,
   supplierStaleDays: 3,
 };
 
@@ -203,6 +208,14 @@ function adsRules(
     // (catches "Completed" schedules that Meta's API may report as ACTIVE).
     const liveConvAds = conversionAds.filter((ad) => !isAdNotDelivering(ad));
 
+    // HIGH-RETURNS — a confident return rate above the stop line means every
+    // extra order likely loses money after delivery + return costs. Such a
+    // product must never get a restart/scale/test nudge — only a stop.
+    const highReturns =
+      p.returnRate != null &&
+      p.returnConfidence === "confident" &&
+      p.returnRate > cfg.stopReturnRate;
+
     // STOPPED — conversion ads exist but none are delivering. Kill/scale are
     // meaningless while nothing runs: a stopped bleeder is already handled,
     // and scaling a paused ad is a wrong recommendation. If the health window
@@ -231,6 +244,23 @@ function adsRules(
           link: "/ads",
         });
       }
+      continue;
+    }
+
+    // STOP-RETURNS — live ads on a proven high-return model: pause them.
+    // Fires before kill/scale so those rules never contradict the stop.
+    if (highReturns && liveConvAds.length > 0) {
+      const rate = p.returnRate!;
+      tasks.push({
+        id: `stop-returns:${p.sku}`,
+        rule: "stop-returns",
+        section: "ads",
+        priority: "critical",
+        title: `Pause ${p.sku} ads — return rate ${rate.toFixed(1)}%`,
+        detail: `${p.returned} of ${p.deliveredCount} delivered orders came back (${rate.toFixed(1)}% — stop line ${cfg.stopReturnRate}%, confident sample). Every extra sale likely loses money after delivery + return costs. Pause the ads in Meta, then fix the expectation gap or retire the model.`,
+        sku: p.sku,
+        link: "/ads",
+      });
       continue;
     }
 
@@ -470,11 +500,17 @@ function followupRules(
   for (const p of products) {
     // Review listing when returns run hot on real volume. Completed products
     // are excluded — the listing no longer matters once the life cycle is over.
+    // Confident samples above the stop line are covered by the stop-returns
+    // ad task (or are already stopped) — no duplicate nudge here.
     if (
       p.stage !== "completed" &&
       p.returnRate != null &&
       p.returnRate > cfg.reviewReturnRate &&
-      p.totalOrders >= cfg.reviewMinOrders
+      p.totalOrders >= cfg.reviewMinOrders &&
+      !(
+        p.returnConfidence === "confident" &&
+        p.returnRate > cfg.stopReturnRate
+      )
     ) {
       tasks.push({
         id: `review:${p.sku}`,

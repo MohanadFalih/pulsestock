@@ -85,10 +85,10 @@ const GROUP_CONFIG: Record<
 > = {
   "stop-loss": {
     title: "Stop-loss — kill bleeding ads",
-    caption: "Spend with zero sales — pause these in Meta first",
+    caption: "Zero-sale spend or high returns burning margin — pause these in Meta first",
     icon: OctagonX,
     color: "#FB5D7A",
-    rules: ["kill"],
+    rules: ["kill", "stop-returns"],
     missingKey: "ads",
     missingMessage:
       "Meta ads sync pending — stop-loss rules need spend & purchase data.",
