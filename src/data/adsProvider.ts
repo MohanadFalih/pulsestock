@@ -332,9 +332,16 @@ function normalizeAd(raw: Raw): MetaAd {
   };
 }
 
-function normalizeProduct(raw: Raw): AdsProduct {
+function normalizeProduct(raw: Raw, fullAdsById?: Map<string, MetaAd>): AdsProduct {
+  // The endpoint's nested product.ads entries are STRIPPED (no effectiveStatus,
+  // no healthSpent) — normalizing them directly makes every spent>0 ad read as
+  // "not delivering", so the whole product wrongly showed "paused". Upgrade
+  // each nested entry to the full normalized top-level ad (matched by id).
   const ads = Array.isArray(raw.ads)
-    ? raw.ads.map((a) => normalizeAd(a as Raw))
+    ? raw.ads.map((a) => {
+        const id = str((a as Raw).id);
+        return (id !== "" && fullAdsById?.get(id)) || normalizeAd(a as Raw);
+      })
     : [];
   return {
     sku: str(raw.sku),
@@ -366,6 +373,7 @@ function normalizePayload(payload: Raw): AdsData | null {
   const summary = (payload.summary ?? {}) as Raw;
   const config = (payload.config ?? {}) as Raw;
   const ads = payload.ads.map((a) => normalizeAd(a as Raw));
+  const fullAdsById = new Map<string, MetaAd>(ads.map((a) => [a.id, a]));
   // Counts are computed client-side AFTER reclassification — the endpoint's
   // raw healthCounts would still count traffic/paused ads as "kill" etc.
   const healthCounts = Object.fromEntries(
@@ -425,7 +433,7 @@ function normalizePayload(payload: Raw): AdsData | null {
             })
         : [],
     },
-    products: payload.products.map((p) => normalizeProduct(p as Raw)),
+    products: payload.products.map((p) => normalizeProduct(p as Raw, fullAdsById)),
     ads,
   };
 }
