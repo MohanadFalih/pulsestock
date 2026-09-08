@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-08T22:04:16.087633+00:00",
+ "syncedAt": "2026-09-08T23:23:10.931697+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3731,17 +3731,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-07",
    "firstOrderDate": "2026-07-07",
-   "lastOrderDate": "2026-09-08",
-   "orders": 74,
-   "units": 74,
-   "revenue": 6808000,
+   "lastOrderDate": "2026-09-09",
+   "orders": 75,
+   "units": 75,
+   "revenue": 6900000,
    "delivered": 74,
    "returned": 27,
    "unitsBoughtFromSupplier": 51,
    "returnedStock": 5,
    "unitPrice": 92000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13738,6 +13738,11 @@
      1,
      1,
      92000
+    ],
+    "2026-09-09": [
+     1,
+     1,
+     92000
     ]
    },
    "7165": {
@@ -22206,10 +22211,28 @@
    "2026-09-06": 37,
    "2026-09-07": 35,
    "2026-09-08": 25,
-   "2026-09-09": 3
+   "2026-09-09": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S31935",
+   "d": "2026-09-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -46000,
+   "lines": [
+    {
+     "sku": "K-3094",
+     "qty": 1,
+     "price": 92000,
+     "discPct": 47.4,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S31934",
    "d": "2026-09-09",
