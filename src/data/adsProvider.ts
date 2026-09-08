@@ -567,8 +567,18 @@ export function fmtUsd(n: number): string {
  */
 export function mergeAdsIntoProducts(list: Product[], data: AdsData): Product[] {
   const bySku = new Map(data.products.map((p) => [p.sku.toLowerCase(), p]));
+  // Bare model-code groups from Meta (ad named "7073" without the series
+  // prefix), indexed by their digits for suffix matching below.
+  const byDigits = new Map<string, AdsProduct>();
+  for (const p of data.products) {
+    if (/^\d{3,4}$/.test(p.sku)) byDigits.set(p.sku, p);
+  }
   return list.map((p) => {
-    const meta = bySku.get(p.sku.toLowerCase());
+    let meta = bySku.get(p.sku.toLowerCase());
+    if (!meta && byDigits.size > 0) {
+      const m = p.sku.match(/(\d{3,4})$/);
+      if (m) meta = byDigits.get(m[1]);
+    }
     if (!meta) return p;
     const adSpend = Math.round(meta.spentIQD);
     return {
@@ -585,5 +595,16 @@ export function mergeAdsIntoProducts(list: Product[], data: AdsData): Product[] 
 export function adsForSku(data: AdsData | null, sku: string): AdsProduct | null {
   if (!data) return null;
   const key = sku.toLowerCase();
-  return data.products.find((p) => p.sku.toLowerCase() === key) ?? null;
+  const exact = data.products.find((p) => p.sku.toLowerCase() === key);
+  if (exact) return exact;
+  // Catalog SKU whose bare model code was used as the ad name ("T-7073" →
+  // Meta group "7073").
+  const m = key.match(/(\d{3,4})$/);
+  if (m) {
+    const bare = data.products.filter(
+      (p) => p.sku.toLowerCase() === m[1]
+    );
+    if (bare.length === 1) return bare[0];
+  }
+  return null;
 }

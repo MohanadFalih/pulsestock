@@ -395,9 +395,19 @@ export const products: Product[] = [
 
 export function getProduct(id: string): Product | undefined {
   const key = id.toLowerCase();
-  return products.find(
+  const exact = products.find(
     (p) => p.id === key || p.sku.toLowerCase() === key
   );
+  if (exact) return exact;
+  // Meta ads are sometimes named with the bare model code ("7073") without
+  // the series prefix — resolve to the uniquely matching catalog SKU.
+  if (/^\d{3,4}$/.test(key)) {
+    const suffix = products.filter((p) =>
+      p.sku.toLowerCase().endsWith(`-${key}`)
+    );
+    if (suffix.length === 1) return suffix[0];
+  }
+  return undefined;
 }
 
 // ─── Derived global KPIs ─────────────────────────────────────────────────────

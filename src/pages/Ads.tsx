@@ -462,7 +462,10 @@ function ProductAdsTable({ data }: { data: AdsData }) {
         key: "health",
         header: "Health",
         sortable: true,
-        sortValue: (r) => ADS_HEALTH_ORDER.indexOf(r.meta.health),
+        // Composite: health group first (ADS_HEALTH_ORDER puts delivering
+        // ads before paused/dead), biggest spender first inside each group.
+        sortValue: (r) =>
+          ADS_HEALTH_ORDER.indexOf(r.meta.health) * 1e12 - r.meta.spentIQD,
         render: (r) => <AdsHealthBadge health={r.meta.health} />,
       },
       {
@@ -585,8 +588,8 @@ function ProductAdsTable({ data }: { data: AdsData }) {
         columns={columns}
         rows={rows as TableRow[]}
         rowKey={(r) => r.meta.sku}
-        defaultSortKey="spend"
-        defaultSortDir="desc"
+        defaultSortKey="health"
+        defaultSortDir="asc"
         onRowClick={(r) => navigate(`/products/${r.odoo?.id ?? r.meta.sku}`)}
         emptyState={
           <EmptyState
