@@ -315,13 +315,20 @@ function normalizeAd(raw: Raw): MetaAd {
     healthCpa: numOrNull(raw.healthCpa),
     healthFrequency: numOrNull(raw.healthFrequency),
     // Client-side overrides of the endpoint's purchase-CPA verdict:
-    // a non-delivering ad with a "healthy"/"gathering" badge is a wrong
-    // signal, and traffic-obj ads are judged on the wrong metric.
+    // - a non-delivering ad with a "healthy"/"gathering" badge is a wrong
+    //   signal, and traffic-obj ads are judged on the wrong metric;
+    // - "kill" means zero-sale bleeder: if the selected RANGE shows any
+    //   purchase, the zero-purchase health-window verdict is a data-lag
+    //   artifact (fresh purchases take minutes-hours to reach the insights
+    //   API) — downgrade to "watch" rather than scream kill.
     health: isAdNotDelivering({ effectiveStatus, spent, healthSpent })
       ? "paused"
       : isTrafficAd({ name, campaign, adset })
         ? "traffic"
-        : health(raw.health),
+        : health(raw.health) === "kill" &&
+            (num(raw.purchases) > 0 || num(raw.purchaseValue) > 0)
+          ? "watch"
+          : health(raw.health),
   };
 }
 
@@ -398,6 +405,24 @@ function normalizePayload(payload: Raw): AdsData | null {
             })
             // Traffic-objective ads never belong on a kill list.
             .filter((k) => !k.name.toLowerCase().includes("traffic"))
+            // Kill guards — cross-check the payload's own per-ad range data:
+            // 1) ANY purchase in the selected range → not a zero-sale
+            //    bleeder; the health-window zero was insights-API lag
+            //    (the H-1890 case: Meta UI showed 2 purchases while the
+            //    window still said zero).
+            // 2) ad no longer delivering → already stopped, nothing to kill.
+            .filter((k) => {
+              const byName = ads.filter((a) => a.name === k.name);
+              const pool =
+                byName.length > 0
+                  ? byName
+                  : ads.filter((a) => k.sku != null && a.sku === k.sku);
+              if (pool.length === 0) return true; // can't disprove — keep
+              if (pool.some((a) => a.purchases > 0 || a.purchaseValue > 0))
+                return false;
+              if (pool.every((a) => isAdNotDelivering(a))) return false;
+              return true;
+            })
         : [],
     },
     products: payload.products.map((p) => normalizeProduct(p as Raw)),
