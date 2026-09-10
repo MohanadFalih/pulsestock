@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-09T22:01:05.154663+00:00",
+ "syncedAt": "2026-09-10T00:09:38.829035+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -894,20 +894,20 @@
    "sku": "H-1885",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-08-24",
    "firstOrderDate": "2026-08-24",
-   "lastOrderDate": "2026-08-24",
-   "orders": 1,
-   "units": 1,
-   "revenue": 77000,
+   "lastOrderDate": "2026-09-10",
+   "orders": 2,
+   "units": 2,
+   "revenue": 154000,
    "delivered": 1,
    "returned": 1,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 1,
    "unitPrice": 77000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 17,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2610,20 +2610,20 @@
    "sku": "T-7067",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-23",
    "firstOrderDate": "2026-07-24",
-   "lastOrderDate": "2026-08-21",
-   "orders": 59,
-   "units": 65,
-   "revenue": 5850000,
+   "lastOrderDate": "2026-09-10",
+   "orders": 60,
+   "units": 66,
+   "revenue": 5940000,
    "delivered": 64,
    "returned": 19,
    "unitsBoughtFromSupplier": 56,
    "returnedStock": 10,
    "unitPrice": 90000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 20,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9384,6 +9384,11 @@
      1,
      1,
      77000
+    ],
+    "2026-09-10": [
+     1,
+     1,
+     77000
     ]
    },
    "7278": {
@@ -11604,6 +11609,11 @@
      90000
     ],
     "2026-08-21": [
+     1,
+     1,
+     90000
+    ],
+    "2026-09-10": [
      1,
      1,
      90000
@@ -22298,10 +22308,35 @@
    "2026-09-07": 35,
    "2026-09-08": 25,
    "2026-09-09": 39,
-   "2026-09-10": 3
+   "2026-09-10": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S31974",
+   "d": "2026-09-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -59000,
+   "lines": [
+    {
+     "sku": "T-7067",
+     "qty": 1,
+     "price": 90000,
+     "discPct": 34.3,
+     "del": 0
+    },
+    {
+     "sku": "H-1885",
+     "qty": 1,
+     "price": 77000,
+     "discPct": 34.3,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S31973",
    "d": "2026-09-10",
