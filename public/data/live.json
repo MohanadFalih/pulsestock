@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-13T22:41:39.677036+00:00",
+ "syncedAt": "2026-09-13T23:18:56.622428+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -9139,17 +9139,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-13",
-   "orders": 236,
-   "units": 267,
-   "revenue": 9334000,
+   "lastOrderDate": "2026-09-14",
+   "orders": 237,
+   "units": 268,
+   "revenue": 9364000,
    "delivered": 262,
    "returned": 89,
    "unitsBoughtFromSupplier": 172,
    "returnedStock": 11,
    "unitPrice": 30000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -22195,6 +22195,11 @@
      1,
      1,
      30000
+    ],
+    "2026-09-14": [
+     1,
+     1,
+     30000
     ]
    },
    "4749": {
@@ -22858,10 +22863,28 @@
    "2026-09-11": 31,
    "2026-09-12": 38,
    "2026-09-13": 36,
-   "2026-09-14": 1
+   "2026-09-14": 2
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32124",
+   "d": "2026-09-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-2050",
+     "qty": 1,
+     "price": 30000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32123",
    "d": "2026-09-14",
