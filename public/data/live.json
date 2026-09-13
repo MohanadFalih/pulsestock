@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-13T18:18:47.070186+00:00",
+ "syncedAt": "2026-09-13T19:24:17.977235+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1392,15 +1392,15 @@
    "odooCreatedDate": "2026-08-18",
    "firstOrderDate": "2026-08-18",
    "lastOrderDate": "2026-09-13",
-   "orders": 50,
-   "units": 51,
-   "revenue": 3868400,
+   "orders": 51,
+   "units": 52,
+   "revenue": 3944400,
    "delivered": 43,
    "returned": 13,
    "unitsBoughtFromSupplier": 42,
    "returnedStock": 6,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 2.14,
+   "orderVelocity7d": 2.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -3030,15 +3030,15 @@
    "odooCreatedDate": "2026-07-22",
    "firstOrderDate": "2026-07-23",
    "lastOrderDate": "2026-09-13",
-   "orders": 109,
-   "units": 112,
-   "revenue": 7168000,
+   "orders": 110,
+   "units": 113,
+   "revenue": 7232000,
    "delivered": 109,
    "returned": 26,
    "unitsBoughtFromSupplier": 93,
    "returnedStock": 13,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.86,
+   "orderVelocity7d": 1.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10027,9 +10027,9 @@
      532000
     ],
     "2026-09-13": [
-     2,
-     2,
-     152000
+     3,
+     3,
+     228000
     ]
    },
    "7268": {
@@ -12516,9 +12516,9 @@
      64000
     ],
     "2026-09-13": [
-     3,
-     3,
-     192000
+     4,
+     4,
+     256000
     ]
    },
    "7204": {
@@ -22992,10 +22992,36 @@
    "2026-09-10": 34,
    "2026-09-11": 31,
    "2026-09-12": 38,
-   "2026-09-13": 30
+   "2026-09-13": 31
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32117",
+   "d": "2026-09-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-7064",
+     "qty": 1,
+     "price": 64000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1878",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "قبل وبعد (مختلط)"
+  },
   {
    "id": "S32116",
    "d": "2026-09-13",
