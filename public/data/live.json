@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-14T17:05:40.140684+00:00",
+ "syncedAt": "2026-09-14T19:18:40.256984+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -117,17 +117,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-11",
    "firstOrderDate": "2026-09-11",
-   "lastOrderDate": "2026-09-11",
-   "orders": 1,
-   "units": 1,
-   "revenue": 103000,
+   "lastOrderDate": "2026-09-14",
+   "orders": 2,
+   "units": 2,
+   "revenue": 206000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 103000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -4069,17 +4069,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-07",
    "firstOrderDate": "2026-07-07",
-   "lastOrderDate": "2026-09-12",
-   "orders": 79,
-   "units": 79,
-   "revenue": 7268000,
+   "lastOrderDate": "2026-09-14",
+   "orders": 80,
+   "units": 80,
+   "revenue": 7360000,
    "delivered": 79,
    "returned": 29,
    "unitsBoughtFromSupplier": 51,
    "returnedStock": 2,
    "unitPrice": 92000.0,
-   "orderVelocity7d": 0.86,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 1.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9661,6 +9661,11 @@
      1,
      1,
      103000
+    ],
+    "2026-09-14": [
+     1,
+     1,
+     103000
     ]
    },
    "7315": {
@@ -14702,6 +14707,11 @@
      184000
     ],
     "2026-09-12": [
+     1,
+     1,
+     92000
+    ],
+    "2026-09-14": [
      1,
      1,
      92000
@@ -23041,10 +23051,47 @@
    "2026-09-11": 31,
    "2026-09-12": 38,
    "2026-09-13": 36,
-   "2026-09-14": 21
+   "2026-09-14": 23
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32146",
+   "d": "2026-09-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -46000,
+   "lines": [
+    {
+     "sku": "K-3094",
+     "qty": 1,
+     "price": 92000,
+     "discPct": 47.4,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32145",
+   "d": "2026-09-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-555",
+     "qty": 1,
+     "price": 103000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32144",
    "d": "2026-09-14",
