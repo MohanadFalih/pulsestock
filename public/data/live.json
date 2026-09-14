@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-14T06:09:54.625140+00:00",
+ "syncedAt": "2026-09-14T06:40:35.237946+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2561,17 +2561,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-28",
    "firstOrderDate": "2026-07-28",
-   "lastOrderDate": "2026-09-09",
-   "orders": 10,
-   "units": 10,
-   "revenue": 920000,
+   "lastOrderDate": "2026-09-14",
+   "orders": 11,
+   "units": 11,
+   "revenue": 1012000,
    "delivered": 10,
    "returned": 4,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 1,
    "unitPrice": 92000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11761,6 +11761,11 @@
      92000
     ],
     "2026-09-09": [
+     1,
+     1,
+     92000
+    ],
+    "2026-09-14": [
      1,
      1,
      92000
@@ -22863,10 +22868,28 @@
    "2026-09-11": 31,
    "2026-09-12": 38,
    "2026-09-13": 36,
-   "2026-09-14": 2
+   "2026-09-14": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32125",
+   "d": "2026-09-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -48000,
+   "lines": [
+    {
+     "sku": "K-3093",
+     "qty": 1,
+     "price": 92000,
+     "discPct": 49.5,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32124",
    "d": "2026-09-14",
