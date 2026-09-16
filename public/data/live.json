@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-16T18:10:35.452443+00:00",
+ "syncedAt": "2026-09-16T20:20:36.366362+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -45,7 +45,7 @@
    "revenue": 138000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 69000.0,
    "orderVelocity7d": 0.29,
@@ -93,11 +93,11 @@
    "firstOrderDate": "2026-09-13",
    "lastOrderDate": "2026-09-16",
    "orders": 7,
-   "units": 9,
-   "revenue": 639000,
+   "units": 8,
+   "revenue": 568000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 71000.0,
    "orderVelocity7d": 1.0,
@@ -357,7 +357,7 @@
    "revenue": 426000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 71000.0,
    "orderVelocity7d": 0.71,
@@ -1111,7 +1111,7 @@
    "revenue": 1106000,
    "delivered": 11,
    "returned": 2,
-   "unitsBoughtFromSupplier": 13,
+   "unitsBoughtFromSupplier": 14,
    "returnedStock": 2,
    "unitPrice": 79000.0,
    "orderVelocity7d": 0.29,
@@ -3234,20 +3234,20 @@
    "sku": "T-7066",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-07-20",
    "firstOrderDate": "2026-07-29",
-   "lastOrderDate": "2026-08-31",
-   "orders": 6,
-   "units": 7,
-   "revenue": 574000,
+   "lastOrderDate": "2026-09-16",
+   "orders": 7,
+   "units": 8,
+   "revenue": 656000,
    "delivered": 7,
    "returned": 1,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 1,
    "unitPrice": 82000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 16,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9053,6 +9053,32 @@
    }
   },
   {
+   "odooId": 6671,
+   "name": "D-6917",
+   "sku": "D-6917",
+   "category": "All",
+   "supplier": null,
+   "stage": "ads-live",
+   "odooCreatedDate": "2026-01-20",
+   "firstOrderDate": "2026-01-22",
+   "lastOrderDate": "2026-09-16",
+   "orders": 7,
+   "units": 7,
+   "revenue": 262000,
+   "delivered": 5,
+   "returned": 3,
+   "unitsBoughtFromSupplier": 5,
+   "returnedStock": 3,
+   "unitPrice": 31000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 6303,
    "name": "D-6905",
    "sku": "D-6905",
@@ -9339,32 +9365,6 @@
    }
   },
   {
-   "odooId": 4749,
-   "name": "L-1000",
-   "sku": "L-1000",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-06",
-   "orders": 120,
-   "units": 131,
-   "revenue": 5299000,
-   "delivered": 129,
-   "returned": 21,
-   "unitsBoughtFromSupplier": 64,
-   "returnedStock": 16,
-   "unitPrice": 55000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 10,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4747,
    "name": "L-5015",
    "sku": "L-5015",
@@ -9391,77 +9391,25 @@
    }
   },
   {
-   "odooId": 4542,
-   "name": "L-1637",
-   "sku": "L-1637",
-   "category": "Ferace",
+   "odooId": 4749,
+   "name": "L-1000",
+   "sku": "L-1000",
+   "category": "All",
    "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-09-13",
-   "orders": 83,
-   "units": 86,
-   "revenue": 4022000,
-   "delivered": 86,
-   "returned": 16,
-   "unitsBoughtFromSupplier": 44,
-   "returnedStock": 7,
-   "unitPrice": 75000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4537,
-   "name": "L-1565",
-   "sku": "L-1565",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-04",
-   "lastOrderDate": "2026-09-15",
-   "orders": 47,
-   "units": 51,
-   "revenue": 2292000,
-   "delivered": 51,
-   "returned": 17,
-   "unitsBoughtFromSupplier": 30,
-   "returnedStock": 2,
-   "unitPrice": 64000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4548,
-   "name": "L-1727",
-   "sku": "L-1727",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-09-15",
-   "orders": 54,
-   "units": 61,
-   "revenue": 2000000,
-   "delivered": 56,
-   "returned": 13,
-   "unitsBoughtFromSupplier": 26,
-   "returnedStock": 12,
-   "unitPrice": 61000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-06",
+   "orders": 120,
+   "units": 131,
+   "revenue": 5299000,
+   "delivered": 129,
+   "returned": 21,
+   "unitsBoughtFromSupplier": 64,
+   "returnedStock": 16,
+   "unitPrice": 55000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 10,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9488,136 +9436,6 @@
    "unitPrice": 29000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 2,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4562,
-   "name": "L-1907",
-   "sku": "L-1907",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-09-11",
-   "orders": 184,
-   "units": 196,
-   "revenue": 10142000,
-   "delivered": 192,
-   "returned": 34,
-   "unitsBoughtFromSupplier": 174,
-   "returnedStock": 5,
-   "unitPrice": 59000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4637,
-   "name": "D-6789",
-   "sku": "D-6789",
-   "category": "Takim (Tunik & Etek)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-12",
-   "lastOrderDate": "2026-07-05",
-   "orders": 83,
-   "units": 84,
-   "revenue": 3583000,
-   "delivered": 82,
-   "returned": 19,
-   "unitsBoughtFromSupplier": 54,
-   "returnedStock": 1,
-   "unitPrice": 31000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 73,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4629,
-   "name": "D-6781",
-   "sku": "D-6781",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-07-05",
-   "orders": 120,
-   "units": 125,
-   "revenue": 4592000,
-   "delivered": 125,
-   "returned": 35,
-   "unitsBoughtFromSupplier": 40,
-   "returnedStock": 0,
-   "unitPrice": 26000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 73,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4625,
-   "name": "D-6777",
-   "sku": "D-6777",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-08-16",
-   "orders": 42,
-   "units": 45,
-   "revenue": 1305000,
-   "delivered": 44,
-   "returned": 10,
-   "unitsBoughtFromSupplier": 5,
-   "returnedStock": 24,
-   "unitPrice": 49000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 31,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4510,
-   "name": "L-0652",
-   "sku": "L-0652",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "ads-live",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-11-20",
-   "lastOrderDate": "2026-09-12",
-   "orders": 9,
-   "units": 9,
-   "revenue": 381000,
-   "delivered": 9,
-   "returned": 3,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 49000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 4,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9805,6 +9623,214 @@
     "lastChecked": null,
     "source": "manual"
    }
+  },
+  {
+   "odooId": 4637,
+   "name": "D-6789",
+   "sku": "D-6789",
+   "category": "Takim (Tunik & Etek)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-12",
+   "lastOrderDate": "2026-07-05",
+   "orders": 83,
+   "units": 84,
+   "revenue": 3583000,
+   "delivered": 82,
+   "returned": 19,
+   "unitsBoughtFromSupplier": 54,
+   "returnedStock": 1,
+   "unitPrice": 31000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 73,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4537,
+   "name": "L-1565",
+   "sku": "L-1565",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-04",
+   "lastOrderDate": "2026-09-15",
+   "orders": 47,
+   "units": 51,
+   "revenue": 2292000,
+   "delivered": 51,
+   "returned": 17,
+   "unitsBoughtFromSupplier": 30,
+   "returnedStock": 2,
+   "unitPrice": 64000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 1,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4629,
+   "name": "D-6781",
+   "sku": "D-6781",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-07-05",
+   "orders": 120,
+   "units": 125,
+   "revenue": 4592000,
+   "delivered": 125,
+   "returned": 35,
+   "unitsBoughtFromSupplier": 40,
+   "returnedStock": 0,
+   "unitPrice": 26000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 73,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4625,
+   "name": "D-6777",
+   "sku": "D-6777",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-08-16",
+   "orders": 42,
+   "units": 45,
+   "revenue": 1305000,
+   "delivered": 44,
+   "returned": 10,
+   "unitsBoughtFromSupplier": 5,
+   "returnedStock": 24,
+   "unitPrice": 49000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 31,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4548,
+   "name": "L-1727",
+   "sku": "L-1727",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-09-15",
+   "orders": 54,
+   "units": 61,
+   "revenue": 2000000,
+   "delivered": 56,
+   "returned": 13,
+   "unitsBoughtFromSupplier": 26,
+   "returnedStock": 12,
+   "unitPrice": 61000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 1,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4562,
+   "name": "L-1907",
+   "sku": "L-1907",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-14",
+   "lastOrderDate": "2026-09-11",
+   "orders": 184,
+   "units": 196,
+   "revenue": 10142000,
+   "delivered": 192,
+   "returned": 34,
+   "unitsBoughtFromSupplier": 174,
+   "returnedStock": 5,
+   "unitPrice": 59000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 5,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4542,
+   "name": "L-1637",
+   "sku": "L-1637",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-09-13",
+   "orders": 83,
+   "units": 86,
+   "revenue": 4022000,
+   "delivered": 86,
+   "returned": 16,
+   "unitsBoughtFromSupplier": 44,
+   "returnedStock": 7,
+   "unitPrice": 75000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 3,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4510,
+   "name": "L-0652",
+   "sku": "L-0652",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "ads-live",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-11-20",
+   "lastOrderDate": "2026-09-12",
+   "orders": 9,
+   "units": 9,
+   "revenue": 381000,
+   "delivered": 9,
+   "returned": 3,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 49000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 4,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
   }
  ],
  "shop": {
@@ -9844,8 +9870,8 @@
     ],
     "2026-09-16": [
      2,
-     4,
-     284000
+     3,
+     213000
     ]
    },
    "7321": {
@@ -13195,6 +13221,11 @@
      164000
     ],
     "2026-08-31": [
+     1,
+     1,
+     82000
+    ],
+    "2026-09-16": [
      1,
      1,
      82000
@@ -22189,6 +22220,13 @@
      84000
     ]
    },
+   "6671": {
+    "2026-09-16": [
+     1,
+     1,
+     31000
+    ]
+   },
    "6303": {
     "2026-09-15": [
      1,
@@ -22496,6 +22534,18 @@
      60000
     ]
    },
+   "4747": {
+    "2026-09-12": [
+     1,
+     1,
+     36000
+    ],
+    "2026-09-13": [
+     2,
+     2,
+     72000
+    ]
+   },
    "4749": {
     "2026-06-20": [
      1,
@@ -22528,134 +22578,11 @@
      55000
     ]
    },
-   "4747": {
-    "2026-09-12": [
-     1,
-     1,
-     36000
-    ],
-    "2026-09-13": [
-     2,
-     2,
-     72000
-    ]
-   },
-   "4542": {
-    "2026-06-19": [
-     1,
-     1,
-     75000
-    ],
-    "2026-09-13": [
-     1,
-     1,
-     75000
-    ]
-   },
-   "4537": {
-    "2026-09-15": [
-     1,
-     1,
-     64000
-    ]
-   },
-   "4548": {
-    "2026-09-15": [
-     1,
-     1,
-     61000
-    ]
-   },
    "4515": {
     "2026-09-14": [
      2,
      2,
      58000
-    ]
-   },
-   "4562": {
-    "2026-06-18": [
-     1,
-     1,
-     59000
-    ],
-    "2026-06-22": [
-     1,
-     1,
-     59000
-    ],
-    "2026-06-27": [
-     1,
-     1,
-     59000
-    ],
-    "2026-07-01": [
-     1,
-     1,
-     59000
-    ],
-    "2026-07-06": [
-     1,
-     1,
-     59000
-    ],
-    "2026-07-08": [
-     2,
-     2,
-     118000
-    ],
-    "2026-07-20": [
-     1,
-     1,
-     59000
-    ],
-    "2026-08-06": [
-     1,
-     1,
-     59000
-    ],
-    "2026-08-22": [
-     2,
-     2,
-     118000
-    ],
-    "2026-09-04": [
-     1,
-     1,
-     59000
-    ],
-    "2026-09-11": [
-     1,
-     1,
-     59000
-    ]
-   },
-   "4637": {
-    "2026-07-05": [
-     1,
-     1,
-     31000
-    ]
-   },
-   "4629": {
-    "2026-07-05": [
-     1,
-     1,
-     26000
-    ]
-   },
-   "4625": {
-    "2026-08-16": [
-     1,
-     1,
-     49000
-    ]
-   },
-   "4510": {
-    "2026-09-12": [
-     1,
-     1,
-     49000
     ]
    },
    "4518": {
@@ -22760,6 +22687,117 @@
      1,
      1,
      64000
+    ]
+   },
+   "4637": {
+    "2026-07-05": [
+     1,
+     1,
+     31000
+    ]
+   },
+   "4537": {
+    "2026-09-15": [
+     1,
+     1,
+     64000
+    ]
+   },
+   "4629": {
+    "2026-07-05": [
+     1,
+     1,
+     26000
+    ]
+   },
+   "4625": {
+    "2026-08-16": [
+     1,
+     1,
+     49000
+    ]
+   },
+   "4548": {
+    "2026-09-15": [
+     1,
+     1,
+     61000
+    ]
+   },
+   "4562": {
+    "2026-06-18": [
+     1,
+     1,
+     59000
+    ],
+    "2026-06-22": [
+     1,
+     1,
+     59000
+    ],
+    "2026-06-27": [
+     1,
+     1,
+     59000
+    ],
+    "2026-07-01": [
+     1,
+     1,
+     59000
+    ],
+    "2026-07-06": [
+     1,
+     1,
+     59000
+    ],
+    "2026-07-08": [
+     2,
+     2,
+     118000
+    ],
+    "2026-07-20": [
+     1,
+     1,
+     59000
+    ],
+    "2026-08-06": [
+     1,
+     1,
+     59000
+    ],
+    "2026-08-22": [
+     2,
+     2,
+     118000
+    ],
+    "2026-09-04": [
+     1,
+     1,
+     59000
+    ],
+    "2026-09-11": [
+     1,
+     1,
+     59000
+    ]
+   },
+   "4542": {
+    "2026-06-19": [
+     1,
+     1,
+     75000
+    ],
+    "2026-09-13": [
+     1,
+     1,
+     75000
+    ]
+   },
+   "4510": {
+    "2026-09-12": [
+     1,
+     1,
+     49000
     ]
    }
   },
@@ -23172,19 +23210,19 @@
    "2026-09-13": 35,
    "2026-09-14": 29,
    "2026-09-15": 22,
-   "2026-09-16": 27
+   "2026-09-16": 29
   }
  },
  "ordersDetail": [
   {
-   "id": "S32204",
+   "id": "S32207",
    "d": "2026-09-16",
    "st": "sale",
    "fee": 5000,
    "disc": 0,
    "lines": [
     {
-     "sku": "H-1900",
+     "sku": "H-1892",
      "qty": 1,
      "price": 71000,
      "discPct": 0,
@@ -23196,22 +23234,50 @@
    "ful": "تجهيز تركيا"
   },
   {
-   "id": "S32203",
+   "id": "S32206",
    "d": "2026-09-16",
    "st": "sale",
    "fee": 5000,
    "disc": 0,
    "lines": [
     {
-     "sku": "H-1892",
+     "sku": "T-7066",
      "qty": 1,
-     "price": 71000,
+     "price": 82000,
      "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    },
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32205",
+   "d": "2026-09-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
     {
-     "sku": "H-1892",
+     "sku": "D-6917",
+     "qty": 1,
+     "price": 31000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32204",
+   "d": "2026-09-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1900",
      "qty": 1,
      "price": 71000,
      "discPct": 0,
