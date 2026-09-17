@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-17T18:26:14.386658+00:00",
+ "syncedAt": "2026-09-17T20:14:53.068089+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -144,15 +144,15 @@
    "odooCreatedDate": "2026-09-13",
    "firstOrderDate": "2026-09-13",
    "lastOrderDate": "2026-09-17",
-   "orders": 15,
-   "units": 18,
-   "revenue": 1278000,
+   "orders": 16,
+   "units": 19,
+   "revenue": 1349000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 17,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 2.14,
+   "orderVelocity7d": 2.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -404,15 +404,15 @@
    "odooCreatedDate": "2026-09-09",
    "firstOrderDate": "2026-09-09",
    "lastOrderDate": "2026-09-17",
-   "orders": 8,
-   "units": 8,
-   "revenue": 568000,
+   "orders": 9,
+   "units": 9,
+   "revenue": 639000,
    "delivered": 3,
    "returned": 0,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -4044,15 +4044,15 @@
    "odooCreatedDate": "2026-07-08",
    "firstOrderDate": "2026-07-08",
    "lastOrderDate": "2026-09-17",
-   "orders": 40,
-   "units": 42,
-   "revenue": 3234000,
+   "orders": 41,
+   "units": 43,
+   "revenue": 3311000,
    "delivered": 41,
    "returned": 11,
    "unitsBoughtFromSupplier": 34,
    "returnedStock": 3,
    "unitPrice": 77000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -9855,9 +9855,9 @@
      213000
     ],
     "2026-09-17": [
-     8,
-     10,
-     710000
+     9,
+     11,
+     781000
     ]
    },
    "7321": {
@@ -9930,9 +9930,9 @@
      71000
     ],
     "2026-09-17": [
-     2,
-     2,
-     142000
+     3,
+     3,
+     213000
     ]
    },
    "7312": {
@@ -14815,9 +14815,9 @@
      154000
     ],
     "2026-09-17": [
-     1,
-     1,
-     77000
+     2,
+     2,
+     154000
     ]
    },
    "7170": {
@@ -23198,10 +23198,55 @@
    "2026-09-14": 29,
    "2026-09-15": 22,
    "2026-09-16": 28,
-   "2026-09-17": 36
+   "2026-09-17": 38
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32248",
+   "d": "2026-09-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1900",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1892",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32247",
+   "d": "2026-09-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -39000,
+   "lines": [
+    {
+     "sku": "T-7042",
+     "qty": 1,
+     "price": 77000,
+     "discPct": 47.6,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32246",
    "d": "2026-09-17",
