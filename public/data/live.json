@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-18T01:37:40.454557+00:00",
+ "syncedAt": "2026-09-18T04:35:28.142637+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1287,17 +1287,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-08-25",
    "firstOrderDate": "2026-08-25",
-   "lastOrderDate": "2026-09-13",
-   "orders": 9,
-   "units": 9,
-   "revenue": 603000,
+   "lastOrderDate": "2026-09-18",
+   "orders": 10,
+   "units": 10,
+   "revenue": 666650,
    "delivered": 8,
    "returned": 2,
    "unitsBoughtFromSupplier": 8,
    "returnedStock": 1,
    "unitPrice": 67000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2769,17 +2769,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-27",
    "firstOrderDate": "2026-07-27",
-   "lastOrderDate": "2026-09-13",
-   "orders": 34,
-   "units": 35,
-   "revenue": 3605000,
+   "lastOrderDate": "2026-09-18",
+   "orders": 35,
+   "units": 36,
+   "revenue": 3702850,
    "delivered": 35,
    "returned": 10,
    "unitsBoughtFromSupplier": 26,
    "returnedStock": 1,
    "unitPrice": 103000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10191,6 +10191,11 @@
      1,
      1,
      67000
+    ],
+    "2026-09-18": [
+     1,
+     1,
+     63650
     ]
    },
    "7279": {
@@ -12370,6 +12375,11 @@
      1,
      1,
      103000
+    ],
+    "2026-09-18": [
+     1,
+     1,
+     97850
     ]
    },
    "7219": {
@@ -23010,10 +23020,36 @@
    "2026-09-15": 22,
    "2026-09-16": 28,
    "2026-09-17": 38,
-   "2026-09-18": 2
+   "2026-09-18": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32251",
+   "d": "2026-09-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -8500,
+   "lines": [
+    {
+     "sku": "T-7057",
+     "qty": 1,
+     "price": 97850,
+     "discPct": 5.1,
+     "del": 0
+    },
+    {
+     "sku": "L-1050",
+     "qty": 1,
+     "price": 63650,
+     "discPct": 5.1,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "قبل وبعد (مختلط)"
+  },
   {
    "id": "S32250",
    "d": "2026-09-18",
