@@ -69,6 +69,7 @@ export const STAGE_ORDER: Stage[] = [
   "shared",
   "created",
   "ads-live",
+  "no-ads",
   "selling",
   "supplier-low",
   "organic-only",
