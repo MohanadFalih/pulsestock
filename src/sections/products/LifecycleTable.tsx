@@ -298,6 +298,10 @@ export interface LifecycleTableProps {
   rows: Product[];
   visibleColumns: Record<string, boolean>;
   onResetFilters: () => void;
+  /** Initial sort column (default "stage"); caller re-mounts via `key` to change. */
+  sortKey?: string;
+  /** Initial sort direction (default "asc"). */
+  sortDir?: "asc" | "desc";
 }
 
 /** DataTable constrains rows to Record<string, unknown>; intersect locally. */
@@ -307,6 +311,8 @@ export function LifecycleTable({
   rows,
   visibleColumns,
   onResetFilters,
+  sortKey = "stage",
+  sortDir = "asc",
 }: LifecycleTableProps) {
   const navigate = useNavigate();
   const windowDays = useWindowDays();
@@ -649,8 +655,8 @@ export function LifecycleTable({
         columns={columns}
         rows={rows as TableRow[]}
         rowKey={(p) => p.id}
-        defaultSortKey="stage"
-        defaultSortDir="asc"
+        defaultSortKey={sortKey}
+        defaultSortDir={sortDir}
         onRowClick={(p) => navigate(`/products/${p.id}`)}
         className="ps-rows rounded-none border-0 [&_tbody_tr:hover_.row-qa]:translate-x-0 [&_tbody_tr:hover_.row-qa]:opacity-100"
         emptyState={
