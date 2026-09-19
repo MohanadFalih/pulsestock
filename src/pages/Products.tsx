@@ -214,6 +214,7 @@ export default function Products() {
   const stage = parseStage(searchParams.get("stage"));
   const alert = parseAlert(searchParams.get("alert"));
   const query = searchParams.get("q") ?? "";
+  const liveAds = searchParams.get("liveAds") === "1";
 
   const [queryInput, setQueryInput] = useState(query);
   const [category, setCategory] = useState<Category | null>(null);
@@ -274,6 +275,7 @@ export default function Products() {
       if (stage === "created" ? !isCreatedIntake(p) : stage && p.stage !== stage)
         return false;
       if (alert && !p.alerts.some((a) => a.type === alert)) return false;
+      if (liveAds && p.adsMeta == null) return false;
       if (category && p.category !== category) return false;
       if (
         needle &&
@@ -291,9 +293,9 @@ export default function Products() {
       );
     }
     return list;
-  }, [stage, alert, category, query]);
+  }, [stage, alert, category, query, liveAds]);
 
-  const isFiltered = Boolean(stage || alert || category || query);
+  const isFiltered = Boolean(stage || alert || category || query || liveAds);
 
   return (
     <div>
@@ -317,6 +319,8 @@ export default function Products() {
           onAlertChange={(a) => setParam("alert", a)}
           category={category}
           onCategoryChange={setCategory}
+          liveAds={liveAds}
+          onLiveAdsChange={(v) => setParam("liveAds", v ? "1" : null)}
           shown={filtered.length}
           total={products.length}
           isFiltered={isFiltered}
