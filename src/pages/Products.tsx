@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Lightbulb, Plus, SlidersHorizontal } from "lucide-react";
 import { toast } from "sonner";
-import { products, type Category } from "@/data/products";
+import { ANCHOR_DATE, products, type Category } from "@/data/products";
 import {
   ALERT_META,
   STAGE_ORDER,
@@ -24,6 +24,18 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+
+/** CREATED intake view: product still in "created" stage OR created in Odoo
+ *  within the last 30 days (matches the dashboard's intake definition). */
+const CREATED_INTAKE_DAYS = 30;
+function isCreatedIntake(p: { stage: string; odooCreatedDate: string | null }): boolean {
+  if (p.stage === "created") return true;
+  if (!p.odooCreatedDate) return false;
+  const ageDays =
+    (ANCHOR_DATE.getTime() - new Date(p.odooCreatedDate).getTime()) / 86_400_000;
+  return ageDays <= CREATED_INTAKE_DAYS;
+}
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -256,8 +268,11 @@ export default function Products() {
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return products.filter((p) => {
-      if (stage && p.stage !== stage) return false;
+    const list = products.filter((p) => {
+      // CREATED is an intake view: every recently created product, even if it
+      // has already moved on to ads-live/selling/etc.
+      if (stage === "created" ? !isCreatedIntake(p) : stage && p.stage !== stage)
+        return false;
       if (alert && !p.alerts.some((a) => a.type === alert)) return false;
       if (category && p.category !== category) return false;
       if (
@@ -268,6 +283,14 @@ export default function Products() {
         return false;
       return true;
     });
+    if (stage === "created") {
+      // Newest created first.
+      list.sort(
+        (a, b) =>
+          (b.odooCreatedDate ?? "").localeCompare(a.odooCreatedDate ?? "")
+      );
+    }
+    return list;
   }, [stage, alert, category, query]);
 
   const isFiltered = Boolean(stage || alert || category || query);
@@ -306,9 +329,12 @@ export default function Products() {
           <TableSkeleton />
         ) : (
           <LifecycleTable
+            key={stage ?? "all"}
             rows={filtered}
             visibleColumns={visibleColumns}
             onResetFilters={resetFilters}
+            sortKey={stage === "created" ? "days" : "stage"}
+            sortDir="asc"
           />
         )}
       </div>
