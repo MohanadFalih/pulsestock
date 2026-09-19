@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-19T18:31:53.648468+00:00",
+ "syncedAt": "2026-09-19T19:02:29.730414+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10,20 +10,20 @@
    "sku": "H-1909",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-19",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-09-19",
+   "lastOrderDate": "2026-09-19",
+   "orders": 1,
+   "units": 1,
+   "revenue": 72000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -7111,17 +7111,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-05-04",
    "firstOrderDate": "2026-05-04",
-   "lastOrderDate": "2026-09-16",
-   "orders": 97,
-   "units": 98,
-   "revenue": 6567000,
+   "lastOrderDate": "2026-09-19",
+   "orders": 98,
+   "units": 99,
+   "revenue": 6621000,
    "delivered": 89,
    "returned": 28,
    "unitsBoughtFromSupplier": 72,
    "returnedStock": 4,
    "unitPrice": 54000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10155,6 +10155,13 @@
   "from": "2026-06-21",
   "to": "2026-09-19",
   "byProduct": {
+   "7337": {
+    "2026-09-19": [
+     1,
+     1,
+     72000
+    ]
+   },
    "7329": {
     "2026-09-18": [
      3,
@@ -20461,6 +20468,11 @@
      1,
      1,
      54000
+    ],
+    "2026-09-19": [
+     1,
+     1,
+     54000
     ]
    },
    "7007": {
@@ -23460,10 +23472,47 @@
    "2026-09-16": 28,
    "2026-09-17": 38,
    "2026-09-18": 28,
-   "2026-09-19": 22
+   "2026-09-19": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32301",
+   "d": "2026-09-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1909",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32300",
+   "d": "2026-09-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -20000,
+   "lines": [
+    {
+     "sku": "H-1772",
+     "qty": 1,
+     "price": 54000,
+     "discPct": 33.9,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32299",
    "d": "2026-09-19",
