@@ -5,5 +5,8 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "crons": [
+    { "path": "/api/dispatch-sync", "schedule": "*/30 * * * *" }
   ]
 }
