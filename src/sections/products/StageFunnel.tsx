@@ -58,6 +58,7 @@ export function StageFunnel({ active, onSelect }: StageFunnelProps) {
               transition={{ delay: 0.1 + i * 0.06, duration: 0.5, ease: EASE }}
               onClick={() => onSelect(isActive ? null : stage)}
               aria-pressed={isActive}
+              title={`${meta.label}: ${count}`}
               style={{
                 flexGrow: Math.max(count, 1),
                 flexBasis: 0,
@@ -90,6 +91,44 @@ export function StageFunnel({ active, onSelect }: StageFunnelProps) {
                 />
               )}
             </motion.button>
+          );
+        })}
+      </div>
+      {/* Legend: every stage stays fully visible even when its bar segment is
+          a zero-count sliver. Same toggle behavior as the bar. */}
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+        {counts.map(({ stage, count }) => {
+          const meta = STAGE_META[stage];
+          const isActive = active === stage;
+          return (
+            <button
+              key={stage}
+              type="button"
+              onClick={() => onSelect(isActive ? null : stage)}
+              aria-pressed={isActive}
+              title={`${meta.label}: ${count}`}
+              className={cn(
+                "flex cursor-pointer items-center gap-1.5 border-b transition-[filter] duration-150 hover:brightness-125",
+                isActive && "brightness-125"
+              )}
+              style={{
+                borderBottomColor: isActive ? meta.color : "transparent",
+              }}
+            >
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: meta.color }}
+              />
+              <span
+                className="text-[11px] font-semibold uppercase tracking-wide"
+                style={{ color: meta.color }}
+              >
+                {meta.label}
+              </span>
+              <span className="font-mono text-[11px] text-text-muted tnum">
+                {count}
+              </span>
+            </button>
           );
         })}
       </div>
