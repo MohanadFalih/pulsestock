@@ -9,11 +9,13 @@ Pure Python 3 stdlib (urllib/json/os/datetime) — no pip packages.
 Data selection
 --------------
 ACTIVE-LIFECYCLE product templates = union of
-  A) create_date >= today - 120 days  (recently created), and
+  A) create_date >= today - 120 days  (recently created) — ALL templates in
+     this window, whether or not they are flagged "Can be Sold" (sale_ok),
   B) templates with sale.order.line rows in confirmed orders
      (state in sale/done) created within the last 90 days,
 EXCLUDING pseudo-products: delivery.carrier products, loyalty discount
-products, and manual-discount lines (PSEUDO_NAMES). Safety cap 400.
+products, and manual-discount lines (PSEUDO_NAMES). Safety cap 1000
+(list is ordered create_date desc, so the newest templates are kept).
 
 All day bucketing uses the shop local timezone (Iraq, UTC+3, no DST) so
 daily numbers match what the owner sees in the Odoo UI.
@@ -96,7 +98,8 @@ OUT_PATH = os.path.join(ROOT, "public", "data", "live.json")
 
 RECENT_CREATE_DAYS = 120   # selection window A
 RECENT_ORDER_DAYS = 90     # selection window B (covers the whole daily series)
-MAX_PRODUCTS = 400         # safety cap only — the full active set is ~320
+MAX_PRODUCTS = 1000        # safety cap only — candidates are ordered
+                           # create_date desc, so the newest are kept
 VELOCITY_DAYS = 7
 DAILY_DAYS = 90            # daily time-series depth for window selectors
 ORDERS_DETAIL_DAYS = 120   # ordersDetail window (Cash P&L page)
@@ -232,8 +235,7 @@ def main():
     log("selecting active templates…")
     recent_ids = odoo.kw(
         "product.template", "search",
-        [[["sale_ok", "=", True],
-          ["create_date", ">=", days_ago(RECENT_CREATE_DAYS)]]])
+        [[["create_date", ">=", days_ago(RECENT_CREATE_DAYS)]]])
     log(f"  window A (created ≤{RECENT_CREATE_DAYS}d): {len(recent_ids)} templates")
 
     # Window B: products with confirmed order lines in the last 90 days.
