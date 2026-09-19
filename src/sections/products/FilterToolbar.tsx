@@ -22,6 +22,9 @@ const ALERT_PILL_ORDER: AlertType[] = (
 
 const ALL_CATEGORIES = () => Array.from(new Set(products.map((p) => p.category)));
 
+/** Meta-verified live-ad color (matches the ads-live stage color). */
+const LIVE_ADS_COLOR = "#45B7F5";
+
 export interface FilterToolbarProps {
   query: string;
   onQueryChange: (q: string) => void;
@@ -29,6 +32,8 @@ export interface FilterToolbarProps {
   onAlertChange: (a: AlertType | null) => void;
   category: Category | null;
   onCategoryChange: (c: Category | null) => void;
+  liveAds: boolean;
+  onLiveAdsChange: (v: boolean) => void;
   shown: number;
   total: number;
   isFiltered: boolean;
@@ -114,11 +119,14 @@ export function FilterToolbar({
   onAlertChange,
   category,
   onCategoryChange,
+  liveAds,
+  onLiveAdsChange,
   shown,
   total,
   isFiltered,
   onReset,
 }: FilterToolbarProps) {
+  const liveAdsCount = products.filter((p) => p.adsMeta != null).length;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -140,6 +148,40 @@ export function FilterToolbar({
         </div>
 
         <AlertPills value={alert} onChange={onAlertChange} />
+
+        {/* Live Ads toggle: products with Meta-verified live ad delivery */}
+        <div className="h-5 w-px shrink-0 bg-hairline" />
+        <motion.button
+          type="button"
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.2 }}
+          onClick={() => onLiveAdsChange(!liveAds)}
+          aria-pressed={liveAds}
+          className={cn(
+            "flex shrink-0 items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-[12px] font-semibold transition-colors",
+            liveAds
+              ? "text-text-primary"
+              : "border-transparent text-text-muted hover:text-text-secondary"
+          )}
+          style={
+            liveAds
+              ? {
+                  backgroundColor: `${LIVE_ADS_COLOR}14`,
+                  borderColor: `${LIVE_ADS_COLOR}66`,
+                }
+              : undefined
+          }
+        >
+          <span
+            className="h-1.5 w-1.5 rounded-full"
+            style={{ backgroundColor: LIVE_ADS_COLOR }}
+          />
+          <span>Live Ads</span>
+          <span className="font-mono text-[10px] text-text-muted tnum">
+            {liveAdsCount}
+          </span>
+        </motion.button>
 
         {/* Category dropdown */}
         <Select
