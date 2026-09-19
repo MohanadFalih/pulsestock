@@ -1,11 +1,23 @@
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
-import { products, stageCounts } from "@/data/products";
-import { STAGE_META, type Stage } from "@/data/decisionEngine";
+import { ANCHOR_DATE, products, stageCounts } from "@/data/products";
+import { STAGE_META, STAGE_ORDER, type Stage } from "@/data/decisionEngine";
 import CountUp from "@/components/CountUp";
 import { cn } from "@/lib/utils";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+/** CREATED intake view: product still in "created" stage OR created in Odoo
+ *  within the last 30 days (matches the dashboard's intake definition). */
+const CREATED_INTAKE_DAYS = 30;
+function isCreatedIntake(p: { stage: string; odooCreatedDate: string | null }): boolean {
+  if (p.stage === "created") return true;
+  if (!p.odooCreatedDate) return false;
+  const ageDays =
+    (ANCHOR_DATE.getTime() - new Date(p.odooCreatedDate).getTime()) / 86_400_000;
+  return ageDays <= CREATED_INTAKE_DAYS;
+}
+
 
 export interface StageFunnelProps {
   active: Stage | null;
@@ -17,7 +29,16 @@ export interface StageFunnelProps {
  * stage segments, widths proportional to product count. Click to filter.
  */
 export function StageFunnel({ active, onSelect }: StageFunnelProps) {
-  const counts = stageCounts();
+  const byStage = new Map(stageCounts().map((s) => [s.stage, s.count]));
+  // The Created segment counts the intake definition: still `created` OR
+  // created in Odoo within CREATED_INTAKE_DAYS (matches isCreatedIntake).
+  const counts = STAGE_ORDER.map((stage) => ({
+    stage,
+    count:
+      stage === "created"
+        ? products.filter(isCreatedIntake).length
+        : (byStage.get(stage) ?? 0),
+  }));
   return (
     <div>
       <div
