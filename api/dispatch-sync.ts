@@ -1,48 +1,43 @@
-// @ts-nocheck — Vercel builds api/ functions independently of the Vite app
-// (tsconfig only includes src/), so this file intentionally uses the
-// web-standard Request/Response signature supported by the Vercel Node runtime.
-//
-// Fires the odoo-sync GitHub Actions workflow on demand (workflow_dispatch).
-// Triggered every 30 minutes by an external cron (cron-job.org) calling this
-// endpoint with Authorization: Bearer <CRON_SECRET>.
-//
-// Required environment variables (Vercel project settings):
-//   CRON_SECRET    — any strong random string.
-//   GH_SYNC_TOKEN  — GitHub Personal Access Token (classic) with `repo` scope.
+// @ts-nocheck
+// Fires the odoo-sync GitHub Actions workflow via workflow_dispatch.
+// Called every 30 minutes by cron-job.org with Authorization: Bearer <CRON_SECRET>.
+// Env vars (Vercel project settings): CRON_SECRET, GH_SYNC_TOKEN (classic PAT, repo scope).
 
-const REPO = "MohanadFalih/pulsestock";
-const WORKFLOW = "odoo-sync.yml";
-
-export default async function handler(request: Request): Promise<Response> {
-  // Fail closed: without both secrets configured this endpoint does nothing.
-  if (!process.env.CRON_SECRET || !process.env.GH_SYNC_TOKEN) {
-    return Response.json(
-      { ok: false, error: "server not configured" },
-      { status: 503 }
-    );
-  }
-  const auth = request.headers.get("authorization");
-  if (auth !== `Bearer ${process.env.CRON_SECRET}`) {
-    return Response.json({ ok: false, error: "unauthorized" }, { status: 401 });
-  }
-
-  const res = await fetch(
-    `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.GH_SYNC_TOKEN}`,
-        Accept: "application/vnd.github+json",
-        "User-Agent": "pulsestock-cron",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ref: "main" }),
+export default async function handler(req: any, res: any) {
+  try {
+    if (!process.env.CRON_SECRET || !process.env.GH_SYNC_TOKEN) {
+      return res
+        .status(503)
+        .json({ ok: false, error: "server not configured — missing env vars" });
     }
-  );
+    if (req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) {
+      return res.status(401).json({ ok: false, error: "unauthorized" });
+    }
 
-  // GitHub returns 204 No Content on a successful dispatch.
-  if (res.status === 204) {
-    return Response.json({ ok: true, dispatchedAt: new Date().toISOString() });
+    const gh = await fetch(
+      "https://api.github.com/repos/MohanadFalih/pulsestock/actions/workflows/odoo-sync.yml/dispatches",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.GH_SYNC_TOKEN}`,
+          Accept: "application/vnd.github+json",
+          "User-Agent": "pulsestock-cron",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ref: "main" }),
+      }
+    );
+
+    if (gh.status === 204) {
+      return res
+        .status(200)
+        .json({ ok: true, dispatchedAt: new Date().toISOString() });
+    }
+    const detail = (await gh.text()).slice(0, 300);
+    return res.status(502).json({ ok: false, githubStatus: gh.status, detail });
+  } catch (e: any) {
+    return res
+      .status(500)
+      .json({ ok: false, error: String((e && e.message) || e) });
   }
-  return Response.json({ ok: false, status: res.status }, { status: 502 });
 }
