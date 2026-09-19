@@ -1098,6 +1098,27 @@ export function stageCounts(): { stage: Stage; count: number }[] {
   }));
 }
 
+// ─── CREATED intake (recently created products, regardless of stage) ────────
+
+/** A product counts as "recently created" intake for this many days. */
+export const CREATED_INTAKE_DAYS = 30;
+
+/**
+ * True when the product belongs in the CREATED intake view: either still at
+ * the `created` stage, or created in Odoo within the last
+ * `CREATED_INTAKE_DAYS` days (age measured against ANCHOR_DATE, like
+ * `daysInMarket` in LifecycleTable) even if it has since moved on
+ * (ads-live, selling, …).
+ */
+export function isCreatedIntake(p: Product): boolean {
+  if (p.stage === "created") return true;
+  if (!p.odooCreatedDate) return false;
+  const ageDays =
+    (ANCHOR_DATE.getTime() - new Date(p.odooCreatedDate).getTime()) /
+    86_400_000;
+  return ageDays <= CREATED_INTAKE_DAYS;
+}
+
 /** Products sorted by ROAS desc (top movers list). */
 export function topMovers(limit = 5): Product[] {
   return [...products]
