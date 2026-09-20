@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-20T19:37:28.455750+00:00",
+ "syncedAt": "2026-09-20T19:51:23.825187+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -274,7 +274,7 @@
    "odooCreatedDate": "2026-09-17",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-20",
-   "orders": 5,
+   "orders": 6,
    "units": 6,
    "revenue": 558000,
    "delivered": 0,
@@ -282,7 +282,7 @@
    "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 93000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10205,9 +10205,9 @@
      186000
     ],
     "2026-09-20": [
-     3,
      4,
-     372000
+     5,
+     465000
     ]
    },
    "7327": {
@@ -23514,10 +23514,29 @@
    "2026-09-17": 38,
    "2026-09-18": 28,
    "2026-09-19": 29,
-   "2026-09-20": 43
+   "2026-09-20": 44
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32356",
+   "d": "2026-09-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8002-murdum-3",
+     "qty": 1,
+     "price": 93000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32355",
    "d": "2026-09-20",
