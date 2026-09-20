@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-20T15:32:18.757762+00:00",
+ "syncedAt": "2026-09-20T15:59:58.478931+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -300,15 +300,15 @@
    "odooCreatedDate": "2026-09-17",
    "firstOrderDate": "2026-09-17",
    "lastOrderDate": "2026-09-20",
-   "orders": 8,
-   "units": 8,
-   "revenue": 688000,
+   "orders": 9,
+   "units": 9,
+   "revenue": 774000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -3628,15 +3628,15 @@
    "odooCreatedDate": "2026-07-18",
    "firstOrderDate": "2026-07-19",
    "lastOrderDate": "2026-09-20",
-   "orders": 126,
-   "units": 127,
-   "revenue": 12319000,
+   "orders": 127,
+   "units": 128,
+   "revenue": 12416000,
    "delivered": 125,
    "returned": 35,
    "unitsBoughtFromSupplier": 96,
    "returnedStock": 4,
    "unitPrice": 97000.0,
-   "orderVelocity7d": 0.14,
+   "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10227,9 +10227,9 @@
      172000
     ],
     "2026-09-20": [
-     4,
-     4,
-     344000
+     5,
+     5,
+     430000
     ]
    },
    "7325": {
@@ -14109,9 +14109,9 @@
      97000
     ],
     "2026-09-20": [
-     1,
-     1,
-     97000
+     2,
+     2,
+     194000
     ]
    },
    "7195": {
@@ -23487,10 +23487,47 @@
    "2026-09-17": 38,
    "2026-09-18": 28,
    "2026-09-19": 29,
-   "2026-09-20": 36
+   "2026-09-20": 38
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32348",
+   "d": "2026-09-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1907-navy-1-2",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32347",
+   "d": "2026-09-20",
+   "st": "sale",
+   "fee": 0,
+   "disc": -97000,
+   "lines": [
+    {
+     "sku": "T-7040",
+     "qty": 1,
+     "price": 97000,
+     "discPct": 100.0,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32346",
    "d": "2026-09-20",
