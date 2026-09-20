@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-20T07:32:30.258615+00:00",
+ "syncedAt": "2026-09-20T08:02:03.152020+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1392,15 +1392,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-09-20",
-   "orders": 19,
-   "units": 19,
-   "revenue": 2033000,
+   "orders": 20,
+   "units": 20,
+   "revenue": 2140000,
    "delivered": 13,
    "returned": 4,
    "unitsBoughtFromSupplier": 15,
    "returnedStock": 1,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 0.43,
+   "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -4230,9 +4230,9 @@
    "units": 252,
    "revenue": 19904050,
    "delivered": 246,
-   "returned": 79,
+   "returned": 80,
    "unitsBoughtFromSupplier": 185,
-   "returnedStock": 15,
+   "returnedStock": 16,
    "unitPrice": 79000.0,
    "orderVelocity7d": 1.57,
    "daysSinceLastOrder": 0,
@@ -10150,20 +10150,20 @@
    "sku": "L-7300",
    "category": "Kap",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-08-05",
-   "lastOrderDate": "2026-08-23",
-   "orders": 55,
-   "units": 61,
-   "revenue": 2544000,
+   "lastOrderDate": "2026-09-20",
+   "orders": 56,
+   "units": 62,
+   "revenue": 2608000,
    "delivered": 60,
    "returned": 7,
    "unitsBoughtFromSupplier": 57,
    "returnedStock": 2,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 28,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10172,8 +10172,8 @@
   }
  ],
  "shop": {
-  "stockUnits": 1931,
-  "stockValue": 55707811,
+  "stockUnits": 1932,
+  "stockValue": 55749144,
   "stockVariants": 1528
  },
  "daily": {
@@ -10567,9 +10567,9 @@
      107000
     ],
     "2026-09-20": [
-     1,
-     1,
-     107000
+     2,
+     2,
+     214000
     ]
    },
    "7284": {
@@ -23005,6 +23005,11 @@
      1,
      1,
      64000
+    ],
+    "2026-09-20": [
+     1,
+     1,
+     64000
     ]
    }
   },
@@ -23320,6 +23325,10 @@
    "2026-09-19": [
     23,
     28
+   ],
+   "2026-09-20": [
+    0,
+    1
    ]
   },
   "orders": {
@@ -23413,10 +23422,29 @@
    "2026-09-17": 38,
    "2026-09-18": 28,
    "2026-09-19": 29,
-   "2026-09-20": 8
+   "2026-09-20": 10
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32316",
+   "d": "2026-09-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32315",
    "d": "2026-09-20",
@@ -23454,6 +23482,24 @@
    ],
    "src": "WhatsApp",
    "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32313",
+   "d": "2026-09-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -13000,
+   "lines": [
+    {
+     "sku": "L-7300",
+     "qty": 1,
+     "price": 64000,
+     "discPct": 20.3,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
   },
   {
    "id": "S32312",
@@ -27456,7 +27502,8 @@
      "qty": 1,
      "price": 79000,
      "discPct": 0,
-     "del": 1
+     "del": 0,
+     "ret": 1
     },
     {
      "sku": "H-1840",
@@ -143047,7 +143094,7 @@
   {
    "sku": "H-1840",
    "model": "H-1840",
-   "qty": 1,
+   "qty": 2,
    "cost": 41333,
    "created": "2026-07-09"
   },
