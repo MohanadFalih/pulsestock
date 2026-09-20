@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-20T16:56:36.477095+00:00",
+ "syncedAt": "2026-09-20T17:02:31.306849+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -274,15 +274,15 @@
    "odooCreatedDate": "2026-09-17",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-20",
-   "orders": 4,
-   "units": 4,
-   "revenue": 372000,
+   "orders": 5,
+   "units": 6,
+   "revenue": 558000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 93000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -894,20 +894,20 @@
    "sku": "K-6656",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-03",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-09-20",
+   "lastOrderDate": "2026-09-20",
+   "orders": 1,
+   "units": 2,
+   "revenue": 202000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 101000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10205,9 +10205,9 @@
      186000
     ],
     "2026-09-20": [
-     2,
-     2,
-     186000
+     3,
+     4,
+     372000
     ]
    },
    "7327": {
@@ -10440,6 +10440,13 @@
      1,
      1,
      76000
+    ]
+   },
+   "7303": {
+    "2026-09-20": [
+     1,
+     2,
+     202000
     ]
    },
    "7298": {
@@ -23487,10 +23494,53 @@
    "2026-09-17": 38,
    "2026-09-18": 28,
    "2026-09-19": 29,
-   "2026-09-20": 38
+   "2026-09-20": 39
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32349",
+   "d": "2026-09-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8002-haki-2",
+     "qty": 1,
+     "price": 93000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "T-8002-murdum-2",
+     "qty": 1,
+     "price": 93000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "K-6656-red-1-2",
+     "qty": 1,
+     "price": 101000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "K-6656-kahve-2",
+     "qty": 1,
+     "price": 101000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32348",
    "d": "2026-09-20",
