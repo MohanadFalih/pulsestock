@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-21T21:17:14.084661+00:00",
+ "syncedAt": "2026-09-21T21:32:07.452131+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7735,17 +7735,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-04-22",
    "firstOrderDate": "2026-04-25",
-   "lastOrderDate": "2026-09-16",
-   "orders": 100,
-   "units": 99,
-   "revenue": 9306000,
+   "lastOrderDate": "2026-09-22",
+   "orders": 101,
+   "units": 100,
+   "revenue": 9400000,
    "delivered": 99,
    "returned": 24,
    "unitsBoughtFromSupplier": 85,
    "returnedStock": 11,
    "unitPrice": 94000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 6,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -21191,6 +21191,11 @@
      1,
      1,
      94000
+    ],
+    "2026-09-22": [
+     1,
+     1,
+     94000
     ]
    },
    "6971": {
@@ -23410,10 +23415,28 @@
    "2026-09-19": 30,
    "2026-09-20": 47,
    "2026-09-21": 41,
-   "2026-09-22": 1
+   "2026-09-22": 2
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32408",
+   "d": "2026-09-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -47000,
+   "lines": [
+    {
+     "sku": "K-6255-قهواييkahv-46",
+     "qty": 1,
+     "price": 94000,
+     "discPct": 47.5,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32407",
    "d": "2026-09-22",
