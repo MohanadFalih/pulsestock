@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-21T13:32:02.326903+00:00",
+ "syncedAt": "2026-09-21T14:00:17.400453+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -274,15 +274,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-21",
-   "orders": 17,
-   "units": 20,
-   "revenue": 1440000,
+   "orders": 18,
+   "units": 21,
+   "revenue": 1512000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 18,
    "returnedStock": 2,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 2.43,
+   "orderVelocity7d": 2.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10229,9 +10229,9 @@
      432000
     ],
     "2026-09-21": [
-     4,
-     4,
-     288000
+     5,
+     5,
+     360000
     ]
    },
    "7328": {
@@ -23502,10 +23502,29 @@
    "2026-09-18": 28,
    "2026-09-19": 30,
    "2026-09-20": 46,
-   "2026-09-21": 26
+   "2026-09-21": 27
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32390",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-navy-1-52",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32389",
    "d": "2026-09-21",
