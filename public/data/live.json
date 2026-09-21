@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-21T22:02:24.302043+00:00",
+ "syncedAt": "2026-09-21T22:32:12.289302+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -273,17 +273,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
-   "lastOrderDate": "2026-09-21",
-   "orders": 20,
-   "units": 23,
-   "revenue": 1656000,
+   "lastOrderDate": "2026-09-22",
+   "orders": 21,
+   "units": 24,
+   "revenue": 1728000,
    "delivered": 4,
    "returned": 0,
    "unitsBoughtFromSupplier": 23,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 2.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -429,17 +429,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-13",
    "firstOrderDate": "2026-09-13",
-   "lastOrderDate": "2026-09-21",
-   "orders": 22,
-   "units": 26,
-   "revenue": 1846000,
+   "lastOrderDate": "2026-09-22",
+   "orders": 23,
+   "units": 28,
+   "revenue": 1988000,
    "delivered": 15,
    "returned": 1,
    "unitsBoughtFromSupplier": 26,
    "returnedStock": 1,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 2.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 2.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10239,6 +10239,11 @@
      7,
      7,
      504000
+    ],
+    "2026-09-22": [
+     1,
+     1,
+     72000
     ]
    },
    "7328": {
@@ -10351,6 +10356,11 @@
      1,
      1,
      71000
+    ],
+    "2026-09-22": [
+     1,
+     2,
+     142000
     ]
    },
    "7321": {
@@ -23420,10 +23430,56 @@
    "2026-09-19": 30,
    "2026-09-20": 47,
    "2026-09-21": 42,
-   "2026-09-22": 2
+   "2026-09-22": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32410",
+   "d": "2026-09-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-navy-1-52",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32409",
+   "d": "2026-09-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1892-haki-48",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1892-siyah-50",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32408",
    "d": "2026-09-22",
