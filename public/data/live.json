@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-21T17:14:41.447111+00:00",
+ "syncedAt": "2026-09-21T17:32:31.274133+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -274,15 +274,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-21",
-   "orders": 18,
-   "units": 21,
-   "revenue": 1512000,
+   "orders": 19,
+   "units": 22,
+   "revenue": 1584000,
    "delivered": 4,
    "returned": 0,
    "unitsBoughtFromSupplier": 21,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 2.57,
+   "orderVelocity7d": 2.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1392,15 +1392,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-09-21",
-   "orders": 25,
-   "units": 25,
-   "revenue": 2675000,
+   "orders": 26,
+   "units": 26,
+   "revenue": 2782000,
    "delivered": 18,
    "returned": 4,
    "unitsBoughtFromSupplier": 21,
    "returnedStock": 1,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 1.29,
+   "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10236,9 +10236,9 @@
      432000
     ],
     "2026-09-21": [
-     5,
-     5,
-     360000
+     6,
+     6,
+     432000
     ]
    },
    "7328": {
@@ -10667,9 +10667,9 @@
      428000
     ],
     "2026-09-21": [
-     3,
-     3,
-     321000
+     4,
+     4,
+     428000
     ]
    },
    "7284": {
@@ -23529,10 +23529,48 @@
    "2026-09-18": 28,
    "2026-09-19": 30,
    "2026-09-20": 47,
-   "2026-09-21": 34
+   "2026-09-21": 36
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32399",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-navy-1-44",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32398",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-kahve-42",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32397",
    "d": "2026-09-21",
