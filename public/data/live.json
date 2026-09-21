@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-21T10:02:27.505055+00:00",
+ "syncedAt": "2026-09-21T10:32:24.675991+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2925,17 +2925,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-28",
    "firstOrderDate": "2026-07-28",
-   "lastOrderDate": "2026-09-16",
-   "orders": 32,
-   "units": 37,
-   "revenue": 3621100,
+   "lastOrderDate": "2026-09-21",
+   "orders": 33,
+   "units": 38,
+   "revenue": 3719100,
    "delivered": 37,
    "returned": 9,
    "unitsBoughtFromSupplier": 33,
    "returnedStock": 5,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -7524,20 +7524,20 @@
    "sku": "T-7024",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-04-27",
    "firstOrderDate": "2026-04-27",
-   "lastOrderDate": "2026-09-14",
-   "orders": 124,
-   "units": 130,
-   "revenue": 12210600,
+   "lastOrderDate": "2026-09-21",
+   "orders": 125,
+   "units": 131,
+   "revenue": 12304600,
    "delivered": 129,
    "returned": 40,
    "unitsBoughtFromSupplier": 95,
    "returnedStock": 4,
    "unitPrice": 94000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12814,6 +12814,11 @@
      1,
      3,
      294000
+    ],
+    "2026-09-21": [
+     1,
+     1,
+     98000
     ]
    },
    "7223": {
@@ -20793,6 +20798,11 @@
      1,
      1,
      94000
+    ],
+    "2026-09-21": [
+     1,
+     1,
+     94000
     ]
    },
    "6984": {
@@ -23447,10 +23457,46 @@
    "2026-09-18": 28,
    "2026-09-19": 30,
    "2026-09-20": 46,
-   "2026-09-21": 12
+   "2026-09-21": 14
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32377",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -55000,
+   "lines": [
+    {
+     "sku": "T-7024-اسودsiyah-34648",
+     "qty": 1,
+     "price": 94000,
+     "discPct": 55.6,
+     "del": 0
+    }
+   ],
+   "src": "Website",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32376",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -19000,
+   "lines": [
+    {
+     "sku": "T-7069-navy-1-3",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 18.4,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32375",
    "d": "2026-09-21",
