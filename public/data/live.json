@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-21T13:02:30.005831+00:00",
+ "syncedAt": "2026-09-21T13:32:02.326903+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -65,17 +65,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-19",
    "firstOrderDate": "2026-09-19",
-   "lastOrderDate": "2026-09-20",
-   "orders": 2,
-   "units": 2,
-   "revenue": 144000,
+   "lastOrderDate": "2026-09-21",
+   "orders": 3,
+   "units": 3,
+   "revenue": 216000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -377,17 +377,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-15",
    "firstOrderDate": "2026-09-15",
-   "lastOrderDate": "2026-09-20",
-   "orders": 3,
-   "units": 3,
-   "revenue": 207000,
+   "lastOrderDate": "2026-09-21",
+   "orders": 4,
+   "units": 4,
+   "revenue": 276000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10191,6 +10191,11 @@
      1,
      1,
      72000
+    ],
+    "2026-09-21": [
+     1,
+     1,
+     72000
     ]
    },
    "7332": {
@@ -10292,6 +10297,11 @@
      69000
     ],
     "2026-09-20": [
+     1,
+     1,
+     69000
+    ],
+    "2026-09-21": [
      1,
      1,
      69000
@@ -23492,10 +23502,48 @@
    "2026-09-18": 28,
    "2026-09-19": 30,
    "2026-09-20": 46,
-   "2026-09-21": 24
+   "2026-09-21": 26
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32389",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1889-navy-1-50",
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32388",
+   "d": "2026-09-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1909-murdum-4",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32387",
    "d": "2026-09-21",
