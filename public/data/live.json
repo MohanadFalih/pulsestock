@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-22T14:31:56.855945+00:00",
+ "syncedAt": "2026-09-22T14:45:55.279188+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7316,20 +7316,20 @@
    "sku": "L-0612",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-04-30",
    "firstOrderDate": "2026-05-03",
-   "lastOrderDate": "2026-09-11",
-   "orders": 4,
-   "units": 4,
-   "revenue": 276000,
+   "lastOrderDate": "2026-09-22",
+   "orders": 5,
+   "units": 5,
+   "revenue": 345000,
    "delivered": 4,
    "returned": 3,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 1,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 11,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -7966,20 +7966,20 @@
    "sku": "K-6579",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-04-13",
    "firstOrderDate": "2026-04-21",
-   "lastOrderDate": "2026-09-10",
-   "orders": 9,
-   "units": 9,
-   "revenue": 891000,
+   "lastOrderDate": "2026-09-22",
+   "orders": 10,
+   "units": 10,
+   "revenue": 990000,
    "delivered": 9,
    "returned": 5,
    "unitsBoughtFromSupplier": 6,
    "returnedStock": 1,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -8226,20 +8226,20 @@
    "sku": "L-2328",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-04-07",
    "firstOrderDate": "2026-05-19",
-   "lastOrderDate": "2026-07-10",
-   "orders": 7,
-   "units": 7,
-   "revenue": 448000,
+   "lastOrderDate": "2026-09-22",
+   "orders": 8,
+   "units": 8,
+   "revenue": 512000,
    "delivered": 7,
    "returned": 4,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 2,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 74,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -20670,6 +20670,11 @@
      1,
      1,
      69000
+    ],
+    "2026-09-22": [
+     1,
+     1,
+     69000
     ]
    },
    "7001": {
@@ -21460,6 +21465,11 @@
      1,
      1,
      99000
+    ],
+    "2026-09-22": [
+     1,
+     1,
+     99000
     ]
    },
    "6953": {
@@ -21662,6 +21672,11 @@
      64000
     ],
     "2026-07-10": [
+     1,
+     1,
+     64000
+    ],
+    "2026-09-22": [
      1,
      1,
      64000
@@ -23556,10 +23571,43 @@
    "2026-09-19": 30,
    "2026-09-20": 47,
    "2026-09-21": 42,
-   "2026-09-22": 19
+   "2026-09-22": 20
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32429",
+   "d": "2026-09-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -117000,
+   "lines": [
+    {
+     "sku": "L-2328",
+     "qty": 1,
+     "price": 64000,
+     "discPct": 49.4,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-0612-فيزونvizon-24652",
+     "qty": 1,
+     "price": 69000,
+     "discPct": 49.4,
+     "del": 0
+    },
+    {
+     "sku": "K-6579-احمرbordo-24246",
+     "qty": 1,
+     "price": 99000,
+     "discPct": 49.4,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "قبل وبعد (مختلط)"
+  },
   {
    "id": "S32428",
    "d": "2026-09-22",
