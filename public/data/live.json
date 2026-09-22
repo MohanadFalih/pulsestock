@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-22T08:02:33.027039+00:00",
+ "syncedAt": "2026-09-22T08:32:09.018232+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3424,9 +3424,9 @@
    "units": 119,
    "revenue": 7616000,
    "delivered": 117,
-   "returned": 26,
+   "returned": 27,
    "unitsBoughtFromSupplier": 100,
-   "returnedStock": 12,
+   "returnedStock": 13,
    "unitPrice": 64000.0,
    "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 3,
@@ -7584,9 +7584,9 @@
    "units": 233,
    "revenue": 15710000,
    "delivered": 231,
-   "returned": 63,
+   "returned": 64,
    "unitsBoughtFromSupplier": 182,
-   "returnedStock": 10,
+   "returnedStock": 11,
    "unitPrice": 54000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 2,
@@ -10172,9 +10172,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1899,
-  "stockValue": 54227847,
-  "stockVariants": 1505
+  "stockUnits": 1902,
+  "stockValue": 54288940,
+  "stockVariants": 1507
  },
  "daily": {
   "days": 90,
@@ -23379,7 +23379,7 @@
    ],
    "2026-09-22": [
     0,
-    3
+    5
    ]
   },
   "orders": {
@@ -28876,8 +28876,9 @@
      "qty": 1,
      "price": 64000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -29016,7 +29017,8 @@
      "qty": 1,
      "price": 54000,
      "discPct": 33.9,
-     "del": 1
+     "del": 0,
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -130543,7 +130545,7 @@
   {
    "sku": "H-1770",
    "model": "H-1770",
-   "qty": 0,
+   "qty": 1,
    "cost": 35260,
    "created": "2026-04-25"
   },
@@ -186018,7 +186020,7 @@
   {
    "sku": "T-7064",
    "model": "T-7064",
-   "qty": 0,
+   "qty": 1,
    "cost": 25833,
    "created": "2026-07-22"
   },
