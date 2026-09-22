@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-22T22:32:20.008985+00:00",
+ "syncedAt": "2026-09-22T23:02:24.212368+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -377,17 +377,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
-   "lastOrderDate": "2026-09-22",
-   "orders": 23,
-   "units": 26,
-   "revenue": 1872000,
+   "lastOrderDate": "2026-09-23",
+   "orders": 24,
+   "units": 27,
+   "revenue": 1944000,
    "delivered": 4,
    "returned": 0,
    "unitsBoughtFromSupplier": 26,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 3.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -6380,11 +6380,11 @@
    "sku": "K-6494",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-06-02",
    "firstOrderDate": "2026-06-03",
-   "lastOrderDate": "2026-09-01",
-   "orders": 197,
+   "lastOrderDate": "2026-09-23",
+   "orders": 198,
    "units": 205,
    "revenue": 18655000,
    "delivered": 205,
@@ -6392,8 +6392,8 @@
    "unitsBoughtFromSupplier": 168,
    "returnedStock": 4,
    "unitPrice": 91000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 22,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10367,6 +10367,11 @@
      3,
      3,
      216000
+    ],
+    "2026-09-23": [
+     1,
+     1,
+     72000
     ]
    },
    "7328": {
@@ -19087,6 +19092,11 @@
      1,
      1,
      91000
+    ],
+    "2026-09-23": [
+     1,
+     1,
+     91000
     ]
    },
    "7087": {
@@ -23471,10 +23481,47 @@
    "2026-09-20": 47,
    "2026-09-21": 42,
    "2026-09-22": 29,
-   "2026-09-23": 2
+   "2026-09-23": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32443",
+   "d": "2026-09-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-siyah-44",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32442",
+   "d": "2026-09-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -46000,
+   "lines": [
+    {
+     "sku": "K-6494-فيزونvizon-13640",
+     "qty": 1,
+     "price": 91000,
+     "discPct": 50.5,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32441",
    "d": "2026-09-23",
