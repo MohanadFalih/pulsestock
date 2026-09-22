@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-22T09:02:03.714589+00:00",
+ "syncedAt": "2026-09-22T09:32:13.296899+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -66,15 +66,15 @@
    "odooCreatedDate": "2026-09-19",
    "firstOrderDate": "2026-09-19",
    "lastOrderDate": "2026-09-22",
-   "orders": 6,
-   "units": 7,
-   "revenue": 504000,
+   "orders": 7,
+   "units": 8,
+   "revenue": 576000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.86,
+   "orderVelocity7d": 1.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -2015,17 +2015,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-12",
    "firstOrderDate": "2026-08-12",
-   "lastOrderDate": "2026-09-22",
-   "orders": 102,
-   "units": 106,
-   "revenue": 9116000,
+   "lastOrderDate": "2026-09-16",
+   "orders": 101,
+   "units": 105,
+   "revenue": 9030000,
    "delivered": 105,
    "returned": 28,
    "unitsBoughtFromSupplier": 83,
    "returnedStock": 8,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 6,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10212,9 +10212,9 @@
      144000
     ],
     "2026-09-22": [
-     2,
      3,
-     216000
+     4,
+     288000
     ]
    },
    "7335": {
@@ -11511,11 +11511,6 @@
      86000
     ],
     "2026-09-16": [
-     1,
-     1,
-     86000
-    ],
-    "2026-09-22": [
      1,
      1,
      86000
@@ -23478,22 +23473,23 @@
  },
  "ordersDetail": [
   {
-   "id": "S32422",
+   "id": "S32423",
    "d": "2026-09-22",
    "st": "sale",
    "fee": 5000,
-   "disc": -18000,
+   "disc": 0,
    "lines": [
     {
-     "sku": "T-7079-navy-1-4",
+     "sku": "H-1909-navy-1-1",
      "qty": 1,
-     "price": 86000,
-     "discPct": 19.8,
-     "del": 0
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
     }
    ],
    "src": "Instagram",
-   "ful": "تجهيز مباشر"
+   "ful": "تجهيز تركيا"
   },
   {
    "id": "S32421",
