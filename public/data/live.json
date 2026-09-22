@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-22T19:02:04.906568+00:00",
+ "syncedAt": "2026-09-22T19:17:45.812491+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5577,17 +5577,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-06-15",
    "firstOrderDate": "2026-06-15",
-   "lastOrderDate": "2026-09-20",
-   "orders": 147,
-   "units": 151,
-   "revenue": 14642150,
+   "lastOrderDate": "2026-09-22",
+   "orders": 148,
+   "units": 152,
+   "revenue": 14739150,
    "delivered": 151,
    "returned": 41,
    "unitsBoughtFromSupplier": 119,
    "returnedStock": 3,
    "unitPrice": 97000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -18036,6 +18036,11 @@
      1,
      1,
      97000
+    ],
+    "2026-09-22": [
+     1,
+     1,
+     97000
     ]
    },
    "7124": {
@@ -23612,10 +23617,28 @@
    "2026-09-19": 30,
    "2026-09-20": 47,
    "2026-09-21": 42,
-   "2026-09-22": 25
+   "2026-09-22": 26
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32436",
+   "d": "2026-09-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -25000,
+   "lines": [
+    {
+     "sku": "T-7038-اسودsiyah-45254",
+     "qty": 1,
+     "price": 97000,
+     "discPct": 24.5,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32435",
    "d": "2026-09-22",
