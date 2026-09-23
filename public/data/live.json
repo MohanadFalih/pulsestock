@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-23T12:32:28.440292+00:00",
+ "syncedAt": "2026-09-23T13:02:35.628884+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -404,15 +404,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-23",
-   "orders": 24,
-   "units": 27,
-   "revenue": 1944000,
+   "orders": 25,
+   "units": 28,
+   "revenue": 2016000,
    "delivered": 6,
    "returned": 0,
    "unitsBoughtFromSupplier": 27,
    "returnedStock": 9,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 3.43,
+   "orderVelocity7d": 3.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -2142,20 +2142,20 @@
    "sku": "T-7079",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-08-12",
    "firstOrderDate": "2026-08-12",
-   "lastOrderDate": "2026-09-16",
-   "orders": 101,
-   "units": 105,
-   "revenue": 9030000,
+   "lastOrderDate": "2026-09-23",
+   "orders": 102,
+   "units": 106,
+   "revenue": 9116000,
    "delivered": 105,
    "returned": 28,
    "unitsBoughtFromSupplier": 83,
    "returnedStock": 8,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2405,17 +2405,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-10",
    "firstOrderDate": "2026-08-10",
-   "lastOrderDate": "2026-09-20",
-   "orders": 36,
-   "units": 37,
-   "revenue": 2738000,
+   "lastOrderDate": "2026-09-23",
+   "orders": 37,
+   "units": 38,
+   "revenue": 2812000,
    "delivered": 35,
    "returned": 7,
    "unitsBoughtFromSupplier": 35,
    "returnedStock": 8,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -4355,17 +4355,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-09",
    "firstOrderDate": "2026-07-09",
-   "lastOrderDate": "2026-09-21",
-   "orders": 245,
-   "units": 254,
-   "revenue": 20062050,
+   "lastOrderDate": "2026-09-23",
+   "orders": 246,
+   "units": 255,
+   "revenue": 20141050,
    "delivered": 252,
    "returned": 82,
    "unitsBoughtFromSupplier": 185,
    "returnedStock": 18,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 1.43,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10405,9 +10405,9 @@
      216000
     ],
     "2026-09-23": [
-     1,
-     1,
-     72000
+     2,
+     2,
+     144000
     ]
    },
    "7328": {
@@ -11709,6 +11709,11 @@
      1,
      1,
      86000
+    ],
+    "2026-09-23": [
+     1,
+     1,
+     86000
     ]
    },
    "7259": {
@@ -12074,6 +12079,11 @@
      74000
     ],
     "2026-09-20": [
+     1,
+     1,
+     74000
+    ],
+    "2026-09-23": [
      1,
      1,
      74000
@@ -15664,6 +15674,11 @@
      158000
     ],
     "2026-09-21": [
+     1,
+     1,
+     79000
+    ],
+    "2026-09-23": [
      1,
      1,
      79000
@@ -23566,10 +23581,73 @@
    "2026-09-20": 47,
    "2026-09-21": 42,
    "2026-09-22": 29,
-   "2026-09-23": 19
+   "2026-09-23": 22
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32463",
+   "d": "2026-09-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -28000,
+   "lines": [
+    {
+     "sku": "H-1840-kahve-4",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 16.5,
+     "del": 0
+    },
+    {
+     "sku": "T-7079-navy-1-4",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 16.5,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32462",
+   "d": "2026-09-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1869-navy-1-3",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32461",
+   "d": "2026-09-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-navy-1-44",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32460",
    "d": "2026-09-23",
