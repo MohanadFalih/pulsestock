@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-23T23:38:51.908511+00:00",
+ "syncedAt": "2026-09-23T23:51:38.825415+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4413,7 +4413,7 @@
    "revenue": 20457050,
    "delivered": 253,
    "returned": 82,
-   "unitsBoughtFromSupplier": 186,
+   "unitsBoughtFromSupplier": 185,
    "returnedStock": 17,
    "unitPrice": 79000.0,
    "orderVelocity7d": 1.71,
@@ -9864,20 +9864,20 @@
    "sku": "L-1000",
    "category": "All",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-24",
-   "orders": 121,
-   "units": 132,
-   "revenue": 5340000,
+   "lastOrderDate": "2026-09-06",
+   "orders": 120,
+   "units": 131,
+   "revenue": 5299000,
    "delivered": 129,
    "returned": 21,
-   "unitsBoughtFromSupplier": 65,
+   "unitsBoughtFromSupplier": 64,
    "returnedStock": 14,
    "unitPrice": 41000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 18,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -22982,11 +22982,6 @@
      1,
      1,
      55000
-    ],
-    "2026-09-24": [
-     1,
-     1,
-     41000
     ]
    },
    "4748": {
@@ -23661,7 +23656,7 @@
    "2026-09-21": 42,
    "2026-09-22": 28,
    "2026-09-23": 41,
-   "2026-09-24": 10
+   "2026-09-24": 9
   }
  },
  "ordersDetail": [
@@ -23700,25 +23695,6 @@
    "ful": "قبل وبعد (مختلط)"
   },
   {
-   "id": "S32493",
-   "d": "2026-09-24",
-   "st": "sale",
-   "fee": 5000,
-   "disc": -10000,
-   "lines": [
-    {
-     "sku": "H-1840-murdum-4",
-     "qty": 1,
-     "price": 79000,
-     "discPct": 12.7,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Instagram",
-   "ful": "تجهيز تركيا"
-  },
-  {
    "id": "S32492",
    "d": "2026-09-24",
    "st": "sale",
@@ -23735,25 +23711,6 @@
     }
    ],
    "src": "WhatsApp",
-   "ful": "تجهيز تركيا"
-  },
-  {
-   "id": "S32491",
-   "d": "2026-09-24",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "L-1000-اسودsiyah-34850",
-     "qty": 1,
-     "price": 41000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Instagram",
    "ful": "تجهيز تركيا"
   },
   {
