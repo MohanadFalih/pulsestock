@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-24T10:32:03.399406+00:00",
+ "syncedAt": "2026-09-24T11:02:21.958738+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10,20 +10,20 @@
    "sku": "K-6642",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-24",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-09-24",
+   "lastOrderDate": "2026-09-24",
+   "orders": 1,
+   "units": 1,
+   "revenue": 112000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 112000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -611,17 +611,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-15",
    "firstOrderDate": "2026-09-15",
-   "lastOrderDate": "2026-09-23",
-   "orders": 8,
-   "units": 8,
-   "revenue": 552000,
+   "lastOrderDate": "2026-09-24",
+   "orders": 9,
+   "units": 9,
+   "revenue": 621000,
    "delivered": 3,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 0.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10306,20 +10306,20 @@
    "sku": "L-1565",
    "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-09-04",
-   "lastOrderDate": "2026-09-24",
-   "orders": 48,
-   "units": 52,
-   "revenue": 2356000,
+   "lastOrderDate": "2026-09-15",
+   "orders": 47,
+   "units": 51,
+   "revenue": 2292000,
    "delivered": 51,
    "returned": 18,
    "unitsBoughtFromSupplier": 30,
    "returnedStock": 3,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 9,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10562,7 +10562,7 @@
   }
  ],
  "shop": {
-  "stockUnits": 1898,
+  "stockUnits": 1904,
   "stockValue": 54018179,
   "stockVariants": 1503
  },
@@ -10571,6 +10571,13 @@
   "from": "2026-06-26",
   "to": "2026-09-24",
   "byProduct": {
+   "7348": {
+    "2026-09-24": [
+     1,
+     1,
+     112000
+    ]
+   },
    "7347": {
     "2026-09-24": [
      1,
@@ -10799,6 +10806,11 @@
      4,
      4,
      276000
+    ],
+    "2026-09-24": [
+     1,
+     1,
+     69000
     ]
    },
    "7324": {
@@ -23388,11 +23400,6 @@
      1,
      1,
      64000
-    ],
-    "2026-09-24": [
-     1,
-     1,
-     64000
     ]
    },
    "4510": {
@@ -23907,10 +23914,29 @@
    "2026-09-21": 42,
    "2026-09-22": 27,
    "2026-09-23": 40,
-   "2026-09-24": 34
+   "2026-09-24": 35
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32523",
+   "d": "2026-09-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6642",
+     "qty": 1,
+     "price": 112000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32522",
    "d": "2026-09-24",
@@ -23946,6 +23972,25 @@
    ],
    "src": "Website",
    "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32520",
+   "d": "2026-09-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1889-mavi-46",
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
   },
   {
    "id": "S32519",
@@ -24348,24 +24393,6 @@
    ],
    "src": "Instagram",
    "ful": "تجهيز تركيا"
-  },
-  {
-   "id": "S32499",
-   "d": "2026-09-24",
-   "st": "sale",
-   "fee": 0,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "L-1565",
-     "qty": 1,
-     "price": 64000,
-     "discPct": 0,
-     "del": 0
-    }
-   ],
-   "src": "WhatsApp",
-   "ful": "تجهيز مباشر"
   },
   {
    "id": "S32498",
