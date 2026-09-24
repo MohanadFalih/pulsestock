@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-24T11:02:21.958738+00:00",
+ "syncedAt": "2026-09-24T11:32:09.504312+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1626,15 +1626,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-09-24",
-   "orders": 43,
-   "units": 44,
-   "revenue": 4708000,
+   "orders": 44,
+   "units": 45,
+   "revenue": 4815000,
    "delivered": 21,
    "returned": 4,
-   "unitsBoughtFromSupplier": 40,
+   "unitsBoughtFromSupplier": 41,
    "returnedStock": 1,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 3.71,
+   "orderVelocity7d": 3.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11243,9 +11243,9 @@
      963000
     ],
     "2026-09-24": [
-     1,
-     1,
-     107000
+     2,
+     2,
+     214000
     ]
    },
    "7284": {
@@ -23914,10 +23914,29 @@
    "2026-09-21": 42,
    "2026-09-22": 27,
    "2026-09-23": 40,
-   "2026-09-24": 35
+   "2026-09-24": 36
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32524",
+   "d": "2026-09-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-navy-1-42",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32523",
    "d": "2026-09-24",
