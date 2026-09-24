@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-24T19:23:39.532029+00:00",
+ "syncedAt": "2026-09-24T19:32:04.294248+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -975,17 +975,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-09",
    "firstOrderDate": "2026-09-09",
-   "lastOrderDate": "2026-09-23",
-   "orders": 13,
-   "units": 13,
-   "revenue": 923000,
+   "lastOrderDate": "2026-09-24",
+   "orders": 14,
+   "units": 14,
+   "revenue": 994000,
    "delivered": 9,
    "returned": 0,
    "unitsBoughtFromSupplier": 13,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3939,17 +3939,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-18",
    "firstOrderDate": "2026-07-19",
-   "lastOrderDate": "2026-09-23",
-   "orders": 129,
-   "units": 130,
-   "revenue": 12610000,
+   "lastOrderDate": "2026-09-24",
+   "orders": 130,
+   "units": 131,
+   "revenue": 12707000,
    "delivered": 128,
    "returned": 36,
    "unitsBoughtFromSupplier": 96,
    "returnedStock": 2,
    "unitPrice": 97000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11060,6 +11060,11 @@
      2,
      2,
      142000
+    ],
+    "2026-09-24": [
+     1,
+     1,
+     71000
     ]
    },
    "7312": {
@@ -14965,6 +14970,11 @@
      97000
     ],
     "2026-09-23": [
+     1,
+     1,
+     97000
+    ],
+    "2026-09-24": [
      1,
      1,
      97000
@@ -24029,10 +24039,36 @@
    "2026-09-21": 43,
    "2026-09-22": 27,
    "2026-09-23": 40,
-   "2026-09-24": 46
+   "2026-09-24": 47
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32537",
+   "d": "2026-09-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -49000,
+   "lines": [
+    {
+     "sku": "H-1900-kahve-50",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 28.3,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "T-7040",
+     "qty": 1,
+     "price": 97000,
+     "discPct": 28.3,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "قبل وبعد (مختلط)"
+  },
   {
    "id": "S32536",
    "d": "2026-09-24",
