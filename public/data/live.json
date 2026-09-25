@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-25T10:02:31.860242+00:00",
+ "syncedAt": "2026-09-25T10:32:37.318674+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -586,15 +586,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-25",
-   "orders": 34,
-   "units": 38,
-   "revenue": 2736000,
+   "orders": 35,
+   "units": 39,
+   "revenue": 2808000,
    "delivered": 15,
    "returned": 0,
    "unitsBoughtFromSupplier": 38,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 4.43,
+   "orderVelocity7d": 4.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1704,15 +1704,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-09-25",
-   "orders": 48,
-   "units": 49,
-   "revenue": 5243000,
+   "orders": 51,
+   "units": 52,
+   "revenue": 5564000,
    "delivered": 21,
    "returned": 4,
-   "unitsBoughtFromSupplier": 45,
+   "unitsBoughtFromSupplier": 46,
    "returnedStock": 1,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 4.43,
+   "orderVelocity7d": 4.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10839,9 +10839,9 @@
      504000
     ],
     "2026-09-25": [
-     2,
      3,
-     216000
+     4,
+     288000
     ]
    },
    "7328": {
@@ -11382,9 +11382,9 @@
      214000
     ],
     "2026-09-25": [
-     4,
-     4,
-     428000
+     7,
+     7,
+     749000
     ]
    },
    "7284": {
@@ -24000,10 +24000,86 @@
    "2026-09-22": 27,
    "2026-09-23": 41,
    "2026-09-24": 48,
-   "2026-09-25": 11
+   "2026-09-25": 15
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32554",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-mavi-44",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32553",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-siyah-40",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32552",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-haki-44",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32551",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-kahve-46",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32549",
    "d": "2026-09-25",
