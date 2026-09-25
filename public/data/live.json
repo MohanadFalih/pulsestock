@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-25T15:32:14.684094+00:00",
+ "syncedAt": "2026-09-25T16:02:34.024582+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -689,17 +689,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-15",
    "firstOrderDate": "2026-09-15",
-   "lastOrderDate": "2026-09-24",
-   "orders": 9,
-   "units": 9,
-   "revenue": 621000,
+   "lastOrderDate": "2026-09-25",
+   "orders": 10,
+   "units": 10,
+   "revenue": 690000,
    "delivered": 3,
    "returned": 0,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 1.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1704,15 +1704,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-09-25",
-   "orders": 50,
-   "units": 51,
-   "revenue": 5457000,
+   "orders": 51,
+   "units": 52,
+   "revenue": 5564000,
    "delivered": 21,
    "returned": 4,
-   "unitsBoughtFromSupplier": 47,
+   "unitsBoughtFromSupplier": 48,
    "returnedStock": 1,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 4.71,
+   "orderVelocity7d": 4.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11025,6 +11025,11 @@
      1,
      1,
      69000
+    ],
+    "2026-09-25": [
+     1,
+     1,
+     69000
     ]
    },
    "7324": {
@@ -11477,9 +11482,9 @@
      214000
     ],
     "2026-09-25": [
-     6,
-     6,
-     642000
+     7,
+     7,
+     749000
     ]
    },
    "7284": {
@@ -24136,10 +24141,48 @@
    "2026-09-22": 28,
    "2026-09-23": 41,
    "2026-09-24": 48,
-   "2026-09-25": 23
+   "2026-09-25": 25
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32565",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1889-mavi-46",
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32564",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-kahve-40",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32563",
    "d": "2026-09-25",
