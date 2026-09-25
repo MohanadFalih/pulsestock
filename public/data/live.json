@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-25T19:32:30.928066+00:00",
+ "syncedAt": "2026-09-25T20:02:47.670130+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -690,15 +690,15 @@
    "odooCreatedDate": "2026-09-15",
    "firstOrderDate": "2026-09-15",
    "lastOrderDate": "2026-09-25",
-   "orders": 10,
-   "units": 10,
-   "revenue": 690000,
+   "orders": 11,
+   "units": 11,
+   "revenue": 759000,
    "delivered": 3,
    "returned": 0,
    "unitsBoughtFromSupplier": 10,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -4538,15 +4538,15 @@
    "odooCreatedDate": "2026-07-09",
    "firstOrderDate": "2026-07-09",
    "lastOrderDate": "2026-09-25",
-   "orders": 253,
-   "units": 263,
-   "revenue": 20773050,
+   "orders": 254,
+   "units": 264,
+   "revenue": 20852050,
    "delivered": 258,
    "returned": 83,
    "unitsBoughtFromSupplier": 185,
    "returnedStock": 13,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 2.14,
+   "orderVelocity7d": 2.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11058,9 +11058,9 @@
      69000
     ],
     "2026-09-25": [
-     1,
-     1,
-     69000
+     2,
+     2,
+     138000
     ]
    },
    "7324": {
@@ -16366,9 +16366,9 @@
      79000
     ],
     "2026-09-25": [
-     4,
-     4,
-     316000
+     5,
+     5,
+     395000
     ]
    },
    "7173": {
@@ -24184,10 +24184,47 @@
    "2026-09-22": 28,
    "2026-09-23": 41,
    "2026-09-24": 48,
-   "2026-09-25": 32
+   "2026-09-25": 34
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32574",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1889-navy-1-46",
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32573",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -10000,
+   "lines": [
+    {
+     "sku": "H-1840-yesil-2",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 12.7,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32572",
    "d": "2026-09-25",
