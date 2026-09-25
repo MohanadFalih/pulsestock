@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-25T17:36:14.092863+00:00",
+ "syncedAt": "2026-09-25T18:02:07.016914+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -299,17 +299,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-09-24",
-   "orders": 1,
-   "units": 1,
-   "revenue": 101000,
+   "lastOrderDate": "2026-09-25",
+   "orders": 2,
+   "units": 2,
+   "revenue": 202000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 101000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2587,17 +2587,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-10",
    "firstOrderDate": "2026-08-10",
-   "lastOrderDate": "2026-09-23",
-   "orders": 38,
-   "units": 39,
-   "revenue": 2886000,
+   "lastOrderDate": "2026-09-25",
+   "orders": 39,
+   "units": 40,
+   "revenue": 2960000,
    "delivered": 36,
    "returned": 7,
-   "unitsBoughtFromSupplier": 37,
+   "unitsBoughtFromSupplier": 38,
    "returnedStock": 7,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10803,6 +10803,11 @@
      1,
      1,
      101000
+    ],
+    "2026-09-25": [
+     1,
+     1,
+     101000
     ]
    },
    "7339": {
@@ -12693,6 +12698,11 @@
      2,
      2,
      148000
+    ],
+    "2026-09-25": [
+     1,
+     1,
+     74000
     ]
    },
    "7249": {
@@ -24141,10 +24151,37 @@
    "2026-09-22": 28,
    "2026-09-23": 41,
    "2026-09-24": 48,
-   "2026-09-25": 28
+   "2026-09-25": 29
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32570",
+   "d": "2026-09-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-1005",
+     "qty": 1,
+     "price": 101000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1869-kahve-4",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32569",
    "d": "2026-09-25",
