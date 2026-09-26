@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-26T23:13:23.261055+00:00",
+ "syncedAt": "2026-09-26T23:32:02.735536+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10566,20 +10566,20 @@
    "sku": "L-1323",
    "category": "Elbise",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-09",
-   "lastOrderDate": "2026-09-10",
-   "orders": 8,
-   "units": 10,
-   "revenue": 366000,
+   "lastOrderDate": "2026-09-27",
+   "orders": 9,
+   "units": 11,
+   "revenue": 404000,
    "delivered": 9,
    "returned": 1,
    "unitsBoughtFromSupplier": 8,
    "returnedStock": 3,
    "unitPrice": 38000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 17,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -23600,6 +23600,11 @@
      1,
      1,
      38000
+    ],
+    "2026-09-27": [
+     1,
+     1,
+     38000
     ]
    },
    "4518": {
@@ -24131,10 +24136,28 @@
    "2026-09-24": 47,
    "2026-09-25": 35,
    "2026-09-26": 33,
-   "2026-09-27": 2
+   "2026-09-27": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32614",
+   "d": "2026-09-27",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1323",
+     "qty": 1,
+     "price": 38000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32613",
    "d": "2026-09-27",
