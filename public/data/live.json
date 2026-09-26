@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-26T04:02:23.644979+00:00",
+ "syncedAt": "2026-09-26T04:32:03.782492+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3237,17 +3237,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-28",
    "firstOrderDate": "2026-07-28",
-   "lastOrderDate": "2026-09-21",
-   "orders": 33,
-   "units": 38,
-   "revenue": 3719100,
+   "lastOrderDate": "2026-09-26",
+   "orders": 34,
+   "units": 39,
+   "revenue": 3817100,
    "delivered": 38,
    "returned": 9,
    "unitsBoughtFromSupplier": 33,
    "returnedStock": 4,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13761,6 +13761,11 @@
      1,
      1,
      98000
+    ],
+    "2026-09-26": [
+     1,
+     1,
+     98000
     ]
    },
    "7223": {
@@ -24007,10 +24012,28 @@
    "2026-09-23": 41,
    "2026-09-24": 48,
    "2026-09-25": 35,
-   "2026-09-26": 2
+   "2026-09-26": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32579",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -19000,
+   "lines": [
+    {
+     "sku": "T-7069-navy-1-2",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 18.4,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32578",
    "d": "2026-09-26",
