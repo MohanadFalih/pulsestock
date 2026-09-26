@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-26T14:32:24.325031+00:00",
+ "syncedAt": "2026-09-26T15:02:16.609752+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2327,17 +2327,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-14",
    "firstOrderDate": "2026-08-14",
-   "lastOrderDate": "2026-09-20",
-   "orders": 40,
-   "units": 41,
-   "revenue": 3149300,
+   "lastOrderDate": "2026-09-26",
+   "orders": 41,
+   "units": 42,
+   "revenue": 3226300,
    "delivered": 38,
    "returned": 5,
    "unitsBoughtFromSupplier": 36,
    "returnedStock": 4,
    "unitPrice": 77000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 6,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -5109,17 +5109,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-04",
    "firstOrderDate": "2026-07-04",
-   "lastOrderDate": "2026-09-21",
-   "orders": 88,
-   "units": 94,
-   "revenue": 6372000,
+   "lastOrderDate": "2026-09-26",
+   "orders": 89,
+   "units": 95,
+   "revenue": 6426000,
    "delivered": 93,
    "returned": 19,
    "unitsBoughtFromSupplier": 78,
    "returnedStock": 6,
    "unitPrice": 54000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12230,6 +12230,11 @@
      2,
      2,
      154000
+    ],
+    "2026-09-26": [
+     1,
+     1,
+     77000
     ]
    },
    "7263": {
@@ -17552,6 +17557,11 @@
      54000
     ],
     "2026-09-21": [
+     1,
+     1,
+     54000
+    ],
+    "2026-09-26": [
      1,
      1,
      54000
@@ -24265,10 +24275,46 @@
    "2026-09-23": 41,
    "2026-09-24": 47,
    "2026-09-25": 35,
-   "2026-09-26": 26
+   "2026-09-26": 28
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32606",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1873",
+     "qty": 1,
+     "price": 77000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32605",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -19000,
+   "lines": [
+    {
+     "sku": "H-1833",
+     "qty": 1,
+     "price": 54000,
+     "discPct": 32.2,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32604",
    "d": "2026-09-26",
