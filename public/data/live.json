@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-26T08:02:31.949226+00:00",
+ "syncedAt": "2026-09-26T08:32:02.830815+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -586,15 +586,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-09-26",
-   "orders": 38,
-   "units": 42,
-   "revenue": 3024000,
+   "orders": 39,
+   "units": 44,
+   "revenue": 3168000,
    "delivered": 15,
    "returned": 0,
    "unitsBoughtFromSupplier": 42,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 4.29,
+   "orderVelocity7d": 4.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1778,20 +1778,20 @@
    "sku": "K-4099",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-08-26",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-09-26",
+   "lastOrderDate": "2026-09-26",
+   "orders": 1,
+   "units": 1,
+   "revenue": 90250,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 95000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10939,9 +10939,9 @@
      360000
     ],
     "2026-09-26": [
-     2,
-     2,
-     144000
+     3,
+     4,
+     288000
     ]
    },
    "7328": {
@@ -11567,6 +11567,13 @@
      2,
      2,
      158000
+    ]
+   },
+   "7282": {
+    "2026-09-26": [
+     1,
+     1,
+     90250
     ]
    },
    "7281": {
@@ -24017,10 +24024,83 @@
    "2026-09-23": 41,
    "2026-09-24": 48,
    "2026-09-25": 35,
-   "2026-09-26": 4
+   "2026-09-26": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32584",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 4750,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-4099",
+     "qty": 1,
+     "price": 90250,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32582",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-navy-1-42",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1908-siyah-42",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32581",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8010",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1892-siyah-46",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32580",
    "d": "2026-09-26",
