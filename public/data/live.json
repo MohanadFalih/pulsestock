@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-26T15:02:16.609752+00:00",
+ "syncedAt": "2026-09-26T15:32:04.266459+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7163,17 +7163,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-05-13",
    "firstOrderDate": "2026-05-13",
-   "lastOrderDate": "2026-09-20",
-   "orders": 92,
-   "units": 102,
-   "revenue": 5712000,
+   "lastOrderDate": "2026-09-26",
+   "orders": 93,
+   "units": 103,
+   "revenue": 5768000,
    "delivered": 102,
    "returned": 14,
    "unitsBoughtFromSupplier": 91,
    "returnedStock": 2,
    "unitPrice": 56000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 6,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -20723,6 +20723,11 @@
      1,
      1,
      56000
+    ],
+    "2026-09-26": [
+     1,
+     1,
+     56000
     ]
    },
    "7045": {
@@ -24275,10 +24280,28 @@
    "2026-09-23": 41,
    "2026-09-24": 47,
    "2026-09-25": 35,
-   "2026-09-26": 28
+   "2026-09-26": 29
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32607",
+   "d": "2026-09-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-2909-اسودsiyah-std",
+     "qty": 1,
+     "price": 56000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32606",
    "d": "2026-09-26",
