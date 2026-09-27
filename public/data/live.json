@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-27T10:32:07.457871+00:00",
+ "syncedAt": "2026-09-27T11:02:17.474150+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3608,7 +3608,7 @@
    "delivered": 9,
    "returned": 4,
    "unitsBoughtFromSupplier": 6,
-   "returnedStock": 1,
+   "returnedStock": 0,
    "unitPrice": 77000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 3,
@@ -5142,7 +5142,7 @@
    "delivered": 93,
    "returned": 19,
    "unitsBoughtFromSupplier": 78,
-   "returnedStock": 6,
+   "returnedStock": 5,
    "unitPrice": 54000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 1,
@@ -10573,10 +10573,10 @@
    "orders": 6,
    "units": 6,
    "revenue": 146000,
-   "delivered": 5,
+   "delivered": 6,
    "returned": 2,
    "unitsBoughtFromSupplier": 0,
-   "returnedStock": 2,
+   "returnedStock": 1,
    "unitPrice": 33000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
@@ -10651,10 +10651,10 @@
    "orders": 12,
    "units": 12,
    "revenue": 363000,
-   "delivered": 11,
+   "delivered": 12,
    "returned": 1,
    "unitsBoughtFromSupplier": 0,
-   "returnedStock": 2,
+   "returnedStock": 1,
    "unitPrice": 40000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
@@ -10774,17 +10774,17 @@
    "sku": "L-1323",
    "category": "Elbise",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-09",
    "lastOrderDate": "2026-09-27",
    "orders": 9,
    "units": 11,
    "revenue": 404000,
-   "delivered": 9,
+   "delivered": 10,
    "returned": 1,
    "unitsBoughtFromSupplier": 8,
-   "returnedStock": 3,
+   "returnedStock": 2,
    "unitPrice": 38000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
@@ -10978,9 +10978,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1897,
-  "stockValue": 53737324,
-  "stockVariants": 1502
+  "stockUnits": 1892,
+  "stockValue": 53585069,
+  "stockVariants": 1498
  },
  "daily": {
   "days": 90,
@@ -24211,7 +24211,7 @@
     0
    ],
    "2026-09-27": [
-    1,
+    4,
     25
    ]
   },
@@ -24468,14 +24468,14 @@
      "qty": 1,
      "price": 40000,
      "discPct": 0,
-     "del": 0
+     "del": 1
     },
     {
      "sku": "D-6772",
      "qty": 1,
      "price": 33000,
      "discPct": 0,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Facebook",
@@ -24614,7 +24614,7 @@
      "qty": 1,
      "price": 38000,
      "discPct": 0,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "WhatsApp",
@@ -138136,7 +138136,7 @@
   {
    "sku": "H-1853",
    "model": "H-1853",
-   "qty": 1,
+   "qty": 0,
    "cost": 39611,
    "created": "2026-07-24"
   },
@@ -162893,13 +162893,6 @@
    "created": "2025-05-20"
   },
   {
-   "sku": "D-6772",
-   "model": "D-6772",
-   "qty": 1,
-   "cost": 22000,
-   "created": "2025-05-20"
-  },
-  {
    "sku": "D-6775",
    "model": "D-6775",
    "qty": 1,
@@ -162972,7 +162965,7 @@
   {
    "sku": "D-6780",
    "model": "D-6780",
-   "qty": 2,
+   "qty": 1,
    "cost": 35000,
    "created": "2025-05-20"
   },
@@ -169524,7 +169517,7 @@
   {
    "sku": "H-1833",
    "model": "H-1833",
-   "qty": 1,
+   "qty": 0,
    "cost": 33279,
    "created": "2026-07-04"
   },
@@ -183526,13 +183519,6 @@
    "model": "L-1313",
    "qty": 1,
    "cost": 41003,
-   "created": "2025-05-20"
-  },
-  {
-   "sku": "L-1323",
-   "model": "L-1323",
-   "qty": 1,
-   "cost": 22365,
    "created": "2025-05-20"
   },
   {
