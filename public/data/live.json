@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-27T11:02:17.474150+00:00",
+ "syncedAt": "2026-09-27T11:32:26.961383+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5919,10 +5919,10 @@
    "orders": 151,
    "units": 153,
    "revenue": 14836150,
-   "delivered": 152,
+   "delivered": 153,
    "returned": 43,
    "unitsBoughtFromSupplier": 119,
-   "returnedStock": 6,
+   "returnedStock": 5,
    "unitPrice": 97000.0,
    "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
@@ -7943,17 +7943,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-04-27",
    "firstOrderDate": "2026-04-27",
-   "lastOrderDate": "2026-09-21",
-   "orders": 126,
-   "units": 132,
-   "revenue": 12398600,
+   "lastOrderDate": "2026-09-27",
+   "orders": 127,
+   "units": 133,
+   "revenue": 12492600,
    "delivered": 131,
    "returned": 40,
    "unitsBoughtFromSupplier": 95,
    "returnedStock": 2,
    "unitPrice": 94000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 6,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -7973,10 +7973,10 @@
    "orders": 18,
    "units": 18,
    "revenue": 1422000,
-   "delivered": 17,
+   "delivered": 18,
    "returned": 3,
    "unitsBoughtFromSupplier": 15,
-   "returnedStock": 1,
+   "returnedStock": 0,
    "unitPrice": 79000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
@@ -10978,9 +10978,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1892,
-  "stockValue": 53585069,
-  "stockVariants": 1498
+  "stockUnits": 1889,
+  "stockValue": 53479587,
+  "stockVariants": 1496
  },
  "daily": {
   "days": 90,
@@ -21678,6 +21678,11 @@
      2,
      2,
      188000
+    ],
+    "2026-09-27": [
+     1,
+     1,
+     94000
     ]
    },
    "6984": {
@@ -24211,7 +24216,7 @@
     0
    ],
    "2026-09-27": [
-    4,
+    6,
     25
    ]
   },
@@ -24341,14 +24346,14 @@
      "qty": 1,
      "price": 79000,
      "discPct": 51.4,
-     "del": 0
+     "del": 1
     },
     {
      "sku": "T-7038-قهواييkahv-45254",
      "qty": 1,
      "price": 97000,
      "discPct": 51.4,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Website",
@@ -24424,13 +24429,20 @@
    "d": "2026-09-27",
    "st": "sale",
    "fee": 5000,
-   "disc": -42000,
+   "disc": -92000,
    "lines": [
     {
      "sku": "L-4114-اسودsiyah-24854",
      "qty": 1,
      "price": 69000,
-     "discPct": 56.8,
+     "discPct": 0,
+     "del": 0
+    },
+    {
+     "sku": "T-7024-بيجفاتحtas-34648",
+     "qty": 1,
+     "price": 94000,
+     "discPct": 0,
      "del": 0
     }
    ],
@@ -156896,7 +156908,7 @@
   {
    "sku": "T-7017",
    "model": "T-7017",
-   "qty": 1,
+   "qty": 0,
    "cost": 44521,
    "created": "2026-04-26"
   },
@@ -159248,7 +159260,7 @@
   {
    "sku": "T-7038",
    "model": "T-7038",
-   "qty": 1,
+   "qty": 0,
    "cost": 60961,
    "created": "2026-06-15"
   },
