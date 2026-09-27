@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-27T20:02:05.113930+00:00",
+ "syncedAt": "2026-09-27T20:32:14.930380+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7371,17 +7371,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-05-11",
    "firstOrderDate": "2026-05-11",
-   "lastOrderDate": "2026-09-24",
-   "orders": 44,
-   "units": 45,
-   "revenue": 4169400,
+   "lastOrderDate": "2026-09-27",
+   "orders": 45,
+   "units": 46,
+   "revenue": 4248400,
    "delivered": 45,
    "returned": 13,
    "unitsBoughtFromSupplier": 37,
    "returnedStock": 5,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -21305,6 +21305,11 @@
      1,
      1,
      79000
+    ],
+    "2026-09-27": [
+     1,
+     1,
+     79000
     ]
    },
    "7032": {
@@ -24438,10 +24443,28 @@
    "2026-09-24": 47,
    "2026-09-25": 35,
    "2026-09-26": 33,
-   "2026-09-27": 33
+   "2026-09-27": 34
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32648",
+   "d": "2026-09-27",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -31000,
+   "lines": [
+    {
+     "sku": "K-6441-عنابيmurdu-46",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 36.9,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32646",
    "d": "2026-09-27",
