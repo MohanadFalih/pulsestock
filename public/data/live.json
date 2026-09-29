@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-29T15:02:20.138043+00:00",
+ "syncedAt": "2026-09-29T15:32:37.271832+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -716,15 +716,15 @@
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
    "lastOrderDate": "2026-09-29",
-   "orders": 4,
-   "units": 5,
-   "revenue": 350000,
+   "orders": 5,
+   "units": 6,
+   "revenue": 420000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 70000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1440,20 +1440,20 @@
    "sku": "H-1901",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-10",
    "firstOrderDate": "2026-09-10",
-   "lastOrderDate": "2026-09-10",
-   "orders": 1,
-   "units": 1,
-   "revenue": 77000,
+   "lastOrderDate": "2026-09-29",
+   "orders": 2,
+   "units": 2,
+   "revenue": 154000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 77000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 19,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11757,9 +11757,9 @@
      140000
     ],
     "2026-09-29": [
-     1,
-     1,
-     70000
+     2,
+     2,
+     140000
     ]
    },
    "7340": {
@@ -12235,6 +12235,11 @@
    },
    "7314": {
     "2026-09-10": [
+     1,
+     1,
+     77000
+    ],
+    "2026-09-29": [
      1,
      1,
      77000
@@ -24957,10 +24962,48 @@
    "2026-09-26": 33,
    "2026-09-27": 37,
    "2026-09-28": 30,
-   "2026-09-29": 29
+   "2026-09-29": 31
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32714",
+   "d": "2026-09-29",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -74000,
+   "lines": [
+    {
+     "sku": "H-1901-red-1-42",
+     "qty": 1,
+     "price": 77000,
+     "discPct": 90.2,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32713",
+   "d": "2026-09-29",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1911",
+     "qty": 1,
+     "price": 70000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32712",
    "d": "2026-09-29",
