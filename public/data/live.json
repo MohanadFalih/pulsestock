@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-29T20:32:32.000706+00:00",
+ "syncedAt": "2026-09-29T20:43:12.016875+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -247,17 +247,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-28",
-   "lastOrderDate": "2026-09-28",
-   "orders": 1,
-   "units": 1,
-   "revenue": 113000,
+   "lastOrderDate": "2026-09-29",
+   "orders": 2,
+   "units": 2,
+   "revenue": 226000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 113000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11634,6 +11634,11 @@
    },
    "7360": {
     "2026-09-28": [
+     1,
+     1,
+     113000
+    ],
+    "2026-09-29": [
      1,
      1,
      113000
@@ -25027,10 +25032,29 @@
    "2026-09-26": 33,
    "2026-09-27": 37,
    "2026-09-28": 30,
-   "2026-09-29": 49
+   "2026-09-29": 50
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32734",
+   "d": "2026-09-29",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-2009",
+     "qty": 1,
+     "price": 113000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32733",
    "d": "2026-09-29",
