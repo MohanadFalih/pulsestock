@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-29T23:02:27.776869+00:00",
+ "syncedAt": "2026-09-29T23:16:00.179960+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -617,7 +617,7 @@
    "revenue": 2150000,
    "delivered": 6,
    "returned": 1,
-   "unitsBoughtFromSupplier": 23,
+   "unitsBoughtFromSupplier": 24,
    "returnedStock": 1,
    "unitPrice": 86000.0,
    "orderVelocity7d": 3.57,
@@ -998,20 +998,20 @@
    "sku": "K-6662",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-19",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-09-30",
+   "lastOrderDate": "2026-09-30",
+   "orders": 1,
+   "units": 1,
+   "revenue": 112000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 112000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11980,6 +11980,13 @@
      1,
      1,
      117000
+    ]
+   },
+   "7331": {
+    "2026-09-30": [
+     1,
+     1,
+     112000
     ]
    },
    "7330": {
@@ -25005,10 +25012,29 @@
    "2026-09-27": 37,
    "2026-09-28": 30,
    "2026-09-29": 53,
-   "2026-09-30": 8
+   "2026-09-30": 9
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32745",
+   "d": "2026-09-30",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6662-beige-44",
+     "qty": 1,
+     "price": 112000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32744",
    "d": "2026-09-30",
