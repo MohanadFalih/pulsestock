@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-30T22:02:31.321578+00:00",
+ "syncedAt": "2026-09-30T22:32:05.639322+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2223,17 +2223,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
-   "lastOrderDate": "2026-09-30",
-   "orders": 70,
-   "units": 71,
-   "revenue": 7591650,
+   "lastOrderDate": "2026-10-01",
+   "orders": 71,
+   "units": 72,
+   "revenue": 7698650,
    "delivered": 51,
    "returned": 6,
-   "unitsBoughtFromSupplier": 66,
+   "unitsBoughtFromSupplier": 67,
    "returnedStock": 1,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 3.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 4.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12967,6 +12967,11 @@
      2,
      2,
      214000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     107000
     ]
    },
    "7284": {
@@ -25250,10 +25255,29 @@
    "2026-09-28": 30,
    "2026-09-29": 52,
    "2026-09-30": 44,
-   "2026-10-01": 2
+   "2026-10-01": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32785",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-kahve-42",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32784",
    "d": "2026-10-01",
