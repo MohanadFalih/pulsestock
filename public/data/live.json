@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-09-30T21:02:24.770313+00:00",
+ "syncedAt": "2026-09-30T21:32:02.540680+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -695,7 +695,7 @@
    "revenue": 279000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 93000.0,
    "orderVelocity7d": 0.43,
@@ -2307,7 +2307,7 @@
    "revenue": 470250,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 4,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 95000.0,
    "orderVelocity7d": 0.71,
@@ -10231,17 +10231,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-12-18",
    "firstOrderDate": "2025-12-18",
-   "lastOrderDate": "2026-09-30",
-   "orders": 20,
-   "units": 20,
-   "revenue": 1014000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 21,
+   "units": 21,
+   "revenue": 1053000,
    "delivered": 17,
    "returned": 5,
    "unitsBoughtFromSupplier": 16,
    "returnedStock": 3,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10280,20 +10280,20 @@
    "sku": " D-6906",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-12-01",
    "firstOrderDate": "2025-12-01",
-   "lastOrderDate": "2026-09-23",
-   "orders": 11,
-   "units": 11,
-   "revenue": 627000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 12,
+   "units": 12,
+   "revenue": 666000,
    "delivered": 11,
    "returned": 2,
    "unitsBoughtFromSupplier": 8,
    "returnedStock": 2,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -24102,6 +24102,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     39000
     ]
    },
    "6472": {
@@ -24116,6 +24121,11 @@
      1,
      1,
      31000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     39000
     ]
    },
    "6365": {
@@ -25201,7 +25211,8 @@
    "2026-09-27": 38,
    "2026-09-28": 30,
    "2026-09-29": 52,
-   "2026-09-30": 44
+   "2026-09-30": 44,
+   "2026-10-01": 1
   }
  },
  "ordersDetail": [
