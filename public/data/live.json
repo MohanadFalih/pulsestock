@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T13:32:36.626762+00:00",
+ "syncedAt": "2026-10-01T13:41:37.815031+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1261,17 +1261,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-16",
    "firstOrderDate": "2026-09-20",
-   "lastOrderDate": "2026-09-27",
-   "orders": 2,
-   "units": 2,
-   "revenue": 148000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 3,
+   "units": 3,
+   "revenue": 222000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 4,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12551,6 +12551,11 @@
      74000
     ],
     "2026-09-27": [
+     1,
+     1,
+     74000
+    ],
+    "2026-10-01": [
      1,
      1,
      74000
@@ -25482,7 +25487,7 @@
    "2026-09-28": 29,
    "2026-09-29": 50,
    "2026-09-30": 42,
-   "2026-10-01": 24
+   "2026-10-01": 25
   }
  },
  "ordersDetail": [
@@ -25558,6 +25563,25 @@
     }
    ],
    "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32804",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1906-navy-1-42",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
    "ful": "تجهيز تركيا"
   },
   {
