@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T22:32:26.301053+00:00",
+ "syncedAt": "2026-10-01T23:02:06.762184+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7446,20 +7446,20 @@
    "sku": "L-1457",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-05-19",
    "firstOrderDate": "2026-05-19",
-   "lastOrderDate": "2026-09-23",
-   "orders": 423,
-   "units": 457,
-   "revenue": 26963000,
+   "lastOrderDate": "2026-10-02",
+   "orders": 424,
+   "units": 458,
+   "revenue": 27022000,
    "delivered": 456,
    "returned": 89,
    "unitsBoughtFromSupplier": 370,
    "returnedStock": 1,
    "unitPrice": 59000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -21592,6 +21592,11 @@
      1,
      2,
      118000
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     59000
     ]
    },
    "7059": {
@@ -25392,10 +25397,28 @@
    "2026-09-29": 50,
    "2026-09-30": 42,
    "2026-10-01": 39,
-   "2026-10-02": 3
+   "2026-10-02": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32828",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -26000,
+   "lines": [
+    {
+     "sku": "L-1457-اسودsiyah-24448",
+     "qty": 1,
+     "price": 59000,
+     "discPct": 40.6,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32827",
    "d": "2026-10-02",
