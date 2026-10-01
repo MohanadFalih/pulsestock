@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T08:32:40.033139+00:00",
+ "syncedAt": "2026-10-01T09:02:20.815505+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -403,17 +403,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-27",
    "firstOrderDate": "2026-09-27",
-   "lastOrderDate": "2026-09-30",
-   "orders": 5,
-   "units": 5,
-   "revenue": 430000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 6,
+   "units": 6,
+   "revenue": 516000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -767,17 +767,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-09-30",
-   "orders": 7,
-   "units": 8,
-   "revenue": 560000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 8,
+   "units": 9,
+   "revenue": 630000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 70000.0,
-   "orderVelocity7d": 0.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11952,6 +11952,11 @@
      1,
      1,
      86000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     86000
     ]
    },
    "7355": {
@@ -12104,6 +12109,11 @@
      2,
      2,
      140000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     70000
     ]
    },
    "7340": {
@@ -25340,10 +25350,48 @@
    "2026-09-28": 30,
    "2026-09-29": 52,
    "2026-09-30": 44,
-   "2026-10-01": 7
+   "2026-10-01": 9
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32791",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1911",
+     "qty": 1,
+     "price": 70000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32790",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1915",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32789",
    "d": "2026-10-01",
