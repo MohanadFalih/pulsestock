@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T10:02:40.797475+00:00",
+ "syncedAt": "2026-10-01T10:32:25.952402+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -478,20 +478,20 @@
    "sku": "K-66681",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-26",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-01",
+   "lastOrderDate": "2026-10-01",
+   "orders": 1,
+   "units": 1,
+   "revenue": 101650,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -664,15 +664,15 @@
    "odooCreatedDate": "2026-09-23",
    "firstOrderDate": "2026-09-24",
    "lastOrderDate": "2026-09-30",
-   "orders": 31,
-   "units": 32,
-   "revenue": 2752000,
+   "orders": 28,
+   "units": 29,
+   "revenue": 2494000,
    "delivered": 12,
    "returned": 1,
-   "unitsBoughtFromSupplier": 31,
+   "unitsBoughtFromSupplier": 28,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 3.71,
+   "orderVelocity7d": 3.29,
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": null,
@@ -2228,9 +2228,9 @@
    "units": 73,
    "revenue": 7800300,
    "delivered": 51,
-   "returned": 7,
+   "returned": 9,
    "unitsBoughtFromSupplier": 68,
-   "returnedStock": 2,
+   "returnedStock": 4,
    "unitPrice": 107000.0,
    "orderVelocity7d": 4.14,
    "daysSinceLastOrder": 0,
@@ -5062,9 +5062,9 @@
    "units": 267,
    "revenue": 21089050,
    "delivered": 266,
-   "returned": 87,
+   "returned": 88,
    "unitsBoughtFromSupplier": 185,
-   "returnedStock": 10,
+   "returnedStock": 11,
    "unitPrice": 79000.0,
    "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 2,
@@ -11862,9 +11862,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1874,
-  "stockValue": 53238995,
-  "stockVariants": 1495
+  "stockUnits": 1878,
+  "stockValue": 53410528,
+  "stockVariants": 1497
  },
  "daily": {
   "days": 90,
@@ -11973,6 +11973,13 @@
      79000
     ]
    },
+   "7353": {
+    "2026-10-01": [
+     1,
+     1,
+     101650
+    ]
+   },
    "7352": {
     "2026-09-28": [
      2,
@@ -12050,19 +12057,19 @@
      86000
     ],
     "2026-09-28": [
-     2,
-     2,
-     172000
+     1,
+     1,
+     86000
     ],
     "2026-09-29": [
-     7,
-     7,
-     602000
+     6,
+     6,
+     516000
     ],
     "2026-09-30": [
+     8,
      9,
-     10,
-     860000
+     774000
     ]
    },
    "7345": {
@@ -25268,7 +25275,7 @@
    ],
    "2026-10-01": [
     0,
-    1
+    4
    ]
   },
   "orders": {
@@ -25359,13 +25366,32 @@
    "2026-09-25": 34,
    "2026-09-26": 33,
    "2026-09-27": 38,
-   "2026-09-28": 30,
-   "2026-09-29": 52,
-   "2026-09-30": 44,
-   "2026-10-01": 11
+   "2026-09-28": 29,
+   "2026-09-29": 51,
+   "2026-09-30": 43,
+   "2026-10-01": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32795",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 4750,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-66681",
+     "qty": 1,
+     "price": 101650,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32793",
    "d": "2026-10-01",
@@ -25870,25 +25896,6 @@
      "sku": "K-66521",
      "qty": 1,
      "price": 107000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Instagram",
-   "ful": "تجهيز تركيا"
-  },
-  {
-   "id": "S32768",
-   "d": "2026-09-30",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "T-8010",
-     "qty": 1,
-     "price": 86000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
@@ -26702,25 +26709,6 @@
      "sku": "T-8002-haki-2",
      "qty": 1,
      "price": 93000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Instagram",
-   "ful": "تجهيز تركيا"
-  },
-  {
-   "id": "S32726",
-   "d": "2026-09-29",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "T-8010",
-     "qty": 1,
-     "price": 86000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
@@ -27599,25 +27587,6 @@
    "ful": "تجهيز تركيا"
   },
   {
-   "id": "S32679",
-   "d": "2026-09-28",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "T-8010",
-     "qty": 1,
-     "price": 86000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Instagram",
-   "ful": "تجهيز تركيا"
-  },
-  {
    "id": "S32678",
    "d": "2026-09-28",
    "st": "sale",
@@ -28118,7 +28087,8 @@
      "qty": 1,
      "price": 79000,
      "discPct": 11.9,
-     "del": 1
+     "del": 0,
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -31980,7 +31950,7 @@
      "qty": 1,
      "price": 107000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
      "ret": 1
     }
@@ -32778,8 +32748,9 @@
      "qty": 1,
      "price": 107000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     },
     {
      "sku": "K-6647-haki-40",
@@ -139137,7 +139108,7 @@
   {
    "sku": "H-1840",
    "model": "H-1840",
-   "qty": 2,
+   "qty": 3,
    "cost": 41333,
    "created": "2026-07-09"
   },
@@ -151702,7 +151673,7 @@
   {
    "sku": "K-6647",
    "model": "K-6647",
-   "qty": 0,
+   "qty": 1,
    "cost": 65100,
    "created": "2026-08-31"
   },
@@ -162175,7 +162146,7 @@
    "sku": "T-8002",
    "model": "T-8002",
    "qty": 0,
-   "cost": 0,
+   "cost": 55111,
    "created": "2026-09-17"
   },
   {
@@ -162217,7 +162188,7 @@
    "sku": "T-8002",
    "model": "T-8002",
    "qty": 0,
-   "cost": 0,
+   "cost": 55111,
    "created": "2026-09-17"
   },
   {
@@ -193248,7 +193219,7 @@
    "sku": "T-8010",
    "model": "T-8010",
    "qty": 0,
-   "cost": 0,
+   "cost": 48222,
    "created": "2026-09-23"
   },
   {
@@ -193752,7 +193723,7 @@
    "sku": "T-8020",
    "model": "T-8020",
    "qty": 0,
-   "cost": 0,
+   "cost": 55111,
    "created": "2026-09-23"
   },
   {
@@ -193822,7 +193793,7 @@
    "sku": "T-8028",
    "model": "T-8028",
    "qty": 0,
-   "cost": 0,
+   "cost": 29278,
    "created": "2026-09-19"
   },
   {
