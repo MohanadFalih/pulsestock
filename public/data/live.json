@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T19:41:23.307444+00:00",
+ "syncedAt": "2026-10-01T20:02:15.393880+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1184,15 +1184,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-10-01",
-   "orders": 60,
-   "units": 66,
-   "revenue": 4752000,
+   "orders": 61,
+   "units": 67,
+   "revenue": 4824000,
    "delivered": 43,
    "returned": 4,
-   "unitsBoughtFromSupplier": 64,
+   "unitsBoughtFromSupplier": 65,
    "returnedStock": 3,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 4.0,
+   "orderVelocity7d": 4.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12465,9 +12465,9 @@
      288000
     ],
     "2026-10-01": [
-     1,
-     1,
-     72000
+     2,
+     2,
+     144000
     ]
    },
    "7328": {
@@ -25517,10 +25517,29 @@
    "2026-09-28": 30,
    "2026-09-29": 50,
    "2026-09-30": 42,
-   "2026-10-01": 37
+   "2026-10-01": 38
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32823",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-mavi-54",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32822",
    "d": "2026-10-01",
