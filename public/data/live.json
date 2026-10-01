@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T07:02:34.105725+00:00",
+ "syncedAt": "2026-10-01T07:32:10.656829+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5626,20 +5626,20 @@
    "sku": "L-1553",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-02",
    "firstOrderDate": "2026-07-05",
-   "lastOrderDate": "2026-08-01",
-   "orders": 10,
-   "units": 10,
-   "revenue": 562000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 11,
+   "units": 11,
+   "revenue": 611000,
    "delivered": 10,
    "returned": 1,
-   "unitsBoughtFromSupplier": 9,
+   "unitsBoughtFromSupplier": 10,
    "returnedStock": 0,
    "unitPrice": 49000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 61,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -19136,6 +19136,11 @@
      1,
      1,
      49000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     49000
     ]
    },
    "7149": {
@@ -27872,6 +27877,14 @@
      "sku": "H-1915",
      "qty": 1,
      "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-1553",
+     "qty": 1,
+     "price": 49000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
