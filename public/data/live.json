@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-01T10:32:25.952402+00:00",
+ "syncedAt": "2026-10-01T11:02:27.952149+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -664,15 +664,15 @@
    "odooCreatedDate": "2026-09-23",
    "firstOrderDate": "2026-09-24",
    "lastOrderDate": "2026-09-30",
-   "orders": 28,
-   "units": 29,
-   "revenue": 2494000,
+   "orders": 27,
+   "units": 28,
+   "revenue": 2408000,
    "delivered": 12,
    "returned": 1,
-   "unitsBoughtFromSupplier": 28,
+   "unitsBoughtFromSupplier": 27,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 3.29,
+   "orderVelocity7d": 3.14,
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": null,
@@ -10440,15 +10440,15 @@
    "odooCreatedDate": "2025-11-03",
    "firstOrderDate": "2025-11-03",
    "lastOrderDate": "2026-10-01",
-   "orders": 147,
-   "units": 158,
-   "revenue": 9419000,
+   "orders": 148,
+   "units": 159,
+   "revenue": 9458000,
    "delivered": 157,
    "returned": 31,
    "unitsBoughtFromSupplier": 126,
    "returnedStock": 2,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
+   "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12062,9 +12062,9 @@
      86000
     ],
     "2026-09-29": [
-     6,
-     6,
-     516000
+     5,
+     5,
+     430000
     ],
     "2026-09-30": [
      8,
@@ -24302,9 +24302,9 @@
    },
    "6166": {
     "2026-10-01": [
-     1,
-     1,
-     39000
+     2,
+     2,
+     78000
     ]
    },
    "6120": {
@@ -25367,12 +25367,30 @@
    "2026-09-26": 33,
    "2026-09-27": 38,
    "2026-09-28": 29,
-   "2026-09-29": 51,
+   "2026-09-29": 50,
    "2026-09-30": 43,
-   "2026-10-01": 12
+   "2026-10-01": 13
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32797",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "D-6850",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32795",
    "d": "2026-10-01",
@@ -26789,25 +26807,6 @@
    ],
    "src": "Instagram",
    "ful": "تجهيز مباشر"
-  },
-  {
-   "id": "S32720",
-   "d": "2026-09-29",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "T-8010",
-     "qty": 1,
-     "price": 86000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Facebook",
-   "ful": "تجهيز تركيا"
   },
   {
    "id": "S32719",
@@ -151569,7 +151568,7 @@
    "sku": "K-6647",
    "model": "K-6647",
    "qty": 0,
-   "cost": 0,
+   "cost": 65100,
    "created": "2026-08-31"
   },
   {
@@ -174368,7 +174367,7 @@
    "sku": "H-1911",
    "model": "H-1911",
    "qty": 0,
-   "cost": 0,
+   "cost": 32722,
    "created": "2026-09-22"
   },
   {
@@ -175215,7 +175214,7 @@
    "sku": "H-1915",
    "model": "H-1915",
    "qty": 0,
-   "cost": 0,
+   "cost": 48222,
    "created": "2026-09-27"
   },
   {
@@ -179051,7 +179050,7 @@
    "sku": "K-4099",
    "model": "K-4099",
    "qty": 0,
-   "cost": 0,
+   "cost": 52700,
    "created": "2026-08-26"
   },
   {
@@ -183104,7 +183103,7 @@
    "sku": "K-66521",
    "model": "K-66521",
    "qty": 0,
-   "cost": 0,
+   "cost": 65100,
    "created": "2026-09-04"
   },
   {
@@ -183426,7 +183425,7 @@
    "sku": "K-6671",
    "model": "K-6671",
    "qty": 0,
-   "cost": 0,
+   "cost": 65100,
    "created": "2026-09-29"
   },
   {
