@@ -1,9 +1,35 @@
 {
- "syncedAt": "2026-10-01T12:32:44.609127+00:00",
+ "syncedAt": "2026-10-01T13:02:35.018370+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7374,
+   "name": "T-8022",
+   "sku": "T-8022",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-01",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 1.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7373,
    "name": "H-1918",
@@ -539,7 +565,7 @@
    "revenue": 208650,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 107000.0,
    "orderVelocity7d": 0.29,
@@ -1319,7 +1345,7 @@
    "revenue": 3550000,
    "delivered": 40,
    "returned": 12,
-   "unitsBoughtFromSupplier": 47,
+   "unitsBoughtFromSupplier": 48,
    "returnedStock": 12,
    "unitPrice": 71000.0,
    "orderVelocity7d": 1.86,
@@ -1553,7 +1579,7 @@
    "revenue": 231000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 77000.0,
    "orderVelocity7d": 0.29,
@@ -2281,7 +2307,7 @@
    "revenue": 8228300,
    "delivered": 51,
    "returned": 9,
-   "unitsBoughtFromSupplier": 71,
+   "unitsBoughtFromSupplier": 72,
    "returnedStock": 4,
    "unitPrice": 107000.0,
    "orderVelocity7d": 4.71,
@@ -4979,17 +5005,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-10",
    "firstOrderDate": "2026-07-12",
-   "lastOrderDate": "2026-09-26",
-   "orders": 13,
-   "units": 13,
-   "revenue": 1183000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 14,
+   "units": 14,
+   "revenue": 1274000,
    "delivered": 13,
    "returned": 7,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 2,
    "unitPrice": 91000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11346,20 +11372,20 @@
    "sku": "L-3729",
    "category": "Kap",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-07-06",
-   "orders": 10,
-   "units": 10,
-   "revenue": 438000,
+   "lastOrderDate": "2026-10-01",
+   "orders": 11,
+   "units": 11,
+   "revenue": 497000,
    "delivered": 10,
    "returned": 5,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 3,
    "unitPrice": 59000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 87,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -17735,6 +17761,11 @@
      91000
     ],
     "2026-09-26": [
+     1,
+     1,
+     91000
+    ],
+    "2026-10-01": [
      1,
      1,
      91000
@@ -24813,6 +24844,11 @@
      1,
      1,
      59000
+    ],
+    "2026-10-01": [
+     1,
+     1,
+     59000
     ]
    },
    "4525": {
@@ -25446,10 +25482,46 @@
    "2026-09-28": 29,
    "2026-09-29": 50,
    "2026-09-30": 42,
-   "2026-10-01": 22
+   "2026-10-01": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32809",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -47000,
+   "lines": [
+    {
+     "sku": "T-7052",
+     "qty": 1,
+     "price": 91000,
+     "discPct": 49.0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32807",
+   "d": "2026-10-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -12000,
+   "lines": [
+    {
+     "sku": "L-3729",
+     "qty": 1,
+     "price": 59000,
+     "discPct": 18.8,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32806",
    "d": "2026-10-01",
@@ -194140,6 +194212,118 @@
    "qty": 0,
    "cost": 0,
    "created": "2026-09-23"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8022",
+   "model": "T-8022",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-01"
   },
   {
    "sku": "T-8028",
