@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-02T06:32:42.585037+00:00",
+ "syncedAt": "2026-10-02T07:02:31.080083+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4690,20 +4690,20 @@
    "sku": "H-1846",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-16",
    "firstOrderDate": "2026-07-16",
-   "lastOrderDate": "2026-09-18",
-   "orders": 88,
-   "units": 92,
-   "revenue": 6808000,
+   "lastOrderDate": "2026-10-02",
+   "orders": 89,
+   "units": 93,
+   "revenue": 6882000,
    "delivered": 92,
    "returned": 18,
    "unitsBoughtFromSupplier": 79,
    "returnedStock": 7,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 14,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -17376,6 +17376,11 @@
      2,
      2,
      148000
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     74000
     ]
    },
    "7190": {
@@ -25417,10 +25422,28 @@
    "2026-09-29": 50,
    "2026-09-30": 42,
    "2026-10-01": 39,
-   "2026-10-02": 6
+   "2026-10-02": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32831",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -37000,
+   "lines": [
+    {
+     "sku": "H-1846",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 46.8,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32830",
    "d": "2026-10-02",
