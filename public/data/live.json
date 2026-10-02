@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-02T01:32:29.854592+00:00",
+ "syncedAt": "2026-10-02T02:03:56.050882+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2301,17 +2301,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
-   "lastOrderDate": "2026-10-01",
-   "orders": 76,
-   "units": 77,
-   "revenue": 8228300,
+   "lastOrderDate": "2026-10-02",
+   "orders": 77,
+   "units": 78,
+   "revenue": 8335300,
    "delivered": 51,
    "returned": 9,
    "unitsBoughtFromSupplier": 72,
    "returnedStock": 4,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 3.57,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13171,6 +13171,11 @@
      6,
      6,
      636650
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     107000
     ]
    },
    "7284": {
@@ -25412,10 +25417,29 @@
    "2026-09-29": 50,
    "2026-09-30": 42,
    "2026-10-01": 39,
-   "2026-10-02": 5
+   "2026-10-02": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32830",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-siyah-38",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32829",
    "d": "2026-10-02",
