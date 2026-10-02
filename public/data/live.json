@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-02T17:32:47.909638+00:00",
+ "syncedAt": "2026-10-02T18:02:38.804873+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -560,15 +560,15 @@
    "odooCreatedDate": "2026-09-27",
    "firstOrderDate": "2026-09-27",
    "lastOrderDate": "2026-10-02",
-   "orders": 7,
-   "units": 7,
-   "revenue": 602000,
+   "orders": 8,
+   "units": 8,
+   "revenue": 688000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 1.0,
+   "orderVelocity7d": 1.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12191,9 +12191,9 @@
      86000
     ],
     "2026-10-02": [
-     1,
-     1,
-     86000
+     2,
+     2,
+     172000
     ]
    },
    "7355": {
@@ -25672,10 +25672,29 @@
    "2026-09-29": 50,
    "2026-09-30": 42,
    "2026-10-01": 40,
-   "2026-10-02": 31
+   "2026-10-02": 32
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32856",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1915",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32855",
    "d": "2026-10-02",
