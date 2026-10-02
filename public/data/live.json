@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-02T00:01:50.709230+00:00",
+ "syncedAt": "2026-10-02T00:17:44.964042+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3910,20 +3910,20 @@
    "sku": "T-7057",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-27",
    "firstOrderDate": "2026-07-27",
-   "lastOrderDate": "2026-09-22",
-   "orders": 37,
-   "units": 38,
-   "revenue": 3908850,
+   "lastOrderDate": "2026-10-02",
+   "orders": 38,
+   "units": 39,
+   "revenue": 4011850,
    "delivered": 37,
    "returned": 12,
    "unitsBoughtFromSupplier": 26,
    "returnedStock": 1,
    "unitPrice": 103000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 10,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -4329,17 +4329,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-22",
    "firstOrderDate": "2026-07-23",
-   "lastOrderDate": "2026-09-30",
-   "orders": 117,
-   "units": 120,
-   "revenue": 7680000,
+   "lastOrderDate": "2026-10-02",
+   "orders": 118,
+   "units": 121,
+   "revenue": 7744000,
    "delivered": 120,
    "returned": 27,
    "unitsBoughtFromSupplier": 100,
    "returnedStock": 13,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10202,20 +10202,20 @@
    "sku": "D-6917",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-01-20",
    "firstOrderDate": "2026-01-22",
-   "lastOrderDate": "2026-09-16",
-   "orders": 7,
-   "units": 7,
-   "revenue": 262000,
+   "lastOrderDate": "2026-10-02",
+   "orders": 8,
+   "units": 8,
+   "revenue": 293000,
    "delivered": 6,
    "returned": 3,
    "unitsBoughtFromSupplier": 5,
    "returnedStock": 2,
    "unitPrice": 31000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 16,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15777,6 +15777,11 @@
      1,
      1,
      103000
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     103000
     ]
    },
    "7219": {
@@ -16458,6 +16463,11 @@
      1,
      0,
      0
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     64000
     ]
    },
    "7204": {
@@ -24214,6 +24224,11 @@
      1,
      1,
      31000
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     31000
     ]
    },
    "6664": {
@@ -25397,10 +25412,42 @@
    "2026-09-29": 50,
    "2026-09-30": 42,
    "2026-10-01": 39,
-   "2026-10-02": 4
+   "2026-10-02": 5
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32829",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -34000,
+   "lines": [
+    {
+     "sku": "T-7057-siyah-2",
+     "qty": 1,
+     "price": 103000,
+     "discPct": 16.7,
+     "del": 0
+    },
+    {
+     "sku": "T-7064",
+     "qty": 1,
+     "price": 64000,
+     "discPct": 16.7,
+     "del": 0
+    },
+    {
+     "sku": "D-6917",
+     "qty": 1,
+     "price": 31000,
+     "discPct": 16.7,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32828",
    "d": "2026-10-02",
