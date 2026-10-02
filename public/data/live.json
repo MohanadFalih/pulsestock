@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-02T23:09:47.782126+00:00",
+ "syncedAt": "2026-10-02T23:32:24.463816+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1027,17 +1027,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-21",
    "firstOrderDate": "2026-09-22",
-   "lastOrderDate": "2026-09-30",
-   "orders": 12,
-   "units": 12,
-   "revenue": 864000,
+   "lastOrderDate": "2026-10-03",
+   "orders": 13,
+   "units": 14,
+   "revenue": 1008000,
    "delivered": 10,
    "returned": 2,
-   "unitsBoughtFromSupplier": 12,
+   "unitsBoughtFromSupplier": 14,
    "returnedStock": 2,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12480,6 +12480,11 @@
      1,
      1,
      72000
+    ],
+    "2026-10-03": [
+     1,
+     2,
+     144000
     ]
    },
    "7338": {
@@ -25569,10 +25574,72 @@
    "2026-09-30": 42,
    "2026-10-01": 39,
    "2026-10-02": 40,
-   "2026-10-03": 3
+   "2026-10-03": 5
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32869",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1892-haki-52",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-6282",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-6283",
+     "qty": 1,
+     "price": 100000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32868",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1910",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1910",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32867",
    "d": "2026-10-03",
