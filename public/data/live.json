@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-02T11:02:30.642654+00:00",
+ "syncedAt": "2026-10-02T11:32:06.369306+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10,20 +10,20 @@
    "sku": "H-1919",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-02",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-02",
+   "lastOrderDate": "2026-10-02",
+   "orders": 1,
+   "units": 2,
+   "revenue": 78000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1287,17 +1287,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-17",
    "firstOrderDate": "2026-09-18",
-   "lastOrderDate": "2026-10-01",
-   "orders": 17,
-   "units": 19,
-   "revenue": 1757700,
+   "lastOrderDate": "2026-10-02",
+   "orders": 18,
+   "units": 20,
+   "revenue": 1850700,
    "delivered": 9,
    "returned": 3,
-   "unitsBoughtFromSupplier": 19,
+   "unitsBoughtFromSupplier": 20,
    "returnedStock": 3,
    "unitPrice": 93000.0,
-   "orderVelocity7d": 1.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2457,17 +2457,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-08-26",
    "firstOrderDate": "2026-09-26",
-   "lastOrderDate": "2026-09-30",
-   "orders": 5,
-   "units": 5,
-   "revenue": 470250,
+   "lastOrderDate": "2026-10-02",
+   "orders": 6,
+   "units": 6,
+   "revenue": 565250,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 95000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12053,6 +12053,13 @@
   "from": "2026-07-04",
   "to": "2026-10-02",
   "byProduct": {
+   "7377": {
+    "2026-10-02": [
+     1,
+     2,
+     78000
+    ]
+   },
    "7371": {
     "2026-10-01": [
      1,
@@ -12629,6 +12636,11 @@
      3,
      3,
      279000
+    ],
+    "2026-10-02": [
+     1,
+     1,
+     93000
     ]
    },
    "7327": {
@@ -13376,6 +13388,11 @@
      375250
     ],
     "2026-09-30": [
+     1,
+     1,
+     95000
+    ],
+    "2026-10-02": [
      1,
      1,
      95000
@@ -25548,10 +25565,75 @@
    "2026-09-29": 50,
    "2026-09-30": 42,
    "2026-10-01": 40,
-   "2026-10-02": 14
+   "2026-10-02": 17
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32841",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32840",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8002-murdum-3",
+     "qty": 1,
+     "price": 93000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32839",
+   "d": "2026-10-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-4099",
+     "qty": 1,
+     "price": 95000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32838",
    "d": "2026-10-02",
