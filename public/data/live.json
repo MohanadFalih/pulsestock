@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-03T18:06:45.883802+00:00",
+ "syncedAt": "2026-10-03T19:02:39.971580+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2406,15 +2406,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-10-03",
-   "orders": 82,
-   "units": 84,
-   "revenue": 8977300,
+   "orders": 84,
+   "units": 86,
+   "revenue": 9191300,
    "delivered": 68,
    "returned": 13,
-   "unitsBoughtFromSupplier": 79,
+   "unitsBoughtFromSupplier": 81,
    "returnedStock": 9,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 3.71,
+   "orderVelocity7d": 4.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -9217,17 +9217,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-04-04",
    "firstOrderDate": "2026-04-04",
-   "lastOrderDate": "2026-09-24",
-   "orders": 23,
-   "units": 23,
-   "revenue": 72,
+   "lastOrderDate": "2026-10-03",
+   "orders": 24,
+   "units": 24,
+   "revenue": 73,
    "delivered": 20,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 1.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13526,9 +13526,9 @@
      321000
     ],
     "2026-10-03": [
-     3,
-     4,
-     428000
+     5,
+     6,
+     642000
     ]
    },
    "7284": {
@@ -23721,6 +23721,11 @@
      1,
      1,
      1
+    ],
+    "2026-10-03": [
+     1,
+     1,
+     1
     ]
    },
    "6902": {
@@ -25753,10 +25758,67 @@
    "2026-09-30": 42,
    "2026-10-01": 39,
    "2026-10-02": 40,
-   "2026-10-03": 32
+   "2026-10-03": 35
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32900",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-siyah-46",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32899",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-beige-42",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32898",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 0,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "حزام 6945",
+     "qty": 1,
+     "price": 1,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32897",
    "d": "2026-10-03",
