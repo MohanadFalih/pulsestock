@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-03T14:02:14.787769+00:00",
+ "syncedAt": "2026-10-03T14:32:34.343397+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -114,20 +114,20 @@
    "sku": "T-8022",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-01",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-03",
+   "lastOrderDate": "2026-10-03",
+   "orders": 1,
+   "units": 1,
+   "revenue": 82000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 82000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -404,15 +404,15 @@
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
    "lastOrderDate": "2026-10-03",
-   "orders": 7,
-   "units": 7,
-   "revenue": 518000,
+   "orders": 8,
+   "units": 8,
+   "revenue": 592000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 1,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 1.0,
+   "orderVelocity7d": 1.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12138,6 +12138,13 @@
      156000
     ]
    },
+   "7374": {
+    "2026-10-03": [
+     1,
+     1,
+     82000
+    ]
+   },
    "7371": {
     "2026-10-01": [
      1,
@@ -12193,9 +12200,9 @@
      148000
     ],
     "2026-10-03": [
-     3,
-     3,
-     222000
+     4,
+     4,
+     296000
     ]
    },
    "7362": {
@@ -25726,10 +25733,48 @@
    "2026-09-30": 42,
    "2026-10-01": 39,
    "2026-10-02": 40,
-   "2026-10-03": 23
+   "2026-10-03": 25
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32890",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32889",
+   "d": "2026-10-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8022",
+     "qty": 1,
+     "price": 82000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32888",
    "d": "2026-10-03",
