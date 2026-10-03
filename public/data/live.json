@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-03T23:02:53.799447+00:00",
+ "syncedAt": "2026-10-03T23:23:43.972996+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4092,20 +4092,20 @@
    "sku": "L-1333",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-07-26",
    "firstOrderDate": "2026-07-26",
-   "lastOrderDate": "2026-09-11",
-   "orders": 9,
-   "units": 9,
-   "revenue": 594000,
+   "lastOrderDate": "2026-10-04",
+   "orders": 10,
+   "units": 10,
+   "revenue": 660000,
    "delivered": 9,
    "returned": 2,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 2,
    "unitPrice": 66000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 23,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -10881,17 +10881,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-10-20",
    "firstOrderDate": "2025-10-22",
-   "lastOrderDate": "2026-10-02",
-   "orders": 712,
-   "units": 914,
-   "revenue": 26166000,
+   "lastOrderDate": "2026-10-04",
+   "orders": 713,
+   "units": 915,
+   "revenue": 26195000,
    "delivered": 913,
    "returned": 140,
-   "unitsBoughtFromSupplier": 774,
+   "unitsBoughtFromSupplier": 775,
    "returnedStock": 2,
    "unitPrice": 29000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -16163,6 +16163,11 @@
      66000
     ],
     "2026-09-11": [
+     1,
+     1,
+     66000
+    ],
+    "2026-10-04": [
      1,
      1,
      66000
@@ -24666,6 +24671,11 @@
      1,
      2,
      58000
+    ],
+    "2026-10-04": [
+     1,
+     1,
+     29000
     ]
    },
    "6082": {
@@ -25524,10 +25534,49 @@
    "2026-09-30": 42,
    "2026-10-01": 39,
    "2026-10-02": 40,
-   "2026-10-03": 38
+   "2026-10-03": 38,
+   "2026-10-04": 2
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32905",
+   "d": "2026-10-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-3854-siyah-2",
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32904",
+   "d": "2026-10-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1333-kahve-3",
+     "qty": 1,
+     "price": 66000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32903",
    "d": "2026-10-03",
