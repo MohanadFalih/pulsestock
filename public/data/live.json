@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-03T23:23:43.972996+00:00",
+ "syncedAt": "2026-10-03T23:32:26.234982+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1287,17 +1287,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
-   "lastOrderDate": "2026-10-03",
-   "orders": 68,
-   "units": 75,
-   "revenue": 5396400,
+   "lastOrderDate": "2026-10-04",
+   "orders": 69,
+   "units": 76,
+   "revenue": 5468400,
    "delivered": 58,
    "returned": 5,
    "unitsBoughtFromSupplier": 73,
    "returnedStock": 5,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 3.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1443,17 +1443,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-13",
    "firstOrderDate": "2026-09-13",
-   "lastOrderDate": "2026-10-03",
-   "orders": 44,
-   "units": 54,
-   "revenue": 3834000,
+   "lastOrderDate": "2026-10-04",
+   "orders": 45,
+   "units": 55,
+   "revenue": 3905000,
    "delivered": 45,
    "returned": 14,
    "unitsBoughtFromSupplier": 51,
    "returnedStock": 14,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 1.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12708,6 +12708,11 @@
      2,
      2,
      140400
+    ],
+    "2026-10-04": [
+     1,
+     1,
+     72000
     ]
    },
    "7328": {
@@ -12957,6 +12962,11 @@
      284000
     ],
     "2026-10-03": [
+     1,
+     1,
+     71000
+    ],
+    "2026-10-04": [
      1,
      1,
      71000
@@ -25535,10 +25545,37 @@
    "2026-10-01": 39,
    "2026-10-02": 40,
    "2026-10-03": 38,
-   "2026-10-04": 2
+   "2026-10-04": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32906",
+   "d": "2026-10-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-siyah-54",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1892-kahve-54",
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32905",
    "d": "2026-10-04",
