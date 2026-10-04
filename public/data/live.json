@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-04T11:02:35.032287+00:00",
+ "syncedAt": "2026-10-04T11:32:06.492550+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2458,15 +2458,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-10-04",
-   "orders": 85,
-   "units": 87,
-   "revenue": 9292950,
+   "orders": 86,
+   "units": 89,
+   "revenue": 9506950,
    "delivered": 68,
    "returned": 13,
    "unitsBoughtFromSupplier": 81,
    "returnedStock": 9,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 3.57,
+   "orderVelocity7d": 3.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -13571,9 +13571,9 @@
      642000
     ],
     "2026-10-04": [
-     1,
-     1,
-     101650
+     2,
+     3,
+     315650
     ]
    },
    "7284": {
@@ -25669,10 +25669,36 @@
    "2026-10-01": 39,
    "2026-10-02": 40,
    "2026-10-03": 38,
-   "2026-10-04": 13
+   "2026-10-04": 14
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32917",
+   "d": "2026-10-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-beige-46",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0
+    },
+    {
+     "sku": "K-6647-haki-46",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "قبل وبعد (مختلط)"
+  },
   {
    "id": "S32916",
    "d": "2026-10-04",
