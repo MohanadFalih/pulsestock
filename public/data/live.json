@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-04T17:32:07.081725+00:00",
+ "syncedAt": "2026-10-04T18:02:10.050734+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1340,15 +1340,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-10-04",
-   "orders": 70,
-   "units": 77,
-   "revenue": 5540400,
+   "orders": 71,
+   "units": 78,
+   "revenue": 5612400,
    "delivered": 59,
    "returned": 5,
-   "unitsBoughtFromSupplier": 75,
+   "unitsBoughtFromSupplier": 76,
    "returnedStock": 5,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 3.57,
+   "orderVelocity7d": 3.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -2324,20 +2324,20 @@
    "sku": "K-31271",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-09-04",
-   "lastOrderDate": "2026-09-04",
-   "orders": 1,
-   "units": 1,
-   "revenue": 101000,
+   "lastOrderDate": "2026-10-04",
+   "orders": 2,
+   "units": 2,
+   "revenue": 202000,
    "delivered": 1,
    "returned": 1,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 1,
    "unitPrice": 101000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 30,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12837,9 +12837,9 @@
      140400
     ],
     "2026-10-04": [
-     2,
-     2,
-     144000
+     3,
+     3,
+     216000
     ]
    },
    "7328": {
@@ -13457,6 +13457,11 @@
    },
    "7290": {
     "2026-09-04": [
+     1,
+     1,
+     101000
+    ],
+    "2026-10-04": [
      1,
      1,
      101000
@@ -25748,10 +25753,48 @@
    "2026-10-01": 39,
    "2026-10-02": 40,
    "2026-10-03": 38,
-   "2026-10-04": 32
+   "2026-10-04": 34
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32938",
+   "d": "2026-10-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-31271",
+     "qty": 1,
+     "price": 101000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
+  {
+   "id": "S32937",
+   "d": "2026-10-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-mavi-42",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32936",
    "d": "2026-10-04",
