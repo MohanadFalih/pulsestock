@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-05T13:32:20.413006+00:00",
+ "syncedAt": "2026-10-05T14:02:45.918200+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1157,17 +1157,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-10-02",
-   "orders": 5,
-   "units": 5,
-   "revenue": 505000,
+   "lastOrderDate": "2026-10-05",
+   "orders": 6,
+   "units": 6,
+   "revenue": 606000,
    "delivered": 3,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 2,
    "unitPrice": 101000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12754,6 +12754,11 @@
      101000
     ],
     "2026-10-02": [
+     1,
+     1,
+     101000
+    ],
+    "2026-10-05": [
      1,
      1,
      101000
@@ -25830,10 +25835,47 @@
    "2026-10-02": 40,
    "2026-10-03": 38,
    "2026-10-04": 41,
-   "2026-10-05": 14
+   "2026-10-05": 16
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32963",
+   "d": "2026-10-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-4404",
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز مباشر"
+  },
+  {
+   "id": "S32962",
+   "d": "2026-10-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-1005",
+     "qty": 1,
+     "price": 101000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "تجهيز تركيا"
+  },
   {
    "id": "S32961",
    "d": "2026-10-05",
