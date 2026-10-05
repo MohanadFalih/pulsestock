@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-05T17:32:15.534162+00:00",
+ "syncedAt": "2026-10-05T18:02:18.133970+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10855,17 +10855,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-11-28",
    "firstOrderDate": "2025-11-28",
-   "lastOrderDate": "2026-09-30",
-   "orders": 20,
-   "units": 19,
-   "revenue": 1183000,
+   "lastOrderDate": "2026-10-05",
+   "orders": 21,
+   "units": 20,
+   "revenue": 1222000,
    "delivered": 19,
    "returned": 3,
    "unitsBoughtFromSupplier": 16,
    "returnedStock": 2,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -24873,6 +24873,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-05": [
+     1,
+     1,
+     39000
     ]
    },
    "6343": {
@@ -25984,10 +25989,28 @@
    "2026-10-02": 40,
    "2026-10-03": 38,
    "2026-10-04": 41,
-   "2026-10-05": 19
+   "2026-10-05": 20
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32966",
+   "d": "2026-10-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6909",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32965",
    "d": "2026-10-05",
