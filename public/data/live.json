@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-05T16:17:59.489643+00:00",
+ "syncedAt": "2026-10-05T16:28:03.935599+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10970,6 +10970,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 4,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 6132,
+   "name": "T-6889",
+   "sku": "T-6889",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-10-28",
+   "firstOrderDate": "2025-10-28",
+   "lastOrderDate": "2026-10-05",
+   "orders": 93,
+   "units": 99,
+   "revenue": 5930000,
+   "delivered": 97,
+   "returned": 16,
+   "unitsBoughtFromSupplier": 93,
+   "returnedStock": 7,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -24830,6 +24856,13 @@
      78000
     ]
    },
+   "6132": {
+    "2026-10-05": [
+     1,
+     1,
+     39000
+    ]
+   },
    "6120": {
     "2026-09-29": [
      1,
@@ -25873,10 +25906,28 @@
    "2026-10-02": 40,
    "2026-10-03": 38,
    "2026-10-04": 41,
-   "2026-10-05": 18
+   "2026-10-05": 19
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32965",
+   "d": "2026-10-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6889",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Telegram",
+   "ful": "تجهيز مباشر"
+  },
   {
    "id": "S32964",
    "d": "2026-10-05",
@@ -181905,6 +181956,13 @@
    "qty": 1,
    "cost": 25347,
    "created": "2025-05-20"
+  },
+  {
+   "sku": "L-1424",
+   "model": "L-1424",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-05"
   },
   {
    "sku": "L-1427",
