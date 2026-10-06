@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-06T19:32:35.838795+00:00",
+ "syncedAt": "2026-10-06T20:02:20.873362+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -300,15 +300,15 @@
    "odooCreatedDate": "2026-10-04",
    "firstOrderDate": "2026-10-04",
    "lastOrderDate": "2026-10-06",
-   "orders": 8,
-   "units": 10,
-   "revenue": 760000,
+   "orders": 9,
+   "units": 11,
+   "revenue": 836000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 10,
+   "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -6123,17 +6123,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-02",
    "firstOrderDate": "2026-07-05",
-   "lastOrderDate": "2026-10-01",
-   "orders": 11,
-   "units": 11,
-   "revenue": 611000,
+   "lastOrderDate": "2026-10-06",
+   "orders": 12,
+   "units": 12,
+   "revenue": 660000,
    "delivered": 11,
    "returned": 1,
-   "unitsBoughtFromSupplier": 10,
+   "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 49000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12476,9 +12476,9 @@
      76000
     ],
     "2026-10-06": [
-     4,
-     6,
-     456000
+     5,
+     7,
+     532000
     ]
    },
    "7377": {
@@ -20311,6 +20311,11 @@
      1,
      1,
      49000
+    ],
+    "2026-10-06": [
+     1,
+     1,
+     49000
     ]
    },
    "7148": {
@@ -26079,10 +26084,48 @@
    "2026-10-03": 38,
    "2026-10-04": 41,
    "2026-10-05": 32,
-   "2026-10-06": 41
+   "2026-10-06": 43
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33022",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33021",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1553",
+     "qty": 1,
+     "price": 49000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33020",
    "d": "2026-10-06",
