@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-06T16:48:03.211265+00:00",
+ "syncedAt": "2026-10-06T17:02:30.291480+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1518,20 +1518,20 @@
    "sku": "K-9909",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-19",
    "firstOrderDate": "2026-09-20",
-   "lastOrderDate": "2026-09-20",
-   "orders": 1,
-   "units": 1,
-   "revenue": 117000,
+   "lastOrderDate": "2026-10-06",
+   "orders": 2,
+   "units": 2,
+   "revenue": 234000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 117000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 16,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2324,20 +2324,20 @@
    "sku": "K-9905",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-01",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-06",
+   "lastOrderDate": "2026-10-06",
+   "orders": 1,
+   "units": 1,
+   "revenue": 112000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 112000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13179,6 +13179,11 @@
      1,
      1,
      117000
+    ],
+    "2026-10-06": [
+     1,
+     1,
+     117000
     ]
    },
    "7331": {
@@ -13875,6 +13880,13 @@
      1,
      1,
      76000
+    ]
+   },
+   "7300": {
+    "2026-10-06": [
+     1,
+     1,
+     112000
     ]
    },
    "7298": {
@@ -26025,10 +26037,37 @@
    "2026-10-03": 38,
    "2026-10-04": 41,
    "2026-10-05": 32,
-   "2026-10-06": 31
+   "2026-10-06": 32
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33011",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-9909-kahve-s",
+     "qty": 1,
+     "price": 117000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "K-9905",
+     "qty": 1,
+     "price": 112000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33010",
    "d": "2026-10-06",
