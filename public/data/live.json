@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-06T13:32:26.426014+00:00",
+ "syncedAt": "2026-10-06T14:02:35.688548+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -300,15 +300,15 @@
    "odooCreatedDate": "2026-10-04",
    "firstOrderDate": "2026-10-04",
    "lastOrderDate": "2026-10-06",
-   "orders": 5,
-   "units": 5,
-   "revenue": 380000,
+   "orders": 6,
+   "units": 6,
+   "revenue": 456000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -6692,20 +6692,20 @@
    "sku": "H-1815",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-06-18",
    "firstOrderDate": "2026-06-19",
-   "lastOrderDate": "2026-09-14",
-   "orders": 34,
-   "units": 35,
-   "revenue": 2829000,
+   "lastOrderDate": "2026-10-06",
+   "orders": 35,
+   "units": 36,
+   "revenue": 2893000,
    "delivered": 33,
    "returned": 10,
    "unitsBoughtFromSupplier": 29,
    "returnedStock": 4,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 22,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12469,9 +12469,9 @@
      76000
     ],
     "2026-10-06": [
-     1,
-     1,
-     76000
+     2,
+     2,
+     152000
     ]
    },
    "7377": {
@@ -20773,6 +20773,11 @@
      1,
      1,
      64000
+    ],
+    "2026-10-06": [
+     1,
+     1,
+     64000
     ]
    },
    "7128": {
@@ -26000,10 +26005,27 @@
    "2026-10-03": 38,
    "2026-10-04": 41,
    "2026-10-05": 32,
-   "2026-10-06": 21
+   "2026-10-06": 23
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33001",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -17000,
+   "lines": [
+    {
+     "sku": "H-1815-نيليlaci-48",
+     "qty": 1,
+     "price": 64000,
+     "discPct": 24.6,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33000",
    "d": "2026-10-06",
@@ -26021,6 +26043,25 @@
     }
    ],
    "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S32999",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -4000,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 4.9,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
    "ful": "turkey"
   },
   {
