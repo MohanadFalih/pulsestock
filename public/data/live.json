@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-06T10:09:23.293704+00:00",
+ "syncedAt": "2026-10-06T10:32:18.707231+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -62,20 +62,20 @@
    "sku": "L-0656",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-05",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-06",
+   "lastOrderDate": "2026-10-06",
+   "orders": 1,
+   "units": 1,
+   "revenue": 88000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 88000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -114,20 +114,20 @@
    "sku": "L-0650",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-05",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-06",
+   "lastOrderDate": "2026-10-06",
+   "orders": 1,
+   "units": 1,
+   "revenue": 89000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 89000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -716,15 +716,15 @@
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
    "lastOrderDate": "2026-10-06",
-   "orders": 17,
-   "units": 18,
-   "revenue": 1332000,
+   "orders": 18,
+   "units": 19,
+   "revenue": 1406000,
    "delivered": 3,
    "returned": 0,
-   "unitsBoughtFromSupplier": 18,
+   "unitsBoughtFromSupplier": 19,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 2.14,
+   "orderVelocity7d": 2.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11011,17 +11011,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-11-13",
    "firstOrderDate": "2025-11-13",
-   "lastOrderDate": "2026-10-03",
-   "orders": 29,
-   "units": 32,
-   "revenue": 2009000,
+   "lastOrderDate": "2026-10-06",
+   "orders": 30,
+   "units": 33,
+   "revenue": 2048000,
    "delivered": 32,
    "returned": 7,
    "unitsBoughtFromSupplier": 24,
    "returnedStock": 3,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12443,6 +12443,20 @@
   "from": "2026-07-08",
   "to": "2026-10-06",
   "byProduct": {
+   "7388": {
+    "2026-10-06": [
+     1,
+     1,
+     88000
+    ]
+   },
+   "7386": {
+    "2026-10-06": [
+     1,
+     1,
+     89000
+    ]
+   },
    "7379": {
     "2026-10-04": [
      3,
@@ -12586,9 +12600,9 @@
      148000
     ],
     "2026-10-06": [
-     1,
-     1,
-     74000
+     2,
+     2,
+     148000
     ]
    },
    "7362": {
@@ -24888,6 +24902,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-06": [
+     1,
+     1,
+     39000
     ]
    },
    "6213": {
@@ -25966,10 +25985,73 @@
    "2026-10-03": 38,
    "2026-10-04": 41,
    "2026-10-05": 32,
-   "2026-10-06": 11
+   "2026-10-06": 14
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32992",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S32991",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-0656",
+     "qty": 1,
+     "price": 88000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-0650",
+     "qty": 1,
+     "price": 89000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S32990",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6901",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S32989",
    "d": "2026-10-06",
