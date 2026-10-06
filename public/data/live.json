@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-06T12:02:20.589285+00:00",
+ "syncedAt": "2026-10-06T12:32:41.509834+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -11115,17 +11115,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-10-28",
    "firstOrderDate": "2025-10-28",
-   "lastOrderDate": "2026-10-05",
-   "orders": 94,
-   "units": 100,
-   "revenue": 5969000,
-   "delivered": 97,
+   "lastOrderDate": "2026-10-06",
+   "orders": 95,
+   "units": 101,
+   "revenue": 6008000,
+   "delivered": 98,
    "returned": 16,
    "unitsBoughtFromSupplier": 93,
-   "returnedStock": 7,
+   "returnedStock": 6,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12434,9 +12434,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1864,
-  "stockValue": 53643197,
-  "stockVariants": 1486
+  "stockUnits": 1866,
+  "stockValue": 53615197,
+  "stockVariants": 1485
  },
  "daily": {
   "days": 90,
@@ -24945,6 +24945,11 @@
      2,
      2,
      78000
+    ],
+    "2026-10-06": [
+     1,
+     1,
+     39000
     ]
    },
    "6120": {
@@ -25895,7 +25900,7 @@
     2
    ],
    "2026-10-06": [
-    0,
+    1,
     18
    ]
   },
@@ -25990,10 +25995,27 @@
    "2026-10-03": 38,
    "2026-10-04": 41,
    "2026-10-05": 32,
-   "2026-10-06": 16
+   "2026-10-06": 17
   }
  },
  "ordersDetail": [
+  {
+   "id": "S32995",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6889",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S32994",
    "d": "2026-10-06",
@@ -26513,7 +26535,7 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Facebook"
@@ -186006,13 +186028,6 @@
    "qty": 1,
    "cost": 28000,
    "created": "2025-10-28"
-  },
-  {
-   "sku": "T-6889",
-   "model": "T-6889",
-   "qty": 1,
-   "cost": 28000,
-   "created": "2026-02-23"
   },
   {
    "sku": "T-6889",
