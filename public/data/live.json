@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-06T14:02:35.688548+00:00",
+ "syncedAt": "2026-10-06T14:32:06.862867+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2718,15 +2718,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-10-06",
-   "orders": 89,
-   "units": 92,
-   "revenue": 9827950,
+   "orders": 90,
+   "units": 93,
+   "revenue": 9934950,
    "delivered": 76,
    "returned": 15,
    "unitsBoughtFromSupplier": 85,
    "returnedStock": 10,
    "unitPrice": 107000.0,
-   "orderVelocity7d": 3.0,
+   "orderVelocity7d": 3.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -14095,9 +14095,9 @@
      422650
     ],
     "2026-10-06": [
-     2,
-     2,
-     214000
+     3,
+     3,
+     321000
     ]
    },
    "7284": {
@@ -26005,10 +26005,29 @@
    "2026-10-03": 38,
    "2026-10-04": 41,
    "2026-10-05": 32,
-   "2026-10-06": 23
+   "2026-10-06": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33002",
+   "d": "2026-10-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-beige-46",
+     "qty": 1,
+     "price": 107000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33001",
    "d": "2026-10-06",
