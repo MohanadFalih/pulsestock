@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-07T09:32:10.702430+00:00",
+ "syncedAt": "2026-10-07T10:02:37.743423+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -534,15 +534,15 @@
    "odooCreatedDate": "2026-09-30",
    "firstOrderDate": "2026-10-01",
    "lastOrderDate": "2026-10-07",
-   "orders": 2,
-   "units": 2,
-   "revenue": 144000,
+   "orders": 3,
+   "units": 3,
+   "revenue": 216000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.29,
+   "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -3268,9 +3268,9 @@
    "units": 45,
    "revenue": 3457300,
    "delivered": 42,
-   "returned": 7,
+   "returned": 8,
    "unitsBoughtFromSupplier": 39,
-   "returnedStock": 4,
+   "returnedStock": 5,
    "unitPrice": 77000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 4,
@@ -9581,17 +9581,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-04-01",
    "firstOrderDate": "2026-04-01",
-   "lastOrderDate": "2026-10-01",
-   "orders": 108,
+   "lastOrderDate": "2026-10-07",
+   "orders": 109,
    "units": 114,
    "revenue": 7296000,
    "delivered": 111,
    "returned": 21,
    "unitsBoughtFromSupplier": 101,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 64000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 6,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12434,9 +12434,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1858,
-  "stockValue": 53465681,
-  "stockVariants": 1481
+  "stockUnits": 1860,
+  "stockValue": 53536991,
+  "stockVariants": 1483
  },
  "daily": {
   "days": 90,
@@ -12532,9 +12532,9 @@
      72000
     ],
     "2026-10-07": [
-     1,
-     1,
-     72000
+     2,
+     2,
+     144000
     ]
    },
    "7368": {
@@ -23987,6 +23987,11 @@
      1,
      1,
      64000
+    ],
+    "2026-10-07": [
+     1,
+     0,
+     0
     ]
    },
    "6873": {
@@ -25846,7 +25851,7 @@
    ],
    "2026-10-07": [
     0,
-    7
+    8
    ]
   },
   "orders": {
@@ -25940,10 +25945,48 @@
    "2026-10-04": 41,
    "2026-10-05": 32,
    "2026-10-06": 46,
-   "2026-10-07": 20
+   "2026-10-07": 21
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33047",
+   "d": "2026-10-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33046",
+   "d": "2026-10-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1664",
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33044",
    "d": "2026-10-07",
@@ -32090,8 +32133,16 @@
      "qty": 1,
      "price": 77000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
+    },
+    {
+     "sku": "H-1682-نيليlaci-54",
+     "qty": 0,
+     "price": 64000,
+     "discPct": 0,
+     "del": -1
     }
    ],
    "src": "Facebook",
@@ -131080,6 +131131,13 @@
    "created": "2025-05-20"
   },
   {
+   "sku": "H-1682",
+   "model": "H-1682",
+   "qty": 1,
+   "cost": 31699,
+   "created": "2026-04-01"
+  },
+  {
    "sku": "H-1760",
    "model": "H-1760",
    "qty": 0,
@@ -137655,7 +137713,7 @@
   {
    "sku": "H-1873",
    "model": "H-1873",
-   "qty": 0,
+   "qty": 1,
    "cost": 39611,
    "created": "2026-08-14"
   },
