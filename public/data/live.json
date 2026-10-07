@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-07T07:32:10.907351+00:00",
+ "syncedAt": "2026-10-07T08:02:47.964537+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7033,8 +7033,8 @@
    "stage": "selling",
    "odooCreatedDate": "2026-06-14",
    "firstOrderDate": "2026-06-14",
-   "lastOrderDate": "2026-10-05",
-   "orders": 108,
+   "lastOrderDate": "2026-10-07",
+   "orders": 109,
    "units": 110,
    "revenue": 10114000,
    "delivered": 110,
@@ -7042,8 +7042,8 @@
    "unitsBoughtFromSupplier": 73,
    "returnedStock": 7,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -21189,6 +21189,11 @@
      1,
      1,
      79000
+    ],
+    "2026-10-07": [
+     1,
+     1,
+     79000
     ]
    },
    "7116": {
@@ -25916,10 +25921,27 @@
    "2026-10-04": 41,
    "2026-10-05": 32,
    "2026-10-06": 46,
-   "2026-10-07": 9
+   "2026-10-07": 10
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33034",
+   "d": "2026-10-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -32000,
+   "lines": [
+    {
+     "sku": "K-3111-احمرbordo-42",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 38.1,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S33033",
    "d": "2026-10-07",
