@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-07T18:02:10.642759+00:00",
+ "syncedAt": "2026-10-07T18:32:09.696407+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -924,15 +924,15 @@
    "odooCreatedDate": "2026-09-27",
    "firstOrderDate": "2026-09-28",
    "lastOrderDate": "2026-10-07",
-   "orders": 6,
-   "units": 6,
-   "revenue": 672000,
+   "orders": 7,
+   "units": 7,
+   "revenue": 794000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 122000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12779,9 +12779,9 @@
      112000
     ],
     "2026-10-07": [
-     2,
-     2,
-     224000
+     3,
+     3,
+     346000
     ]
    },
    "7357": {
@@ -26078,7 +26078,7 @@
    "2026-10-04": 41,
    "2026-10-05": 32,
    "2026-10-06": 46,
-   "2026-10-07": 37
+   "2026-10-07": 38
   }
  },
  "ordersDetail": [
@@ -26240,6 +26240,25 @@
      "sku": "T-8020",
      "qty": 1,
      "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33056",
+   "d": "2026-10-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6674",
+     "qty": 1,
+     "price": 122000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
