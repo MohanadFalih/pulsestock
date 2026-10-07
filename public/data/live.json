@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-07T11:32:52.914558+00:00",
+ "syncedAt": "2026-10-07T12:02:48.168277+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -378,15 +378,15 @@
    "odooCreatedDate": "2026-10-02",
    "firstOrderDate": "2026-10-02",
    "lastOrderDate": "2026-10-07",
-   "orders": 26,
-   "units": 30,
-   "revenue": 1170000,
+   "orders": 28,
+   "units": 32,
+   "revenue": 1248000,
    "delivered": 4,
    "returned": 0,
-   "unitsBoughtFromSupplier": 29,
+   "unitsBoughtFromSupplier": 30,
    "returnedStock": 0,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 3.71,
+   "orderVelocity7d": 4.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11538,7 +11538,7 @@
    "delivered": 835,
    "returned": 183,
    "unitsBoughtFromSupplier": 674,
-   "returnedStock": 8,
+   "returnedStock": 9,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 3,
@@ -12486,9 +12486,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1883,
-  "stockValue": 54273977,
-  "stockVariants": 1498
+  "stockUnits": 1884,
+  "stockValue": 54294644,
+  "stockVariants": 1499
  },
  "daily": {
   "days": 90,
@@ -12565,9 +12565,9 @@
      273000
     ],
     "2026-10-07": [
-     9,
      11,
-     429000
+     13,
+     507000
     ]
    },
    "7374": {
@@ -26011,10 +26011,48 @@
    "2026-10-04": 41,
    "2026-10-05": 32,
    "2026-10-06": 46,
-   "2026-10-07": 27
+   "2026-10-07": 29
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33054",
+   "d": "2026-10-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33053",
+   "d": "2026-10-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33052",
    "d": "2026-10-07",
@@ -131105,7 +131143,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 0,
+   "qty": 1,
    "cost": 20667,
    "created": "2026-10-03"
   },
