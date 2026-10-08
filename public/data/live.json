@@ -1,9 +1,35 @@
 {
- "syncedAt": "2026-10-08T10:02:59.013782+00:00",
+ "syncedAt": "2026-10-08T11:02:40.024687+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7396,
+   "name": "T-8024",
+   "sku": "T-8024",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-08",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 99000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7395,
    "name": "H-1925",
@@ -26044,10 +26070,29 @@
    "2026-10-05": 31,
    "2026-10-06": 46,
    "2026-10-07": 43,
-   "2026-10-08": 15
+   "2026-10-08": 16
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33087",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-66361",
+     "qty": 1,
+     "price": 131000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33086",
    "d": "2026-10-08",
@@ -139040,7 +139085,7 @@
    "sku": "H-1890",
    "model": "H-1890",
    "qty": 0,
-   "cost": 0,
+   "cost": 41333,
    "created": "2026-08-30"
   },
   {
@@ -159522,7 +159567,7 @@
    "sku": "H-1664",
    "model": "H-1664",
    "qty": 0,
-   "cost": 0,
+   "cost": 34100,
    "created": "2026-09-30"
   },
   {
@@ -167488,7 +167533,7 @@
    "sku": "H-1910",
    "model": "H-1910",
    "qty": 0,
-   "cost": 0,
+   "cost": 34100,
    "created": "2026-09-21"
   },
   {
@@ -167642,7 +167687,7 @@
    "sku": "H-1910",
    "model": "H-1910",
    "qty": 0,
-   "cost": 0,
+   "cost": 34100,
    "created": "2026-09-21"
   },
   {
@@ -167691,7 +167736,7 @@
    "sku": "H-1910",
    "model": "H-1910",
    "qty": 0,
-   "cost": 0,
+   "cost": 34100,
    "created": "2026-09-21"
   },
   {
@@ -167985,7 +168030,7 @@
    "sku": "H-1912",
    "model": "H-1912",
    "qty": 0,
-   "cost": 0,
+   "cost": 33756,
    "created": "2026-09-24"
   },
   {
@@ -168013,7 +168058,7 @@
    "sku": "H-1912",
    "model": "H-1912",
    "qty": 0,
-   "cost": 0,
+   "cost": 33756,
    "created": "2026-09-24"
   },
   {
@@ -168853,7 +168898,7 @@
    "sku": "H-1916",
    "model": "H-1916",
    "qty": 0,
-   "cost": 0,
+   "cost": 36167,
    "created": "2026-09-28"
   },
   {
@@ -169203,63 +169248,14 @@
    "sku": "H-1920",
    "model": "H-1920",
    "qty": 0,
-   "cost": 0,
+   "cost": 37889,
    "created": "2026-10-04"
   },
   {
    "sku": "H-1920",
    "model": "H-1920",
    "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
-   "created": "2026-10-04"
-  },
-  {
-   "sku": "H-1920",
-   "model": "H-1920",
-   "qty": 0,
-   "cost": 0,
+   "cost": 37889,
    "created": "2026-10-04"
   },
   {
@@ -169302,6 +169298,55 @@
    "model": "H-1920",
    "qty": 0,
    "cost": 0,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 37889,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 37889,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-04"
+  },
+  {
+   "sku": "H-1920",
+   "model": "H-1920",
+   "qty": 0,
+   "cost": 37889,
    "created": "2026-10-04"
   },
   {
@@ -190058,6 +190103,146 @@
    "qty": 0,
    "cost": 0,
    "created": "2026-10-01"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "T-8024",
+   "model": "T-8024",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
   },
   {
    "sku": "T-8028",
