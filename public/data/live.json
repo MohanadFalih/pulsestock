@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-08T14:32:16.838788+00:00",
+ "syncedAt": "2026-10-08T15:02:42.965063+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -975,17 +975,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-09-29",
-   "orders": 1,
-   "units": 1,
-   "revenue": 76000,
+   "lastOrderDate": "2026-10-08",
+   "orders": 2,
+   "units": 3,
+   "revenue": 236000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12908,6 +12908,11 @@
      1,
      1,
      76000
+    ],
+    "2026-10-08": [
+     1,
+     2,
+     160000
     ]
    },
    "7360": {
@@ -26214,10 +26219,37 @@
    "2026-10-05": 31,
    "2026-10-06": 46,
    "2026-10-07": 43,
-   "2026-10-08": 28
+   "2026-10-08": 29
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33101",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8014",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "T-8014",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33100",
    "d": "2026-10-08",
