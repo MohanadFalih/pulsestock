@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-08T22:17:12.890721+00:00",
+ "syncedAt": "2026-10-08T22:32:07.193079+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1081,11 +1081,11 @@
    "firstOrderDate": "2026-09-28",
    "lastOrderDate": "2026-10-09",
    "orders": 8,
-   "units": 7,
-   "revenue": 794000,
+   "units": 8,
+   "revenue": 916000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 0,
    "unitPrice": 122000.0,
    "orderVelocity7d": 1.0,
@@ -6588,20 +6588,20 @@
    "sku": "K-5016",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-06-27",
    "firstOrderDate": "2026-06-27",
-   "lastOrderDate": "2026-09-02",
-   "orders": 35,
-   "units": 34,
-   "revenue": 2924000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 36,
+   "units": 35,
+   "revenue": 3010000,
    "delivered": 34,
    "returned": 13,
    "unitsBoughtFromSupplier": 24,
    "returnedStock": 4,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 37,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -20730,6 +20730,11 @@
      1,
      1,
      86000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     86000
     ]
    },
    "7141": {
@@ -26055,10 +26060,27 @@
    "2026-10-06": 46,
    "2026-10-07": 43,
    "2026-10-08": 44,
-   "2026-10-09": 2
+   "2026-10-09": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33120",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -45000,
+   "lines": [
+    {
+     "sku": "K-5016",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 49.5,
+     "del": 0
+    }
+   ],
+   "src": "Website"
+  },
   {
    "id": "S33119",
    "d": "2026-10-09",
