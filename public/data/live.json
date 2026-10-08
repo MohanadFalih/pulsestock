@@ -1,9 +1,35 @@
 {
- "syncedAt": "2026-10-08T12:32:23.473256+00:00",
+ "syncedAt": "2026-10-08T13:02:46.970635+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7400,
+   "name": "K-6654",
+   "sku": "K-6654",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-08",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 131000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7399,
    "name": "T-8023",
@@ -534,15 +560,15 @@
    "odooCreatedDate": "2026-10-04",
    "firstOrderDate": "2026-10-04",
    "lastOrderDate": "2026-10-08",
-   "orders": 18,
-   "units": 21,
-   "revenue": 1612000,
+   "orders": 19,
+   "units": 22,
+   "revenue": 1692000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 20,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 2.57,
+   "orderVelocity7d": 2.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -8151,17 +8177,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-05-13",
    "firstOrderDate": "2026-05-13",
-   "lastOrderDate": "2026-10-06",
-   "orders": 285,
-   "units": 314,
-   "revenue": 21666000,
+   "lastOrderDate": "2026-10-08",
+   "orders": 286,
+   "units": 315,
+   "revenue": 21740000,
    "delivered": 314,
    "returned": 93,
    "unitsBoughtFromSupplier": 225,
    "returnedStock": 4,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12642,9 +12668,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1859,
-  "stockValue": 53512289,
-  "stockVariants": 1482
+  "stockUnits": 1842,
+  "stockValue": 52862935,
+  "stockVariants": 1467
  },
  "daily": {
   "days": 90,
@@ -12701,9 +12727,9 @@
      616000
     ],
     "2026-10-08": [
-     2,
-     2,
-     160000
+     3,
+     3,
+     240000
     ]
    },
    "7377": {
@@ -22819,6 +22845,11 @@
      1,
      1,
      69000
+    ],
+    "2026-10-08": [
+     1,
+     1,
+     74000
     ]
    },
    "7040": {
@@ -26178,10 +26209,46 @@
    "2026-10-05": 31,
    "2026-10-06": 46,
    "2026-10-07": 43,
-   "2026-10-08": 24
+   "2026-10-08": 26
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33098",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33097",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -40000,
+   "lines": [
+    {
+     "sku": "L-4114-قهواييغامق-13846",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 50.6,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S33096",
    "d": "2026-10-08",
@@ -27969,7 +28036,8 @@
      "del": 0
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S33005",
@@ -131412,8 +131480,8 @@
    "sku": "M-24003UKBK1160",
    "model": "M-24003UKBK1160",
    "qty": 1,
-   "cost": 19000,
-   "created": "2025-10-19"
+   "cost": 0,
+   "created": "2026-02-23"
   },
   {
    "sku": "M-24003UKBK1160",
@@ -131427,6 +131495,13 @@
    "model": "M-24006UKB139",
    "qty": 1,
    "cost": 30357,
+   "created": "2025-11-27"
+  },
+  {
+   "sku": "M-24006UKB139",
+   "model": "M-24006UKB139",
+   "qty": 1,
+   "cost": 26000,
    "created": "2025-11-27"
   },
   {
@@ -158516,13 +158591,6 @@
    "sku": "M-5732EDF311",
    "model": "M-5732EDF311",
    "qty": 1,
-   "cost": 33929,
-   "created": "2025-12-23"
-  },
-  {
-   "sku": "M-5732EDF311",
-   "model": "M-5732EDF311",
-   "qty": 1,
    "cost": 33962,
    "created": "2025-12-23"
   },
@@ -176937,6 +177005,216 @@
    "created": "2026-09-04"
   },
   {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
+   "sku": "K-6654",
+   "model": "K-6654",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-08"
+  },
+  {
    "sku": "K-6656",
    "model": "K-6656",
    "qty": 0,
@@ -182645,8 +182923,8 @@
    "sku": "M-039OZT1013",
    "model": "M-039OZT1013",
    "qty": 1,
-   "cost": 40000,
-   "created": "2025-11-23"
+   "cost": 0,
+   "created": "2026-02-23"
   },
   {
    "sku": "M-0502BG354",
@@ -182756,7 +183034,7 @@
   {
    "sku": "M-1946FON792",
    "model": "M-1946FON792",
-   "qty": 2,
+   "qty": 1,
    "cost": 19000,
    "created": "2025-12-28"
   },
@@ -182766,13 +183044,6 @@
    "qty": 1,
    "cost": 25000,
    "created": "2025-11-14"
-  },
-  {
-   "sku": "M-1998TRT545",
-   "model": "M-1998TRT545",
-   "qty": 1,
-   "cost": 44688,
-   "created": "2025-10-30"
   },
   {
    "sku": "M-1998TRT545",
@@ -182808,13 +183079,6 @@
    "qty": 1,
    "cost": 32000,
    "created": "2025-12-18"
-  },
-  {
-   "sku": "M-2012FON792",
-   "model": "M-2012FON792",
-   "qty": 1,
-   "cost": 23000,
-   "created": "2025-10-25"
   },
   {
    "sku": "M-2012FON792",
@@ -183065,13 +183329,6 @@
    "sku": "M-2659ASMK1074",
    "model": "M-2659ASMK1074",
    "qty": 1,
-   "cost": 0,
-   "created": "2025-12-15"
-  },
-  {
-   "sku": "M-2659ASMK1074",
-   "model": "M-2659ASMK1074",
-   "qty": 1,
    "cost": 35392,
    "created": "2025-12-15"
   },
@@ -183307,13 +183564,6 @@
    "created": "2025-09-20"
   },
   {
-   "sku": "M-2726SL432",
-   "model": "M-2726SL432",
-   "qty": 1,
-   "cost": 44330,
-   "created": "2025-09-25"
-  },
-  {
    "sku": "M-2728AYD574",
    "model": "M-2728AYD574",
    "qty": 1,
@@ -183535,7 +183785,7 @@
    "model": "M-2821MSA980",
    "qty": 1,
    "cost": 0,
-   "created": "2025-10-19"
+   "created": "2026-02-23"
   },
   {
    "sku": "M-2824MSA980",
@@ -183624,7 +183874,7 @@
   {
    "sku": "M-3059KTR750",
    "model": "M-3059KTR750",
-   "qty": 2,
+   "qty": 1,
    "cost": 19662,
    "created": "2025-09-19"
   },
@@ -183709,15 +183959,8 @@
    "sku": "M-3069KTR750",
    "model": "M-3069KTR750",
    "qty": 1,
-   "cost": 36465,
-   "created": "2025-12-07"
-  },
-  {
-   "sku": "M-3123HBS856",
-   "model": "M-3123HBS856",
-   "qty": 1,
-   "cost": 14479,
-   "created": "2025-09-15"
+   "cost": 0,
+   "created": "2026-02-23"
   },
   {
    "sku": "M-3141HBS856",
@@ -183842,13 +184085,6 @@
    "sku": "M-442DVL817",
    "model": "M-442DVL817",
    "qty": 1,
-   "cost": 28442,
-   "created": "2025-09-15"
-  },
-  {
-   "sku": "M-442DVL817",
-   "model": "M-442DVL817",
-   "qty": 1,
    "cost": 27349,
    "created": "2025-09-15"
   },
@@ -183893,20 +184129,6 @@
    "qty": 2,
    "cost": 27349,
    "created": "2025-09-15"
-  },
-  {
-   "sku": "M-442DVL817",
-   "model": "M-442DVL817",
-   "qty": 1,
-   "cost": 27349,
-   "created": "2025-09-15"
-  },
-  {
-   "sku": "M-445DVL817",
-   "model": "M-445DVL817",
-   "qty": 1,
-   "cost": 21450,
-   "created": "2025-09-16"
   },
   {
    "sku": "M-445DVL817",
@@ -184136,13 +184358,6 @@
    "sku": "M-6214BSK463",
    "model": "M-6214BSK463",
    "qty": 1,
-   "cost": 27885,
-   "created": "2025-09-16"
-  },
-  {
-   "sku": "M-6214BSK463",
-   "model": "M-6214BSK463",
-   "qty": 1,
    "cost": 18850,
    "created": "2025-09-16"
   },
@@ -184168,13 +184383,6 @@
    "created": "2025-09-16"
   },
   {
-   "sku": "M-6239BSK463",
-   "model": "M-6239BSK463",
-   "qty": 1,
-   "cost": 58272,
-   "created": "2025-10-09"
-  },
-  {
    "sku": "M-6253BSK463",
    "model": "M-6253BSK463",
    "qty": 1,
@@ -184189,13 +184397,6 @@
    "created": "2025-12-20"
   },
   {
-   "sku": "M-6450MP806",
-   "model": "M-6450MP806",
-   "qty": 1,
-   "cost": 43258,
-   "created": "2025-10-02"
-  },
-  {
    "sku": "M-6899S324",
    "model": "M-6899S324",
    "qty": 1,
@@ -184215,13 +184416,6 @@
    "qty": 1,
    "cost": 27528,
    "created": "2025-09-28"
-  },
-  {
-   "sku": "M-7020UZ662",
-   "model": "M-7020UZ662",
-   "qty": 1,
-   "cost": 28242,
-   "created": "2025-09-19"
   },
   {
    "sku": "M-7020UZ662",
@@ -184401,16 +184595,16 @@
   {
    "sku": "M-9159PLK541",
    "model": "M-9159PLK541",
-   "qty": 1,
+   "qty": 2,
    "cost": 25812,
    "created": "2025-09-16"
   },
   {
    "sku": "M-9159PLK541",
    "model": "M-9159PLK541",
-   "qty": 2,
-   "cost": 25812,
-   "created": "2025-09-16"
+   "qty": 1,
+   "cost": 0,
+   "created": "2026-02-23"
   },
   {
    "sku": "M-ASM2657",
@@ -184462,25 +184656,11 @@
    "created": "2025-10-14"
   },
   {
-   "sku": "M-PL9167",
-   "model": "M-PL9167",
-   "qty": 1,
-   "cost": 32890,
-   "created": "2025-10-14"
-  },
-  {
    "sku": "M-PL9168",
    "model": "M-PL9168",
    "qty": 1,
    "cost": 35750,
    "created": "2025-10-11"
-  },
-  {
-   "sku": "M-PL9176",
-   "model": "M-PL9176",
-   "qty": 1,
-   "cost": 28214,
-   "created": "2025-12-01"
   },
   {
    "sku": "M-PL9176",
@@ -184539,6 +184719,13 @@
    "created": "2025-12-01"
   },
   {
+   "sku": "M-PL9176",
+   "model": "M-PL9176",
+   "qty": 1,
+   "cost": 0,
+   "created": "2026-02-23"
+  },
+  {
    "sku": "M-PL9186",
    "model": "M-PL9186",
    "qty": 1,
@@ -184564,20 +184751,6 @@
    "model": "M_ 2707SL432",
    "qty": 1,
    "cost": 30388,
-   "created": "2025-09-16"
-  },
-  {
-   "sku": "M_ 2707SL432",
-   "model": "M_ 2707SL432",
-   "qty": 1,
-   "cost": 30388,
-   "created": "2025-09-16"
-  },
-  {
-   "sku": "M_2675SL432",
-   "model": "M_2675SL432",
-   "qty": 1,
-   "cost": 28600,
    "created": "2025-09-16"
   },
   {
