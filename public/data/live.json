@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-08T15:02:42.965063+00:00",
+ "syncedAt": "2026-10-08T15:32:29.380239+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -742,15 +742,15 @@
    "odooCreatedDate": "2026-09-30",
    "firstOrderDate": "2026-10-01",
    "lastOrderDate": "2026-10-08",
-   "orders": 6,
-   "units": 7,
-   "revenue": 520000,
+   "orders": 7,
+   "units": 8,
+   "revenue": 596000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -975,17 +975,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-10-08",
-   "orders": 2,
-   "units": 3,
-   "revenue": 236000,
+   "lastOrderDate": "2026-09-29",
+   "orders": 1,
+   "units": 1,
+   "revenue": 76000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 9,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12793,9 +12793,9 @@
      296000
     ],
     "2026-10-08": [
-     1,
      2,
-     152000
+     3,
+     228000
     ]
    },
    "7368": {
@@ -12908,11 +12908,6 @@
      1,
      1,
      76000
-    ],
-    "2026-10-08": [
-     1,
-     2,
-     160000
     ]
    },
    "7360": {
@@ -26224,30 +26219,22 @@
  },
  "ordersDetail": [
   {
-   "id": "S33101",
+   "id": "S33102",
    "d": "2026-10-08",
    "st": "sale",
    "fee": 5000,
    "disc": 0,
    "lines": [
     {
-     "sku": "T-8014",
+     "sku": "H-1664",
      "qty": 1,
-     "price": 80000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    },
-    {
-     "sku": "T-8014",
-     "qty": 1,
-     "price": 80000,
+     "price": 76000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
     }
    ],
-   "src": "Facebook",
+   "src": "Instagram",
    "ful": "turkey"
   },
   {
