@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-08T13:32:39.828804+00:00",
+ "syncedAt": "2026-10-08T14:02:41.796747+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1574,15 +1574,15 @@
    "odooCreatedDate": "2026-09-21",
    "firstOrderDate": "2026-09-22",
    "lastOrderDate": "2026-10-08",
-   "orders": 20,
-   "units": 21,
-   "revenue": 1520000,
+   "orders": 21,
+   "units": 22,
+   "revenue": 1596000,
    "delivered": 16,
    "returned": 4,
    "unitsBoughtFromSupplier": 20,
    "returnedStock": 3,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -9633,17 +9633,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-04-04",
    "firstOrderDate": "2026-04-04",
-   "lastOrderDate": "2026-10-05",
-   "orders": 26,
-   "units": 26,
-   "revenue": 75,
+   "lastOrderDate": "2026-10-08",
+   "orders": 27,
+   "units": 27,
+   "revenue": 76,
    "delivered": 21,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
+   "returnedStock": 2,
    "unitPrice": 1.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12668,9 +12668,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1782,
+  "stockUnits": 1786,
   "stockValue": 50603057,
-  "stockVariants": 1411
+  "stockVariants": 1413
  },
  "daily": {
   "days": 90,
@@ -13397,9 +13397,9 @@
      148000
     ],
     "2026-10-08": [
-     1,
-     1,
-     76000
+     2,
+     2,
+     152000
     ]
    },
    "7338": {
@@ -24167,6 +24167,11 @@
      1,
      1,
      1
+    ],
+    "2026-10-08": [
+     1,
+     1,
+     1
     ]
    },
    "6902": {
@@ -26209,10 +26214,48 @@
    "2026-10-05": 31,
    "2026-10-06": 46,
    "2026-10-07": 43,
-   "2026-10-08": 26
+   "2026-10-08": 28
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33100",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -8000,
+   "lines": [
+    {
+     "sku": "H-1910",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 9.9,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33099",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 0,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "حزام 6945",
+     "qty": 1,
+     "price": 1,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33098",
    "d": "2026-10-08",
@@ -29292,7 +29335,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S32939",
@@ -181422,6 +181465,13 @@
    "created": "2025-05-20"
   },
   {
+   "sku": "L-2007",
+   "model": "L-2007",
+   "qty": 1,
+   "cost": 0,
+   "created": "2026-02-23"
+  },
+  {
    "sku": "L-2008",
    "model": "L-2008",
    "qty": 1,
@@ -190989,6 +191039,13 @@
    "qty": 0,
    "cost": 0,
    "created": "2026-06-11"
+  },
+  {
+   "sku": "حزام 6945",
+   "model": "حزام 6945",
+   "qty": 2,
+   "cost": 0,
+   "created": "2026-04-04"
   }
  ]
 }
