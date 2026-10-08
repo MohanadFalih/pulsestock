@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-08T18:32:20.485935+00:00",
+ "syncedAt": "2026-10-08T19:02:18.041793+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2307,7 +2307,7 @@
    "revenue": 638000,
    "delivered": 6,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 74000.0,
    "orderVelocity7d": 0.71,
@@ -11788,20 +11788,20 @@
    "sku": "L-3041",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-07-03",
    "firstOrderDate": "2025-09-05",
-   "lastOrderDate": "2026-09-24",
-   "orders": 11,
-   "units": 18,
-   "revenue": 471000,
+   "lastOrderDate": "2026-10-08",
+   "orders": 12,
+   "units": 19,
+   "revenue": 524000,
    "delivered": 14,
    "returned": 2,
    "unitsBoughtFromSupplier": 14,
    "returnedStock": 45,
    "unitPrice": 53000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 14,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -25472,6 +25472,11 @@
      1,
      2,
      58000
+    ],
+    "2026-10-08": [
+     1,
+     1,
+     53000
     ]
    },
    "5576": {
@@ -26228,10 +26233,29 @@
    "2026-10-05": 31,
    "2026-10-06": 46,
    "2026-10-07": 43,
-   "2026-10-08": 35
+   "2026-10-08": 36
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33109",
+   "d": "2026-10-08",
+   "st": "sale",
+   "fee": 0,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-3041",
+     "qty": 1,
+     "price": 53000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S33108",
    "d": "2026-10-08",
