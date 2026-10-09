@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-09T19:32:05.699599+00:00",
+ "syncedAt": "2026-10-09T20:02:08.176675+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10462,20 +10462,20 @@
    "sku": "T-6942",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-02-23",
    "firstOrderDate": "2026-02-23",
-   "lastOrderDate": "2026-09-26",
-   "orders": 166,
-   "units": 174,
-   "revenue": 11182000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 167,
+   "units": 175,
+   "revenue": 11241000,
    "delivered": 173,
    "returned": 46,
    "unitsBoughtFromSupplier": 139,
    "returnedStock": 2,
    "unitPrice": 59000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 13,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11996,20 +11996,20 @@
    "sku": "L-5015",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2026-01-12",
-   "lastOrderDate": "2026-09-21",
-   "orders": 11,
-   "units": 14,
-   "revenue": 419000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 12,
+   "units": 15,
+   "revenue": 455000,
    "delivered": 14,
    "returned": 6,
    "unitsBoughtFromSupplier": 5,
    "returnedStock": 4,
    "unitPrice": 36000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 18,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12415,17 +12415,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-14",
-   "lastOrderDate": "2026-10-06",
-   "orders": 31,
-   "units": 32,
-   "revenue": 1100000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 32,
+   "units": 33,
+   "revenue": 1176000,
    "delivered": 30,
    "returned": 9,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 1,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -24709,6 +24709,11 @@
      1,
      1,
      59000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     59000
     ]
    },
    "6764": {
@@ -25552,6 +25557,11 @@
      1,
      2,
      72000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     36000
     ]
    },
    "4738": {
@@ -25734,6 +25744,11 @@
      1,
      1,
      29000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     76000
     ]
    },
    "4537": {
@@ -26245,10 +26260,43 @@
    "2026-10-06": 46,
    "2026-10-07": 43,
    "2026-10-08": 44,
-   "2026-10-09": 26
+   "2026-10-09": 27
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33146",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -75000,
+   "lines": [
+    {
+     "sku": "L-1077",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 42.6,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "T-6942",
+     "qty": 1,
+     "price": 59000,
+     "discPct": 42.6,
+     "del": 0
+    },
+    {
+     "sku": "L-5015",
+     "qty": 1,
+     "price": 36000,
+     "discPct": 42.6,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33145",
    "d": "2026-10-09",
