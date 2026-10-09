@@ -1,9 +1,35 @@
 {
- "syncedAt": "2026-10-09T11:02:16.719536+00:00",
+ "syncedAt": "2026-10-09T11:32:25.734729+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7402,
+   "name": "K-6676",
+   "sku": "K-6676",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-09",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 137000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7401,
    "name": "H-1926",
@@ -608,20 +634,20 @@
    "sku": "T-8012",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-02",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-09",
+   "lastOrderDate": "2026-10-09",
+   "orders": 1,
+   "units": 1,
+   "revenue": 88000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 88000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1111,7 +1137,7 @@
    "revenue": 1038000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 122000.0,
    "orderVelocity7d": 1.14,
@@ -1599,17 +1625,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-21",
    "firstOrderDate": "2026-09-22",
-   "lastOrderDate": "2026-10-08",
-   "orders": 22,
-   "units": 23,
-   "revenue": 1672000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 23,
+   "units": 24,
+   "revenue": 1748000,
    "delivered": 16,
    "returned": 4,
    "unitsBoughtFromSupplier": 22,
    "returnedStock": 3,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 1.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12725,6 +12751,13 @@
      320000
     ]
    },
+   "7378": {
+    "2026-10-09": [
+     1,
+     1,
+     88000
+    ]
+   },
    "7377": {
     "2026-10-02": [
      3,
@@ -13415,6 +13448,11 @@
      3,
      3,
      228000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     76000
     ]
    },
    "7338": {
@@ -26108,10 +26146,56 @@
    "2026-10-06": 46,
    "2026-10-07": 43,
    "2026-10-08": 44,
-   "2026-10-09": 11
+   "2026-10-09": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33130",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-siyah-52",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33129",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8012",
+     "qty": 1,
+     "price": 88000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "H-1910",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33128",
    "d": "2026-10-09",
@@ -177478,6 +177562,90 @@
    "qty": 0,
    "cost": 69750,
    "created": "2026-09-27"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
+  },
+  {
+   "sku": "K-6676",
+   "model": "K-6676",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-09"
   },
   {
    "sku": "K-66771",
