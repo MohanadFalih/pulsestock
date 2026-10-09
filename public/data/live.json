@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-09T20:02:08.176675+00:00",
+ "syncedAt": "2026-10-09T20:32:18.398885+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -40,15 +40,15 @@
    "odooCreatedDate": "2026-10-09",
    "firstOrderDate": "2026-10-09",
    "lastOrderDate": "2026-10-09",
-   "orders": 2,
-   "units": 2,
-   "revenue": 274000,
+   "orders": 3,
+   "units": 3,
+   "revenue": 411000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 137000.0,
-   "orderVelocity7d": 0.29,
+   "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -690,15 +690,15 @@
    "odooCreatedDate": "2026-10-02",
    "firstOrderDate": "2026-10-02",
    "lastOrderDate": "2026-10-09",
-   "orders": 43,
-   "units": 48,
-   "revenue": 1952000,
+   "orders": 44,
+   "units": 49,
+   "revenue": 1996000,
    "delivered": 26,
    "returned": 0,
-   "unitsBoughtFromSupplier": 48,
+   "unitsBoughtFromSupplier": 49,
    "returnedStock": 0,
    "unitPrice": 44000.0,
-   "orderVelocity7d": 5.71,
+   "orderVelocity7d": 5.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1261,17 +1261,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-26",
    "firstOrderDate": "2026-10-06",
-   "lastOrderDate": "2026-10-06",
-   "orders": 1,
-   "units": 1,
-   "revenue": 117000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 2,
+   "units": 2,
+   "revenue": 244000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 127000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12731,9 +12731,9 @@
   "byProduct": {
    "7402": {
     "2026-10-09": [
-     2,
-     2,
-     274000
+     3,
+     3,
+     411000
     ]
    },
    "7401": {
@@ -12873,9 +12873,9 @@
      484000
     ],
     "2026-10-09": [
-     4,
-     4,
-     176000
+     5,
+     5,
+     220000
     ]
    },
    "7374": {
@@ -13161,6 +13161,11 @@
      1,
      1,
      117000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     127000
     ]
    },
    "7353": {
@@ -26260,10 +26265,48 @@
    "2026-10-06": 46,
    "2026-10-07": 43,
    "2026-10-08": 44,
-   "2026-10-09": 27
+   "2026-10-09": 30
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33148",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6676",
+     "qty": 1,
+     "price": 137000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33147",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-66501",
+     "qty": 1,
+     "price": 127000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S33146",
    "d": "2026-10-09",
@@ -26271,14 +26314,6 @@
    "fee": 5000,
    "disc": -75000,
    "lines": [
-    {
-     "sku": "L-1077",
-     "qty": 1,
-     "price": 76000,
-     "discPct": 42.6,
-     "del": 0,
-     "route": "turkey"
-    },
     {
      "sku": "T-6942",
      "qty": 1,
@@ -26292,10 +26327,16 @@
      "price": 36000,
      "discPct": 42.6,
      "del": 0
+    },
+    {
+     "sku": "L-1077",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 42.6,
+     "del": 0
     }
    ],
-   "src": "Instagram",
-   "ful": "turkey"
+   "src": "Instagram"
   },
   {
    "id": "S33145",
@@ -26400,6 +26441,25 @@
      "sku": "H-1664",
      "qty": 1,
      "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33140",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 44000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
