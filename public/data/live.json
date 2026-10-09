@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-09T17:32:11.120709+00:00",
+ "syncedAt": "2026-10-09T18:02:26.689677+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2558,20 +2558,20 @@
    "sku": "K-6656",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-03",
    "firstOrderDate": "2026-09-20",
-   "lastOrderDate": "2026-09-20",
-   "orders": 1,
-   "units": 2,
-   "revenue": 202000,
+   "lastOrderDate": "2026-10-09",
+   "orders": 2,
+   "units": 3,
+   "revenue": 303000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 101000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 19,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14417,6 +14417,11 @@
      1,
      2,
      202000
+    ],
+    "2026-10-09": [
+     1,
+     1,
+     101000
     ]
    },
    "7302": {
@@ -26240,10 +26245,29 @@
    "2026-10-06": 46,
    "2026-10-07": 43,
    "2026-10-08": 44,
-   "2026-10-09": 20
+   "2026-10-09": 21
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33139",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -5000,
+   "lines": [
+    {
+     "sku": "K-6656",
+     "qty": 1,
+     "price": 101000,
+     "discPct": 4.7,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
   {
    "id": "S33138",
    "d": "2026-10-09",
