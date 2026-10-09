@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-09T02:02:21.657287+00:00",
+ "syncedAt": "2026-10-09T02:24:23.091241+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -560,15 +560,15 @@
    "odooCreatedDate": "2026-10-04",
    "firstOrderDate": "2026-10-04",
    "lastOrderDate": "2026-10-09",
-   "orders": 24,
-   "units": 27,
-   "revenue": 2092000,
+   "orders": 25,
+   "units": 28,
+   "revenue": 2172000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 26,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 3.43,
+   "orderVelocity7d": 3.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12694,9 +12694,9 @@
      480000
     ],
     "2026-10-09": [
-     2,
-     2,
-     160000
+     3,
+     3,
+     240000
     ]
    },
    "7377": {
@@ -26067,10 +26067,29 @@
    "2026-10-06": 46,
    "2026-10-07": 43,
    "2026-10-08": 44,
-   "2026-10-09": 5
+   "2026-10-09": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33123",
+   "d": "2026-10-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S33122",
    "d": "2026-10-09",
