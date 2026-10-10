@@ -1,0 +1,699 @@
+{
+ "syncedAt": "2026-10-10T13:12:37.215358+00:00",
+ "metaSyncedAt": "2026-10-10T13:12:37.215358+00:00",
+ "window": {
+  "since": "2026-10-04",
+  "until": "2026-10-10",
+  "days": 7
+ },
+ "tz": "dates are in the ad account timezone as returned by Meta",
+ "currency": "USD",
+ "note": "One entry per ACTIVE campaign; 'daily' holds one row per date with delivery (missing date = zero delivery). null means the metric family does not apply to this campaign objective (purchases=null for traffic, conversations=null for catalog sales, ...). A real zero stays 0. error!=null means the Meta fetch failed (expired/invalid token) — data may be stale.",
+ "error": null,
+ "campaigns": [
+  {
+   "id": "120252141524090723",
+   "name": "25 AUG MINE",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_SALES",
+   "dailyBudgetUSD": 100.0,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 98.39,
+     "purchases": 20,
+     "costPerPurchaseUSD": 4.92,
+     "conversations": 254,
+     "costPerConversationUSD": 0.39,
+     "landingPageViews": 1,
+     "costPerLpvUSD": 98.39,
+     "impressions": 51468,
+     "ctrPct": 4.29
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 114.27,
+     "purchases": 10,
+     "costPerPurchaseUSD": 11.43,
+     "conversations": 251,
+     "costPerConversationUSD": 0.46,
+     "landingPageViews": 12,
+     "costPerLpvUSD": 9.52,
+     "impressions": 65730,
+     "ctrPct": 4.53
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 125.43,
+     "purchases": 12,
+     "costPerPurchaseUSD": 10.45,
+     "conversations": 292,
+     "costPerConversationUSD": 0.43,
+     "landingPageViews": 1,
+     "costPerLpvUSD": 125.43,
+     "impressions": 59960,
+     "ctrPct": 4.8
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 80.3,
+     "purchases": 18,
+     "costPerPurchaseUSD": 4.46,
+     "conversations": 213,
+     "costPerConversationUSD": 0.38,
+     "landingPageViews": 3,
+     "costPerLpvUSD": 26.77,
+     "impressions": 46315,
+     "ctrPct": 4.51
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 82.6,
+     "purchases": 8,
+     "costPerPurchaseUSD": 10.32,
+     "conversations": 202,
+     "costPerConversationUSD": 0.41,
+     "landingPageViews": 3,
+     "costPerLpvUSD": 27.53,
+     "impressions": 51128,
+     "ctrPct": 4.47
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 101.46,
+     "purchases": 16,
+     "costPerPurchaseUSD": 6.34,
+     "conversations": 279,
+     "costPerConversationUSD": 0.36,
+     "landingPageViews": 8,
+     "costPerLpvUSD": 12.68,
+     "impressions": 65244,
+     "ctrPct": 4.18
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 58.36,
+     "purchases": 6,
+     "costPerPurchaseUSD": 9.73,
+     "conversations": 156,
+     "costPerConversationUSD": 0.37,
+     "landingPageViews": 1,
+     "costPerLpvUSD": 58.36,
+     "impressions": 29941,
+     "ctrPct": 4.44
+    }
+   ]
+  },
+  {
+   "id": "120252218976640723",
+   "name": "DENIZ | LAST PIECES | CHAT",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_ENGAGEMENT",
+   "dailyBudgetUSD": null,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 16.34,
+     "purchases": 2,
+     "costPerPurchaseUSD": 8.17,
+     "conversations": 60,
+     "costPerConversationUSD": 0.27,
+     "landingPageViews": 6,
+     "costPerLpvUSD": 2.72,
+     "impressions": 9369,
+     "ctrPct": 15.33
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 15.56,
+     "purchases": 2,
+     "costPerPurchaseUSD": 7.78,
+     "conversations": 57,
+     "costPerConversationUSD": 0.27,
+     "landingPageViews": 6,
+     "costPerLpvUSD": 2.59,
+     "impressions": 8252,
+     "ctrPct": 15.91
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 14.47,
+     "purchases": 2,
+     "costPerPurchaseUSD": 7.24,
+     "conversations": 53,
+     "costPerConversationUSD": 0.27,
+     "landingPageViews": 11,
+     "costPerLpvUSD": 1.32,
+     "impressions": 7961,
+     "ctrPct": 14.07
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 14.66,
+     "purchases": 2,
+     "costPerPurchaseUSD": 7.33,
+     "conversations": 56,
+     "costPerConversationUSD": 0.26,
+     "landingPageViews": 6,
+     "costPerLpvUSD": 2.44,
+     "impressions": 10535,
+     "ctrPct": 11.54
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 12.68,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 53,
+     "costPerConversationUSD": 0.24,
+     "landingPageViews": 9,
+     "costPerLpvUSD": 1.41,
+     "impressions": 9161,
+     "ctrPct": 13.18
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 16.46,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 55,
+     "costPerConversationUSD": 0.3,
+     "landingPageViews": 6,
+     "costPerLpvUSD": 2.74,
+     "impressions": 8623,
+     "ctrPct": 15.89
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 9.27,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 28,
+     "costPerConversationUSD": 0.33,
+     "landingPageViews": 6,
+     "costPerLpvUSD": 1.54,
+     "impressions": 4563,
+     "ctrPct": 18.06
+    }
+   ]
+  },
+  {
+   "id": "120252428441730723",
+   "name": "DENIZ | RETARGETING | DPA",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_SALES",
+   "dailyBudgetUSD": 18.0,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 19.13,
+     "purchases": 4,
+     "costPerPurchaseUSD": 4.78,
+     "conversations": 3,
+     "costPerConversationUSD": 6.38,
+     "landingPageViews": 270,
+     "costPerLpvUSD": 0.07,
+     "impressions": 5756,
+     "ctrPct": 7.14
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 20.42,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 4,
+     "costPerConversationUSD": 5.11,
+     "landingPageViews": 262,
+     "costPerLpvUSD": 0.08,
+     "impressions": 6175,
+     "ctrPct": 6.57
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 19.15,
+     "purchases": 2,
+     "costPerPurchaseUSD": 9.57,
+     "conversations": 7,
+     "costPerConversationUSD": 2.74,
+     "landingPageViews": 262,
+     "costPerLpvUSD": 0.07,
+     "impressions": 5653,
+     "ctrPct": 7.27
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 16.12,
+     "purchases": 2,
+     "costPerPurchaseUSD": 8.06,
+     "conversations": 9,
+     "costPerConversationUSD": 1.79,
+     "landingPageViews": 215,
+     "costPerLpvUSD": 0.07,
+     "impressions": 5812,
+     "ctrPct": 6.38
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 16.08,
+     "purchases": 6,
+     "costPerPurchaseUSD": 2.68,
+     "conversations": 7,
+     "costPerConversationUSD": 2.3,
+     "landingPageViews": 236,
+     "costPerLpvUSD": 0.07,
+     "impressions": 6436,
+     "ctrPct": 5.8
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 19.23,
+     "purchases": 2,
+     "costPerPurchaseUSD": 9.62,
+     "conversations": 9,
+     "costPerConversationUSD": 2.14,
+     "landingPageViews": 199,
+     "costPerLpvUSD": 0.1,
+     "impressions": 6147,
+     "ctrPct": 10.33
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 10.86,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 4,
+     "costPerConversationUSD": 2.71,
+     "landingPageViews": 116,
+     "costPerLpvUSD": 0.09,
+     "impressions": 3395,
+     "ctrPct": 7.33
+    }
+   ]
+  },
+  {
+   "id": "120252101327950723",
+   "name": "DENIZ | RETARGETING | WARM",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_SALES",
+   "dailyBudgetUSD": 12.0,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 16.99,
+     "purchases": 2,
+     "costPerPurchaseUSD": 8.49,
+     "conversations": 34,
+     "costPerConversationUSD": 0.5,
+     "landingPageViews": 1,
+     "costPerLpvUSD": 16.99,
+     "impressions": 12787,
+     "ctrPct": 3.74
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 12.29,
+     "purchases": 2,
+     "costPerPurchaseUSD": 6.14,
+     "conversations": 51,
+     "costPerConversationUSD": 0.24,
+     "landingPageViews": 1,
+     "costPerLpvUSD": 12.29,
+     "impressions": 9628,
+     "ctrPct": 5.6
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 13.93,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 37,
+     "costPerConversationUSD": 0.38,
+     "landingPageViews": null,
+     "costPerLpvUSD": null,
+     "impressions": 7963,
+     "ctrPct": 5.88
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 8.95,
+     "purchases": 6,
+     "costPerPurchaseUSD": 1.49,
+     "conversations": 33,
+     "costPerConversationUSD": 0.27,
+     "landingPageViews": 2,
+     "costPerLpvUSD": 4.47,
+     "impressions": 6067,
+     "ctrPct": 5.93
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 10.01,
+     "purchases": 10,
+     "costPerPurchaseUSD": 1.0,
+     "conversations": 45,
+     "costPerConversationUSD": 0.22,
+     "landingPageViews": null,
+     "costPerLpvUSD": null,
+     "impressions": 7440,
+     "ctrPct": 5.17
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 11.72,
+     "purchases": 0,
+     "costPerPurchaseUSD": null,
+     "conversations": 51,
+     "costPerConversationUSD": 0.23,
+     "landingPageViews": 1,
+     "costPerLpvUSD": 11.72,
+     "impressions": 6761,
+     "ctrPct": 4.41
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 6.77,
+     "purchases": 10,
+     "costPerPurchaseUSD": 0.68,
+     "conversations": 23,
+     "costPerConversationUSD": 0.29,
+     "landingPageViews": null,
+     "costPerLpvUSD": null,
+     "impressions": 3663,
+     "ctrPct": 5.32
+    }
+   ]
+  },
+  {
+   "id": "120251984286760723",
+   "name": "DM_SHOP_Traffic",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_TRAFFIC",
+   "dailyBudgetUSD": 20.0,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 21.59,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 20,
+     "costPerConversationUSD": 1.08,
+     "landingPageViews": 3137,
+     "costPerLpvUSD": 0.01,
+     "impressions": 62753,
+     "ctrPct": 7.62
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 22.88,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 28,
+     "costPerConversationUSD": 0.82,
+     "landingPageViews": 3274,
+     "costPerLpvUSD": 0.01,
+     "impressions": 66350,
+     "ctrPct": 7.29
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 18.27,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 18,
+     "costPerConversationUSD": 1.01,
+     "landingPageViews": 2755,
+     "costPerLpvUSD": 0.01,
+     "impressions": 56992,
+     "ctrPct": 7.13
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 20.34,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 24,
+     "costPerConversationUSD": 0.85,
+     "landingPageViews": 3115,
+     "costPerLpvUSD": 0.01,
+     "impressions": 69582,
+     "ctrPct": 6.56
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 16.5,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 16,
+     "costPerConversationUSD": 1.03,
+     "landingPageViews": 2441,
+     "costPerLpvUSD": 0.01,
+     "impressions": 56755,
+     "ctrPct": 6.4
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 21.95,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 31,
+     "costPerConversationUSD": 0.71,
+     "landingPageViews": 3148,
+     "costPerLpvUSD": 0.01,
+     "impressions": 74966,
+     "ctrPct": 6.35
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 10.22,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": 16,
+     "costPerConversationUSD": 0.64,
+     "landingPageViews": 1558,
+     "costPerLpvUSD": 0.01,
+     "impressions": 33912,
+     "ctrPct": 7.25
+    }
+   ]
+  },
+  {
+   "id": "120251796982170723",
+   "name": "Deniz Moda Shopify Campaign",
+   "status": null,
+   "objective": null,
+   "dailyBudgetUSD": null,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 0.0,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": null,
+     "costPerConversationUSD": null,
+     "landingPageViews": null,
+     "costPerLpvUSD": null,
+     "impressions": 0,
+     "ctrPct": 0.0
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 0.0,
+     "purchases": null,
+     "costPerPurchaseUSD": null,
+     "conversations": null,
+     "costPerConversationUSD": null,
+     "landingPageViews": null,
+     "costPerLpvUSD": null,
+     "impressions": 0,
+     "ctrPct": 0.0
+    }
+   ]
+  },
+  {
+   "id": "120252603769060723",
+   "name": "SEASON | FULL CATALOG",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_SALES",
+   "dailyBudgetUSD": 115.0,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 135.64,
+     "purchases": 10,
+     "costPerPurchaseUSD": 13.56,
+     "conversations": 96,
+     "costPerConversationUSD": 1.41,
+     "landingPageViews": 1905,
+     "costPerLpvUSD": 0.07,
+     "impressions": 43830,
+     "ctrPct": 7.5
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 92.66,
+     "purchases": 20,
+     "costPerPurchaseUSD": 4.63,
+     "conversations": 61,
+     "costPerConversationUSD": 1.52,
+     "landingPageViews": 1288,
+     "costPerLpvUSD": 0.07,
+     "impressions": 28371,
+     "ctrPct": 7.6
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 140.28,
+     "purchases": 20,
+     "costPerPurchaseUSD": 7.01,
+     "conversations": 68,
+     "costPerConversationUSD": 2.06,
+     "landingPageViews": 1167,
+     "costPerLpvUSD": 0.12,
+     "impressions": 40844,
+     "ctrPct": 5.57
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 106.99,
+     "purchases": 14,
+     "costPerPurchaseUSD": 7.64,
+     "conversations": 45,
+     "costPerConversationUSD": 2.38,
+     "landingPageViews": 1110,
+     "costPerLpvUSD": 0.1,
+     "impressions": 39512,
+     "ctrPct": 5.33
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 106.65,
+     "purchases": 26,
+     "costPerPurchaseUSD": 4.1,
+     "conversations": 58,
+     "costPerConversationUSD": 1.84,
+     "landingPageViews": 1073,
+     "costPerLpvUSD": 0.1,
+     "impressions": 42805,
+     "ctrPct": 4.87
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 125.11,
+     "purchases": 18,
+     "costPerPurchaseUSD": 6.95,
+     "conversations": 57,
+     "costPerConversationUSD": 2.19,
+     "landingPageViews": 900,
+     "costPerLpvUSD": 0.14,
+     "impressions": 37381,
+     "ctrPct": 11.24
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 61.87,
+     "purchases": 12,
+     "costPerPurchaseUSD": 5.16,
+     "conversations": 40,
+     "costPerConversationUSD": 1.55,
+     "landingPageViews": 441,
+     "costPerLpvUSD": 0.14,
+     "impressions": 18391,
+     "ctrPct": 8.24
+    }
+   ]
+  },
+  {
+   "id": "120252243297710723",
+   "name": "TIME | 24H – DAILY website advantage",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_SALES",
+   "dailyBudgetUSD": 75.0,
+   "daily": [
+    {
+     "date": "2026-10-04",
+     "spendUSD": 78.96,
+     "purchases": 16,
+     "costPerPurchaseUSD": 4.93,
+     "conversations": 90,
+     "costPerConversationUSD": 0.88,
+     "landingPageViews": 795,
+     "costPerLpvUSD": 0.1,
+     "impressions": 31623,
+     "ctrPct": 5.74
+    },
+    {
+     "date": "2026-10-05",
+     "spendUSD": 79.0,
+     "purchases": 6,
+     "costPerPurchaseUSD": 13.17,
+     "conversations": 77,
+     "costPerConversationUSD": 1.03,
+     "landingPageViews": 886,
+     "costPerLpvUSD": 0.09,
+     "impressions": 31669,
+     "ctrPct": 6.18
+    },
+    {
+     "date": "2026-10-06",
+     "spendUSD": 86.44,
+     "purchases": 26,
+     "costPerPurchaseUSD": 3.32,
+     "conversations": 154,
+     "costPerConversationUSD": 0.56,
+     "landingPageViews": 927,
+     "costPerLpvUSD": 0.09,
+     "impressions": 36252,
+     "ctrPct": 6.6
+    },
+    {
+     "date": "2026-10-07",
+     "spendUSD": 64.67,
+     "purchases": 26,
+     "costPerPurchaseUSD": 2.49,
+     "conversations": 163,
+     "costPerConversationUSD": 0.4,
+     "landingPageViews": 732,
+     "costPerLpvUSD": 0.09,
+     "impressions": 32198,
+     "ctrPct": 6.17
+    },
+    {
+     "date": "2026-10-08",
+     "spendUSD": 72.35,
+     "purchases": 20,
+     "costPerPurchaseUSD": 3.62,
+     "conversations": 149,
+     "costPerConversationUSD": 0.49,
+     "landingPageViews": 870,
+     "costPerLpvUSD": 0.08,
+     "impressions": 36660,
+     "ctrPct": 6.65
+    },
+    {
+     "date": "2026-10-09",
+     "spendUSD": 77.83,
+     "purchases": 22,
+     "costPerPurchaseUSD": 3.54,
+     "conversations": 199,
+     "costPerConversationUSD": 0.39,
+     "landingPageViews": 856,
+     "costPerLpvUSD": 0.09,
+     "impressions": 39259,
+     "ctrPct": 7.2
+    },
+    {
+     "date": "2026-10-10",
+     "spendUSD": 37.56,
+     "purchases": 10,
+     "costPerPurchaseUSD": 3.76,
+     "conversations": 115,
+     "costPerConversationUSD": 0.33,
+     "landingPageViews": 393,
+     "costPerLpvUSD": 0.1,
+     "impressions": 17974,
+     "ctrPct": 7.09
+    }
+   ]
+  }
+ ]
+}
