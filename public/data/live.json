@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-10T21:02:11.382630+00:00",
+ "syncedAt": "2026-10-10T21:32:30.990081+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -715,17 +715,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-04",
    "firstOrderDate": "2026-10-04",
-   "lastOrderDate": "2026-10-10",
-   "orders": 31,
-   "units": 34,
-   "revenue": 2652000,
+   "lastOrderDate": "2026-10-11",
+   "orders": 32,
+   "units": 35,
+   "revenue": 2732000,
    "delivered": 18,
    "returned": 0,
-   "unitsBoughtFromSupplier": 33,
+   "unitsBoughtFromSupplier": 34,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 4.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 4.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1111,7 +1111,7 @@
    "revenue": 2244000,
    "delivered": 13,
    "returned": 0,
-   "unitsBoughtFromSupplier": 29,
+   "unitsBoughtFromSupplier": 30,
    "returnedStock": 0,
    "unitPrice": 78000.0,
    "orderVelocity7d": 2.0,
@@ -13125,6 +13125,11 @@
      4,
      4,
      320000
+    ],
+    "2026-10-11": [
+     1,
+     1,
+     80000
     ]
    },
    "7378": {
@@ -26574,10 +26579,30 @@
    "2026-10-07": 43,
    "2026-10-08": 44,
    "2026-10-09": 30,
-   "2026-10-10": 53
+   "2026-10-10": 53,
+   "2026-10-11": 1
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33210",
+   "d": "2026-10-11",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33209",
    "d": "2026-10-10",
