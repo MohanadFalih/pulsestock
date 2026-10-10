@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-10T18:02:19.137327+00:00",
+ "syncedAt": "2026-10-10T18:31:06.328272+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1761,7 +1761,7 @@
    "revenue": 486000,
    "delivered": 3,
    "returned": 1,
-   "unitsBoughtFromSupplier": 4,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 1,
    "unitPrice": 99000.0,
    "orderVelocity7d": 0.29,
@@ -1995,7 +1995,7 @@
    "revenue": 6436400,
    "delivered": 78,
    "returned": 7,
-   "unitsBoughtFromSupplier": 83,
+   "unitsBoughtFromSupplier": 84,
    "returnedStock": 5,
    "unitPrice": 76000.0,
    "orderVelocity7d": 2.0,
@@ -2015,17 +2015,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-17",
    "firstOrderDate": "2026-09-18",
-   "lastOrderDate": "2026-10-09",
-   "orders": 30,
-   "units": 32,
-   "revenue": 2991700,
+   "lastOrderDate": "2026-10-10",
+   "orders": 31,
+   "units": 33,
+   "revenue": 3089700,
    "delivered": 31,
    "returned": 7,
    "unitsBoughtFromSupplier": 29,
    "returnedStock": 5,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 1.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3108,15 +3108,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-10-10",
-   "orders": 95,
-   "units": 98,
-   "revenue": 10505950,
+   "orders": 96,
+   "units": 99,
+   "revenue": 10621950,
    "delivered": 93,
    "returned": 18,
-   "unitsBoughtFromSupplier": 90,
+   "unitsBoughtFromSupplier": 91,
    "returnedStock": 11,
    "unitPrice": 116000.0,
-   "orderVelocity7d": 1.57,
+   "orderVelocity7d": 1.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -14238,6 +14238,11 @@
      1,
      1,
      98000
+    ],
+    "2026-10-10": [
+     1,
+     1,
+     98000
     ]
    },
    "7327": {
@@ -15068,9 +15073,9 @@
      116000
     ],
     "2026-10-10": [
-     1,
-     1,
-     116000
+     2,
+     2,
+     232000
     ]
    },
    "7284": {
@@ -26655,10 +26660,46 @@
    "2026-10-07": 43,
    "2026-10-08": 44,
    "2026-10-09": 30,
-   "2026-10-10": 41
+   "2026-10-10": 43
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33199",
+   "d": "2026-10-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-siyah-44",
+     "qty": 1,
+     "price": 116000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33198",
+   "d": "2026-10-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8002-navy-1-4",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33197",
    "d": "2026-10-10",
