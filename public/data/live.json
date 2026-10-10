@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-10T06:32:36.420839+00:00",
+ "syncedAt": "2026-10-10T07:00:16.223795+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -643,7 +643,7 @@
    "revenue": 2412000,
    "delivered": 6,
    "returned": 0,
-   "unitsBoughtFromSupplier": 29,
+   "unitsBoughtFromSupplier": 30,
    "returnedStock": 0,
    "unitPrice": 80000.0,
    "orderVelocity7d": 4.0,
@@ -1033,7 +1033,7 @@
    "revenue": 2088000,
    "delivered": 11,
    "returned": 0,
-   "unitsBoughtFromSupplier": 27,
+   "unitsBoughtFromSupplier": 28,
    "returnedStock": 0,
    "unitPrice": 78000.0,
    "orderVelocity7d": 2.71,
@@ -1917,7 +1917,7 @@
    "revenue": 6284400,
    "delivered": 78,
    "returned": 5,
-   "unitsBoughtFromSupplier": 82,
+   "unitsBoughtFromSupplier": 83,
    "returnedStock": 3,
    "unitPrice": 76000.0,
    "orderVelocity7d": 1.71,
@@ -2379,17 +2379,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-07",
    "firstOrderDate": "2026-09-13",
-   "lastOrderDate": "2026-10-08",
-   "orders": 9,
-   "units": 9,
-   "revenue": 638000,
+   "lastOrderDate": "2026-10-10",
+   "orders": 10,
+   "units": 10,
+   "revenue": 712000,
    "delivered": 7,
    "returned": 0,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14364,6 +14364,11 @@
      2,
      2,
      148000
+    ],
+    "2026-10-10": [
+     1,
+     1,
+     74000
     ]
    },
    "7309": {
@@ -26175,10 +26180,29 @@
    "2026-10-07": 43,
    "2026-10-08": 44,
    "2026-10-09": 30,
-   "2026-10-10": 5
+   "2026-10-10": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33154",
+   "d": "2026-10-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1899-navy-1-52",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33153",
    "d": "2026-10-10",
