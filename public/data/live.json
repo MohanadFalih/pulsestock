@@ -1,9 +1,61 @@
 {
- "syncedAt": "2026-10-10T15:32:14.714425+00:00",
+ "syncedAt": "2026-10-10T16:02:24.727559+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7406,
+   "name": "H-1928",
+   "sku": "H-1928",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-10",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 72000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 7405,
+   "name": "T-8006",
+   "sku": "T-8006",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-10",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 92000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7404,
    "name": "T-8035",
@@ -12147,25 +12199,25 @@
    }
   },
   {
-   "odooId": 4738,
-   "name": "T-6798",
-   "sku": "T-6798",
+   "odooId": 4749,
+   "name": "L-1000",
+   "sku": "L-1000",
    "category": "All",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-27",
-   "orders": 22,
-   "units": 22,
-   "revenue": 1096000,
-   "delivered": 21,
-   "returned": 4,
-   "unitsBoughtFromSupplier": 8,
-   "returnedStock": 1,
+   "lastOrderDate": "2026-09-28",
+   "orders": 121,
+   "units": 132,
+   "revenue": 5340000,
+   "delivered": 130,
+   "returned": 21,
+   "unitsBoughtFromSupplier": 64,
+   "returnedStock": 13,
    "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 13,
+   "daysSinceLastOrder": 12,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12225,25 +12277,25 @@
    }
   },
   {
-   "odooId": 4749,
-   "name": "L-1000",
-   "sku": "L-1000",
+   "odooId": 4738,
+   "name": "T-6798",
+   "sku": "T-6798",
    "category": "All",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-28",
-   "orders": 121,
-   "units": 132,
-   "revenue": 5340000,
-   "delivered": 130,
-   "returned": 21,
-   "unitsBoughtFromSupplier": 64,
-   "returnedStock": 13,
+   "lastOrderDate": "2026-09-27",
+   "orders": 22,
+   "units": 22,
+   "revenue": 1096000,
+   "delivered": 21,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 8,
+   "returnedStock": 1,
    "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "daysSinceLastOrder": 13,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -25793,8 +25845,18 @@
      41000
     ]
    },
-   "4738": {
-    "2026-09-27": [
+   "4749": {
+    "2026-07-16": [
+     1,
+     2,
+     110000
+    ],
+    "2026-09-06": [
+     1,
+     1,
+     55000
+    ],
+    "2026-09-28": [
      1,
      1,
      41000
@@ -25829,18 +25891,8 @@
      72000
     ]
    },
-   "4749": {
-    "2026-07-16": [
-     1,
-     2,
-     110000
-    ],
-    "2026-09-06": [
-     1,
-     1,
-     55000
-    ],
-    "2026-09-28": [
+   "4738": {
+    "2026-09-27": [
      1,
      1,
      41000
@@ -26545,10 +26597,29 @@
    "2026-10-07": 43,
    "2026-10-08": 44,
    "2026-10-09": 30,
-   "2026-10-10": 29
+   "2026-10-10": 30
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33185",
+   "d": "2026-10-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33184",
    "d": "2026-10-10",
@@ -169444,6 +169515,13 @@
    "created": "2026-10-09"
   },
   {
+   "sku": "H-1928",
+   "model": "H-1928",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
    "sku": "H-825",
    "model": "H-825",
    "qty": 1,
@@ -188636,6 +188714,146 @@
    "qty": 0,
    "cost": 0,
    "created": "2026-09-26"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
+  },
+  {
+   "sku": "T-8006",
+   "model": "T-8006",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-10"
   },
   {
    "sku": "T-8007",
