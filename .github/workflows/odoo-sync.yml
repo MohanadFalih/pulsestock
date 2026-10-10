@@ -16,7 +16,7 @@ on:
   workflow_dispatch:            # "Run workflow" button in the Actions tab
 
 permissions:
-  contents: write               # needed to push the updated live.json
+  contents: write               # needed to push the updated data files
 
 jobs:
   sync:
@@ -39,14 +39,20 @@ jobs:
       - name: Build ad brief (Odoo + Meta, compact per-SKU)
         run: python3 scripts/ad_brief.py
 
+      - name: Fetch Meta campaigns (daily breakdown, last 7 days + today)
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+        run: python3 scripts/meta_campaigns.py
+
       - name: Commit fresh data (if changed)
         run: |
-          if git diff --quiet public/data/live.json public/data/ad-brief.json; then
+          if git diff --quiet public/data/live.json public/data/ad-brief.json public/data/campaigns.json; then
             echo "No data changes — skipping commit"
             exit 0
           fi
           git config user.name "MohanadFalih"
           git config user.email "MohanadFalih@users.noreply.github.com"
-          git add public/data/live.json public/data/ad-brief.json
+          git add public/data/live.json public/data/ad-brief.json public/data/campaigns.json
           git commit -m "data: odoo sync $(date -u +%Y-%m-%d\ %H:%M\ UTC)"
           git push
