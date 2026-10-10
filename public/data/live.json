@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-10T06:02:20.338249+00:00",
+ "syncedAt": "2026-10-10T06:32:36.420839+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -643,7 +643,7 @@
    "revenue": 2412000,
    "delivered": 6,
    "returned": 0,
-   "unitsBoughtFromSupplier": 30,
+   "unitsBoughtFromSupplier": 29,
    "returnedStock": 0,
    "unitPrice": 80000.0,
    "orderVelocity7d": 4.0,
@@ -1027,17 +1027,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-10-08",
-   "orders": 26,
-   "units": 27,
-   "revenue": 2010000,
+   "lastOrderDate": "2026-10-10",
+   "orders": 27,
+   "units": 28,
+   "revenue": 2088000,
    "delivered": 11,
    "returned": 0,
    "unitsBoughtFromSupplier": 27,
    "returnedStock": 0,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 2.57,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 2.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1917,7 +1917,7 @@
    "revenue": 6284400,
    "delivered": 78,
    "returned": 5,
-   "unitsBoughtFromSupplier": 83,
+   "unitsBoughtFromSupplier": 82,
    "returnedStock": 3,
    "unitPrice": 76000.0,
    "orderVelocity7d": 1.71,
@@ -13032,6 +13032,11 @@
      2,
      2,
      156000
+    ],
+    "2026-10-10": [
+     1,
+     1,
+     78000
     ]
    },
    "7362": {
@@ -26170,10 +26175,48 @@
    "2026-10-07": 43,
    "2026-10-08": 44,
    "2026-10-09": 30,
-   "2026-10-10": 3
+   "2026-10-10": 5
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33153",
+   "d": "2026-10-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33152",
+   "d": "2026-10-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33151",
    "d": "2026-10-10",
@@ -26204,14 +26247,6 @@
      "sku": "H-1908-siyah-42",
      "qty": 1,
      "price": 76000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    },
-    {
-     "sku": "H-1920",
-     "qty": 1,
-     "price": 80000,
      "discPct": 0,
      "del": 0,
      "route": "turkey"
