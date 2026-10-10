@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-10T14:01:34.552105+00:00",
+ "syncedAt": "2026-10-10T14:32:19.448536+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7321,8 +7321,8 @@
    "firstOrderDate": "2026-06-14",
    "lastOrderDate": "2026-10-10",
    "orders": 110,
-   "units": 111,
-   "revenue": 10193000,
+   "units": 112,
+   "revenue": 10272000,
    "delivered": 111,
    "returned": 46,
    "unitsBoughtFromSupplier": 73,
@@ -12095,6 +12095,58 @@
    }
   },
   {
+   "odooId": 4747,
+   "name": "L-5015",
+   "sku": "L-5015",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2026-01-12",
+   "lastOrderDate": "2026-09-21",
+   "orders": 11,
+   "units": 14,
+   "revenue": 419000,
+   "delivered": 14,
+   "returned": 6,
+   "unitsBoughtFromSupplier": 5,
+   "returnedStock": 4,
+   "unitPrice": 36000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 19,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4738,
+   "name": "T-6798",
+   "sku": "T-6798",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-27",
+   "orders": 22,
+   "units": 22,
+   "revenue": 1096000,
+   "delivered": 21,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 8,
+   "returnedStock": 1,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 13,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4749,
    "name": "L-1000",
    "sku": "L-1000",
@@ -12140,58 +12192,6 @@
    "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 16,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4738,
-   "name": "T-6798",
-   "sku": "T-6798",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-27",
-   "orders": 22,
-   "units": 22,
-   "revenue": 1096000,
-   "delivered": 21,
-   "returned": 4,
-   "unitsBoughtFromSupplier": 8,
-   "returnedStock": 1,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 13,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4747,
-   "name": "L-5015",
-   "sku": "L-5015",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2026-01-12",
-   "lastOrderDate": "2026-09-21",
-   "orders": 11,
-   "units": 14,
-   "revenue": 419000,
-   "delivered": 14,
-   "returned": 6,
-   "unitsBoughtFromSupplier": 5,
-   "returnedStock": 4,
-   "unitPrice": 36000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 19,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -25760,6 +25760,30 @@
      49000
     ]
    },
+   "4747": {
+    "2026-09-12": [
+     1,
+     1,
+     36000
+    ],
+    "2026-09-13": [
+     2,
+     2,
+     72000
+    ],
+    "2026-09-21": [
+     1,
+     2,
+     72000
+    ]
+   },
+   "4738": {
+    "2026-09-27": [
+     1,
+     1,
+     41000
+    ]
+   },
    "4749": {
     "2026-07-16": [
      1,
@@ -25782,30 +25806,6 @@
      1,
      1,
      41000
-    ]
-   },
-   "4738": {
-    "2026-09-27": [
-     1,
-     1,
-     41000
-    ]
-   },
-   "4747": {
-    "2026-09-12": [
-     1,
-     1,
-     36000
-    ],
-    "2026-09-13": [
-     2,
-     2,
-     72000
-    ],
-    "2026-09-21": [
-     1,
-     2,
-     72000
     ]
    },
    "4748": {
