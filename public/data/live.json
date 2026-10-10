@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-10T07:48:05.208565+00:00",
+ "syncedAt": "2026-10-10T08:02:40.131548+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5868,9 +5868,9 @@
    "units": 268,
    "revenue": 21168050,
    "delivered": 267,
-   "returned": 88,
+   "returned": 89,
    "unitsBoughtFromSupplier": 185,
-   "returnedStock": 11,
+   "returnedStock": 12,
    "unitPrice": 79000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 2,
@@ -12259,17 +12259,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-10-04",
+   "lastOrderDate": "2026-10-10",
    "orders": 187,
    "units": 200,
    "revenue": 10378000,
    "delivered": 196,
    "returned": 36,
    "unitsBoughtFromSupplier": 174,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 59000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 6,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12720,9 +12720,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1772,
-  "stockValue": 50299286,
-  "stockVariants": 1404
+  "stockUnits": 1774,
+  "stockValue": 50367332,
+  "stockVariants": 1405
  },
  "daily": {
   "days": 90,
@@ -25616,6 +25616,11 @@
      1,
      1,
      59000
+    ],
+    "2026-10-10": [
+     1,
+     0,
+     0
     ]
    },
    "4640": {
@@ -26095,7 +26100,7 @@
    ],
    "2026-10-10": [
     0,
-    4
+    5
    ]
   },
   "orders": {
@@ -29479,7 +29484,7 @@
      "qty": 1,
      "price": 79000,
      "discPct": 11.9,
-     "del": 1,
+     "del": 0,
      "ret": 1
     }
    ],
@@ -30477,6 +30482,13 @@
      "price": 59000,
      "discPct": 100.0,
      "del": 1
+    },
+    {
+     "sku": "L-1907",
+     "qty": 0,
+     "price": 59000,
+     "discPct": 100.0,
+     "del": -1
     }
    ],
    "src": "Facebook"
@@ -179527,6 +179539,13 @@
    "qty": 1,
    "cost": 28493,
    "created": "2026-01-31"
+  },
+  {
+   "sku": "L-1907",
+   "model": "L-1907",
+   "qty": 1,
+   "cost": 26712,
+   "created": "2025-05-20"
   },
   {
    "sku": "L-1907",
