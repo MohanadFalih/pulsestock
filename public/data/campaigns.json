@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-11T10:32:56.850847+00:00",
- "metaSyncedAt": "2026-10-11T10:32:56.850847+00:00",
+ "syncedAt": "2026-10-11T11:12:58.851808+00:00",
+ "metaSyncedAt": "2026-10-11T11:12:58.851808+00:00",
  "window": {
   "since": "2026-10-05",
   "until": "2026-10-11",
@@ -8,7 +8,7 @@
  },
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
- "note": "One entry per ACTIVE campaign; 'daily' holds one row per date with delivery (missing date = zero delivery). null means the metric family does not apply to this campaign objective (purchases=null for traffic, conversations=null for catalog sales, ...). A real zero stays 0. error!=null means the Meta fetch failed (expired/invalid token) — data may be stale.",
+ "note": "One entry per ACTIVE campaign; 'daily' holds one row per date with delivery (missing date = zero delivery). null means the metric family does not apply to this campaign objective (purchases=null for traffic, conversations=null for catalog sales, ...). A real zero stays 0. frequency = impressions/reach that day (null when reach=0). error!=null means the Meta fetch failed (expired/invalid token) — data may be stale.",
  "error": null,
  "campaigns": [
   {
@@ -28,7 +28,9 @@
      "landingPageViews": 12,
      "costPerLpvUSD": 9.52,
      "impressions": 65730,
-     "ctrPct": 4.53
+     "ctrPct": 4.53,
+     "reach": 40303,
+     "frequency": 1.63
     },
     {
      "date": "2026-10-06",
@@ -40,7 +42,9 @@
      "landingPageViews": 1,
      "costPerLpvUSD": 125.43,
      "impressions": 59960,
-     "ctrPct": 4.8
+     "ctrPct": 4.8,
+     "reach": 35796,
+     "frequency": 1.68
     },
     {
      "date": "2026-10-07",
@@ -52,7 +56,9 @@
      "landingPageViews": 3,
      "costPerLpvUSD": 26.77,
      "impressions": 46315,
-     "ctrPct": 4.51
+     "ctrPct": 4.51,
+     "reach": 31096,
+     "frequency": 1.49
     },
     {
      "date": "2026-10-08",
@@ -64,7 +70,9 @@
      "landingPageViews": 3,
      "costPerLpvUSD": 27.53,
      "impressions": 51128,
-     "ctrPct": 4.47
+     "ctrPct": 4.47,
+     "reach": 35895,
+     "frequency": 1.42
     },
     {
      "date": "2026-10-09",
@@ -76,7 +84,9 @@
      "landingPageViews": 8,
      "costPerLpvUSD": 12.69,
      "impressions": 65277,
-     "ctrPct": 4.18
+     "ctrPct": 4.18,
+     "reach": 45709,
+     "frequency": 1.43
     },
     {
      "date": "2026-10-10",
@@ -87,20 +97,24 @@
      "costPerConversationUSD": 0.38,
      "landingPageViews": 2,
      "costPerLpvUSD": 48.54,
-     "impressions": 55119,
-     "ctrPct": 4.35
+     "impressions": 55136,
+     "ctrPct": 4.35,
+     "reach": 39022,
+     "frequency": 1.41
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 47.75,
+     "spendUSD": 52.36,
      "purchases": 2,
-     "costPerPurchaseUSD": 23.88,
-     "conversations": 123,
+     "costPerPurchaseUSD": 26.18,
+     "conversations": 134,
      "costPerConversationUSD": 0.39,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 30467,
-     "ctrPct": 4.07
+     "impressions": 33074,
+     "ctrPct": 4.06,
+     "reach": 26793,
+     "frequency": 1.23
     }
    ]
   },
@@ -121,7 +135,9 @@
      "landingPageViews": 6,
      "costPerLpvUSD": 2.59,
      "impressions": 8252,
-     "ctrPct": 15.91
+     "ctrPct": 15.91,
+     "reach": 5115,
+     "frequency": 1.61
     },
     {
      "date": "2026-10-06",
@@ -133,7 +149,9 @@
      "landingPageViews": 11,
      "costPerLpvUSD": 1.32,
      "impressions": 7961,
-     "ctrPct": 14.07
+     "ctrPct": 14.07,
+     "reach": 5098,
+     "frequency": 1.56
     },
     {
      "date": "2026-10-07",
@@ -145,7 +163,9 @@
      "landingPageViews": 6,
      "costPerLpvUSD": 2.44,
      "impressions": 10535,
-     "ctrPct": 11.54
+     "ctrPct": 11.54,
+     "reach": 6947,
+     "frequency": 1.52
     },
     {
      "date": "2026-10-08",
@@ -157,7 +177,9 @@
      "landingPageViews": 9,
      "costPerLpvUSD": 1.41,
      "impressions": 9161,
-     "ctrPct": 13.18
+     "ctrPct": 13.18,
+     "reach": 6098,
+     "frequency": 1.5
     },
     {
      "date": "2026-10-09",
@@ -169,7 +191,9 @@
      "landingPageViews": 6,
      "costPerLpvUSD": 2.74,
      "impressions": 8628,
-     "ctrPct": 15.91
+     "ctrPct": 15.91,
+     "reach": 5636,
+     "frequency": 1.53
     },
     {
      "date": "2026-10-10",
@@ -180,20 +204,24 @@
      "costPerConversationUSD": 0.32,
      "landingPageViews": 6,
      "costPerLpvUSD": 2.47,
-     "impressions": 8836,
-     "ctrPct": 14.59
+     "impressions": 8841,
+     "ctrPct": 14.59,
+     "reach": 5912,
+     "frequency": 1.5
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 5.91,
+     "spendUSD": 6.65,
      "purchases": 0,
      "costPerPurchaseUSD": null,
-     "conversations": 22,
-     "costPerConversationUSD": 0.27,
+     "conversations": 24,
+     "costPerConversationUSD": 0.28,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 3355,
-     "ctrPct": 13.35
+     "impressions": 3829,
+     "ctrPct": 13.37,
+     "reach": 2801,
+     "frequency": 1.37
     }
    ]
   },
@@ -214,7 +242,9 @@
      "landingPageViews": 262,
      "costPerLpvUSD": 0.08,
      "impressions": 6175,
-     "ctrPct": 6.57
+     "ctrPct": 6.57,
+     "reach": 3613,
+     "frequency": 1.71
     },
     {
      "date": "2026-10-06",
@@ -226,7 +256,9 @@
      "landingPageViews": 262,
      "costPerLpvUSD": 0.07,
      "impressions": 5653,
-     "ctrPct": 7.27
+     "ctrPct": 7.27,
+     "reach": 3655,
+     "frequency": 1.55
     },
     {
      "date": "2026-10-07",
@@ -238,7 +270,9 @@
      "landingPageViews": 215,
      "costPerLpvUSD": 0.07,
      "impressions": 5812,
-     "ctrPct": 6.38
+     "ctrPct": 6.38,
+     "reach": 3510,
+     "frequency": 1.66
     },
     {
      "date": "2026-10-08",
@@ -250,7 +284,9 @@
      "landingPageViews": 236,
      "costPerLpvUSD": 0.07,
      "impressions": 6436,
-     "ctrPct": 5.8
+     "ctrPct": 5.8,
+     "reach": 4076,
+     "frequency": 1.58
     },
     {
      "date": "2026-10-09",
@@ -261,8 +297,10 @@
      "costPerConversationUSD": 2.14,
      "landingPageViews": 199,
      "costPerLpvUSD": 0.1,
-     "impressions": 6192,
-     "ctrPct": 10.51
+     "impressions": 6193,
+     "ctrPct": 10.53,
+     "reach": 4349,
+     "frequency": 1.42
     },
     {
      "date": "2026-10-10",
@@ -274,19 +312,23 @@
      "landingPageViews": 189,
      "costPerLpvUSD": 0.08,
      "impressions": 5269,
-     "ctrPct": 8.2
+     "ctrPct": 8.2,
+     "reach": 3635,
+     "frequency": 1.45
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 8.32,
+     "spendUSD": 9.17,
      "purchases": 0,
      "costPerPurchaseUSD": null,
      "conversations": 3,
-     "costPerConversationUSD": 2.77,
-     "landingPageViews": 105,
+     "costPerConversationUSD": 3.06,
+     "landingPageViews": 115,
      "costPerLpvUSD": 0.08,
-     "impressions": 2472,
-     "ctrPct": 8.54
+     "impressions": 2744,
+     "ctrPct": 8.27,
+     "reach": 2026,
+     "frequency": 1.35
     }
    ]
   },
@@ -307,7 +349,9 @@
      "landingPageViews": 1,
      "costPerLpvUSD": 12.29,
      "impressions": 9628,
-     "ctrPct": 5.6
+     "ctrPct": 5.6,
+     "reach": 7364,
+     "frequency": 1.31
     },
     {
      "date": "2026-10-06",
@@ -319,7 +363,9 @@
      "landingPageViews": null,
      "costPerLpvUSD": null,
      "impressions": 7963,
-     "ctrPct": 5.88
+     "ctrPct": 5.88,
+     "reach": 6361,
+     "frequency": 1.25
     },
     {
      "date": "2026-10-07",
@@ -331,7 +377,9 @@
      "landingPageViews": 2,
      "costPerLpvUSD": 4.47,
      "impressions": 6067,
-     "ctrPct": 5.93
+     "ctrPct": 5.93,
+     "reach": 4865,
+     "frequency": 1.25
     },
     {
      "date": "2026-10-08",
@@ -343,7 +391,9 @@
      "landingPageViews": null,
      "costPerLpvUSD": null,
      "impressions": 7440,
-     "ctrPct": 5.17
+     "ctrPct": 5.17,
+     "reach": 6226,
+     "frequency": 1.19
     },
     {
      "date": "2026-10-09",
@@ -355,7 +405,9 @@
      "landingPageViews": 1,
      "costPerLpvUSD": 11.75,
      "impressions": 6766,
-     "ctrPct": 4.4
+     "ctrPct": 4.4,
+     "reach": 5577,
+     "frequency": 1.21
     },
     {
      "date": "2026-10-10",
@@ -366,20 +418,24 @@
      "costPerConversationUSD": 0.3,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 5666,
-     "ctrPct": 5.17
+     "impressions": 5668,
+     "ctrPct": 5.17,
+     "reach": 4714,
+     "frequency": 1.2
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 6.2,
+     "spendUSD": 6.85,
      "purchases": 0,
      "costPerPurchaseUSD": null,
-     "conversations": 18,
-     "costPerConversationUSD": 0.34,
+     "conversations": 19,
+     "costPerConversationUSD": 0.36,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 3892,
-     "ctrPct": 4.27
+     "impressions": 4327,
+     "ctrPct": 4.16,
+     "reach": 3796,
+     "frequency": 1.14
     }
    ]
   },
@@ -400,7 +456,9 @@
      "landingPageViews": 3274,
      "costPerLpvUSD": 0.01,
      "impressions": 66350,
-     "ctrPct": 7.29
+     "ctrPct": 7.29,
+     "reach": 55252,
+     "frequency": 1.2
     },
     {
      "date": "2026-10-06",
@@ -412,7 +470,9 @@
      "landingPageViews": 2755,
      "costPerLpvUSD": 0.01,
      "impressions": 56992,
-     "ctrPct": 7.13
+     "ctrPct": 7.13,
+     "reach": 47445,
+     "frequency": 1.2
     },
     {
      "date": "2026-10-07",
@@ -424,7 +484,9 @@
      "landingPageViews": 3115,
      "costPerLpvUSD": 0.01,
      "impressions": 69582,
-     "ctrPct": 6.56
+     "ctrPct": 6.56,
+     "reach": 56124,
+     "frequency": 1.24
     },
     {
      "date": "2026-10-08",
@@ -436,7 +498,9 @@
      "landingPageViews": 2441,
      "costPerLpvUSD": 0.01,
      "impressions": 56755,
-     "ctrPct": 6.4
+     "ctrPct": 6.4,
+     "reach": 47309,
+     "frequency": 1.2
     },
     {
      "date": "2026-10-09",
@@ -448,7 +512,9 @@
      "landingPageViews": 3148,
      "costPerLpvUSD": 0.01,
      "impressions": 75041,
-     "ctrPct": 6.35
+     "ctrPct": 6.35,
+     "reach": 62694,
+     "frequency": 1.2
     },
     {
      "date": "2026-10-10",
@@ -459,20 +525,24 @@
      "costPerConversationUSD": 0.74,
      "landingPageViews": 2865,
      "costPerLpvUSD": 0.01,
-     "impressions": 64032,
-     "ctrPct": 7.14
+     "impressions": 64047,
+     "ctrPct": 7.14,
+     "reach": 52424,
+     "frequency": 1.22
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 9.52,
+     "spendUSD": 9.99,
      "purchases": null,
      "costPerPurchaseUSD": null,
      "conversations": 9,
-     "costPerConversationUSD": 1.06,
-     "landingPageViews": 1405,
+     "costPerConversationUSD": 1.11,
+     "landingPageViews": 1514,
      "costPerLpvUSD": 0.01,
-     "impressions": 29393,
-     "ctrPct": 7.22
+     "impressions": 30900,
+     "ctrPct": 7.23,
+     "reach": 27551,
+     "frequency": 1.12
     }
    ]
   },
@@ -493,7 +563,9 @@
      "landingPageViews": null,
      "costPerLpvUSD": null,
      "impressions": 0,
-     "ctrPct": 0.0
+     "ctrPct": 0.0,
+     "reach": 0,
+     "frequency": null
     }
    ]
   },
@@ -514,7 +586,9 @@
      "landingPageViews": 1288,
      "costPerLpvUSD": 0.07,
      "impressions": 28371,
-     "ctrPct": 7.6
+     "ctrPct": 7.6,
+     "reach": 14638,
+     "frequency": 1.94
     },
     {
      "date": "2026-10-06",
@@ -526,7 +600,9 @@
      "landingPageViews": 1167,
      "costPerLpvUSD": 0.12,
      "impressions": 40844,
-     "ctrPct": 5.57
+     "ctrPct": 5.57,
+     "reach": 20964,
+     "frequency": 1.95
     },
     {
      "date": "2026-10-07",
@@ -538,7 +614,9 @@
      "landingPageViews": 1110,
      "costPerLpvUSD": 0.1,
      "impressions": 39516,
-     "ctrPct": 5.34
+     "ctrPct": 5.34,
+     "reach": 21986,
+     "frequency": 1.8
     },
     {
      "date": "2026-10-08",
@@ -550,7 +628,9 @@
      "landingPageViews": 1073,
      "costPerLpvUSD": 0.1,
      "impressions": 42814,
-     "ctrPct": 4.87
+     "ctrPct": 4.87,
+     "reach": 26676,
+     "frequency": 1.6
     },
     {
      "date": "2026-10-09",
@@ -561,32 +641,38 @@
      "costPerConversationUSD": 2.2,
      "landingPageViews": 900,
      "costPerLpvUSD": 0.14,
-     "impressions": 37744,
-     "ctrPct": 11.55
+     "impressions": 37750,
+     "ctrPct": 11.56,
+     "reach": 25450,
+     "frequency": 1.48
     },
     {
      "date": "2026-10-10",
-     "spendUSD": 97.61,
+     "spendUSD": 97.63,
      "purchases": 26,
      "costPerPurchaseUSD": 3.75,
      "conversations": 67,
      "costPerConversationUSD": 1.46,
      "landingPageViews": 774,
      "costPerLpvUSD": 0.13,
-     "impressions": 30589,
-     "ctrPct": 10.11
+     "impressions": 30606,
+     "ctrPct": 10.12,
+     "reach": 19896,
+     "frequency": 1.54
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 50.03,
+     "spendUSD": 55.16,
      "purchases": 14,
-     "costPerPurchaseUSD": 3.57,
-     "conversations": 31,
-     "costPerConversationUSD": 1.61,
-     "landingPageViews": 353,
-     "costPerLpvUSD": 0.14,
-     "impressions": 13662,
-     "ctrPct": 6.96
+     "costPerPurchaseUSD": 3.94,
+     "conversations": 36,
+     "costPerConversationUSD": 1.53,
+     "landingPageViews": 372,
+     "costPerLpvUSD": 0.15,
+     "impressions": 14942,
+     "ctrPct": 7.28,
+     "reach": 10414,
+     "frequency": 1.43
     }
    ]
   },
@@ -607,7 +693,9 @@
      "landingPageViews": 886,
      "costPerLpvUSD": 0.09,
      "impressions": 31669,
-     "ctrPct": 6.18
+     "ctrPct": 6.18,
+     "reach": 17859,
+     "frequency": 1.77
     },
     {
      "date": "2026-10-06",
@@ -619,7 +707,9 @@
      "landingPageViews": 927,
      "costPerLpvUSD": 0.09,
      "impressions": 36252,
-     "ctrPct": 6.6
+     "ctrPct": 6.6,
+     "reach": 23397,
+     "frequency": 1.55
     },
     {
      "date": "2026-10-07",
@@ -631,7 +721,9 @@
      "landingPageViews": 732,
      "costPerLpvUSD": 0.09,
      "impressions": 32198,
-     "ctrPct": 6.17
+     "ctrPct": 6.17,
+     "reach": 23373,
+     "frequency": 1.38
     },
     {
      "date": "2026-10-08",
@@ -643,7 +735,9 @@
      "landingPageViews": 870,
      "costPerLpvUSD": 0.08,
      "impressions": 36660,
-     "ctrPct": 6.65
+     "ctrPct": 6.65,
+     "reach": 26729,
+     "frequency": 1.37
     },
     {
      "date": "2026-10-09",
@@ -654,8 +748,10 @@
      "costPerConversationUSD": 0.39,
      "landingPageViews": 856,
      "costPerLpvUSD": 0.09,
-     "impressions": 39342,
-     "ctrPct": 7.24
+     "impressions": 39344,
+     "ctrPct": 7.24,
+     "reach": 28842,
+     "frequency": 1.36
     },
     {
      "date": "2026-10-10",
@@ -666,20 +762,24 @@
      "costPerConversationUSD": 0.36,
      "landingPageViews": 729,
      "costPerLpvUSD": 0.09,
-     "impressions": 34920,
-     "ctrPct": 6.49
+     "impressions": 34926,
+     "ctrPct": 6.49,
+     "reach": 26072,
+     "frequency": 1.34
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 32.09,
-     "purchases": 12,
-     "costPerPurchaseUSD": 2.67,
-     "conversations": 91,
-     "costPerConversationUSD": 0.35,
-     "landingPageViews": 322,
+     "spendUSD": 34.7,
+     "purchases": 14,
+     "costPerPurchaseUSD": 2.48,
+     "conversations": 96,
+     "costPerConversationUSD": 0.36,
+     "landingPageViews": 357,
      "costPerLpvUSD": 0.1,
-     "impressions": 17863,
-     "ctrPct": 5.94
+     "impressions": 19212,
+     "ctrPct": 5.92,
+     "reach": 15719,
+     "frequency": 1.22
     }
    ]
   }
