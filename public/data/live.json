@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-11T19:02:28.564951+00:00",
+ "syncedAt": "2026-10-11T19:32:30.337455+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3108,15 +3108,15 @@
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
    "lastOrderDate": "2026-10-11",
-   "orders": 97,
-   "units": 100,
-   "revenue": 10737950,
+   "orders": 98,
+   "units": 101,
+   "revenue": 10853950,
    "delivered": 95,
    "returned": 18,
    "unitsBoughtFromSupplier": 92,
    "returnedStock": 11,
    "unitPrice": 116000.0,
-   "orderVelocity7d": 1.43,
+   "orderVelocity7d": 1.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -7319,17 +7319,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-06-14",
    "firstOrderDate": "2026-06-14",
-   "lastOrderDate": "2026-10-10",
-   "orders": 110,
-   "units": 112,
-   "revenue": 10272000,
+   "lastOrderDate": "2026-10-11",
+   "orders": 111,
+   "units": 113,
+   "revenue": 10351000,
    "delivered": 112,
    "returned": 46,
    "unitsBoughtFromSupplier": 73,
    "returnedStock": 7,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12563,25 +12563,25 @@
    }
   },
   {
-   "odooId": 4502,
-   "name": "H-1465",
-   "sku": "H-1465",
-   "category": "Takim (Tunik & Pantolon)",
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-15",
-   "lastOrderDate": "2026-10-07",
-   "orders": 2,
-   "units": 2,
-   "revenue": 67000,
-   "delivered": 2,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 1,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 4,
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 14,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12615,25 +12615,25 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
+   "odooId": 4502,
+   "name": "H-1465",
+   "sku": "H-1465",
+   "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 14,
+   "firstOrderDate": "2025-08-15",
+   "lastOrderDate": "2026-10-07",
+   "orders": 2,
+   "units": 2,
+   "revenue": 67000,
+   "delivered": 2,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 4,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15176,9 +15176,9 @@
      232000
     ],
     "2026-10-11": [
-     1,
-     1,
-     116000
+     2,
+     2,
+     232000
     ]
    },
    "7284": {
@@ -21964,6 +21964,11 @@
      1,
      1,
      79000
+    ],
+    "2026-10-11": [
+     1,
+     1,
+     79000
     ]
    },
    "7116": {
@@ -26128,11 +26133,11 @@
      49000
     ]
    },
-   "4502": {
-    "2026-10-07": [
+   "4628": {
+    "2026-09-27": [
      1,
      1,
-     39000
+     40000
     ]
    },
    "4537": {
@@ -26142,11 +26147,11 @@
      64000
     ]
    },
-   "4628": {
-    "2026-09-27": [
+   "4502": {
+    "2026-10-07": [
      1,
      1,
-     40000
+     39000
     ]
    },
    "4640": {
@@ -26704,10 +26709,44 @@
    "2026-10-08": 44,
    "2026-10-09": 30,
    "2026-10-10": 53,
-   "2026-10-11": 34
+   "2026-10-11": 36
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33247",
+   "d": "2026-10-11",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -32000,
+   "lines": [
+    {
+     "sku": "K-3111-اسودsiyah-44",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 40.5,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
+  {
+   "id": "S33246",
+   "d": "2026-10-11",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-haki-46",
+     "qty": 1,
+     "price": 116000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S33245",
    "d": "2026-10-11",
