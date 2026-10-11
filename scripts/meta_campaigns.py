@@ -5,6 +5,10 @@
 Fetches the Meta Marketing API directly from the GitHub Actions sync job
 (credentials via repo secrets META_ACCESS_TOKEN / META_AD_ACCOUNT_ID).
 
+v1.1 — additive only: each daily row now also carries "reach" and
+"frequency" (frequency = impressions / reach for that day, null when
+reach is 0). No existing field was renamed, removed, or retyped.
+
 Deliberately a SEPARATE file from ad-brief.json: stable URL, independent
 schema, zero risk to the existing morning reader that depends on the brief.
 
@@ -13,6 +17,7 @@ Null semantics (documented in the file itself):
     family does not apply to the campaign's objective AND had zero events
     (e.g. purchases=null for a traffic campaign). A real zero (a sales
     campaign with no purchases today) is reported as 0, not null.
+  - frequency is null when reach=0 that day.
   - A missing date inside a campaign's "daily" list means zero delivery
     that day.
   - campaigns=[] with error!=null means the Meta fetch failed — check the
@@ -46,7 +51,7 @@ def get_all(path, params):
     url = f"{BASE}/{path}?{urllib.parse.urlencode(params)}"
     rows = []
     while url:
-        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.1"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             payload = json.load(resp)
         if "error" in payload:
@@ -82,8 +87,9 @@ def main():
                  "with delivery (missing date = zero delivery). null means the "
                  "metric family does not apply to this campaign objective "
                  "(purchases=null for traffic, conversations=null for catalog "
-                 "sales, ...). A real zero stays 0. error!=null means the Meta "
-                 "fetch failed (expired/invalid token) — data may be stale."),
+                 "sales, ...). A real zero stays 0. frequency = impressions/reach "
+                 "that day (null when reach=0). error!=null means the Meta fetch "
+                 "failed (expired/invalid token) — data may be stale."),
         "error": None,
         "campaigns": [],
     }
@@ -104,7 +110,7 @@ def main():
             "time_increment": "1",
             "time_range": json.dumps({"since": since.isoformat(),
                                       "until": today.isoformat()}),
-            "fields": "campaign_id,campaign_name,spend,impressions,ctr,actions",
+            "fields": "campaign_id,campaign_name,spend,impressions,reach,ctr,actions",
             "limit": "500",
         })
     except Exception as exc:
@@ -139,6 +145,8 @@ def main():
         n_purch = action_sum(actions, lambda t: t in PURCHASE_TYPES)
         n_conv = action_sum(actions, lambda t: "messaging_conversation_started" in t)
         n_lpv = action_sum(actions, lambda t: t == "landing_page_view")
+        impressions = int(row.get("impressions") or 0)
+        reach = int(row.get("reach") or 0)
 
         def metric(count, objective_set):
             if count > 0 or obj in objective_set:
@@ -161,8 +169,10 @@ def main():
             "costPerConversationUSD": cost(n_conv) if convos is not None else None,
             "landingPageViews": lpv,
             "costPerLpvUSD": cost(n_lpv) if lpv is not None else None,
-            "impressions": int(row.get("impressions") or 0),
+            "impressions": impressions,
             "ctrPct": round(float(row.get("ctr") or 0), 2),
+            "reach": reach,
+            "frequency": round(impressions / reach, 2) if reach > 0 else None,
         })
 
     for camp in by_id.values():
