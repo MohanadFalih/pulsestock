@@ -9,6 +9,13 @@ v1.1 — additive only: each daily row now also carries "reach" and
 "frequency" (frequency = impressions / reach for that day, null when
 reach is 0). No existing field was renamed, removed, or retyped.
 
+v1.2 — additive only: also fetches AD-LEVEL insights for the same 7-day
+window and writes public/data/ads-7d.json (per-SKU, per-campaign spend and
+purchases). SKUs are extracted from ad names (pattern like H-1920); an ad
+mentioning several SKUs attributes its full numbers to each. campaigns.json
+output is byte-for-byte the same schema as v1.1 — the new fetch lives in its
+own try/except so a failure there can never break campaigns.json.
+
 Deliberately a SEPARATE file from ad-brief.json: stable URL, independent
 schema, zero risk to the existing morning reader that depends on the brief.
 
@@ -26,6 +33,7 @@ Null semantics (documented in the file itself):
 import datetime as dt
 import json
 import os
+import re
 import urllib.parse
 import urllib.request
 
@@ -179,6 +187,103 @@ def main():
         camp["daily"].sort(key=lambda d: d["date"] or "")
     out["campaigns"] = sorted(by_id.values(), key=lambda c: (c["name"] or ""))
     write(out)
+
+    # ---- v1.2: per-SKU 7-day ad-level file (independent — never breaks the
+    # campaigns.json output above, whatever happens here) -------------------
+    try:
+        build_ads7d(since, today, now)
+    except Exception as exc:
+        write_ads7d({"syncedAt": now, "metaSyncedAt": now,
+                     "window": {"since": since.isoformat(),
+                                "until": today.isoformat(), "days": 7},
+                     "tz": "dates are in the ad account timezone as returned by Meta",
+                     "currency": "USD",
+                     "note": ADS7D_NOTE,
+                     "error": f"meta ad-level fetch failed: {exc}",
+                     "skus": {}})
+
+
+SKU_RE = re.compile(r"([A-Za-z]{1,4}-\d{3,6})")
+
+ADS7D_NOTE = ("Per-SKU ad-level Meta performance over the 7-day window "
+              "(including today). SKUs are extracted from ad names "
+              "(e.g. 'H-1920'); an ad whose name mentions several SKUs "
+              "attributes its full spend/purchases to each of them. "
+              "purchases7d is null when zero (same convention as the 3-day "
+              "fields in ad-brief.json). error!=null means the ad-level "
+              "fetch failed — campaigns.json is unaffected.")
+
+
+def extract_skus(ad_name):
+    """All SKU-looking tokens in an ad name, uppercased, de-duplicated."""
+    if not ad_name:
+        return []
+    seen, out_list = set(), []
+    for m in SKU_RE.finditer(ad_name):
+        sku = m.group(1).upper()
+        if sku not in seen:
+            seen.add(sku)
+            out_list.append(sku)
+    return out_list
+
+
+def build_ads7d(since, today, now):
+    """Fetch ad-level 7d insights and write public/data/ads-7d.json."""
+    rows = get_all(f"act_{ACCOUNT}/insights", {
+        "level": "ad",
+        "time_range": json.dumps({"since": since.isoformat(),
+                                  "until": today.isoformat()}),
+        "fields": "ad_id,ad_name,campaign_name,spend,actions",
+        "limit": "500",
+    })
+    skus = {}
+    for row in rows:
+        ad_name = row.get("ad_name") or ""
+        cname = row.get("campaign_name") or None
+        try:
+            spend = float(row.get("spend") or 0)
+        except (TypeError, ValueError):
+            spend = 0.0
+        purch = int(action_sum(row.get("actions"),
+                               lambda t: t in PURCHASE_TYPES))
+        for sku in extract_skus(ad_name):
+            s = skus.setdefault(sku, {"spend": 0.0, "purch": 0, "campaigns": {}})
+            s["spend"] += spend
+            s["purch"] += purch
+            if cname:
+                c = s["campaigns"].setdefault(cname, {"spend": 0.0, "purch": 0})
+                c["spend"] += spend
+                c["purch"] += purch
+    out_skus = {}
+    for sku in sorted(skus):
+        s = skus[sku]
+        camps = {}
+        for cname in sorted(s["campaigns"]):
+            c = s["campaigns"][cname]
+            camps[cname] = {
+                "spend7dUSD": round(c["spend"], 2),
+                "purchases7d": int(c["purch"]) if c["purch"] > 0 else None,
+            }
+        out_skus[sku] = {
+            "spend7dUSD": round(s["spend"], 2),
+            "purchases7d": int(s["purch"]) if s["purch"] > 0 else None,
+            "campaigns": camps,
+        }
+    write_ads7d({"syncedAt": now, "metaSyncedAt": now,
+                 "window": {"since": since.isoformat(),
+                            "until": today.isoformat(), "days": 7},
+                 "tz": "dates are in the ad account timezone as returned by Meta",
+                 "currency": "USD",
+                 "note": ADS7D_NOTE,
+                 "error": None,
+                 "skus": out_skus})
+
+
+def write_ads7d(out):
+    path = os.path.join(DATA_DIR, "ads-7d.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    print(f"ads-7d.json: {len(out['skus'])} SKUs, error={out['error']}")
 
 
 def write(out):
