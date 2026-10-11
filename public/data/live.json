@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-11T20:32:50.750201+00:00",
+ "syncedAt": "2026-10-11T20:39:36.147714+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -221,17 +221,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-08",
    "firstOrderDate": "2026-10-08",
-   "lastOrderDate": "2026-10-08",
-   "orders": 1,
-   "units": 1,
-   "revenue": 99000,
+   "lastOrderDate": "2026-10-11",
+   "orders": 2,
+   "units": 2,
+   "revenue": 198000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1132,15 +1132,15 @@
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
    "lastOrderDate": "2026-10-11",
-   "orders": 31,
-   "units": 32,
-   "revenue": 2400000,
+   "orders": 32,
+   "units": 33,
+   "revenue": 2478000,
    "delivered": 13,
    "returned": 2,
    "unitsBoughtFromSupplier": 32,
    "returnedStock": 2,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 2.29,
+   "orderVelocity7d": 2.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -13058,6 +13058,11 @@
      1,
      1,
      99000
+    ],
+    "2026-10-11": [
+     1,
+     1,
+     99000
     ]
    },
    "7396": {
@@ -13400,9 +13405,9 @@
      234000
     ],
     "2026-10-11": [
-     2,
-     2,
-     156000
+     3,
+     3,
+     234000
     ]
    },
    "7362": {
@@ -26709,10 +26714,37 @@
    "2026-10-08": 44,
    "2026-10-09": 30,
    "2026-10-10": 53,
-   "2026-10-11": 39
+   "2026-10-11": 40
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33251",
+   "d": "2026-10-11",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "T-8023",
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33250",
    "d": "2026-10-11",
