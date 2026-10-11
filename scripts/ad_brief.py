@@ -9,6 +9,10 @@ resolved from campaigns.json (built by meta_campaigns.py in the same job).
 v1.2 adds ad identity per campaign entry: "adName" (string) when one ad of
 the campaign shows the SKU; when several ads of the same campaign show it,
 "adName" is null and "ads" lists {adName, spend3dUSD} per ad.
+v1.3 adds "spend7dUSD" and "purchases7d" per campaign entry — same logic as
+the 3-day fields but over a 7-day window, sourced from ads-7d.json (built by
+meta_campaigns.py from ad-level Meta insights, matched by SKU in ad name).
+null when no 7-day data exists for that SKU+campaign.
 No existing field was renamed, removed, or retyped.
 
 Runs right after odoo_sync.py inside the same GitHub Actions job, and its
@@ -53,6 +57,19 @@ def fetch_bridge():
         return None
 
 
+def load_ads7d():
+    """sku -> {campaign name -> {spend7dUSD, purchases7d}} from ads-7d.json
+    (built by meta_campaigns.py in the same job; previous run's file is fine)."""
+    try:
+        with open(os.path.join(DATA_DIR, "ads-7d.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        return {sku: (v or {}).get("campaigns") or {}
+                for sku, v in (data.get("skus") or {}).items()}
+    except Exception as exc:
+        print(f"ads-7d.json unavailable for 7d fields (continuing): {exc}")
+        return {}
+
+
 def _ad_name(ad):
     """Best-effort ad name from a bridge per-ad row (null if absent)."""
     for key in ("adName", "name", "ad_name"):
@@ -62,8 +79,9 @@ def _ad_name(ad):
     return None
 
 
-def build_campaigns(ads_list, objective_by_name):
-    """Aggregate the bridge's per-ad rows into per-campaign summary entries."""
+def build_campaigns(ads_list, objective_by_name, sku7d=None):
+    """Aggregate the bridge's per-ad rows into per-campaign summary entries.
+    sku7d: {campaign name -> {spend7dUSD, purchases7d}} for this SKU."""
     agg = {}
     for ad in ads_list or []:
         cname = ad.get("campaign")
@@ -95,6 +113,9 @@ def build_campaigns(ads_list, objective_by_name):
         else:
             item["adName"] = None                        # see "ads" instead
             item["ads"] = e["ads"]                       # [{adName, spend3dUSD}, ...]
+        seven = (sku7d or {}).get(cname) or {}
+        item["spend7dUSD"] = seven.get("spend7dUSD")     # null if no 7d data
+        item["purchases7d"] = seven.get("purchases7d")   # null if zero/none
         campaigns.append(item)
     return campaigns
 
@@ -103,6 +124,7 @@ def main():
     live = load_live()
     bridge = fetch_bridge()
     objective_by_name = load_campaign_objectives()
+    ads7d_by_sku = load_ads7d()
 
     ads_by_sku = {}
     meta_synced_at = None
@@ -118,7 +140,8 @@ def main():
                     "cpa3dUSD": ap.get("cpa"),
                     "health": ap.get("health"),
                     "adCount": ap.get("adCount"),
-                    "campaigns": build_campaigns(ap.get("ads"), objective_by_name),
+                    "campaigns": build_campaigns(ap.get("ads"), objective_by_name,
+                                                 ads7d_by_sku.get(sku)),
                 }
 
     items = []
@@ -153,7 +176,9 @@ def main():
                 "meta.campaigns[] lists the active campaigns behind that SKU "
                 "(objective=null means the campaign was not found in campaigns.json). "
                 "Per campaign entry: adName is the showing ad's name, or null when several ads "
-                "of that campaign show the SKU — then ads[] lists {adName, spend3dUSD} per ad.",
+                "of that campaign show the SKU — then ads[] lists {adName, spend3dUSD} per ad. "
+                "spend7dUSD/purchases7d are the 7-day-window equivalents of the 3-day fields "
+                "(from ad-level Meta insights, matched by SKU in ad name; null when no 7d data).",
         "products": items,
     }
 
