@@ -3,6 +3,11 @@
 merges Odoo lifecycle data (live.json, produced by odoo_sync.py minutes
 earlier) with live Meta ad performance from the Ads-Dashboard bridge.
 
+v1.1 — additive only: meta.campaigns[] lists every active campaign touching
+the SKU (campaignName, objective, spend3dUSD, purchases3d). Objectives are
+resolved from campaigns.json (built by meta_campaigns.py in the same job).
+No existing field was renamed, removed, or retyped.
+
 Runs right after odoo_sync.py inside the same GitHub Actions job, and its
 output is committed alongside live.json — so the raw GitHub URL always
 serves a fresh, single, small file for ad decisions.
@@ -21,10 +26,23 @@ def load_live():
         return json.load(f)
 
 
+def load_campaign_objectives():
+    """campaign name -> objective map from campaigns.json (previous/this run).
+    Missing file or parse error -> empty map (objective becomes null)."""
+    try:
+        with open(os.path.join(DATA_DIR, "campaigns.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        return {c.get("name"): c.get("objective")
+                for c in data.get("campaigns", []) if c.get("name")}
+    except Exception as exc:
+        print(f"campaigns.json unavailable for objectives (continuing): {exc}")
+        return {}
+
+
 def fetch_bridge():
     """Returns the bridge payload, or None if unreachable (brief still built)."""
     try:
-        req = urllib.request.Request(BRIDGE_URL, headers={"User-Agent": "pulsestock-brief/1.0"})
+        req = urllib.request.Request(BRIDGE_URL, headers={"User-Agent": "pulsestock-brief/1.1"})
         with urllib.request.urlopen(req, timeout=20) as resp:
             return json.load(resp)
     except Exception as exc:  # bridge offline/slow — keep Odoo-only brief
@@ -32,9 +50,38 @@ def fetch_bridge():
         return None
 
 
+def build_campaigns(ads_list, objective_by_name):
+    """Aggregate the bridge's per-ad rows into per-campaign summary entries."""
+    agg = {}
+    for ad in ads_list or []:
+        cname = ad.get("campaign")
+        if not cname:
+            continue
+        entry = agg.setdefault(cname, {"spend": 0.0, "purch": 0})
+        try:
+            entry["spend"] += float(ad.get("spent") or 0)
+        except (TypeError, ValueError):
+            pass
+        try:
+            entry["purch"] += int(ad.get("purchases") or 0)
+        except (TypeError, ValueError):
+            pass
+    campaigns = []
+    for cname in sorted(agg):
+        e = agg[cname]
+        campaigns.append({
+            "campaignName": cname,
+            "objective": objective_by_name.get(cname),   # null if unknown
+            "spend3dUSD": round(e["spend"], 2),
+            "purchases3d": e["purch"] if e["purch"] > 0 else None,
+        })
+    return campaigns
+
+
 def main():
     live = load_live()
     bridge = fetch_bridge()
+    objective_by_name = load_campaign_objectives()
 
     ads_by_sku = {}
     meta_synced_at = None
@@ -50,6 +97,7 @@ def main():
                     "cpa3dUSD": ap.get("cpa"),
                     "health": ap.get("health"),
                     "adCount": ap.get("adCount"),
+                    "campaigns": build_campaigns(ap.get("ads"), objective_by_name),
                 }
 
     items = []
@@ -80,15 +128,18 @@ def main():
         "metaSyncedAt": meta_synced_at,
         "tz": "Asia/Baghdad",
         "currency": "IQD",
-        "note": "meta=null means the Meta bridge detected no active ad for this SKU in its last-3-days window",
+        "note": "meta=null means the Meta bridge detected no active ad for this SKU in its last-3-days window. "
+                "meta.campaigns[] lists the active campaigns behind that SKU "
+                "(objective=null means the campaign was not found in campaigns.json).",
         "products": items,
     }
 
     out_path = os.path.join(DATA_DIR, "ad-brief.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(brief, f, ensure_ascii=False, separators=(",", ":"))
+    total_campaign_links = sum(len(m["campaigns"]) for m in ads_by_sku.values())
     print(f"ad-brief.json: {len(items)} products, {len(ads_by_sku)} SKUs with Meta data, "
-          f"metaSyncedAt={meta_synced_at}")
+          f"{total_campaign_links} campaign links, metaSyncedAt={meta_synced_at}")
 
 
 if __name__ == "__main__":
