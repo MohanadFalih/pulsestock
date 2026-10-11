@@ -3,9 +3,12 @@
 merges Odoo lifecycle data (live.json, produced by odoo_sync.py minutes
 earlier) with live Meta ad performance from the Ads-Dashboard bridge.
 
-v1.1 — additive only: meta.campaigns[] lists every active campaign touching
+v1.2 — additive only: meta.campaigns[] lists every active campaign touching
 the SKU (campaignName, objective, spend3dUSD, purchases3d). Objectives are
 resolved from campaigns.json (built by meta_campaigns.py in the same job).
+v1.2 adds ad identity per campaign entry: "adName" (string) when one ad of
+the campaign shows the SKU; when several ads of the same campaign show it,
+"adName" is null and "ads" lists {adName, spend3dUSD} per ad.
 No existing field was renamed, removed, or retyped.
 
 Runs right after odoo_sync.py inside the same GitHub Actions job, and its
@@ -50,6 +53,15 @@ def fetch_bridge():
         return None
 
 
+def _ad_name(ad):
+    """Best-effort ad name from a bridge per-ad row (null if absent)."""
+    for key in ("adName", "name", "ad_name"):
+        v = ad.get(key)
+        if isinstance(v, str) and v.strip():
+            return v.strip()
+    return None
+
+
 def build_campaigns(ads_list, objective_by_name):
     """Aggregate the bridge's per-ad rows into per-campaign summary entries."""
     agg = {}
@@ -57,24 +69,33 @@ def build_campaigns(ads_list, objective_by_name):
         cname = ad.get("campaign")
         if not cname:
             continue
-        entry = agg.setdefault(cname, {"spend": 0.0, "purch": 0})
+        entry = agg.setdefault(cname, {"spend": 0.0, "purch": 0, "ads": []})
+        spent = 0.0
         try:
-            entry["spend"] += float(ad.get("spent") or 0)
+            spent = float(ad.get("spent") or 0)
+            entry["spend"] += spent
         except (TypeError, ValueError):
             pass
         try:
             entry["purch"] += int(ad.get("purchases") or 0)
         except (TypeError, ValueError):
             pass
+        entry["ads"].append({"adName": _ad_name(ad), "spend3dUSD": round(spent, 2)})
     campaigns = []
     for cname in sorted(agg):
         e = agg[cname]
-        campaigns.append({
+        item = {
             "campaignName": cname,
             "objective": objective_by_name.get(cname),   # null if unknown
             "spend3dUSD": round(e["spend"], 2),
             "purchases3d": e["purch"] if e["purch"] > 0 else None,
-        })
+        }
+        if len(e["ads"]) == 1:
+            item["adName"] = e["ads"][0]["adName"]       # string or null
+        else:
+            item["adName"] = None                        # see "ads" instead
+            item["ads"] = e["ads"]                       # [{adName, spend3dUSD}, ...]
+        campaigns.append(item)
     return campaigns
 
 
@@ -130,7 +151,9 @@ def main():
         "currency": "IQD",
         "note": "meta=null means the Meta bridge detected no active ad for this SKU in its last-3-days window. "
                 "meta.campaigns[] lists the active campaigns behind that SKU "
-                "(objective=null means the campaign was not found in campaigns.json).",
+                "(objective=null means the campaign was not found in campaigns.json). "
+                "Per campaign entry: adName is the showing ad's name, or null when several ads "
+                "of that campaign show the SKU — then ads[] lists {adName, spend3dUSD} per ad.",
         "products": items,
     }
 
