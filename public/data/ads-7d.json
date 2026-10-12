@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-12T07:02:42.917178+00:00",
- "metaSyncedAt": "2026-10-12T07:02:42.917178+00:00",
+ "syncedAt": "2026-10-12T07:08:57.898747+00:00",
+ "metaSyncedAt": "2026-10-12T07:08:57.898747+00:00",
  "window": {
   "since": "2026-10-06",
   "until": "2026-10-12",
@@ -8,16 +8,16 @@
  },
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
- "note": "Per-SKU ad-level Meta performance over the 7-day window (including today). SKUs are extracted from ad names (e.g. 'H-1920'); an ad whose name mentions several SKUs attributes its full spend/purchases to each of them. purchases7d is null when zero (same convention as the 3-day fields in ad-brief.json) and counts the single action type 'purchase' only (Ads Manager Purchases column; offsite_conversion.* excluded — no double counting). error!=null means the ad-level fetch failed — campaigns.json is unaffected.",
+ "note": "Per-SKU ad-level Meta performance over the 7-day window (including today). SKUs are extracted from ad names (e.g. 'H-1920'); an ad whose name mentions several SKUs attributes its full spend/purchases to each of them. purchases7d is null when zero (same convention as the 3-day fields in ad-brief.json) and counts the single action type 'omni_purchase' (fallback 'purchase') — the Ads Manager Purchases column; offsite_conversion.* excluded, no double counting). error!=null means the ad-level fetch failed — campaigns.json is unaffected.",
  "error": null,
  "skus": {
   "H-1664": {
-   "spend7dUSD": 100.61,
-   "purchases7d": 8,
+   "spend7dUSD": 100.68,
+   "purchases7d": 16,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 100.61,
-     "purchases7d": 8
+     "spend7dUSD": 100.68,
+     "purchases7d": 16
     }
    }
   },
@@ -71,11 +71,11 @@
   },
   "H-1892": {
    "spend7dUSD": 6.34,
-   "purchases7d": 1,
+   "purchases7d": 3,
    "campaigns": {
     "25 AUG MINE": {
      "spend7dUSD": 6.34,
-     "purchases7d": 1
+     "purchases7d": 3
     }
    }
   },
@@ -90,60 +90,60 @@
    }
   },
   "H-1906": {
-   "spend7dUSD": 1.97,
+   "spend7dUSD": 2.0,
    "purchases7d": null,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 1.97,
+     "spend7dUSD": 2.0,
      "purchases7d": null
     }
    }
   },
   "H-1908": {
-   "spend7dUSD": 199.6,
-   "purchases7d": 15,
+   "spend7dUSD": 199.72,
+   "purchases7d": 21,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 37.74,
-     "purchases7d": 5
+     "spend7dUSD": 37.83,
+     "purchases7d": 7
     },
     "DM_SHOP_Traffic": {
      "spend7dUSD": 1.63,
      "purchases7d": null
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 160.23,
-     "purchases7d": 10
+     "spend7dUSD": 160.26,
+     "purchases7d": 14
     }
    }
   },
   "H-1909": {
-   "spend7dUSD": 12.22,
+   "spend7dUSD": 12.23,
    "purchases7d": null,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 12.22,
+     "spend7dUSD": 12.23,
      "purchases7d": null
     }
    }
   },
   "H-1910": {
-   "spend7dUSD": 88.94,
+   "spend7dUSD": 88.96,
    "purchases7d": 11,
    "campaigns": {
     "SEASON | FULL CATALOG": {
-     "spend7dUSD": 88.94,
+     "spend7dUSD": 88.96,
      "purchases7d": 11
     }
    }
   },
   "H-1911": {
-   "spend7dUSD": 22.8,
-   "purchases7d": 1,
+   "spend7dUSD": 22.82,
+   "purchases7d": 2,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 12.35,
-     "purchases7d": 1
+     "spend7dUSD": 12.37,
+     "purchases7d": 2
     },
     "DM_SHOP_Traffic": {
      "spend7dUSD": 10.45,
@@ -152,31 +152,31 @@
    }
   },
   "H-1912": {
-   "spend7dUSD": 1.35,
+   "spend7dUSD": 1.36,
    "purchases7d": 1,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 1.35,
+     "spend7dUSD": 1.36,
      "purchases7d": 1
     }
    }
   },
   "H-1914": {
-   "spend7dUSD": 4.51,
-   "purchases7d": null,
+   "spend7dUSD": 4.55,
+   "purchases7d": 1,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 4.51,
-     "purchases7d": null
+     "spend7dUSD": 4.55,
+     "purchases7d": 1
     }
    }
   },
   "H-1915": {
-   "spend7dUSD": 17.75,
+   "spend7dUSD": 17.78,
    "purchases7d": null,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 11.59,
+     "spend7dUSD": 11.62,
      "purchases7d": null
     },
     "TIME | 24H – DAILY website advantage": {
@@ -186,63 +186,63 @@
    }
   },
   "H-1916": {
-   "spend7dUSD": 103.26,
-   "purchases7d": 8,
+   "spend7dUSD": 103.42,
+   "purchases7d": 11,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 103.26,
-     "purchases7d": 8
+     "spend7dUSD": 103.42,
+     "purchases7d": 11
     }
    }
   },
   "H-1919": {
-   "spend7dUSD": 142.6,
-   "purchases7d": 33,
+   "spend7dUSD": 142.71,
+   "purchases7d": 67,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 68.11,
-     "purchases7d": 14
+     "spend7dUSD": 68.14,
+     "purchases7d": 29
     },
     "DM_SHOP_Traffic": {
-     "spend7dUSD": 3.45,
+     "spend7dUSD": 3.47,
      "purchases7d": null
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 71.04,
-     "purchases7d": 19
+     "spend7dUSD": 71.1,
+     "purchases7d": 38
     }
    }
   },
   "H-1920": {
-   "spend7dUSD": 139.27,
-   "purchases7d": 30,
+   "spend7dUSD": 139.38,
+   "purchases7d": 37,
    "campaigns": {
     "DM_SHOP_Traffic": {
-     "spend7dUSD": 11.38,
+     "spend7dUSD": 11.46,
      "purchases7d": null
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 127.89,
-     "purchases7d": 30
+     "spend7dUSD": 127.92,
+     "purchases7d": 37
     }
    }
   },
   "H-1925": {
-   "spend7dUSD": 12.37,
+   "spend7dUSD": 12.47,
    "purchases7d": null,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 12.37,
+     "spend7dUSD": 12.47,
      "purchases7d": null
     }
    }
   },
   "H-1926": {
-   "spend7dUSD": 0.27,
+   "spend7dUSD": 0.28,
    "purchases7d": null,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 0.27,
+     "spend7dUSD": 0.28,
      "purchases7d": null
     }
    }
@@ -289,11 +289,11 @@
   },
   "K-6647": {
    "spend7dUSD": 55.22,
-   "purchases7d": 8,
+   "purchases7d": 9,
    "campaigns": {
     "SEASON | FULL CATALOG": {
      "spend7dUSD": 55.22,
-     "purchases7d": 8
+     "purchases7d": 9
     }
    }
   },
@@ -308,31 +308,31 @@
    }
   },
   "K-6671": {
-   "spend7dUSD": 26.8,
+   "spend7dUSD": 26.83,
    "purchases7d": 3,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 26.8,
+     "spend7dUSD": 26.83,
      "purchases7d": 3
     }
    }
   },
   "K-6674": {
-   "spend7dUSD": 154.1,
-   "purchases7d": 10,
+   "spend7dUSD": 154.19,
+   "purchases7d": 11,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 154.1,
-     "purchases7d": 10
+     "spend7dUSD": 154.19,
+     "purchases7d": 11
     }
    }
   },
   "K-6676": {
-   "spend7dUSD": 21.21,
+   "spend7dUSD": 21.48,
    "purchases7d": 2,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 21.21,
+     "spend7dUSD": 21.48,
      "purchases7d": 2
     }
    }
@@ -358,46 +358,46 @@
    }
   },
   "L-6283": {
-   "spend7dUSD": 54.13,
-   "purchases7d": 3,
+   "spend7dUSD": 54.14,
+   "purchases7d": 6,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 54.13,
-     "purchases7d": 3
+     "spend7dUSD": 54.14,
+     "purchases7d": 6
     }
    }
   },
   "T-8002": {
-   "spend7dUSD": 93.48,
-   "purchases7d": 14,
+   "spend7dUSD": 93.5,
+   "purchases7d": 20,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 24.94,
+     "spend7dUSD": 24.95,
      "purchases7d": null
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 68.54,
-     "purchases7d": 14
+     "spend7dUSD": 68.55,
+     "purchases7d": 20
     }
    }
   },
   "T-8003": {
    "spend7dUSD": 21.44,
-   "purchases7d": 2,
+   "purchases7d": 3,
    "campaigns": {
     "SEASON | FULL CATALOG": {
      "spend7dUSD": 21.44,
-     "purchases7d": 2
+     "purchases7d": 3
     }
    }
   },
   "T-8004": {
    "spend7dUSD": 24.83,
-   "purchases7d": null,
+   "purchases7d": 1,
    "campaigns": {
     "25 AUG MINE": {
      "spend7dUSD": 24.83,
-     "purchases7d": null
+     "purchases7d": 1
     }
    }
   },
@@ -416,11 +416,11 @@
    }
   },
   "T-8020": {
-   "spend7dUSD": 3.54,
+   "spend7dUSD": 3.55,
    "purchases7d": 1,
    "campaigns": {
     "25 AUG MINE": {
-     "spend7dUSD": 3.54,
+     "spend7dUSD": 3.55,
      "purchases7d": 1
     }
    }
@@ -446,11 +446,11 @@
    }
   },
   "T-8035": {
-   "spend7dUSD": 7.51,
+   "spend7dUSD": 7.56,
    "purchases7d": null,
    "campaigns": {
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 7.51,
+     "spend7dUSD": 7.56,
      "purchases7d": null
     }
    }
