@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-12T06:39:26.333635+00:00",
- "metaSyncedAt": "2026-10-12T06:39:26.333635+00:00",
+ "syncedAt": "2026-10-12T06:44:28.463888+00:00",
+ "metaSyncedAt": "2026-10-12T06:44:28.463888+00:00",
  "window": {
   "since": "2026-10-06",
   "until": "2026-10-12",
@@ -8,7 +8,7 @@
  },
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
- "note": "One entry per ACTIVE campaign; 'daily' holds one row per date with delivery (missing date = zero delivery). null means the metric family does not apply to this campaign objective (purchases=null for traffic, conversations=null for catalog sales, ...). A real zero stays 0. frequency = impressions/reach that day (null when reach=0). error!=null means the Meta fetch failed (expired/invalid token) — data may be stale.",
+ "note": "One entry per ACTIVE campaign; 'daily' holds one row per date with delivery (missing date = zero delivery). null means the metric family does not apply to this campaign objective (purchases=null for traffic, conversations=null for catalog sales, ...). A real zero stays 0. frequency = impressions/reach that day (null when reach=0). error!=null means the Meta fetch failed (expired/invalid token) — data may be stale. Definitions: purchases = Meta action type 'purchase' only (matches the Ads Manager Purchases column; legacy offsite_conversion.* keys are excluded to avoid double counting). conversations = action type 'onsite_conversion.messaging_conversation_started_7d' (fallback 'messaging_conversation_started') — the Ads Manager 'Total messaging contacts' column.",
  "error": null,
  "campaigns": [
   {
@@ -21,8 +21,8 @@
     {
      "date": "2026-10-06",
      "spendUSD": 125.43,
-     "purchases": 12,
-     "costPerPurchaseUSD": 10.45,
+     "purchases": 6,
+     "costPerPurchaseUSD": 20.91,
      "conversations": 292,
      "costPerConversationUSD": 0.43,
      "landingPageViews": 1,
@@ -35,8 +35,8 @@
     {
      "date": "2026-10-07",
      "spendUSD": 80.3,
-     "purchases": 18,
-     "costPerPurchaseUSD": 4.46,
+     "purchases": 9,
+     "costPerPurchaseUSD": 8.92,
      "conversations": 213,
      "costPerConversationUSD": 0.38,
      "landingPageViews": 3,
@@ -49,8 +49,8 @@
     {
      "date": "2026-10-08",
      "spendUSD": 82.6,
-     "purchases": 8,
-     "costPerPurchaseUSD": 10.32,
+     "purchases": 4,
+     "costPerPurchaseUSD": 20.65,
      "conversations": 202,
      "costPerConversationUSD": 0.41,
      "landingPageViews": 3,
@@ -63,8 +63,8 @@
     {
      "date": "2026-10-09",
      "spendUSD": 101.48,
-     "purchases": 16,
-     "costPerPurchaseUSD": 6.34,
+     "purchases": 8,
+     "costPerPurchaseUSD": 12.69,
      "conversations": 279,
      "costPerConversationUSD": 0.36,
      "landingPageViews": 8,
@@ -77,8 +77,8 @@
     {
      "date": "2026-10-10",
      "spendUSD": 97.08,
-     "purchases": 20,
-     "costPerPurchaseUSD": 4.85,
+     "purchases": 10,
+     "costPerPurchaseUSD": 9.71,
      "conversations": 258,
      "costPerConversationUSD": 0.38,
      "landingPageViews": 2,
@@ -91,30 +91,30 @@
     {
      "date": "2026-10-11",
      "spendUSD": 103.84,
-     "purchases": 8,
-     "costPerPurchaseUSD": 12.98,
+     "purchases": 4,
+     "costPerPurchaseUSD": 25.96,
      "conversations": 250,
      "costPerConversationUSD": 0.42,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 65178,
+     "impressions": 65182,
      "ctrPct": 4.13,
      "reach": 45739,
-     "frequency": 1.42
+     "frequency": 1.43
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 20.06,
-     "purchases": 4,
-     "costPerPurchaseUSD": 5.01,
+     "spendUSD": 20.52,
+     "purchases": 2,
+     "costPerPurchaseUSD": 10.26,
      "conversations": 60,
-     "costPerConversationUSD": 0.33,
+     "costPerConversationUSD": 0.34,
      "landingPageViews": 1,
-     "costPerLpvUSD": 20.06,
-     "impressions": 11144,
-     "ctrPct": 4.41,
-     "reach": 9578,
-     "frequency": 1.16
+     "costPerLpvUSD": 20.52,
+     "impressions": 11490,
+     "ctrPct": 4.34,
+     "reach": 10026,
+     "frequency": 1.15
     }
    ]
   },
@@ -128,8 +128,8 @@
     {
      "date": "2026-10-06",
      "spendUSD": 14.47,
-     "purchases": 2,
-     "costPerPurchaseUSD": 7.24,
+     "purchases": 1,
+     "costPerPurchaseUSD": 14.47,
      "conversations": 53,
      "costPerConversationUSD": 0.27,
      "landingPageViews": 11,
@@ -142,8 +142,8 @@
     {
      "date": "2026-10-07",
      "spendUSD": 14.66,
-     "purchases": 2,
-     "costPerPurchaseUSD": 7.33,
+     "purchases": 1,
+     "costPerPurchaseUSD": 14.66,
      "conversations": 56,
      "costPerConversationUSD": 0.26,
      "landingPageViews": 6,
@@ -204,24 +204,24 @@
      "costPerConversationUSD": 0.33,
      "landingPageViews": 4,
      "costPerLpvUSD": 4.82,
-     "impressions": 11597,
+     "impressions": 11599,
      "ctrPct": 12.14,
      "reach": 7493,
      "frequency": 1.55
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 3.14,
+     "spendUSD": 3.25,
      "purchases": 0,
      "costPerPurchaseUSD": null,
      "conversations": 8,
-     "costPerConversationUSD": 0.39,
+     "costPerConversationUSD": 0.41,
      "landingPageViews": 1,
-     "costPerLpvUSD": 3.14,
-     "impressions": 1824,
-     "ctrPct": 13.98,
+     "costPerLpvUSD": 3.25,
+     "impressions": 1857,
+     "ctrPct": 14.11,
      "reach": 1588,
-     "frequency": 1.15
+     "frequency": 1.17
     }
    ]
   },
@@ -235,8 +235,8 @@
     {
      "date": "2026-10-06",
      "spendUSD": 19.15,
-     "purchases": 2,
-     "costPerPurchaseUSD": 9.57,
+     "purchases": 1,
+     "costPerPurchaseUSD": 19.15,
      "conversations": 7,
      "costPerConversationUSD": 2.74,
      "landingPageViews": 262,
@@ -249,8 +249,8 @@
     {
      "date": "2026-10-07",
      "spendUSD": 16.12,
-     "purchases": 2,
-     "costPerPurchaseUSD": 8.06,
+     "purchases": 1,
+     "costPerPurchaseUSD": 16.12,
      "conversations": 9,
      "costPerConversationUSD": 1.79,
      "landingPageViews": 215,
@@ -263,8 +263,8 @@
     {
      "date": "2026-10-08",
      "spendUSD": 16.08,
-     "purchases": 6,
-     "costPerPurchaseUSD": 2.68,
+     "purchases": 3,
+     "costPerPurchaseUSD": 5.36,
      "conversations": 7,
      "costPerConversationUSD": 2.3,
      "landingPageViews": 236,
@@ -277,8 +277,8 @@
     {
      "date": "2026-10-09",
      "spendUSD": 19.23,
-     "purchases": 2,
-     "costPerPurchaseUSD": 9.62,
+     "purchases": 1,
+     "costPerPurchaseUSD": 19.23,
      "conversations": 9,
      "costPerConversationUSD": 2.14,
      "landingPageViews": 199,
@@ -318,17 +318,17 @@
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 5.4,
+     "spendUSD": 5.42,
      "purchases": 0,
      "costPerPurchaseUSD": null,
      "conversations": 1,
-     "costPerConversationUSD": 5.4,
+     "costPerConversationUSD": 5.42,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 1491,
-     "ctrPct": 6.77,
+     "impressions": 1501,
+     "ctrPct": 6.86,
      "reach": 1189,
-     "frequency": 1.25
+     "frequency": 1.26
     }
    ]
   },
@@ -356,8 +356,8 @@
     {
      "date": "2026-10-07",
      "spendUSD": 8.95,
-     "purchases": 6,
-     "costPerPurchaseUSD": 1.49,
+     "purchases": 3,
+     "costPerPurchaseUSD": 2.98,
      "conversations": 33,
      "costPerConversationUSD": 0.27,
      "landingPageViews": 2,
@@ -370,8 +370,8 @@
     {
      "date": "2026-10-08",
      "spendUSD": 10.01,
-     "purchases": 10,
-     "costPerPurchaseUSD": 1.0,
+     "purchases": 5,
+     "costPerPurchaseUSD": 2.0,
      "conversations": 45,
      "costPerConversationUSD": 0.22,
      "landingPageViews": null,
@@ -398,8 +398,8 @@
     {
      "date": "2026-10-10",
      "spendUSD": 9.44,
-     "purchases": 10,
-     "costPerPurchaseUSD": 0.94,
+     "purchases": 5,
+     "costPerPurchaseUSD": 1.89,
      "conversations": 31,
      "costPerConversationUSD": 0.3,
      "landingPageViews": null,
@@ -412,30 +412,30 @@
     {
      "date": "2026-10-11",
      "spendUSD": 13.55,
-     "purchases": 2,
-     "costPerPurchaseUSD": 6.78,
+     "purchases": 1,
+     "costPerPurchaseUSD": 13.55,
      "conversations": 33,
      "costPerConversationUSD": 0.41,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 8912,
+     "impressions": 8913,
      "ctrPct": 4.59,
      "reach": 7375,
      "frequency": 1.21
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 3.84,
+     "spendUSD": 3.89,
      "purchases": 0,
      "costPerPurchaseUSD": null,
      "conversations": 13,
      "costPerConversationUSD": 0.3,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 2120,
-     "ctrPct": 5.8,
+     "impressions": 2151,
+     "ctrPct": 5.72,
      "reach": 1946,
-     "frequency": 1.09
+     "frequency": 1.11
     }
    ]
   },
@@ -525,24 +525,24 @@
      "costPerConversationUSD": 0.43,
      "landingPageViews": 2441,
      "costPerLpvUSD": 0.01,
-     "impressions": 56542,
+     "impressions": 56546,
      "ctrPct": 7.32,
      "reach": 49556,
      "frequency": 1.14
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 8.77,
+     "spendUSD": 8.84,
      "purchases": null,
      "costPerPurchaseUSD": null,
      "conversations": 23,
      "costPerConversationUSD": 0.38,
      "landingPageViews": 1185,
      "costPerLpvUSD": 0.01,
-     "impressions": 27896,
-     "ctrPct": 8.15,
+     "impressions": 28292,
+     "ctrPct": 8.14,
      "reach": 23908,
-     "frequency": 1.17
+     "frequency": 1.18
     }
    ]
   },
@@ -556,8 +556,8 @@
     {
      "date": "2026-10-06",
      "spendUSD": 140.28,
-     "purchases": 20,
-     "costPerPurchaseUSD": 7.01,
+     "purchases": 10,
+     "costPerPurchaseUSD": 14.03,
      "conversations": 68,
      "costPerConversationUSD": 2.06,
      "landingPageViews": 1167,
@@ -570,8 +570,8 @@
     {
      "date": "2026-10-07",
      "spendUSD": 106.99,
-     "purchases": 14,
-     "costPerPurchaseUSD": 7.64,
+     "purchases": 7,
+     "costPerPurchaseUSD": 15.28,
      "conversations": 45,
      "costPerConversationUSD": 2.38,
      "landingPageViews": 1110,
@@ -584,8 +584,8 @@
     {
      "date": "2026-10-08",
      "spendUSD": 106.65,
-     "purchases": 26,
-     "costPerPurchaseUSD": 4.1,
+     "purchases": 13,
+     "costPerPurchaseUSD": 8.2,
      "conversations": 58,
      "costPerConversationUSD": 1.84,
      "landingPageViews": 1073,
@@ -598,8 +598,8 @@
     {
      "date": "2026-10-09",
      "spendUSD": 125.13,
-     "purchases": 18,
-     "costPerPurchaseUSD": 6.95,
+     "purchases": 9,
+     "costPerPurchaseUSD": 13.9,
      "conversations": 57,
      "costPerConversationUSD": 2.2,
      "landingPageViews": 900,
@@ -612,8 +612,8 @@
     {
      "date": "2026-10-10",
      "spendUSD": 97.63,
-     "purchases": 26,
-     "costPerPurchaseUSD": 3.75,
+     "purchases": 13,
+     "costPerPurchaseUSD": 7.51,
      "conversations": 67,
      "costPerConversationUSD": 1.46,
      "landingPageViews": 774,
@@ -626,29 +626,29 @@
     {
      "date": "2026-10-11",
      "spendUSD": 135.18,
-     "purchases": 26,
-     "costPerPurchaseUSD": 5.2,
+     "purchases": 13,
+     "costPerPurchaseUSD": 10.4,
      "conversations": 74,
      "costPerConversationUSD": 1.83,
      "landingPageViews": 957,
      "costPerLpvUSD": 0.14,
-     "impressions": 39392,
+     "impressions": 39393,
      "ctrPct": 8.44,
-     "reach": 23300,
+     "reach": 23301,
      "frequency": 1.69
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 24.7,
+     "spendUSD": 25.03,
      "purchases": 0,
      "costPerPurchaseUSD": null,
-     "conversations": 16,
-     "costPerConversationUSD": 1.54,
+     "conversations": 17,
+     "costPerConversationUSD": 1.47,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 7797,
-     "ctrPct": 6.64,
-     "reach": 5420,
+     "impressions": 7895,
+     "ctrPct": 6.61,
+     "reach": 5492,
      "frequency": 1.44
     }
    ]
@@ -663,8 +663,8 @@
     {
      "date": "2026-10-06",
      "spendUSD": 86.44,
-     "purchases": 26,
-     "costPerPurchaseUSD": 3.32,
+     "purchases": 13,
+     "costPerPurchaseUSD": 6.65,
      "conversations": 154,
      "costPerConversationUSD": 0.56,
      "landingPageViews": 927,
@@ -677,8 +677,8 @@
     {
      "date": "2026-10-07",
      "spendUSD": 64.67,
-     "purchases": 26,
-     "costPerPurchaseUSD": 2.49,
+     "purchases": 13,
+     "costPerPurchaseUSD": 4.97,
      "conversations": 163,
      "costPerConversationUSD": 0.4,
      "landingPageViews": 732,
@@ -691,8 +691,8 @@
     {
      "date": "2026-10-08",
      "spendUSD": 72.35,
-     "purchases": 20,
-     "costPerPurchaseUSD": 3.62,
+     "purchases": 10,
+     "costPerPurchaseUSD": 7.23,
      "conversations": 149,
      "costPerConversationUSD": 0.49,
      "landingPageViews": 870,
@@ -705,8 +705,8 @@
     {
      "date": "2026-10-09",
      "spendUSD": 77.85,
-     "purchases": 22,
-     "costPerPurchaseUSD": 3.54,
+     "purchases": 11,
+     "costPerPurchaseUSD": 7.08,
      "conversations": 199,
      "costPerConversationUSD": 0.39,
      "landingPageViews": 856,
@@ -719,8 +719,8 @@
     {
      "date": "2026-10-10",
      "spendUSD": 65.21,
-     "purchases": 26,
-     "costPerPurchaseUSD": 2.51,
+     "purchases": 13,
+     "costPerPurchaseUSD": 5.02,
      "conversations": 180,
      "costPerConversationUSD": 0.36,
      "landingPageViews": 729,
@@ -732,31 +732,31 @@
     },
     {
      "date": "2026-10-11",
-     "spendUSD": 94.16,
-     "purchases": 34,
-     "costPerPurchaseUSD": 2.77,
+     "spendUSD": 94.18,
+     "purchases": 17,
+     "costPerPurchaseUSD": 5.54,
      "conversations": 226,
      "costPerConversationUSD": 0.42,
      "landingPageViews": 721,
      "costPerLpvUSD": 0.13,
-     "impressions": 49538,
+     "impressions": 49541,
      "ctrPct": 5.71,
      "reach": 34769,
      "frequency": 1.42
     },
     {
      "date": "2026-10-12",
-     "spendUSD": 32.42,
-     "purchases": 2,
-     "costPerPurchaseUSD": 16.21,
-     "conversations": 67,
-     "costPerConversationUSD": 0.48,
+     "spendUSD": 33.0,
+     "purchases": 1,
+     "costPerPurchaseUSD": 33.0,
+     "conversations": 68,
+     "costPerConversationUSD": 0.49,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 15137,
-     "ctrPct": 5.84,
-     "reach": 12217,
-     "frequency": 1.24
+     "impressions": 15386,
+     "ctrPct": 5.82,
+     "reach": 12297,
+     "frequency": 1.25
     }
    ]
   }
