@@ -1,9 +1,35 @@
 {
- "syncedAt": "2026-10-12T11:32:11.865635+00:00",
+ "syncedAt": "2026-10-12T12:02:50.496421+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7412,
+   "name": "L-1506",
+   "sku": "L-1506",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-12",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 69000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7411,
    "name": "L-2242",
@@ -1131,17 +1157,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-29",
    "firstOrderDate": "2026-09-30",
-   "lastOrderDate": "2026-10-10",
-   "orders": 8,
-   "units": 8,
-   "revenue": 810000,
+   "lastOrderDate": "2026-10-12",
+   "orders": 9,
+   "units": 9,
+   "revenue": 915000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 105000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1859,17 +1885,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-19",
    "firstOrderDate": "2026-09-19",
-   "lastOrderDate": "2026-10-08",
-   "orders": 25,
-   "units": 25,
-   "revenue": 1808000,
+   "lastOrderDate": "2026-10-12",
+   "orders": 26,
+   "units": 26,
+   "revenue": 1884000,
    "delivered": 24,
    "returned": 3,
    "unitsBoughtFromSupplier": 24,
    "returnedStock": 3,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 4,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12823,32 +12849,6 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 15,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4502,
    "name": "H-1465",
    "sku": "H-1465",
@@ -12868,6 +12868,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 5,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 15,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13463,6 +13489,11 @@
      105000
     ],
     "2026-10-10": [
+     1,
+     1,
+     105000
+    ],
+    "2026-10-12": [
      1,
      1,
      105000
@@ -14205,6 +14236,11 @@
      2,
      2,
      152000
+    ],
+    "2026-10-12": [
+     1,
+     1,
+     76000
     ]
    },
    "7335": {
@@ -26246,18 +26282,18 @@
      49000
     ]
    },
-   "4628": {
-    "2026-09-27": [
-     1,
-     1,
-     40000
-    ]
-   },
    "4502": {
     "2026-10-07": [
      1,
      1,
      39000
+    ]
+   },
+   "4628": {
+    "2026-09-27": [
+     1,
+     1,
+     40000
     ]
    },
    "4577": {
@@ -26783,10 +26819,48 @@
    "2026-10-09": 30,
    "2026-10-10": 53,
    "2026-10-11": 41,
-   "2026-10-12": 14
+   "2026-10-12": 16
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33271",
+   "d": "2026-10-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -4000,
+   "lines": [
+    {
+     "sku": "H-1909-antrasit-1",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 4.9,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33268",
+   "d": "2026-10-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-6283",
+     "qty": 1,
+     "price": 105000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33267",
    "d": "2026-10-12",
@@ -180337,6 +180411,62 @@
    "qty": 1,
    "cost": 28506,
    "created": "2026-01-30"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
+  },
+  {
+   "sku": "L-1506",
+   "model": "L-1506",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-12"
   },
   {
    "sku": "L-1517",
