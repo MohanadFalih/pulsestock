@@ -16,6 +16,17 @@ mentioning several SKUs attributes its full numbers to each. campaigns.json
 output is byte-for-byte the same schema as v1.1 — the new fetch lives in its
 own try/except so a failure there can never break campaigns.json.
 
+v1.3 — VALUE correction, schema untouched (same fields, same types):
+  - purchases now counts the single action type "purchase" (matches the Ads
+    Manager Purchases column). "offsite_conversion.fb_pixel_purchase" — the
+    same events under a legacy key — is no longer added (was double
+    counting). Verified vs Ads Manager 2026-10-11: SEASON 14, TIME 18,
+    MINE 4, WARM 1, total 37.
+  - conversations now uses one action type:
+    "onsite_conversion.messaging_conversation_started_7d" (the Ads Manager
+    "Total messaging contacts" column), falling back to plain
+    "messaging_conversation_started" — no more cross-type summing.
+
 Deliberately a SEPARATE file from ad-brief.json: stable URL, independent
 schema, zero risk to the existing morning reader that depends on the brief.
 
@@ -46,7 +57,21 @@ BASE = f"https://graph.facebook.com/{API_VERSION}"
 TOKEN = os.environ.get("META_ACCESS_TOKEN", "").strip()
 ACCOUNT = os.environ.get("META_AD_ACCOUNT_ID", "").strip().replace("act_", "")
 
-PURCHASE_TYPES = {"purchase", "offsite_conversion.fb_pixel_purchase"}
+# v1.3 (value correction, schema untouched): purchases now count ONLY the
+# "purchase" action type — the one matching Ads Manager's Purchases column.
+# Previously we also added "offsite_conversion.fb_pixel_purchase", which is
+# the same pixel event reported under a legacy key — summing both counted
+# many events twice. Verified against Ads Manager 2026-10-11: SEASON 14,
+# TIME 18, MINE 4, WARM 1 (total 37).
+PURCHASE_TYPES = {"purchase"}
+
+# conversations: exactly one action type, mirroring the Ads Manager
+# messaging-conversations column ("Total messaging contacts"). The 7-day
+# click variant is what the UI shows; the plain type is the fallback when
+# the attributed variant is absent. Previously we summed every action type
+# containing "messaging_conversation_started" — again double counting.
+CONVO_TYPE = "onsite_conversion.messaging_conversation_started_7d"
+CONVO_TYPE_FALLBACK = "messaging_conversation_started"
 SALES_OBJECTIVES = {"OUTCOME_SALES", "OUTCOME_LEADS", "CONVERSIONS",
                     "PRODUCT_CATALOG_SALES", "OUTCOME_ENGAGEMENT"}
 MESSAGE_OBJECTIVES = {"OUTCOME_MESSAGES", "MESSAGES"}
@@ -59,7 +84,7 @@ def get_all(path, params):
     url = f"{BASE}/{path}?{urllib.parse.urlencode(params)}"
     rows = []
     while url:
-        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.1"})
+        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.3"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             payload = json.load(resp)
         if "error" in payload:
@@ -80,6 +105,27 @@ def action_sum(actions, predicate):
     return total
 
 
+def action_single(actions, primary, fallback=None):
+    """Value of exactly ONE action type — no cross-type summing (v1.3).
+    Uses `primary` when present, else `fallback`, else 0."""
+    prim = fb = None
+    for a in actions or []:
+        t = a.get("action_type", "")
+        try:
+            v = float(a.get("value", 0))
+        except (TypeError, ValueError):
+            continue
+        if t == primary:
+            prim = (prim or 0) + v
+        elif fallback and t == fallback:
+            fb = (fb or 0) + v
+    if prim is not None:
+        return prim
+    if fb is not None:
+        return fb
+    return 0.0
+
+
 def main():
     today = dt.date.today()
     since = today - dt.timedelta(days=6)
@@ -97,7 +143,14 @@ def main():
                  "(purchases=null for traffic, conversations=null for catalog "
                  "sales, ...). A real zero stays 0. frequency = impressions/reach "
                  "that day (null when reach=0). error!=null means the Meta fetch "
-                 "failed (expired/invalid token) — data may be stale."),
+                 "failed (expired/invalid token) — data may be stale. "
+                 "Definitions: purchases = Meta action type 'purchase' only "
+                 "(matches the Ads Manager Purchases column; legacy "
+                 "offsite_conversion.* keys are excluded to avoid double "
+                 "counting). conversations = action type "
+                 "'onsite_conversion.messaging_conversation_started_7d' "
+                 "(fallback 'messaging_conversation_started') — the Ads "
+                 "Manager 'Total messaging contacts' column."),
         "error": None,
         "campaigns": [],
     }
@@ -150,9 +203,9 @@ def main():
 
         spend = float(row.get("spend") or 0)
         actions = row.get("actions")
-        n_purch = action_sum(actions, lambda t: t in PURCHASE_TYPES)
-        n_conv = action_sum(actions, lambda t: "messaging_conversation_started" in t)
-        n_lpv = action_sum(actions, lambda t: t == "landing_page_view")
+        n_purch = action_single(actions, "purchase")
+        n_conv = action_single(actions, CONVO_TYPE, CONVO_TYPE_FALLBACK)
+        n_lpv = action_single(actions, "landing_page_view")
         impressions = int(row.get("impressions") or 0)
         reach = int(row.get("reach") or 0)
 
@@ -210,8 +263,11 @@ ADS7D_NOTE = ("Per-SKU ad-level Meta performance over the 7-day window "
               "(e.g. 'H-1920'); an ad whose name mentions several SKUs "
               "attributes its full spend/purchases to each of them. "
               "purchases7d is null when zero (same convention as the 3-day "
-              "fields in ad-brief.json). error!=null means the ad-level "
-              "fetch failed — campaigns.json is unaffected.")
+              "fields in ad-brief.json) and counts the single action type "
+              "'purchase' only (Ads Manager Purchases column; "
+              "offsite_conversion.* excluded — no double counting). "
+              "error!=null means the ad-level fetch failed — "
+              "campaigns.json is unaffected.")
 
 
 def extract_skus(ad_name):
@@ -244,8 +300,7 @@ def build_ads7d(since, today, now):
             spend = float(row.get("spend") or 0)
         except (TypeError, ValueError):
             spend = 0.0
-        purch = int(action_sum(row.get("actions"),
-                               lambda t: t in PURCHASE_TYPES))
+        purch = int(action_single(row.get("actions"), "purchase"))
         for sku in extract_skus(ad_name):
             s = skus.setdefault(sku, {"spend": 0.0, "purch": 0, "campaigns": {}})
             s["spend"] += spend
