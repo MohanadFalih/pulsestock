@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-12T17:32:36.847273+00:00",
+ "syncedAt": "2026-10-12T17:49:03.730746+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3237,17 +3237,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
-   "lastOrderDate": "2026-10-12",
-   "orders": 99,
-   "units": 102,
-   "revenue": 10969950,
+   "lastOrderDate": "2026-10-11",
+   "orders": 98,
+   "units": 101,
+   "revenue": 10853950,
    "delivered": 96,
    "returned": 19,
-   "unitsBoughtFromSupplier": 93,
+   "unitsBoughtFromSupplier": 92,
    "returnedStock": 11,
    "unitPrice": 116000.0,
-   "orderVelocity7d": 1.71,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12979,32 +12979,6 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 15,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4502,
    "name": "H-1465",
    "sku": "H-1465",
@@ -13024,6 +12998,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 5,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 15,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15457,11 +15457,6 @@
      2,
      2,
      232000
-    ],
-    "2026-10-12": [
-     1,
-     1,
-     116000
     ]
    },
    "7284": {
@@ -26413,18 +26408,18 @@
      49000
     ]
    },
-   "4628": {
-    "2026-09-27": [
-     1,
-     1,
-     40000
-    ]
-   },
    "4502": {
     "2026-10-07": [
      1,
      1,
      39000
+    ]
+   },
+   "4628": {
+    "2026-09-27": [
+     1,
+     1,
+     40000
     ]
    },
    "4577": {
@@ -26926,7 +26921,7 @@
    "2026-10-09": 30,
    "2026-10-10": 52,
    "2026-10-11": 40,
-   "2026-10-12": 25
+   "2026-10-12": 24
   }
  },
  "ordersDetail": [
@@ -26965,25 +26960,6 @@
     }
    ],
    "src": "WhatsApp"
-  },
-  {
-   "id": "S33278",
-   "d": "2026-10-12",
-   "st": "sale",
-   "fee": 5000,
-   "disc": -15000,
-   "lines": [
-    {
-     "sku": "K-6647-haki-38",
-     "qty": 1,
-     "price": 116000,
-     "discPct": 12.4,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Website",
-   "ful": "turkey"
   },
   {
    "id": "S33277",
