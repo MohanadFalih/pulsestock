@@ -16,13 +16,13 @@ mentioning several SKUs attributes its full numbers to each. campaigns.json
 output is byte-for-byte the same schema as v1.1 — the new fetch lives in its
 own try/except so a failure there can never break campaigns.json.
 
-v1.3 — VALUE correction, schema untouched (same fields, same types):
-  - purchases now counts the single action type "purchase" (matches the Ads
-    Manager Purchases column). "offsite_conversion.fb_pixel_purchase" — the
-    same events under a legacy key — is no longer added (was double
-    counting). Verified vs Ads Manager 2026-10-11: SEASON 14, TIME 18,
-    MINE 4, WARM 1, total 37.
-  - conversations now uses one action type:
+v1.3/v1.4 — VALUE correction, schema untouched (same fields, same types):
+  - purchases counts the single action type "omni_purchase" (fallback
+    "purchase") — exactly the Ads Manager Purchases column. The legacy
+    duplicate key "offsite_conversion.fb_pixel_purchase" is excluded (was
+    double counting). Verified vs Ads Manager 2026-10-11: SEASON 14,
+    TIME 18, MINE 4, WARM 1, total 37.
+  - conversations uses one action type:
     "onsite_conversion.messaging_conversation_started_7d" (the Ads Manager
     "Total messaging contacts" column), falling back to plain
     "messaging_conversation_started" — no more cross-type summing.
@@ -57,13 +57,15 @@ BASE = f"https://graph.facebook.com/{API_VERSION}"
 TOKEN = os.environ.get("META_ACCESS_TOKEN", "").strip()
 ACCOUNT = os.environ.get("META_AD_ACCOUNT_ID", "").strip().replace("act_", "")
 
-# v1.3 (value correction, schema untouched): purchases now count ONLY the
-# "purchase" action type — the one matching Ads Manager's Purchases column.
-# Previously we also added "offsite_conversion.fb_pixel_purchase", which is
-# the same pixel event reported under a legacy key — summing both counted
-# many events twice. Verified against Ads Manager 2026-10-11: SEASON 14,
-# TIME 18, MINE 4, WARM 1 (total 37).
-PURCHASE_TYPES = {"purchase"}
+# v1.4 (value correction, schema untouched): purchases now count ONLY the
+# "omni_purchase" action type — Meta's unified purchase metric, exactly what
+# the Ads Manager "Purchases" column shows (website + shops + offline).
+# "purchase" alone undercounts (website-only); "offsite_conversion.*" keys
+# duplicate the same events. Verified against Ads Manager 2026-10-11:
+# SEASON 14, TIME 18, MINE 4, WARM 1 (total 37).
+# Fallback: plain "purchase" when omni_purchase is absent from the payload.
+PURCHASE_TYPE = "omni_purchase"
+PURCHASE_TYPE_FALLBACK = "purchase"
 
 # conversations: exactly one action type, mirroring the Ads Manager
 # messaging-conversations column ("Total messaging contacts"). The 7-day
@@ -84,7 +86,7 @@ def get_all(path, params):
     url = f"{BASE}/{path}?{urllib.parse.urlencode(params)}"
     rows = []
     while url:
-        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.3"})
+        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.4"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             payload = json.load(resp)
         if "error" in payload:
@@ -144,10 +146,10 @@ def main():
                  "sales, ...). A real zero stays 0. frequency = impressions/reach "
                  "that day (null when reach=0). error!=null means the Meta fetch "
                  "failed (expired/invalid token) — data may be stale. "
-                 "Definitions: purchases = Meta action type 'purchase' only "
-                 "(matches the Ads Manager Purchases column; legacy "
-                 "offsite_conversion.* keys are excluded to avoid double "
-                 "counting). conversations = action type "
+                 "Definitions: purchases = Meta action type 'omni_purchase' "
+                 "(fallback 'purchase') — exactly the Ads Manager Purchases "
+                 "column; legacy offsite_conversion.* keys are excluded to "
+                 "avoid double counting. conversations = action type "
                  "'onsite_conversion.messaging_conversation_started_7d' "
                  "(fallback 'messaging_conversation_started') — the Ads "
                  "Manager 'Total messaging contacts' column."),
@@ -203,7 +205,7 @@ def main():
 
         spend = float(row.get("spend") or 0)
         actions = row.get("actions")
-        n_purch = action_single(actions, "purchase")
+        n_purch = action_single(actions, PURCHASE_TYPE, PURCHASE_TYPE_FALLBACK)
         n_conv = action_single(actions, CONVO_TYPE, CONVO_TYPE_FALLBACK)
         n_lpv = action_single(actions, "landing_page_view")
         impressions = int(row.get("impressions") or 0)
@@ -264,8 +266,9 @@ ADS7D_NOTE = ("Per-SKU ad-level Meta performance over the 7-day window "
               "attributes its full spend/purchases to each of them. "
               "purchases7d is null when zero (same convention as the 3-day "
               "fields in ad-brief.json) and counts the single action type "
-              "'purchase' only (Ads Manager Purchases column; "
-              "offsite_conversion.* excluded — no double counting). "
+              "'omni_purchase' (fallback 'purchase') — the Ads Manager "
+              "Purchases column; offsite_conversion.* excluded, no double "
+              "counting). "
               "error!=null means the ad-level fetch failed — "
               "campaigns.json is unaffected.")
 
@@ -300,7 +303,8 @@ def build_ads7d(since, today, now):
             spend = float(row.get("spend") or 0)
         except (TypeError, ValueError):
             spend = 0.0
-        purch = int(action_single(row.get("actions"), "purchase"))
+        purch = int(action_single(row.get("actions"), PURCHASE_TYPE,
+                                  PURCHASE_TYPE_FALLBACK))
         for sku in extract_skus(ad_name):
             s = skus.setdefault(sku, {"spend": 0.0, "purch": 0, "campaigns": {}})
             s["spend"] += spend
