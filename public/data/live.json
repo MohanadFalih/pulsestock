@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-12T07:11:38.945209+00:00",
+ "syncedAt": "2026-10-12T07:18:59.343292+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1344,9 +1344,9 @@
    "units": 9,
    "revenue": 715000,
    "delivered": 7,
-   "returned": 2,
+   "returned": 3,
    "unitsBoughtFromSupplier": 9,
-   "returnedStock": 2,
+   "returnedStock": 3,
    "unitPrice": 83000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
@@ -1760,9 +1760,9 @@
    "units": 26,
    "revenue": 1900000,
    "delivered": 23,
-   "returned": 4,
+   "returned": 5,
    "unitsBoughtFromSupplier": 25,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 76000.0,
    "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 1,
@@ -2116,7 +2116,7 @@
    "sku": "H-1889",
    "category": "All",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-09-15",
    "firstOrderDate": "2026-09-15",
    "lastOrderDate": "2026-10-04",
@@ -2124,9 +2124,9 @@
    "units": 13,
    "revenue": 897000,
    "delivered": 13,
-   "returned": 1,
+   "returned": 2,
    "unitsBoughtFromSupplier": 12,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 74000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 8,
@@ -8236,7 +8236,7 @@
    "delivered": 315,
    "returned": 94,
    "unitsBoughtFromSupplier": 225,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 74000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 4,
@@ -12901,25 +12901,25 @@
    }
   },
   {
-   "odooId": 4502,
-   "name": "H-1465",
-   "sku": "H-1465",
-   "category": "Takim (Tunik & Pantolon)",
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-15",
-   "lastOrderDate": "2026-10-07",
-   "orders": 2,
-   "units": 2,
-   "revenue": 67000,
-   "delivered": 2,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 1,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 15,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12953,25 +12953,25 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
+   "odooId": 4502,
+   "name": "H-1465",
+   "sku": "H-1465",
+   "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 15,
+   "firstOrderDate": "2025-08-15",
+   "lastOrderDate": "2026-10-07",
+   "orders": 2,
+   "units": 2,
+   "revenue": 67000,
+   "delivered": 2,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 5,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13032,9 +13032,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1769,
-  "stockValue": 49977223,
-  "stockVariants": 1402
+  "stockUnits": 1772,
+  "stockValue": 50083656,
+  "stockVariants": 1405
  },
  "daily": {
   "days": 90,
@@ -26219,11 +26219,11 @@
      49000
     ]
    },
-   "4502": {
-    "2026-10-07": [
+   "4628": {
+    "2026-09-27": [
      1,
      1,
-     39000
+     40000
     ]
    },
    "4577": {
@@ -26238,11 +26238,11 @@
      132000
     ]
    },
-   "4628": {
-    "2026-09-27": [
+   "4502": {
+    "2026-10-07": [
      1,
      1,
-     40000
+     39000
     ]
    },
    "4515": {
@@ -26602,7 +26602,7 @@
    ],
    "2026-10-12": [
     0,
-    2
+    5
    ]
   },
   "orders": {
@@ -29593,8 +29593,9 @@
      "qty": 1,
      "price": 76000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -31795,8 +31796,9 @@
      "qty": 1,
      "price": 79000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -40135,8 +40137,9 @@
      "qty": 1,
      "price": 69000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -138734,7 +138737,7 @@
   {
    "sku": "H-1889",
    "model": "H-1889",
-   "qty": 0,
+   "qty": 1,
    "cost": 31000,
    "created": "2026-09-15"
   },
@@ -166503,7 +166506,7 @@
   {
    "sku": "H-1910",
    "model": "H-1910",
-   "qty": 0,
+   "qty": 1,
    "cost": 34100,
    "created": "2026-09-21"
   },
@@ -188406,7 +188409,7 @@
   {
    "sku": "T-8004",
    "model": "T-8004",
-   "qty": 0,
+   "qty": 1,
    "cost": 41333,
    "created": "2026-09-26"
   },
