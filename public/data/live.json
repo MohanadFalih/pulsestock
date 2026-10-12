@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-12T07:08:42.998854+00:00",
+ "syncedAt": "2026-10-12T07:11:38.945209+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -8234,7 +8234,7 @@
    "units": 315,
    "revenue": 21740000,
    "delivered": 315,
-   "returned": 93,
+   "returned": 94,
    "unitsBoughtFromSupplier": 225,
    "returnedStock": 3,
    "unitPrice": 74000.0,
@@ -8494,9 +8494,9 @@
    "units": 63,
    "revenue": 5132000,
    "delivered": 62,
-   "returned": 15,
+   "returned": 16,
    "unitsBoughtFromSupplier": 52,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 68000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 1,
@@ -13032,9 +13032,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1767,
-  "stockValue": 49894590,
-  "stockVariants": 1400
+  "stockUnits": 1769,
+  "stockValue": 49977223,
+  "stockVariants": 1402
  },
  "daily": {
   "days": 90,
@@ -26599,6 +26599,10 @@
    "2026-10-11": [
     68,
     7
+   ],
+   "2026-10-12": [
+    0,
+    2
    ]
   },
   "orders": {
@@ -29768,7 +29772,8 @@
      "qty": 1,
      "price": 74000,
      "discPct": 50.6,
-     "del": 1
+     "del": 0,
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -31491,7 +31496,8 @@
      "qty": 1,
      "price": 68000,
      "discPct": 35.6,
-     "del": 1
+     "del": 0,
+     "ret": 1
     }
    ],
    "src": "WhatsApp",
@@ -131035,7 +131041,7 @@
   {
    "sku": "L-4114",
    "model": "L-4114",
-   "qty": 0,
+   "qty": 1,
    "cost": 32770,
    "created": "2026-05-13"
   },
@@ -153036,7 +153042,7 @@
   {
    "sku": "T-7023",
    "model": "T-7023",
-   "qty": 0,
+   "qty": 1,
    "cost": 49863,
    "created": "2026-05-07"
   },
