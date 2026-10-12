@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-12T09:02:40.411892+00:00",
+ "syncedAt": "2026-10-12T09:32:48.296184+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -8330,20 +8330,20 @@
    "sku": "K-6441",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-05-11",
    "firstOrderDate": "2026-05-11",
-   "lastOrderDate": "2026-10-02",
-   "orders": 46,
-   "units": 47,
-   "revenue": 4327400,
+   "lastOrderDate": "2026-10-12",
+   "orders": 47,
+   "units": 48,
+   "revenue": 4406400,
    "delivered": 47,
    "returned": 14,
    "unitsBoughtFromSupplier": 37,
    "returnedStock": 4,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 10,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9042,7 +9042,7 @@
    "delivered": 172,
    "returned": 50,
    "unitsBoughtFromSupplier": 137,
-   "returnedStock": 4,
+   "returnedStock": 5,
    "unitPrice": 65000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 13,
@@ -10082,7 +10082,7 @@
    "delivered": 31,
    "returned": 9,
    "unitsBoughtFromSupplier": 29,
-   "returnedStock": 2,
+   "returnedStock": 3,
    "unitPrice": 69000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 30,
@@ -10176,7 +10176,7 @@
    "sku": "H-1726 ",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-03-04",
    "firstOrderDate": "2026-03-04",
    "lastOrderDate": "2026-09-22",
@@ -10186,7 +10186,7 @@
    "delivered": 26,
    "returned": 7,
    "unitsBoughtFromSupplier": 22,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 72000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 20,
@@ -10420,7 +10420,7 @@
    "delivered": 175,
    "returned": 46,
    "unitsBoughtFromSupplier": 139,
-   "returnedStock": 2,
+   "returnedStock": 3,
    "unitPrice": 59000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 1,
@@ -11824,7 +11824,7 @@
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 2,
@@ -11866,7 +11866,7 @@
    "sku": "T-6870",
    "category": "All",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-10-07",
    "firstOrderDate": "2025-10-07",
    "lastOrderDate": "2026-09-29",
@@ -11874,9 +11874,9 @@
    "units": 231,
    "revenue": 12928000,
    "delivered": 231,
-   "returned": 39,
+   "returned": 40,
    "unitsBoughtFromSupplier": 190,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 13,
@@ -12797,32 +12797,6 @@
    }
   },
   {
-   "odooId": 4502,
-   "name": "H-1465",
-   "sku": "H-1465",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "ads-live",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-15",
-   "lastOrderDate": "2026-10-07",
-   "orders": 2,
-   "units": 2,
-   "revenue": 67000,
-   "delivered": 2,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 1,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4628,
    "name": "T-6780",
    "sku": "T-6780",
@@ -12842,6 +12816,32 @@
    "unitPrice": 40000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 15,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4502,
+   "name": "H-1465",
+   "sku": "H-1465",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "ads-live",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-08-15",
+   "lastOrderDate": "2026-10-07",
+   "orders": 2,
+   "units": 2,
+   "revenue": 67000,
+   "delivered": 2,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 5,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12984,20 +12984,20 @@
    "sku": "L-1153",
    "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-09",
-   "lastOrderDate": "2026-09-13",
+   "lastOrderDate": "2026-10-12",
    "orders": 82,
    "units": 92,
    "revenue": 4359000,
    "delivered": 93,
    "returned": 13,
    "unitsBoughtFromSupplier": 40,
-   "returnedStock": 11,
+   "returnedStock": 12,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 29,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13032,9 +13032,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1793,
-  "stockValue": 50887845,
-  "stockVariants": 1422
+  "stockUnits": 1801,
+  "stockValue": 51162480,
+  "stockVariants": 1429
  },
  "daily": {
   "days": 90,
@@ -23417,6 +23417,11 @@
      1,
      1,
      79000
+    ],
+    "2026-10-12": [
+     1,
+     1,
+     79000
     ]
    },
    "7032": {
@@ -26196,18 +26201,18 @@
      49000
     ]
    },
-   "4502": {
-    "2026-10-07": [
-     1,
-     1,
-     39000
-    ]
-   },
    "4628": {
     "2026-09-27": [
      1,
      1,
      40000
+    ]
+   },
+   "4502": {
+    "2026-10-07": [
+     1,
+     1,
+     39000
     ]
    },
    "4640": {
@@ -26280,6 +26285,11 @@
      1,
      1,
      72000
+    ],
+    "2026-10-12": [
+     1,
+     0,
+     0
     ]
    },
    "4525": {
@@ -26622,7 +26632,7 @@
    ],
    "2026-10-12": [
     0,
-    11
+    12
    ]
   },
   "orders": {
@@ -26716,10 +26726,27 @@
    "2026-10-09": 30,
    "2026-10-10": 53,
    "2026-10-11": 41,
-   "2026-10-12": 10
+   "2026-10-12": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33263",
+   "d": "2026-10-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -31000,
+   "lines": [
+    {
+     "sku": "K-6441-cappuccino-46",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 36.9,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp"
+  },
   {
    "id": "S33262",
    "d": "2026-10-12",
@@ -37259,7 +37286,8 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 1
+     "del": 0,
+     "ret": 1
     }
    ],
    "src": "Instagram"
@@ -48611,6 +48639,13 @@
      "price": 72000,
      "discPct": 100.0,
      "del": 1
+    },
+    {
+     "sku": "L-1153",
+     "qty": 0,
+     "price": 72000,
+     "discPct": 100.0,
+     "del": -1
     }
    ],
    "src": "Instagram"
@@ -131346,7 +131381,7 @@
   {
    "sku": "L-1153",
    "model": "L-1153",
-   "qty": 4,
+   "qty": 5,
    "cost": 36530,
    "created": "2025-05-20"
   },
@@ -151646,7 +151681,7 @@
   {
    "sku": "T-7011",
    "model": "T-7011",
-   "qty": 0,
+   "qty": 1,
    "cost": 48222,
    "created": "2026-04-23"
   },
@@ -158553,6 +158588,13 @@
    "created": "2026-03-08"
   },
   {
+   "sku": "H-1690",
+   "model": "H-1690",
+   "qty": 1,
+   "cost": 30274,
+   "created": "2026-03-08"
+  },
+  {
    "sku": "H-1692",
    "model": "H-1692",
    "qty": 1,
@@ -158586,6 +158628,13 @@
    "qty": 1,
    "cost": 33836,
    "created": "2026-02-23"
+  },
+  {
+   "sku": "H-1726",
+   "model": "H-1726",
+   "qty": 1,
+   "cost": 33836,
+   "created": "2026-03-04"
   },
   {
    "sku": "H-1727 طقم قطعتين تنوره وتوب",
@@ -179560,6 +179609,13 @@
    "created": "2026-09-19"
   },
   {
+   "sku": "L-1137",
+   "model": "L-1137",
+   "qty": 1,
+   "cost": 30000,
+   "created": "2026-02-05"
+  },
+  {
    "sku": "L-1140",
    "model": "L-1140",
    "qty": 1,
@@ -181475,6 +181531,13 @@
    "model": "L-4671",
    "qty": 1,
    "cost": 26093,
+   "created": "2025-05-26"
+  },
+  {
+   "sku": "L-4671",
+   "model": "L-4671",
+   "qty": 1,
+   "cost": 23238,
    "created": "2025-05-26"
   },
   {
@@ -184740,6 +184803,13 @@
    "created": "2025-11-25"
   },
   {
+   "sku": "T-6870",
+   "model": "T-6870",
+   "qty": 1,
+   "cost": 28000,
+   "created": "2025-10-07"
+  },
+  {
    "sku": "T-6872",
    "model": "T-6872",
    "qty": 1,
@@ -185129,6 +185199,13 @@
    "model": "T-6942",
    "qty": 1,
    "cost": 44643,
+   "created": "2026-02-23"
+  },
+  {
+   "sku": "T-6942",
+   "model": "T-6942",
+   "qty": 1,
+   "cost": 44536,
    "created": "2026-02-23"
   },
   {
