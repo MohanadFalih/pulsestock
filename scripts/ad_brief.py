@@ -178,7 +178,9 @@ def main():
                 "Per campaign entry: adName is the showing ad's name, or null when several ads "
                 "of that campaign show the SKU — then ads[] lists {adName, spend3dUSD} per ad. "
                 "spend7dUSD/purchases7d are the 7-day-window equivalents of the 3-day fields "
-                "(from ad-level Meta insights, matched by SKU in ad name; null when no 7d data).",
+                "(from ad-level Meta insights, matched by SKU in ad name; null when no 7d data). "
+                "purchases7d counts Meta action type 'purchase' only (Ads Manager Purchases "
+                "column; offsite_conversion.* excluded — no double counting).",
         "products": items,
     }
 
