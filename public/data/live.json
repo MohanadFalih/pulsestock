@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-12T07:18:59.343292+00:00",
+ "syncedAt": "2026-10-12T07:32:45.337465+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -564,9 +564,9 @@
    "units": 1,
    "revenue": 89000,
    "delivered": 1,
-   "returned": 0,
+   "returned": 1,
    "unitsBoughtFromSupplier": 1,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 94000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 6,
@@ -2176,7 +2176,7 @@
    "units": 61,
    "revenue": 4339000,
    "delivered": 49,
-   "returned": 15,
+   "returned": 16,
    "unitsBoughtFromSupplier": 53,
    "returnedStock": 14,
    "unitPrice": 75000.0,
@@ -3112,9 +3112,9 @@
    "units": 101,
    "revenue": 10853950,
    "delivered": 95,
-   "returned": 18,
+   "returned": 19,
    "unitsBoughtFromSupplier": 92,
-   "returnedStock": 11,
+   "returnedStock": 12,
    "unitPrice": 116000.0,
    "orderVelocity7d": 1.57,
    "daysSinceLastOrder": 1,
@@ -13032,9 +13032,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1772,
-  "stockValue": 50083656,
-  "stockVariants": 1405
+  "stockUnits": 1775,
+  "stockValue": 50234179,
+  "stockVariants": 1406
  },
  "daily": {
   "days": 90,
@@ -26602,7 +26602,7 @@
    ],
    "2026-10-12": [
     0,
-    5
+    8
    ]
   },
   "orders": {
@@ -31647,8 +31647,9 @@
      "qty": 1,
      "price": 107000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -31862,8 +31863,9 @@
      "qty": 1,
      "price": 89000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -37549,8 +37551,9 @@
      "qty": 1,
      "price": 71000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -139115,7 +139118,7 @@
   {
    "sku": "H-1892",
    "model": "H-1892",
-   "qty": 1,
+   "qty": 2,
    "cost": 33756,
    "created": "2026-09-13"
   },
@@ -147277,7 +147280,7 @@
   {
    "sku": "K-6647",
    "model": "K-6647",
-   "qty": 1,
+   "qty": 2,
    "cost": 65100,
    "created": "2026-08-31"
   },
@@ -178119,7 +178122,7 @@
   {
    "sku": "L-0650",
    "model": "L-0650",
-   "qty": 0,
+   "qty": 1,
    "cost": 51667,
    "created": "2026-10-05"
   },
