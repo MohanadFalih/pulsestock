@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-13T08:32:15.311802+00:00",
+ "syncedAt": "2026-10-13T09:02:57.057400+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1856,7 +1856,7 @@
    "sku": "K-1005",
    "category": "All",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
    "lastOrderDate": "2026-10-05",
@@ -1864,9 +1864,9 @@
    "units": 6,
    "revenue": 606000,
    "delivered": 6,
-   "returned": 0,
+   "returned": 1,
    "unitsBoughtFromSupplier": 6,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 110000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 8,
@@ -2178,7 +2178,7 @@
    "delivered": 33,
    "returned": 8,
    "unitsBoughtFromSupplier": 29,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 3,
@@ -12953,25 +12953,25 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
+   "odooId": 4502,
+   "name": "H-1465",
+   "sku": "H-1465",
+   "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 16,
+   "firstOrderDate": "2025-08-15",
+   "lastOrderDate": "2026-10-07",
+   "orders": 2,
+   "units": 2,
+   "revenue": 67000,
+   "delivered": 2,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 6,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13031,25 +13031,25 @@
    }
   },
   {
-   "odooId": 4502,
-   "name": "H-1465",
-   "sku": "H-1465",
-   "category": "Takim (Tunik & Pantolon)",
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-15",
-   "lastOrderDate": "2026-10-07",
-   "orders": 2,
-   "units": 2,
-   "revenue": 67000,
-   "delivered": 2,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 1,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 6,
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 16,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13110,9 +13110,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1800,
-  "stockValue": 51057140,
-  "stockVariants": 1429
+  "stockUnits": 1801,
+  "stockValue": 51116040,
+  "stockVariants": 1430
  },
  "daily": {
   "days": 90,
@@ -26341,11 +26341,11 @@
      49000
     ]
    },
-   "4628": {
-    "2026-09-27": [
+   "4502": {
+    "2026-10-07": [
      1,
      1,
-     40000
+     39000
     ]
    },
    "4564": {
@@ -26367,11 +26367,11 @@
      49000
     ]
    },
-   "4502": {
-    "2026-10-07": [
+   "4628": {
+    "2026-09-27": [
      1,
      1,
-     39000
+     40000
     ]
    },
    "4640": {
@@ -26716,7 +26716,7 @@
    ],
    "2026-10-13": [
     0,
-    8
+    9
    ]
   },
   "orders": {
@@ -33215,8 +33215,9 @@
      "qty": 1,
      "price": 101000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -169523,7 +169524,7 @@
   {
    "sku": "K-1005",
    "model": "K-1005",
-   "qty": 0,
+   "qty": 1,
    "cost": 58900,
    "created": "2026-09-22"
   },
