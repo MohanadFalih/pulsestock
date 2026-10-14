@@ -32,6 +32,11 @@ a per-ad DAILY time series (spend, purchases, impressions, reach, frequency,
 cpm, ctr, clicks) for trend detection. Own fetch (time_increment=1), own
 failure path — campaigns.json and ads-7d.json schemas untouched.
 
+v1.6 — additive only: new standalone file public/data/placement-metrics.json
+with per-campaign Platform x Placement DAILY series over 14 days (spend,
+impressions, clicks, ctr, cpm, purchases) via breakdowns=
+publisher_platform,platform_position. Own fetch, own failure path.
+
 Deliberately a SEPARATE file from ad-brief.json: stable URL, independent
 schema, zero risk to the existing morning reader that depends on the brief.
 
@@ -91,7 +96,7 @@ def get_all(path, params):
     url = f"{BASE}/{path}?{urllib.parse.urlencode(params)}"
     rows = []
     while url:
-        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.5"})
+        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.6"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             payload = json.load(resp)
         if "error" in payload:
@@ -277,6 +282,22 @@ def main():
                            "error": f"meta ad-daily fetch failed: {exc}",
                            "skus": {}})
 
+    # ---- v1.6: per-campaign Platform × Placement DAILY series, 14 days
+    # (independent — own fetch, own file, own failure path) -----------------
+    try:
+        build_placement_metrics(today, now)
+    except Exception as exc:
+        p_since = today - dt.timedelta(days=13)
+        write_placement_metrics({"syncedAt": now, "metaSyncedAt": now,
+                                 "window": {"since": p_since.isoformat(),
+                                            "until": today.isoformat(),
+                                            "days": 14},
+                                 "tz": "dates are in the ad account timezone as returned by Meta",
+                                 "currency": "USD",
+                                 "note": PLACEMENT_NOTE,
+                                 "error": f"meta placement fetch failed: {exc}",
+                                 "campaigns": []})
+
 
 SKU_RE = re.compile(r"([A-Za-z]{1,4}-\d{3,6})")
 
@@ -457,6 +478,91 @@ def write_ads_metrics(out):
     n_ads = sum(len(v["ads"]) for v in out["skus"].values())
     print(f"ads-metrics.json: {len(out['skus'])} SKUs, {n_ads} ad links, "
           f"error={out['error']}")
+
+
+PLACEMENT_NOTE = ("Per-campaign Platform x Placement DAILY series over the "
+                  "14-day window (including today), from Meta Insights with "
+                  "breakdowns=publisher_platform,platform_position. Each "
+                  "campaign carries placements[] ({platform, position, "
+                  "daily[]}); each daily row: date, spendUSD, impressions, "
+                  "clicks, ctrPct, cpmUSD, purchases. Missing date = zero "
+                  "delivery. purchases = Meta action type 'omni_purchase' "
+                  "(fallback 'purchase') — the Ads Manager Purchases "
+                  "column; null when zero. ctrPct/cpmUSD straight from the "
+                  "API. error!=null means the fetch failed — campaigns.json, "
+                  "ads-7d.json and ads-metrics.json are unaffected.")
+
+
+def build_placement_metrics(today, now):
+    """Fetch campaign-level daily insights broken down by platform x
+    position and write public/data/placement-metrics.json."""
+    p_since = today - dt.timedelta(days=13)
+    rows = get_all(f"act_{ACCOUNT}/insights", {
+        "level": "campaign",
+        "time_increment": "1",
+        "breakdowns": "publisher_platform,platform_position",
+        "time_range": json.dumps({"since": p_since.isoformat(),
+                                  "until": today.isoformat()}),
+        "fields": "campaign_id,campaign_name,spend,impressions,clicks,"
+                  "ctr,cpm,actions",
+        "limit": "500",
+    })
+    camps = {}
+    for row in rows:
+        cid = row.get("campaign_id") or row.get("campaign_name") or "?"
+        camp = camps.setdefault(cid, {"name": row.get("campaign_name"),
+                                      "placements": {}})
+        pkey = (row.get("publisher_platform") or "unknown",
+                row.get("platform_position") or "unknown")
+        place = camp["placements"].setdefault(pkey, [])
+        try:
+            spend = float(row.get("spend") or 0)
+        except (TypeError, ValueError):
+            spend = 0.0
+        purch = int(action_single(row.get("actions"), PURCHASE_TYPE,
+                                  PURCHASE_TYPE_FALLBACK))
+        try:
+            cpm = round(float(row["cpm"]), 2)
+        except (KeyError, TypeError, ValueError):
+            cpm = None
+        place.append({
+            "date": row.get("date_start"),
+            "spendUSD": round(spend, 2),
+            "impressions": int(row.get("impressions") or 0),
+            "clicks": int(row.get("clicks") or 0),
+            "ctrPct": round(float(row.get("ctr") or 0), 2),
+            "cpmUSD": cpm,
+            "purchases": purch if purch > 0 else None,
+        })
+    out_camps = []
+    for cid in sorted(camps, key=lambda k: (camps[k]["name"] or "")):
+        camp = camps[cid]
+        placements = []
+        for (platform, position) in sorted(camp["placements"]):
+            daily = camp["placements"][(platform, position)]
+            daily.sort(key=lambda d: d["date"] or "")
+            placements.append({"platform": platform, "position": position,
+                               "daily": daily})
+        out_camps.append({"id": cid, "name": camp["name"],
+                          "placements": placements})
+    write_placement_metrics({"syncedAt": now, "metaSyncedAt": now,
+                             "window": {"since": p_since.isoformat(),
+                                        "until": today.isoformat(),
+                                        "days": 14},
+                             "tz": "dates are in the ad account timezone as returned by Meta",
+                             "currency": "USD",
+                             "note": PLACEMENT_NOTE,
+                             "error": None,
+                             "campaigns": out_camps})
+
+
+def write_placement_metrics(out):
+    path = os.path.join(DATA_DIR, "placement-metrics.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    n_pl = sum(len(c["placements"]) for c in out["campaigns"])
+    print(f"placement-metrics.json: {len(out['campaigns'])} campaigns, "
+          f"{n_pl} platform-position pairs, error={out['error']}")
 
 
 def write(out):
