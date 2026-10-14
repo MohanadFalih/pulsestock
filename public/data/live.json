@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-14T07:02:15.305453+00:00",
+ "syncedAt": "2026-10-14T07:31:35.767970+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -954,9 +954,9 @@
    "units": 83,
    "revenue": 3492000,
    "delivered": 38,
-   "returned": 3,
-   "unitsBoughtFromSupplier": 78,
-   "returnedStock": 4,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 80,
+   "returnedStock": 5,
    "unitPrice": 44000.0,
    "orderVelocity7d": 6.0,
    "daysSinceLastOrder": 0,
@@ -12667,32 +12667,6 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 17,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4502,
    "name": "H-1465",
    "sku": "H-1465",
@@ -12712,6 +12686,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 7,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 17,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13188,8 +13188,8 @@
   }
  ],
  "shop": {
-  "stockUnits": 1787,
-  "stockValue": 50713138,
+  "stockUnits": 1788,
+  "stockValue": 50735526,
   "stockVariants": 1419
  },
  "daily": {
@@ -26309,18 +26309,18 @@
      64000
     ]
    },
-   "4628": {
-    "2026-09-27": [
-     1,
-     1,
-     40000
-    ]
-   },
    "4502": {
     "2026-10-07": [
      1,
      1,
      39000
+    ]
+   },
+   "4628": {
+    "2026-09-27": [
+     1,
+     1,
+     40000
     ]
    },
    "4625": {
@@ -26829,6 +26829,10 @@
    "2026-10-13": [
     9,
     12
+   ],
+   "2026-10-14": [
+    0,
+    1
    ]
   },
   "orders": {
@@ -32415,8 +32419,9 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -167397,7 +167402,7 @@
   {
    "sku": "H-1919",
    "model": "H-1919",
-   "qty": 1,
+   "qty": 2,
    "cost": 22389,
    "created": "2026-10-02"
   },
