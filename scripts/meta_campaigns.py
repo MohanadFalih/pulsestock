@@ -27,6 +27,11 @@ v1.3/v1.4 — VALUE correction, schema untouched (same fields, same types):
     "Total messaging contacts" column), falling back to plain
     "messaging_conversation_started" — no more cross-type summing.
 
+v1.5 — additive only: new standalone file public/data/ads-metrics.json with
+a per-ad DAILY time series (spend, purchases, impressions, reach, frequency,
+cpm, ctr, clicks) for trend detection. Own fetch (time_increment=1), own
+failure path — campaigns.json and ads-7d.json schemas untouched.
+
 Deliberately a SEPARATE file from ad-brief.json: stable URL, independent
 schema, zero risk to the existing morning reader that depends on the brief.
 
@@ -86,7 +91,7 @@ def get_all(path, params):
     url = f"{BASE}/{path}?{urllib.parse.urlencode(params)}"
     rows = []
     while url:
-        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.4"})
+        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-campaigns/1.5"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             payload = json.load(resp)
         if "error" in payload:
@@ -257,6 +262,21 @@ def main():
                      "error": f"meta ad-level fetch failed: {exc}",
                      "skus": {}})
 
+    # ---- v1.5: per-ad DAILY time series (independent — its own fetch, its
+    # own file, its own failure path; campaigns.json and ads-7d.json above
+    # are never affected) ---------------------------------------------------
+    try:
+        build_ads_metrics(since, today, now)
+    except Exception as exc:
+        write_ads_metrics({"syncedAt": now, "metaSyncedAt": now,
+                           "window": {"since": since.isoformat(),
+                                      "until": today.isoformat(), "days": 7},
+                           "tz": "dates are in the ad account timezone as returned by Meta",
+                           "currency": "USD",
+                           "note": ADS_METRICS_NOTE,
+                           "error": f"meta ad-daily fetch failed: {exc}",
+                           "skus": {}})
+
 
 SKU_RE = re.compile(r"([A-Za-z]{1,4}-\d{3,6})")
 
@@ -343,6 +363,100 @@ def write_ads7d(out):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     print(f"ads-7d.json: {len(out['skus'])} SKUs, error={out['error']}")
+
+
+ADS_METRICS_NOTE = ("Per-ad DAILY time series over the 7-day window "
+                    "(including today), keyed by SKU extracted from ad "
+                    "names (e.g. 'H-1920'); an ad mentioning several SKUs "
+                    "appears under each. Each ad carries a 'daily' list — "
+                    "one row per date with delivery (missing date = zero "
+                    "delivery), like campaigns.json. purchases = Meta action "
+                    "type 'omni_purchase' (fallback 'purchase') — the Ads "
+                    "Manager Purchases column; null when zero. frequency is "
+                    "Meta's own daily value (fallback impressions/reach; "
+                    "null when reach=0). cpmUSD/ctrPct/clicks/impressions/"
+                    "reach straight from the Insights API. Built for trend "
+                    "detection (rising CPM, collapsing CTR, ...). "
+                    "error!=null means the fetch failed — campaigns.json "
+                    "and ads-7d.json are unaffected.")
+
+
+def build_ads_metrics(since, today, now):
+    """Fetch ad-level DAILY insights and write public/data/ads-metrics.json."""
+    rows = get_all(f"act_{ACCOUNT}/insights", {
+        "level": "ad",
+        "time_increment": "1",
+        "time_range": json.dumps({"since": since.isoformat(),
+                                  "until": today.isoformat()}),
+        "fields": "ad_id,ad_name,campaign_name,spend,impressions,reach,"
+                  "frequency,cpm,ctr,clicks,actions",
+        "limit": "500",
+    })
+    ads = {}
+    for row in rows:
+        ad_id = row.get("ad_id") or row.get("ad_name") or "?"
+        entry = ads.setdefault(ad_id, {
+            "adName": row.get("ad_name"),
+            "campaignName": row.get("campaign_name"),
+            "daily": [],
+        })
+        try:
+            spend = float(row.get("spend") or 0)
+        except (TypeError, ValueError):
+            spend = 0.0
+        purch = int(action_single(row.get("actions"), PURCHASE_TYPE,
+                                  PURCHASE_TYPE_FALLBACK))
+        impressions = int(row.get("impressions") or 0)
+        reach = int(row.get("reach") or 0)
+        try:
+            frequency = round(float(row["frequency"]), 2)
+        except (KeyError, TypeError, ValueError):
+            frequency = round(impressions / reach, 2) if reach > 0 else None
+        try:
+            cpm = round(float(row["cpm"]), 2)
+        except (KeyError, TypeError, ValueError):
+            cpm = None
+        entry["daily"].append({
+            "date": row.get("date_start"),
+            "spendUSD": round(spend, 2),
+            "purchases": purch if purch > 0 else None,
+            "impressions": impressions,
+            "reach": reach,
+            "frequency": frequency,
+            "cpmUSD": cpm,
+            "ctrPct": round(float(row.get("ctr") or 0), 2),
+            "clicks": int(row.get("clicks") or 0),
+        })
+
+    skus = {}
+    for ad_id, entry in ads.items():
+        entry["daily"].sort(key=lambda d: d["date"] or "")
+        for sku in extract_skus(entry["adName"]):
+            skus.setdefault(sku, []).append(
+                {"adId": ad_id, "adName": entry["adName"],
+                 "campaignName": entry["campaignName"],
+                 "daily": entry["daily"]})
+    out_skus = {}
+    for sku in sorted(skus):
+        out_skus[sku] = {"ads": sorted(skus[sku],
+                                       key=lambda a: (a["adName"] or ""))}
+    write_ads_metrics({"syncedAt": now, "metaSyncedAt": now,
+                       "window": {"since": since.isoformat(),
+                                  "until": today.isoformat(), "days": 7},
+                       "tz": "dates are in the ad account timezone as returned by Meta",
+                       "currency": "USD",
+                       "note": ADS_METRICS_NOTE,
+                       "error": None,
+                       "skus": out_skus})
+
+
+def write_ads_metrics(out):
+    path = os.path.join(DATA_DIR, "ads-metrics.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    n_ads = sum(len(v["ads"]) for v in out["skus"].values())
+    print(f"ads-metrics.json: {len(out['skus'])} SKUs, {n_ads} ad links, "
+          f"error={out['error']}")
 
 
 def write(out):
