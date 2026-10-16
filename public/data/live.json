@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-16T07:32:15.474232+00:00",
+ "syncedAt": "2026-10-16T08:02:28.806125+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1313,17 +1313,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-30",
    "firstOrderDate": "2026-10-01",
-   "lastOrderDate": "2026-10-14",
-   "orders": 15,
-   "units": 16,
-   "revenue": 1204000,
+   "lastOrderDate": "2026-10-16",
+   "orders": 16,
+   "units": 17,
+   "revenue": 1280000,
    "delivered": 14,
    "returned": 0,
-   "unitsBoughtFromSupplier": 16,
+   "unitsBoughtFromSupplier": 17,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1521,17 +1521,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-10-15",
-   "orders": 42,
-   "units": 43,
-   "revenue": 3258000,
+   "lastOrderDate": "2026-10-16",
+   "orders": 43,
+   "units": 44,
+   "revenue": 3336000,
    "delivered": 19,
    "returned": 3,
    "unitsBoughtFromSupplier": 42,
    "returnedStock": 1,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 2.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 2.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13057,32 +13057,6 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 19,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4502,
    "name": "H-1465",
    "sku": "H-1465",
@@ -13102,6 +13076,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 9,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 19,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13985,6 +13985,11 @@
      2,
      2,
      152000
+    ],
+    "2026-10-16": [
+     1,
+     1,
+     76000
     ]
    },
    "7369": {
@@ -14159,6 +14164,11 @@
      3,
      3,
      234000
+    ],
+    "2026-10-16": [
+     1,
+     1,
+     78000
     ]
    },
    "7362": {
@@ -26675,18 +26685,18 @@
      49000
     ]
    },
-   "4628": {
-    "2026-09-27": [
-     1,
-     1,
-     40000
-    ]
-   },
    "4502": {
     "2026-10-07": [
      1,
      1,
      39000
+    ]
+   },
+   "4628": {
+    "2026-09-27": [
+     1,
+     1,
+     40000
     ]
    },
    "4640": {
@@ -27266,10 +27276,48 @@
    "2026-10-13": 42,
    "2026-10-14": 30,
    "2026-10-15": 32,
-   "2026-10-16": 1
+   "2026-10-16": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33407",
+   "d": "2026-10-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33406",
+   "d": "2026-10-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1664",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33405",
    "d": "2026-10-16",
