@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-16T12:32:38.955047+00:00",
+ "syncedAt": "2026-10-16T12:39:58.002873+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1210,15 +1210,15 @@
    "odooCreatedDate": "2026-10-02",
    "firstOrderDate": "2026-10-02",
    "lastOrderDate": "2026-10-16",
-   "orders": 83,
-   "units": 98,
-   "revenue": 4152000,
+   "orders": 84,
+   "units": 99,
+   "revenue": 4196000,
    "delivered": 47,
    "returned": 5,
    "unitsBoughtFromSupplier": 93,
    "returnedStock": 2,
    "unitPrice": 44000.0,
-   "orderVelocity7d": 5.57,
+   "orderVelocity7d": 5.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -13952,9 +13952,9 @@
      308000
     ],
     "2026-10-16": [
-     3,
-     3,
-     132000
+     4,
+     4,
+     176000
     ]
    },
    "7375": {
@@ -27329,10 +27329,29 @@
    "2026-10-13": 42,
    "2026-10-14": 30,
    "2026-10-15": 32,
-   "2026-10-16": 11
+   "2026-10-16": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33416",
+   "d": "2026-10-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 44000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33415",
    "d": "2026-10-16",
