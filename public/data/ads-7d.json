@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-16T12:02:19.194933+00:00",
- "metaSyncedAt": "2026-10-16T12:02:19.194933+00:00",
+ "syncedAt": "2026-10-16T12:21:16.900868+00:00",
+ "metaSyncedAt": "2026-10-16T12:21:16.900868+00:00",
  "window": {
   "since": "2026-10-10",
   "until": "2026-10-16",
@@ -9,6 +9,493 @@
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
  "note": "Per-SKU ad-level Meta performance over the 7-day window (including today). SKUs are extracted from ad names (e.g. 'H-1920'); an ad whose name mentions several SKUs attributes its full spend/purchases to each of them. purchases7d is null when zero (same convention as the 3-day fields in ad-brief.json) and counts the single action type 'omni_purchase' (fallback 'purchase') — the Ads Manager Purchases column; offsite_conversion.* excluded, no double counting). error!=null means the ad-level fetch failed — campaigns.json is unaffected.",
- "error": "meta ad-level fetch failed: HTTP Error 400: Bad Request",
- "skus": {}
+ "error": null,
+ "skus": {
+  "H-1664": {
+   "spend7dUSD": 99.67,
+   "purchases7d": 8,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 99.67,
+     "purchases7d": 8
+    }
+   }
+  },
+  "H-1859": {
+   "spend7dUSD": 0.3,
+   "purchases7d": null,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.3,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1869": {
+   "spend7dUSD": 1.72,
+   "purchases7d": 1,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.67,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 1.05,
+     "purchases7d": 1
+    }
+   }
+  },
+  "H-1878": {
+   "spend7dUSD": 6.77,
+   "purchases7d": null,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 6.73,
+     "purchases7d": null
+    },
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.04,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1889": {
+   "spend7dUSD": 0.95,
+   "purchases7d": null,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.95,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1900": {
+   "spend7dUSD": 0.27,
+   "purchases7d": null,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.27,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1906": {
+   "spend7dUSD": 9.62,
+   "purchases7d": null,
+   "campaigns": {
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 9.62,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1908": {
+   "spend7dUSD": 304.21,
+   "purchases7d": 32,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 73.74,
+     "purchases7d": 14
+    },
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 5.06,
+     "purchases7d": 3
+    },
+    "DENIZ | PROSPECTING | BROAD": {
+     "spend7dUSD": 10.01,
+     "purchases7d": null
+    },
+    "DENIZ | PROSPECTING | LAL 1%": {
+     "spend7dUSD": 6.99,
+     "purchases7d": null
+    },
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 13.84,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 194.57,
+     "purchases7d": 15
+    }
+   }
+  },
+  "H-1909": {
+   "spend7dUSD": 10.88,
+   "purchases7d": 1,
+   "campaigns": {
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 10.88,
+     "purchases7d": 1
+    }
+   }
+  },
+  "H-1910": {
+   "spend7dUSD": 26.98,
+   "purchases7d": null,
+   "campaigns": {
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 26.98,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1911": {
+   "spend7dUSD": 18.81,
+   "purchases7d": null,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 14.8,
+     "purchases7d": null
+    },
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 4.01,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1912": {
+   "spend7dUSD": 44.7,
+   "purchases7d": 6,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 23.28,
+     "purchases7d": null
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 18.69,
+     "purchases7d": 5
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 2.73,
+     "purchases7d": 1
+    }
+   }
+  },
+  "H-1914": {
+   "spend7dUSD": 7.04,
+   "purchases7d": null,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 7.04,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1915": {
+   "spend7dUSD": 18.54,
+   "purchases7d": 2,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 5.98,
+     "purchases7d": 2
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 10.9,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 1.66,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1916": {
+   "spend7dUSD": 144.5,
+   "purchases7d": 15,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 136.18,
+     "purchases7d": 14
+    },
+    "DENIZ | PROSPECTING | BROAD": {
+     "spend7dUSD": 4.53,
+     "purchases7d": 1
+    },
+    "DENIZ | PROSPECTING | LAL 1%": {
+     "spend7dUSD": 3.79,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1919": {
+   "spend7dUSD": 277.84,
+   "purchases7d": 56,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 41.3,
+     "purchases7d": 7
+    },
+    "DENIZ | PROSPECTING | BROAD": {
+     "spend7dUSD": 18.64,
+     "purchases7d": 1
+    },
+    "DENIZ | PROSPECTING | LAL 1%": {
+     "spend7dUSD": 27.35,
+     "purchases7d": 1
+    },
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 59.81,
+     "purchases7d": 17
+    },
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 41.23,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 89.51,
+     "purchases7d": 30
+    }
+   }
+  },
+  "H-1920": {
+   "spend7dUSD": 146.64,
+   "purchases7d": 18,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 37.9,
+     "purchases7d": 6
+    },
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 38.64,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 70.1,
+     "purchases7d": 12
+    }
+   }
+  },
+  "H-1925": {
+   "spend7dUSD": 20.53,
+   "purchases7d": 1,
+   "campaigns": {
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 20.53,
+     "purchases7d": 1
+    }
+   }
+  },
+  "H-1926": {
+   "spend7dUSD": 0.77,
+   "purchases7d": null,
+   "campaigns": {
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 0.77,
+     "purchases7d": null
+    }
+   }
+  },
+  "K-4099": {
+   "spend7dUSD": 26.51,
+   "purchases7d": null,
+   "campaigns": {
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 0.02,
+     "purchases7d": null
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 26.49,
+     "purchases7d": null
+    }
+   }
+  },
+  "K-555": {
+   "spend7dUSD": 15.16,
+   "purchases7d": null,
+   "campaigns": {
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 15.16,
+     "purchases7d": null
+    }
+   }
+  },
+  "K-6647": {
+   "spend7dUSD": 37.4,
+   "purchases7d": 11,
+   "campaigns": {
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 37.4,
+     "purchases7d": 11
+    }
+   }
+  },
+  "K-66681": {
+   "spend7dUSD": 37.79,
+   "purchases7d": 4,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 37.79,
+     "purchases7d": 4
+    }
+   }
+  },
+  "K-6671": {
+   "spend7dUSD": 19.35,
+   "purchases7d": 2,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 19.35,
+     "purchases7d": 2
+    }
+   }
+  },
+  "K-6674": {
+   "spend7dUSD": 92.42,
+   "purchases7d": 5,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 92.42,
+     "purchases7d": 5
+    }
+   }
+  },
+  "K-6676": {
+   "spend7dUSD": 75.88,
+   "purchases7d": 8,
+   "campaigns": {
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 75.88,
+     "purchases7d": 8
+    }
+   }
+  },
+  "L-2009": {
+   "spend7dUSD": 1.04,
+   "purchases7d": 2,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 1.04,
+     "purchases7d": 2
+    }
+   }
+  },
+  "L-6282": {
+   "spend7dUSD": 0.0,
+   "purchases7d": null,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    }
+   }
+  },
+  "L-6283": {
+   "spend7dUSD": 44.52,
+   "purchases7d": 6,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 44.52,
+     "purchases7d": 6
+    }
+   }
+  },
+  "T-8002": {
+   "spend7dUSD": 107.14,
+   "purchases7d": 14,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 16.42,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 90.72,
+     "purchases7d": 14
+    }
+   }
+  },
+  "T-8003": {
+   "spend7dUSD": 15.7,
+   "purchases7d": 2,
+   "campaigns": {
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 15.7,
+     "purchases7d": 2
+    }
+   }
+  },
+  "T-8004": {
+   "spend7dUSD": 10.22,
+   "purchases7d": null,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 10.22,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8010": {
+   "spend7dUSD": 0.26,
+   "purchases7d": null,
+   "campaigns": {
+    "DM_SHOP_Traffic": {
+     "spend7dUSD": 0.26,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8020": {
+   "spend7dUSD": 8.73,
+   "purchases7d": null,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 4.94,
+     "purchases7d": null
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 3.79,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8022": {
+   "spend7dUSD": 8.79,
+   "purchases7d": null,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.15,
+     "purchases7d": null
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 8.64,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8024": {
+   "spend7dUSD": 98.57,
+   "purchases7d": 17,
+   "campaigns": {
+    "25 AUG MINE": {
+     "spend7dUSD": 62.03,
+     "purchases7d": 8
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 35.26,
+     "purchases7d": 7
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 1.28,
+     "purchases7d": 2
+    }
+   }
+  },
+  "T-8035": {
+   "spend7dUSD": 75.7,
+   "purchases7d": 13,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 9.55,
+     "purchases7d": 3
+    },
+    "SEASON | FULL CATALOG": {
+     "spend7dUSD": 46.53,
+     "purchases7d": 5
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 19.62,
+     "purchases7d": 5
+    }
+   }
+  }
+ }
 }
