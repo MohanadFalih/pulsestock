@@ -1,9 +1,35 @@
 {
- "syncedAt": "2026-10-17T10:32:40.422616+00:00",
+ "syncedAt": "2026-10-17T11:02:28.322138+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7428,
+   "name": "H-1935",
+   "sku": "H-1935",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-10-17",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 44000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
   {
    "odooId": 7427,
    "name": "H-1934",
@@ -411,7 +437,7 @@
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
-   "unitPrice": 49000.0,
+   "unitPrice": 48000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 5,
    "supplierStock": {
@@ -1236,15 +1262,15 @@
    "odooCreatedDate": "2026-10-02",
    "firstOrderDate": "2026-10-02",
    "lastOrderDate": "2026-10-17",
-   "orders": 89,
-   "units": 104,
-   "revenue": 4416000,
+   "orders": 91,
+   "units": 106,
+   "revenue": 4504000,
    "delivered": 47,
    "returned": 5,
-   "unitsBoughtFromSupplier": 99,
+   "unitsBoughtFromSupplier": 101,
    "returnedStock": 2,
    "unitPrice": 44000.0,
-   "orderVelocity7d": 5.0,
+   "orderVelocity7d": 5.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12901,32 +12927,6 @@
    }
   },
   {
-   "odooId": 4628,
-   "name": "T-6780",
-   "sku": "T-6780",
-   "category": "Takim (Caket & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-09-27",
-   "orders": 12,
-   "units": 12,
-   "revenue": 363000,
-   "delivered": 12,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 40000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 20,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4502,
    "name": "H-1465",
    "sku": "H-1465",
@@ -12946,6 +12946,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4628,
+   "name": "T-6780",
+   "sku": "T-6780",
+   "category": "Takim (Caket & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-09-27",
+   "orders": 12,
+   "units": 12,
+   "revenue": 363000,
+   "delivered": 12,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 40000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 20,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13187,6 +13213,32 @@
    }
   },
   {
+   "odooId": 4607,
+   "name": "T-6758",
+   "sku": "T-6758",
+   "category": "Takim (Tunik & Etek)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-10-10",
+   "lastOrderDate": "2026-09-25",
+   "orders": 3,
+   "units": 3,
+   "revenue": 109000,
+   "delivered": 3,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 2,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 22,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4538,
    "name": "L-1575",
    "sku": "L-1575",
@@ -13232,32 +13284,6 @@
    "unitPrice": 75000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 18,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4607,
-   "name": "T-6758",
-   "sku": "T-6758",
-   "category": "Takim (Tunik & Etek)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-10-10",
-   "lastOrderDate": "2026-09-25",
-   "orders": 3,
-   "units": 3,
-   "revenue": 109000,
-   "delivered": 3,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 2,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 22,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14062,9 +14088,9 @@
      352000
     ],
     "2026-10-17": [
-     1,
-     1,
-     44000
+     3,
+     3,
+     132000
     ]
    },
    "7375": {
@@ -26709,18 +26735,18 @@
      39000
     ]
    },
-   "4628": {
-    "2026-09-27": [
-     1,
-     1,
-     40000
-    ]
-   },
    "4502": {
     "2026-10-07": [
      1,
      1,
      39000
+    ]
+   },
+   "4628": {
+    "2026-09-27": [
+     1,
+     1,
+     40000
     ]
    },
    "4616": {
@@ -26831,6 +26857,13 @@
      41000
     ]
    },
+   "4607": {
+    "2026-09-25": [
+     1,
+     1,
+     41000
+    ]
+   },
    "4538": {
     "2026-10-15": [
      1,
@@ -26848,13 +26881,6 @@
      1,
      1,
      75000
-    ]
-   },
-   "4607": {
-    "2026-09-25": [
-     1,
-     1,
-     41000
     ]
    },
    "4548": {
@@ -27421,10 +27447,48 @@
    "2026-10-14": 30,
    "2026-10-15": 32,
    "2026-10-16": 37,
-   "2026-10-17": 9
+   "2026-10-17": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33456",
+   "d": "2026-10-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 44000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33455",
+   "d": "2026-10-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1919",
+     "qty": 1,
+     "price": 44000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33454",
    "d": "2026-10-17",
@@ -167189,6 +167253,20 @@
   {
    "sku": "H-1934",
    "model": "H-1934",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-17"
+  },
+  {
+   "sku": "H-1935",
+   "model": "H-1935",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-10-17"
+  },
+  {
+   "sku": "H-1935",
+   "model": "H-1935",
    "qty": 0,
    "cost": 0,
    "created": "2026-10-17"
