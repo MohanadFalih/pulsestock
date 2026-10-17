@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-17T13:32:34.885672+00:00",
+ "syncedAt": "2026-10-17T13:40:53.961352+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -331,7 +331,7 @@
    "revenue": 294000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.43,
@@ -955,7 +955,7 @@
    "revenue": 162000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 1,
    "unitPrice": 81000.0,
    "orderVelocity7d": 0.29,
@@ -1839,7 +1839,7 @@
    "revenue": 797000,
    "delivered": 7,
    "returned": 3,
-   "unitsBoughtFromSupplier": 9,
+   "unitsBoughtFromSupplier": 10,
    "returnedStock": 3,
    "unitPrice": 82000.0,
    "orderVelocity7d": 0.29,
@@ -2510,15 +2510,15 @@
    "odooCreatedDate": "2026-09-18",
    "firstOrderDate": "2026-09-18",
    "lastOrderDate": "2026-10-17",
-   "orders": 99,
-   "units": 107,
-   "revenue": 7797400,
+   "orders": 100,
+   "units": 108,
+   "revenue": 7872400,
    "delivered": 84,
    "returned": 10,
    "unitsBoughtFromSupplier": 97,
    "returnedStock": 6,
    "unitPrice": 75000.0,
-   "orderVelocity7d": 2.43,
+   "orderVelocity7d": 2.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -15377,9 +15377,9 @@
      225000
     ],
     "2026-10-17": [
-     3,
-     3,
-     225000
+     4,
+     4,
+     300000
     ]
    },
    "7328": {
@@ -27527,10 +27527,29 @@
    "2026-10-14": 30,
    "2026-10-15": 32,
    "2026-10-16": 37,
-   "2026-10-17": 23
+   "2026-10-17": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33469",
+   "d": "2026-10-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1908-mavi-44",
+     "qty": 1,
+     "price": 75000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33468",
    "d": "2026-10-17",
