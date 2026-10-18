@@ -129,7 +129,119 @@ const LEGACY_DECISION_MAP: Record<string, QueueGroupKey> = {
 };
 
 // ─── Page ────────────────────────────────────────────────────────────────────
+// ─── Gemini Advisor Component ────────────────────────────────────────────────
+function GeminiAdvisor() {
+  const [messages, setMessages] = useState<Array<{ role: "user" | "assistant"; content: string }>>([
+    {
+      role: "assistant",
+      content:
+        "أهلاً مهند. أنا شريكك الاستشاري لدنيز مودا. أرى جميع تنبيهات Odoo وPulseStock الحالية. ما القرار الذي تريد مراجعته الآن بدون مجاملة؟",
+    },
+  ]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
+  const sendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || loading) return;
+
+    const userText = input;
+    setInput("");
+    const newMessages = [...messages, { role: "user" as const, content: userText }];
+    setMessages(newMessages);
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: newMessages,
+          dashboardContext: {
+            returnedStockUnits: globalKpis.returnedStockUnits,
+            returnedStockValue: globalKpis.returnedStockValue,
+            needsAttention: globalKpis.needsAttention,
+            activeAlerts: globalKpis.activeAlerts,
+          },
+        }),
+      });
+
+      const data = await res.json();
+      if (data.reply) {
+        setMessages([...newMessages, { role: "assistant", content: data.reply }]);
+      } else {
+        toast.error("فشل في استلام رد المستشار");
+      }
+    } catch {
+      toast.error("تعذر الاتصال بسيرفر التحليل");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="mb-8 rounded-xl border border-hairline bg-panel p-5 shadow-sm">
+      <div className="mb-3 flex items-center justify-between border-b border-hairline pb-3">
+        <div className="flex items-center gap-2">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-lime/15 text-lime">
+            <Zap className="h-4 w-4" />
+          </span>
+          <div>
+            <h3 className="font-display text-[15px] font-semibold text-text-primary">
+              المستشار الاستراتيجي الصريح (Gemini)
+            </h3>
+            <p className="text-[11.5px] text-text-secondary">
+              مرتبط لحظياً ببيانات Odoo ومخزون الرواجع
+            </p>
+          </div>
+        </div>
+        <span className="rounded-full bg-lime/10 px-2.5 py-0.5 font-mono text-[11px] font-medium text-lime">
+          Live Context Active
+        </span>
+      </div>
+
+      <div className="max-h-[260px] min-h-[140px] space-y-2.5 overflow-y-auto pr-1 text-[13px]">
+        {messages.map((m, idx) => (
+          <div
+            key={idx}
+            className={cn(
+              "rounded-lg p-3 leading-relaxed",
+              m.role === "user"
+                ? "ml-auto max-w-[85%] bg-lime text-abyss font-medium"
+                : "mr-auto max-w-[90%] border border-hairline bg-panel-hover text-text-primary"
+            )}
+          >
+            <span className="mb-1 block font-mono text-[10px] uppercase tracking-wider opacity-70">
+              {m.role === "user" ? "أنت" : "المستشار"}
+            </span>
+            {m.content}
+          </div>
+        ))}
+        {loading && (
+          <div className="text-[12px] text-text-muted animate-pulse">
+            جاري تدقيق الأرقام ومراجعة القرار...
+          </div>
+        )}
+      </div>
+
+      <form onSubmit={sendMessage} className="mt-3 flex gap-2">
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="اسأل المستشار: هل نوقف إعلانات هذا الموديل؟ كيف نصفي قطع المخزن؟"
+          className="flex-1 rounded-lg border border-hairline bg-abyss px-3 py-2 text-[13px] text-text-primary placeholder:text-text-muted focus:border-lime focus:outline-none"
+        />
+        <button
+          type="submit"
+          disabled={loading || !input.trim()}
+          className="rounded-lg bg-lime px-4 py-2 font-display text-[13px] font-semibold text-abyss transition hover:brightness-110 disabled:opacity-50"
+        >
+          تحليل
+        </button>
+      </form>
+    </div>
+  );
+}
 export default function Decisions() {
   const location = useLocation();
   const [handledIds, setHandledIds] = useState<string[]>([]);
@@ -327,7 +439,8 @@ export default function Decisions() {
           );
         })}
       </motion.div>
-
+{/* ── Gemini Advisor Section ─────────────────────────────────── */}
+<GeminiAdvisor />
       {/* ── Sections 2–6: alert groups by urgency ─────────────────────── */}
       <div className="flex flex-col gap-10">
         {groups.map(({ key, entries }) => {
