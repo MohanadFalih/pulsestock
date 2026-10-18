@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-18T18:19:29.406985+00:00",
+ "syncedAt": "2026-10-18T18:32:14.206330+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -11672,6 +11672,32 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 17,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 6370,
+   "name": "M-2025TRT545",
+   "sku": "M-2025TRT545",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-11-29",
+   "firstOrderDate": "2025-11-29",
+   "lastOrderDate": "2026-10-18",
+   "orders": 79,
+   "units": 82,
+   "revenue": 3095000,
+   "delivered": 81,
+   "returned": 12,
+   "unitsBoughtFromSupplier": 66,
+   "returnedStock": 3,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -26314,6 +26340,13 @@
      39000
     ]
    },
+   "6370": {
+    "2026-10-18": [
+     1,
+     1,
+     39000
+    ]
+   },
    "6365": {
     "2026-09-30": [
      1,
@@ -27695,10 +27728,27 @@
    "2026-10-15": 31,
    "2026-10-16": 36,
    "2026-10-17": 50,
-   "2026-10-18": 26
+   "2026-10-18": 27
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33526",
+   "d": "2026-10-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-2025TRT545",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33525",
    "d": "2026-10-18",
