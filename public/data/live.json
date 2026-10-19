@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-18T23:45:18.600599+00:00",
+ "syncedAt": "2026-10-19T00:02:46.807080+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -9214,20 +9214,20 @@
    "sku": "K-3049",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-04-29",
    "firstOrderDate": "2026-04-29",
-   "lastOrderDate": "2026-09-04",
-   "orders": 33,
-   "units": 33,
-   "revenue": 3597000,
+   "lastOrderDate": "2026-10-19",
+   "orders": 34,
+   "units": 34,
+   "revenue": 3706000,
    "delivered": 33,
    "returned": 9,
    "unitsBoughtFromSupplier": 28,
    "returnedStock": 2,
    "unitPrice": 109000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 45,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12727,8 +12727,8 @@
    "stage": "selling",
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
-   "lastOrderDate": "2026-10-18",
-   "orders": 705,
+   "lastOrderDate": "2026-10-19",
+   "orders": 706,
    "units": 794,
    "revenue": 25228000,
    "delivered": 778,
@@ -12736,8 +12736,8 @@
    "unitsBoughtFromSupplier": 636,
    "returnedStock": 4,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 1.57,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -24555,6 +24555,11 @@
      1,
      1,
      109000
+    ],
+    "2026-10-19": [
+     1,
+     1,
+     109000
     ]
    },
    "6995": {
@@ -26785,6 +26790,11 @@
      4,
      5,
      195000
+    ],
+    "2026-10-19": [
+     1,
+     1,
+     39000
     ]
    },
    "5780": {
@@ -27639,10 +27649,54 @@
    "2026-10-16": 36,
    "2026-10-17": 50,
    "2026-10-18": 31,
-   "2026-10-19": 4
+   "2026-10-19": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33536",
+   "d": "2026-10-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -10000,
+   "lines": [
+    {
+     "sku": "H-1664",
+     "qty": 1,
+     "price": 76000,
+     "discPct": 8.3,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 8.3,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33535",
+   "d": "2026-10-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -57000,
+   "lines": [
+    {
+     "sku": "K-3049-اسودsiyah-42",
+     "qty": 1,
+     "price": 109000,
+     "discPct": 50.0,
+     "del": 0
+    }
+   ],
+   "src": "Website"
+  },
   {
    "id": "S33534",
    "d": "2026-10-19",
