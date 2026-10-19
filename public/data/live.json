@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-19T19:02:42.766713+00:00",
+ "syncedAt": "2026-10-19T19:32:19.181513+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -140,20 +140,20 @@
    "sku": "T-7074",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-18",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-19",
+   "lastOrderDate": "2026-10-19",
+   "orders": 1,
+   "units": 1,
+   "revenue": 99000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -846,15 +846,15 @@
    "odooCreatedDate": "2026-10-09",
    "firstOrderDate": "2026-10-09",
    "lastOrderDate": "2026-10-19",
-   "orders": 17,
-   "units": 17,
-   "revenue": 2329000,
+   "orders": 18,
+   "units": 18,
+   "revenue": 2466000,
    "delivered": 8,
    "returned": 0,
-   "unitsBoughtFromSupplier": 17,
+   "unitsBoughtFromSupplier": 18,
    "returnedStock": 0,
    "unitPrice": 137000.0,
-   "orderVelocity7d": 1.57,
+   "orderVelocity7d": 1.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -4976,20 +4976,20 @@
    "sku": "T-7068",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-08-05",
    "firstOrderDate": "2026-08-05",
-   "lastOrderDate": "2026-09-15",
-   "orders": 32,
-   "units": 34,
-   "revenue": 3332000,
+   "lastOrderDate": "2026-10-19",
+   "orders": 33,
+   "units": 35,
+   "revenue": 3430000,
    "delivered": 34,
    "returned": 13,
    "unitsBoughtFromSupplier": 26,
    "returnedStock": 6,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 34,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -7163,17 +7163,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-02",
    "firstOrderDate": "2026-07-05",
-   "lastOrderDate": "2026-10-15",
-   "orders": 13,
-   "units": 13,
-   "revenue": 709000,
+   "lastOrderDate": "2026-10-19",
+   "orders": 14,
+   "units": 14,
+   "revenue": 758000,
    "delivered": 12,
    "returned": 1,
-   "unitsBoughtFromSupplier": 12,
+   "unitsBoughtFromSupplier": 13,
    "returnedStock": 0,
    "unitPrice": 49000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 4,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14029,6 +14029,13 @@
   "from": "2026-07-21",
   "to": "2026-10-19",
   "byProduct": {
+   "7432": {
+    "2026-10-19": [
+     1,
+     1,
+     99000
+    ]
+   },
    "7422": {
     "2026-10-18": [
      1,
@@ -14242,9 +14249,9 @@
      137000
     ],
     "2026-10-19": [
-     2,
-     2,
-     274000
+     3,
+     3,
+     411000
     ]
    },
    "7401": {
@@ -18803,6 +18810,11 @@
      1,
      1,
      98000
+    ],
+    "2026-10-19": [
+     1,
+     1,
+     98000
     ]
    },
    "7237": {
@@ -22504,6 +22516,11 @@
      49000
     ],
     "2026-10-15": [
+     1,
+     1,
+     49000
+    ],
+    "2026-10-19": [
      1,
      1,
      49000
@@ -27951,10 +27968,84 @@
    "2026-10-16": 36,
    "2026-10-17": 50,
    "2026-10-18": 31,
-   "2026-10-19": 32
+   "2026-10-19": 36
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33568",
+   "d": "2026-10-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1553",
+     "qty": 1,
+     "price": 49000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33567",
+   "d": "2026-10-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-7074",
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33566",
+   "d": "2026-10-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -7000,
+   "lines": [
+    {
+     "sku": "K-6676",
+     "qty": 1,
+     "price": 137000,
+     "discPct": 4.9,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33565",
+   "d": "2026-10-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -49000,
+   "lines": [
+    {
+     "sku": "T-7068-kahve-2",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 47.6,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33564",
    "d": "2026-10-19",
