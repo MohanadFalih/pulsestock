@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-19T17:40:22.823200+00:00",
+ "syncedAt": "2026-10-19T18:02:41.079161+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -461,7 +461,7 @@
    "revenue": 330000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 110000.0,
    "orderVelocity7d": 0.43,
@@ -13135,25 +13135,25 @@
    }
   },
   {
-   "odooId": 4748,
-   "name": "L-2050",
-   "sku": "L-2050",
-   "category": "Ferace",
+   "odooId": 4749,
+   "name": "L-1000",
+   "sku": "L-1000",
+   "category": "All",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-14",
-   "orders": 237,
-   "units": 268,
-   "revenue": 9364000,
-   "delivered": 264,
-   "returned": 89,
-   "unitsBoughtFromSupplier": 172,
-   "returnedStock": 3,
-   "unitPrice": 62000.0,
+   "lastOrderDate": "2026-09-28",
+   "orders": 121,
+   "units": 132,
+   "revenue": 5340000,
+   "delivered": 130,
+   "returned": 21,
+   "unitsBoughtFromSupplier": 64,
+   "returnedStock": 7,
+   "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 35,
+   "daysSinceLastOrder": 21,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13187,6 +13187,32 @@
    }
   },
   {
+   "odooId": 4740,
+   "name": "T-6800",
+   "sku": "T-6800",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-09-24",
+   "orders": 118,
+   "units": 121,
+   "revenue": 5710000,
+   "delivered": 117,
+   "returned": 25,
+   "unitsBoughtFromSupplier": 93,
+   "returnedStock": 1,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 25,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4738,
    "name": "T-6798",
    "sku": "T-6798",
@@ -13213,51 +13239,25 @@
    }
   },
   {
-   "odooId": 4749,
-   "name": "L-1000",
-   "sku": "L-1000",
-   "category": "All",
+   "odooId": 4748,
+   "name": "L-2050",
+   "sku": "L-2050",
+   "category": "Ferace",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-28",
-   "orders": 121,
-   "units": 132,
-   "revenue": 5340000,
-   "delivered": 130,
-   "returned": 21,
-   "unitsBoughtFromSupplier": 64,
-   "returnedStock": 7,
-   "unitPrice": 41000.0,
+   "lastOrderDate": "2026-09-14",
+   "orders": 237,
+   "units": 268,
+   "revenue": 9364000,
+   "delivered": 264,
+   "returned": 89,
+   "unitsBoughtFromSupplier": 172,
+   "returnedStock": 3,
+   "unitPrice": 62000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 21,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4740,
-   "name": "T-6800",
-   "sku": "T-6800",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-09-24",
-   "orders": 118,
-   "units": 121,
-   "revenue": 5710000,
-   "delivered": 117,
-   "returned": 25,
-   "unitsBoughtFromSupplier": 93,
-   "returnedStock": 1,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 25,
+   "daysSinceLastOrder": 35,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -27151,16 +27151,16 @@
      39000
     ]
    },
-   "4748": {
-    "2026-09-13": [
+   "4749": {
+    "2026-09-06": [
      1,
      1,
-     30000
+     55000
     ],
-    "2026-09-14": [
+    "2026-09-28": [
      1,
      1,
-     30000
+     41000
     ]
    },
    "4747": {
@@ -27185,6 +27185,13 @@
      72000
     ]
    },
+   "4740": {
+    "2026-09-24": [
+     1,
+     1,
+     41000
+    ]
+   },
    "4738": {
     "2026-09-27": [
      1,
@@ -27192,23 +27199,16 @@
      41000
     ]
    },
-   "4749": {
-    "2026-09-06": [
+   "4748": {
+    "2026-09-13": [
      1,
      1,
-     55000
+     30000
     ],
-    "2026-09-28": [
+    "2026-09-14": [
      1,
      1,
-     41000
-    ]
-   },
-   "4740": {
-    "2026-09-24": [
-     1,
-     1,
-     41000
+     30000
     ]
    },
    "4622": {
