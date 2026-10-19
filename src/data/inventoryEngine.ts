@@ -6,10 +6,12 @@
  * Business rules (ground truth, last 4 months):
  *  - Warehouse stock ≈ customer returns + old-season stock (buy-on-demand
  *    model: units are only bought from Turkey against real orders).
- *  - Clearance discount ladder by age in stock: 30d → 20% off, 45d → 35% off,
- *    60d → 50% off (end of season).
+ *  - AGGRESSIVE MARKDOWN policy by age in stock (off the FULL LIST PRICE):
+ *    0–10d → full price ("تسليم فوري") · 11–21d → −30% ("Action Needed") ·
+ *    22–30d → −50% ("Urgent Clearance") · 31d+ → −70% ("Max Liquidation",
+ *    dead stock).
  *  - "M"-prefixed models (Modaselvim legacy, Dec 2025) are bad quality →
- *    aggressive clearance: always one rung up the ladder (min 20%).
+ *    aggressive clearance: always one rung up the ladder (min 30%).
  *  - Returned units carry zero courier cost; they resell full-price while the
  *    model is active, discounted after.
  *
@@ -27,22 +29,25 @@ import type { Product } from "./products";
 export const CLEARANCE_TARGET_IQD = 30_000_000;
 
 /**
- * Age-in-stock discount ladder (policy): the FIRST rung whose minAge the
- * unit has reached applies.
+ * Aggressive-markdown ladder (policy): the FIRST band whose minAge the unit
+ * has reached applies. Discounts are taken off the FULL LIST PRICE.
+ *   0–10d  → 0%   (green, full price, "تسليم فوري")
+ *   11–21d → 30%  (yellow, "Action Needed")
+ *   22–30d → 50%  (orange, "Urgent Clearance")
+ *   31d+   → 70%  (dark red, "Max Liquidation" — dead stock)
  */
-export const DISCOUNT_LADDER = [
-  { minAge: 60, discPct: 50 },
-  { minAge: 45, discPct: 35 },
-  { minAge: 30, discPct: 20 },
+export const MARKDOWN_BANDS = [
+  { minAge: 31, discPct: 70, key: "dead", label: "Max Liquidation" },
+  { minAge: 22, discPct: 50, key: "urgent", label: "Urgent Clearance" },
+  { minAge: 11, discPct: 30, key: "action", label: "Action Needed" },
 ] as const;
 
-/** Aging buckets used by the ladder visual, oldest last. */
+/** Aging buckets used by the ladder visual — exactly the policy bands. */
 export const AGE_BUCKETS = [
-  { key: "0-14", label: "0–14 days", min: 0, max: 14 },
-  { key: "15-29", label: "15–29 days", min: 15, max: 29 },
-  { key: "30-44", label: "30–44 days", min: 30, max: 44 },
-  { key: "45-59", label: "45–59 days", min: 45, max: 59 },
-  { key: "60+", label: "60+ days", min: 60, max: null },
+  { key: "0-10", label: "0–10 days", min: 0, max: 10 },
+  { key: "11-21", label: "11–21 days", min: 11, max: 21 },
+  { key: "22-30", label: "22–30 days", min: 22, max: 30 },
+  { key: "31+", label: "31+ days", min: 31, max: null },
 ] as const;
 
 export type AgeBucketKey = (typeof AGE_BUCKETS)[number]["key"];
@@ -50,9 +55,9 @@ export type AgeBucketKey = (typeof AGE_BUCKETS)[number]["key"];
 /** Discount-tier performance bands over ordersDetail lines (discPct). */
 export const DISCOUNT_BANDS = [
   { key: "full", label: "Full price", minPct: 0, maxPct: 0 },
-  { key: "tier20", label: "~20% off", minPct: 1, maxPct: 25 },
-  { key: "tier35", label: "~35% off", minPct: 26, maxPct: 40 },
+  { key: "tier30", label: "~30% off", minPct: 1, maxPct: 40 },
   { key: "tier50", label: "~50% off", minPct: 41, maxPct: 60 },
+  { key: "tier70", label: "~70% off", minPct: 61, maxPct: 100 },
 ] as const;
 
 export type DiscountBandKey = (typeof DISCOUNT_BANDS)[number]["key"];
@@ -75,15 +80,26 @@ export function bucketForAge(ageDays: number): AgeBucketKey {
   for (const b of AGE_BUCKETS) {
     if (ageDays >= b.min && (b.max == null || ageDays <= b.max)) return b.key;
   }
-  return "60+";
+  return "31+";
 }
 
-/** Policy discount for a given age (0 when younger than 30 days). */
+/** Policy discount for a given age (0 inside the fresh 0–10d window). */
 export function ladderDiscount(ageDays: number): number {
-  for (const rung of DISCOUNT_LADDER) {
-    if (ageDays >= rung.minAge) return rung.discPct;
+  for (const band of MARKDOWN_BANDS) {
+    if (ageDays >= band.minAge) return band.discPct;
   }
   return 0;
+}
+
+/** Badge metadata for a discount percent (drives the UI chips). */
+export function markdownBadge(discPct: number): {
+  label: string;
+  color: string;
+} {
+  if (discPct >= 70) return { label: "Max Liquidation", color: "#E11D48" };
+  if (discPct >= 50) return { label: "Urgent Clearance", color: "#FB923C" };
+  if (discPct >= 30) return { label: "Action Needed", color: "#FBBF24" };
+  return { label: "تسليم فوري · Full price", color: "#C6F04D" };
 }
 
 /**
@@ -97,15 +113,15 @@ export function isMFamilyModel(model: string): boolean {
 
 /**
  * Suggested discount tier for a model. M-family clears aggressively: always
- * at least 20%, and always one rung above the age-based ladder.
+ * at least 30%, and always one rung above the age-based ladder.
  */
 export function suggestedDiscount(ageDays: number, mFamily: boolean): number {
   const base = ladderDiscount(ageDays);
   if (!mFamily) return base;
-  if (base >= 50) return 50;
-  if (base >= 35) return 50;
-  if (base >= 20) return 35;
-  return 20;
+  if (base >= 70) return 70;
+  if (base >= 50) return 70;
+  if (base >= 30) return 50;
+  return 30;
 }
 
 // ─── Stock analysis (stockDetail) ────────────────────────────────────────────
@@ -136,11 +152,22 @@ export interface ModelRollup {
   mFamily: boolean;
   /** Suggested clearance tier (ladder + M-family bump). */
   suggestedDiscPct: number;
-  /** True when the model has crossed a ladder threshold (avg age ≥ 30d). */
+  /** True when the model has crossed a ladder threshold (avg age ≥ 11d). */
   needsAction: boolean;
   /**
-   * Conservative recovery estimate: cost value × (1 − suggested discount).
-   * Cost-basis because the list price isn't in stockDetail.
+   * Full list price per unit, IQD (joined from the product records by model;
+   * null when the model has no known price).
+   */
+  listPriceUnit: number | null;
+  /**
+   * Suggested clearance price PER PIECE = full list price × (1 − discount).
+   * This is the number to put on the ad. Null when the price is unknown.
+   */
+  suggestedPriceUnit: number | null;
+  /**
+   * Recovery estimate for the whole model: units × list price ×
+   * (1 − suggested discount) when the list price is known, otherwise the
+   * conservative cost-basis estimate (cost × (1 − discount)).
    */
   estRecovery: number;
 }
@@ -173,8 +200,17 @@ export function modelOfSku(sku: string): string {
   return i === -1 ? sku.trim() : sku.slice(0, i).trim();
 }
 
-/** Aggregate stockDetail into buckets, per-model rollups, and target math. */
-export function analyzeStock(stock: OpsStockItem[], asOf: Date): StockAnalysis {
+/**
+ * Aggregate stockDetail into buckets, per-model rollups, and target math.
+ * `priceByModel` (model code → full list price, IQD) joins the original
+ * selling price into the markdown math; without it, recovery estimates fall
+ * back to the cost basis and per-piece suggested prices come out null.
+ */
+export function analyzeStock(
+  stock: OpsStockItem[],
+  asOf: Date,
+  priceByModel?: Map<string, number | null>
+): StockAnalysis {
   const buckets: StockBucket[] = AGE_BUCKETS.map((b) => ({
     ...b,
     discPct: ladderDiscount(b.min),
@@ -225,6 +261,8 @@ export function analyzeStock(stock: OpsStockItem[], asOf: Date): StockAnalysis {
     const avgAgeDays = a.units > 0 ? Math.round(a.ageQty / a.units) : 0;
     const mFamily = isMFamilyModel(model);
     const disc = suggestedDiscount(avgAgeDays, mFamily);
+    const listPrice = priceByModel?.get(model) ?? null;
+    const hasPrice = listPrice != null && listPrice > 0;
     return {
       model,
       units: a.units,
@@ -234,8 +272,14 @@ export function analyzeStock(stock: OpsStockItem[], asOf: Date): StockAnalysis {
       avgAgeDays,
       mFamily,
       suggestedDiscPct: disc,
-      needsAction: avgAgeDays >= 30 || mFamily,
-      estRecovery: Math.round(a.value * (1 - disc / 100)),
+      needsAction: avgAgeDays >= 11 || mFamily,
+      listPriceUnit: hasPrice ? listPrice : null,
+      suggestedPriceUnit: hasPrice
+        ? Math.round(listPrice * (1 - disc / 100))
+        : null,
+      estRecovery: Math.round(
+        (hasPrice ? a.units * listPrice : a.value) * (1 - disc / 100)
+      ),
     };
   });
   models.sort((a, b) => b.value - a.value);
