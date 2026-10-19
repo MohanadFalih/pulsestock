@@ -31,6 +31,7 @@ import {
   analyzeOrders,
   analyzeStock,
   fallbackFromProducts,
+  markdownBadge,
   CLEARANCE_TARGET_IQD,
   type DiscountBand,
   type FallbackInventory,
@@ -63,8 +64,8 @@ const riseChild = {
   show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE } },
 };
 
-/** Bucket bar colors: fresh lime → amber → rose as stock ages. */
-const BUCKET_COLORS = ["#C6F04D", "#A3D65C", "#FBBF24", "#FB923C", "#FB5D7A"];
+/** Bucket bar colors: green (fresh) → yellow → orange → dark red (dead). */
+const BUCKET_COLORS = ["#C6F04D", "#FBBF24", "#FB923C", "#E11D48"];
 
 function SyncPending({ message }: { message: string }) {
   return (
@@ -115,8 +116,8 @@ function PageHeader({ syncedAt, full }: { syncedAt: string | null; full: boolean
           transition={{ duration: 0.3, delay: 0.21 }}
           className="mt-1 text-[13.5px] text-text-secondary"
         >
-          Buy-on-demand from Turkey · stock is mostly customer returns · discount
-          ladder 30d→20% · 45d→35% · 60d→50% · {syncLine}
+          Buy-on-demand from Turkey · stock is mostly customer returns ·
+          aggressive markdown off full price · 11d→−30% · 22d→−50% · 31d+→−70% · {syncLine}
           {!full && " · detailed stock sync pending"}
         </motion.p>
       </div>
@@ -231,13 +232,15 @@ function KpiRow({
             suffix="days"
             delta={{
               text:
-                stock.avgAgeDays >= 45
-                  ? "Deep in the discount ladder"
-                  : stock.avgAgeDays >= 30
-                    ? "Past the 30d → 20% rung"
-                    : "Within the fresh window",
+                stock.avgAgeDays >= 31
+                  ? "Dead-stock zone — max liquidation −70%"
+                  : stock.avgAgeDays >= 22
+                    ? "Urgent clearance zone −50%"
+                    : stock.avgAgeDays >= 11
+                      ? "Markdown zone −30%"
+                      : "Fresh window (0–10d · full price)",
               direction: "flat",
-              tone: stock.avgAgeDays >= 45 ? "neg" : stock.avgAgeDays >= 30 ? "neutral" : "pos",
+              tone: stock.avgAgeDays >= 22 ? "neg" : stock.avgAgeDays >= 11 ? "neutral" : "pos",
             }}
           />
         ) : (
@@ -293,7 +296,8 @@ function AgingLadder({ stock }: { stock: StockAnalysis }) {
             Aging ladder
           </h2>
           <p className="mt-0.5 text-[12px] text-text-muted">
-            Frozen capital by age in stock · policy markers at 30d / 45d / 60d
+            Frozen capital by age in stock · markdown bands 0–10d · 11–21d ·
+            22–30d · 31d+
           </p>
         </div>
       </div>
@@ -332,8 +336,9 @@ function AgingLadder({ stock }: { stock: StockAnalysis }) {
         ))}
       </div>
       <p className="mt-3 text-[11.5px] text-text-muted">
-        Policy: at 30 days take 20% off · 45 days 35% · 60 days 50% (end of
-        season). M-family (Modaselvim legacy) clears one rung earlier.
+        Aggressive markdown (off full price): 0–10d full price (تسليم فوري) ·
+        11–21d −30% · 22–30d −50% · 31d+ −70% dead stock. M-family
+        (Modaselvim legacy) clears one rung earlier.
       </p>
     </motion.section>
   );
@@ -342,20 +347,23 @@ function AgingLadder({ stock }: { stock: StockAnalysis }) {
 // ─── Action needed table ─────────────────────────────────────────────────────
 
 function TierChip({ pct, mFamily }: { pct: number; mFamily?: boolean }) {
+  const badge = markdownBadge(pct);
   if (pct <= 0)
     return (
-      <span className="rounded-md bg-hairline/40 px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.8px] text-text-muted">
-        Hold
+      <span
+        className="rounded-md px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.8px]"
+        style={{ color: badge.color, backgroundColor: `${badge.color}1A` }}
+      >
+        {badge.label}
       </span>
     );
-  const color = pct >= 50 ? "#FB5D7A" : pct >= 35 ? "#FB923C" : "#FBBF24";
   return (
     <span
       className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.8px]"
-      style={{ color, backgroundColor: `${color}1A` }}
+      style={{ color: badge.color, backgroundColor: `${badge.color}1A` }}
     >
       {mFamily && <TriangleAlert className="h-3 w-3" />}
-      −{pct}%
+      −{pct}% · {badge.label}
     </span>
   );
 }
@@ -378,15 +386,15 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
           Action needed
         </h2>
         <p className="mt-0.5 text-[12px] text-text-muted">
-          Models past a ladder threshold (avg age ≥ 30d) or M-family legacy ·
-          recovery estimated at cost × (1 − discount)
+          Models past a markdown threshold (avg age ≥ 11d) or M-family legacy ·
+          suggested price = full list price × (1 − discount)
         </p>
       </div>
       <div className="max-h-[420px] overflow-auto rounded-xl border border-hairline bg-panel">
         <table className="w-full border-collapse text-left">
           <thead className="sticky top-0 z-10 bg-panel shadow-[0_1px_0_0_#232E3B]">
             <tr>
-              {["Model", "Units", "Avg age", "Oldest", "Frozen value", "Suggested tier", "Est. recovery"].map(
+              {["Model", "Units", "Avg age", "Oldest", "Frozen value", "Suggested tier", "Suggested price", "Est. recovery"].map(
                 (h, i) => (
                   <th
                     key={h}
@@ -437,6 +445,20 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
                 <td className="px-4 py-2 text-right">
                   <TierChip pct={m.suggestedDiscPct} mFamily={m.mFamily} />
                 </td>
+                <td className="px-4 py-2 text-right font-mono text-[13px] font-semibold text-amber tnum">
+                  {m.suggestedPriceUnit != null ? (
+                    <>
+                      {fmtMoney(m.suggestedPriceUnit)}
+                      {m.listPriceUnit != null && (
+                        <span className="ml-1 text-[10.5px] font-normal text-text-muted line-through">
+                          {fmtMoney(m.listPriceUnit)}
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    <span className="text-text-muted">—</span>
+                  )}
+                </td>
                 <td className="px-4 py-2 text-right font-mono text-[13px] font-semibold text-lime tnum">
                   {fmtMoney(m.estRecovery)}
                 </td>
@@ -444,7 +466,7 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={7} className="p-6">
+                <td colSpan={8} className="p-6">
                   <p className="text-center text-[13px] text-text-muted">
                     No models past a discount threshold — stock is still fresh.
                   </p>
@@ -790,9 +812,20 @@ export default function Inventory() {
     [ops]
   );
 
+  // Full list price per model (from the product records) — the markdown
+  // policy discounts off this price, not off cost.
+  const priceByModel = useMemo(
+    () =>
+      new Map<string, number | null>(
+        products.map((p) => [p.sku, p.unitPrice ?? null])
+      ),
+    []
+  );
+
   const stock = useMemo(
-    () => (hasStock && ops ? analyzeStock(ops.stockDetail, asOf) : null),
-    [hasStock, ops, asOf]
+    () =>
+      hasStock && ops ? analyzeStock(ops.stockDetail, asOf, priceByModel) : null,
+    [hasStock, ops, asOf, priceByModel]
   );
   const orders = useMemo(
     () =>
