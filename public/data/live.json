@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-19T07:42:44.213119+00:00",
+ "syncedAt": "2026-10-19T08:02:30.815448+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -694,9 +694,9 @@
    "units": 24,
    "revenue": 2376000,
    "delivered": 18,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 24,
-   "returnedStock": 0,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 23,
+   "returnedStock": 1,
    "unitPrice": 99000.0,
    "orderVelocity7d": 1.57,
    "daysSinceLastOrder": 2,
@@ -2618,9 +2618,9 @@
    "units": 112,
    "revenue": 8172400,
    "delivered": 88,
-   "returned": 10,
-   "unitsBoughtFromSupplier": 102,
-   "returnedStock": 2,
+   "returned": 11,
+   "unitsBoughtFromSupplier": 101,
+   "returnedStock": 3,
    "unitPrice": 75000.0,
    "orderVelocity7d": 2.71,
    "daysSinceLastOrder": 0,
@@ -13838,9 +13838,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1678,
-  "stockValue": 48744587,
-  "stockVariants": 1339
+  "stockUnits": 1680,
+  "stockValue": 48835864,
+  "stockVariants": 1341
  },
  "daily": {
   "days": 90,
@@ -27559,7 +27559,7 @@
    ],
    "2026-10-19": [
     0,
-    9
+    11
    ]
   },
   "orders": {
@@ -33871,8 +33871,9 @@
      "qty": 1,
      "price": 99000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -34731,8 +34732,9 @@
      "qty": 1,
      "price": 76000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -136053,7 +136055,7 @@
   {
    "sku": "H-1908",
    "model": "H-1908",
-   "qty": 0,
+   "qty": 1,
    "cost": 34444,
    "created": "2026-09-18"
   },
@@ -186551,7 +186553,7 @@
   {
    "sku": "T-8035",
    "model": "T-8035",
-   "qty": 0,
+   "qty": 1,
    "cost": 56833,
    "created": "2026-10-10"
   },
