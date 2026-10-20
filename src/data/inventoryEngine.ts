@@ -160,14 +160,20 @@ export interface ModelRollup {
    */
   listPriceUnit: number | null;
   /**
-   * Suggested clearance price PER PIECE = full list price × (1 − discount).
-   * This is the number to put on the ad. Null when the price is unknown.
+   * Suggested clearance price PER PIECE, IQD — capital-protected:
+   *   round1000( max(full list price × (1 − discount), unit cost) )
+   * The cost floor means we liquidate to RECOVER capital, never below the
+   * Odoo purchase cost. This is the number to put on the ad.
+   * Null when the model has no known list price.
    */
   suggestedPriceUnit: number | null;
+  /** True when the raw discounted price fell below unit cost and the floor
+   *  kicked in (suggested price = unit cost, rounded to nearest 1,000). */
+  flooredToCost: boolean;
   /**
-   * Recovery estimate for the whole model: units × list price ×
-   * (1 − suggested discount) when the list price is known, otherwise the
-   * conservative cost-basis estimate (cost × (1 − discount)).
+   * Recovery estimate for the whole model: units × suggestedPriceUnit when
+   * the list price is known (floor already applied), otherwise the cost
+   * basis (cost floor = recover 100% of frozen cost).
    */
   estRecovery: number;
 }
@@ -263,22 +269,32 @@ export function analyzeStock(
     const disc = suggestedDiscount(avgAgeDays, mFamily);
     const listPrice = priceByModel?.get(model) ?? null;
     const hasPrice = listPrice != null && listPrice > 0;
+    const unitCost = a.units > 0 ? a.value / a.units : 0;
+    // Capital-protection floor (Gemini finance rule): the markdown may cut
+    // the list price, but the suggestion must NEVER go below the Odoo unit
+    // cost — we liquidate to recover capital, not to sell at a loss.
+    // Final price is rounded to the nearest 1,000 IQD (clean ad prices).
+    const discounted = hasPrice ? listPrice * (1 - disc / 100) : null;
+    const flooredToCost = discounted != null && discounted < unitCost;
+    const suggestedPriceUnit =
+      discounted != null
+        ? Math.round(Math.max(discounted, unitCost) / 1000) * 1000
+        : null;
     return {
       model,
       units: a.units,
       value: a.value,
-      avgCost: a.units > 0 ? a.value / a.units : 0,
+      avgCost: unitCost,
       oldestAgeDays: a.oldest,
       avgAgeDays,
       mFamily,
       suggestedDiscPct: disc,
       needsAction: avgAgeDays >= 11 || mFamily,
       listPriceUnit: hasPrice ? listPrice : null,
-      suggestedPriceUnit: hasPrice
-        ? Math.round(listPrice * (1 - disc / 100))
-        : null,
+      suggestedPriceUnit,
+      flooredToCost,
       estRecovery: Math.round(
-        (hasPrice ? a.units * listPrice : a.value) * (1 - disc / 100)
+        suggestedPriceUnit != null ? a.units * suggestedPriceUnit : a.value
       ),
     };
   });
