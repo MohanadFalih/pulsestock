@@ -1,0 +1,30 @@
+name: Odoo diagnostics (manual)
+
+# One-off READ-ONLY accounting due-diligence for the "Real Profit" page.
+# Run it manually: Actions → Odoo diagnostics (manual) → Run workflow.
+# It never commits anything and never touches public/data — it only prints
+# a JSON report to the Actions log. Same secrets as the Odoo sync.
+
+on:
+  workflow_dispatch:            # "Run workflow" button only — no schedule
+
+permissions:
+  contents: read                # read-only job: checkout the script, nothing else
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Odoo diagnostics (read-only)
+        env:
+          ODOO_URL: ${{ secrets.ODOO_URL }}
+          ODOO_DB: ${{ secrets.ODOO_DB }}
+          ODOO_USER: ${{ secrets.ODOO_USER }}
+          ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
+        run: python3 scripts/odoo_diag.py
