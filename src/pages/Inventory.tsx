@@ -387,7 +387,8 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
         </h2>
         <p className="mt-0.5 text-[12px] text-text-muted">
           Models past a markdown threshold (avg age ≥ 11d) or M-family legacy ·
-          suggested price = full list price × (1 − discount)
+          suggested price = max(full price × (1 − discount), unit cost),
+          rounded to nearest 1,000 IQD — never below cost
         </p>
       </div>
       <div className="max-h-[420px] overflow-auto rounded-xl border border-hairline bg-panel">
@@ -452,6 +453,14 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
                       {m.listPriceUnit != null && (
                         <span className="ml-1 text-[10.5px] font-normal text-text-muted line-through">
                           {fmtMoney(m.listPriceUnit)}
+                        </span>
+                      )}
+                      {m.flooredToCost && (
+                        <span
+                          title="Discount would cut below the Odoo unit cost — floored at cost (capital protection)"
+                          className="ml-1 rounded-full bg-[#FB923C]/15 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wide text-[#FB923C]"
+                        >
+                          cost floor
                         </span>
                       )}
                     </>
