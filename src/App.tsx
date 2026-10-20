@@ -8,6 +8,7 @@ import Decisions from "@/pages/Decisions";
 import Ads from "@/pages/Ads";
 import Tasks from "@/pages/Tasks";
 import Finance from "@/pages/Finance";
+import Profit from "@/pages/Profit";
 import Inventory from "@/pages/Inventory";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/ads" element={<Ads />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/finance" element={<Finance />} />
+          <Route path="/profit" element={<Profit />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="*" element={<Overview />} />
         </Routes>
