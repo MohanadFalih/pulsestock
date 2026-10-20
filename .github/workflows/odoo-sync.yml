@@ -45,6 +45,16 @@ jobs:
           META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
         run: python3 scripts/meta_campaigns.py
 
+      - name: Fetch profit inputs (Odoo fixed costs + Meta daily spend)
+        env:
+          ODOO_URL: ${{ secrets.ODOO_URL }}
+          ODOO_DB: ${{ secrets.ODOO_DB }}
+          ODOO_USER: ${{ secrets.ODOO_USER }}
+          ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+        run: python3 scripts/profit_sync.py
+
       - name: Commit fresh data (if changed)
         run: |
           git config user.name "MohanadFalih"
@@ -57,4 +67,7 @@ jobs:
             exit 0
           fi
           git commit -m "data: odoo sync $(date -u +%Y-%m-%d\ %H:%M\ UTC)"
+          # main also receives human commits; rebase onto them instead of
+          # failing the push (data files are only ever written by this job).
+          git pull --rebase origin main
           git push
