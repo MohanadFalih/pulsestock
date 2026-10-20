@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-20T18:32:22.059950+00:00",
+ "syncedAt": "2026-10-20T18:36:36.062107+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5886,20 +5886,20 @@
    "sku": "K-8047",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-07-22",
    "firstOrderDate": "2026-07-22",
-   "lastOrderDate": "2026-08-05",
-   "orders": 4,
-   "units": 3,
-   "revenue": 336000,
+   "lastOrderDate": "2026-10-20",
+   "orders": 5,
+   "units": 4,
+   "revenue": 448000,
    "delivered": 3,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 1,
    "unitPrice": 112000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 76,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -20478,6 +20478,11 @@
      1,
      0,
      0
+    ],
+    "2026-10-20": [
+     1,
+     1,
+     112000
     ]
    },
    "7203": {
@@ -28019,10 +28024,27 @@
    "2026-10-17": 50,
    "2026-10-18": 31,
    "2026-10-19": 38,
-   "2026-10-20": 16
+   "2026-10-20": 17
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33592",
+   "d": "2026-10-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -56000,
+   "lines": [
+    {
+     "sku": "K-8047",
+     "qty": 1,
+     "price": 112000,
+     "discPct": 47.9,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp"
+  },
   {
    "id": "S33590",
    "d": "2026-10-20",
