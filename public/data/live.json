@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-20T06:32:31.454518+00:00",
+ "syncedAt": "2026-10-20T07:32:51.451080+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5322,9 +5322,9 @@
    "units": 40,
    "revenue": 3915100,
    "delivered": 40,
-   "returned": 10,
+   "returned": 11,
    "unitsBoughtFromSupplier": 33,
-   "returnedStock": 2,
+   "returnedStock": 3,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
@@ -7844,9 +7844,9 @@
    "units": 81,
    "revenue": 5892000,
    "delivered": 79,
-   "returned": 27,
+   "returned": 28,
    "unitsBoughtFromSupplier": 57,
-   "returnedStock": 1,
+   "returnedStock": 2,
    "unitPrice": 54000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
@@ -8538,7 +8538,7 @@
    "sku": "T-7030",
    "category": "All",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-05-21",
    "firstOrderDate": "2026-05-21",
    "lastOrderDate": "2026-10-10",
@@ -8546,9 +8546,9 @@
    "units": 37,
    "revenue": 3219000,
    "delivered": 37,
-   "returned": 6,
+   "returned": 7,
    "unitsBoughtFromSupplier": 34,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 44000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
@@ -10600,9 +10600,9 @@
    "units": 27,
    "revenue": 2046000,
    "delivered": 27,
-   "returned": 10,
+   "returned": 11,
    "unitsBoughtFromSupplier": 21,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 77000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
@@ -12831,17 +12831,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
-   "lastOrderDate": "2026-10-19",
-   "orders": 714,
-   "units": 804,
-   "revenue": 25618000,
+   "lastOrderDate": "2026-10-20",
+   "orders": 715,
+   "units": 805,
+   "revenue": 25657000,
    "delivered": 778,
    "returned": 170,
-   "unitsBoughtFromSupplier": 645,
+   "unitsBoughtFromSupplier": 646,
    "returnedStock": 4,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 2.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13994,9 +13994,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1681,
-  "stockValue": 48873942,
-  "stockVariants": 1343
+  "stockUnits": 1685,
+  "stockValue": 49069918,
+  "stockVariants": 1345
  },
  "daily": {
   "days": 90,
@@ -26995,6 +26995,11 @@
      9,
      10,
      390000
+    ],
+    "2026-10-20": [
+     1,
+     1,
+     39000
     ]
    },
    "5850": {
@@ -27770,6 +27775,10 @@
    "2026-10-19": [
     16,
     24
+   ],
+   "2026-10-20": [
+    0,
+    4
    ]
   },
   "orders": {
@@ -27863,10 +27872,29 @@
    "2026-10-17": 50,
    "2026-10-18": 31,
    "2026-10-19": 38,
-   "2026-10-20": 2
+   "2026-10-20": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33573",
+   "d": "2026-10-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33572",
    "d": "2026-10-20",
@@ -35383,14 +35411,16 @@
      "qty": 1,
      "price": 98000,
      "discPct": 33.3,
-     "del": 1
+     "del": 0,
+     "ret": 1
     },
     {
      "sku": "L-4441",
      "qty": 1,
      "price": 77000,
      "discPct": 33.3,
-     "del": 1
+     "del": 0,
+     "ret": 1
     },
     {
      "sku": "T-6942",
@@ -35404,14 +35434,16 @@
      "qty": 1,
      "price": 54000,
      "discPct": 33.3,
-     "del": 1
+     "del": 0,
+     "ret": 1
     },
     {
      "sku": "T-7030-اسودsiyah-24446",
      "qty": 1,
      "price": 87000,
      "discPct": 33.3,
-     "del": 1
+     "del": 0,
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -130114,7 +130146,7 @@
   {
    "sku": "H-1808",
    "model": "H-1808",
-   "qty": 1,
+   "qty": 2,
    "cost": 41315,
    "created": "2026-06-14"
   },
@@ -146935,7 +146967,7 @@
   {
    "sku": "T-7030",
    "model": "T-7030",
-   "qty": 0,
+   "qty": 1,
    "cost": 51644,
    "created": "2026-05-21"
   },
@@ -148867,7 +148899,7 @@
   {
    "sku": "T-7069",
    "model": "T-7069",
-   "qty": 0,
+   "qty": 1,
    "cost": 60278,
    "created": "2026-07-28"
   },
@@ -176167,7 +176199,7 @@
   {
    "sku": "L-4441",
    "model": "L-4441",
-   "qty": 3,
+   "qty": 4,
    "cost": 42740,
    "created": "2026-03-07"
   },
