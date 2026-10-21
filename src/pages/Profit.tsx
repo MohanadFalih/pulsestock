@@ -23,6 +23,8 @@ import {
 } from "recharts";
 import { useOpsData } from "@/data/opsData";
 import { useProfitData } from "@/data/profitData";
+import { computeExperiment } from "@/data/experimentEngine";
+import BudgetExperiment from "@/sections/profit/BudgetExperiment";
 import {
   RULES,
   buildProfitModel,
@@ -472,9 +474,47 @@ export default function Profit() {
     [model, period, mode]
   );
   const months = useMemo(() => (model ? monthRows(model, mode) : []), [model, mode]);
+  const [tab, setTab] = useState<"profit" | "experiment">(() => {
+    try {
+      return window.location.hash === "#experiment" ? "experiment" : "profit";
+    } catch {
+      return "profit";
+    }
+  });
+  const experiment = useMemo(
+    () => (model && ops ? computeExperiment(model, ops.ordersDetail, profit ?? null) : null),
+    [model, ops, profit]
+  );
 
   return (
     <div>
+      <div className="mb-4">
+        <FilterPills
+          layoutId="profit-tab"
+          options={[
+            { value: "profit", label: "Profit" },
+            { value: "experiment", label: "Budget experiment" },
+          ]}
+          value={tab}
+          onChange={(v) => {
+            const next = v === "experiment" ? "experiment" : "profit";
+            setTab(next);
+            try {
+              window.history.replaceState(null, "", next === "experiment" ? "#experiment" : "#");
+            } catch {
+              /* ignore */
+            }
+          }}
+        />
+      </div>
+      {tab === "experiment" ? (
+        experiment ? (
+          <BudgetExperiment r={experiment} />
+        ) : (
+          <EmptyState title="Loading" message="Waiting for the Odoo sync data…" />
+        )
+      ) : (
+      <>
       <Header mode={mode} onMode={setMode} period={period} onPeriod={setPeriod} />
       {!model || !totals ? (
         <EmptyState title="Loading" message="Waiting for the Odoo sync data…" />
@@ -488,6 +528,8 @@ export default function Profit() {
           <DailyChart model={model} mode={mode} />
           <MonthlyTable rows={months} />
         </div>
+      )}
+      </>
       )}
     </div>
   );
