@@ -30,6 +30,7 @@ import { isLiveMode, liveSyncLabel } from "@/data/liveSync";
 import {
   analyzeOrders,
   analyzeStock,
+  stockSignals,
   fallbackFromProducts,
   markdownBadge,
   CLEARANCE_TARGET_IQD,
@@ -386,9 +387,9 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
           Action needed
         </h2>
         <p className="mt-0.5 text-[12px] text-text-muted">
-          Models past a markdown threshold (avg age ≥ 11d) or M-family legacy ·
-          suggested price = max(full price × (1 − discount), unit cost),
-          rounded to nearest 1,000 IQD — never below cost
+          Models past a markdown threshold (avg age ≥ 11d), with no sale in ~120 days, or M-family legacy ·
+          age counts from the latest return, not the product&apos;s creation date · price: first 14 days
+          never below cost, 15–30 days 80% of cost, 31+ days or old season 60% of cost (min 25,000 IQD)
         </p>
       </div>
       <div className="max-h-[420px] overflow-auto rounded-xl border border-hairline bg-panel">
@@ -457,10 +458,32 @@ function ActionNeeded({ stock }: { stock: StockAnalysis }) {
                       )}
                       {m.flooredToCost && (
                         <span
-                          title="Discount would cut below the Odoo unit cost — floored at cost (capital protection)"
+                          title="First 14 days: discount would cut below the Odoo unit cost — floored at cost"
                           className="ml-1 rounded-full bg-[#FB923C]/15 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wide text-[#FB923C]"
                         >
                           cost floor
+                        </span>
+                      )}
+                      {(m.priceRule === "cost80" || m.priceRule === "cost60") && (
+                        <span
+                          title={
+                            m.priceRule === "cost80"
+                              ? "15–30 days in stock: 80% of unit cost"
+                              : m.oldSeason
+                                ? "No sale in ~120 days: 60% of unit cost (min 25,000 IQD)"
+                                : "31+ days in stock: 60% of unit cost (min 25,000 IQD)"
+                          }
+                          className="ml-1 rounded-full bg-rose/15 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wide text-rose"
+                        >
+                          {m.priceRule === "cost80" ? "80% cost" : "60% cost"}
+                        </span>
+                      )}
+                      {m.priceRule === "no-cost" && (
+                        <span
+                          title="No unit cost in Odoo — add it so the rule can price this model"
+                          className="ml-1 rounded-full bg-amber/15 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wide text-amber"
+                        >
+                          no cost
                         </span>
                       )}
                     </>
@@ -833,7 +856,9 @@ export default function Inventory() {
 
   const stock = useMemo(
     () =>
-      hasStock && ops ? analyzeStock(ops.stockDetail, asOf, priceByModel) : null,
+      hasStock && ops
+        ? analyzeStock(ops.stockDetail, asOf, priceByModel, stockSignals(ops.ordersDetail))
+        : null,
     [hasStock, ops, asOf, priceByModel]
   );
   const orders = useMemo(
