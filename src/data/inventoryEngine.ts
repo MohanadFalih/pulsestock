@@ -62,6 +62,92 @@ export const DISCOUNT_BANDS = [
 
 export type DiscountBandKey = (typeof DISCOUNT_BANDS)[number]["key"];
 
+/**
+ * Clearance price rule (owner decision, 2026-10-21). Sell-through in the
+ * liquidation feed was ~55% for pieces priced below cost vs ~26–37% above
+ * cost, and returned stock's cost is already sunk — so after two weeks the
+ * floor is a share of cost, not cost itself:
+ *   0–14d   → ladder price, never below unit cost (capital protection)
+ *   15–30d  → 80% of unit cost
+ *   31d+, or model with no sale in the order window (~120d) → 60% of cost
+ *   Discounted tiers never go below 25,000 IQD (covers the ad cost of a
+ *   clearance sale) and never above the ladder price.
+ */
+export const CLEARANCE_PRICE_RULE = {
+  freshDays: 14,
+  midMaxDays: 30,
+  midCostPct: 0.8,
+  oldCostPct: 0.6,
+  minPriceIQD: 25_000,
+} as const;
+
+export type PriceRule = "fresh" | "cost80" | "cost60" | "no-cost";
+
+const round1000 = (n: number) => Math.round(n / 1000) * 1000;
+
+/** Suggested per-piece clearance price under CLEARANCE_PRICE_RULE. */
+export function clearancePrice(
+  ageDays: number,
+  unitCost: number,
+  listPrice: number | null,
+  discPct: number,
+  oldSeason: boolean
+): { price: number | null; rule: PriceRule; flooredToCost: boolean } {
+  const R = CLEARANCE_PRICE_RULE;
+  const ladder = listPrice != null && listPrice > 0 ? listPrice * (1 - discPct / 100) : null;
+  if (!(unitCost > 0)) {
+    return { price: ladder != null ? round1000(ladder) : null, rule: "no-cost", flooredToCost: false };
+  }
+  if (!oldSeason && ageDays <= R.freshDays) {
+    const base = ladder ?? unitCost;
+    return {
+      price: round1000(Math.max(base, unitCost)),
+      rule: "fresh",
+      flooredToCost: ladder != null && ladder < unitCost,
+    };
+  }
+  const mid = !oldSeason && ageDays <= R.midMaxDays;
+  const target = unitCost * (mid ? R.midCostPct : R.oldCostPct);
+  let price = ladder != null ? Math.min(ladder, target) : target;
+  price = Math.max(price, Math.min(R.minPriceIQD, ladder ?? R.minPriceIQD));
+  return { price: round1000(price), rule: mid ? "cost80" : "cost60", flooredToCost: false };
+}
+
+/** Normalized model key for joining stock and order SKUs ("h-1840-kahve-2" → "H-1840"). */
+export function modelKey(s: string): string {
+  const m = /^([A-Za-z]+)-?(\d+)/.exec(s.trim());
+  return m ? `${m[1].toUpperCase()}-${m[2]}` : modelOfSku(s).toUpperCase();
+}
+
+export interface StockSignals {
+  /** Model → latest order date ("YYYY-MM-DD") with a returned unit. */
+  lastReturn: Map<string, string>;
+  /** Models with any order in the order window. */
+  sold: Set<string>;
+}
+
+/**
+ * Arrival proxy for warehouse units: a returned unit enters stock shortly
+ * after its order, so a model's latest returned order date bounds how fresh
+ * its stock can be. Without it, age would count from the product's creation
+ * date in Odoo, which makes fresh returns of old models look months old.
+ */
+export function stockSignals(orders: OpsOrder[]): StockSignals {
+  const lastReturn = new Map<string, string>();
+  const sold = new Set<string>();
+  for (const o of orders) {
+    for (const l of o.lines) {
+      const k = modelKey(l.sku);
+      sold.add(k);
+      if ((l.ret ?? 0) > 0) {
+        const prev = lastReturn.get(k);
+        if (!prev || o.d > prev) lastReturn.set(k, o.d);
+      }
+    }
+  }
+  return { lastReturn, sold };
+}
+
 /** Heuristic cost ratio for fallback mode: est. cost = unitPrice × 0.55. */
 export const FALLBACK_COST_RATIO = 0.55;
 
@@ -160,16 +246,20 @@ export interface ModelRollup {
    */
   listPriceUnit: number | null;
   /**
-   * Suggested clearance price PER PIECE, IQD — capital-protected:
-   *   round1000( max(full list price × (1 − discount), unit cost) )
-   * The cost floor means we liquidate to RECOVER capital, never below the
-   * Odoo purchase cost. This is the number to put on the ad.
-   * Null when the model has no known list price.
+   * Suggested clearance price PER PIECE, IQD (CLEARANCE_PRICE_RULE): the
+   * ladder price floored at cost for the first 14 days, then 80% of cost
+   * (15–30d) and 60% of cost (31d+ or no sale in ~120d), min 25,000 IQD.
+   * This is the number to put on the ad. Null when neither a list price
+   * nor a unit cost is known.
    */
   suggestedPriceUnit: number | null;
   /** True when the raw discounted price fell below unit cost and the floor
    *  kicked in (suggested price = unit cost, rounded to nearest 1,000). */
   flooredToCost: boolean;
+  /** Which CLEARANCE_PRICE_RULE tier set the suggested price. */
+  priceRule: PriceRule;
+  /** No sale of this model inside the order window (~120 days). */
+  oldSeason: boolean;
   /**
    * Recovery estimate for the whole model: units × suggestedPriceUnit when
    * the list price is known (floor already applied), otherwise the cost
@@ -215,7 +305,8 @@ export function modelOfSku(sku: string): string {
 export function analyzeStock(
   stock: OpsStockItem[],
   asOf: Date,
-  priceByModel?: Map<string, number | null>
+  priceByModel?: Map<string, number | null>,
+  signals?: StockSignals
 ): StockAnalysis {
   const buckets: StockBucket[] = AGE_BUCKETS.map((b) => ({
     ...b,
@@ -241,7 +332,10 @@ export function analyzeStock(
     const qty = Number.isFinite(item.qty) ? item.qty : 0;
     if (qty <= 0) continue;
     const cost = Number.isFinite(item.cost) ? item.cost : 0;
-    const age = ageInDays(item.created, asOf);
+    const model0 = item.model?.trim() || modelOfSku(item.sku);
+    const ret = signals?.lastReturn.get(modelKey(model0));
+    const since = ret && ret > item.created ? ret : item.created;
+    const age = ageInDays(since, asOf);
     const value = qty * cost;
 
     const bucket = byKey.get(bucketForAge(age));
@@ -254,7 +348,7 @@ export function analyzeStock(
     totalValue += value;
     totalAgeQty += age * qty;
 
-    const model = item.model?.trim() || modelOfSku(item.sku);
+    const model = model0;
     const acc = perModel.get(model) ?? { units: 0, value: 0, ageQty: 0, oldest: 0 };
     acc.units += qty;
     acc.value += value;
@@ -270,16 +364,16 @@ export function analyzeStock(
     const listPrice = priceByModel?.get(model) ?? null;
     const hasPrice = listPrice != null && listPrice > 0;
     const unitCost = a.units > 0 ? a.value / a.units : 0;
-    // Capital-protection floor (Gemini finance rule): the markdown may cut
-    // the list price, but the suggestion must NEVER go below the Odoo unit
-    // cost — we liquidate to recover capital, not to sell at a loss.
-    // Final price is rounded to the nearest 1,000 IQD (clean ad prices).
-    const discounted = hasPrice ? listPrice * (1 - disc / 100) : null;
-    const flooredToCost = discounted != null && discounted < unitCost;
-    const suggestedPriceUnit =
-      discounted != null
-        ? Math.round(Math.max(discounted, unitCost) / 1000) * 1000
-        : null;
+    const oldSeason = signals ? !signals.sold.has(modelKey(model)) : false;
+    const priced = clearancePrice(
+      avgAgeDays,
+      unitCost,
+      hasPrice ? listPrice : null,
+      disc,
+      oldSeason
+    );
+    const suggestedPriceUnit = priced.price;
+    const flooredToCost = priced.flooredToCost;
     return {
       model,
       units: a.units,
@@ -289,10 +383,12 @@ export function analyzeStock(
       avgAgeDays,
       mFamily,
       suggestedDiscPct: disc,
-      needsAction: avgAgeDays >= 11 || mFamily,
+      needsAction: avgAgeDays >= 11 || mFamily || oldSeason,
       listPriceUnit: hasPrice ? listPrice : null,
       suggestedPriceUnit,
       flooredToCost,
+      priceRule: priced.rule,
+      oldSeason,
       estRecovery: Math.round(
         suggestedPriceUnit != null ? a.units * suggestedPriceUnit : a.value
       ),
