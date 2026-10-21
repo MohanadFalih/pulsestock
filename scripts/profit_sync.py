@@ -32,6 +32,7 @@ Env: ODOO_URL ODOO_DB ODOO_USER ODOO_API_KEY META_ACCESS_TOKEN
 import datetime as dt
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -201,28 +202,90 @@ def fetch_odoo(today):
     }
 
 
+# Per-SKU ad spend is fetched from this day on (budget experiment starts
+# 2026-10-22; one baseline week before it).
+SKU_SINCE = "2026-10-15"
+SKU_RE = re.compile(r"([A-Za-z]{1,4}-\d{3,6})")   # same as meta_campaigns.py
+CONVO_TYPES = ("onsite_conversion.messaging_conversation_started_7d",
+               "messaging_conversation_started")
+PURCHASE_TYPES = ("omni_purchase", "purchase")
+
+
+def _meta_rows(account, token, params):
+    params = dict(params, access_token=token, limit="500")
+    url = f"{META_API}/act_{account}/insights?{urllib.parse.urlencode(params)}"
+    rows = []
+    while url:
+        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-profit/1.1"})
+        with urllib.request.urlopen(req, timeout=90) as r:
+            payload = json.load(r)
+        if "error" in payload:
+            raise RuntimeError(payload["error"].get("message", "meta api error"))
+        rows.extend(payload.get("data", []))
+        url = payload.get("paging", {}).get("next")
+    return rows
+
+
+def _action(actions, types):
+    """First matching action type's value (Ads Manager column semantics)."""
+    by = {a.get("action_type"): a.get("value") for a in actions or []}
+    for t in types:
+        if t in by:
+            try:
+                return float(by[t])
+            except (TypeError, ValueError):
+                return 0.0
+    return 0.0
+
+
 def fetch_meta(today):
     token = os.environ.get("META_ACCESS_TOKEN", "").strip()
     account = os.environ.get("META_AD_ACCOUNT_ID", "").strip().replace("act_", "")
     if not token or not account:
         raise RuntimeError("META_ACCESS_TOKEN / META_AD_ACCOUNT_ID not set")
-    params = {"level": "account", "time_increment": "1", "fields": "spend",
-              "time_range": json.dumps({"since": SINCE, "until": today}),
-              "limit": "500", "access_token": token}
-    url = f"{META_API}/act_{account}/insights?{urllib.parse.urlencode(params)}"
-    daily = {}
-    while url:
-        req = urllib.request.Request(url, headers={"User-Agent": "pulsestock-profit/1.0"})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            payload = json.load(r)
-        if "error" in payload:
-            raise RuntimeError(payload["error"].get("message", "meta api error"))
-        for row in payload.get("data", []):
-            daily[row["date_start"]] = round(float(row.get("spend") or 0), 2)
-        url = payload.get("paging", {}).get("next")
+
+    # Account level, one row per day: spend + delivery health inputs.
+    rows = _meta_rows(account, token, {
+        "level": "account", "time_increment": "1",
+        "fields": "spend,impressions,reach,inline_link_clicks,actions",
+        "time_range": json.dumps({"since": SINCE, "until": today})})
+    daily, detail = {}, {}
+    for row in rows:
+        d = row["date_start"]
+        spend = round(float(row.get("spend") or 0), 2)
+        daily[d] = spend
+        detail[d] = {"spend": spend,
+                     "impr": int(row.get("impressions") or 0),
+                     "reach": int(row.get("reach") or 0),
+                     "clicks": int(row.get("inline_link_clicks") or 0),
+                     "conv": round(_action(row.get("actions"), CONVO_TYPES)),
+                     "purch": round(_action(row.get("actions"), PURCHASE_TYPES))}
     log(f"  {len(daily)} days of Meta spend")
+
+    # Ad level, per day, since SKU_SINCE: spend split across the SKUs named
+    # in each ad (equal shares); ads naming no SKU go to "OTHER".
+    sku_daily = {}
+    try:
+        ad_rows = _meta_rows(account, token, {
+            "level": "ad", "time_increment": "1", "fields": "ad_name,spend",
+            "time_range": json.dumps({"since": SKU_SINCE, "until": today})})
+        for row in ad_rows:
+            spend = float(row.get("spend") or 0)
+            if spend <= 0:
+                continue
+            skus = list(dict.fromkeys(m.group(1).upper()
+                                      for m in SKU_RE.finditer(row.get("ad_name") or "")))
+            day = sku_daily.setdefault(row["date_start"], {})
+            for s in skus or ["OTHER"]:
+                day[s] = round(day.get(s, 0.0) + spend / max(1, len(skus)), 2)
+        log(f"  per-SKU spend: {len(sku_daily)} days")
+    except Exception as e:                       # never lose the account half
+        log(f"  per-SKU spend failed: {e}")
+
     return {"error": None, "currency": "USD", "since": SINCE,
-            "tz": "ad account timezone", "daily": dict(sorted(daily.items()))}
+            "tz": "ad account timezone", "daily": dict(sorted(daily.items())),
+            "detail": dict(sorted(detail.items())),
+            "skuSince": SKU_SINCE, "skuDaily": dict(sorted(sku_daily.items()))}
 
 
 def main():

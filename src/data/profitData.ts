@@ -24,11 +24,28 @@ export interface ProfitOdoo {
   monthly?: Record<string, { income: number; cogs: number; expenses: number; ads: number }>;
 }
 
+export interface MetaDayDetail {
+  spend: number;
+  impr: number;
+  reach: number;
+  /** Link clicks (Ads Manager "Link clicks"). */
+  clicks: number;
+  /** Messaging conversations started (7-day click). */
+  conv: number;
+  /** Meta-reported purchases (inflated vs Odoo — context only). */
+  purch: number;
+}
+
 export interface ProfitMeta {
   error: string | null;
   stale?: boolean;
   since?: string;
   daily?: Record<string, number>;
+  /** Account-level delivery numbers per day (USD). */
+  detail?: Record<string, MetaDayDetail>;
+  /** date → SKU (or "OTHER") → USD spend, from `skuSince` on. */
+  skuDaily?: Record<string, Record<string, number>>;
+  skuSince?: string;
 }
 
 export interface ProfitPayload {
