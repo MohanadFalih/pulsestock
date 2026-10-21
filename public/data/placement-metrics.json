@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-21T15:09:59.492845+00:00",
- "metaSyncedAt": "2026-10-21T15:09:59.492845+00:00",
+ "syncedAt": "2026-10-21T15:32:43.312515+00:00",
+ "metaSyncedAt": "2026-10-21T15:32:43.312515+00:00",
  "window": {
   "since": "2026-10-08",
   "until": "2026-10-21",
@@ -11,987 +11,6 @@
  "note": "Per-campaign Platform x Placement DAILY series over the 14-day window (including today), from Meta Insights with breakdowns=publisher_platform,platform_position. Each campaign carries placements[] ({platform, position, daily[]}); each daily row: date, spendUSD, impressions, clicks, ctrPct, cpmUSD, purchases. Missing date = zero delivery. purchases = Meta action type 'omni_purchase' (fallback 'purchase') — the Ads Manager Purchases column; null when zero. ctrPct/cpmUSD straight from the API. error!=null means the fetch failed — campaigns.json, ads-7d.json and ads-metrics.json are unaffected.",
  "error": null,
  "campaigns": [
-  {
-   "id": "120252141524090723",
-   "name": "25 AUG MINE",
-   "placements": [
-    {
-     "platform": "facebook",
-     "position": "facebook_reels",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 13.8,
-       "impressions": 9377,
-       "clicks": 408,
-       "ctrPct": 4.35,
-       "cpmUSD": 1.47,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 20.72,
-       "impressions": 13963,
-       "clicks": 481,
-       "ctrPct": 3.44,
-       "cpmUSD": 1.48,
-       "purchases": 8
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 19.03,
-       "impressions": 14262,
-       "clicks": 482,
-       "ctrPct": 3.38,
-       "cpmUSD": 1.33,
-       "purchases": 5
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 26.35,
-       "impressions": 21511,
-       "clicks": 744,
-       "ctrPct": 3.46,
-       "cpmUSD": 1.22,
-       "purchases": 5
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 24.65,
-       "impressions": 23265,
-       "clicks": 700,
-       "ctrPct": 3.01,
-       "cpmUSD": 1.06,
-       "purchases": 6
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 31.69,
-       "impressions": 25616,
-       "clicks": 782,
-       "ctrPct": 3.05,
-       "cpmUSD": 1.24,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 23.19,
-       "impressions": 17514,
-       "clicks": 606,
-       "ctrPct": 3.46,
-       "cpmUSD": 1.32,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 23.19,
-       "impressions": 18493,
-       "clicks": 473,
-       "ctrPct": 2.56,
-       "cpmUSD": 1.25,
-       "purchases": 4
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 31.45,
-       "impressions": 25544,
-       "clicks": 651,
-       "ctrPct": 2.55,
-       "cpmUSD": 1.23,
-       "purchases": 3
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 33.12,
-       "impressions": 26304,
-       "clicks": 782,
-       "ctrPct": 2.97,
-       "cpmUSD": 1.26,
-       "purchases": 8
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 25.06,
-       "impressions": 22377,
-       "clicks": 596,
-       "ctrPct": 2.66,
-       "cpmUSD": 1.12,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 1.77,
-       "impressions": 1655,
-       "clicks": 48,
-       "ctrPct": 2.9,
-       "cpmUSD": 1.07,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-20",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-21",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "facebook",
-     "position": "facebook_stories",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 0.77,
-       "impressions": 255,
-       "clicks": 13,
-       "ctrPct": 5.1,
-       "cpmUSD": 3.02,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 1.21,
-       "impressions": 307,
-       "clicks": 13,
-       "ctrPct": 4.23,
-       "cpmUSD": 3.94,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 1.04,
-       "impressions": 333,
-       "clicks": 28,
-       "ctrPct": 8.41,
-       "cpmUSD": 3.12,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 1.4,
-       "impressions": 371,
-       "clicks": 32,
-       "ctrPct": 8.63,
-       "cpmUSD": 3.77,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 1.93,
-       "impressions": 556,
-       "clicks": 28,
-       "ctrPct": 5.04,
-       "cpmUSD": 3.47,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 1.57,
-       "impressions": 504,
-       "clicks": 27,
-       "ctrPct": 5.36,
-       "cpmUSD": 3.12,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 1.27,
-       "impressions": 470,
-       "clicks": 27,
-       "ctrPct": 5.74,
-       "cpmUSD": 2.7,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 1.67,
-       "impressions": 473,
-       "clicks": 18,
-       "ctrPct": 3.81,
-       "cpmUSD": 3.53,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 1.52,
-       "impressions": 459,
-       "clicks": 26,
-       "ctrPct": 5.66,
-       "cpmUSD": 3.31,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 1.64,
-       "impressions": 522,
-       "clicks": 33,
-       "ctrPct": 6.32,
-       "cpmUSD": 3.14,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 2.07,
-       "impressions": 510,
-       "clicks": 22,
-       "ctrPct": 4.31,
-       "cpmUSD": 4.06,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 0.03,
-       "impressions": 23,
-       "clicks": 1,
-       "ctrPct": 4.35,
-       "cpmUSD": 1.3,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-21",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "facebook",
-     "position": "feed",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 20.91,
-       "impressions": 18439,
-       "clicks": 1109,
-       "ctrPct": 6.01,
-       "cpmUSD": 1.13,
-       "purchases": 5
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 28.3,
-       "impressions": 24862,
-       "clicks": 1424,
-       "ctrPct": 5.73,
-       "cpmUSD": 1.14,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 26.27,
-       "impressions": 17467,
-       "clicks": 1087,
-       "ctrPct": 6.22,
-       "cpmUSD": 1.5,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 27.33,
-       "impressions": 21278,
-       "clicks": 1170,
-       "ctrPct": 5.5,
-       "cpmUSD": 1.28,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 27.1,
-       "impressions": 20305,
-       "clicks": 1220,
-       "ctrPct": 6.01,
-       "cpmUSD": 1.33,
-       "purchases": 3
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 21.24,
-       "impressions": 17300,
-       "clicks": 1009,
-       "ctrPct": 5.83,
-       "cpmUSD": 1.23,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 29.13,
-       "impressions": 16491,
-       "clicks": 1006,
-       "ctrPct": 6.1,
-       "cpmUSD": 1.77,
-       "purchases": 16
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 24.28,
-       "impressions": 14159,
-       "clicks": 792,
-       "ctrPct": 5.59,
-       "cpmUSD": 1.71,
-       "purchases": 7
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 31.31,
-       "impressions": 20966,
-       "clicks": 1038,
-       "ctrPct": 4.95,
-       "cpmUSD": 1.49,
-       "purchases": 7
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 27.04,
-       "impressions": 17587,
-       "clicks": 1008,
-       "ctrPct": 5.73,
-       "cpmUSD": 1.54,
-       "purchases": 4
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 29.12,
-       "impressions": 20478,
-       "clicks": 1018,
-       "ctrPct": 4.97,
-       "cpmUSD": 1.42,
-       "purchases": 5
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 1.35,
-       "impressions": 693,
-       "clicks": 45,
-       "ctrPct": 6.49,
-       "cpmUSD": 1.95,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-20",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-21",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "facebook",
-     "position": "search",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 0.03,
-       "impressions": 50,
-       "clicks": 3,
-       "ctrPct": 6.0,
-       "cpmUSD": 0.6,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 0.08,
-       "impressions": 108,
-       "clicks": 4,
-       "ctrPct": 3.7,
-       "cpmUSD": 0.74,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 0.14,
-       "impressions": 214,
-       "clicks": 8,
-       "ctrPct": 3.74,
-       "cpmUSD": 0.65,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 0.15,
-       "impressions": 197,
-       "clicks": 6,
-       "ctrPct": 3.05,
-       "cpmUSD": 0.76,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 0.34,
-       "impressions": 270,
-       "clicks": 15,
-       "ctrPct": 5.56,
-       "cpmUSD": 1.26,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 0.32,
-       "impressions": 263,
-       "clicks": 9,
-       "ctrPct": 3.42,
-       "cpmUSD": 1.22,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 0.28,
-       "impressions": 228,
-       "clicks": 8,
-       "ctrPct": 3.51,
-       "cpmUSD": 1.23,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 0.27,
-       "impressions": 165,
-       "clicks": 2,
-       "ctrPct": 1.21,
-       "cpmUSD": 1.64,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 0.2,
-       "impressions": 159,
-       "clicks": 9,
-       "ctrPct": 5.66,
-       "cpmUSD": 1.26,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 0.17,
-       "impressions": 136,
-       "clicks": 6,
-       "ctrPct": 4.41,
-       "cpmUSD": 1.25,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 0.22,
-       "impressions": 174,
-       "clicks": 3,
-       "ctrPct": 1.72,
-       "cpmUSD": 1.26,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 0.06,
-       "impressions": 23,
-       "clicks": 1,
-       "ctrPct": 4.35,
-       "cpmUSD": 2.61,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-21",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "instagram",
-     "position": "feed",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 26.82,
-       "impressions": 12487,
-       "clicks": 344,
-       "ctrPct": 2.75,
-       "cpmUSD": 2.15,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 27.39,
-       "impressions": 13843,
-       "clicks": 336,
-       "ctrPct": 2.43,
-       "cpmUSD": 1.98,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 27.2,
-       "impressions": 11640,
-       "clicks": 334,
-       "ctrPct": 2.87,
-       "cpmUSD": 2.34,
-       "purchases": 3
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 28.42,
-       "impressions": 11997,
-       "clicks": 341,
-       "ctrPct": 2.84,
-       "cpmUSD": 2.37,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 26.4,
-       "impressions": 10822,
-       "clicks": 339,
-       "ctrPct": 3.13,
-       "cpmUSD": 2.44,
-       "purchases": 3
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 21.51,
-       "impressions": 9053,
-       "clicks": 263,
-       "ctrPct": 2.91,
-       "cpmUSD": 2.38,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 20.73,
-       "impressions": 7875,
-       "clicks": 219,
-       "ctrPct": 2.78,
-       "cpmUSD": 2.63,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 25.48,
-       "impressions": 9784,
-       "clicks": 266,
-       "ctrPct": 2.72,
-       "cpmUSD": 2.6,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 21.82,
-       "impressions": 9239,
-       "clicks": 239,
-       "ctrPct": 2.59,
-       "cpmUSD": 2.36,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 17.66,
-       "impressions": 7263,
-       "clicks": 204,
-       "ctrPct": 2.81,
-       "cpmUSD": 2.43,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 21.5,
-       "impressions": 9130,
-       "clicks": 231,
-       "ctrPct": 2.53,
-       "cpmUSD": 2.35,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 1.0,
-       "impressions": 441,
-       "clicks": 18,
-       "ctrPct": 4.08,
-       "cpmUSD": 2.27,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-20",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "instagram",
-     "position": "instagram_explore_grid_home",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 0.11,
-       "impressions": 342,
-       "clicks": 2,
-       "ctrPct": 0.58,
-       "cpmUSD": 0.32,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 0.09,
-       "impressions": 389,
-       "clicks": 2,
-       "ctrPct": 0.51,
-       "cpmUSD": 0.23,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 0.11,
-       "impressions": 467,
-       "clicks": 13,
-       "ctrPct": 2.78,
-       "cpmUSD": 0.24,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 0.13,
-       "impressions": 466,
-       "clicks": 13,
-       "ctrPct": 2.79,
-       "cpmUSD": 0.28,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 0.14,
-       "impressions": 501,
-       "clicks": 9,
-       "ctrPct": 1.8,
-       "cpmUSD": 0.28,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 0.14,
-       "impressions": 467,
-       "clicks": 12,
-       "ctrPct": 2.57,
-       "cpmUSD": 0.3,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 0.11,
-       "impressions": 414,
-       "clicks": 8,
-       "ctrPct": 1.93,
-       "cpmUSD": 0.27,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 0.1,
-       "impressions": 375,
-       "clicks": 6,
-       "ctrPct": 1.6,
-       "cpmUSD": 0.27,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 0.09,
-       "impressions": 271,
-       "clicks": 1,
-       "ctrPct": 0.37,
-       "cpmUSD": 0.33,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 0.1,
-       "impressions": 322,
-       "clicks": 4,
-       "ctrPct": 1.24,
-       "cpmUSD": 0.31,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 0.1,
-       "impressions": 385,
-       "clicks": 8,
-       "ctrPct": 2.08,
-       "cpmUSD": 0.26,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 0.01,
-       "impressions": 54,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": 0.19,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "instagram",
-     "position": "instagram_reels",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 12.64,
-       "impressions": 6695,
-       "clicks": 248,
-       "ctrPct": 3.7,
-       "cpmUSD": 1.89,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 15.86,
-       "impressions": 8081,
-       "clicks": 299,
-       "ctrPct": 3.7,
-       "cpmUSD": 1.96,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 14.13,
-       "impressions": 7451,
-       "clicks": 285,
-       "ctrPct": 3.82,
-       "cpmUSD": 1.9,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 13.3,
-       "impressions": 6273,
-       "clicks": 226,
-       "ctrPct": 3.6,
-       "cpmUSD": 2.12,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 12.22,
-       "impressions": 5892,
-       "clicks": 188,
-       "ctrPct": 3.19,
-       "cpmUSD": 2.07,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 12.47,
-       "impressions": 5935,
-       "clicks": 165,
-       "ctrPct": 2.78,
-       "cpmUSD": 2.1,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 13.81,
-       "impressions": 6069,
-       "clicks": 198,
-       "ctrPct": 3.26,
-       "cpmUSD": 2.28,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 14.17,
-       "impressions": 5879,
-       "clicks": 156,
-       "ctrPct": 2.65,
-       "cpmUSD": 2.41,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 11.95,
-       "impressions": 5202,
-       "clicks": 146,
-       "ctrPct": 2.81,
-       "cpmUSD": 2.3,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 10.33,
-       "impressions": 4394,
-       "clicks": 123,
-       "ctrPct": 2.8,
-       "cpmUSD": 2.35,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 11.51,
-       "impressions": 5556,
-       "clicks": 156,
-       "ctrPct": 2.81,
-       "cpmUSD": 2.07,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 1.22,
-       "impressions": 494,
-       "clicks": 15,
-       "ctrPct": 3.04,
-       "cpmUSD": 2.47,
-       "purchases": null
-      }
-     ]
-    },
-    {
-     "platform": "instagram",
-     "position": "instagram_stories",
-     "daily": [
-      {
-       "date": "2026-10-08",
-       "spendUSD": 7.52,
-       "impressions": 3483,
-       "clicks": 160,
-       "ctrPct": 4.59,
-       "cpmUSD": 2.16,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-09",
-       "spendUSD": 7.83,
-       "impressions": 3724,
-       "clicks": 169,
-       "ctrPct": 4.54,
-       "cpmUSD": 2.1,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-10",
-       "spendUSD": 9.17,
-       "impressions": 3362,
-       "clicks": 162,
-       "ctrPct": 4.82,
-       "cpmUSD": 2.73,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-11",
-       "spendUSD": 6.9,
-       "impressions": 3264,
-       "clicks": 173,
-       "ctrPct": 5.3,
-       "cpmUSD": 2.11,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-12",
-       "spendUSD": 8.32,
-       "impressions": 3123,
-       "clicks": 140,
-       "ctrPct": 4.48,
-       "cpmUSD": 2.66,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-13",
-       "spendUSD": 8.11,
-       "impressions": 3100,
-       "clicks": 188,
-       "ctrPct": 6.06,
-       "cpmUSD": 2.62,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-14",
-       "spendUSD": 8.95,
-       "impressions": 3154,
-       "clicks": 155,
-       "ctrPct": 4.91,
-       "cpmUSD": 2.84,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-15",
-       "spendUSD": 9.57,
-       "impressions": 2931,
-       "clicks": 119,
-       "ctrPct": 4.06,
-       "cpmUSD": 3.27,
-       "purchases": 1
-      },
-      {
-       "date": "2026-10-16",
-       "spendUSD": 6.56,
-       "impressions": 2150,
-       "clicks": 91,
-       "ctrPct": 4.23,
-       "cpmUSD": 3.05,
-       "purchases": 3
-      },
-      {
-       "date": "2026-10-17",
-       "spendUSD": 6.71,
-       "impressions": 2124,
-       "clicks": 125,
-       "ctrPct": 5.89,
-       "cpmUSD": 3.16,
-       "purchases": 2
-      },
-      {
-       "date": "2026-10-18",
-       "spendUSD": 8.15,
-       "impressions": 2903,
-       "clicks": 168,
-       "ctrPct": 5.79,
-       "cpmUSD": 2.81,
-       "purchases": null
-      },
-      {
-       "date": "2026-10-19",
-       "spendUSD": 0.43,
-       "impressions": 141,
-       "clicks": 8,
-       "ctrPct": 5.67,
-       "cpmUSD": 3.05,
-       "purchases": null
-      }
-     ]
-    }
-   ]
-  },
   {
    "id": "120252936984580723",
    "name": "DENIZ | CUSTOMERS | STARS",
@@ -1075,10 +94,10 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.08,
-       "impressions": 23,
+       "impressions": 25,
        "clicks": 0,
        "ctrPct": 0.0,
-       "cpmUSD": 3.52,
+       "cpmUSD": 3.23,
        "purchases": null
       }
      ]
@@ -1240,7 +259,7 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.0,
-       "impressions": 13,
+       "impressions": 14,
        "clicks": 0,
        "ctrPct": 0.0,
        "cpmUSD": 0.0,
@@ -1431,11 +450,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 4.44,
-       "impressions": 1247,
-       "clicks": 38,
-       "ctrPct": 3.05,
-       "cpmUSD": 3.56,
+       "spendUSD": 4.58,
+       "impressions": 1263,
+       "clicks": 37,
+       "ctrPct": 2.93,
+       "cpmUSD": 3.63,
        "purchases": null
       }
      ]
@@ -1527,11 +546,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.54,
-       "impressions": 112,
+       "spendUSD": 0.59,
+       "impressions": 115,
        "clicks": 4,
-       "ctrPct": 3.57,
-       "cpmUSD": 4.79,
+       "ctrPct": 3.48,
+       "cpmUSD": 5.09,
        "purchases": null
       }
      ]
@@ -1615,7 +634,7 @@
       {
        "date": "2026-10-20",
        "spendUSD": 11.78,
-       "impressions": 5008,
+       "impressions": 5009,
        "clicks": 174,
        "ctrPct": 3.47,
        "cpmUSD": 2.35,
@@ -1623,11 +642,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 9.14,
-       "impressions": 3713,
-       "clicks": 149,
-       "ctrPct": 4.01,
-       "cpmUSD": 2.46,
+       "spendUSD": 9.41,
+       "impressions": 3834,
+       "clicks": 156,
+       "ctrPct": 4.07,
+       "cpmUSD": 2.45,
        "purchases": 2
       }
      ]
@@ -1720,10 +739,10 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.35,
-       "impressions": 172,
+       "impressions": 175,
        "clicks": 6,
-       "ctrPct": 3.49,
-       "cpmUSD": 2.06,
+       "ctrPct": 3.43,
+       "cpmUSD": 2.02,
        "purchases": null
       }
      ]
@@ -1903,10 +922,10 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.02,
-       "impressions": 10,
+       "impressions": 11,
        "clicks": 0,
        "ctrPct": 0.0,
-       "cpmUSD": 2.02,
+       "cpmUSD": 1.83,
        "purchases": null
       }
      ]
@@ -1998,11 +1017,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 5.44,
-       "impressions": 1277,
-       "clicks": 16,
-       "ctrPct": 1.25,
-       "cpmUSD": 4.26,
+       "spendUSD": 5.5,
+       "impressions": 1306,
+       "clicks": 17,
+       "ctrPct": 1.3,
+       "cpmUSD": 4.21,
        "purchases": null
       }
      ]
@@ -2095,7 +1114,7 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.0,
-       "impressions": 11,
+       "impressions": 12,
        "clicks": 0,
        "ctrPct": 0.0,
        "cpmUSD": 0.0,
@@ -2190,11 +1209,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 1.73,
-       "impressions": 460,
-       "clicks": 7,
-       "ctrPct": 1.52,
-       "cpmUSD": 3.76,
+       "spendUSD": 1.79,
+       "impressions": 480,
+       "clicks": 8,
+       "ctrPct": 1.67,
+       "cpmUSD": 3.72,
        "purchases": null
       }
      ]
@@ -2286,10 +1305,10 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 1.74,
-       "impressions": 421,
+       "spendUSD": 1.77,
+       "impressions": 428,
        "clicks": 13,
-       "ctrPct": 3.09,
+       "ctrPct": 3.04,
        "cpmUSD": 4.13,
        "purchases": null
       }
@@ -2448,11 +1467,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.67,
-       "impressions": 239,
-       "clicks": 24,
-       "ctrPct": 10.04,
-       "cpmUSD": 2.79,
+       "spendUSD": 0.69,
+       "impressions": 251,
+       "clicks": 26,
+       "ctrPct": 10.36,
+       "cpmUSD": 2.75,
        "purchases": null
       }
      ]
@@ -2572,7 +1591,7 @@
       {
        "date": "2026-10-20",
        "spendUSD": 15.15,
-       "impressions": 8545,
+       "impressions": 8547,
        "clicks": 1341,
        "ctrPct": 15.69,
        "cpmUSD": 1.77,
@@ -2580,11 +1599,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 8.46,
-       "impressions": 5298,
-       "clicks": 739,
-       "ctrPct": 13.95,
-       "cpmUSD": 1.6,
+       "spendUSD": 8.96,
+       "impressions": 5640,
+       "clicks": 779,
+       "ctrPct": 13.81,
+       "cpmUSD": 1.59,
        "purchases": null
       }
      ]
@@ -6042,11 +5061,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.0,
-       "impressions": 0,
-       "clicks": 0,
-       "ctrPct": 0.0,
-       "cpmUSD": null,
+       "spendUSD": 0.07,
+       "impressions": 77,
+       "clicks": 3,
+       "ctrPct": 3.9,
+       "cpmUSD": 0.9,
        "purchases": null
       }
      ]
@@ -6152,6 +5171,15 @@
        "clicks": 1,
        "ctrPct": 2.86,
        "cpmUSD": 2.57,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-21",
+       "spendUSD": 0.0,
+       "impressions": 1,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": 0.0,
        "purchases": null
       }
      ]
@@ -6280,9 +5308,9 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.0,
-       "impressions": 9,
-       "clicks": 0,
-       "ctrPct": 0.0,
+       "impressions": 85,
+       "clicks": 4,
+       "ctrPct": 4.71,
        "cpmUSD": 0.0,
        "purchases": null
       }
@@ -6618,11 +5646,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.01,
-       "impressions": 17,
+       "spendUSD": 0.05,
+       "impressions": 35,
        "clicks": 0,
        "ctrPct": 0.0,
-       "cpmUSD": 0.59,
+       "cpmUSD": 1.49,
        "purchases": null
       }
      ]
@@ -6762,6 +5790,15 @@
        "ctrPct": 3.2,
        "cpmUSD": 2.16,
        "purchases": null
+      },
+      {
+       "date": "2026-10-21",
+       "spendUSD": 0.02,
+       "impressions": 29,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": 0.6,
+       "purchases": null
       }
      ]
     },
@@ -6835,7 +5872,7 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.0,
-       "impressions": 9,
+       "impressions": 32,
        "clicks": 0,
        "ctrPct": 0.0,
        "cpmUSD": 0.0,
@@ -6859,7 +5896,7 @@
        "impressions": 5,
        "clicks": 0,
        "ctrPct": 0.0,
-       "cpmUSD": 2.0,
+       "cpmUSD": 2.01,
        "purchases": null
       },
       {
@@ -6921,11 +5958,11 @@
      "daily": [
       {
        "date": "2026-10-19",
-       "spendUSD": 3.07,
+       "spendUSD": 3.08,
        "impressions": 663,
        "clicks": 22,
        "ctrPct": 3.32,
-       "cpmUSD": 4.63,
+       "cpmUSD": 4.65,
        "purchases": null
       },
       {
@@ -6940,10 +5977,10 @@
       {
        "date": "2026-10-21",
        "spendUSD": 2.43,
-       "impressions": 816,
+       "impressions": 820,
        "clicks": 8,
        "ctrPct": 0.98,
-       "cpmUSD": 2.98,
+       "cpmUSD": 2.96,
        "purchases": null
       }
      ]
@@ -6991,7 +6028,7 @@
        "impressions": 88,
        "clicks": 2,
        "ctrPct": 2.27,
-       "cpmUSD": 9.43,
+       "cpmUSD": 9.46,
        "purchases": null
       },
       {
@@ -7020,11 +6057,11 @@
      "daily": [
       {
        "date": "2026-10-19",
-       "spendUSD": 4.06,
+       "spendUSD": 4.07,
        "impressions": 634,
        "clicks": 25,
        "ctrPct": 3.94,
-       "cpmUSD": 6.4,
+       "cpmUSD": 6.42,
        "purchases": null
       },
       {
@@ -7038,11 +6075,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 5.78,
-       "impressions": 1111,
+       "spendUSD": 5.8,
+       "impressions": 1114,
        "clicks": 32,
-       "ctrPct": 2.88,
-       "cpmUSD": 5.2,
+       "ctrPct": 2.87,
+       "cpmUSD": 5.21,
        "purchases": null
       }
      ]
@@ -7057,7 +6094,7 @@
        "impressions": 120,
        "clicks": 5,
        "ctrPct": 4.17,
-       "cpmUSD": 3.92,
+       "cpmUSD": 3.93,
        "purchases": null
       },
       {
@@ -7116,11 +6153,11 @@
      "daily": [
       {
        "date": "2026-10-19",
-       "spendUSD": 3.7,
-       "impressions": 896,
+       "spendUSD": 3.71,
+       "impressions": 897,
        "clicks": 19,
        "ctrPct": 2.12,
-       "cpmUSD": 4.13,
+       "cpmUSD": 4.14,
        "purchases": null
       },
       {
@@ -7134,8 +6171,8 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 5.78,
-       "impressions": 1338,
+       "spendUSD": 5.79,
+       "impressions": 1340,
        "clicks": 17,
        "ctrPct": 1.27,
        "cpmUSD": 4.32,
@@ -7182,11 +6219,11 @@
      "daily": [
       {
        "date": "2026-10-19",
-       "spendUSD": 1.86,
+       "spendUSD": 1.87,
        "impressions": 491,
        "clicks": 4,
        "ctrPct": 0.81,
-       "cpmUSD": 3.79,
+       "cpmUSD": 3.8,
        "purchases": null
       },
       {
@@ -7219,7 +6256,7 @@
        "impressions": 358,
        "clicks": 8,
        "ctrPct": 2.23,
-       "cpmUSD": 3.24,
+       "cpmUSD": 3.25,
        "purchases": null
       },
       {
@@ -7234,10 +6271,10 @@
       {
        "date": "2026-10-21",
        "spendUSD": 2.84,
-       "impressions": 723,
+       "impressions": 724,
        "clicks": 12,
        "ctrPct": 1.66,
-       "cpmUSD": 3.93,
+       "cpmUSD": 3.92,
        "purchases": null
       }
      ]
@@ -8037,6 +7074,987 @@
    ]
   },
   {
+   "id": "120252141524090723",
+   "name": "MESSAGES CAMPAIGN",
+   "placements": [
+    {
+     "platform": "facebook",
+     "position": "facebook_reels",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 13.8,
+       "impressions": 9377,
+       "clicks": 408,
+       "ctrPct": 4.35,
+       "cpmUSD": 1.47,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 20.72,
+       "impressions": 13963,
+       "clicks": 481,
+       "ctrPct": 3.44,
+       "cpmUSD": 1.48,
+       "purchases": 8
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 19.03,
+       "impressions": 14262,
+       "clicks": 482,
+       "ctrPct": 3.38,
+       "cpmUSD": 1.33,
+       "purchases": 5
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 26.35,
+       "impressions": 21511,
+       "clicks": 744,
+       "ctrPct": 3.46,
+       "cpmUSD": 1.22,
+       "purchases": 5
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 24.65,
+       "impressions": 23265,
+       "clicks": 700,
+       "ctrPct": 3.01,
+       "cpmUSD": 1.06,
+       "purchases": 6
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 31.69,
+       "impressions": 25616,
+       "clicks": 782,
+       "ctrPct": 3.05,
+       "cpmUSD": 1.24,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 23.19,
+       "impressions": 17514,
+       "clicks": 606,
+       "ctrPct": 3.46,
+       "cpmUSD": 1.32,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 23.19,
+       "impressions": 18493,
+       "clicks": 473,
+       "ctrPct": 2.56,
+       "cpmUSD": 1.25,
+       "purchases": 4
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 31.45,
+       "impressions": 25544,
+       "clicks": 651,
+       "ctrPct": 2.55,
+       "cpmUSD": 1.23,
+       "purchases": 3
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 33.12,
+       "impressions": 26304,
+       "clicks": 782,
+       "ctrPct": 2.97,
+       "cpmUSD": 1.26,
+       "purchases": 8
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 25.06,
+       "impressions": 22377,
+       "clicks": 596,
+       "ctrPct": 2.66,
+       "cpmUSD": 1.12,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 1.77,
+       "impressions": 1655,
+       "clicks": 48,
+       "ctrPct": 2.9,
+       "cpmUSD": 1.07,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-20",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-21",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "facebook",
+     "position": "facebook_stories",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 0.77,
+       "impressions": 255,
+       "clicks": 13,
+       "ctrPct": 5.1,
+       "cpmUSD": 3.02,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 1.21,
+       "impressions": 307,
+       "clicks": 13,
+       "ctrPct": 4.23,
+       "cpmUSD": 3.94,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 1.04,
+       "impressions": 333,
+       "clicks": 28,
+       "ctrPct": 8.41,
+       "cpmUSD": 3.12,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 1.4,
+       "impressions": 371,
+       "clicks": 32,
+       "ctrPct": 8.63,
+       "cpmUSD": 3.77,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 1.93,
+       "impressions": 556,
+       "clicks": 28,
+       "ctrPct": 5.04,
+       "cpmUSD": 3.47,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 1.57,
+       "impressions": 504,
+       "clicks": 27,
+       "ctrPct": 5.36,
+       "cpmUSD": 3.12,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 1.27,
+       "impressions": 470,
+       "clicks": 27,
+       "ctrPct": 5.74,
+       "cpmUSD": 2.7,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 1.67,
+       "impressions": 473,
+       "clicks": 18,
+       "ctrPct": 3.81,
+       "cpmUSD": 3.53,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 1.52,
+       "impressions": 459,
+       "clicks": 26,
+       "ctrPct": 5.66,
+       "cpmUSD": 3.31,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 1.64,
+       "impressions": 522,
+       "clicks": 33,
+       "ctrPct": 6.32,
+       "cpmUSD": 3.14,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 2.07,
+       "impressions": 510,
+       "clicks": 22,
+       "ctrPct": 4.31,
+       "cpmUSD": 4.06,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 0.03,
+       "impressions": 23,
+       "clicks": 1,
+       "ctrPct": 4.35,
+       "cpmUSD": 1.3,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-21",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "facebook",
+     "position": "feed",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 20.91,
+       "impressions": 18439,
+       "clicks": 1109,
+       "ctrPct": 6.01,
+       "cpmUSD": 1.13,
+       "purchases": 5
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 28.3,
+       "impressions": 24862,
+       "clicks": 1424,
+       "ctrPct": 5.73,
+       "cpmUSD": 1.14,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 26.27,
+       "impressions": 17467,
+       "clicks": 1087,
+       "ctrPct": 6.22,
+       "cpmUSD": 1.5,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 27.33,
+       "impressions": 21278,
+       "clicks": 1170,
+       "ctrPct": 5.5,
+       "cpmUSD": 1.28,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 27.1,
+       "impressions": 20305,
+       "clicks": 1220,
+       "ctrPct": 6.01,
+       "cpmUSD": 1.33,
+       "purchases": 3
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 21.24,
+       "impressions": 17300,
+       "clicks": 1009,
+       "ctrPct": 5.83,
+       "cpmUSD": 1.23,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 29.13,
+       "impressions": 16491,
+       "clicks": 1006,
+       "ctrPct": 6.1,
+       "cpmUSD": 1.77,
+       "purchases": 16
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 24.28,
+       "impressions": 14159,
+       "clicks": 792,
+       "ctrPct": 5.59,
+       "cpmUSD": 1.71,
+       "purchases": 7
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 31.31,
+       "impressions": 20966,
+       "clicks": 1038,
+       "ctrPct": 4.95,
+       "cpmUSD": 1.49,
+       "purchases": 7
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 27.04,
+       "impressions": 17587,
+       "clicks": 1008,
+       "ctrPct": 5.73,
+       "cpmUSD": 1.54,
+       "purchases": 4
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 29.12,
+       "impressions": 20478,
+       "clicks": 1018,
+       "ctrPct": 4.97,
+       "cpmUSD": 1.42,
+       "purchases": 5
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 1.35,
+       "impressions": 693,
+       "clicks": 45,
+       "ctrPct": 6.49,
+       "cpmUSD": 1.95,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-20",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-21",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "facebook",
+     "position": "search",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 0.03,
+       "impressions": 50,
+       "clicks": 3,
+       "ctrPct": 6.0,
+       "cpmUSD": 0.6,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 0.08,
+       "impressions": 108,
+       "clicks": 4,
+       "ctrPct": 3.7,
+       "cpmUSD": 0.74,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 0.14,
+       "impressions": 214,
+       "clicks": 8,
+       "ctrPct": 3.74,
+       "cpmUSD": 0.65,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 0.15,
+       "impressions": 197,
+       "clicks": 6,
+       "ctrPct": 3.05,
+       "cpmUSD": 0.76,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 0.34,
+       "impressions": 270,
+       "clicks": 15,
+       "ctrPct": 5.56,
+       "cpmUSD": 1.26,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 0.32,
+       "impressions": 263,
+       "clicks": 9,
+       "ctrPct": 3.42,
+       "cpmUSD": 1.22,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 0.28,
+       "impressions": 228,
+       "clicks": 8,
+       "ctrPct": 3.51,
+       "cpmUSD": 1.23,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 0.27,
+       "impressions": 165,
+       "clicks": 2,
+       "ctrPct": 1.21,
+       "cpmUSD": 1.64,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 0.2,
+       "impressions": 159,
+       "clicks": 9,
+       "ctrPct": 5.66,
+       "cpmUSD": 1.26,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 0.17,
+       "impressions": 136,
+       "clicks": 6,
+       "ctrPct": 4.41,
+       "cpmUSD": 1.25,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 0.22,
+       "impressions": 174,
+       "clicks": 3,
+       "ctrPct": 1.72,
+       "cpmUSD": 1.26,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 0.06,
+       "impressions": 23,
+       "clicks": 1,
+       "ctrPct": 4.35,
+       "cpmUSD": 2.61,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-21",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "instagram",
+     "position": "feed",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 26.82,
+       "impressions": 12487,
+       "clicks": 344,
+       "ctrPct": 2.75,
+       "cpmUSD": 2.15,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 27.39,
+       "impressions": 13843,
+       "clicks": 336,
+       "ctrPct": 2.43,
+       "cpmUSD": 1.98,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 27.2,
+       "impressions": 11640,
+       "clicks": 334,
+       "ctrPct": 2.87,
+       "cpmUSD": 2.34,
+       "purchases": 3
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 28.42,
+       "impressions": 11997,
+       "clicks": 341,
+       "ctrPct": 2.84,
+       "cpmUSD": 2.37,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 26.4,
+       "impressions": 10822,
+       "clicks": 339,
+       "ctrPct": 3.13,
+       "cpmUSD": 2.44,
+       "purchases": 3
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 21.51,
+       "impressions": 9053,
+       "clicks": 263,
+       "ctrPct": 2.91,
+       "cpmUSD": 2.38,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 20.73,
+       "impressions": 7875,
+       "clicks": 219,
+       "ctrPct": 2.78,
+       "cpmUSD": 2.63,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 25.48,
+       "impressions": 9784,
+       "clicks": 266,
+       "ctrPct": 2.72,
+       "cpmUSD": 2.6,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 21.82,
+       "impressions": 9239,
+       "clicks": 239,
+       "ctrPct": 2.59,
+       "cpmUSD": 2.36,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 17.66,
+       "impressions": 7263,
+       "clicks": 204,
+       "ctrPct": 2.81,
+       "cpmUSD": 2.43,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 21.5,
+       "impressions": 9130,
+       "clicks": 231,
+       "ctrPct": 2.53,
+       "cpmUSD": 2.35,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 1.0,
+       "impressions": 441,
+       "clicks": 18,
+       "ctrPct": 4.08,
+       "cpmUSD": 2.27,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-20",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": null,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "instagram",
+     "position": "instagram_explore_grid_home",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 0.11,
+       "impressions": 342,
+       "clicks": 2,
+       "ctrPct": 0.58,
+       "cpmUSD": 0.32,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 0.09,
+       "impressions": 389,
+       "clicks": 2,
+       "ctrPct": 0.51,
+       "cpmUSD": 0.23,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 0.11,
+       "impressions": 467,
+       "clicks": 13,
+       "ctrPct": 2.78,
+       "cpmUSD": 0.24,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 0.13,
+       "impressions": 466,
+       "clicks": 13,
+       "ctrPct": 2.79,
+       "cpmUSD": 0.28,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 0.14,
+       "impressions": 501,
+       "clicks": 9,
+       "ctrPct": 1.8,
+       "cpmUSD": 0.28,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 0.14,
+       "impressions": 467,
+       "clicks": 12,
+       "ctrPct": 2.57,
+       "cpmUSD": 0.3,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 0.11,
+       "impressions": 414,
+       "clicks": 8,
+       "ctrPct": 1.93,
+       "cpmUSD": 0.27,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 0.1,
+       "impressions": 375,
+       "clicks": 6,
+       "ctrPct": 1.6,
+       "cpmUSD": 0.27,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 0.09,
+       "impressions": 271,
+       "clicks": 1,
+       "ctrPct": 0.37,
+       "cpmUSD": 0.33,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 0.1,
+       "impressions": 322,
+       "clicks": 4,
+       "ctrPct": 1.24,
+       "cpmUSD": 0.31,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 0.1,
+       "impressions": 385,
+       "clicks": 8,
+       "ctrPct": 2.08,
+       "cpmUSD": 0.26,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 0.01,
+       "impressions": 54,
+       "clicks": 0,
+       "ctrPct": 0.0,
+       "cpmUSD": 0.19,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "instagram",
+     "position": "instagram_reels",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 12.64,
+       "impressions": 6695,
+       "clicks": 248,
+       "ctrPct": 3.7,
+       "cpmUSD": 1.89,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 15.86,
+       "impressions": 8081,
+       "clicks": 299,
+       "ctrPct": 3.7,
+       "cpmUSD": 1.96,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 14.13,
+       "impressions": 7451,
+       "clicks": 285,
+       "ctrPct": 3.82,
+       "cpmUSD": 1.9,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 13.3,
+       "impressions": 6273,
+       "clicks": 226,
+       "ctrPct": 3.6,
+       "cpmUSD": 2.12,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 12.22,
+       "impressions": 5892,
+       "clicks": 188,
+       "ctrPct": 3.19,
+       "cpmUSD": 2.07,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 12.47,
+       "impressions": 5935,
+       "clicks": 165,
+       "ctrPct": 2.78,
+       "cpmUSD": 2.1,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 13.81,
+       "impressions": 6069,
+       "clicks": 198,
+       "ctrPct": 3.26,
+       "cpmUSD": 2.28,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 14.17,
+       "impressions": 5879,
+       "clicks": 156,
+       "ctrPct": 2.65,
+       "cpmUSD": 2.41,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 11.95,
+       "impressions": 5202,
+       "clicks": 146,
+       "ctrPct": 2.81,
+       "cpmUSD": 2.3,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 10.33,
+       "impressions": 4394,
+       "clicks": 123,
+       "ctrPct": 2.8,
+       "cpmUSD": 2.35,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 11.51,
+       "impressions": 5556,
+       "clicks": 156,
+       "ctrPct": 2.81,
+       "cpmUSD": 2.07,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 1.22,
+       "impressions": 494,
+       "clicks": 15,
+       "ctrPct": 3.04,
+       "cpmUSD": 2.47,
+       "purchases": null
+      }
+     ]
+    },
+    {
+     "platform": "instagram",
+     "position": "instagram_stories",
+     "daily": [
+      {
+       "date": "2026-10-08",
+       "spendUSD": 7.52,
+       "impressions": 3483,
+       "clicks": 160,
+       "ctrPct": 4.59,
+       "cpmUSD": 2.16,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-09",
+       "spendUSD": 7.83,
+       "impressions": 3724,
+       "clicks": 169,
+       "ctrPct": 4.54,
+       "cpmUSD": 2.1,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-10",
+       "spendUSD": 9.17,
+       "impressions": 3362,
+       "clicks": 162,
+       "ctrPct": 4.82,
+       "cpmUSD": 2.73,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-11",
+       "spendUSD": 6.9,
+       "impressions": 3264,
+       "clicks": 173,
+       "ctrPct": 5.3,
+       "cpmUSD": 2.11,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-12",
+       "spendUSD": 8.32,
+       "impressions": 3123,
+       "clicks": 140,
+       "ctrPct": 4.48,
+       "cpmUSD": 2.66,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-13",
+       "spendUSD": 8.11,
+       "impressions": 3100,
+       "clicks": 188,
+       "ctrPct": 6.06,
+       "cpmUSD": 2.62,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-14",
+       "spendUSD": 8.95,
+       "impressions": 3154,
+       "clicks": 155,
+       "ctrPct": 4.91,
+       "cpmUSD": 2.84,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-15",
+       "spendUSD": 9.57,
+       "impressions": 2931,
+       "clicks": 119,
+       "ctrPct": 4.06,
+       "cpmUSD": 3.27,
+       "purchases": 1
+      },
+      {
+       "date": "2026-10-16",
+       "spendUSD": 6.56,
+       "impressions": 2150,
+       "clicks": 91,
+       "ctrPct": 4.23,
+       "cpmUSD": 3.05,
+       "purchases": 3
+      },
+      {
+       "date": "2026-10-17",
+       "spendUSD": 6.71,
+       "impressions": 2124,
+       "clicks": 125,
+       "ctrPct": 5.89,
+       "cpmUSD": 3.16,
+       "purchases": 2
+      },
+      {
+       "date": "2026-10-18",
+       "spendUSD": 8.15,
+       "impressions": 2903,
+       "clicks": 168,
+       "ctrPct": 5.79,
+       "cpmUSD": 2.81,
+       "purchases": null
+      },
+      {
+       "date": "2026-10-19",
+       "spendUSD": 0.43,
+       "impressions": 141,
+       "clicks": 8,
+       "ctrPct": 5.67,
+       "cpmUSD": 3.05,
+       "purchases": null
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "120252603769060723",
    "name": "SEASON | FULL CATALOG",
    "placements": [
@@ -8163,11 +8181,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.07,
-       "impressions": 120,
+       "spendUSD": 0.08,
+       "impressions": 122,
        "clicks": 11,
-       "ctrPct": 9.17,
-       "cpmUSD": 0.58,
+       "ctrPct": 9.02,
+       "cpmUSD": 0.66,
        "purchases": null
       }
      ]
@@ -8295,11 +8313,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.22,
-       "impressions": 105,
-       "clicks": 19,
-       "ctrPct": 18.1,
-       "cpmUSD": 2.1,
+       "spendUSD": 0.23,
+       "impressions": 106,
+       "clicks": 20,
+       "ctrPct": 18.87,
+       "cpmUSD": 2.17,
        "purchases": null
       }
      ]
@@ -8673,8 +8691,8 @@
       },
       {
        "date": "2026-10-19",
-       "spendUSD": 10.26,
-       "impressions": 5026,
+       "spendUSD": 10.27,
+       "impressions": 5027,
        "clicks": 353,
        "ctrPct": 7.02,
        "cpmUSD": 2.04,
@@ -8683,18 +8701,18 @@
       {
        "date": "2026-10-20",
        "spendUSD": 9.85,
-       "impressions": 5216,
+       "impressions": 5215,
        "clicks": 345,
-       "ctrPct": 6.61,
+       "ctrPct": 6.62,
        "cpmUSD": 1.89,
        "purchases": null
       },
       {
        "date": "2026-10-21",
        "spendUSD": 5.81,
-       "impressions": 2904,
-       "clicks": 242,
-       "ctrPct": 8.33,
+       "impressions": 2907,
+       "clicks": 243,
+       "ctrPct": 8.36,
        "cpmUSD": 2.0,
        "purchases": 2
       }
@@ -8824,7 +8842,7 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.32,
-       "impressions": 504,
+       "impressions": 503,
        "clicks": 7,
        "ctrPct": 1.39,
        "cpmUSD": 0.64,
@@ -9079,7 +9097,7 @@
       {
        "date": "2026-10-20",
        "spendUSD": 8.13,
-       "impressions": 1937,
+       "impressions": 1938,
        "clicks": 147,
        "ctrPct": 7.59,
        "cpmUSD": 4.2,
@@ -9087,11 +9105,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 6.03,
-       "impressions": 1223,
+       "spendUSD": 6.12,
+       "impressions": 1232,
        "clicks": 88,
-       "ctrPct": 7.2,
-       "cpmUSD": 4.93,
+       "ctrPct": 7.14,
+       "cpmUSD": 4.97,
        "purchases": null
       }
      ]
@@ -9615,11 +9633,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 4.79,
-       "impressions": 1611,
+       "spendUSD": 4.81,
+       "impressions": 1612,
        "clicks": 70,
-       "ctrPct": 4.35,
-       "cpmUSD": 2.97,
+       "ctrPct": 4.34,
+       "cpmUSD": 2.98,
        "purchases": 1
       }
      ]
@@ -9747,11 +9765,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.07,
-       "impressions": 149,
+       "spendUSD": 0.08,
+       "impressions": 152,
        "clicks": 1,
-       "ctrPct": 0.67,
-       "cpmUSD": 0.47,
+       "ctrPct": 0.66,
+       "cpmUSD": 0.53,
        "purchases": null
       }
      ]
@@ -9880,9 +9898,9 @@
       {
        "date": "2026-10-21",
        "spendUSD": 4.29,
-       "impressions": 1319,
+       "impressions": 1318,
        "clicks": 147,
-       "ctrPct": 11.14,
+       "ctrPct": 11.15,
        "cpmUSD": 3.26,
        "purchases": null
       }
@@ -10143,11 +10161,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 3.23,
-       "impressions": 898,
+       "spendUSD": 3.27,
+       "impressions": 901,
        "clicks": 89,
-       "ctrPct": 9.91,
-       "cpmUSD": 3.6,
+       "ctrPct": 9.88,
+       "cpmUSD": 3.63,
        "purchases": null
       }
      ]
@@ -10276,9 +10294,9 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.26,
-       "impressions": 535,
+       "impressions": 534,
        "clicks": 48,
-       "ctrPct": 8.97,
+       "ctrPct": 8.99,
        "cpmUSD": 0.49,
        "purchases": null
       }
@@ -10692,10 +10710,10 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.48,
-       "impressions": 925,
-       "clicks": 167,
-       "ctrPct": 18.05,
+       "spendUSD": 0.49,
+       "impressions": 949,
+       "clicks": 171,
+       "ctrPct": 18.02,
        "cpmUSD": 0.52,
        "purchases": null
       }
@@ -10824,9 +10842,9 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.54,
-       "impressions": 184,
-       "clicks": 46,
+       "spendUSD": 0.56,
+       "impressions": 192,
+       "clicks": 48,
        "ctrPct": 25.0,
        "cpmUSD": 2.92,
        "purchases": null
@@ -10960,7 +10978,7 @@
        "impressions": 15,
        "clicks": 1,
        "ctrPct": 6.67,
-       "cpmUSD": 4.74,
+       "cpmUSD": 4.67,
        "purchases": null
       }
      ]
@@ -11092,7 +11110,7 @@
        "impressions": 82,
        "clicks": 6,
        "ctrPct": 7.32,
-       "cpmUSD": 0.87,
+       "cpmUSD": 0.86,
        "purchases": null
       }
      ]
@@ -11212,7 +11230,7 @@
       {
        "date": "2026-10-20",
        "spendUSD": 21.14,
-       "impressions": 12937,
+       "impressions": 12939,
        "clicks": 834,
        "ctrPct": 6.45,
        "cpmUSD": 1.63,
@@ -11220,11 +11238,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 10.74,
-       "impressions": 7152,
+       "spendUSD": 10.9,
+       "impressions": 7217,
        "clicks": 517,
-       "ctrPct": 7.23,
-       "cpmUSD": 1.5,
+       "ctrPct": 7.16,
+       "cpmUSD": 1.51,
        "purchases": null
       }
      ]
@@ -11352,10 +11370,10 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.23,
-       "impressions": 360,
+       "spendUSD": 0.24,
+       "impressions": 368,
        "clicks": 9,
-       "ctrPct": 2.5,
+       "ctrPct": 2.45,
        "cpmUSD": 0.65,
        "purchases": null
       }
@@ -11484,11 +11502,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 2.65,
-       "impressions": 689,
+       "spendUSD": 2.75,
+       "impressions": 702,
        "clicks": 84,
-       "ctrPct": 12.19,
-       "cpmUSD": 3.84,
+       "ctrPct": 11.97,
+       "cpmUSD": 3.92,
        "purchases": 1
       }
      ]
@@ -11608,7 +11626,7 @@
       {
        "date": "2026-10-20",
        "spendUSD": 20.66,
-       "impressions": 4881,
+       "impressions": 4882,
        "clicks": 458,
        "ctrPct": 9.38,
        "cpmUSD": 4.23,
@@ -11616,11 +11634,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 15.42,
-       "impressions": 3546,
+       "spendUSD": 15.71,
+       "impressions": 3590,
        "clicks": 374,
-       "ctrPct": 10.55,
-       "cpmUSD": 4.35,
+       "ctrPct": 10.42,
+       "cpmUSD": 4.37,
        "purchases": null
       }
      ]
@@ -11748,11 +11766,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.27,
-       "impressions": 152,
-       "clicks": 9,
-       "ctrPct": 5.92,
-       "cpmUSD": 1.8,
+       "spendUSD": 0.28,
+       "impressions": 153,
+       "clicks": 11,
+       "ctrPct": 7.19,
+       "cpmUSD": 1.83,
        "purchases": null
       }
      ]
@@ -12081,11 +12099,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 0.1,
-       "impressions": 110,
+       "spendUSD": 0.11,
+       "impressions": 113,
        "clicks": 10,
-       "ctrPct": 9.09,
-       "cpmUSD": 0.92,
+       "ctrPct": 8.85,
+       "cpmUSD": 0.98,
        "purchases": 1
       }
      ]
@@ -12213,11 +12231,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 20.94,
-       "impressions": 7683,
+       "spendUSD": 20.92,
+       "impressions": 7757,
        "clicks": 434,
-       "ctrPct": 5.65,
-       "cpmUSD": 2.73,
+       "ctrPct": 5.59,
+       "cpmUSD": 2.7,
        "purchases": 2
       }
      ]
@@ -12328,10 +12346,10 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.21,
-       "impressions": 566,
+       "impressions": 565,
        "clicks": 18,
-       "ctrPct": 3.18,
-       "cpmUSD": 0.38,
+       "ctrPct": 3.19,
+       "cpmUSD": 0.37,
        "purchases": null
       }
      ]
@@ -12459,10 +12477,10 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 11.55,
-       "impressions": 4943,
-       "clicks": 607,
-       "ctrPct": 12.28,
+       "spendUSD": 11.73,
+       "impressions": 5012,
+       "clicks": 611,
+       "ctrPct": 12.19,
        "cpmUSD": 2.34,
        "purchases": 4
       }
@@ -12574,7 +12592,7 @@
       {
        "date": "2026-10-21",
        "spendUSD": 0.0,
-       "impressions": 6,
+       "impressions": 7,
        "clicks": 0,
        "ctrPct": 0.0,
        "cpmUSD": 0.0,
@@ -12696,11 +12714,11 @@
       },
       {
        "date": "2026-10-21",
-       "spendUSD": 8.47,
-       "impressions": 2689,
-       "clicks": 362,
-       "ctrPct": 13.46,
-       "cpmUSD": 3.15,
+       "spendUSD": 8.61,
+       "impressions": 2729,
+       "clicks": 366,
+       "ctrPct": 13.41,
+       "cpmUSD": 3.16,
        "purchases": 1
       }
      ]
