@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T10:32:39.716121+00:00",
+ "syncedAt": "2026-10-22T10:42:59.745254+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5080,20 +5080,20 @@
    "sku": "H-1865",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-08-07",
    "firstOrderDate": "2026-08-07",
-   "lastOrderDate": "2026-10-10",
-   "orders": 27,
-   "units": 27,
-   "revenue": 2133000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 28,
+   "units": 28,
+   "revenue": 2212000,
    "delivered": 27,
    "returned": 9,
    "unitsBoughtFromSupplier": 21,
    "returnedStock": 3,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13395,32 +13395,6 @@
    }
   },
   {
-   "odooId": 4749,
-   "name": "L-1000",
-   "sku": "L-1000",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-28",
-   "orders": 121,
-   "units": 132,
-   "revenue": 5340000,
-   "delivered": 130,
-   "returned": 21,
-   "unitsBoughtFromSupplier": 64,
-   "returnedStock": 7,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 24,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4747,
    "name": "L-5015",
    "sku": "L-5015",
@@ -13492,6 +13466,32 @@
    "unitPrice": 62000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 38,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4749,
+   "name": "L-1000",
+   "sku": "L-1000",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-28",
+   "orders": 121,
+   "units": 132,
+   "revenue": 5340000,
+   "delivered": 130,
+   "returned": 21,
+   "unitsBoughtFromSupplier": 64,
+   "returnedStock": 7,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 24,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14254,7 +14254,7 @@
   }
  ],
  "shop": {
-  "stockUnits": 1934,
+  "stockUnits": 1936,
   "stockValue": 61244940,
   "stockVariants": 1355
  },
@@ -19041,6 +19041,11 @@
      79000
     ],
     "2026-10-10": [
+     1,
+     1,
+     79000
+    ],
+    "2026-10-22": [
      1,
      1,
      79000
@@ -27313,18 +27318,6 @@
      41000
     ]
    },
-   "4749": {
-    "2026-09-06": [
-     1,
-     1,
-     55000
-    ],
-    "2026-09-28": [
-     1,
-     1,
-     41000
-    ]
-   },
    "4747": {
     "2026-09-12": [
      1,
@@ -27364,6 +27357,18 @@
      1,
      1,
      30000
+    ]
+   },
+   "4749": {
+    "2026-09-06": [
+     1,
+     1,
+     55000
+    ],
+    "2026-09-28": [
+     1,
+     1,
+     41000
     ]
    },
    "4640": {
@@ -28096,10 +28101,27 @@
    "2026-10-19": 38,
    "2026-10-20": 19,
    "2026-10-21": 26,
-   "2026-10-22": 12
+   "2026-10-22": 13
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33640",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -54000,
+   "lines": [
+    {
+     "sku": "H-1865-antrasit-2",
+     "qty": 1,
+     "price": 79000,
+     "discPct": 64.3,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33639",
    "d": "2026-10-22",
@@ -162865,14 +162887,14 @@
    "sku": "K-1005",
    "model": "K-1005",
    "qty": 0,
-   "cost": 0,
+   "cost": 63840,
    "created": "2026-09-22"
   },
   {
    "sku": "K-1005",
    "model": "K-1005",
    "qty": 0,
-   "cost": 58900,
+   "cost": 63840,
    "created": "2026-09-22"
   },
   {
@@ -168696,7 +168718,7 @@
    "sku": "K-6642",
    "model": "K-6642",
    "qty": 0,
-   "cost": 0,
+   "cost": 75600,
    "created": "2026-09-24"
   },
   {
@@ -170460,7 +170482,7 @@
    "sku": "K-6674",
    "model": "K-6674",
    "qty": 0,
-   "cost": 73650,
+   "cost": 75600,
    "created": "2026-09-27"
   },
   {
@@ -171559,7 +171581,7 @@
    "sku": "K-9907",
    "model": "K-9907",
    "qty": 0,
-   "cost": 0,
+   "cost": 75600,
    "created": "2026-10-20"
   },
   {
@@ -171594,7 +171616,7 @@
    "sku": "K-9908",
    "model": "K-9908",
    "qty": 0,
-   "cost": 74400,
+   "cost": 80640,
    "created": "2026-09-10"
   },
   {
