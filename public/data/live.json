@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T09:02:31.616420+00:00",
+ "syncedAt": "2026-10-22T09:32:10.523148+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1111,7 +1111,7 @@
    "revenue": 4110000,
    "delivered": 15,
    "returned": 0,
-   "unitsBoughtFromSupplier": 29,
+   "unitsBoughtFromSupplier": 30,
    "returnedStock": 0,
    "unitPrice": 137000.0,
    "orderVelocity7d": 3.0,
@@ -1708,9 +1708,9 @@
    "units": 56,
    "revenue": 4411000,
    "delivered": 52,
-   "returned": 7,
+   "returned": 9,
    "unitsBoughtFromSupplier": 52,
-   "returnedStock": 6,
+   "returnedStock": 8,
    "unitPrice": 80000.0,
    "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
@@ -2722,9 +2722,9 @@
    "units": 27,
    "revenue": 1975000,
    "delivered": 26,
-   "returned": 8,
+   "returned": 9,
    "unitsBoughtFromSupplier": 25,
-   "returnedStock": 7,
+   "returnedStock": 8,
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 1,
@@ -3138,9 +3138,9 @@
    "units": 62,
    "revenue": 4406000,
    "delivered": 61,
-   "returned": 18,
+   "returned": 19,
    "unitsBoughtFromSupplier": 53,
-   "returnedStock": 10,
+   "returnedStock": 11,
    "unitPrice": 69000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 1,
@@ -13395,6 +13395,32 @@
    }
   },
   {
+   "odooId": 4749,
+   "name": "L-1000",
+   "sku": "L-1000",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-28",
+   "orders": 121,
+   "units": 132,
+   "revenue": 5340000,
+   "delivered": 130,
+   "returned": 21,
+   "unitsBoughtFromSupplier": 64,
+   "returnedStock": 7,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 24,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4747,
    "name": "L-5015",
    "sku": "L-5015",
@@ -13466,32 +13492,6 @@
    "unitPrice": 62000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 38,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4749,
-   "name": "L-1000",
-   "sku": "L-1000",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-28",
-   "orders": 121,
-   "units": 132,
-   "revenue": 5340000,
-   "delivered": 130,
-   "returned": 21,
-   "unitsBoughtFromSupplier": 64,
-   "returnedStock": 7,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 24,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14254,9 +14254,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1927,
-  "stockValue": 61135101,
-  "stockVariants": 1352
+  "stockUnits": 1931,
+  "stockValue": 61279040,
+  "stockVariants": 1356
  },
  "daily": {
   "days": 90,
@@ -27306,6 +27306,18 @@
      41000
     ]
    },
+   "4749": {
+    "2026-09-06": [
+     1,
+     1,
+     55000
+    ],
+    "2026-09-28": [
+     1,
+     1,
+     41000
+    ]
+   },
    "4747": {
     "2026-09-12": [
      1,
@@ -27345,18 +27357,6 @@
      1,
      1,
      30000
-    ]
-   },
-   "4749": {
-    "2026-09-06": [
-     1,
-     1,
-     55000
-    ],
-    "2026-09-28": [
-     1,
-     1,
-     41000
     ]
    },
    "4640": {
@@ -27995,7 +27995,7 @@
    ],
    "2026-10-22": [
     0,
-    8
+    12
    ]
   },
   "orders": {
@@ -31336,8 +31336,9 @@
      "qty": 1,
      "price": 80000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -36672,8 +36673,9 @@
      "qty": 1,
      "price": 76000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "WhatsApp",
@@ -41668,8 +41670,9 @@
      "qty": 1,
      "price": 71000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -132964,7 +132967,7 @@
   {
    "sku": "H-1892",
    "model": "H-1892",
-   "qty": 0,
+   "qty": 1,
    "cost": 33756,
    "created": "2026-09-13"
   },
@@ -158514,7 +158517,7 @@
   {
    "sku": "H-1910",
    "model": "H-1910",
-   "qty": 0,
+   "qty": 1,
    "cost": 34100,
    "created": "2026-09-21"
   },
@@ -160278,8 +160281,8 @@
   {
    "sku": "H-1920",
    "model": "H-1920",
-   "qty": 0,
-   "cost": 38500,
+   "qty": 1,
+   "cost": 38194,
    "created": "2026-10-04"
   },
   {
