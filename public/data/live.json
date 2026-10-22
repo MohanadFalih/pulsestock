@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T17:32:12.548469+00:00",
+ "syncedAt": "2026-10-22T18:02:27.099857+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -923,17 +923,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-12",
    "firstOrderDate": "2026-10-13",
-   "lastOrderDate": "2026-10-21",
-   "orders": 4,
-   "units": 4,
-   "revenue": 396000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 5,
+   "units": 5,
+   "revenue": 495000,
    "delivered": 3,
    "returned": 1,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 1,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -4147,17 +4147,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
-   "lastOrderDate": "2026-10-20",
-   "orders": 110,
-   "units": 113,
-   "revenue": 12238950,
+   "lastOrderDate": "2026-10-22",
+   "orders": 113,
+   "units": 116,
+   "revenue": 12586950,
    "delivered": 109,
    "returned": 22,
-   "unitsBoughtFromSupplier": 98,
+   "unitsBoughtFromSupplier": 100,
    "returnedStock": 8,
    "unitPrice": 116000.0,
-   "orderVelocity7d": 1.14,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -5162,15 +5162,15 @@
    "odooCreatedDate": "2026-08-07",
    "firstOrderDate": "2026-08-07",
    "lastOrderDate": "2026-10-22",
-   "orders": 28,
-   "units": 28,
-   "revenue": 2212000,
+   "orders": 29,
+   "units": 29,
+   "revenue": 2237000,
    "delivered": 27,
    "returned": 9,
    "unitsBoughtFromSupplier": 21,
    "returnedStock": 3,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.14,
+   "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -13221,17 +13221,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
-   "lastOrderDate": "2026-10-21",
-   "orders": 716,
-   "units": 806,
-   "revenue": 25686000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 717,
+   "units": 807,
+   "revenue": 25725000,
    "delivered": 795,
    "returned": 170,
-   "unitsBoughtFromSupplier": 650,
+   "unitsBoughtFromSupplier": 651,
    "returnedStock": 3,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 3.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14515,6 +14515,11 @@
      99000
     ],
     "2026-10-21": [
+     1,
+     1,
+     99000
+    ],
+    "2026-10-22": [
      1,
      1,
      99000
@@ -17499,6 +17504,11 @@
      3,
      3,
      346000
+    ],
+    "2026-10-22": [
+     3,
+     3,
+     348000
     ]
    },
    "7284": {
@@ -19191,9 +19201,9 @@
      79000
     ],
     "2026-10-22": [
-     1,
-     1,
-     79000
+     2,
+     2,
+     104000
     ]
    },
    "7243": {
@@ -27388,6 +27398,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-22": [
+     1,
+     1,
+     39000
     ]
    },
    "5780": {
@@ -28270,10 +28285,120 @@
    "2026-10-19": 38,
    "2026-10-20": 19,
    "2026-10-21": 26,
-   "2026-10-22": 28
+   "2026-10-22": 34
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33661",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-kahve-46",
+     "qty": 1,
+     "price": 116000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S33660",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33659",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647-kahve-44",
+     "qty": 1,
+     "price": 116000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33658",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6647",
+     "qty": 1,
+     "price": 116000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33657",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -99000,
+   "lines": [
+    {
+     "sku": "T-8025",
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33656",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1865-murdum-4",
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33655",
    "d": "2026-10-22",
