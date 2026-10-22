@@ -110,7 +110,7 @@ function Header({
           layoutId="profit-mode"
           options={[
             { value: "projected", label: "Projected" },
-            { value: "realized", label: "Delivered only" },
+            { value: "realized", label: "Shipped so far" },
           ]}
           value={mode}
           onChange={(v) => onMode(v === "realized" ? "realized" : "projected")}
@@ -221,8 +221,9 @@ function Ladder({ t, model }: { t: Totals; model: ProfitModel }) {
     <section className="rounded-xl border border-hairline bg-panel p-5">
       <h2 className="font-display text-[15px] font-semibold text-text-primary">Where the money goes</h2>
       <p className="text-[11.5px] text-text-muted">
-        {t.deliveredOrders.toFixed(0)} delivered orders of {t.ordersPlaced} placed
-        {t.projectedRev > 0 && ` · ${iqd(t.projectedRev)} of revenue is projected from orders still out`}
+        {t.deliveredOrders.toFixed(0)} orders kept (est.) of {t.ordersPlaced} placed
+        {t.projectedRev > 0 && ` · ${iqd(t.projectedRev)} of revenue projected from orders not yet shipped`}
+        {t.expectedReturnsRev > 0 && ` · ${iqd(t.expectedReturnsRev)} of shipped revenue still expected to come back as returns`}
       </p>
       <div className="mt-4 space-y-1.5">
         {rows.map((r) => (
@@ -292,7 +293,7 @@ function DailyChart({ model, mode }: { model: ProfitModel; mode: Mode }) {
       <h2 className="font-display text-[15px] font-semibold text-text-primary">Daily net profit · last 60 days</h2>
       <p className="text-[11.5px] text-text-muted">
         Bars = net after fixed costs (by order date) · line = before fixed costs. Faded bars are orders still
-        being delivered{mode === "realized" ? " — in Delivered-only mode they look worse than they will end up" : ""}.
+        being delivered{mode === "realized" ? " — Shipped mode counts parcels handed to the courier; refusals that haven't come back yet are still inside" : ""}.
       </p>
       <div className="mt-3 h-[280px]">
         <ResponsiveContainer width="100%" height="100%">
@@ -443,7 +444,7 @@ function Notes({ t, model }: { t: Totals; model: ProfitModel }) {
           "Ads: Meta daily spend × 1,380 IQD until 5 Oct 2026, × 1,600 from 6 Oct",
           "Fixed costs spread evenly over each month; the running month uses the recent monthly rate until posted",
           "Rent 1,700,000 IQD / month (not booked in Odoo)",
-          `Orders older than ${RULES.matureAfterDays} days are final`,
+          `Orders older than ${RULES.matureAfterDays} days are final. Odoo marks an order delivered when it goes to the courier; projected mode removes the refusals still expected to come back`,
           h.syncedAt ? `Expenses & Meta synced ${new Date(h.syncedAt).toLocaleString("en-GB")}` : "Waiting for first sync",
         ].map((n) => (
           <li key={n} className="flex gap-2">

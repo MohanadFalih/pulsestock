@@ -27,9 +27,12 @@
  *                          never subtracted from profit.
  *
  * Kept quantity is `del` (Odoo qty_delivered, already net of returns — a
- * returned line shows del=0, ret=qty). Undecided quantity is what is neither
- * delivered nor returned yet; in "projected" mode it is valued at the keep
- * rate of orders 21–90 days old.
+ * returned line shows del=0, ret=qty). NOTE: Odoo sets qty_delivered when a
+ * parcel is handed to the courier, so on young orders `del` still includes
+ * refusals that have not come back yet. "Shipped" mode shows it as is;
+ * "projected" mode removes the share still expected to return (return curve
+ * by order age) and values not-yet-shipped quantity at the keep rate of
+ * orders 21–90 days old.
  *
  * Pure functions, no React.
  */
@@ -76,6 +79,13 @@ export interface DayRaw {
   trPendCogs: number;
   stPendRev: number;
   stPendCogs: number;
+  /** Shipped-and-not-returned value on young orders that is still expected
+   *  to come back (return curve) — subtracted in projected mode. */
+  trRiskRev: number;
+  trRiskCogs: number;
+  stRiskRev: number;
+  stRiskCogs: number;
+  riskOrders: number;
   /** Part of realized COGS that was estimated (missing unit cost). */
   estCogs: number;
   adsUSD: number;
@@ -106,6 +116,8 @@ export interface Totals {
   deliveredOrders: number;
   /** Projected-only share of revenue (undecided orders valued at keep rate). */
   projectedRev: number;
+  /** Shipped value on young orders expected to still come back (projected). */
+  expectedReturnsRev: number;
   estCogs: number;
   days: number;
 }
@@ -271,6 +283,53 @@ export function buildProfitModel(
   };
   const fallbackCostRatio = costedRev > 0 ? costedCost / costedRev : 0.58;
 
+  // Return curve. Odoo marks a line delivered when it is handed to the
+  // courier; a refusal comes back days later and reverses it. So on young
+  // orders "delivered" still contains future returns. R(a) = share of shipped
+  // value already returned on orders aged a (±1 day); Rf = same on orders
+  // 21–90 days old (final). A shipped, not-yet-returned unit of age a will
+  // still come back with probability (Rf − R(a)) / (1 − R(a)).
+  const shippedByAge = new Array<number>(RULES.matureAfterDays + 1).fill(0);
+  const returnedByAge = new Array<number>(RULES.matureAfterDays + 1).fill(0);
+  let finShip = 0;
+  let finRet = 0;
+  for (const o of orders) {
+    const age = daysBetween(o.d, today);
+    if (age < 0 || age > RULES.keepRateMaxAgeDays) continue;
+    let sv = 0;
+    let rv = 0;
+    for (const l of o.lines) {
+      sv += (Math.max(0, l.del) + (l.ret ?? 0)) * l.price;
+      rv += (l.ret ?? 0) * l.price;
+    }
+    if (age >= RULES.matureAfterDays) {
+      finShip += sv;
+      finRet += rv;
+    } else {
+      shippedByAge[age] += sv;
+      returnedByAge[age] += rv;
+    }
+  }
+  const finalReturn = finShip > 0 ? finRet / finShip : 0.25;
+  const returnCurve: number[] = [];
+  let prev = 0;
+  for (let a = 0; a < RULES.matureAfterDays; a++) {
+    let sv = 0;
+    let rv = 0;
+    for (let k = Math.max(0, a - 1); k <= Math.min(RULES.matureAfterDays - 1, a + 1); k++) {
+      sv += shippedByAge[k];
+      rv += returnedByAge[k];
+    }
+    const r = sv > 0 ? rv / sv : prev;
+    prev = Math.min(finalReturn, Math.max(prev, r));
+    returnCurve.push(prev);
+  }
+  const stillToReturn = (age: number) => {
+    if (age >= RULES.matureAfterDays) return 0;
+    const r = returnCurve[Math.max(0, age)] ?? 0;
+    return r >= 1 ? 0 : Math.max(0, (finalReturn - r) / (1 - r));
+  };
+
   // 2. Day skeleton. live.json carries a rolling ~120-day order window, so
   // start at the first month whose orders are complete — a half-covered
   // month would show its full ads and salaries against half its sales.
@@ -302,6 +361,11 @@ export function buildProfitModel(
       trPendCogs: 0,
       stPendRev: 0,
       stPendCogs: 0,
+      trRiskRev: 0,
+      trRiskCogs: 0,
+      stRiskRev: 0,
+      stRiskCogs: 0,
+      riskOrders: 0,
       estCogs: 0,
       adsUSD: 0,
       adsIQD: 0,
@@ -318,6 +382,7 @@ export function buildProfitModel(
     if (!day) continue;
     day.ordersPlaced += 1;
     const lines = orderLines(o, costs);
+    const q = day.mature ? 0 : stillToReturn(daysBetween(o.d, today));
     let anyKept = false;
     let anyUndecided = false;
     for (const l of lines) {
@@ -330,9 +395,13 @@ export function buildProfitModel(
         if (l.turkey) {
           day.trRev += rev;
           day.trCogs += cogs;
+          day.trRiskRev += rev * q;
+          day.trRiskCogs += cogs * q;
         } else {
           day.stRev += rev;
           day.stCogs += cogs;
+          day.stRiskRev += rev * q;
+          day.stRiskCogs += cogs * q;
         }
       }
       if (l.undecidedQty > 0 && !day.mature) {
@@ -348,7 +417,10 @@ export function buildProfitModel(
         }
       }
     }
-    if (anyKept) day.deliveredOrders += 1;
+    if (anyKept) {
+      day.deliveredOrders += 1;
+      day.riskOrders += q;
+    }
     else if (anyUndecided) day.pendingOrders += 1;
   }
 
@@ -444,6 +516,7 @@ export function emptyTotals(): Totals {
     ordersPlaced: 0,
     deliveredOrders: 0,
     projectedRev: 0,
+    expectedReturnsRev: 0,
     estCogs: 0,
     days: 0,
   };
@@ -453,11 +526,12 @@ export function emptyTotals(): Totals {
 export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   const t = emptyTotals();
   const p = mode === "projected";
-  const trRev = d.trRev + (p ? d.trPendRev * keep.turkey : 0);
-  const trCogs = d.trCogs + (p ? d.trPendCogs * keep.turkey : 0);
-  const stRev = d.stRev + (p ? d.stPendRev * keep.stock : 0);
-  const stCogs = d.stCogs + (p ? d.stPendCogs * keep.stock : 0);
-  const delivered = d.deliveredOrders + (p ? d.pendingOrders * keep.orders : 0);
+  const trRev = d.trRev + (p ? d.trPendRev * keep.turkey - d.trRiskRev : 0);
+  const trCogs = d.trCogs + (p ? d.trPendCogs * keep.turkey - d.trRiskCogs : 0);
+  const stRev = d.stRev + (p ? d.stPendRev * keep.stock - d.stRiskRev : 0);
+  const stCogs = d.stCogs + (p ? d.stPendCogs * keep.stock - d.stRiskCogs : 0);
+  const delivered =
+    d.deliveredOrders + (p ? d.pendingOrders * keep.orders - d.riskOrders : 0);
   t.trRev = trRev;
   t.stRev = stRev;
   t.revenue = trRev + stRev;
@@ -475,6 +549,7 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.ordersPlaced = d.ordersPlaced;
   t.deliveredOrders = delivered;
   t.projectedRev = p ? d.trPendRev * keep.turkey + d.stPendRev * keep.stock : 0;
+  t.expectedReturnsRev = p ? d.trRiskRev + d.stRiskRev : 0;
   t.estCogs = d.estCogs;
   t.days = 1;
   return t;
@@ -501,6 +576,7 @@ export function addTotals(a: Totals, b: Totals): Totals {
     ordersPlaced: a.ordersPlaced + b.ordersPlaced,
     deliveredOrders: a.deliveredOrders + b.deliveredOrders,
     projectedRev: a.projectedRev + b.projectedRev,
+    expectedReturnsRev: a.expectedReturnsRev + b.expectedReturnsRev,
     estCogs: a.estCogs + b.estCogs,
     days: a.days + b.days,
   };
