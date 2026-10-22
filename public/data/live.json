@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T01:02:29.979515+00:00",
+ "syncedAt": "2026-10-22T01:32:16.904857+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1190,7 +1190,7 @@
    "delivered": 5,
    "returned": 0,
    "unitsBoughtFromSupplier": 5,
-   "returnedStock": 86,
+   "returnedStock": 89,
    "unitPrice": 99000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 1,
@@ -2100,7 +2100,7 @@
    "delivered": 47,
    "returned": 5,
    "unitsBoughtFromSupplier": 48,
-   "returnedStock": 89,
+   "returnedStock": 92,
    "unitPrice": 78000.0,
    "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 1,
@@ -13395,32 +13395,6 @@
    }
   },
   {
-   "odooId": 4749,
-   "name": "L-1000",
-   "sku": "L-1000",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-28",
-   "orders": 121,
-   "units": 132,
-   "revenue": 5340000,
-   "delivered": 130,
-   "returned": 21,
-   "unitsBoughtFromSupplier": 64,
-   "returnedStock": 7,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 24,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
    "odooId": 4747,
    "name": "L-5015",
    "sku": "L-5015",
@@ -13492,6 +13466,32 @@
    "unitPrice": 62000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 38,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4749,
+   "name": "L-1000",
+   "sku": "L-1000",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-28",
+   "orders": 121,
+   "units": 132,
+   "revenue": 5340000,
+   "delivered": 130,
+   "returned": 21,
+   "unitsBoughtFromSupplier": 64,
+   "returnedStock": 7,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 24,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14254,8 +14254,8 @@
   }
  ],
  "shop": {
-  "stockUnits": 1853,
-  "stockValue": 57451778,
+  "stockUnits": 1859,
+  "stockValue": 57746995,
   "stockVariants": 1345
  },
  "daily": {
@@ -27279,18 +27279,6 @@
      41000
     ]
    },
-   "4749": {
-    "2026-09-06": [
-     1,
-     1,
-     55000
-    ],
-    "2026-09-28": [
-     1,
-     1,
-     41000
-    ]
-   },
    "4747": {
     "2026-09-12": [
      1,
@@ -27330,6 +27318,18 @@
      1,
      1,
      30000
+    ]
+   },
+   "4749": {
+    "2026-09-06": [
+     1,
+     1,
+     55000
+    ],
+    "2026-09-28": [
+     1,
+     1,
+     41000
     ]
    },
    "4640": {
@@ -159536,7 +159536,7 @@
   {
    "sku": "H-1916",
    "model": "H-1916",
-   "qty": 87,
+   "qty": 90,
    "cost": 36750,
    "created": "2026-09-28"
   },
@@ -184127,7 +184127,7 @@
   {
    "sku": "T-8023",
    "model": "T-8023",
-   "qty": 86,
+   "qty": 89,
    "cost": 61656,
    "created": "2026-10-08"
   },
