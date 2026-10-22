@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T07:50:49.206127+00:00",
+ "syncedAt": "2026-10-22T08:02:13.164706+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -270,20 +270,20 @@
    "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-19",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-10-22",
+   "lastOrderDate": "2026-10-22",
+   "orders": 1,
+   "units": 1,
+   "revenue": -3021,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1106,15 +1106,15 @@
    "odooCreatedDate": "2026-10-09",
    "firstOrderDate": "2026-10-09",
    "lastOrderDate": "2026-10-22",
-   "orders": 28,
-   "units": 28,
-   "revenue": 3836000,
+   "orders": 29,
+   "units": 29,
+   "revenue": 3973000,
    "delivered": 15,
    "returned": 0,
-   "unitsBoughtFromSupplier": 28,
+   "unitsBoughtFromSupplier": 29,
    "returnedStock": 0,
    "unitPrice": 137000.0,
-   "orderVelocity7d": 2.71,
+   "orderVelocity7d": 2.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -2093,17 +2093,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-10-21",
-   "orders": 47,
-   "units": 49,
-   "revenue": 3738000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 48,
+   "units": 50,
+   "revenue": 3816000,
    "delivered": 47,
    "returned": 5,
    "unitsBoughtFromSupplier": 48,
    "returnedStock": 122,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2691,17 +2691,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-10-21",
-   "orders": 10,
-   "units": 10,
-   "revenue": 1046000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 11,
+   "units": 11,
+   "revenue": 1156000,
    "delivered": 9,
    "returned": 1,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 110000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -4664,20 +4664,20 @@
    "sku": "T-7079",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-08-12",
    "firstOrderDate": "2026-08-12",
-   "lastOrderDate": "2026-09-25",
-   "orders": 103,
-   "units": 107,
-   "revenue": 9202000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 104,
+   "units": 109,
+   "revenue": 9374000,
    "delivered": 107,
    "returned": 29,
    "unitsBoughtFromSupplier": 83,
    "returnedStock": 9,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 27,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14277,6 +14277,13 @@
      366000
     ]
    },
+   "7443": {
+    "2026-10-22": [
+     1,
+     1,
+     -3021
+    ]
+   },
    "7432": {
     "2026-10-19": [
      1,
@@ -14547,9 +14554,9 @@
      822000
     ],
     "2026-10-22": [
-     2,
-     2,
-     274000
+     3,
+     3,
+     411000
     ]
    },
    "7401": {
@@ -15215,6 +15222,11 @@
      2,
      2,
      156000
+    ],
+    "2026-10-22": [
+     1,
+     1,
+     78000
     ]
    },
    "7362": {
@@ -15823,6 +15835,11 @@
      220000
     ],
     "2026-10-21": [
+     1,
+     1,
+     110000
+    ],
+    "2026-10-22": [
      1,
      1,
      110000
@@ -18287,6 +18304,11 @@
      1,
      1,
      86000
+    ],
+    "2026-10-22": [
+     1,
+     2,
+     172000
     ]
    },
    "7259": {
@@ -28063,10 +28085,88 @@
    "2026-10-19": 38,
    "2026-10-20": 19,
    "2026-10-21": 26,
-   "2026-10-22": 4
+   "2026-10-22": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33634",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-1005",
+     "qty": 1,
+     "price": 110000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33633",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 0,
+   "disc": -31000,
+   "lines": [
+    {
+     "sku": "T-7079-navy-1-4",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 12.4,
+     "del": 0
+    },
+    {
+     "sku": "T-7079-kahve-4",
+     "qty": 1,
+     "price": 86000,
+     "discPct": 12.4,
+     "del": 0
+    },
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 78000,
+     "discPct": 12.4,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "qty": 1,
+     "price": -3021,
+     "discPct": 12.4,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33632",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6676",
+     "qty": 1,
+     "price": 137000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33631",
    "d": "2026-10-22",
