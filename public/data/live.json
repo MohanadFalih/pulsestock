@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T22:49:45.370749+00:00",
+ "syncedAt": "2026-10-22T23:02:46.110431+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1184,15 +1184,15 @@
    "odooCreatedDate": "2026-10-09",
    "firstOrderDate": "2026-10-09",
    "lastOrderDate": "2026-10-23",
-   "orders": 38,
-   "units": 38,
-   "revenue": 5206000,
+   "orders": 39,
+   "units": 39,
+   "revenue": 5343000,
    "delivered": 15,
    "returned": 0,
    "unitsBoughtFromSupplier": 38,
    "returnedStock": 0,
    "unitPrice": 137000.0,
-   "orderVelocity7d": 4.0,
+   "orderVelocity7d": 4.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -14836,9 +14836,9 @@
      1507000
     ],
     "2026-10-23": [
-     1,
-     1,
-     137000
+     2,
+     2,
+     274000
     ]
    },
    "7401": {
@@ -28323,10 +28323,29 @@
    "2026-10-20": 19,
    "2026-10-21": 26,
    "2026-10-22": 42,
-   "2026-10-23": 2
+   "2026-10-23": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33672",
+   "d": "2026-10-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6676",
+     "qty": 1,
+     "price": 137000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33671",
    "d": "2026-10-23",
