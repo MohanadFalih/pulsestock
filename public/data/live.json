@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T18:43:16.017036+00:00",
+ "syncedAt": "2026-10-22T19:02:47.730990+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1189,7 +1189,7 @@
    "revenue": 4932000,
    "delivered": 15,
    "returned": 0,
-   "unitsBoughtFromSupplier": 35,
+   "unitsBoughtFromSupplier": 36,
    "returnedStock": 0,
    "unitPrice": 137000.0,
    "orderVelocity7d": 3.86,
@@ -2610,20 +2610,20 @@
    "sku": "T-8010",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-09-23",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-10-10",
-   "orders": 32,
-   "units": 33,
-   "revenue": 2842000,
+   "lastOrderDate": "2026-10-22",
+   "orders": 33,
+   "units": 34,
+   "revenue": 2881000,
    "delivered": 33,
    "returned": 9,
    "unitsBoughtFromSupplier": 30,
    "returnedStock": 6,
    "unitPrice": 90000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15833,6 +15833,11 @@
      1,
      1,
      90000
+    ],
+    "2026-10-22": [
+     1,
+     1,
+     39000
     ]
    },
    "7345": {
@@ -28290,10 +28295,27 @@
    "2026-10-19": 38,
    "2026-10-20": 19,
    "2026-10-21": 26,
-   "2026-10-22": 38
+   "2026-10-22": 39
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33666",
+   "d": "2026-10-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8010",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33665",
    "d": "2026-10-22",
