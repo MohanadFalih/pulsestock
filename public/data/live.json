@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-22T16:02:11.593009+00:00",
+ "syncedAt": "2026-10-22T16:32:45.224148+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4151,7 +4151,7 @@
    "orders": 110,
    "units": 113,
    "revenue": 12238950,
-   "delivered": 108,
+   "delivered": 109,
    "returned": 22,
    "unitsBoughtFromSupplier": 98,
    "returnedStock": 9,
@@ -6179,7 +6179,7 @@
    "orders": 5,
    "units": 4,
    "revenue": 448000,
-   "delivered": 3,
+   "delivered": 4,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 1,
@@ -6933,7 +6933,7 @@
    "orders": 263,
    "units": 272,
    "revenue": 21484050,
-   "delivered": 270,
+   "delivered": 271,
    "returned": 90,
    "unitsBoughtFromSupplier": 185,
    "returnedStock": 13,
@@ -9370,14 +9370,14 @@
    "sku": "L-1249",
    "category": "All",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling",
    "odooCreatedDate": "2026-05-07",
    "firstOrderDate": "2026-05-07",
    "lastOrderDate": "2026-10-20",
    "orders": 10,
    "units": 10,
    "revenue": 690000,
-   "delivered": 9,
+   "delivered": 10,
    "returned": 3,
    "unitsBoughtFromSupplier": 8,
    "returnedStock": 2,
@@ -12211,7 +12211,7 @@
    "orders": 75,
    "units": 76,
    "revenue": 3414000,
-   "delivered": 75,
+   "delivered": 76,
    "returned": 16,
    "unitsBoughtFromSupplier": 65,
    "returnedStock": 7,
@@ -13667,7 +13667,7 @@
    "orders": 49,
    "units": 53,
    "revenue": 2420000,
-   "delivered": 51,
+   "delivered": 53,
    "returned": 18,
    "unitsBoughtFromSupplier": 30,
    "returnedStock": 3,
@@ -14358,9 +14358,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1936,
-  "stockValue": 61244940,
-  "stockVariants": 1355
+  "stockUnits": 1923,
+  "stockValue": 60929672,
+  "stockVariants": 1350
  },
  "daily": {
   "days": 90,
@@ -28122,7 +28122,7 @@
     3
    ],
    "2026-10-22": [
-    1,
+    8,
     12
    ]
   },
@@ -28815,7 +28815,7 @@
      "qty": 1,
      "price": 64000,
      "discPct": 60.9,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Facebook",
@@ -28879,7 +28879,7 @@
      "qty": 1,
      "price": 64000,
      "discPct": 56.5,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Facebook",
@@ -28897,7 +28897,7 @@
      "qty": 1,
      "price": 79000,
      "discPct": 50.0,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Instagram",
@@ -29241,7 +29241,7 @@
      "qty": 1,
      "price": 112000,
      "discPct": 47.9,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "WhatsApp",
@@ -29321,7 +29321,7 @@
      "qty": 1,
      "price": 116000,
      "discPct": 0,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Facebook",
@@ -29469,7 +29469,7 @@
      "qty": 1,
      "price": 69000,
      "discPct": 47.3,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "WhatsApp",
@@ -29487,7 +29487,7 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 0
+     "del": 1
     }
    ],
    "src": "Facebook",
@@ -130127,7 +130127,7 @@
   {
    "sku": "H-1840",
    "model": "H-1840",
-   "qty": 2,
+   "qty": 1,
    "cost": 41333,
    "created": "2026-07-09"
   },
@@ -142454,7 +142454,7 @@
   {
    "sku": "L-1249",
    "model": "L-1249",
-   "qty": 2,
+   "qty": 1,
    "cost": 33836,
    "created": "2026-05-07"
   },
@@ -149443,13 +149443,6 @@
    "qty": 2,
    "cost": 53089,
    "created": "2025-11-21"
-  },
-  {
-   "sku": "M-1983TRT545",
-   "model": "M-1983TRT545",
-   "qty": 1,
-   "cost": 48262,
-   "created": "2025-11-26"
   },
   {
    "sku": "M-1983TRT545",
@@ -169404,7 +169397,7 @@
   {
    "sku": "K-6647",
    "model": "K-6647",
-   "qty": 1,
+   "qty": 0,
    "cost": 65100,
    "created": "2026-10-01"
   },
@@ -171805,7 +171798,7 @@
   {
    "sku": "K-8047",
    "model": "K-8047",
-   "qty": 1,
+   "qty": 0,
    "cost": 69750,
    "created": "2026-07-22"
   },
@@ -174657,20 +174650,6 @@
    "qty": 0,
    "cost": 0,
    "created": "2026-07-02"
-  },
-  {
-   "sku": "L-1565",
-   "model": "L-1565",
-   "qty": 1,
-   "cost": 28493,
-   "created": "2025-05-20"
-  },
-  {
-   "sku": "L-1565",
-   "model": "L-1565",
-   "qty": 1,
-   "cost": 28493,
-   "created": "2025-05-20"
   },
   {
    "sku": "L-1565",
