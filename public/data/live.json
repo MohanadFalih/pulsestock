@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-23T13:52:53.675872+00:00",
+ "syncedAt": "2026-10-23T14:02:51.724023+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -409,7 +409,7 @@
    "revenue": 78000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 78000.0,
    "orderVelocity7d": 0.14,
@@ -1157,17 +1157,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-10",
    "firstOrderDate": "2026-10-10",
-   "lastOrderDate": "2026-10-22",
-   "orders": 25,
-   "units": 28,
-   "revenue": 2772000,
+   "lastOrderDate": "2026-10-23",
+   "orders": 26,
+   "units": 29,
+   "revenue": 2871000,
    "delivered": 24,
    "returned": 6,
    "unitsBoughtFromSupplier": 27,
    "returnedStock": 5,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 1.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -6224,20 +6224,20 @@
    "sku": "H-1851",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-22",
    "firstOrderDate": "2026-07-22",
-   "lastOrderDate": "2026-09-17",
-   "orders": 28,
-   "units": 29,
-   "revenue": 2146000,
+   "lastOrderDate": "2026-10-23",
+   "orders": 29,
+   "units": 30,
+   "revenue": 2175000,
    "delivered": 29,
    "returned": 7,
    "unitsBoughtFromSupplier": 25,
    "returnedStock": 4,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 36,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14978,6 +14978,11 @@
      3,
      3,
      297000
+    ],
+    "2026-10-23": [
+     1,
+     1,
+     99000
     ]
    },
    "7403": {
@@ -21371,6 +21376,11 @@
      1,
      1,
      74000
+    ],
+    "2026-10-23": [
+     1,
+     1,
+     29000
     ]
    },
    "7202": {
@@ -28690,10 +28700,27 @@
    "2026-10-20": 19,
    "2026-10-21": 26,
    "2026-10-22": 42,
-   "2026-10-23": 22
+   "2026-10-23": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33697",
+   "d": "2026-10-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8035",
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S33695",
    "d": "2026-10-23",
@@ -28806,6 +28833,23 @@
    "lines": [
     {
      "sku": "T-7079-beige-3",
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S33688",
+   "d": "2026-10-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -34000,
+   "lines": [
+    {
+     "sku": "H-1851",
      "qty": 1,
      "price": 29000,
      "discPct": 0,
