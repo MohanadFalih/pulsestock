@@ -32,7 +32,7 @@
  * refusals that have not come back yet. "Shipped" mode shows it as is;
  * "projected" mode removes the share still expected to return (return curve
  * by order age) and values not-yet-shipped quantity at the keep rate of
- * orders 21–90 days old.
+ * orders 14–90 days old.
  *
  * Pure functions, no React.
  */
@@ -45,8 +45,10 @@ import type { ExpenseGroup, ProfitPayload } from "@/data/profitData";
 export const RULES = {
   rentMonthlyIQD: 1_700_000,
   deliveryNetPerOrder: 1_000,
-  /** Orders older than this are final: undecided units count as not sold. */
-  matureAfterDays: 21,
+  /** Orders older than this are final: undecided units count as not sold.
+   *  Odoo data (Oct 2026): orders 9–10 days old show ~6% returned vs ~22% final;
+   *  returns are booked by day 11–14. Owner: cash in 5–6 days, returns ~2 days later. */
+  matureAfterDays: 14,
   keepRateMaxAgeDays: 90,
   minPlausibleCostIQD: 1_000,
   /** Earliest day the page may start (profit_sync.py SINCE). */
@@ -287,7 +289,7 @@ export function buildProfitModel(
   // courier; a refusal comes back days later and reverses it. So on young
   // orders "delivered" still contains future returns. R(a) = share of shipped
   // value already returned on orders aged a (±1 day); Rf = same on orders
-  // 21–90 days old (final). A shipped, not-yet-returned unit of age a will
+  // 14–90 days old (final). A shipped, not-yet-returned unit of age a will
   // still come back with probability (Rf − R(a)) / (1 − R(a)).
   const shippedByAge = new Array<number>(RULES.matureAfterDays + 1).fill(0);
   const returnedByAge = new Array<number>(RULES.matureAfterDays + 1).fill(0);
