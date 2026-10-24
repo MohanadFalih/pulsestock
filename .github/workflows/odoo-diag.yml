@@ -7,6 +7,12 @@ name: Odoo diagnostics (manual)
 
 on:
   workflow_dispatch:            # "Run workflow" button only — no schedule
+    inputs:
+      script:
+        description: "Diagnostics script in scripts/"
+        default: "odoo_diag.py"
+        type: choice
+        options: ["odoo_diag.py", "sales_team_diag.py"]
 
 permissions:
   contents: read                # read-only job: checkout the script, nothing else
@@ -27,4 +33,4 @@ jobs:
           ODOO_DB: ${{ secrets.ODOO_DB }}
           ODOO_USER: ${{ secrets.ODOO_USER }}
           ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
-        run: python3 scripts/odoo_diag.py
+        run: python3 "scripts/${{ inputs.script || 'odoo_diag.py' }}"
