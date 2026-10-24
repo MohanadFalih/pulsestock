@@ -46,6 +46,8 @@ export interface ProfitMeta {
   /** date → SKU (or "OTHER") → USD spend, from `skuSince` on. */
   skuDaily?: Record<string, Record<string, number>>;
   skuSince?: string;
+  /** SKU → campaigns it ran in over the last 7 complete days. */
+  skuCampaigns7d?: Record<string, { campaign: string; spend: number; conv: number }[]>;
 }
 
 export interface ProfitPayload {

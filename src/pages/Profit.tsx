@@ -25,6 +25,8 @@ import { useOpsData } from "@/data/opsData";
 import { useProfitData } from "@/data/profitData";
 import { computeExperiment } from "@/data/experimentEngine";
 import BudgetExperiment from "@/sections/profit/BudgetExperiment";
+import ModelScout from "@/sections/profit/ModelScout";
+import { computeScout } from "@/data/modelScout";
 import {
   RULES,
   buildProfitModel,
@@ -475,15 +477,21 @@ export default function Profit() {
     [model, period, mode]
   );
   const months = useMemo(() => (model ? monthRows(model, mode) : []), [model, mode]);
-  const [tab, setTab] = useState<"profit" | "experiment">(() => {
+  type Tab = "profit" | "experiment" | "models";
+  const tabFromHash = (h: string): Tab => (h === "#experiment" ? "experiment" : h === "#models" ? "models" : "profit");
+  const [tab, setTab] = useState<Tab>(() => {
     try {
-      return window.location.hash === "#experiment" ? "experiment" : "profit";
+      return tabFromHash(window.location.hash);
     } catch {
       return "profit";
     }
   });
   const experiment = useMemo(
     () => (model && ops ? computeExperiment(model, ops.ordersDetail, profit ?? null) : null),
+    [model, ops, profit]
+  );
+  const scout = useMemo(
+    () => (model && ops ? computeScout(ops.ordersDetail, ops.stockDetail, profit ?? null, model.today) : null),
     [model, ops, profit]
   );
 
@@ -495,20 +503,27 @@ export default function Profit() {
           options={[
             { value: "profit", label: "Profit" },
             { value: "experiment", label: "Budget experiment" },
+            { value: "models", label: "Ad models" },
           ]}
           value={tab}
           onChange={(v) => {
-            const next = v === "experiment" ? "experiment" : "profit";
+            const next = tabFromHash(`#${v}`);
             setTab(next);
             try {
-              window.history.replaceState(null, "", next === "experiment" ? "#experiment" : "#");
+              window.history.replaceState(null, "", next === "profit" ? "#" : `#${next}`);
             } catch {
               /* ignore */
             }
           }}
         />
       </div>
-      {tab === "experiment" ? (
+      {tab === "models" ? (
+        scout ? (
+          <ModelScout r={scout} />
+        ) : (
+          <EmptyState title="Loading" message="Waiting for the Odoo sync data…" />
+        )
+      ) : tab === "experiment" ? (
         experiment ? (
           <BudgetExperiment r={experiment} />
         ) : (

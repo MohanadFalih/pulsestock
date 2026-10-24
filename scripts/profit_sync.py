@@ -265,10 +265,15 @@ def fetch_meta(today):
     # Ad level, per day, since SKU_SINCE: spend split across the SKUs named
     # in each ad (equal shares); ads naming no SKU go to "OTHER".
     sku_daily = {}
+    sku_campaigns = {}
     try:
         ad_rows = _meta_rows(account, token, {
-            "level": "ad", "time_increment": "1", "fields": "ad_name,spend",
+            "level": "ad", "time_increment": "1",
+            "fields": "ad_name,campaign_name,spend,actions",
             "time_range": json.dumps({"since": SKU_SINCE, "until": today})})
+        # Last 7 complete days: where each SKU runs (campaign), spend and
+        # conversations per campaign — to spot a model advertised twice.
+        d7 = (dt.date.fromisoformat(today) - dt.timedelta(days=7)).isoformat()
         for row in ad_rows:
             spend = float(row.get("spend") or 0)
             if spend <= 0:
@@ -278,6 +283,14 @@ def fetch_meta(today):
             day = sku_daily.setdefault(row["date_start"], {})
             for s in skus or ["OTHER"]:
                 day[s] = round(day.get(s, 0.0) + spend / max(1, len(skus)), 2)
+            if d7 <= row["date_start"] < today:
+                share = 1 / max(1, len(skus))
+                conv = _action(row.get("actions"), CONVO_TYPES)
+                camp = row.get("campaign_name") or "?"
+                for s in skus or ["OTHER"]:
+                    c = sku_campaigns.setdefault(s, {}).setdefault(camp, {"spend": 0.0, "conv": 0.0})
+                    c["spend"] += spend * share
+                    c["conv"] += conv * share
         log(f"  per-SKU spend: {len(sku_daily)} days")
     except Exception as e:                       # never lose the account half
         log(f"  per-SKU spend failed: {e}")
@@ -285,7 +298,10 @@ def fetch_meta(today):
     return {"error": None, "currency": "USD", "since": SINCE,
             "tz": "ad account timezone", "daily": dict(sorted(daily.items())),
             "detail": dict(sorted(detail.items())),
-            "skuSince": SKU_SINCE, "skuDaily": dict(sorted(sku_daily.items()))}
+            "skuSince": SKU_SINCE, "skuDaily": dict(sorted(sku_daily.items())),
+            "skuCampaigns7d": {s: [{"campaign": k, "spend": round(v["spend"], 2), "conv": round(v["conv"])}
+                                   for k, v in sorted(cs.items(), key=lambda x: -x[1]["spend"])]
+                               for s, cs in sorted(sku_campaigns.items())}}
 
 
 def main():
