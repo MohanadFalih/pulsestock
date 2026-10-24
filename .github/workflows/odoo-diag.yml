@@ -12,7 +12,7 @@ on:
         description: "Diagnostics script in scripts/"
         default: "odoo_diag.py"
         type: choice
-        options: ["odoo_diag.py", "sales_team_diag.py"]
+        options: ["odoo_diag.py", "sales_team_diag.py", "sales_team_names.py"]
 
 permissions:
   contents: read                # read-only job: checkout the script, nothing else
