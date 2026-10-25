@@ -104,6 +104,12 @@ VELOCITY_DAYS = 7
 DAILY_DAYS = 90            # daily time-series depth for window selectors
 ORDERS_DETAIL_DAYS = 120   # ordersDetail window (Cash P&L page)
 STOCK_DETAIL_CREATE_DAYS = 180  # stockDetail: variants created within this window
+# Owner's current exchange rates (Oct 2026). Used only to value a variant whose
+# Odoo Cost (standard_price) is still 0 — e.g. a new buy-on-demand model that
+# has never been received — from its vendor price on the Purchase tab.
+IQD_PER_USD = 1700
+TRY_PER_USD = 48
+MIN_COST_IQD = 1000           # same floor the dashboard uses (minPlausibleCostIQD)
 TURKEY_ROUTE_NAME = "Order from Turkey"  # stock.route name => line route "turkey"
 RPC_TIMEOUT = 60
 # All dates/days are bucketed in the shop's local timezone (Iraq = UTC+3,
@@ -636,15 +642,50 @@ def main():
     # STOCK_DETAIL_CREATE_DAYS days. sku = variant display name, model = name
     # before " (", cost = standard_price (AVCO) in IQD.
     log("building stockDetail…")
+
+    # Vendor price per template (Purchase tab), converted to IQD.
+    def to_iqd(price, cur):
+        cur = (cur or "").upper()
+        if cur == "TRY":
+            return price / TRY_PER_USD * IQD_PER_USD
+        if cur == "USD":
+            return price * IQD_PER_USD
+        if cur == "IQD":
+            return price
+        return None
+    vendor_cost = {}          # template id -> IQD (lowest sequence wins)
+    try:
+        sinfo = odoo.kw("product.supplierinfo", "search_read", [[]],
+                        {"fields": ["product_tmpl_id", "price", "currency_id",
+                                    "sequence"],
+                         "order": "sequence asc, id asc", "limit": 50000})
+        for r in sinfo:
+            if not r.get("product_tmpl_id") or not r.get("price"):
+                continue
+            tid = r["product_tmpl_id"][0]
+            if tid in vendor_cost:
+                continue
+            cur = r["currency_id"][1] if r.get("currency_id") else currency
+            v = to_iqd(r["price"], cur)
+            if v and v >= MIN_COST_IQD:
+                vendor_cost[tid] = v
+        log(f"  vendor prices: {len(vendor_cost)} templates")
+    except Exception as e:  # never break the sync over the fallback
+        log(f"  vendor prices unavailable: {e}")
+
     stock_detail = []
     offset = 0
-    sd_domain = ["|", ["qty_available", ">", 0],
+    # On hand, recently created, or sold in the ordersDetail window (so every
+    # sold variant has a cost even if it is old, out of stock or archived).
+    sd_domain = ["|", "|", ["id", "in", line_variant_ids],
+                 ["qty_available", ">", 0],
                  ["create_date", ">=", days_ago(STOCK_DETAIL_CREATE_DAYS)]]
+    vendor_used = 0
     while True:
         batch = odoo.kw(
             "product.product", "search_read", [sd_domain],
             {"fields": ["name", "qty_available", "standard_price",
-                        "create_date"],
+                        "create_date", "product_tmpl_id"],
              "limit": 2000, "offset": offset})
         for v in batch:
             if v["id"] in pseudo_variant_ids:
@@ -652,18 +693,51 @@ def main():
             name = (v.get("name") or "").strip()
             if name in PSEUDO_NAMES:
                 continue
-            stock_detail.append({
+            cost = v.get("standard_price") or 0.0
+            rec = {
+                "_id": v["id"],
                 "sku": name,
                 "model": name.split(" (")[0].strip(),
                 "qty": round(v.get("qty_available") or 0.0),
-                "cost": round(v.get("standard_price") or 0.0),
+                "cost": round(cost),
                 "created": local_day(v.get("create_date")),
-            })
+            }
+            if cost < MIN_COST_IQD and v.get("product_tmpl_id"):
+                vc = vendor_cost.get(v["product_tmpl_id"][0])
+                if vc:
+                    rec["cost"] = round(vc)
+                    rec["costSrc"] = "vendor"
+                    vendor_used += 1
+            stock_detail.append(rec)
         if len(batch) < 2000:
             break
         offset += 2000
     sd_units = sum(i["qty"] for i in stock_detail if i["qty"] > 0)
     sd_value = sum(i["qty"] * i["cost"] for i in stock_detail if i["qty"] > 0)
+    # Sold variants that are archived: cost only (qty 0, so inventory is unchanged).
+    seen = {r["_id"] for r in stock_detail}
+    missing = [i for i in line_variant_ids if i not in seen]
+    for i in range(0, len(missing), 200):
+        for v in odoo.kw("product.product", "read",
+                         [missing[i:i + 200], ["name", "standard_price",
+                                               "create_date", "product_tmpl_id"]],
+                         {"context": {"active_test": False}}):
+            name = (v.get("name") or "").strip()
+            if v["id"] in pseudo_variant_ids or name in PSEUDO_NAMES:
+                continue
+            cost = v.get("standard_price") or 0.0
+            rec = {"_id": v["id"], "sku": name,
+                   "model": name.split(" (")[0].strip(), "qty": 0,
+                   "cost": round(cost), "created": local_day(v.get("create_date"))}
+            if cost < MIN_COST_IQD and v.get("product_tmpl_id"):
+                vc = vendor_cost.get(v["product_tmpl_id"][0])
+                if vc:
+                    rec["cost"] = round(vc); rec["costSrc"] = "vendor"
+                    vendor_used += 1
+            stock_detail.append(rec)
+    for r in stock_detail:
+        r.pop("_id", None)
+    log(f"  stockDetail: {vendor_used} variants costed from vendor price")
     log(f"  stockDetail: {len(stock_detail)} variants, "
         f"{sd_units:.0f} on-hand units, ≈{sd_value:,.0f} {currency} at cost")
 
