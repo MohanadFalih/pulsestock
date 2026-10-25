@@ -623,9 +623,19 @@ export function monthRows(model: ProfitModel, mode: Mode): MonthRow[] {
     });
 }
 
-export type PeriodKey = "this-month" | "last-month" | "30d" | "90d";
+export type PeriodKey = "this-month" | "last-month" | "30d" | "90d" | "custom";
 
-export function periodDays(model: ProfitModel, period: PeriodKey): DayRaw[] {
+/** Inclusive custom range, YYYY-MM-DD (used when period === "custom"). */
+export interface DateRange {
+  from: string;
+  to: string;
+}
+
+export function periodDays(
+  model: ProfitModel,
+  period: PeriodKey,
+  range?: DateRange
+): DayRaw[] {
   const t = model.today;
   const cur = t.slice(0, 7);
   const prevDate = new Date(`${cur}-01T12:00:00`);
@@ -640,5 +650,10 @@ export function periodDays(model: ProfitModel, period: PeriodKey): DayRaw[] {
       return model.days.filter((d) => daysBetween(d.date, t) < 30);
     case "90d":
       return model.days.filter((d) => daysBetween(d.date, t) < 90);
+    case "custom": {
+      if (!range?.from || !range?.to) return [];
+      const [a, b] = range.from <= range.to ? [range.from, range.to] : [range.to, range.from];
+      return model.days.filter((d) => d.date >= a && d.date <= b);
+    }
   }
 }
