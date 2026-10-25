@@ -38,6 +38,7 @@ import {
   type Mode,
   type MonthRow,
   type PeriodKey,
+  type DateRange,
   type ProfitModel,
   type Totals,
 } from "@/data/profitEngine";
@@ -83,11 +84,19 @@ function Header({
   onMode,
   period,
   onPeriod,
+  range,
+  onRange,
+  minDate,
+  maxDate,
 }: {
   mode: Mode;
   onMode: (m: Mode) => void;
   period: PeriodKey;
   onPeriod: (p: PeriodKey) => void;
+  range: DateRange;
+  onRange: (r: DateRange) => void;
+  minDate?: string;
+  maxDate?: string;
 }) {
   return (
     <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
@@ -124,10 +133,34 @@ function Header({
             { value: "last-month", label: "Last month" },
             { value: "30d", label: "30 days" },
             { value: "90d", label: "90 days" },
+            { value: "custom", label: "Custom" },
           ]}
           value={period}
           onChange={(v) => onPeriod(v as PeriodKey)}
         />
+        {period === "custom" && (
+          <div className="flex items-center gap-2 text-[13px] text-text-secondary">
+            <input
+              type="date"
+              value={range.from}
+              min={minDate}
+              max={maxDate}
+              onChange={(e) => onRange({ ...range, from: e.target.value })}
+              className="rounded-lg border border-white/10 bg-white/5 px-2 py-1.5 text-text-primary [color-scheme:dark]"
+              aria-label="From"
+            />
+            <span>→</span>
+            <input
+              type="date"
+              value={range.to}
+              min={minDate}
+              max={maxDate}
+              onChange={(e) => onRange({ ...range, to: e.target.value })}
+              className="rounded-lg border border-white/10 bg-white/5 px-2 py-1.5 text-text-primary [color-scheme:dark]"
+              aria-label="To"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -466,6 +499,12 @@ export default function Profit() {
   const profit = useProfitData();
   const [mode, setMode] = useState<Mode>("projected");
   const [period, setPeriod] = useState<PeriodKey>("this-month");
+  const [range, setRange] = useState<DateRange>(() => {
+    const now = new Date();
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const ym = `${now.getFullYear()}-${pad(now.getMonth() + 1)}`;
+    return { from: `${ym}-01`, to: `${ym}-${pad(now.getDate())}` };
+  });
 
   const model = useMemo(
     () =>
@@ -473,8 +512,8 @@ export default function Profit() {
     [ops, profit]
   );
   const totals = useMemo(
-    () => (model ? sumDays(periodDays(model, period), model.keep, mode) : null),
-    [model, period, mode]
+    () => (model ? sumDays(periodDays(model, period, range), model.keep, mode) : null),
+    [model, period, range, mode]
   );
   const months = useMemo(() => (model ? monthRows(model, mode) : []), [model, mode]);
   type Tab = "profit" | "experiment" | "models";
@@ -531,7 +570,16 @@ export default function Profit() {
         )
       ) : (
       <>
-      <Header mode={mode} onMode={setMode} period={period} onPeriod={setPeriod} />
+      <Header
+        mode={mode}
+        onMode={setMode}
+        period={period}
+        onPeriod={setPeriod}
+        range={range}
+        onRange={setRange}
+        minDate={model?.days[0]?.date}
+        maxDate={model?.today}
+      />
       {!model || !totals ? (
         <EmptyState title="Loading" message="Waiting for the Odoo sync data…" />
       ) : (
