@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-26T12:02:38.411079+00:00",
+ "syncedAt": "2026-10-26T12:32:51.813214+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -227,7 +227,7 @@
    "revenue": 800000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 9,
+   "unitsBoughtFromSupplier": 10,
    "returnedStock": 0,
    "unitPrice": 80000.0,
    "orderVelocity7d": 1.43,
@@ -10904,20 +10904,20 @@
    "sku": "K-6576",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-04-05",
    "firstOrderDate": "2026-04-07",
-   "lastOrderDate": "2026-10-02",
-   "orders": 10,
-   "units": 9,
-   "revenue": 990000,
+   "lastOrderDate": "2026-10-26",
+   "orders": 11,
+   "units": 10,
+   "revenue": 1029000,
    "delivered": 9,
    "returned": 3,
    "unitsBoughtFromSupplier": 8,
    "returnedStock": 2,
    "unitPrice": 110000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 24,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13897,17 +13897,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
-   "lastOrderDate": "2026-10-25",
-   "orders": 724,
-   "units": 817,
-   "revenue": 26115000,
+   "lastOrderDate": "2026-10-26",
+   "orders": 725,
+   "units": 818,
+   "revenue": 26154000,
    "delivered": 806,
    "returned": 173,
-   "unitsBoughtFromSupplier": 659,
+   "unitsBoughtFromSupplier": 660,
    "returnedStock": 6,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 1.71,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15059,6 +15059,58 @@
    }
   },
   {
+   "odooId": 4577,
+   "name": "L-2025",
+   "sku": "L-2025",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-08-06",
+   "orders": 169,
+   "units": 183,
+   "revenue": 7231000,
+   "delivered": 180,
+   "returned": 39,
+   "unitsBoughtFromSupplier": 95,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 81,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
+   "odooId": 4602,
+   "name": "L-9967",
+   "sku": "L-9967",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-14",
+   "lastOrderDate": "2026-09-28",
+   "orders": 8,
+   "units": 8,
+   "revenue": 400000,
+   "delivered": 7,
+   "returned": 2,
+   "unitsBoughtFromSupplier": 4,
+   "returnedStock": 2,
+   "unitPrice": 77000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 28,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual"
+   }
+  },
+  {
    "odooId": 4537,
    "name": "L-1565",
    "sku": "L-1565",
@@ -15104,58 +15156,6 @@
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 3,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4602,
-   "name": "L-9967",
-   "sku": "L-9967",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-09-28",
-   "orders": 8,
-   "units": 8,
-   "revenue": 400000,
-   "delivered": 7,
-   "returned": 2,
-   "unitsBoughtFromSupplier": 4,
-   "returnedStock": 2,
-   "unitPrice": 77000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 28,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual"
-   }
-  },
-  {
-   "odooId": 4577,
-   "name": "L-2025",
-   "sku": "L-2025",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-08-06",
-   "orders": 169,
-   "units": 183,
-   "revenue": 7231000,
-   "delivered": 180,
-   "returned": 39,
-   "unitsBoughtFromSupplier": 95,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 81,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -26762,6 +26762,11 @@
      1,
      1,
      110000
+    ],
+    "2026-10-26": [
+     1,
+     1,
+     39000
     ]
    },
    "6903": {
@@ -28417,6 +28422,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-26": [
+     1,
+     1,
+     39000
     ]
    },
    "5855": {
@@ -28867,6 +28877,25 @@
      50000
     ]
    },
+   "4577": {
+    "2026-07-30": [
+     1,
+     1,
+     66000
+    ],
+    "2026-08-06": [
+     2,
+     2,
+     132000
+    ]
+   },
+   "4602": {
+    "2026-09-28": [
+     1,
+     1,
+     59000
+    ]
+   },
    "4537": {
     "2026-09-15": [
      1,
@@ -28884,25 +28913,6 @@
      1,
      1,
      25000
-    ]
-   },
-   "4602": {
-    "2026-09-28": [
-     1,
-     1,
-     59000
-    ]
-   },
-   "4577": {
-    "2026-07-30": [
-     1,
-     1,
-     66000
-    ],
-    "2026-08-06": [
-     2,
-     2,
-     132000
     ]
    },
    "4620": {
@@ -29368,10 +29378,46 @@
    "2026-10-23": 40,
    "2026-10-24": 41,
    "2026-10-25": 32,
-   "2026-10-26": 10
+   "2026-10-26": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33805",
+   "d": "2026-10-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6576",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S33804",
+   "d": "2026-10-26",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33803",
    "d": "2026-10-26",
