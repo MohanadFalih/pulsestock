@@ -1,17 +1,23 @@
 /**
- * Budget experiment engine (agreed with the owner 2026-10-21).
+ * Budget experiment engine (agreed with the owner 2026-10-21, redesigned
+ * 2026-10-26).
  *
- * Design: alternate the daily Meta budget week by week — 300 → 400 → 300 →
- * 400 USD — with no ad changes inside a week (in 400 weeks only sold-out
- * Turkey models are swapped for their replacement). Adjacent weeks share a
- * similar model mix, so each 400 week is judged against its 300 neighbours.
+ * Design: alternate the daily Meta budget week by week — 300 → 400 for
+ * 8 weeks (29 Oct – 23 Dec 2026), no extension and no postponement. Models are
+ * fed the way the business normally runs: promising models (any margin) are
+ * added whenever they arrive from the supplier, and models that stop selling
+ * or sell out are switched off, at any time, with the same criteria in 300 and
+ * 400 weeks. A new model's effect spilling into the next week is accepted —
+ * it happens in both directions. 22–28 Oct is a warm-up, not counted.
+ * Each 400 week is judged against its 300 neighbours.
  *
  * Metric: profit before fixed costs per day (gross margin + delivery − ads),
  * projected mode, by order date. Fixed costs don't move with the budget.
  *
  * Decision rule (written before the test): 400 becomes the standing budget
- * only if every 400 week beats its 300 neighbour average by ≥ 50,000 IQD/day.
- * Otherwise the standing budget is 300.
+ * only if, across the four 400 weeks, the average gain over their 300
+ * neighbours is ≥ 50,000 IQD/day AND at least 3 of the 4 beat their
+ * neighbours. Otherwise the standing budget is 300.
  *
  * Also computes Meta delivery health (CPM, link CTR, cost per conversation,
  * daily frequency) against a 60-day baseline, and the Turkey model mix of
@@ -30,21 +36,32 @@ export interface Block {
   start: string;
   end: string;
   budgetUSD: number;
+  /** Shown for reference, never part of a comparison. */
+  excluded?: boolean;
 }
 
 export const EXPERIMENT = {
-  start: "2026-10-22",
+  start: "2026-10-29",
   blocks: [
-    { key: "w1", label: "Week 1", start: "2026-10-22", end: "2026-10-28", budgetUSD: 300 },
-    { key: "w2", label: "Week 2", start: "2026-10-29", end: "2026-11-04", budgetUSD: 400 },
-    { key: "w3", label: "Week 3", start: "2026-11-05", end: "2026-11-11", budgetUSD: 300 },
-    { key: "w4", label: "Week 4", start: "2026-11-12", end: "2026-11-18", budgetUSD: 400 },
+    { key: "w0", label: "Warm-up", start: "2026-10-22", end: "2026-10-28", budgetUSD: 300, excluded: true },
+    { key: "w1", label: "Week 1", start: "2026-10-29", end: "2026-11-04", budgetUSD: 300 },
+    { key: "w2", label: "Week 2", start: "2026-11-05", end: "2026-11-11", budgetUSD: 400 },
+    { key: "w3", label: "Week 3", start: "2026-11-12", end: "2026-11-18", budgetUSD: 300 },
+    { key: "w4", label: "Week 4", start: "2026-11-19", end: "2026-11-25", budgetUSD: 400 },
+    { key: "w5", label: "Week 5", start: "2026-11-26", end: "2026-12-02", budgetUSD: 300 },
+    { key: "w6", label: "Week 6", start: "2026-12-03", end: "2026-12-09", budgetUSD: 400 },
+    { key: "w7", label: "Week 7", start: "2026-12-10", end: "2026-12-16", budgetUSD: 300 },
+    { key: "w8", label: "Week 8", start: "2026-12-17", end: "2026-12-23", budgetUSD: 400 },
   ] as Block[],
   /** 400 week vs its 300 neighbours. */
   comparisons: [
     { test: "w2", against: ["w1", "w3"] },
-    { test: "w4", against: ["w3"] },
+    { test: "w4", against: ["w3", "w5"] },
+    { test: "w6", against: ["w5", "w7"] },
+    { test: "w8", against: ["w7"] },
   ],
+  /** Minimum number of 400 weeks that must beat their neighbours. */
+  minWins: 3,
   winMarginIQD: 50_000,
   /** Days after a week ends before its numbers count (orders mostly delivered). */
   settleDays: 7,
@@ -205,6 +222,7 @@ export interface Comparison {
   /** test − average(against), IQD/day; null until all weeks are settled. */
   diffPerDay: number | null;
   provisionalDiff: number | null;
+  /** Settled and above its neighbours (diff > 0). */
   pass: boolean | null;
 }
 
@@ -214,6 +232,10 @@ export interface ExperimentResult {
   /** Standing budget once every week is settled; null before. */
   decisionUSD: 300 | 400 | null;
   decisionReady: boolean;
+  /** Average of settled 400-week gains, IQD/day (provisional while weeks settle). */
+  avgDiffPerDay: number | null;
+  /** Settled 400 weeks that beat their neighbours. */
+  wins: number;
   baseline: Health;
   last7: Health;
   last7Signals: HealthSignal[];
@@ -351,11 +373,20 @@ export function computeExperiment(
       against: [...c.against],
       provisionalDiff: diff,
       diffPerDay: settled ? diff : null,
-      pass: settled && diff != null ? diff >= EXPERIMENT.winMarginIQD : null,
+      pass: settled && diff != null ? diff > 0 : null,
     };
   });
   const decisionReady = comparisons.every((c) => c.pass != null);
-  const decisionUSD = decisionReady ? (comparisons.every((c) => c.pass) ? 400 : 300) : null;
+  const known = comparisons
+    .map((c) => c.diffPerDay ?? c.provisionalDiff)
+    .filter((d): d is number => d != null);
+  const avgDiffPerDay = known.length ? known.reduce((a, b) => a + b, 0) / known.length : null;
+  const wins = comparisons.filter((c) => c.pass).length;
+  const decisionUSD = decisionReady
+    ? avgDiffPerDay != null && avgDiffPerDay >= EXPERIMENT.winMarginIQD && wins >= EXPERIMENT.minWins
+      ? 400
+      : 300
+    : null;
 
   const last7Dates = datesBetween(addDays(today, -7), yesterday);
   const last7Base = datesBetween(addDays(today, -7 - EXPERIMENT.baselineDays), addDays(today, -8));
@@ -366,6 +397,8 @@ export function computeExperiment(
     comparisons,
     decisionUSD,
     decisionReady,
+    avgDiffPerDay,
+    wins,
     baseline,
     last7,
     last7Signals: healthSignals(last7, healthOf(detail, last7Base)),
