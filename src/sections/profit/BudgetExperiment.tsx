@@ -40,14 +40,15 @@ function Rules() {
         <h2 className="font-display text-[15px] font-semibold text-text-primary">Budget experiment · 300 vs 400</h2>
       </div>
       <ul className="mt-3 grid gap-1.5 text-[12.5px] text-text-secondary md:grid-cols-2">
-        <li>• Budget changes once, on the first morning of each week. No other ad edits inside a week.</li>
-        <li>• 400 weeks: only sold-out Turkey models are swapped for their replacement.</li>
+        <li>• 8 weeks, alternating 300 / 400. Budget changes on the first morning of each week. No extension, no postponement.</li>
+        <li>• Models are fed as usual, any day: promising models (any margin) are added when they arrive; models that stop selling or sell out are switched off. Same criteria in 300 and 400 weeks.</li>
         <li>• Measured on profit before fixed costs per day (projected, by order date).</li>
         <li>
-          • Decision, written in advance: 400 wins only if every 400 week beats its 300 neighbours by ≥{" "}
-          {compact(EXPERIMENT.winMarginIQD)} IQD/day. Otherwise the standing budget is 300.
+          • Decision, written in advance: 400 wins only if the 400 weeks beat their 300 neighbours by ≥{" "}
+          {compact(EXPERIMENT.winMarginIQD)} IQD/day on average AND at least {EXPERIMENT.minWins} of{" "}
+          {EXPERIMENT.comparisons.length} beat them. Otherwise the standing budget is 300.
         </li>
-        <li>• A week counts {EXPERIMENT.settleDays} days after it ends, once most orders are delivered.</li>
+        <li>• A week counts {EXPERIMENT.settleDays} days after it ends, once most orders are delivered. 22–28 Oct is a warm-up and is not counted.</li>
         <li>• Model strength = Turkey gross margin per Turkey order; a model taking ≥30% of units or spend is flagged.</li>
       </ul>
     </section>
@@ -77,7 +78,7 @@ function Weeks({ r }: { r: ExperimentResult }) {
           </thead>
           <tbody>
             {r.blocks.map((b) => (
-              <tr key={b.block.key} className="border-b border-hairline/60">
+              <tr key={b.block.key} className={cn("border-b border-hairline/60", b.block.excluded && "opacity-60")}>
                 <td className="px-3 py-2">
                   <div className="text-[13px] text-text-primary">
                     {b.block.label}{" "}
@@ -85,10 +86,16 @@ function Weeks({ r }: { r: ExperimentResult }) {
                       {day(b.block.start)} – {day(b.block.end)}
                     </span>
                   </div>
-                  <span className={cn("mt-1 inline-block rounded px-1.5 py-0.5 text-[10.5px] font-semibold", STATUS[b.status].cls)}>
-                    {STATUS[b.status].label}
-                    {b.days > 0 && b.status !== "settled" ? ` · ${b.days}/7 days` : ""}
-                  </span>
+                  {b.block.excluded ? (
+                    <span className="mt-1 inline-block rounded bg-inset px-1.5 py-0.5 text-[10.5px] font-semibold text-text-muted">
+                      Not counted
+                    </span>
+                  ) : (
+                    <span className={cn("mt-1 inline-block rounded px-1.5 py-0.5 text-[10.5px] font-semibold", STATUS[b.status].cls)}>
+                      {STATUS[b.status].label}
+                      {b.days > 0 && b.status !== "settled" ? ` · ${b.days}/7 days` : ""}
+                    </span>
+                  )}
                 </td>
                 <td className={num}>{usd(b.block.budgetUSD)}</td>
                 <td className={cn(num, b.offPlan && "text-amber")}>
@@ -139,6 +146,18 @@ function Verdict({ r }: { r: ExperimentResult }) {
           );
         })}
       </div>
+      <div className="mt-3 flex flex-wrap justify-between gap-2 px-1 text-[12.5px] text-text-secondary">
+        <span>
+          Average gain:{" "}
+          <span className={cn("font-mono font-semibold tnum", r.avgDiffPerDay == null ? "text-text-muted" : r.avgDiffPerDay >= EXPERIMENT.winMarginIQD ? "text-pos" : "text-amber")}>
+            {r.avgDiffPerDay == null ? "waiting" : `${r.avgDiffPerDay >= 0 ? "+" : "−"}${compact(Math.abs(r.avgDiffPerDay))} IQD/day`}
+          </span>{" "}
+          (needs ≥ {compact(EXPERIMENT.winMarginIQD)})
+        </span>
+        <span>
+          400 weeks ahead: <span className="font-mono font-semibold tnum">{r.wins}/{EXPERIMENT.comparisons.length}</span> settled (needs ≥ {EXPERIMENT.minWins})
+        </span>
+      </div>
       <div className="mt-4 flex items-center gap-2 rounded-lg border border-hairline px-3 py-3">
         {r.decisionReady ? (
           <>
@@ -151,7 +170,7 @@ function Verdict({ r }: { r: ExperimentResult }) {
           <>
             <Clock className="h-4 w-4 text-text-muted" />
             <span className="text-[13px] text-text-secondary">
-              Decision when Week 4 settles ({day(EXPERIMENT.blocks[3].end)} + {EXPERIMENT.settleDays} days)
+              Decision when Week 8 settles ({day(EXPERIMENT.blocks[EXPERIMENT.blocks.length - 1].end)} + {EXPERIMENT.settleDays} days)
             </span>
           </>
         )}
@@ -219,7 +238,7 @@ function Models({ r }: { r: ExperimentResult }) {
         Turkey units and share of SKU-attributed Meta spend. NEW = first Turkey sale in that week or the 3 days before.
       </p>
       {active.length === 0 ? (
-        <p className="mt-3 text-[13px] text-text-muted">Starts with Week 1 on {day(EXPERIMENT.blocks[0].start)}.</p>
+        <p className="mt-3 text-[13px] text-text-muted">Starts with Week 1 on {day(EXPERIMENT.start)}.</p>
       ) : (
         <div className="mt-3 grid gap-4 md:grid-cols-2">
           {active.map((b) => (
