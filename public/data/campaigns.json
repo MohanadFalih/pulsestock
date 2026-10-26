@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-26T19:32:59.217435+00:00",
- "metaSyncedAt": "2026-10-26T19:32:59.217435+00:00",
+ "syncedAt": "2026-10-26T20:02:31.838014+00:00",
+ "metaSyncedAt": "2026-10-26T20:02:31.838014+00:00",
  "window": {
   "since": "2026-10-20",
   "until": "2026-10-26",
@@ -11,6 +11,14 @@
  "note": "One entry per ACTIVE campaign; 'daily' holds one row per date with delivery (missing date = zero delivery). null means the metric family does not apply to this campaign objective (purchases=null for traffic, conversations=null for catalog sales, ...). A real zero stays 0. frequency = impressions/reach that day (null when reach=0). error!=null means the Meta fetch failed (expired/invalid token) — data may be stale. Definitions: purchases = Meta action type 'omni_purchase' (fallback 'purchase') — exactly the Ads Manager Purchases column; legacy offsite_conversion.* keys are excluded to avoid double counting. conversations = action type 'onsite_conversion.messaging_conversation_started_7d' (fallback 'messaging_conversation_started') — the Ads Manager 'Total messaging contacts' column.",
  "error": null,
  "campaigns": [
+  {
+   "id": "120253169085000723",
+   "name": "CATALOG | TURKEY ACTIVE",
+   "status": "ACTIVE",
+   "objective": "OUTCOME_SALES",
+   "dailyBudgetUSD": null,
+   "daily": []
+  },
   {
    "id": "120252936984580723",
    "name": "DENIZ | CUSTOMERS | STARS",
@@ -104,17 +112,17 @@
     },
     {
      "date": "2026-10-26",
-     "spendUSD": 23.64,
+     "spendUSD": 24.62,
      "purchases": 1,
-     "costPerPurchaseUSD": 23.64,
-     "conversations": 23,
+     "costPerPurchaseUSD": 24.62,
+     "conversations": 24,
      "costPerConversationUSD": 1.03,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 7734,
-     "ctrPct": 2.95,
-     "reach": 3167,
-     "frequency": 2.44
+     "impressions": 8011,
+     "ctrPct": 2.96,
+     "reach": 3246,
+     "frequency": 2.47
     }
    ]
   },
@@ -211,17 +219,17 @@
     },
     {
      "date": "2026-10-26",
-     "spendUSD": 41.12,
+     "spendUSD": 42.34,
      "purchases": 3,
-     "costPerPurchaseUSD": 13.71,
-     "conversations": 135,
+     "costPerPurchaseUSD": 14.11,
+     "conversations": 141,
      "costPerConversationUSD": 0.3,
      "landingPageViews": 23,
-     "costPerLpvUSD": 1.79,
-     "impressions": 23384,
-     "ctrPct": 13.63,
-     "reach": 13393,
-     "frequency": 1.75
+     "costPerLpvUSD": 1.84,
+     "impressions": 24214,
+     "ctrPct": 13.78,
+     "reach": 13759,
+     "frequency": 1.76
     }
    ]
   },
@@ -513,17 +521,17 @@
     },
     {
      "date": "2026-10-26",
-     "spendUSD": 27.24,
+     "spendUSD": 28.29,
      "purchases": 5,
-     "costPerPurchaseUSD": 5.45,
-     "conversations": 63,
-     "costPerConversationUSD": 0.43,
+     "costPerPurchaseUSD": 5.66,
+     "conversations": 64,
+     "costPerConversationUSD": 0.44,
      "landingPageViews": null,
      "costPerLpvUSD": null,
-     "impressions": 13710,
-     "ctrPct": 3.86,
-     "reach": 9332,
-     "frequency": 1.47
+     "impressions": 14331,
+     "ctrPct": 3.83,
+     "reach": 9536,
+     "frequency": 1.5
     }
    ]
   },
@@ -648,7 +656,7 @@
    "name": "MESSAGES CAMPAIGN",
    "status": "ACTIVE",
    "objective": "OUTCOME_SALES",
-   "dailyBudgetUSD": 140.0,
+   "dailyBudgetUSD": 120.0,
    "daily": [
     {
      "date": "2026-10-20",
@@ -722,31 +730,31 @@
     },
     {
      "date": "2026-10-25",
-     "spendUSD": 119.39,
+     "spendUSD": 119.4,
      "purchases": 8,
-     "costPerPurchaseUSD": 14.92,
+     "costPerPurchaseUSD": 14.93,
      "conversations": 303,
      "costPerConversationUSD": 0.39,
      "landingPageViews": 2,
      "costPerLpvUSD": 59.7,
-     "impressions": 70937,
+     "impressions": 70938,
      "ctrPct": 3.65,
      "reach": 50492,
      "frequency": 1.4
     },
     {
      "date": "2026-10-26",
-     "spendUSD": 144.11,
+     "spendUSD": 148.96,
      "purchases": 5,
-     "costPerPurchaseUSD": 28.82,
-     "conversations": 302,
-     "costPerConversationUSD": 0.48,
+     "costPerPurchaseUSD": 29.79,
+     "conversations": 318,
+     "costPerConversationUSD": 0.47,
      "landingPageViews": 2,
-     "costPerLpvUSD": 72.06,
-     "impressions": 84199,
+     "costPerLpvUSD": 74.48,
+     "impressions": 87540,
      "ctrPct": 4.03,
-     "reach": 53985,
-     "frequency": 1.56
+     "reach": 56313,
+     "frequency": 1.55
     }
    ]
   },
@@ -862,7 +870,7 @@
    "name": "TIME | 24H – DAILY website advantage",
    "status": "ACTIVE",
    "objective": "OUTCOME_SALES",
-   "dailyBudgetUSD": 70.0,
+   "dailyBudgetUSD": 50.0,
    "daily": [
     {
      "date": "2026-10-20",
@@ -915,9 +923,9 @@
      "costPerConversationUSD": 0.36,
      "landingPageViews": 1613,
      "costPerLpvUSD": 0.05,
-     "impressions": 40490,
+     "impressions": 40491,
      "ctrPct": 9.09,
-     "reach": 28289,
+     "reach": 28291,
      "frequency": 1.43
     },
     {
@@ -929,7 +937,7 @@
      "costPerConversationUSD": 0.33,
      "landingPageViews": 772,
      "costPerLpvUSD": 0.06,
-     "impressions": 22769,
+     "impressions": 22770,
      "ctrPct": 8.13,
      "reach": 17421,
      "frequency": 1.31
@@ -943,24 +951,24 @@
      "costPerConversationUSD": 0.38,
      "landingPageViews": 1023,
      "costPerLpvUSD": 0.06,
-     "impressions": 31980,
+     "impressions": 31981,
      "ctrPct": 7.55,
      "reach": 23526,
      "frequency": 1.36
     },
     {
      "date": "2026-10-26",
-     "spendUSD": 73.47,
+     "spendUSD": 76.8,
      "purchases": 6,
-     "costPerPurchaseUSD": 12.24,
-     "conversations": 115,
-     "costPerConversationUSD": 0.64,
-     "landingPageViews": 986,
-     "costPerLpvUSD": 0.07,
-     "impressions": 32814,
-     "ctrPct": 7.12,
-     "reach": 22246,
-     "frequency": 1.48
+     "costPerPurchaseUSD": 12.8,
+     "conversations": 118,
+     "costPerConversationUSD": 0.65,
+     "landingPageViews": 1021,
+     "costPerLpvUSD": 0.08,
+     "impressions": 34337,
+     "ctrPct": 7.09,
+     "reach": 22854,
+     "frequency": 1.5
     }
    ]
   }
