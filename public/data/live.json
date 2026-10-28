@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-28T17:02:56.799306+00:00",
+ "syncedAt": "2026-10-28T17:32:32.136917+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2717,17 +2717,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-10-27",
-   "orders": 54,
-   "units": 55,
-   "revenue": 4206000,
+   "lastOrderDate": "2026-10-28",
+   "orders": 55,
+   "units": 56,
+   "revenue": 4284000,
    "delivered": 51,
    "returned": 6,
-   "unitsBoughtFromSupplier": 54,
+   "unitsBoughtFromSupplier": 55,
    "returnedStock": 4,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2847,17 +2847,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-27",
    "firstOrderDate": "2026-09-28",
-   "lastOrderDate": "2026-10-26",
-   "orders": 18,
-   "units": 18,
-   "revenue": 2136000,
+   "lastOrderDate": "2026-10-28",
+   "orders": 19,
+   "units": 19,
+   "revenue": 2258000,
    "delivered": 17,
    "returned": 3,
-   "unitsBoughtFromSupplier": 17,
+   "unitsBoughtFromSupplier": 18,
    "returnedStock": 2,
    "unitPrice": 122000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -17107,6 +17107,11 @@
      2,
      2,
      156000
+    ],
+    "2026-10-28": [
+     1,
+     1,
+     78000
     ]
    },
    "7362": {
@@ -17212,6 +17217,11 @@
      2,
      2,
      244000
+    ],
+    "2026-10-28": [
+     1,
+     1,
+     122000
     ]
    },
    "7357": {
@@ -30093,10 +30103,65 @@
    "2026-10-25": 32,
    "2026-10-26": 40,
    "2026-10-27": 42,
-   "2026-10-28": 22
+   "2026-10-28": 25
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33905",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-24006UKB139",
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S33904",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33903",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6674",
+     "qty": 1,
+     "price": 122000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33902",
    "d": "2026-10-28",
