@@ -18,11 +18,14 @@
  *                          courier costs 4,000; returns cost nothing).
  *   Ads                    Meta daily spend × the card rate on that day
  *                          (1,380 IQD/$ until 2026-10-05, 1,600 from 10-06).
- *   Fixed costs            Odoo posted expenses (salaries, Turkey agent,
- *                          cargo, other) + rent 1.7M IQD/month (not booked in
- *                          Odoo). Monthly totals are spread evenly over the
- *                          month's days; the running month uses the larger of
- *                          what is posted so far and the recent monthly rate.
+ *   Cargo / shipping       Odoo account 501115, on the day it is posted.
+ *   Sales commission       1,500 IQD per kept (delivered) piece.
+ *   Fixed costs            the owner's monthly table (RULES.fixedMonthly),
+ *                          spread evenly over each month's days, plus the
+ *                          Turkey agent at a weekly rate (÷ 7 per day). Odoo's
+ *                          salary / agent / other expense accounts are NOT
+ *                          used: they follow the posting date (e.g. September
+ *                          salaries paid on 1 October), not the month served.
  *   Drawings               shareholder debt repayments (ابو سلطان) — reported,
  *                          never subtracted from profit.
  *
@@ -38,12 +41,24 @@
  */
 
 import type { OpsOrder, OpsStockItem } from "@/data/opsData";
-import type { ExpenseGroup, ProfitPayload } from "@/data/profitData";
+import type { ProfitPayload } from "@/data/profitData";
 
 // ─── Business rules (confirmed by the owner) ────────────────────────────────
 
 export const RULES = {
   rentMonthlyIQD: 1_700_000,
+  /** Owner's fixed-cost table (Oct 2026), IQD per month. Totals only — this
+   *  repo is public, so no per-person figures. */
+  fixedMonthly: {
+    salaries: 4_400_000, // fixed-salary staff in Baghdad
+    rent: 1_700_000,
+    utilities: 670_000, // electricity 300k + internet 70k + subscriptions 300k
+    other: 1_000_000, // Turkey + Baghdad sundries, packaging
+  },
+  /** Turkey agent, IQD per week. */
+  agentWeeklyIQD: 450_000,
+  /** Sales team commission per kept piece, IQD. */
+  commissionPerPiece: 1_500,
   deliveryNetPerOrder: 1_000,
   /** Orders older than this are final: undecided units count as not sold.
    *  Odoo data (Oct 2026): orders 9–10 days old show ~6% returned vs ~22% final;
@@ -60,8 +75,8 @@ export function adsRate(date: string): number {
   return date < "2026-10-06" ? 1380 : 1600;
 }
 
-export type FixedGroup = "salaries" | "turkey" | "shipping" | "other" | "rent";
-export const FIXED_GROUPS: FixedGroup[] = ["salaries", "turkey", "shipping", "rent", "other"];
+export type FixedGroup = "salaries" | "agent" | "rent" | "utilities" | "other";
+export const FIXED_GROUPS: FixedGroup[] = ["salaries", "agent", "rent", "utilities", "other"];
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -88,13 +103,19 @@ export interface DayRaw {
   stRiskRev: number;
   stRiskCogs: number;
   riskOrders: number;
+  /** Pieces: kept (shipped, not returned), undecided by route, and kept
+   *  pieces still expected to come back (projected). */
+  keptQty: number;
+  trPendQty: number;
+  stPendQty: number;
+  riskQty: number;
+  /** Cargo / shipping posted in Odoo (501115) on this day, IQD. */
+  shipping: number;
   /** Part of realized COGS that was estimated (missing unit cost). */
   estCogs: number;
   adsUSD: number;
   adsIQD: number;
   fixed: Record<FixedGroup, number>;
-  /** Fixed cost of the running month estimated from the recent rate. */
-  fixedEstimated: boolean;
   drawings: number;
 }
 
@@ -108,9 +129,13 @@ export interface Totals {
   delivery: number;
   ads: number;
   adsUSD: number;
+  shipping: number;
+  commission: number;
+  /** Kept pieces (projected or shipped, by mode). */
+  pieces: number;
   fixed: Record<FixedGroup, number>;
   fixedTotal: number;
-  /** Gross margin + delivery − ads (before fixed costs). */
+  /** Gross margin + delivery − ads − shipping − commission (before fixed costs). */
   contribution: number;
   net: number;
   drawings: number;
@@ -213,7 +238,7 @@ function unitCost(sku: string, c: CostLookup): number | null {
 }
 
 function zeroFixed(): Record<FixedGroup, number> {
-  return { salaries: 0, turkey: 0, shipping: 0, other: 0, rent: 0 };
+  return { salaries: 0, agent: 0, rent: 0, utilities: 0, other: 0 };
 }
 
 // ─── Model build ─────────────────────────────────────────────────────────────
@@ -368,11 +393,15 @@ export function buildProfitModel(
       stRiskRev: 0,
       stRiskCogs: 0,
       riskOrders: 0,
+      keptQty: 0,
+      trPendQty: 0,
+      stPendQty: 0,
+      riskQty: 0,
+      shipping: 0,
       estCogs: 0,
       adsUSD: 0,
       adsIQD: 0,
       fixed: zeroFixed(),
-      fixedEstimated: false,
       drawings: 0,
     });
   }
@@ -391,6 +420,8 @@ export function buildProfitModel(
       const unitCostVal = l.cost ?? l.unitNet * fallbackCostRatio;
       if (l.keptQty > 0) {
         anyKept = true;
+        day.keptQty += l.keptQty;
+        day.riskQty += l.keptQty * q;
         const rev = l.unitNet * l.keptQty;
         const cogs = unitCostVal * l.keptQty;
         if (l.cost == null) day.estCogs += cogs;
@@ -408,6 +439,8 @@ export function buildProfitModel(
       }
       if (l.undecidedQty > 0 && !day.mature) {
         anyUndecided = true;
+        if (l.turkey) day.trPendQty += l.undecidedQty;
+        else day.stPendQty += l.undecidedQty;
         const rev = l.unitNet * l.undecidedQty;
         const cogs = unitCostVal * l.undecidedQty;
         if (l.turkey) {
@@ -437,46 +470,23 @@ export function buildProfitModel(
     if (!lastMetaDay || date > lastMetaDay) lastMetaDay = date;
   }
 
-  // 5. Fixed costs: monthly totals spread over the month.
+  // 5. Cargo (Odoo 501115, on its posting day), drawings, and the owner's
+  // fixed-cost table spread evenly over each month.
   const odooDaily = profit?.odoo?.daily ?? {};
-  const monthTotals = new Map<string, Record<FixedGroup, number>>();
   for (const [date, row] of Object.entries(odooDaily)) {
-    const m = date.slice(0, 7);
-    const t = monthTotals.get(m) ?? zeroFixed();
-    for (const g of ["salaries", "turkey", "shipping", "other"] as const) {
-      t[g] += row[g as ExpenseGroup] ?? 0;
-    }
-    monthTotals.set(m, t);
     const day = byDate.get(date);
-    if (day) day.drawings += row.drawings ?? 0;
+    if (!day) continue;
+    day.shipping += row.shipping ?? 0;
+    day.drawings += row.drawings ?? 0;
   }
-  const currentMonth = today.slice(0, 7);
-  const completeMonths = [...monthTotals.keys()].filter((m) => m < currentMonth).sort();
-  const recent = completeMonths.slice(-3);
-  // Median daily rate of the last (up to) 3 complete months — robust to a
-  // one-off month (bonuses, a large agent settlement).
-  const recentDailyRate = zeroFixed();
-  if (recent.length > 0) {
-    for (const g of ["salaries", "turkey", "shipping", "other"] as const) {
-      recentDailyRate[g] = median(recent.map((m) => monthTotals.get(m)![g] / daysInMonth(m)));
-    }
-  }
-  const hasOdoo = Object.keys(odooDaily).length > 0;
+  const F = RULES.fixedMonthly;
   for (const day of days) {
-    const m = day.date.slice(0, 7);
-    const dim = daysInMonth(m);
-    day.fixed.rent = RULES.rentMonthlyIQD / dim;
-    if (!hasOdoo) continue;
-    const t = monthTotals.get(m) ?? zeroFixed();
-    for (const g of ["salaries", "turkey", "shipping", "other"] as const) {
-      const posted = t[g] / dim;
-      if (m === currentMonth && recentDailyRate[g] > posted) {
-        day.fixed[g] = recentDailyRate[g];
-        day.fixedEstimated = true;
-      } else {
-        day.fixed[g] = posted;
-      }
-    }
+    const dim = daysInMonth(day.date.slice(0, 7));
+    day.fixed.salaries = F.salaries / dim;
+    day.fixed.rent = F.rent / dim;
+    day.fixed.utilities = F.utilities / dim;
+    day.fixed.other = F.other / dim;
+    day.fixed.agent = RULES.agentWeeklyIQD / 7;
   }
 
   return {
@@ -510,6 +520,9 @@ export function emptyTotals(): Totals {
     delivery: 0,
     ads: 0,
     adsUSD: 0,
+    shipping: 0,
+    commission: 0,
+    pieces: 0,
     fixed: zeroFixed(),
     fixedTotal: 0,
     contribution: 0,
@@ -543,9 +556,13 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.delivery = delivered * RULES.deliveryNetPerOrder;
   t.ads = d.adsIQD;
   t.adsUSD = d.adsUSD;
+  t.shipping = d.shipping;
+  t.pieces =
+    d.keptQty + (p ? d.trPendQty * keep.turkey + d.stPendQty * keep.stock - d.riskQty : 0);
+  t.commission = t.pieces * RULES.commissionPerPiece;
   t.fixed = { ...d.fixed };
   t.fixedTotal = FIXED_GROUPS.reduce((s, g) => s + d.fixed[g], 0);
-  t.contribution = t.trGross + t.stGross + t.delivery - t.ads;
+  t.contribution = t.trGross + t.stGross + t.delivery - t.ads - t.shipping - t.commission;
   t.net = t.contribution - t.fixedTotal;
   t.drawings = d.drawings;
   t.ordersPlaced = d.ordersPlaced;
@@ -570,6 +587,9 @@ export function addTotals(a: Totals, b: Totals): Totals {
     delivery: a.delivery + b.delivery,
     ads: a.ads + b.ads,
     adsUSD: a.adsUSD + b.adsUSD,
+    shipping: a.shipping + b.shipping,
+    commission: a.commission + b.commission,
+    pieces: a.pieces + b.pieces,
     fixed,
     fixedTotal: a.fixedTotal + b.fixedTotal,
     contribution: a.contribution + b.contribution,
