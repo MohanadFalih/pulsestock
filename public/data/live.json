@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-28T12:03:08.066680+00:00",
+ "syncedAt": "2026-10-28T12:32:36.966621+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -689,17 +689,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-21",
    "firstOrderDate": "2026-10-21",
-   "lastOrderDate": "2026-10-27",
-   "orders": 6,
-   "units": 7,
-   "revenue": 686000,
+   "lastOrderDate": "2026-10-28",
+   "orders": 7,
+   "units": 8,
+   "revenue": 784000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 0,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15711,7 +15711,7 @@
  ],
  "shop": {
   "stockUnits": 1709,
-  "stockValue": 51791544,
+  "stockValue": 51791527,
   "stockVariants": 1359
  },
  "daily": {
@@ -15859,6 +15859,11 @@
      2,
      3,
      294000
+    ],
+    "2026-10-28": [
+     1,
+     1,
+     98000
     ]
    },
    "7446": {
@@ -30068,10 +30073,48 @@
    "2026-10-25": 32,
    "2026-10-26": 40,
    "2026-10-27": 42,
-   "2026-10-28": 16
+   "2026-10-28": 17
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33897",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8016",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33896",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-9076",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S33895",
    "d": "2026-10-28",
@@ -126491,7 +126534,7 @@
    "sku": "L-1800",
    "model": "L-1800",
    "qty": 0,
-   "cost": 20000,
+   "cost": 19275,
    "created": "2025-10-19"
   },
   {
@@ -126519,7 +126562,7 @@
    "sku": "L-1800",
    "model": "L-1800",
    "qty": 1,
-   "cost": 18589,
+   "cost": 18572,
    "created": "2026-02-23"
   },
   {
@@ -180140,9 +180183,8 @@
    "sku": "L-1056",
    "model": "L-1056",
    "qty": 0,
-   "cost": 21250,
-   "created": "2026-10-15",
-   "costSrc": "vendor"
+   "cost": 21000,
+   "created": "2026-10-15"
   },
   {
    "sku": "L-1056",
@@ -180163,9 +180205,8 @@
    "sku": "L-1056",
    "model": "L-1056",
    "qty": 0,
-   "cost": 21250,
-   "created": "2026-10-15",
-   "costSrc": "vendor"
+   "cost": 21000,
+   "created": "2026-10-15"
   },
   {
    "sku": "L-1056",
@@ -181484,7 +181525,7 @@
    "sku": "L-1907",
    "model": "L-1907",
    "qty": 0,
-   "cost": 26493,
+   "cost": 26432,
    "created": "2025-05-20"
   },
   {
