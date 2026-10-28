@@ -37,6 +37,7 @@ import {
   type FixedGroup,
   type Mode,
   type MonthRow,
+  FIXED_GROUPS,
   type PeriodKey,
   type DateRange,
   type ProfitModel,
@@ -50,11 +51,11 @@ import { cn } from "@/lib/utils";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const FIXED_LABEL: Record<FixedGroup, string> = {
-  salaries: "Salaries",
-  turkey: "Turkey expenses (agent)",
-  shipping: "Cargo / shipping",
+  salaries: "Salaries (fixed)",
+  agent: "Turkey agent (450k / week)",
   rent: "Rent",
-  other: "Other expenses",
+  utilities: "Electricity · internet · subscriptions",
+  other: "Other (sundries, packaging)",
 };
 
 /** Signed compact IQD: 12,400,000 → "12.4M", −850,000 → "−850,000". */
@@ -113,7 +114,7 @@ function Header({
           Real Profit
         </motion.h1>
         <p className="mt-1 text-[13.5px] text-text-secondary">
-          Delivered goods, Meta spend at the card rate, Odoo salaries &amp; expenses, rent
+          Delivered goods, Meta spend at the card rate, Odoo cargo, sales commission, fixed-cost table
         </p>
       </div>
       <div className="flex flex-wrap items-center gap-3">
@@ -210,7 +211,7 @@ function KpiRow({ t }: { t: Totals }) {
       <Kpi
         label="Before fixed costs"
         value={iqd(t.contribution)}
-        sub={`gross margin + delivery − ads · ${perDay(t.contribution)}`}
+        sub={`gross margin + delivery − ads − cargo − commission · ${perDay(t.contribution)}`}
         tone={t.contribution >= 0 ? "pos" : "neg"}
       />
       <Kpi label="Fixed costs" value={iqd(t.fixedTotal)} sub={perDay(t.fixedTotal)} />
@@ -242,8 +243,14 @@ function Ladder({ t, model }: { t: Totals; model: ProfitModel }) {
     },
     { label: "Delivery (+1,000 / delivered order)", value: t.delivery },
     { label: "Meta ads", value: -t.ads },
+    { label: "Cargo / shipping (Odoo)", value: -t.shipping },
+    {
+      label: "Sales commission (1,500 / piece)",
+      value: -t.commission,
+      note: `${Math.round(t.pieces).toLocaleString("en-US")} pieces`,
+    },
     { label: "= Before fixed costs", value: t.contribution, strong: true },
-    ...(["salaries", "turkey", "shipping", "rent", "other"] as FixedGroup[]).map((g) => ({
+    ...(FIXED_GROUPS as FixedGroup[]).map((g) => ({
       label: FIXED_LABEL[g],
       value: -t.fixed[g],
     })),
@@ -477,8 +484,8 @@ function Notes({ t, model }: { t: Totals; model: ProfitModel }) {
           )}% of ordered value`,
           "Goods cost from delivered lines × Odoo average cost — not from Odoo's COGS account",
           "Ads: Meta daily spend × 1,380 IQD until 5 Oct 2026, × 1,600 from 6 Oct",
-          "Fixed costs spread evenly over each month; the running month uses the recent monthly rate until posted",
-          "Rent 1,700,000 IQD / month (not booked in Odoo)",
+          "Fixed costs per month: salaries 4.4M · rent 1.7M · electricity, internet & subscriptions 670k · other 1M — spread evenly over the month's days. Turkey agent 450k / week",
+          "Cargo from Odoo (501115) on the day it is posted · sales commission 1,500 IQD per kept piece",
           `Orders older than ${RULES.matureAfterDays} days are final. Odoo marks an order delivered when it goes to the courier; projected mode removes the refusals still expected to come back`,
           h.syncedAt ? `Expenses & Meta synced ${new Date(h.syncedAt).toLocaleString("en-GB")}` : "Waiting for first sync",
         ].map((n) => (
