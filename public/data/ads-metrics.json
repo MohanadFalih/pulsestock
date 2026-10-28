@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-10-28T07:02:53.747200+00:00",
- "metaSyncedAt": "2026-10-28T07:02:53.747200+00:00",
+ "syncedAt": "2026-10-28T07:33:03.874921+00:00",
+ "metaSyncedAt": "2026-10-28T07:33:03.874921+00:00",
  "window": {
   "since": "2026-10-22",
   "until": "2026-10-28",
@@ -9,6 +9,2754 @@
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
  "note": "Per-ad DAILY time series over the 7-day window (including today), keyed by SKU extracted from ad names (e.g. 'H-1920'); an ad mentioning several SKUs appears under each. Each ad carries a 'daily' list — one row per date with delivery (missing date = zero delivery), like campaigns.json. purchases = Meta action type 'omni_purchase' (fallback 'purchase') — the Ads Manager Purchases column; null when zero. frequency is Meta's own daily value (fallback impressions/reach; null when reach=0). cpmUSD/ctrPct/clicks/impressions/reach straight from the Insights API. Built for trend detection (rising CPM, collapsing CTR, ...). error!=null means the fetch failed — campaigns.json and ads-7d.json are unaffected.",
- "error": "meta ad-daily fetch failed: HTTP Error 400: Bad Request",
- "skus": {}
+ "error": null,
+ "skus": {
+  "H-1664": {
+   "ads": [
+    {
+     "adId": "120253088933830723",
+     "adName": "H-1664",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 11.16,
+       "purchases": null,
+       "impressions": 10242,
+       "reach": 9039,
+       "frequency": 1.13,
+       "cpmUSD": 1.09,
+       "ctrPct": 3.47,
+       "clicks": 355
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 5.19,
+       "purchases": 1,
+       "impressions": 4125,
+       "reach": 3572,
+       "frequency": 1.15,
+       "cpmUSD": 1.26,
+       "ctrPct": 3.88,
+       "clicks": 160
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 4.46,
+       "purchases": null,
+       "impressions": 3683,
+       "reach": 2962,
+       "frequency": 1.24,
+       "cpmUSD": 1.21,
+       "ctrPct": 4.83,
+       "clicks": 178
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 8.78,
+       "purchases": null,
+       "impressions": 5735,
+       "reach": 4788,
+       "frequency": 1.2,
+       "cpmUSD": 1.53,
+       "ctrPct": 3.99,
+       "clicks": 229
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 3.17,
+       "purchases": null,
+       "impressions": 2309,
+       "reach": 2051,
+       "frequency": 1.13,
+       "cpmUSD": 1.37,
+       "ctrPct": 3.68,
+       "clicks": 85
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120253089516150723",
+     "adName": "H-1664",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 6.68,
+       "purchases": null,
+       "impressions": 3606,
+       "reach": 2944,
+       "frequency": 1.22,
+       "cpmUSD": 1.85,
+       "ctrPct": 5.27,
+       "clicks": 190
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 4.96,
+       "purchases": 1,
+       "impressions": 3994,
+       "reach": 3110,
+       "frequency": 1.28,
+       "cpmUSD": 1.24,
+       "ctrPct": 11.67,
+       "clicks": 466
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 6.63,
+       "purchases": null,
+       "impressions": 2980,
+       "reach": 2358,
+       "frequency": 1.26,
+       "cpmUSD": 2.22,
+       "ctrPct": 9.19,
+       "clicks": 274
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 12.56,
+       "purchases": 2,
+       "impressions": 5769,
+       "reach": 4656,
+       "frequency": 1.24,
+       "cpmUSD": 2.18,
+       "ctrPct": 7.63,
+       "clicks": 440
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 10.1,
+       "purchases": null,
+       "impressions": 5253,
+       "reach": 4421,
+       "frequency": 1.19,
+       "cpmUSD": 1.92,
+       "ctrPct": 8.3,
+       "clicks": 436
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 2.89,
+       "purchases": null,
+       "impressions": 2172,
+       "reach": 1884,
+       "frequency": 1.15,
+       "cpmUSD": 1.33,
+       "ctrPct": 9.53,
+       "clicks": 207
+      }
+     ]
+    },
+    {
+     "adId": "120252839653180723",
+     "adName": "H-1664",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1906": {
+   "ads": [
+    {
+     "adId": "120252923145640723",
+     "adName": "H-1906",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1908": {
+   "ads": [
+    {
+     "adId": "120252590112480723",
+     "adName": "H-1908",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252937062960723",
+     "adName": "H-1908",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 1.43,
+       "purchases": null,
+       "impressions": 406,
+       "reach": 281,
+       "frequency": 1.44,
+       "cpmUSD": 3.52,
+       "ctrPct": 2.46,
+       "clicks": 10
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 1.37,
+       "purchases": null,
+       "impressions": 400,
+       "reach": 294,
+       "frequency": 1.36,
+       "cpmUSD": 3.42,
+       "ctrPct": 3.25,
+       "clicks": 13
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.58,
+       "purchases": null,
+       "impressions": 139,
+       "reach": 119,
+       "frequency": 1.17,
+       "cpmUSD": 4.17,
+       "ctrPct": 0.72,
+       "clicks": 1
+      }
+     ]
+    },
+    {
+     "adId": "120253091782620723",
+     "adName": "H-1908",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 6.07,
+       "purchases": 4,
+       "impressions": 2831,
+       "reach": 2285,
+       "frequency": 1.24,
+       "cpmUSD": 2.14,
+       "ctrPct": 7.63,
+       "clicks": 216
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 18.0,
+       "purchases": 6,
+       "impressions": 8735,
+       "reach": 6388,
+       "frequency": 1.37,
+       "cpmUSD": 2.06,
+       "ctrPct": 10.54,
+       "clicks": 921
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 4.81,
+       "purchases": 2,
+       "impressions": 2176,
+       "reach": 1887,
+       "frequency": 1.15,
+       "cpmUSD": 2.21,
+       "ctrPct": 9.6,
+       "clicks": 209
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": 1,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": 2,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252576180210723",
+     "adName": "H-1908 EXISTING POST",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": 3,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1909": {
+   "ads": [
+    {
+     "adId": "120252602887030723",
+     "adName": "H-1909 EXISTING POST",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": 2,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1912": {
+   "ads": [
+    {
+     "adId": "120252950845600723",
+     "adName": "H-1912",
+     "campaignName": "SEASON | FULL CATALOG",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252967089500723",
+     "adName": "H-1912",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1915": {
+   "ads": [
+    {
+     "adId": "120252950845570723",
+     "adName": "H-1915",
+     "campaignName": "SEASON | FULL CATALOG",
+     "daily": [
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1916": {
+   "ads": [
+    {
+     "adId": "120252771447210723",
+     "adName": "H-1916",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120253088678060723",
+     "adName": "H-1916",
+     "campaignName": "DENIZ | RETARGETING | WARM",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 6.82,
+       "purchases": null,
+       "impressions": 3657,
+       "reach": 3061,
+       "frequency": 1.19,
+       "cpmUSD": 1.86,
+       "ctrPct": 3.39,
+       "clicks": 124
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 4.27,
+       "purchases": null,
+       "impressions": 2236,
+       "reach": 1739,
+       "frequency": 1.29,
+       "cpmUSD": 1.91,
+       "ctrPct": 3.98,
+       "clicks": 89
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 4.91,
+       "purchases": 2,
+       "impressions": 3026,
+       "reach": 2396,
+       "frequency": 1.26,
+       "cpmUSD": 1.62,
+       "ctrPct": 4.1,
+       "clicks": 124
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 8.08,
+       "purchases": null,
+       "impressions": 4549,
+       "reach": 3439,
+       "frequency": 1.32,
+       "cpmUSD": 1.78,
+       "ctrPct": 3.41,
+       "clicks": 155
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 7.66,
+       "purchases": null,
+       "impressions": 4153,
+       "reach": 3237,
+       "frequency": 1.28,
+       "cpmUSD": 1.84,
+       "ctrPct": 4.24,
+       "clicks": 176
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 6.81,
+       "purchases": 2,
+       "impressions": 3380,
+       "reach": 2619,
+       "frequency": 1.29,
+       "cpmUSD": 2.01,
+       "ctrPct": 5.77,
+       "clicks": 195
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 1.44,
+       "purchases": null,
+       "impressions": 899,
+       "reach": 819,
+       "frequency": 1.1,
+       "cpmUSD": 1.6,
+       "ctrPct": 4.45,
+       "clicks": 40
+      }
+     ]
+    },
+    {
+     "adId": "120252968165970723",
+     "adName": "H-1916",
+     "campaignName": "DENIZ | PROSPECTING | BROAD",
+     "daily": [
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1919": {
+   "ads": [
+    {
+     "adId": "120252827584830723",
+     "adName": "H-1919",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252937062970723",
+     "adName": "H-1919",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 6.69,
+       "purchases": 3,
+       "impressions": 2213,
+       "reach": 1591,
+       "frequency": 1.39,
+       "cpmUSD": 3.02,
+       "ctrPct": 2.35,
+       "clicks": 52
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 5.7,
+       "purchases": 1,
+       "impressions": 1819,
+       "reach": 1282,
+       "frequency": 1.42,
+       "cpmUSD": 3.13,
+       "ctrPct": 2.47,
+       "clicks": 45
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 5.48,
+       "purchases": 4,
+       "impressions": 2135,
+       "reach": 1485,
+       "frequency": 1.44,
+       "cpmUSD": 2.57,
+       "ctrPct": 2.62,
+       "clicks": 56
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 2.92,
+       "purchases": 1,
+       "impressions": 910,
+       "reach": 779,
+       "frequency": 1.17,
+       "cpmUSD": 3.21,
+       "ctrPct": 2.97,
+       "clicks": 27
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252968220520723",
+     "adName": "H-1919",
+     "campaignName": "DENIZ | PROSPECTING | BROAD",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252968425680723",
+     "adName": "H-1919",
+     "campaignName": "DENIZ | PROSPECTING | LAL 1%",
+     "daily": [
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1920": {
+   "ads": [
+    {
+     "adId": "120252937062980723",
+     "adName": "H-1920",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 6.67,
+       "purchases": 2,
+       "impressions": 2429,
+       "reach": 1630,
+       "frequency": 1.49,
+       "cpmUSD": 2.75,
+       "ctrPct": 2.68,
+       "clicks": 65
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 6.75,
+       "purchases": null,
+       "impressions": 2590,
+       "reach": 1573,
+       "frequency": 1.65,
+       "cpmUSD": 2.61,
+       "ctrPct": 3.01,
+       "clicks": 78
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 6.13,
+       "purchases": 1,
+       "impressions": 2298,
+       "reach": 1480,
+       "frequency": 1.55,
+       "cpmUSD": 2.67,
+       "ctrPct": 3.13,
+       "clicks": 72
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 8.78,
+       "purchases": 1,
+       "impressions": 3410,
+       "reach": 2040,
+       "frequency": 1.67,
+       "cpmUSD": 2.57,
+       "ctrPct": 2.49,
+       "clicks": 85
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 8.28,
+       "purchases": 2,
+       "impressions": 3085,
+       "reach": 1875,
+       "frequency": 1.65,
+       "cpmUSD": 2.68,
+       "ctrPct": 2.56,
+       "clicks": 79
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 2.73,
+       "purchases": 2,
+       "impressions": 1081,
+       "reach": 832,
+       "frequency": 1.3,
+       "cpmUSD": 2.53,
+       "ctrPct": 2.31,
+       "clicks": 25
+      }
+     ]
+    },
+    {
+     "adId": "120252827584840723",
+     "adName": "H-1920",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "H-1938": {
+   "ads": [
+    {
+     "adId": "120253161412550723",
+     "adName": "H-1938",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 18.42,
+       "purchases": 1,
+       "impressions": 7773,
+       "reach": 6166,
+       "frequency": 1.26,
+       "cpmUSD": 2.37,
+       "ctrPct": 5.65,
+       "clicks": 439
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 10.77,
+       "purchases": null,
+       "impressions": 6611,
+       "reach": 5116,
+       "frequency": 1.29,
+       "cpmUSD": 1.63,
+       "ctrPct": 6.4,
+       "clicks": 423
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 2.41,
+       "purchases": null,
+       "impressions": 1584,
+       "reach": 1408,
+       "frequency": 1.12,
+       "cpmUSD": 1.52,
+       "ctrPct": 6.94,
+       "clicks": 110
+      }
+     ]
+    }
+   ]
+  },
+  "H-1945": {
+   "ads": [
+    {
+     "adId": "120253161800730723",
+     "adName": "H-1945",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 11.28,
+       "purchases": 3,
+       "impressions": 3888,
+       "reach": 3165,
+       "frequency": 1.23,
+       "cpmUSD": 2.9,
+       "ctrPct": 9.18,
+       "clicks": 357
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 15.78,
+       "purchases": 1,
+       "impressions": 7245,
+       "reach": 5503,
+       "frequency": 1.32,
+       "cpmUSD": 2.18,
+       "ctrPct": 5.92,
+       "clicks": 429
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 4.05,
+       "purchases": 1,
+       "impressions": 2338,
+       "reach": 2072,
+       "frequency": 1.13,
+       "cpmUSD": 1.73,
+       "ctrPct": 6.16,
+       "clicks": 144
+      }
+     ]
+    }
+   ]
+  },
+  "K-1005": {
+   "ads": [
+    {
+     "adId": "120253088933860723",
+     "adName": "K-1005",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 63.27,
+       "purchases": 5,
+       "impressions": 36916,
+       "reach": 29424,
+       "frequency": 1.25,
+       "cpmUSD": 1.71,
+       "ctrPct": 4.39,
+       "clicks": 1622
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 29.46,
+       "purchases": 5,
+       "impressions": 15411,
+       "reach": 12306,
+       "frequency": 1.25,
+       "cpmUSD": 1.91,
+       "ctrPct": 4.26,
+       "clicks": 657
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 13.47,
+       "purchases": null,
+       "impressions": 7596,
+       "reach": 6524,
+       "frequency": 1.16,
+       "cpmUSD": 1.77,
+       "ctrPct": 4.79,
+       "clicks": 364
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 13.04,
+       "purchases": 1,
+       "impressions": 7592,
+       "reach": 6361,
+       "frequency": 1.19,
+       "cpmUSD": 1.72,
+       "ctrPct": 4.48,
+       "clicks": 340
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 9.41,
+       "purchases": 1,
+       "impressions": 5290,
+       "reach": 4795,
+       "frequency": 1.1,
+       "cpmUSD": 1.78,
+       "ctrPct": 4.63,
+       "clicks": 245
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 3.88,
+       "purchases": null,
+       "impressions": 2050,
+       "reach": 1756,
+       "frequency": 1.17,
+       "cpmUSD": 1.89,
+       "ctrPct": 5.61,
+       "clicks": 115
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 1.5,
+       "purchases": null,
+       "impressions": 876,
+       "reach": 764,
+       "frequency": 1.15,
+       "cpmUSD": 1.71,
+       "ctrPct": 4.34,
+       "clicks": 38
+      }
+     ]
+    }
+   ]
+  },
+  "K-6647": {
+   "ads": [
+    {
+     "adId": "120252605345170723",
+     "adName": "K-6647",
+     "campaignName": "SEASON | FULL CATALOG",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": 1,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120253088678080723",
+     "adName": "K-6647",
+     "campaignName": "DENIZ | RETARGETING | WARM",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 3.32,
+       "purchases": null,
+       "impressions": 1805,
+       "reach": 1495,
+       "frequency": 1.21,
+       "cpmUSD": 1.84,
+       "ctrPct": 4.65,
+       "clicks": 84
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 3.56,
+       "purchases": null,
+       "impressions": 2080,
+       "reach": 1591,
+       "frequency": 1.31,
+       "cpmUSD": 1.71,
+       "ctrPct": 4.52,
+       "clicks": 94
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 3.63,
+       "purchases": 2,
+       "impressions": 1899,
+       "reach": 1472,
+       "frequency": 1.29,
+       "cpmUSD": 1.91,
+       "ctrPct": 4.9,
+       "clicks": 93
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 4.82,
+       "purchases": 1,
+       "impressions": 2514,
+       "reach": 1820,
+       "frequency": 1.38,
+       "cpmUSD": 1.92,
+       "ctrPct": 4.61,
+       "clicks": 116
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 3.01,
+       "purchases": null,
+       "impressions": 1718,
+       "reach": 1368,
+       "frequency": 1.26,
+       "cpmUSD": 1.75,
+       "ctrPct": 2.79,
+       "clicks": 48
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 2.77,
+       "purchases": null,
+       "impressions": 1362,
+       "reach": 1126,
+       "frequency": 1.21,
+       "cpmUSD": 2.03,
+       "ctrPct": 5.14,
+       "clicks": 70
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 0.6,
+       "purchases": null,
+       "impressions": 290,
+       "reach": 250,
+       "frequency": 1.16,
+       "cpmUSD": 2.07,
+       "ctrPct": 2.41,
+       "clicks": 7
+      }
+     ]
+    },
+    {
+     "adId": "120253088933810723",
+     "adName": "K-6647",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 10.28,
+       "purchases": null,
+       "impressions": 7402,
+       "reach": 6210,
+       "frequency": 1.19,
+       "cpmUSD": 1.39,
+       "ctrPct": 4.89,
+       "clicks": 362
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 13.87,
+       "purchases": 4,
+       "impressions": 10194,
+       "reach": 8482,
+       "frequency": 1.2,
+       "cpmUSD": 1.36,
+       "ctrPct": 4.81,
+       "clicks": 490
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 16.26,
+       "purchases": 2,
+       "impressions": 10991,
+       "reach": 9177,
+       "frequency": 1.2,
+       "cpmUSD": 1.48,
+       "ctrPct": 4.52,
+       "clicks": 497
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 12.67,
+       "purchases": null,
+       "impressions": 7372,
+       "reach": 6074,
+       "frequency": 1.21,
+       "cpmUSD": 1.72,
+       "ctrPct": 4.3,
+       "clicks": 317
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 6.86,
+       "purchases": 1,
+       "impressions": 4438,
+       "reach": 3680,
+       "frequency": 1.21,
+       "cpmUSD": 1.55,
+       "ctrPct": 4.78,
+       "clicks": 212
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 3.75,
+       "purchases": 1,
+       "impressions": 2381,
+       "reach": 1993,
+       "frequency": 1.19,
+       "cpmUSD": 1.57,
+       "ctrPct": 5.92,
+       "clicks": 141
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 2.02,
+       "purchases": null,
+       "impressions": 1245,
+       "reach": 1081,
+       "frequency": 1.15,
+       "cpmUSD": 1.62,
+       "ctrPct": 6.59,
+       "clicks": 82
+      }
+     ]
+    }
+   ]
+  },
+  "K-66681": {
+   "ads": [
+    {
+     "adId": "120252828641300723",
+     "adName": "K-66681",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "K-6674": {
+   "ads": [
+    {
+     "adId": "120253162200550723",
+     "adName": "K-6674",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 8.4,
+       "purchases": 4,
+       "impressions": 2395,
+       "reach": 1474,
+       "frequency": 1.62,
+       "cpmUSD": 3.51,
+       "ctrPct": 3.51,
+       "clicks": 84
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 8.73,
+       "purchases": 1,
+       "impressions": 2517,
+       "reach": 1615,
+       "frequency": 1.56,
+       "cpmUSD": 3.47,
+       "ctrPct": 2.9,
+       "clicks": 73
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 1.48,
+       "purchases": null,
+       "impressions": 556,
+       "reach": 448,
+       "frequency": 1.24,
+       "cpmUSD": 2.66,
+       "ctrPct": 1.98,
+       "clicks": 11
+      }
+     ]
+    }
+   ]
+  },
+  "K-6676": {
+   "ads": [
+    {
+     "adId": "120252923145610723",
+     "adName": "K-6676",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": 1,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120253088678070723",
+     "adName": "K-6676",
+     "campaignName": "DENIZ | RETARGETING | WARM",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 26.18,
+       "purchases": 3,
+       "impressions": 10013,
+       "reach": 8010,
+       "frequency": 1.25,
+       "cpmUSD": 2.61,
+       "ctrPct": 4.12,
+       "clicks": 413
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 21.45,
+       "purchases": 1,
+       "impressions": 8299,
+       "reach": 5900,
+       "frequency": 1.41,
+       "cpmUSD": 2.58,
+       "ctrPct": 4.24,
+       "clicks": 352
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 17.17,
+       "purchases": null,
+       "impressions": 6987,
+       "reach": 5332,
+       "frequency": 1.31,
+       "cpmUSD": 2.46,
+       "ctrPct": 4.27,
+       "clicks": 298
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 14.03,
+       "purchases": null,
+       "impressions": 5022,
+       "reach": 3848,
+       "frequency": 1.31,
+       "cpmUSD": 2.79,
+       "ctrPct": 3.42,
+       "clicks": 172
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 8.65,
+       "purchases": 2,
+       "impressions": 3103,
+       "reach": 2492,
+       "frequency": 1.25,
+       "cpmUSD": 2.79,
+       "ctrPct": 4.0,
+       "clicks": 124
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 7.78,
+       "purchases": null,
+       "impressions": 2795,
+       "reach": 2177,
+       "frequency": 1.28,
+       "cpmUSD": 2.78,
+       "ctrPct": 4.97,
+       "clicks": 139
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 3.4,
+       "purchases": null,
+       "impressions": 1200,
+       "reach": 1056,
+       "frequency": 1.14,
+       "cpmUSD": 2.83,
+       "ctrPct": 4.33,
+       "clicks": 52
+      }
+     ]
+    },
+    {
+     "adId": "120253088902020723",
+     "adName": "K-6676",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 56.19,
+       "purchases": 6,
+       "impressions": 30244,
+       "reach": 24747,
+       "frequency": 1.22,
+       "cpmUSD": 1.86,
+       "ctrPct": 3.96,
+       "clicks": 1197
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 51.56,
+       "purchases": 9,
+       "impressions": 26220,
+       "reach": 21811,
+       "frequency": 1.2,
+       "cpmUSD": 1.97,
+       "ctrPct": 3.82,
+       "clicks": 1001
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 41.9,
+       "purchases": 4,
+       "impressions": 23867,
+       "reach": 19223,
+       "frequency": 1.24,
+       "cpmUSD": 1.76,
+       "ctrPct": 3.37,
+       "clicks": 804
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 42.27,
+       "purchases": 1,
+       "impressions": 22750,
+       "reach": 18407,
+       "frequency": 1.24,
+       "cpmUSD": 1.86,
+       "ctrPct": 3.11,
+       "clicks": 707
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 30.45,
+       "purchases": 4,
+       "impressions": 16988,
+       "reach": 14434,
+       "frequency": 1.18,
+       "cpmUSD": 1.79,
+       "ctrPct": 3.67,
+       "clicks": 624
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 13.85,
+       "purchases": 1,
+       "impressions": 8074,
+       "reach": 6940,
+       "frequency": 1.16,
+       "cpmUSD": 1.72,
+       "ctrPct": 4.87,
+       "clicks": 393
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 6.51,
+       "purchases": null,
+       "impressions": 3881,
+       "reach": 3401,
+       "frequency": 1.14,
+       "cpmUSD": 1.68,
+       "ctrPct": 3.71,
+       "clicks": 144
+      }
+     ]
+    },
+    {
+     "adId": "120253089912280723",
+     "adName": "K-6676",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 44.46,
+       "purchases": 6,
+       "impressions": 21927,
+       "reach": 16796,
+       "frequency": 1.31,
+       "cpmUSD": 2.03,
+       "ctrPct": 6.11,
+       "clicks": 1339
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 40.87,
+       "purchases": 4,
+       "impressions": 20066,
+       "reach": 16706,
+       "frequency": 1.2,
+       "cpmUSD": 2.04,
+       "ctrPct": 8.69,
+       "clicks": 1743
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 25.39,
+       "purchases": 1,
+       "impressions": 11032,
+       "reach": 9106,
+       "frequency": 1.21,
+       "cpmUSD": 2.3,
+       "ctrPct": 8.1,
+       "clicks": 894
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 32.55,
+       "purchases": 1,
+       "impressions": 15350,
+       "reach": 12668,
+       "frequency": 1.21,
+       "cpmUSD": 2.12,
+       "ctrPct": 8.22,
+       "clicks": 1262
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 22.41,
+       "purchases": null,
+       "impressions": 10675,
+       "reach": 8893,
+       "frequency": 1.2,
+       "cpmUSD": 2.1,
+       "ctrPct": 7.82,
+       "clicks": 835
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 11.98,
+       "purchases": 1,
+       "impressions": 7705,
+       "reach": 6643,
+       "frequency": 1.16,
+       "cpmUSD": 1.55,
+       "ctrPct": 8.29,
+       "clicks": 639
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 5.78,
+       "purchases": null,
+       "impressions": 3480,
+       "reach": 3163,
+       "frequency": 1.1,
+       "cpmUSD": 1.66,
+       "ctrPct": 7.7,
+       "clicks": 268
+      }
+     ]
+    }
+   ]
+  },
+  "K-6703": {
+   "ads": [
+    {
+     "adId": "120253162265920723",
+     "adName": "K-6703",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 4.51,
+       "purchases": null,
+       "impressions": 1417,
+       "reach": 929,
+       "frequency": 1.53,
+       "cpmUSD": 3.18,
+       "ctrPct": 4.16,
+       "clicks": 59
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 5.17,
+       "purchases": null,
+       "impressions": 1415,
+       "reach": 1033,
+       "frequency": 1.37,
+       "cpmUSD": 3.65,
+       "ctrPct": 2.9,
+       "clicks": 41
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 0.36,
+       "purchases": null,
+       "impressions": 145,
+       "reach": 129,
+       "frequency": 1.12,
+       "cpmUSD": 2.48,
+       "ctrPct": 3.45,
+       "clicks": 5
+      }
+     ]
+    }
+   ]
+  },
+  "K-9907": {
+   "ads": [
+    {
+     "adId": "120253162421430723",
+     "adName": "K-9907",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 19.61,
+       "purchases": 1,
+       "impressions": 11875,
+       "reach": 9248,
+       "frequency": 1.28,
+       "cpmUSD": 1.65,
+       "ctrPct": 3.89,
+       "clicks": 462
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 26.05,
+       "purchases": 4,
+       "impressions": 17600,
+       "reach": 15148,
+       "frequency": 1.16,
+       "cpmUSD": 1.48,
+       "ctrPct": 3.64,
+       "clicks": 640
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 7.34,
+       "purchases": null,
+       "impressions": 5116,
+       "reach": 4839,
+       "frequency": 1.06,
+       "cpmUSD": 1.43,
+       "ctrPct": 2.7,
+       "clicks": 138
+      }
+     ]
+    }
+   ]
+  },
+  "L-1800": {
+   "ads": [
+    {
+     "adId": "120253088933820723",
+     "adName": "L-1800",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 8.38,
+       "purchases": 2,
+       "impressions": 5078,
+       "reach": 4377,
+       "frequency": 1.16,
+       "cpmUSD": 1.65,
+       "ctrPct": 3.27,
+       "clicks": 166
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 6.35,
+       "purchases": 1,
+       "impressions": 3808,
+       "reach": 3176,
+       "frequency": 1.2,
+       "cpmUSD": 1.67,
+       "ctrPct": 4.41,
+       "clicks": 168
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 6.48,
+       "purchases": null,
+       "impressions": 4666,
+       "reach": 3955,
+       "frequency": 1.18,
+       "cpmUSD": 1.39,
+       "ctrPct": 4.07,
+       "clicks": 190
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 9.26,
+       "purchases": null,
+       "impressions": 5676,
+       "reach": 4426,
+       "frequency": 1.28,
+       "cpmUSD": 1.63,
+       "ctrPct": 3.31,
+       "clicks": 188
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 18.71,
+       "purchases": 3,
+       "impressions": 11198,
+       "reach": 9740,
+       "frequency": 1.15,
+       "cpmUSD": 1.67,
+       "ctrPct": 4.13,
+       "clicks": 463
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 42.24,
+       "purchases": 5,
+       "impressions": 24929,
+       "reach": 20644,
+       "frequency": 1.21,
+       "cpmUSD": 1.69,
+       "ctrPct": 5.38,
+       "clicks": 1340
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "L-6283": {
+   "ads": [
+    {
+     "adId": "120252828641280723",
+     "adName": "L-6283",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "L-9076": {
+   "ads": [
+    {
+     "adId": "120253162136590723",
+     "adName": "L-9076",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 47.7,
+       "purchases": 3,
+       "impressions": 29104,
+       "reach": 24003,
+       "frequency": 1.21,
+       "cpmUSD": 1.64,
+       "ctrPct": 3.97,
+       "clicks": 1155
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 28.07,
+       "purchases": 3,
+       "impressions": 16185,
+       "reach": 13292,
+       "frequency": 1.22,
+       "cpmUSD": 1.73,
+       "ctrPct": 4.18,
+       "clicks": 677
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 6.94,
+       "purchases": null,
+       "impressions": 4082,
+       "reach": 3628,
+       "frequency": 1.13,
+       "cpmUSD": 1.7,
+       "ctrPct": 3.82,
+       "clicks": 156
+      }
+     ]
+    }
+   ]
+  },
+  "T-8002": {
+   "ads": [
+    {
+     "adId": "120252576147820723",
+     "adName": "T-8002",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "T-8003": {
+   "ads": [
+    {
+     "adId": "120252605098880723",
+     "adName": "T-8003",
+     "campaignName": "SEASON | FULL CATALOG",
+     "daily": [
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "T-8016": {
+   "ads": [
+    {
+     "adId": "120253162136580723",
+     "adName": "T-8016",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 4.42,
+       "purchases": null,
+       "impressions": 2603,
+       "reach": 2186,
+       "frequency": 1.19,
+       "cpmUSD": 1.7,
+       "ctrPct": 3.03,
+       "clicks": 79
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 3.89,
+       "purchases": null,
+       "impressions": 2268,
+       "reach": 1818,
+       "frequency": 1.25,
+       "cpmUSD": 1.72,
+       "ctrPct": 4.06,
+       "clicks": 92
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 1.34,
+       "purchases": null,
+       "impressions": 779,
+       "reach": 678,
+       "frequency": 1.15,
+       "cpmUSD": 1.72,
+       "ctrPct": 4.24,
+       "clicks": 33
+      }
+     ]
+    }
+   ]
+  },
+  "T-8017": {
+   "ads": [
+    {
+     "adId": "120253162493370723",
+     "adName": "T-8017",
+     "campaignName": "DENIZ | RETARGETING | WARM",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 12.11,
+       "purchases": 5,
+       "impressions": 6946,
+       "reach": 5338,
+       "frequency": 1.3,
+       "cpmUSD": 1.74,
+       "ctrPct": 3.76,
+       "clicks": 261
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 12.43,
+       "purchases": 1,
+       "impressions": 6788,
+       "reach": 4768,
+       "frequency": 1.42,
+       "cpmUSD": 1.83,
+       "ctrPct": 3.77,
+       "clicks": 256
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 3.18,
+       "purchases": 1,
+       "impressions": 2087,
+       "reach": 1794,
+       "frequency": 1.16,
+       "cpmUSD": 1.52,
+       "ctrPct": 3.55,
+       "clicks": 74
+      }
+     ]
+    }
+   ]
+  },
+  "T-8022": {
+   "ads": [
+    {
+     "adId": "120252985416180723",
+     "adName": "T-8022",
+     "campaignName": "SEASON | FULL CATALOG",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "T-8023": {
+   "ads": [
+    {
+     "adId": "120253088933850723",
+     "adName": "T-8023",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 8.75,
+       "purchases": 2,
+       "impressions": 6198,
+       "reach": 5152,
+       "frequency": 1.2,
+       "cpmUSD": 1.41,
+       "ctrPct": 4.1,
+       "clicks": 254
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 12.18,
+       "purchases": 3,
+       "impressions": 8320,
+       "reach": 6593,
+       "frequency": 1.26,
+       "cpmUSD": 1.46,
+       "ctrPct": 4.66,
+       "clicks": 388
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 17.76,
+       "purchases": 1,
+       "impressions": 12691,
+       "reach": 10381,
+       "frequency": 1.22,
+       "cpmUSD": 1.4,
+       "ctrPct": 4.14,
+       "clicks": 526
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 16.31,
+       "purchases": 2,
+       "impressions": 11746,
+       "reach": 9822,
+       "frequency": 1.2,
+       "cpmUSD": 1.39,
+       "ctrPct": 3.94,
+       "clicks": 463
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 5.34,
+       "purchases": null,
+       "impressions": 3446,
+       "reach": 3099,
+       "frequency": 1.11,
+       "cpmUSD": 1.55,
+       "ctrPct": 4.06,
+       "clicks": 140
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "T-8024": {
+   "ads": [
+    {
+     "adId": "120252967089510723",
+     "adName": "T-8024",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "T-8035": {
+   "ads": [
+    {
+     "adId": "120252923145670723",
+     "adName": "T-8035",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120252936984590723",
+     "adName": "T-8035",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 7.41,
+       "purchases": 2,
+       "impressions": 2691,
+       "reach": 1623,
+       "frequency": 1.66,
+       "cpmUSD": 2.75,
+       "ctrPct": 2.86,
+       "clicks": 77
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 5.22,
+       "purchases": null,
+       "impressions": 1829,
+       "reach": 1178,
+       "frequency": 1.55,
+       "cpmUSD": 2.85,
+       "ctrPct": 2.68,
+       "clicks": 49
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 4.18,
+       "purchases": 1,
+       "impressions": 1448,
+       "reach": 921,
+       "frequency": 1.57,
+       "cpmUSD": 2.89,
+       "ctrPct": 2.83,
+       "clicks": 41
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 6.96,
+       "purchases": 3,
+       "impressions": 2693,
+       "reach": 1528,
+       "frequency": 1.76,
+       "cpmUSD": 2.58,
+       "ctrPct": 2.53,
+       "clicks": 68
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 4.86,
+       "purchases": null,
+       "impressions": 1617,
+       "reach": 1088,
+       "frequency": 1.49,
+       "cpmUSD": 3.01,
+       "ctrPct": 2.16,
+       "clicks": 35
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    },
+    {
+     "adId": "120253088933840723",
+     "adName": "T-8035",
+     "campaignName": "MESSAGES CAMPAIGN",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 20.63,
+       "purchases": 4,
+       "impressions": 14787,
+       "reach": 12643,
+       "frequency": 1.17,
+       "cpmUSD": 1.4,
+       "ctrPct": 4.69,
+       "clicks": 693
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 16.53,
+       "purchases": 2,
+       "impressions": 10147,
+       "reach": 8140,
+       "frequency": 1.25,
+       "cpmUSD": 1.63,
+       "ctrPct": 4.57,
+       "clicks": 464
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 17.96,
+       "purchases": 7,
+       "impressions": 12085,
+       "reach": 10275,
+       "frequency": 1.18,
+       "cpmUSD": 1.49,
+       "ctrPct": 4.66,
+       "clicks": 563
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 17.08,
+       "purchases": 6,
+       "impressions": 10071,
+       "reach": 8410,
+       "frequency": 1.2,
+       "cpmUSD": 1.7,
+       "ctrPct": 3.44,
+       "clicks": 346
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 13.71,
+       "purchases": null,
+       "impressions": 7787,
+       "reach": 6553,
+       "frequency": 1.19,
+       "cpmUSD": 1.76,
+       "ctrPct": 4.49,
+       "clicks": 350
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 4.28,
+       "purchases": null,
+       "impressions": 2632,
+       "reach": 2284,
+       "frequency": 1.15,
+       "cpmUSD": 1.63,
+       "ctrPct": 6.16,
+       "clicks": 162
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 1.69,
+       "purchases": null,
+       "impressions": 1063,
+       "reach": 959,
+       "frequency": 1.11,
+       "cpmUSD": 1.59,
+       "ctrPct": 7.15,
+       "clicks": 76
+      }
+     ]
+    },
+    {
+     "adId": "120253091250420723",
+     "adName": "T-8035B",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-22",
+       "spendUSD": 12.36,
+       "purchases": null,
+       "impressions": 8292,
+       "reach": 7025,
+       "frequency": 1.18,
+       "cpmUSD": 1.49,
+       "ctrPct": 6.22,
+       "clicks": 516
+      },
+      {
+       "date": "2026-10-23",
+       "spendUSD": 10.92,
+       "purchases": 1,
+       "impressions": 7722,
+       "reach": 6046,
+       "frequency": 1.28,
+       "cpmUSD": 1.41,
+       "ctrPct": 7.24,
+       "clicks": 559
+      },
+      {
+       "date": "2026-10-24",
+       "spendUSD": 10.27,
+       "purchases": 2,
+       "impressions": 6602,
+       "reach": 5473,
+       "frequency": 1.21,
+       "cpmUSD": 1.56,
+       "ctrPct": 7.27,
+       "clicks": 480
+      },
+      {
+       "date": "2026-10-25",
+       "spendUSD": 17.63,
+       "purchases": null,
+       "impressions": 10924,
+       "reach": 8866,
+       "frequency": 1.23,
+       "cpmUSD": 1.61,
+       "ctrPct": 6.57,
+       "clicks": 718
+      },
+      {
+       "date": "2026-10-26",
+       "spendUSD": 6.66,
+       "purchases": 1,
+       "impressions": 4286,
+       "reach": 3790,
+       "frequency": 1.13,
+       "cpmUSD": 1.55,
+       "ctrPct": 5.41,
+       "clicks": 232
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 0.0,
+       "purchases": null,
+       "impressions": 0,
+       "reach": 0,
+       "frequency": 0.0,
+       "cpmUSD": null,
+       "ctrPct": 0.0,
+       "clicks": 0
+      }
+     ]
+    }
+   ]
+  },
+  "T-8048": {
+   "ads": [
+    {
+     "adId": "120253182711420723",
+     "adName": "T-8048",
+     "campaignName": "DENIZ | CUSTOMERS | STARS",
+     "daily": [
+      {
+       "date": "2026-10-27",
+       "spendUSD": 6.67,
+       "purchases": 1,
+       "impressions": 2630,
+       "reach": 1782,
+       "frequency": 1.48,
+       "cpmUSD": 2.54,
+       "ctrPct": 4.22,
+       "clicks": 111
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 3.63,
+       "purchases": null,
+       "impressions": 1364,
+       "reach": 1083,
+       "frequency": 1.26,
+       "cpmUSD": 2.66,
+       "ctrPct": 4.55,
+       "clicks": 62
+      }
+     ]
+    }
+   ]
+  },
+  "T-8054": {
+   "ads": [
+    {
+     "adId": "120253161646900723",
+     "adName": "T-8054",
+     "campaignName": "TIME | 24H – DAILY website advantage",
+     "daily": [
+      {
+       "date": "2026-10-26",
+       "spendUSD": 13.83,
+       "purchases": 7,
+       "impressions": 5509,
+       "reach": 4076,
+       "frequency": 1.35,
+       "cpmUSD": 2.51,
+       "ctrPct": 6.1,
+       "clicks": 336
+      },
+      {
+       "date": "2026-10-27",
+       "spendUSD": 12.98,
+       "purchases": null,
+       "impressions": 7634,
+       "reach": 5441,
+       "frequency": 1.4,
+       "cpmUSD": 1.7,
+       "ctrPct": 6.06,
+       "clicks": 463
+      },
+      {
+       "date": "2026-10-28",
+       "spendUSD": 3.21,
+       "purchases": 1,
+       "impressions": 2063,
+       "reach": 1820,
+       "frequency": 1.13,
+       "cpmUSD": 1.56,
+       "ctrPct": 5.67,
+       "clicks": 117
+      }
+     ]
+    }
+   ]
+  }
+ }
 }
