@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-28T23:32:43.552444+00:00",
+ "syncedAt": "2026-10-28T23:40:26.989539+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -14102,20 +14102,20 @@
    "sku": "L-1729",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-10-08",
    "firstOrderDate": "2025-10-16",
-   "lastOrderDate": "2026-10-17",
-   "orders": 664,
-   "units": 699,
-   "revenue": 33775000,
+   "lastOrderDate": "2026-10-29",
+   "orders": 665,
+   "units": 700,
+   "revenue": 33800000,
    "delivered": 699,
    "returned": 124,
    "unitsBoughtFromSupplier": 582,
    "returnedStock": 1,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -28892,6 +28892,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-29": [
+     1,
+     1,
+     25000
     ]
    },
    "5920": {
@@ -30036,10 +30041,27 @@
    "2026-10-26": 40,
    "2026-10-27": 42,
    "2026-10-28": 27,
-   "2026-10-29": 4
+   "2026-10-29": 5
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33913",
+   "d": "2026-10-29",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1729",
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S33912",
    "d": "2026-10-29",
