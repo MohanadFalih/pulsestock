@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-28T14:02:25.461768+00:00",
+ "syncedAt": "2026-10-28T14:17:09.772815+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -378,15 +378,15 @@
    "odooCreatedDate": "2026-10-24",
    "firstOrderDate": "2026-10-25",
    "lastOrderDate": "2026-10-28",
-   "orders": 19,
-   "units": 20,
-   "revenue": 1600000,
+   "orders": 20,
+   "units": 21,
+   "revenue": 1680000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 20,
    "returnedStock": 9,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 2.71,
+   "orderVelocity7d": 2.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1336,20 +1336,20 @@
    "sku": "K-6703",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-14",
    "firstOrderDate": "2026-10-14",
-   "lastOrderDate": "2026-10-20",
-   "orders": 4,
-   "units": 4,
-   "revenue": 440000,
+   "lastOrderDate": "2026-10-28",
+   "orders": 5,
+   "units": 5,
+   "revenue": 550000,
    "delivered": 4,
    "returned": 2,
    "unitsBoughtFromSupplier": 4,
    "returnedStock": 2,
    "unitPrice": 110000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15774,9 +15774,9 @@
      400000
     ],
     "2026-10-28": [
-     1,
-     1,
-     80000
+     2,
+     2,
+     160000
     ]
    },
    "7460": {
@@ -16000,6 +16000,11 @@
      110000
     ],
     "2026-10-20": [
+     1,
+     1,
+     110000
+    ],
+    "2026-10-28": [
      1,
      1,
      110000
@@ -30083,10 +30088,48 @@
    "2026-10-25": 32,
    "2026-10-26": 40,
    "2026-10-27": 42,
-   "2026-10-28": 19
+   "2026-10-28": 21
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33900",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1945",
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33899",
+   "d": "2026-10-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6703",
+     "qty": 1,
+     "price": 110000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S33898",
    "d": "2026-10-28",
