@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-29T22:32:17.405214+00:00",
+ "syncedAt": "2026-10-29T23:02:42.430490+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -14574,15 +14574,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-10-30",
-   "orders": 740,
-   "units": 838,
-   "revenue": 26934000,
+   "orders": 742,
+   "units": 841,
+   "revenue": 27051000,
    "delivered": 809,
    "returned": 175,
-   "unitsBoughtFromSupplier": 678,
+   "unitsBoughtFromSupplier": 680,
    "returnedStock": 6,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 2.86,
+   "orderVelocity7d": 3.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -29509,9 +29509,9 @@
      312000
     ],
     "2026-10-30": [
-     1,
-     1,
-     39000
+     3,
+     4,
+     156000
     ]
    },
    "5855": {
@@ -30496,10 +30496,55 @@
    "2026-10-27": 42,
    "2026-10-28": 27,
    "2026-10-29": 49,
-   "2026-10-30": 7
+   "2026-10-30": 9
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33970",
+   "d": "2026-10-30",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33969",
+   "d": "2026-10-30",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33968",
    "d": "2026-10-30",
