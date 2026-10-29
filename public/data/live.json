@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-29T18:32:28.681908+00:00",
+ "syncedAt": "2026-10-29T19:02:26.757218+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1547,17 +1547,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-14",
    "firstOrderDate": "2026-10-14",
-   "lastOrderDate": "2026-10-28",
-   "orders": 10,
-   "units": 10,
-   "revenue": 980000,
+   "lastOrderDate": "2026-10-29",
+   "orders": 11,
+   "units": 11,
+   "revenue": 1078000,
    "delivered": 4,
    "returned": 0,
    "unitsBoughtFromSupplier": 11,
    "returnedStock": 1,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -2015,17 +2015,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-08",
    "firstOrderDate": "2026-10-08",
-   "lastOrderDate": "2026-10-28",
-   "orders": 22,
-   "units": 21,
-   "revenue": 2078000,
+   "lastOrderDate": "2026-10-29",
+   "orders": 23,
+   "units": 22,
+   "revenue": 2177000,
    "delivered": 19,
    "returned": 3,
-   "unitsBoughtFromSupplier": 19,
+   "unitsBoughtFromSupplier": 20,
    "returnedStock": 2,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -12859,8 +12859,8 @@
    "firstOrderDate": "2025-12-09",
    "lastOrderDate": "2026-10-29",
    "orders": 24,
-   "units": 24,
-   "revenue": 770000,
+   "units": 25,
+   "revenue": 795000,
    "delivered": 23,
    "returned": 3,
    "unitsBoughtFromSupplier": 19,
@@ -13637,17 +13637,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-11-05",
    "firstOrderDate": "2025-11-06",
-   "lastOrderDate": "2026-10-28",
-   "orders": 154,
-   "units": 163,
-   "revenue": 6264000,
+   "lastOrderDate": "2026-10-29",
+   "orders": 155,
+   "units": 164,
+   "revenue": 6289000,
    "delivered": 162,
    "returned": 36,
    "unitsBoughtFromSupplier": 126,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -16424,6 +16424,11 @@
      2,
      2,
      196000
+    ],
+    "2026-10-29": [
+     1,
+     1,
+     98000
     ]
    },
    "7414": {
@@ -16862,6 +16867,11 @@
      1,
      0,
      0
+    ],
+    "2026-10-29": [
+     1,
+     1,
+     99000
     ]
    },
    "7395": {
@@ -28680,8 +28690,8 @@
    "6444": {
     "2026-10-29": [
      1,
-     1,
-     25000
+     2,
+     50000
     ]
    },
    "6435": {
@@ -29007,6 +29017,11 @@
      1,
      1,
      39000
+    ],
+    "2026-10-29": [
+     1,
+     1,
+     25000
     ]
    },
    "6179": {
@@ -30518,10 +30533,53 @@
    "2026-10-26": 40,
    "2026-10-27": 42,
    "2026-10-28": 27,
-   "2026-10-29": 42
+   "2026-10-29": 44
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33955",
+   "d": "2026-10-29",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8016",
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S33954",
+   "d": "2026-10-29",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-24083UKBK1160",
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0
+    },
+    {
+     "sku": "M-24083UKBK1160",
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S33953",
    "d": "2026-10-29",
@@ -30535,9 +30593,25 @@
      "price": 25000,
      "discPct": 0,
      "del": 0
+    },
+    {
+     "sku": "L-1606",
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0
+    },
+    {
+     "sku": "T-8024",
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "turkey"
   },
   {
    "id": "S33952",
