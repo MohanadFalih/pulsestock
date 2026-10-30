@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-30T15:02:45.383750+00:00",
+ "syncedAt": "2026-10-30T15:32:32.380403+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1079,17 +1079,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
-   "lastOrderDate": "2026-10-29",
-   "orders": 10,
-   "units": 10,
-   "revenue": -51481,
+   "lastOrderDate": "2026-10-30",
+   "orders": 11,
+   "units": 11,
+   "revenue": -58901,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 0.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1106,15 +1106,15 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-10-30",
-   "orders": 10,
-   "units": 10,
-   "revenue": 780000,
+   "orders": 11,
+   "units": 11,
+   "revenue": 858000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 10,
+   "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.29,
+   "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -16406,6 +16406,11 @@
      2,
      2,
      -10960
+    ],
+    "2026-10-30": [
+     1,
+     1,
+     -7420
     ]
    },
    "7436": {
@@ -16440,9 +16445,9 @@
      234000
     ],
     "2026-10-30": [
-     1,
-     1,
-     78000
+     2,
+     2,
+     156000
     ]
    },
    "7432": {
@@ -30703,10 +30708,36 @@
    "2026-10-27": 42,
    "2026-10-28": 27,
    "2026-10-29": 49,
-   "2026-10-30": 39
+   "2026-10-30": 40
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34002",
+   "d": "2026-10-30",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1938",
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "qty": 1,
+     "price": -7420,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34001",
    "d": "2026-10-30",
