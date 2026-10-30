@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-30T13:32:31.994485+00:00",
+ "syncedAt": "2026-10-30T14:02:22.254492+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -149,7 +149,7 @@
    "revenue": 166000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 83000.0,
    "orderVelocity7d": 0.29,
@@ -560,15 +560,15 @@
    "odooCreatedDate": "2026-10-24",
    "firstOrderDate": "2026-10-25",
    "lastOrderDate": "2026-10-30",
-   "orders": 34,
-   "units": 40,
-   "revenue": 3200000,
+   "orders": 33,
+   "units": 39,
+   "revenue": 3120000,
    "delivered": 9,
    "returned": 0,
    "unitsBoughtFromSupplier": 39,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 4.86,
+   "orderVelocity7d": 4.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -14678,15 +14678,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-10-30",
-   "orders": 747,
-   "units": 845,
-   "revenue": 27207000,
+   "orders": 748,
+   "units": 847,
+   "revenue": 27285000,
    "delivered": 809,
    "returned": 175,
-   "unitsBoughtFromSupplier": 683,
+   "unitsBoughtFromSupplier": 686,
    "returnedStock": 6,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 3.86,
+   "orderVelocity7d": 4.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -16240,9 +16240,9 @@
      720000
     ],
     "2026-10-30": [
-     7,
-     10,
-     800000
+     6,
+     9,
+     720000
     ]
    },
    "7460": {
@@ -29689,9 +29689,9 @@
      312000
     ],
     "2026-10-30": [
-     8,
      9,
-     351000
+     10,
+     390000
     ]
    },
    "5855": {
@@ -30681,6 +30681,25 @@
  },
  "ordersDetail": [
   {
+   "id": "S33998",
+   "d": "2026-10-30",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
    "id": "S33997",
    "d": "2026-10-30",
    "st": "sale",
@@ -30734,25 +30753,6 @@
     }
    ],
    "src": "Facebook"
-  },
-  {
-   "id": "S33994",
-   "d": "2026-10-30",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "H-1945",
-     "qty": 1,
-     "price": 80000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey"
-    }
-   ],
-   "src": "Facebook",
-   "ful": "turkey"
   },
   {
    "id": "S33993",
