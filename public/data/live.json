@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-30T09:32:42.211830+00:00",
+ "syncedAt": "2026-10-30T10:02:54.463184+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3445,17 +3445,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-22",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-10-29",
-   "orders": 21,
-   "units": 21,
-   "revenue": 2256000,
+   "lastOrderDate": "2026-10-30",
+   "orders": 22,
+   "units": 22,
+   "revenue": 2366000,
    "delivered": 21,
    "returned": 5,
    "unitsBoughtFromSupplier": 19,
    "returnedStock": 3,
    "unitPrice": 110000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14574,15 +14574,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-10-30",
-   "orders": 743,
-   "units": 842,
-   "revenue": 27090000,
+   "orders": 744,
+   "units": 843,
+   "revenue": 27129000,
    "delivered": 809,
    "returned": 175,
-   "unitsBoughtFromSupplier": 681,
+   "unitsBoughtFromSupplier": 682,
    "returnedStock": 6,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 3.29,
+   "orderVelocity7d": 3.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -18259,6 +18259,11 @@
      110000
     ],
     "2026-10-29": [
+     1,
+     1,
+     110000
+    ],
+    "2026-10-30": [
      1,
      1,
      110000
@@ -29541,9 +29546,9 @@
      312000
     ],
     "2026-10-30": [
-     4,
      5,
-     195000
+     6,
+     234000
     ]
    },
    "5855": {
@@ -30528,10 +30533,29 @@
    "2026-10-27": 42,
    "2026-10-28": 27,
    "2026-10-29": 49,
-   "2026-10-30": 23
+   "2026-10-30": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S33986",
+   "d": "2026-10-30",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S33984",
    "d": "2026-10-30",
