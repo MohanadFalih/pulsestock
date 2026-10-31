@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-31T12:15:42.434501+00:00",
+ "syncedAt": "2026-10-31T12:32:25.731096+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -637,17 +637,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-23",
    "firstOrderDate": "2026-10-24",
-   "lastOrderDate": "2026-10-30",
-   "orders": 9,
-   "units": 9,
-   "revenue": 846000,
+   "lastOrderDate": "2026-10-31",
+   "orders": 10,
+   "units": 10,
+   "revenue": 940000,
    "delivered": 5,
    "returned": 0,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 3,
    "unitPrice": 94000.0,
-   "orderVelocity7d": 0.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3346,9 +3346,9 @@
    "units": 35,
    "revenue": 2920000,
    "delivered": 34,
-   "returned": 9,
+   "returned": 10,
    "unitsBoughtFromSupplier": 30,
-   "returnedStock": 5,
+   "returnedStock": 6,
    "unitPrice": 90000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
@@ -16100,9 +16100,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1698,
-  "stockValue": 50989915,
-  "stockVariants": 1351
+  "stockUnits": 1699,
+  "stockValue": 51038138,
+  "stockVariants": 1352
  },
  "daily": {
   "days": 90,
@@ -16299,6 +16299,11 @@
      188000
     ],
     "2026-10-30": [
+     1,
+     1,
+     94000
+    ],
+    "2026-10-31": [
      1,
      1,
      94000
@@ -30656,7 +30661,7 @@
    ],
    "2026-10-31": [
     17,
-    13
+    14
    ]
   },
   "orders": {
@@ -30750,10 +30755,29 @@
    "2026-10-28": 25,
    "2026-10-29": 49,
    "2026-10-30": 56,
-   "2026-10-31": 29
+   "2026-10-31": 30
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34053",
+   "d": "2026-10-31",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8054",
+     "qty": 1,
+     "price": 94000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34052",
    "d": "2026-10-31",
@@ -55790,8 +55814,9 @@
      "qty": 1,
      "price": 86000,
      "discPct": 0,
-     "del": 1,
-     "route": "turkey"
+     "del": 0,
+     "route": "turkey",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -191951,7 +191976,7 @@
   {
    "sku": "T-8010",
    "model": "T-8010",
-   "qty": 0,
+   "qty": 1,
    "cost": 48222,
    "created": "2026-09-23"
   },
