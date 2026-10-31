@@ -260,10 +260,23 @@ def main():
     log(f"  window B maps to {len(ordered_tmpl_ids)} templates")
 
     candidate_ids = sorted((set(recent_ids) | ordered_tmpl_ids) - pseudo_tmpl_ids)
-    cands = odoo.kw(
-        "product.template", "search_read", [[["id", "in", candidate_ids]]],
-        {"fields": ["name", "create_date", "list_price", "categ_id"],
-         "order": "create_date desc"})
+    base_fields = ["name", "create_date", "list_price", "categ_id"]
+    # Supplier availability (butiksistem, written daily ~18:00 Baghdad by the
+    # purchase robot). Readable only by internal users. Never log the values.
+    supplier_fields = ["x_supplier_qty", "x_supplier_status",
+                       "x_supplier_variants", "x_supplier_checked_at"]
+    try:
+        cands = odoo.kw(
+            "product.template", "search_read", [[["id", "in", candidate_ids]]],
+            {"fields": base_fields + supplier_fields,
+             "order": "create_date desc"})
+    except Exception:
+        # Don't break the whole sync if the fields are missing / not readable.
+        log("  warning: supplier availability fields not readable — "
+            "check that ODOO_USER is an internal user; continuing without them")
+        cands = odoo.kw(
+            "product.template", "search_read", [[["id", "in", candidate_ids]]],
+            {"fields": base_fields, "order": "create_date desc"})
     # Exact-name pseudo exclusions (e.g. manual discount lines) + safety cap.
     templates = [t for t in cands
                  if (t["name"] or "").strip() not in PSEUDO_NAMES][:MAX_PRODUCTS]
@@ -788,7 +801,13 @@ def main():
             "unitPrice": t.get("list_price") or None,
             "orderVelocity7d": round(vel7, 2),
             "daysSinceLastOrder": days_since,
-            "supplierStock": {"qty": None, "lastChecked": None, "source": "manual"},
+            "supplierStock": {
+                "qty": None if t.get("x_supplier_status") in (False, None, "not_found") else t.get("x_supplier_qty"),
+                "lastChecked": (t["x_supplier_checked_at"].replace(" ", "T") + "Z") if t.get("x_supplier_checked_at") else None,
+                "source": "api" if t.get("x_supplier_checked_at") else "manual",
+                "status": t.get("x_supplier_status") or None,
+                "variants": json.loads(t["x_supplier_variants"]) if t.get("x_supplier_variants") else [],
+            },
         })
 
     # Daily time series (sparse — only days with activity are stored).

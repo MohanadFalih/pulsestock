@@ -66,7 +66,24 @@ interface RawLiveProduct {
   unitPrice: number | null;
   orderVelocity7d: number;
   daysSinceLastOrder: number | null;
-  supplierStock: { qty: number | null; lastChecked: string | null; source: "manual" | "api" };
+  supplierStock: {
+    qty: number | null;
+    lastChecked: string | null;
+    source: "manual" | "api";
+    status?: "available" | "low" | "out" | "not_found" | null;
+    variants?: SupplierVariant[];
+  };
+}
+
+/** One colour×size available at the supplier (butiksistem). */
+interface SupplierVariant {
+  color: string;
+  size: string;
+  qty: number;
+  /** Odoo product.product id for this variant, when matched. */
+  product_id?: number;
+  /** false = new colour/size at the supplier not yet in Odoo; null = unknown. */
+  in_odoo?: boolean | null;
 }
 
 interface LivePayload {
