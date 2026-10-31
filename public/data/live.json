@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-31T22:32:36.237633+00:00",
+ "syncedAt": "2026-10-31T22:54:17.468967+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -757,17 +757,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
-   "lastOrderDate": "2026-10-31",
-   "orders": 8,
-   "units": 9,
-   "revenue": 729000,
+   "lastOrderDate": "2026-11-01",
+   "orders": 9,
+   "units": 10,
+   "revenue": 810000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 1.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 120,
     "lastChecked": "2026-10-31T16:35:55Z",
@@ -2657,7 +2657,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 128,
-    "lastChecked": "2026-10-31T22:02:33Z",
+    "lastChecked": "2026-10-31T22:32:44Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -15413,8 +15413,8 @@
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 40,
-    "lastChecked": "2026-10-31T16:48:25Z",
+    "qty": 39,
+    "lastChecked": "2026-10-31T22:45:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -15481,7 +15481,7 @@
      {
       "color": "نيلي / Laci",
       "size": "XL",
-      "qty": 2,
+      "qty": 1,
       "product_id": 729845
      },
      {
@@ -16412,8 +16412,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
    "supplierStock": {
-    "qty": 184,
-    "lastChecked": "2026-10-31T16:30:00Z",
+    "qty": 183,
+    "lastChecked": "2026-10-31T22:45:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -16582,7 +16582,7 @@
      {
       "color": "أسود / Siyah",
       "size": "50",
-      "qty": 4,
+      "qty": 3,
       "product_id": 729694
      },
      {
@@ -18055,7 +18055,7 @@
    "daysSinceLastOrder": 23,
    "supplierStock": {
     "qty": 48,
-    "lastChecked": "2026-10-31T16:46:09Z",
+    "lastChecked": "2026-10-31T22:45:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -20564,7 +20564,7 @@
    "daysSinceLastOrder": 9,
    "supplierStock": {
     "qty": 10,
-    "lastChecked": "2026-10-31T16:28:09Z",
+    "lastChecked": "2026-10-31T22:45:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -33309,8 +33309,8 @@
    "orderVelocity7d": 3.86,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 319,
-    "lastChecked": "2026-10-31T21:12:06Z",
+    "qty": 317,
+    "lastChecked": "2026-10-31T22:45:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -33359,7 +33359,7 @@
      {
       "color": "كريمي / Krem",
       "size": "STD",
-      "qty": 36,
+      "qty": 35,
       "product_id": 680502
      },
      {
@@ -33371,7 +33371,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 5,
+      "qty": 4,
       "product_id": 715723
      },
      {
@@ -33629,7 +33629,7 @@
    "daysSinceLastOrder": 24,
    "supplierStock": {
     "qty": 3589,
-    "lastChecked": "2026-10-31T16:40:20Z",
+    "lastChecked": "2026-10-31T22:45:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -35742,6 +35742,11 @@
      4,
      4,
      324000
+    ],
+    "2026-11-01": [
+     1,
+     1,
+     81000
     ]
    },
    "7476": {
@@ -50357,10 +50362,31 @@
    "2026-10-29": 49,
    "2026-10-30": 56,
    "2026-10-31": 53,
-   "2026-11-01": 1
+   "2026-11-01": 2
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34081",
+   "d": "2026-11-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732206,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 10"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34080",
    "d": "2026-11-01",
