@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-31T18:02:26.012415+00:00",
+ "syncedAt": "2026-10-31T18:32:22.724547+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -565,7 +565,7 @@
    "revenue": 4560000,
    "delivered": 16,
    "returned": 0,
-   "unitsBoughtFromSupplier": 56,
+   "unitsBoughtFromSupplier": 57,
    "returnedStock": 0,
    "unitPrice": 80000.0,
    "orderVelocity7d": 7.14,
@@ -643,7 +643,7 @@
    "revenue": 1128000,
    "delivered": 8,
    "returned": 0,
-   "unitsBoughtFromSupplier": 11,
+   "unitsBoughtFromSupplier": 12,
    "returnedStock": 0,
    "unitPrice": 94000.0,
    "orderVelocity7d": 1.29,
@@ -4252,15 +4252,15 @@
    "odooCreatedDate": "2026-09-07",
    "firstOrderDate": "2026-09-13",
    "lastOrderDate": "2026-10-31",
-   "orders": 18,
-   "units": 18,
-   "revenue": 1304000,
+   "orders": 19,
+   "units": 19,
+   "revenue": 1378000,
    "delivered": 16,
    "returned": 3,
-   "unitsBoughtFromSupplier": 17,
+   "unitsBoughtFromSupplier": 18,
    "returnedStock": 3,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.29,
+   "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -19706,9 +19706,9 @@
      0
     ],
     "2026-10-31": [
-     2,
-     2,
-     148000
+     3,
+     3,
+     222000
     ]
    },
    "7309": {
@@ -30848,10 +30848,29 @@
    "2026-10-28": 25,
    "2026-10-29": 49,
    "2026-10-30": 56,
-   "2026-10-31": 45
+   "2026-10-31": 46
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34072",
+   "d": "2026-10-31",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1899-navy-1-48",
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34071",
    "d": "2026-10-31",
