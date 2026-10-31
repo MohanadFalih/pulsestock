@@ -609,12 +609,19 @@ def main():
                 route = "turkey"
                 any_turkey = True
             entry = {"sku": line_sku(ln),
+                     "pid": ln["product_id"][0],   # Odoo variant (matches supplierStock.variants[].product_id)
                      "qty": round(qty),
                      "price": price,
                      "discPct": 0,
                      "del": round(ln.get("qty_delivered") or 0.0)}
             if route:
                 entry["route"] = route
+            # Colour/size from the variant display name "L-1800 (Siyah, 42)" —
+            # line_sku() drops it when the variant has no default_code.
+            pname = (ln["product_id"][1] or "") if ln.get("product_id") else ""
+            mvar = re.search(r"\(([^()]*)\)\s*$", pname)
+            if mvar:
+                entry["var"] = mvar.group(1).strip()
             ret = ret_by_line.get(ln["id"], 0.0)
             if ret:
                 entry["ret"] = round(ret)
