@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-10-31T21:02:23.827024+00:00",
+ "syncedAt": "2026-10-31T21:27:59.956059+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2656,8 +2656,8 @@
    "orderVelocity7d": 6.57,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 129,
-    "lastChecked": "2026-10-31T20:56:37Z",
+    "qty": 128,
+    "lastChecked": "2026-10-31T21:00:53Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -2718,7 +2718,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 7,
+      "qty": 6,
       "product_id": 731947
      },
      {
@@ -9529,20 +9529,20 @@
    "sku": "L-1212",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-05",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-01",
+   "lastOrderDate": "2026-11-01",
+   "orders": 1,
+   "units": 1,
+   "revenue": 62000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 62000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 75,
     "lastChecked": "2026-10-31T16:51:07Z",
@@ -18288,7 +18288,7 @@
    "daysSinceLastOrder": 35,
    "supplierStock": {
     "qty": 32,
-    "lastChecked": "2026-10-31T16:45:30Z",
+    "lastChecked": "2026-10-31T21:12:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -18327,12 +18327,6 @@
       "size": "38",
       "qty": 4,
       "product_id": 729246
-     },
-     {
-      "color": "أسود / Siyah",
-      "size": "38",
-      "qty": 3,
-      "product_id": 729250
      },
      {
       "color": "فيزون / Vizon",
@@ -21689,20 +21683,20 @@
    "daysSinceLastOrder": 21,
    "supplierStock": {
     "qty": 8,
-    "lastChecked": "2026-10-31T16:07:33Z",
+    "lastChecked": "2026-10-31T21:12:06Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
-      "color": "خاكي / Haki",
-      "size": "4",
-      "qty": 5,
-      "product_id": 728100
-     },
-     {
       "color": "MİNT",
       "size": "3-48-50",
       "qty": 3,
+      "in_odoo": null
+     },
+     {
+      "color": "MİNT",
+      "size": "4-52-54",
+      "qty": 5,
       "in_odoo": null
      }
     ]
@@ -26605,7 +26599,7 @@
    "daysSinceLastOrder": 33,
    "supplierStock": {
     "qty": 0,
-    "lastChecked": "2026-10-31T16:39:28Z",
+    "lastChecked": "2026-10-31T21:12:06Z",
     "source": "api",
     "status": "out",
     "variants": []
@@ -33315,8 +33309,8 @@
    "orderVelocity7d": 3.86,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 320,
-    "lastChecked": "2026-10-31T16:40:20Z",
+    "qty": 319,
+    "lastChecked": "2026-10-31T21:12:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -33345,6 +33339,12 @@
       "product_id": 672399
      },
      {
+      "color": "قرميدي / Kiremit",
+      "size": "STD",
+      "qty": 47,
+      "product_id": 675801
+     },
+     {
       "color": "عنابي / Murdum",
       "size": "STD",
       "qty": 21,
@@ -33369,12 +33369,6 @@
       "product_id": 688392
      },
      {
-      "color": "أخضر / Yesil",
-      "size": "STD",
-      "qty": 28,
-      "product_id": 688571
-     },
-     {
       "color": "أسود / Siyah",
       "size": "STD",
       "qty": 5,
@@ -33383,14 +33377,8 @@
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 28,
+      "qty": 27,
       "product_id": 730710
-     },
-     {
-      "color": "Kiremit",
-      "size": "STD",
-      "qty": 47,
-      "in_odoo": false
      }
     ]
    }
@@ -36762,6 +36750,13 @@
      1,
      1,
      81000
+    ]
+   },
+   "7389": {
+    "2026-11-01": [
+     1,
+     1,
+     62000
     ]
    },
    "7388": {
@@ -50361,10 +50356,32 @@
    "2026-10-28": 25,
    "2026-10-29": 49,
    "2026-10-30": 56,
-   "2026-10-31": 53
+   "2026-10-31": 53,
+   "2026-11-01": 1
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34080",
+   "d": "2026-11-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1212",
+     "pid": 730899,
+     "qty": 1,
+     "price": 62000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "2"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34079",
    "d": "2026-10-31",
