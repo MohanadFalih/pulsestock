@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-01T18:02:21.233844+00:00",
+ "syncedAt": "2026-11-01T18:32:47.481868+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1473,19 +1473,19 @@
    "odooCreatedDate": "2026-10-28",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-01",
-   "orders": 4,
-   "units": 4,
-   "revenue": 284000,
+   "orders": 5,
+   "units": 5,
+   "revenue": 355000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 54,
-    "lastChecked": "2026-11-01T16:39:47Z",
+    "qty": 52,
+    "lastChecked": "2026-11-01T18:18:56Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1498,7 +1498,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 7,
+      "qty": 6,
       "product_id": 732180
      },
      {
@@ -1510,7 +1510,7 @@
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 9,
+      "qty": 8,
       "product_id": 732182
      },
      {
@@ -5140,19 +5140,19 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-01",
-   "orders": 12,
-   "units": 12,
-   "revenue": 936000,
+   "orders": 13,
+   "units": 13,
+   "revenue": 1014000,
    "delivered": 6,
    "returned": 0,
-   "unitsBoughtFromSupplier": 12,
+   "unitsBoughtFromSupplier": 13,
    "returnedStock": 0,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.29,
+   "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 108,
-    "lastChecked": "2026-11-01T09:24:45Z",
+    "qty": 107,
+    "lastChecked": "2026-11-01T18:14:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5279,7 +5279,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "50",
-      "qty": 4,
+      "qty": 3,
       "product_id": 731669
      },
      {
@@ -7332,20 +7332,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-12",
    "firstOrderDate": "2026-10-13",
-   "lastOrderDate": "2026-10-31",
-   "orders": 13,
-   "units": 14,
-   "revenue": 1386000,
+   "lastOrderDate": "2026-11-01",
+   "orders": 14,
+   "units": 15,
+   "revenue": 1485000,
    "delivered": 6,
    "returned": 1,
-   "unitsBoughtFromSupplier": 13,
+   "unitsBoughtFromSupplier": 14,
    "returnedStock": 1,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 1.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 117,
-    "lastChecked": "2026-11-01T15:21:42Z",
+    "lastChecked": "2026-11-01T18:14:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -36158,9 +36158,9 @@
      71000
     ],
     "2026-11-01": [
-     2,
-     2,
-     142000
+     3,
+     3,
+     213000
     ]
    },
    "7475": {
@@ -36519,9 +36519,9 @@
      156000
     ],
     "2026-11-01": [
-     1,
-     1,
-     78000
+     2,
+     2,
+     156000
     ]
    },
    "7432": {
@@ -36695,6 +36695,11 @@
      297000
     ],
     "2026-10-31": [
+     1,
+     1,
+     99000
+    ],
+    "2026-11-01": [
      1,
      1,
      99000
@@ -50897,10 +50902,62 @@
    "2026-10-29": 48,
    "2026-10-30": 56,
    "2026-10-31": 53,
-   "2026-11-01": 39
+   "2026-11-01": 41
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34123",
+   "d": "2026-11-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1950",
+     "pid": 732179,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34122",
+   "d": "2026-11-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1938",
+     "pid": 731668,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 54"
+    },
+    {
+     "sku": "T-8025",
+     "pid": 731311,
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 4"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34121",
    "d": "2026-11-01",
