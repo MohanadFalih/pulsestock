@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-01T00:32:33.487456+00:00",
+ "syncedAt": "2026-11-01T01:02:46.335217+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2657,7 +2657,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 128,
-    "lastChecked": "2026-11-01T00:07:44Z",
+    "lastChecked": "2026-11-01T00:39:25Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -35507,6 +35507,34 @@
    }
   },
   {
+   "odooId": 4623,
+   "name": "T-6775",
+   "sku": "T-6775",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-10-23",
+   "orders": 54,
+   "units": 56,
+   "revenue": 2108000,
+   "delivered": 56,
+   "returned": 6,
+   "unitsBoughtFromSupplier": 15,
+   "returnedStock": 0,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 9,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
    "odooId": 4562,
    "name": "L-1907",
    "sku": "L-1907",
@@ -35653,34 +35681,6 @@
       "product_id": 640826
      }
     ]
-   }
-  },
-  {
-   "odooId": 4623,
-   "name": "T-6775",
-   "sku": "T-6775",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-10-23",
-   "orders": 54,
-   "units": 56,
-   "revenue": 2108000,
-   "delivered": 56,
-   "returned": 6,
-   "unitsBoughtFromSupplier": 15,
-   "returnedStock": 0,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
    }
   }
  ],
@@ -49890,6 +49890,13 @@
      49000
     ]
    },
+   "4623": {
+    "2026-10-23": [
+     1,
+     1,
+     25000
+    ]
+   },
    "4562": {
     "2026-08-06": [
      1,
@@ -49935,13 +49942,6 @@
      1,
      1,
      64000
-    ]
-   },
-   "4623": {
-    "2026-10-23": [
-     1,
-     1,
-     25000
     ]
    }
   },
