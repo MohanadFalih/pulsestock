@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-01T14:32:20.495859+00:00",
+ "syncedAt": "2026-11-01T15:01:09.709881+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10,26 +10,207 @@
    "sku": "H-1954",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-31",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-01",
+   "lastOrderDate": "2026-11-01",
+   "orders": 1,
+   "units": 1,
+   "revenue": 80000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 145,
+    "lastChecked": "2026-11-01T14:56:52Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "نيلي / Laci",
+      "size": "44",
+      "qty": 5,
+      "product_id": 732366
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "46",
+      "qty": 5,
+      "product_id": 732367
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "48",
+      "qty": 5,
+      "product_id": 732368
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "52",
+      "qty": 5,
+      "product_id": 732369
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "50",
+      "qty": 5,
+      "product_id": 732370
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "44",
+      "qty": 5,
+      "product_id": 732371
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "46",
+      "qty": 4,
+      "product_id": 732372
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "48",
+      "qty": 5,
+      "product_id": 732373
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "52",
+      "qty": 5,
+      "product_id": 732374
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "50",
+      "qty": 4,
+      "product_id": 732375
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "44",
+      "qty": 5,
+      "product_id": 732376
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "46",
+      "qty": 5,
+      "product_id": 732377
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "48",
+      "qty": 5,
+      "product_id": 732378
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "52",
+      "qty": 5,
+      "product_id": 732379
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "50",
+      "qty": 5,
+      "product_id": 732380
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "44",
+      "qty": 4,
+      "product_id": 732381
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "46",
+      "qty": 5,
+      "product_id": 732382
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "48",
+      "qty": 4,
+      "product_id": 732383
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "52",
+      "qty": 5,
+      "product_id": 732384
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "50",
+      "qty": 5,
+      "product_id": 732385
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "44",
+      "qty": 5,
+      "product_id": 732386
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "46",
+      "qty": 5,
+      "product_id": 732387
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "48",
+      "qty": 5,
+      "product_id": 732388
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "52",
+      "qty": 5,
+      "product_id": 732389
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "50",
+      "qty": 5,
+      "product_id": 732390
+     },
+     {
+      "color": "Bordo",
+      "size": "42",
+      "qty": 5,
+      "in_odoo": false
+     },
+     {
+      "color": "Kahverengi",
+      "size": "42",
+      "qty": 5,
+      "in_odoo": false
+     },
+     {
+      "color": "Haki",
+      "size": "42",
+      "qty": 5,
+      "in_odoo": false
+     },
+     {
+      "color": "Lacivert",
+      "size": "42",
+      "qty": 5,
+      "in_odoo": false
+     },
+     {
+      "color": "Siyah",
+      "size": "42",
+      "qty": 4,
+      "in_odoo": false
+     }
+    ]
    }
   },
   {
@@ -6924,29 +7105,23 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-14",
    "firstOrderDate": "2026-10-14",
-   "lastOrderDate": "2026-10-29",
-   "orders": 11,
-   "units": 11,
-   "revenue": 1078000,
+   "lastOrderDate": "2026-11-01",
+   "orders": 12,
+   "units": 12,
+   "revenue": 1176000,
    "delivered": 6,
    "returned": 0,
-   "unitsBoughtFromSupplier": 12,
+   "unitsBoughtFromSupplier": 13,
    "returnedStock": 1,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 8,
-    "lastChecked": "2026-10-31T16:23:23Z",
+    "qty": 6,
+    "lastChecked": "2026-11-01T14:56:52Z",
     "source": "api",
     "status": "available",
     "variants": [
-     {
-      "color": "نيلي / Laci",
-      "size": "4",
-      "qty": 1,
-      "product_id": 731359
-     },
      {
       "color": "أسود / Siyah",
       "size": "2",
@@ -6958,12 +7133,6 @@
       "size": "4",
       "qty": 1,
       "product_id": 731367
-     },
-     {
-      "color": "قهوائي / Kahve",
-      "size": "1",
-      "qty": 1,
-      "product_id": 731368
      },
      {
       "color": "قهوائي / Kahve",
@@ -33451,19 +33620,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-01",
-   "orders": 755,
-   "units": 856,
-   "revenue": 27636000,
+   "orders": 756,
+   "units": 857,
+   "revenue": 27675000,
    "delivered": 825,
    "returned": 175,
-   "unitsBoughtFromSupplier": 695,
+   "unitsBoughtFromSupplier": 696,
    "returnedStock": 4,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 4.43,
+   "orderVelocity7d": 4.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 312,
-    "lastChecked": "2026-11-01T12:06:19Z",
+    "lastChecked": "2026-11-01T14:55:42Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -33500,7 +33669,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 19,
+      "qty": 20,
       "product_id": 675802
      },
      {
@@ -33530,7 +33699,7 @@
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 27,
+      "qty": 26,
       "product_id": 730710
      }
     ]
@@ -35847,6 +36016,13 @@
   "from": "2026-08-03",
   "to": "2026-11-01",
   "byProduct": {
+   "7487": {
+    "2026-11-01": [
+     1,
+     1,
+     80000
+    ]
+   },
    "7485": {
     "2026-11-01": [
      2,
@@ -36401,6 +36577,11 @@
      196000
     ],
     "2026-10-29": [
+     1,
+     1,
+     98000
+    ],
+    "2026-11-01": [
      1,
      1,
      98000
@@ -49623,9 +49804,9 @@
      78000
     ],
     "2026-11-01": [
-     4,
      5,
-     195000
+     6,
+     234000
     ]
    },
    "5855": {
@@ -50621,10 +50802,41 @@
    "2026-10-29": 48,
    "2026-10-30": 56,
    "2026-10-31": 52,
-   "2026-11-01": 27
+   "2026-11-01": 29
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34110",
+   "d": "2026-11-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -183000,
+   "lines": [
+    {
+     "sku": "T-8016",
+     "pid": 731373,
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 2"
+    },
+    {
+     "sku": "H-1954",
+     "pid": 732381,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 44"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34109",
    "d": "2026-11-01",
@@ -50945,6 +51157,27 @@
     }
    ],
    "src": "Facebook"
+  },
+  {
+   "id": "S34093",
+   "d": "2026-11-01",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
   },
   {
    "id": "S34092",
