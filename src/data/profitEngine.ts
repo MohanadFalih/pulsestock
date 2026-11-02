@@ -59,6 +59,12 @@ export const RULES = {
   agentWeeklyIQD: 450_000,
   /** Sales team commission per kept piece, IQD. */
   commissionPerPiece: 1_500,
+  /** Modaselvim (codes "M-", Turkey route, from 1 Nov 2026): the broker takes
+   *  1$ per piece (× 1,700) and local cargo in Turkey is ~1$ per 15-piece
+   *  parcel (~115). Charged per piece ordered from Turkey — the piece is
+   *  bought whether it is kept or returned. Not part of Odoo's cost, which
+   *  stays equal to what the supplier is paid. */
+  selvim: { prefix: "M-", since: "2026-11-01", extraPerPieceIQD: 1_815 },
   deliveryNetPerOrder: 1_000,
   /** Orders older than this are final: undecided units count as not sold.
    *  Odoo data (Oct 2026): orders 9–10 days old show ~6% returned vs ~22% final;
@@ -111,6 +117,8 @@ export interface DayRaw {
   riskQty: number;
   /** Cargo / shipping posted in Odoo (501115) on this day, IQD. */
   shipping: number;
+  /** Modaselvim pieces ordered from Turkey this day (broker + local cargo). */
+  selvimQty: number;
   /** Part of realized COGS that was estimated (missing unit cost). */
   estCogs: number;
   adsUSD: number;
@@ -131,11 +139,13 @@ export interface Totals {
   adsUSD: number;
   shipping: number;
   commission: number;
+  /** Modaselvim broker 1$ + local cargo per piece ordered (RULES.selvim). */
+  selvim: number;
   /** Kept pieces (projected or shipped, by mode). */
   pieces: number;
   fixed: Record<FixedGroup, number>;
   fixedTotal: number;
-  /** Gross margin + delivery − ads − shipping − commission (before fixed costs). */
+  /** Gross margin + delivery − ads − shipping − commission − Selvim extras (before fixed costs). */
   contribution: number;
   net: number;
   drawings: number;
@@ -244,6 +254,7 @@ function zeroFixed(): Record<FixedGroup, number> {
 // ─── Model build ─────────────────────────────────────────────────────────────
 
 interface LineVal {
+  sku: string;
   turkey: boolean;
   orderedQty: number;
   keptQty: number;
@@ -260,6 +271,7 @@ function orderLines(order: OpsOrder, costs: CostLookup): LineVal[] {
     const kept = Math.min(l.qty, Math.max(0, l.del));
     const undecided = Math.max(0, l.qty - kept - (l.ret ?? 0));
     return {
+      sku: l.sku,
       turkey: l.route === "turkey",
       orderedQty: l.qty,
       keptQty: kept,
@@ -398,6 +410,7 @@ export function buildProfitModel(
       stPendQty: 0,
       riskQty: 0,
       shipping: 0,
+      selvimQty: 0,
       estCogs: 0,
       adsUSD: 0,
       adsIQD: 0,
@@ -416,7 +429,11 @@ export function buildProfitModel(
     const q = day.mature ? 0 : stillToReturn(daysBetween(o.d, today));
     let anyKept = false;
     let anyUndecided = false;
+    const selvimDay = o.d >= RULES.selvim.since;
     for (const l of lines) {
+      if (selvimDay && l.turkey && l.sku.trim().startsWith(RULES.selvim.prefix)) {
+        day.selvimQty += l.orderedQty;
+      }
       const unitCostVal = l.cost ?? l.unitNet * fallbackCostRatio;
       if (l.keptQty > 0) {
         anyKept = true;
@@ -522,6 +539,7 @@ export function emptyTotals(): Totals {
     adsUSD: 0,
     shipping: 0,
     commission: 0,
+    selvim: 0,
     pieces: 0,
     fixed: zeroFixed(),
     fixedTotal: 0,
@@ -560,9 +578,11 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.pieces =
     d.keptQty + (p ? d.trPendQty * keep.turkey + d.stPendQty * keep.stock - d.riskQty : 0);
   t.commission = t.pieces * RULES.commissionPerPiece;
+  t.selvim = d.selvimQty * RULES.selvim.extraPerPieceIQD;
   t.fixed = { ...d.fixed };
   t.fixedTotal = FIXED_GROUPS.reduce((s, g) => s + d.fixed[g], 0);
-  t.contribution = t.trGross + t.stGross + t.delivery - t.ads - t.shipping - t.commission;
+  t.contribution =
+    t.trGross + t.stGross + t.delivery - t.ads - t.shipping - t.commission - t.selvim;
   t.net = t.contribution - t.fixedTotal;
   t.drawings = d.drawings;
   t.ordersPlaced = d.ordersPlaced;
@@ -589,6 +609,7 @@ export function addTotals(a: Totals, b: Totals): Totals {
     adsUSD: a.adsUSD + b.adsUSD,
     shipping: a.shipping + b.shipping,
     commission: a.commission + b.commission,
+    selvim: a.selvim + b.selvim,
     pieces: a.pieces + b.pieces,
     fixed,
     fixedTotal: a.fixedTotal + b.fixedTotal,
