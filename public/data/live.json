@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-02T11:32:31.751368+00:00",
+ "syncedAt": "2026-11-02T12:03:11.558648+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3083,7 +3083,7 @@
    "delivered": 3,
    "returned": 0,
    "unitsBoughtFromSupplier": 7,
-   "returnedStock": 1,
+   "returnedStock": 2,
    "unitPrice": 85000.0,
    "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
@@ -5286,7 +5286,7 @@
    "delivered": 8,
    "returned": 1,
    "unitsBoughtFromSupplier": 13,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 78000.0,
    "orderVelocity7d": 1.14,
    "daysSinceLastOrder": 1,
@@ -8227,7 +8227,7 @@
    "delivered": 45,
    "returned": 12,
    "unitsBoughtFromSupplier": 51,
-   "returnedStock": 10,
+   "returnedStock": 11,
    "unitPrice": 98000.0,
    "orderVelocity7d": 1.71,
    "daysSinceLastOrder": 0,
@@ -9869,7 +9869,7 @@
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
-   "returnedStock": 1,
+   "returnedStock": 2,
    "unitPrice": 81000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 2,
@@ -17848,69 +17848,93 @@
    "odooCreatedDate": "2026-09-07",
    "firstOrderDate": "2026-09-13",
    "lastOrderDate": "2026-11-02",
-   "orders": 21,
-   "units": 20,
-   "revenue": 1452000,
+   "orders": 22,
+   "units": 21,
+   "revenue": 1526000,
    "delivered": 16,
    "returned": 3,
-   "unitsBoughtFromSupplier": 19,
+   "unitsBoughtFromSupplier": 20,
    "returnedStock": 4,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 29,
-    "lastChecked": "2026-11-02T11:00:42Z",
+    "qty": 84,
+    "lastChecked": "2026-11-02T11:46:42Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "سمائي / Mavi",
+      "size": "44",
+      "qty": 7,
+      "product_id": 729489
+     },
+     {
+      "color": "سمائي / Mavi",
       "size": "46",
-      "qty": 2,
+      "qty": 7,
       "product_id": 729490
      },
      {
       "color": "سمائي / Mavi",
       "size": "48",
-      "qty": 4,
+      "qty": 7,
       "product_id": 729491
      },
      {
       "color": "سمائي / Mavi",
       "size": "50",
-      "qty": 5,
+      "qty": 7,
       "product_id": 729494
      },
      {
       "color": "سمائي / Mavi",
       "size": "52",
-      "qty": 5,
+      "qty": 7,
       "product_id": 729492
      },
      {
       "color": "سمائي / Mavi",
       "size": "54",
-      "qty": 1,
+      "qty": 7,
       "product_id": 729493
      },
      {
       "color": "نيلي / Laci",
+      "size": "44",
+      "qty": 7,
+      "product_id": 729483
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "46",
+      "qty": 7,
+      "product_id": 729484
+     },
+     {
+      "color": "نيلي / Laci",
       "size": "48",
-      "qty": 3,
+      "qty": 7,
       "product_id": 729485
      },
      {
       "color": "نيلي / Laci",
       "size": "50",
-      "qty": 4,
+      "qty": 7,
       "product_id": 729488
      },
      {
       "color": "نيلي / Laci",
       "size": "52",
-      "qty": 5,
+      "qty": 7,
       "product_id": 729486
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "54",
+      "qty": 7,
+      "product_id": 729487
      }
     ]
    }
@@ -25793,10 +25817,10 @@
    "orders": 8,
    "units": 8,
    "revenue": 669000,
-   "delivered": 7,
+   "delivered": 8,
    "returned": 4,
    "unitsBoughtFromSupplier": 6,
-   "returnedStock": 2,
+   "returnedStock": 1,
    "unitPrice": 91000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 1,
@@ -25978,10 +26002,10 @@
    "orders": 20,
    "units": 21,
    "revenue": 1412000,
-   "delivered": 19,
+   "delivered": 20,
    "returned": 7,
    "unitsBoughtFromSupplier": 15,
-   "returnedStock": 4,
+   "returnedStock": 3,
    "unitPrice": 69000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 1,
@@ -32689,10 +32713,10 @@
    "orders": 64,
    "units": 74,
    "revenue": 3780000,
-   "delivered": 70,
+   "delivered": 71,
    "returned": 12,
    "unitsBoughtFromSupplier": 62,
-   "returnedStock": 5,
+   "returnedStock": 4,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
@@ -33928,7 +33952,7 @@
    "revenue": 27948000,
    "delivered": 828,
    "returned": 175,
-   "unitsBoughtFromSupplier": 702,
+   "unitsBoughtFromSupplier": 703,
    "returnedStock": 15,
    "unitPrice": 39000.0,
    "orderVelocity7d": 5.29,
@@ -35552,20 +35576,20 @@
    "sku": "L-1637",
    "category": "Ferace",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-09-29",
-   "orders": 84,
-   "units": 87,
-   "revenue": 4097000,
+   "lastOrderDate": "2026-11-02",
+   "orders": 85,
+   "units": 88,
+   "revenue": 4122000,
    "delivered": 87,
    "returned": 18,
    "unitsBoughtFromSupplier": 44,
    "returnedStock": 8,
    "unitPrice": 75000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 34,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -36398,9 +36422,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1689,
-  "stockValue": 51119674,
-  "stockVariants": 1339
+  "stockUnits": 1690,
+  "stockValue": 51183027,
+  "stockVariants": 1341
  },
  "daily": {
   "days": 90,
@@ -40149,9 +40173,9 @@
      222000
     ],
     "2026-11-02": [
+     3,
      2,
-     1,
-     74000
+     148000
     ]
    },
    "7309": {
@@ -50709,6 +50733,11 @@
      1,
      1,
      75000
+    ],
+    "2026-11-02": [
+     1,
+     1,
+     25000
     ]
    },
    "4538": {
@@ -51270,7 +51299,7 @@
     0
    ],
    "2026-11-02": [
-    20,
+    23,
     17
    ]
   },
@@ -51365,10 +51394,50 @@
    "2026-10-30": 56,
    "2026-10-31": 53,
    "2026-11-01": 49,
-   "2026-11-02": 26
+   "2026-11-02": 28
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34163",
+   "d": "2026-11-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1899-navy-1-46",
+     "pid": 729484,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 46"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34162",
+   "d": "2026-11-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1637-نيليlaci-24446",
+     "pid": 641441,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "نيلي / Laci, 2"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34161",
    "d": "2026-11-02",
@@ -51545,11 +51614,12 @@
      "qty": 1,
      "price": 25000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "var": "نيلي / Laci, 2"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "محمود"
   },
   {
    "id": "S34153",
@@ -51577,7 +51647,8 @@
      "var": "قهوائي / Kahve, 42"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34152",
@@ -51688,7 +51759,8 @@
      "var": "نيلي / Laci, 4"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S34147",
@@ -51820,7 +51892,8 @@
      "var": "فيزون غامق / Koyu Vizon, 42"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34141",
@@ -51857,7 +51930,8 @@
      "var": "أسود / Siyah, 4"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S34140",
@@ -51939,7 +52013,8 @@
      "var": "أسود / Siyah, 48"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34135",
@@ -51958,7 +52033,8 @@
      "var": "سمائي / Mavi, 4"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34134",
@@ -51998,7 +52074,8 @@
      "var": "خاكي / Haki, 48"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S34132",
@@ -52077,7 +52154,8 @@
      "var": "بيج / Bej, 3"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S34128",
@@ -52199,7 +52277,8 @@
      "var": "قهوائي / Kahve, 2"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34125",
@@ -52427,7 +52506,8 @@
      "var": "خاكي / Haki, 48"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S34114",
@@ -52455,7 +52535,8 @@
      "var": "بيج / Bej, 4"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34113",
@@ -52474,7 +52555,8 @@
      "var": "بيج / Bej, 4"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34112",
@@ -52489,7 +52571,7 @@
      "qty": 1,
      "price": 32000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "var": "قهوائي / Kahve, 2"
     },
     {
@@ -52501,7 +52583,8 @@
      "del": 0
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "محمود"
   },
   {
    "id": "S34111",
@@ -52516,11 +52599,12 @@
      "qty": 1,
      "price": 27000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "var": "سمائي / Mavi, 44"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "محمود"
   },
   {
    "id": "S34110",
@@ -52570,7 +52654,8 @@
      "var": "رصاصي / Antrasit, 3"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34108",
@@ -52620,7 +52705,8 @@
      "var": "نيلي / Laci, 2"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34106",
@@ -52721,7 +52807,8 @@
      "var": "رصاصي غامق / Fume, 3"
     }
    ],
-   "src": "Instagram"
+   "src": "Instagram",
+   "ful": "مدن"
   },
   {
    "id": "S34101",
@@ -52792,7 +52879,8 @@
      "var": "رصاصي / Antrasit, 2"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34097",
@@ -52863,7 +52951,8 @@
      "var": "أحمر / Bordo, 2"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34094",
@@ -52882,7 +52971,8 @@
      "var": "نيلي / Laci, 4"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34093",
@@ -53383,7 +53473,8 @@
      "var": "أزرق / Indigo"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34068",
@@ -59931,7 +60022,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S33775",
@@ -63639,7 +63730,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S33622",
@@ -186352,7 +186443,7 @@
   {
    "sku": "H-1830",
    "model": "H-1830",
-   "qty": 2,
+   "qty": 1,
    "cost": 32722,
    "created": "2026-06-30"
   },
@@ -193981,7 +194072,7 @@
   {
    "sku": "H-1922",
    "model": "H-1922",
-   "qty": 0,
+   "qty": 1,
    "cost": 40250,
    "created": "2026-10-06"
   },
@@ -196055,7 +196146,7 @@
   {
    "sku": "H-1938",
    "model": "H-1938",
-   "qty": 0,
+   "qty": 1,
    "cost": 36750,
    "created": "2026-10-19"
   },
@@ -219187,7 +219278,7 @@
   {
    "sku": "T-6899",
    "model": "T-6899",
-   "qty": 2,
+   "qty": 1,
    "cost": 29000,
    "created": "2025-11-13"
   },
@@ -220100,7 +220191,7 @@
   {
    "sku": "T-7027",
    "model": "T-7027",
-   "qty": 1,
+   "qty": 0,
    "cost": 53425,
    "created": "2026-07-04"
   },
@@ -226495,7 +226586,7 @@
   {
    "sku": "T-8035",
    "model": "T-8035",
-   "qty": 0,
+   "qty": 1,
    "cost": 57750,
    "created": "2026-10-10"
   },
@@ -226925,7 +227016,7 @@
   {
    "sku": "T-8048",
    "model": "T-8048",
-   "qty": 1,
+   "qty": 2,
    "cost": 43750,
    "created": "2026-10-25"
   },
