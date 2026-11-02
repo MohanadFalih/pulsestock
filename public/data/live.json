@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-02T18:33:11.071934+00:00",
+ "syncedAt": "2026-11-02T18:54:21.436721+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -33748,20 +33748,20 @@
    "sku": "T-6851",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-10-03",
    "firstOrderDate": "2025-10-03",
-   "lastOrderDate": "2026-10-11",
-   "orders": 191,
-   "units": 195,
-   "revenue": 10510000,
+   "lastOrderDate": "2026-11-02",
+   "orders": 192,
+   "units": 196,
+   "revenue": 10535000,
    "delivered": 193,
    "returned": 54,
    "unitsBoughtFromSupplier": 141,
    "returnedStock": 6,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 22,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -50194,6 +50194,11 @@
      1,
      1,
      39000
+    ],
+    "2026-11-02": [
+     1,
+     1,
+     25000
     ]
    },
    "5890": {
@@ -51420,10 +51425,29 @@
    "2026-10-30": 56,
    "2026-10-31": 53,
    "2026-11-01": 50,
-   "2026-11-02": 44
+   "2026-11-02": 45
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34183",
+   "d": "2026-11-02",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6851",
+     "pid": 673213,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أزرق / Indigo, 3"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34182",
    "d": "2026-11-02",
