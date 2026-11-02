@@ -249,6 +249,15 @@ function Ladder({ t, model }: { t: Totals; model: ProfitModel }) {
       value: -t.commission,
       note: `${Math.round(t.pieces).toLocaleString("en-US")} pieces`,
     },
+    ...(t.selvim > 0
+      ? [
+          {
+            label: "Modaselvim broker 1$ + local cargo (1,815 / piece)",
+            value: -t.selvim,
+            note: `${Math.round(t.selvim / RULES.selvim.extraPerPieceIQD).toLocaleString("en-US")} pieces ordered`,
+          },
+        ]
+      : []),
     { label: "= Before fixed costs", value: t.contribution, strong: true },
     ...(FIXED_GROUPS as FixedGroup[]).map((g) => ({
       label: FIXED_LABEL[g],
@@ -486,6 +495,7 @@ function Notes({ t, model }: { t: Totals; model: ProfitModel }) {
           "Ads: Meta daily spend × 1,380 IQD until 5 Oct 2026, × 1,600 from 6 Oct",
           "Fixed costs per month: salaries 4.4M · rent 1.7M · electricity, internet & subscriptions 670k · other 1M — spread evenly over the month's days. Turkey agent 450k / week",
           "Cargo from Odoo (501115) on the day it is posted · sales commission 1,500 IQD per kept piece",
+          "Modaselvim (M-, from 1 Nov 2026): broker 1$ + Turkish local cargo = 1,815 IQD per piece ordered from Turkey, on top of the supplier cost in Odoo",
           `Orders older than ${RULES.matureAfterDays} days are final. Odoo marks an order delivered when it goes to the courier; projected mode removes the refusals still expected to come back`,
           h.syncedAt ? `Expenses & Meta synced ${new Date(h.syncedAt).toLocaleString("en-GB")}` : "Waiting for first sync",
         ].map((n) => (
