@@ -83,6 +83,48 @@ def main():
         R["partner_tags"] = {t["name"]: len(t["partner_ids"])
                              for t in R["partner_tags"]}
 
+    R2 = {}
+    R2["partner_welcome_by_value"] = safe(lambda: [
+        (g.get("deniz_crm_welcome_credit"), g["__count"]) for g in odoo.kw(
+            "res.partner", "read_group",
+            [[["deniz_crm_welcome_credit", ">", 0]], ["id:count"],
+             ["deniz_crm_welcome_credit"]], {"lazy": False})])
+    R2["card3_by_points"] = safe(lambda: [
+        (g.get("points"), g["__count"]) for g in odoo.kw(
+            "loyalty.card", "read_group",
+            [[["program_id", "=", 3]], ["id:count"], ["points"]],
+            {"lazy": False})])
+    R2["card3_expiry"] = safe(lambda: [
+        (g.get("expiration_date:day"), g["__count"]) for g in odoo.kw(
+            "loyalty.card", "read_group",
+            [[["program_id", "=", 3]], ["id:count"],
+             ["expiration_date:day"]], {"lazy": False})])
+    pids = safe(lambda: [c["partner_id"][0] for c in odoo.kw(
+        "loyalty.card", "search_read", [[["program_id", "=", 3]]],
+        {"fields": ["partner_id"], "limit": 5000})], [])
+    R2["card3_partners"] = len(pids)
+    R2["card3_partner_field_match"] = safe(lambda: odoo.kw(
+        "res.partner", "search_count",
+        [[["id", "in", pids], ["deniz_crm_welcome_credit", ">", 0]]]))
+    R2["card3_partner_vip_tag"] = safe(lambda: odoo.kw(
+        "res.partner", "search_count",
+        [[["id", "in", pids], ["category_id.name", "=", "VIP"]]]))
+    R2["card3_tier"] = safe(lambda: [
+        (g.get("deniz_crm_tier"), g["__count"]) for g in odoo.kw(
+            "res.partner", "read_group",
+            [[["id", "in", pids]], ["id:count"], ["deniz_crm_tier"]],
+            {"lazy": False})])
+    R2["wa_accounts"] = safe(lambda: odoo.kw(
+        "whatsapp.account", "search_read", [[]],
+        {"fields": ["name", "phone_uid", "active"], "limit": 10}))
+    R2["wa_templates"] = safe(lambda: odoo.kw(
+        "whatsapp.template", "search_read", [[]],
+        {"fields": ["name", "template_name", "status", "model",
+                    "template_type", "quality"], "limit": 50}))
+    R2["wa_var_fields"] = safe(lambda: list(odoo.kw(
+        "whatsapp.template.variable", "fields_get", [],
+        {"attributes": ["string"]}).keys()))
+    R = R2
     print("DIAG_JSON_BEGIN")
     print(json.dumps(R, ensure_ascii=False, indent=1, default=str))
     print("DIAG_JSON_END")
