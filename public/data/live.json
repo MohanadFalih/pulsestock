@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-03T09:32:59.536066+00:00",
+ "syncedAt": "2026-11-03T10:02:50.477046+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3528,15 +3528,15 @@
    "units": 77,
    "revenue": 6160000,
    "delivered": 19,
-   "returned": 4,
+   "returned": 5,
    "unitsBoughtFromSupplier": 72,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 80000.0,
    "orderVelocity7d": 7.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 107,
-    "lastChecked": "2026-11-03T08:39:56Z",
+    "qty": 106,
+    "lastChecked": "2026-11-03T09:34:44Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3633,7 +3633,7 @@
      {
       "color": "خاكي / Haki",
       "size": "1",
-      "qty": 3,
+      "qty": 2,
       "product_id": 731954
      },
      {
@@ -7652,7 +7652,7 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-14",
    "firstOrderDate": "2026-10-14",
-   "lastOrderDate": "2026-11-01",
+   "lastOrderDate": "2026-11-03",
    "orders": 12,
    "units": 12,
    "revenue": 1176000,
@@ -7662,10 +7662,10 @@
    "returnedStock": 1,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 2,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 4,
-    "lastChecked": "2026-11-02T15:22:02Z",
+    "lastChecked": "2026-11-03T09:48:53Z",
     "source": "api",
     "status": "low",
     "variants": [
@@ -7764,14 +7764,14 @@
    "revenue": 1583000,
    "delivered": 12,
    "returned": 1,
-   "unitsBoughtFromSupplier": 14,
+   "unitsBoughtFromSupplier": 15,
    "returnedStock": 1,
    "unitPrice": 98000.0,
    "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 117,
-    "lastChecked": "2026-11-02T15:22:02Z",
+    "qty": 116,
+    "lastChecked": "2026-11-03T09:30:48Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7808,7 +7808,7 @@
      {
       "color": "أسود / Siyah",
       "size": "1",
-      "qty": 8,
+      "qty": 7,
       "product_id": 731312
      },
      {
@@ -8505,9 +8505,9 @@
    "units": 61,
    "revenue": 6038000,
    "delivered": 52,
-   "returned": 12,
+   "returned": 13,
    "unitsBoughtFromSupplier": 53,
-   "returnedStock": 4,
+   "returnedStock": 5,
    "unitPrice": 99000.0,
    "orderVelocity7d": 1.86,
    "daysSinceLastOrder": 0,
@@ -24853,17 +24853,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-09",
    "firstOrderDate": "2026-07-09",
-   "lastOrderDate": "2026-11-02",
-   "orders": 274,
-   "units": 283,
-   "revenue": 21847050,
+   "lastOrderDate": "2026-11-03",
+   "orders": 275,
+   "units": 284,
+   "revenue": 21880050,
    "delivered": 281,
    "returned": 92,
    "unitsBoughtFromSupplier": 185,
    "returnedStock": 5,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 210,
     "lastChecked": "2026-11-02T15:03:10Z",
@@ -36728,9 +36728,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1575,
-  "stockValue": 46169210,
-  "stockVariants": 1248
+  "stockUnits": 1577,
+  "stockValue": 46265460,
+  "stockVariants": 1250
  },
  "daily": {
   "days": 90,
@@ -37381,7 +37381,7 @@
      1,
      98000
     ],
-    "2026-11-01": [
+    "2026-11-03": [
      1,
      1,
      98000
@@ -45243,6 +45243,11 @@
      2,
      1,
      33000
+    ],
+    "2026-11-03": [
+     1,
+     1,
+     33000
     ]
    },
    "7172": {
@@ -51727,7 +51732,7 @@
    ],
    "2026-11-03": [
     0,
-    8
+    10
    ]
   },
   "orders": {
@@ -51821,10 +51826,60 @@
    "2026-10-31": 53,
    "2026-11-01": 50,
    "2026-11-02": 48,
-   "2026-11-03": 24
+   "2026-11-03": 25
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34212",
+   "d": "2026-11-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 680501,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي / Antrasit"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34211",
+   "d": "2026-11-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1840-murdum-3",
+     "pid": 726874,
+     "qty": 1,
+     "price": 33000,
+     "discPct": 0,
+     "del": 0,
+     "var": "عنابي / Murdum, 3"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34210",
    "d": "2026-11-03",
@@ -54058,16 +54113,6 @@
    "disc": -183000,
    "lines": [
     {
-     "sku": "T-8016",
-     "pid": 731373,
-     "qty": 1,
-     "price": 98000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey",
-     "var": "عنابي / Murdum, 2"
-    },
-    {
      "sku": "H-1954",
      "pid": 732381,
      "qty": 1,
@@ -54076,6 +54121,16 @@
      "del": 0,
      "route": "turkey",
      "var": "خاكي / Haki, 44"
+    },
+    {
+     "sku": "T-8016",
+     "pid": 731369,
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 2"
     }
    ],
    "src": "Instagram",
@@ -61383,9 +61438,10 @@
      "qty": 1,
      "price": 80000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "أحمر / Bordo, 2"
+     "var": "أحمر / Bordo, 2",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -62224,9 +62280,10 @@
      "qty": 1,
      "price": 99000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "بيج / Bej, 3"
+     "var": "بيج / Bej, 3",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -196476,7 +196533,7 @@
   {
    "sku": "H-1945",
    "model": "H-1945",
-   "qty": 0,
+   "qty": 1,
    "cost": 38500,
    "created": "2026-10-24"
   },
@@ -208331,9 +208388,8 @@
    "sku": "K-6699",
    "model": "K-6699",
    "qty": 0,
-   "cost": 76500,
-   "created": "2026-10-29",
-   "costSrc": "vendor"
+   "cost": 75600,
+   "created": "2026-10-29"
   },
   {
    "sku": "K-6699",
@@ -227383,7 +227439,7 @@
   {
    "sku": "T-8035",
    "model": "T-8035",
-   "qty": 0,
+   "qty": 1,
    "cost": 57750,
    "created": "2026-10-10"
   },
