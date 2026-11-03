@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-03T14:02:37.743396+00:00",
+ "syncedAt": "2026-11-03T14:32:56.172227+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1959,15 +1959,15 @@
    "odooCreatedDate": "2026-10-28",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-03",
-   "orders": 10,
-   "units": 12,
-   "revenue": 852000,
+   "orders": 11,
+   "units": 13,
+   "revenue": 923000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 12,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 1.43,
+   "orderVelocity7d": 1.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 44,
@@ -24364,20 +24364,20 @@
    "sku": "T-7044",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-15",
    "firstOrderDate": "2026-07-18",
-   "lastOrderDate": "2026-09-19",
-   "orders": 20,
-   "units": 20,
-   "revenue": 1780000,
+   "lastOrderDate": "2026-11-03",
+   "orders": 21,
+   "units": 21,
+   "revenue": 1811000,
    "delivered": 20,
    "returned": 11,
    "unitsBoughtFromSupplier": 14,
    "returnedStock": 3,
    "unitPrice": 89000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 45,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -31907,20 +31907,20 @@
    "sku": "T-6883",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-12-13",
    "firstOrderDate": "2025-12-13",
-   "lastOrderDate": "2026-10-07",
-   "orders": 25,
-   "units": 25,
-   "revenue": 1309000,
+   "lastOrderDate": "2026-11-03",
+   "orders": 26,
+   "units": 26,
+   "revenue": 1334000,
    "delivered": 23,
    "returned": 5,
    "unitsBoughtFromSupplier": 19,
    "returnedStock": 1,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 27,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -35702,20 +35702,20 @@
    "sku": "H-1429",
    "category": "Elbise",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-14",
-   "lastOrderDate": "2026-10-24",
-   "orders": 68,
-   "units": 69,
-   "revenue": 1736000,
+   "lastOrderDate": "2026-11-03",
+   "orders": 69,
+   "units": 70,
+   "revenue": 1761000,
    "delivered": 68,
    "returned": 14,
    "unitsBoughtFromSupplier": 54,
    "returnedStock": 4,
    "unitPrice": 37000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 10,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -36967,9 +36967,9 @@
      284000
     ],
     "2026-11-03": [
-     1,
-     3,
-     213000
+     2,
+     4,
+     284000
     ]
    },
    "7475": {
@@ -44926,6 +44926,11 @@
      2,
      2,
      178000
+    ],
+    "2026-11-03": [
+     1,
+     1,
+     31000
     ]
    },
    "7186": {
@@ -49888,6 +49893,11 @@
      1,
      1,
      39000
+    ],
+    "2026-11-03": [
+     1,
+     1,
+     25000
     ]
    },
    "6444": {
@@ -51248,6 +51258,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-03": [
+     1,
+     1,
+     25000
     ]
    },
    "4459": {
@@ -52009,10 +52024,78 @@
    "2026-10-31": 53,
    "2026-11-01": 50,
    "2026-11-02": 48,
-   "2026-11-03": 44
+   "2026-11-03": 47
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34234",
+   "d": "2026-11-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1950",
+     "pid": 732180,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34233",
+   "d": "2026-11-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-7044",
+     "pid": 727178,
+     "qty": 1,
+     "price": 31000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أسود / Siyah, 3"
+    },
+    {
+     "sku": "T-6883",
+     "pid": 685373,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "قهوائي / Kahve, 3"
+    }
+   ],
+   "src": "Instagram"
+  },
+  {
+   "id": "S34232",
+   "d": "2026-11-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1429",
+     "pid": 639053,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "زمردي / Zumrut, 44"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34231",
    "d": "2026-11-03",
