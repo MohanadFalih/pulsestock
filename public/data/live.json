@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-03T04:02:53.141703+00:00",
+ "syncedAt": "2026-11-03T04:32:32.648754+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7006,20 +7006,20 @@
    "sku": "L-1056",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-15",
    "firstOrderDate": "2026-10-16",
-   "lastOrderDate": "2026-10-27",
-   "orders": 4,
-   "units": 5,
-   "revenue": 310000,
+   "lastOrderDate": "2026-11-03",
+   "orders": 5,
+   "units": 6,
+   "revenue": 351000,
    "delivered": 5,
    "returned": 1,
    "unitsBoughtFromSupplier": 5,
    "returnedStock": 1,
    "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 57,
     "lastChecked": "2026-11-02T15:14:57Z",
@@ -28004,7 +28004,7 @@
    "sku": "L-1457",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "completed",
    "odooCreatedDate": "2026-05-19",
    "firstOrderDate": "2026-05-19",
    "lastOrderDate": "2026-10-02",
@@ -28014,7 +28014,7 @@
    "delivered": 456,
    "returned": 89,
    "unitsBoughtFromSupplier": 370,
-   "returnedStock": 1,
+   "returnedStock": 0,
    "unitPrice": 59000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 32,
@@ -36669,9 +36669,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1568,
-  "stockValue": 45850403,
-  "stockVariants": 1244
+  "stockUnits": 1567,
+  "stockValue": 45827854,
+  "stockVariants": 1243
  },
  "daily": {
   "days": 90,
@@ -37208,6 +37208,11 @@
      1,
      2,
      124000
+    ],
+    "2026-11-03": [
+     1,
+     1,
+     41000
     ]
    },
    "7419": {
@@ -51664,10 +51669,29 @@
    "2026-10-31": 53,
    "2026-11-01": 50,
    "2026-11-02": 48,
-   "2026-11-03": 3
+   "2026-11-03": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34190",
+   "d": "2026-11-03",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1056",
+     "pid": 731474,
+     "qty": 1,
+     "price": 41000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أخضر / Yesil, 3"
+    }
+   ],
+   "src": "Website"
+  },
   {
    "id": "S34189",
    "d": "2026-11-03",
@@ -158019,7 +158043,7 @@
   {
    "sku": "L-1457",
    "model": "L-1457",
-   "qty": 1,
+   "qty": 0,
    "cost": 22550,
    "created": "2026-05-19"
   },
