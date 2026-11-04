@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-04T09:02:47.346679+00:00",
+ "syncedAt": "2026-11-04T09:32:49.976526+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5482,14 +5482,14 @@
    "revenue": 980000,
    "delivered": 9,
    "returned": 0,
-   "unitsBoughtFromSupplier": 9,
+   "unitsBoughtFromSupplier": 10,
    "returnedStock": 0,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 130,
-    "lastChecked": "2026-11-03T15:15:48Z",
+    "lastChecked": "2026-11-04T09:00:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8781,20 +8781,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-10",
    "firstOrderDate": "2026-10-11",
-   "lastOrderDate": "2026-11-03",
-   "orders": 3,
-   "units": 7,
-   "revenue": 504000,
+   "lastOrderDate": "2026-11-04",
+   "orders": 4,
+   "units": 8,
+   "revenue": 576000,
    "delivered": 3,
    "returned": 0,
-   "unitsBoughtFromSupplier": 4,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 88,
-    "lastChecked": "2026-11-03T15:24:56Z",
+    "qty": 87,
+    "lastChecked": "2026-11-04T09:16:03Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8819,7 +8819,7 @@
      {
       "color": "نيلي / Laci",
       "size": "46",
-      "qty": 3,
+      "qty": 2,
       "product_id": 731199
      },
      {
@@ -31467,20 +31467,20 @@
    "sku": "T-6949",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-02-12",
    "firstOrderDate": "2026-02-15",
-   "lastOrderDate": "2026-10-23",
-   "orders": 101,
-   "units": 104,
-   "revenue": 7111000,
+   "lastOrderDate": "2026-11-04",
+   "orders": 102,
+   "units": 105,
+   "revenue": 7140000,
    "delivered": 103,
    "returned": 20,
    "unitsBoughtFromSupplier": 87,
    "returnedStock": 2,
    "unitPrice": 31000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38124,6 +38124,11 @@
      216000
     ],
     "2026-11-03": [
+     1,
+     1,
+     72000
+    ],
+    "2026-11-04": [
      1,
      1,
      72000
@@ -49910,6 +49915,11 @@
      1,
      1,
      29000
+    ],
+    "2026-11-04": [
+     1,
+     1,
+     29000
     ]
    },
    "6735": {
@@ -52406,10 +52416,50 @@
    "2026-11-01": 50,
    "2026-11-02": 48,
    "2026-11-03": 55,
-   "2026-11-04": 10
+   "2026-11-04": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34255",
+   "d": "2026-11-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6949",
+     "pid": 689914,
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0,
+     "var": "بيج / Bej, 2"
+    }
+   ],
+   "src": "Instagram"
+  },
+  {
+   "id": "S34254",
+   "d": "2026-11-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1928",
+     "pid": 731213,
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 50"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34253",
    "d": "2026-11-04",
@@ -226774,9 +226824,8 @@
    "sku": "T-8014",
    "model": "T-8014",
    "qty": 0,
-   "cost": 38958,
-   "created": "2026-09-28",
-   "costSrc": "vendor"
+   "cost": 38500,
+   "created": "2026-09-28"
   },
   {
    "sku": "T-8014",
@@ -227106,9 +227155,8 @@
    "sku": "T-8016",
    "model": "T-8016",
    "qty": 0,
-   "cost": 56667,
-   "created": "2026-10-14",
-   "costSrc": "vendor"
+   "cost": 56000,
+   "created": "2026-10-14"
   },
   {
    "sku": "T-8016",
@@ -227151,9 +227199,8 @@
    "sku": "T-8017",
    "model": "T-8017",
    "qty": 0,
-   "cost": 65521,
-   "created": "2026-10-23",
-   "costSrc": "vendor"
+   "cost": 64750,
+   "created": "2026-10-23"
   },
   {
    "sku": "T-8017",
@@ -227996,9 +228043,8 @@
    "sku": "T-8025",
    "model": "T-8025",
    "qty": 0,
-   "cost": 61979,
-   "created": "2026-10-12",
-   "costSrc": "vendor"
+   "cost": 61250,
+   "created": "2026-10-12"
   },
   {
    "sku": "T-8025",
@@ -228963,9 +229009,8 @@
    "sku": "T-8047",
    "model": "T-8047",
    "qty": 0,
-   "cost": 58438,
-   "created": "2026-10-31",
-   "costSrc": "vendor"
+   "cost": 57750,
+   "created": "2026-10-31"
   },
   {
    "sku": "T-8047",
