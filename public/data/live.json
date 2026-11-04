@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-04T17:32:42.616515+00:00",
+ "syncedAt": "2026-11-04T18:02:45.661232+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -14417,7 +14417,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 60,
-    "lastChecked": "2026-11-04T17:06:56Z",
+    "lastChecked": "2026-11-04T17:39:43Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -25739,17 +25739,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-07-09",
    "firstOrderDate": "2026-07-09",
-   "lastOrderDate": "2026-11-03",
-   "orders": 275,
-   "units": 284,
-   "revenue": 21880050,
+   "lastOrderDate": "2026-11-04",
+   "orders": 276,
+   "units": 285,
+   "revenue": 21913050,
    "delivered": 283,
    "returned": 92,
    "unitsBoughtFromSupplier": 185,
    "returnedStock": 3,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 213,
     "lastChecked": "2026-11-04T15:02:33Z",
@@ -46335,6 +46335,11 @@
      1,
      1,
      33000
+    ],
+    "2026-11-04": [
+     1,
+     1,
+     33000
     ]
    },
    "7172": {
@@ -52969,10 +52974,29 @@
    "2026-11-01": 50,
    "2026-11-02": 48,
    "2026-11-03": 55,
-   "2026-11-04": 39
+   "2026-11-04": 40
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34285",
+   "d": "2026-11-04",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1840-murdum-2",
+     "pid": 726873,
+     "qty": 1,
+     "price": 33000,
+     "discPct": 0,
+     "del": 0,
+     "var": "عنابي / Murdum, 2"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34284",
    "d": "2026-11-04",
