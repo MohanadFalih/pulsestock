@@ -1,134 +1,45 @@
 #!/usr/bin/env python3
-"""READ-ONLY: where is a customer's welcome/loyalty credit stored in Odoo?
-
-Prints field and model names plus aggregate counts only — no customer data.
-"""
-import json
-import os
-import re
-import sys
-
+"""READ-ONLY: what rule set the VIP welcome credit? Aggregates only."""
+import collections, json, os, statistics, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from odoo_diag import Odoo, log  # noqa: E402
-
-PAT = re.compile(r"credit|wallet|loyal|point|balance|رصيد|ولاء|نقاط|ترحيب|vip|gold|tier|فئة|شريحة", re.I)
-
-
-def safe(fn, default=None):
-    try:
-        return fn()
-    except Exception as e:  # noqa: BLE001
-        return {"error": str(e)[:200]} if default is None else default
-
+from odoo_diag import Odoo  # noqa: E402
 
 def main():
-    odoo = Odoo(os.environ)
-    R = {}
-
-    pf = odoo.kw("res.partner", "fields_get", [],
-                 {"attributes": ["string", "type", "relation", "store",
-                                 "compute", "related"]})
-    R["partner_fields"] = {k: v for k, v in pf.items()
-                           if PAT.search(k) or PAT.search(v.get("string") or "")
-                           or k.startswith("x_")}
-
-    R["custom_models"] = safe(lambda: odoo.kw(
-        "ir.model", "search_read",
-        [["|", "|", ["model", "=like", "x_%"], ["state", "=", "manual"],
-          ["name", "ilike", "زبائن"]]],
-        {"fields": ["model", "name", "modules"], "limit": 200}))
-    R["crm_models"] = safe(lambda: odoo.kw(
-        "ir.model", "search_read",
-        [["|", "|", "|", ["modules", "ilike", "customer"],
-          ["modules", "ilike", "crm_"], ["name", "ilike", "علاقات"],
-          ["name", "ilike", "حملة"]]],
-        {"fields": ["model", "name", "modules"], "limit": 200}))
-
-    R["loyalty_programs"] = safe(lambda: odoo.kw(
-        "loyalty.program", "search_read", [[]],
-        {"fields": ["name", "program_type", "active", "applies_on",
-                    "trigger", "portal_point_name", "date_to"],
-         "context": {"active_test": False}, "limit": 100}))
-    R["loyalty_cards_by_program"] = safe(lambda: odoo.kw(
-        "loyalty.card", "read_group",
-        [[["partner_id", "!=", False]], ["points:sum"], ["program_id"]],
-        {"lazy": False}))
-    R["loyalty_cards_positive"] = safe(lambda: odoo.kw(
-        "loyalty.card", "read_group",
-        [[["partner_id", "!=", False], ["points", ">", 0]], ["points:sum"],
-          ["program_id"]], {"lazy": False}))
-    R["loyalty_card_fields"] = safe(lambda: {
-        k: v.get("string") for k, v in odoo.kw(
-            "loyalty.card", "fields_get", [],
-            {"attributes": ["string"]}).items()})
-
-    # Fields on every custom model that look like credit/segment.
-    for m in (R["custom_models"] if isinstance(R["custom_models"], list)
-              else [])[:40]:
-        f = safe(lambda: odoo.kw(m["model"], "fields_get", [],
-                                 {"attributes": ["string", "type",
-                                                 "relation"]}), {})
-        R.setdefault("custom_model_fields", {})[m["model"]] = {
-            k: [v.get("string"), v.get("type"), v.get("relation")]
-            for k, v in f.items()
-            if k.startswith("x_") or PAT.search(k)
-            or PAT.search(v.get("string") or "")}
-        R.setdefault("custom_model_counts", {})[m["model"]] = safe(
-            lambda: odoo.kw(m["model"], "search_count", [[]]), -1)
-
-    R["partner_tags"] = safe(lambda: odoo.kw(
-        "res.partner.category", "search_read", [[]],
-        {"fields": ["name", "partner_ids"], "limit": 200}))
-    if isinstance(R["partner_tags"], list):
-        R["partner_tags"] = {t["name"]: len(t["partner_ids"])
-                             for t in R["partner_tags"]}
-
-    R2 = {}
-    R2["partner_welcome_by_value"] = safe(lambda: [
-        (g.get("deniz_crm_welcome_credit"), g["__count"]) for g in odoo.kw(
-            "res.partner", "read_group",
-            [[["deniz_crm_welcome_credit", ">", 0]], ["id:count"],
-             ["deniz_crm_welcome_credit"]], {"lazy": False})])
-    R2["card3_by_points"] = safe(lambda: [
-        (g.get("points"), g["__count"]) for g in odoo.kw(
-            "loyalty.card", "read_group",
-            [[["program_id", "=", 3]], ["id:count"], ["points"]],
-            {"lazy": False})])
-    R2["card3_expiry"] = safe(lambda: [
-        (g.get("expiration_date:day"), g["__count"]) for g in odoo.kw(
-            "loyalty.card", "read_group",
-            [[["program_id", "=", 3]], ["id:count"],
-             ["expiration_date:day"]], {"lazy": False})])
-    pids = safe(lambda: [c["partner_id"][0] for c in odoo.kw(
-        "loyalty.card", "search_read", [[["program_id", "=", 3]]],
-        {"fields": ["partner_id"], "limit": 5000})], [])
-    R2["card3_partners"] = len(pids)
-    R2["card3_partner_field_match"] = safe(lambda: odoo.kw(
-        "res.partner", "search_count",
-        [[["id", "in", pids], ["deniz_crm_welcome_credit", ">", 0]]]))
-    R2["card3_partner_vip_tag"] = safe(lambda: odoo.kw(
-        "res.partner", "search_count",
-        [[["id", "in", pids], ["category_id.name", "=", "VIP"]]]))
-    R2["card3_tier"] = safe(lambda: [
-        (g.get("deniz_crm_tier"), g["__count"]) for g in odoo.kw(
-            "res.partner", "read_group",
-            [[["id", "in", pids]], ["id:count"], ["deniz_crm_tier"]],
-            {"lazy": False})])
-    R2["wa_accounts"] = safe(lambda: odoo.kw(
-        "whatsapp.account", "search_read", [[]],
-        {"fields": ["name", "phone_uid", "active"], "limit": 10}))
-    R2["wa_templates"] = safe(lambda: odoo.kw(
-        "whatsapp.template", "search_read", [[]],
-        {"fields": ["name", "template_name", "status", "model",
-                    "template_type", "quality"], "limit": 50}))
-    R2["wa_var_fields"] = safe(lambda: list(odoo.kw(
-        "whatsapp.template.variable", "fields_get", [],
-        {"attributes": ["string"]}).keys()))
-    R = R2
-    print("DIAG_JSON_BEGIN")
-    print(json.dumps(R, ensure_ascii=False, indent=1, default=str))
-    print("DIAG_JSON_END")
-
+    o = Odoo(os.environ)
+    cards = o.kw("loyalty.card", "search_read", [[["program_id", "=", 3]]],
+                 {"fields": ["partner_id", "points", "create_date"], "limit": 5000})
+    pf = ["x_dm_hist_orders", "x_dm_hist_spend", "x_dm_hist_last",
+          "deniz_crm_welcome_credit", "category_id"]
+    pid = sorted({c["partner_id"][0] for c in cards if c.get("partner_id")})
+    vip = o.kw("res.partner", "search", [[["category_id.name", "=", "VIP"]]])
+    allp = sorted(set(pid) | set(vip))
+    P = {}
+    for i in range(0, len(allp), 1000):
+        for p in o.kw("res.partner", "read", [allp[i:i+1000], pf]):
+            P[p["id"]] = p
+    by = collections.defaultdict(list)
+    for c in cards:
+        if c.get("partner_id"):
+            by[c["points"]].append(P.get(c["partner_id"][0], {}))
+    def summ(ps):
+        sp = [p.get("x_dm_hist_spend") or 0 for p in ps]
+        od = [p.get("x_dm_hist_orders") or 0 for p in ps]
+        q = lambda a: [round(x) for x in statistics.quantiles(a, n=4)] if len(a) > 3 else a
+        return {"n": len(ps), "spend_min": min(sp) if sp else 0, "spend_q": q(sp),
+                "spend_max": max(sp) if sp else 0, "orders_q": q(od),
+                "orders_min": min(od) if od else 0, "orders_max": max(od) if od else 0,
+                "ratio_q": q([c / s * 100 for c, s in zip([0]*0, [])]) }
+    R = {"cards": len(cards), "card_created_days": sorted(collections.Counter(
+        (c.get("create_date") or "")[:10] for c in cards).items()),
+         "by_points": {str(k): summ(v) for k, v in sorted(by.items())}}
+    # credit / spend ratio per card
+    rat = [c["points"] / (P[c["partner_id"][0]].get("x_dm_hist_spend") or 1) * 100
+           for c in cards if c.get("partner_id") and P.get(c["partner_id"][0], {}).get("x_dm_hist_spend")]
+    R["credit_pct_of_spend_q"] = [round(x, 2) for x in statistics.quantiles(rat, n=10)] if rat else []
+    nocard = [P[i] for i in vip if i not in set(pid)]
+    R["vip_without_card"] = summ(nocard)
+    R["vip_with_card"] = summ([P[i] for i in vip if i in set(pid)])
+    print("DIAG_JSON_BEGIN"); print(json.dumps(R, ensure_ascii=False, default=str)); print("DIAG_JSON_END")
 
 if __name__ == "__main__":
     main()
