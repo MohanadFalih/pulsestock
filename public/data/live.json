@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-04T23:33:00.312262+00:00",
+ "syncedAt": "2026-11-05T00:02:42.620656+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10000,20 +10000,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-08",
    "firstOrderDate": "2026-10-08",
-   "lastOrderDate": "2026-10-29",
-   "orders": 11,
-   "units": 12,
-   "revenue": 1188000,
+   "lastOrderDate": "2026-11-05",
+   "orders": 12,
+   "units": 13,
+   "revenue": 1287000,
    "delivered": 10,
    "returned": 0,
-   "unitsBoughtFromSupplier": 12,
+   "unitsBoughtFromSupplier": 13,
    "returnedStock": 0,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 128,
-    "lastChecked": "2026-11-04T15:18:27Z",
+    "qty": 127,
+    "lastChecked": "2026-11-04T23:49:36Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -10026,7 +10026,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "1",
-      "qty": 17,
+      "qty": 16,
       "product_id": 731057
      },
      {
@@ -14417,7 +14417,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 60,
-    "lastChecked": "2026-11-04T23:23:35Z",
+    "lastChecked": "2026-11-04T23:55:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -18990,20 +18990,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-07",
    "firstOrderDate": "2026-09-13",
-   "lastOrderDate": "2026-11-04",
-   "orders": 26,
-   "units": 25,
-   "revenue": 1822000,
+   "lastOrderDate": "2026-11-05",
+   "orders": 27,
+   "units": 26,
+   "revenue": 1896000,
    "delivered": 20,
    "returned": 3,
-   "unitsBoughtFromSupplier": 22,
+   "unitsBoughtFromSupplier": 23,
    "returnedStock": 2,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 1.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 79,
-    "lastChecked": "2026-11-04T15:46:27Z",
+    "qty": 78,
+    "lastChecked": "2026-11-04T23:49:36Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -19046,7 +19046,7 @@
      {
       "color": "نيلي / Laci",
       "size": "44",
-      "qty": 7,
+      "qty": 6,
       "product_id": 729483
      },
      {
@@ -38876,6 +38876,11 @@
      1,
      1,
      99000
+    ],
+    "2026-11-05": [
+     1,
+     1,
+     99000
     ]
    },
    "7397": {
@@ -41645,6 +41650,11 @@
      2,
      2,
      148000
+    ],
+    "2026-11-05": [
+     1,
+     1,
+     74000
     ]
    },
    "7309": {
@@ -52750,10 +52760,41 @@
    "2026-11-02": 48,
    "2026-11-03": 55,
    "2026-11-04": 48,
-   "2026-11-05": 6
+   "2026-11-05": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34300",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8023",
+     "pid": 731056,
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 4"
+    },
+    {
+     "sku": "H-1899-navy-1-54",
+     "pid": 729487,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 54"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34299",
    "d": "2026-11-05",
