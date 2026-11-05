@@ -139,9 +139,15 @@ export interface DayRaw {
   stRiskRev: number;
   stRiskCogs: number;
   riskOrders: number;
+  /** Turkey share of the order counts above (an order with any Turkey line). */
+  trDeliveredOrders: number;
+  trPendingOrders: number;
+  trRiskOrders: number;
   /** Pieces: kept (shipped, not returned), undecided by route, and kept
    *  pieces still expected to come back (projected). */
   keptQty: number;
+  trKeptQty: number;
+  trRiskQty: number;
   trPendQty: number;
   stPendQty: number;
   riskQty: number;
@@ -153,6 +159,9 @@ export interface DayRaw {
   estCogs: number;
   adsUSD: number;
   adsIQD: number;
+  /** Part of the ads above spent on stock-clearance campaigns. */
+  stAdsUSD: number;
+  stAdsIQD: number;
   fixed: Record<FixedGroup, number>;
   drawings: number;
 }
@@ -177,6 +186,19 @@ export interface Totals {
   fixedTotal: number;
   /** Gross margin + delivery − ads − shipping − commission − Selvim extras (before fixed costs). */
   contribution: number;
+  /** Split by business line. Turkey carries cargo, Selvim extras and all
+   *  fixed costs; stock clearance carries only its own margin, delivery,
+   *  commission and the ads of its campaigns. */
+  trDelivery: number;
+  stDelivery: number;
+  trAds: number;
+  stAds: number;
+  trCommission: number;
+  stCommission: number;
+  trContribution: number;
+  stContribution: number;
+  /** Turkey contribution − fixed costs. */
+  trNet: number;
   net: number;
   drawings: number;
   ordersPlaced: number;
@@ -435,7 +457,12 @@ export function buildProfitModel(
       stRiskRev: 0,
       stRiskCogs: 0,
       riskOrders: 0,
+      trDeliveredOrders: 0,
+      trPendingOrders: 0,
+      trRiskOrders: 0,
       keptQty: 0,
+      trKeptQty: 0,
+      trRiskQty: 0,
       trPendQty: 0,
       stPendQty: 0,
       riskQty: 0,
@@ -444,6 +471,8 @@ export function buildProfitModel(
       estCogs: 0,
       adsUSD: 0,
       adsIQD: 0,
+      stAdsUSD: 0,
+      stAdsIQD: 0,
       fixed: zeroFixed(),
       drawings: 0,
     });
@@ -459,16 +488,22 @@ export function buildProfitModel(
     const q = day.mature ? 0 : stillToReturn(daysBetween(o.d, today));
     let anyKept = false;
     let anyUndecided = false;
+    let isTurkey = false;
     const selvimDay = o.d >= RULES.selvim.since;
     for (const l of lines) {
       if (selvimDay && l.turkey && l.sku.trim().startsWith(RULES.selvim.prefix)) {
         day.selvimQty += l.orderedQty;
       }
+      if (l.turkey) isTurkey = true;
       const unitCostVal = l.cost ?? l.unitNet * fallbackCostRatio;
       if (l.keptQty > 0) {
         anyKept = true;
         day.keptQty += l.keptQty;
         day.riskQty += l.keptQty * q;
+        if (l.turkey) {
+          day.trKeptQty += l.keptQty;
+          day.trRiskQty += l.keptQty * q;
+        }
         const rev = l.unitNet * l.keptQty;
         const cogs = unitCostVal * l.keptQty;
         if (l.cost == null) day.estCogs += cogs;
@@ -502,8 +537,14 @@ export function buildProfitModel(
     if (anyKept) {
       day.deliveredOrders += 1;
       day.riskOrders += q;
+      if (isTurkey) {
+        day.trDeliveredOrders += 1;
+        day.trRiskOrders += q;
+      }
+    } else if (anyUndecided) {
+      day.pendingOrders += 1;
+      if (isTurkey) day.trPendingOrders += 1;
     }
-    else if (anyUndecided) day.pendingOrders += 1;
   }
 
   // 4. Ads.
@@ -515,6 +556,12 @@ export function buildProfitModel(
     day.adsUSD = usd;
     day.adsIQD = usd * adsRate(date);
     if (!lastMetaDay || date > lastMetaDay) lastMetaDay = date;
+  }
+  for (const [date, usd] of Object.entries(profit?.meta?.stockDaily ?? {})) {
+    const day = byDate.get(date);
+    if (!day) continue;
+    day.stAdsUSD = Math.min(usd, day.adsUSD || usd);
+    day.stAdsIQD = day.stAdsUSD * adsRate(date);
   }
 
   // 5. Cargo (Odoo 501115, on its posting day), drawings, and the owner's
@@ -574,6 +621,15 @@ export function emptyTotals(): Totals {
     fixed: zeroFixed(),
     fixedTotal: 0,
     contribution: 0,
+    trDelivery: 0,
+    stDelivery: 0,
+    trAds: 0,
+    stAds: 0,
+    trCommission: 0,
+    stCommission: 0,
+    trContribution: 0,
+    stContribution: 0,
+    trNet: 0,
     net: 0,
     drawings: 0,
     ordersPlaced: 0,
@@ -614,6 +670,20 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.contribution =
     t.trGross + t.stGross + t.delivery - t.ads - t.shipping - t.commission - t.selvim;
   t.net = t.contribution - t.fixedTotal;
+  // Business-line split (sums back to the totals above).
+  const trDelivered =
+    d.trDeliveredOrders + (p ? d.trPendingOrders * keep.orders - d.trRiskOrders : 0);
+  const trPieces = d.trKeptQty + (p ? d.trPendQty * keep.turkey - d.trRiskQty : 0);
+  t.trDelivery = trDelivered * RULES.deliveryNetPerOrder;
+  t.stDelivery = t.delivery - t.trDelivery;
+  t.stAds = d.stAdsIQD;
+  t.trAds = t.ads - t.stAds;
+  t.trCommission = trPieces * RULES.commissionPerPiece;
+  t.stCommission = t.commission - t.trCommission;
+  t.trContribution =
+    t.trGross + t.trDelivery - t.trAds - t.shipping - t.trCommission - t.selvim;
+  t.stContribution = t.stGross + t.stDelivery - t.stAds - t.stCommission;
+  t.trNet = t.trContribution - t.fixedTotal;
   t.drawings = d.drawings;
   t.ordersPlaced = d.ordersPlaced;
   t.deliveredOrders = delivered;
@@ -644,6 +714,15 @@ export function addTotals(a: Totals, b: Totals): Totals {
     fixed,
     fixedTotal: a.fixedTotal + b.fixedTotal,
     contribution: a.contribution + b.contribution,
+    trDelivery: a.trDelivery + b.trDelivery,
+    stDelivery: a.stDelivery + b.stDelivery,
+    trAds: a.trAds + b.trAds,
+    stAds: a.stAds + b.stAds,
+    trCommission: a.trCommission + b.trCommission,
+    stCommission: a.stCommission + b.stCommission,
+    trContribution: a.trContribution + b.trContribution,
+    stContribution: a.stContribution + b.stContribution,
+    trNet: a.trNet + b.trNet,
     net: a.net + b.net,
     drawings: a.drawings + b.drawings,
     ordersPlaced: a.ordersPlaced + b.ordersPlaced,
