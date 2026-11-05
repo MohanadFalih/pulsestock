@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-05T18:32:35.372826+00:00",
+ "syncedAt": "2026-11-05T19:02:53.019074+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3146,19 +3146,19 @@
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-05",
-   "orders": 22,
-   "units": 23,
-   "revenue": 1863000,
+   "orders": 23,
+   "units": 24,
+   "revenue": 1944000,
    "delivered": 11,
    "returned": 1,
-   "unitsBoughtFromSupplier": 23,
+   "unitsBoughtFromSupplier": 24,
    "returnedStock": 1,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 2.71,
+   "orderVelocity7d": 2.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 95,
-    "lastChecked": "2026-11-05T16:39:09Z",
+    "qty": 94,
+    "lastChecked": "2026-11-05T18:51:54Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3309,7 +3309,7 @@
      {
       "color": "أسود / Siyah",
       "size": "11",
-      "qty": 3,
+      "qty": 2,
       "product_id": 732225
      },
      {
@@ -14477,14 +14477,14 @@
    "revenue": 396000,
    "delivered": 2,
    "returned": 1,
-   "unitsBoughtFromSupplier": 4,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 1,
    "unitPrice": 80000.0,
    "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 353,
-    "lastChecked": "2026-11-05T15:17:15Z",
+    "qty": 354,
+    "lastChecked": "2026-11-05T18:39:14Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14539,7 +14539,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 15,
+      "qty": 16,
       "product_id": 730444
      },
      {
@@ -38329,9 +38329,9 @@
      81000
     ],
     "2026-11-05": [
-     2,
-     2,
-     162000
+     3,
+     3,
+     243000
     ]
    },
    "7477": {
@@ -53373,10 +53373,31 @@
    "2026-11-02": 48,
    "2026-11-03": 55,
    "2026-11-04": 48,
-   "2026-11-05": 38
+   "2026-11-05": 39
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34335",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732228,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 11"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34334",
    "d": "2026-11-05",
