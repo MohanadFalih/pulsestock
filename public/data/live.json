@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-05T20:32:49.907610+00:00",
+ "syncedAt": "2026-11-05T20:47:16.071754+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3151,7 +3151,7 @@
    "revenue": 2025000,
    "delivered": 11,
    "returned": 1,
-   "unitsBoughtFromSupplier": 24,
+   "unitsBoughtFromSupplier": 25,
    "returnedStock": 1,
    "unitPrice": 81000.0,
    "orderVelocity7d": 3.0,
@@ -35293,32 +35293,32 @@
    "odooCreatedDate": "2025-10-08",
    "firstOrderDate": "2025-10-16",
    "lastOrderDate": "2026-11-05",
-   "orders": 673,
-   "units": 708,
-   "revenue": 34464000,
+   "orders": 674,
+   "units": 709,
+   "revenue": 34547000,
    "delivered": 700,
    "returned": 124,
-   "unitsBoughtFromSupplier": 590,
+   "unitsBoughtFromSupplier": 591,
    "returnedStock": 0,
    "unitPrice": 83000.0,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 230,
-    "lastChecked": "2026-11-05T16:29:57Z",
+    "qty": 228,
+    "lastChecked": "2026-11-05T20:40:05Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "أسود / Siyah",
       "size": "1",
-      "qty": 25,
+      "qty": 24,
       "product_id": 674002
      },
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 22,
+      "qty": 21,
       "product_id": 674649
      },
      {
@@ -52038,9 +52038,9 @@
      166000
     ],
     "2026-11-05": [
-     4,
-     4,
-     332000
+     5,
+     5,
+     415000
     ]
    },
    "5920": {
@@ -53373,10 +53373,31 @@
    "2026-11-02": 48,
    "2026-11-03": 55,
    "2026-11-04": 48,
-   "2026-11-05": 40
+   "2026-11-05": 41
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34337",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1729",
+     "pid": 674649,
+     "qty": 1,
+     "price": 83000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 3"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34336",
    "d": "2026-11-05",
