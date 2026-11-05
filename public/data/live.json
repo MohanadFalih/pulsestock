@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-05T14:33:01.367266+00:00",
+ "syncedAt": "2026-11-05T15:03:01.174374+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3074,7 +3074,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 36,
-    "lastChecked": "2026-11-05T14:24:49Z",
+    "lastChecked": "2026-11-05T14:55:00Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -17660,14 +17660,14 @@
    "revenue": 3872700,
    "delivered": 40,
    "returned": 11,
-   "unitsBoughtFromSupplier": 34,
+   "unitsBoughtFromSupplier": 35,
    "returnedStock": 5,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 569,
-    "lastChecked": "2026-11-04T15:10:31Z",
+    "lastChecked": "2026-11-05T14:38:29Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -17716,7 +17716,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 57,
+      "qty": 56,
       "product_id": 729786
      },
      {
@@ -17746,7 +17746,7 @@
      {
       "color": "نيلي / Laci",
       "size": "1",
-      "qty": 33,
+      "qty": 34,
       "product_id": 729783
      },
      {
@@ -32636,20 +32636,20 @@
    "sku": "M-6264BSK463",
    "category": "All",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "completed",
    "odooCreatedDate": "2025-12-20",
    "firstOrderDate": "2025-12-20",
-   "lastOrderDate": "2026-10-31",
-   "orders": 6,
-   "units": 6,
-   "revenue": 302000,
-   "delivered": 6,
-   "returned": 5,
-   "unitsBoughtFromSupplier": 2,
-   "returnedStock": 1,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "lastOrderDate": "2025-12-20",
+   "orders": 1,
+   "units": 1,
+   "revenue": 56000,
+   "delivered": 1,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 0,
+   "unitPrice": 102000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 320,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37503,34 +37503,6 @@
    }
   },
   {
-   "odooId": 4603,
-   "name": "L-9999",
-   "sku": "L-9999",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "ads-live",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-11-04",
-   "orders": 6,
-   "units": 7,
-   "revenue": 321000,
-   "delivered": 6,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 4,
-   "returnedStock": 3,
-   "unitPrice": 76000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
    "odooId": 4518,
    "name": "L-1153",
    "sku": "L-1153",
@@ -37752,6 +37724,34 @@
    }
   },
   {
+   "odooId": 4603,
+   "name": "L-9999",
+   "sku": "L-9999",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "ads-live",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-14",
+   "lastOrderDate": "2026-11-04",
+   "orders": 6,
+   "units": 7,
+   "revenue": 321000,
+   "delivered": 6,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 4,
+   "returnedStock": 3,
+   "unitPrice": 76000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 1,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
    "odooId": 4513,
    "name": "L-0707",
    "sku": "L-0707",
@@ -37865,9 +37865,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1556,
-  "stockValue": 45999535,
-  "stockVariants": 1231
+  "stockUnits": 1555,
+  "stockValue": 45936973,
+  "stockVariants": 1230
  },
  "daily": {
   "days": 90,
@@ -50768,18 +50768,6 @@
      39000
     ]
    },
-   "6512": {
-    "2026-10-14": [
-     1,
-     1,
-     39000
-    ],
-    "2026-10-31": [
-     1,
-     1,
-     39000
-    ]
-   },
    "6510": {
     "2026-09-30": [
      1,
@@ -52563,13 +52551,6 @@
      59000
     ]
    },
-   "4603": {
-    "2026-11-04": [
-     1,
-     1,
-     25000
-    ]
-   },
    "4518": {
     "2026-09-06": [
      1,
@@ -52587,6 +52568,13 @@
      0
     ],
     "2026-10-26": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4603": {
+    "2026-11-04": [
      1,
      1,
      25000
@@ -220737,9 +220725,138 @@
   {
    "sku": "M-6264BSK463",
    "model": "M-6264BSK463",
-   "qty": 1,
-   "cost": 62562,
-   "created": "2025-12-20"
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 61696,
+   "created": "2026-11-05",
+   "costSrc": "vendor"
   },
   {
    "sku": "M-6899S324",
@@ -231256,6 +231373,13 @@
    "qty": 0,
    "cost": 0,
    "created": "2026-10-19"
+  },
+  {
+   "sku": "M-6264BSK463",
+   "model": "M-6264BSK463",
+   "qty": 0,
+   "cost": 62562,
+   "created": "2025-12-20"
   }
  ]
 }
