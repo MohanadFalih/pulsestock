@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-05T20:02:28.285368+00:00",
+ "syncedAt": "2026-11-05T20:32:49.907610+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3146,19 +3146,19 @@
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-05",
-   "orders": 23,
-   "units": 24,
-   "revenue": 1944000,
+   "orders": 24,
+   "units": 25,
+   "revenue": 2025000,
    "delivered": 11,
    "returned": 1,
    "unitsBoughtFromSupplier": 24,
    "returnedStock": 1,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 2.86,
+   "orderVelocity7d": 3.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 94,
-    "lastChecked": "2026-11-05T18:51:54Z",
+    "qty": 93,
+    "lastChecked": "2026-11-05T20:30:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3327,7 +3327,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "11",
-      "qty": 4,
+      "qty": 3,
       "product_id": 732228
      }
     ]
@@ -38329,9 +38329,9 @@
      81000
     ],
     "2026-11-05": [
-     3,
-     3,
-     243000
+     4,
+     4,
+     324000
     ]
    },
    "7477": {
@@ -53373,10 +53373,31 @@
    "2026-11-02": 48,
    "2026-11-03": 55,
    "2026-11-04": 48,
-   "2026-11-05": 39
+   "2026-11-05": 40
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34336",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732226,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 11"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34335",
    "d": "2026-11-05",
