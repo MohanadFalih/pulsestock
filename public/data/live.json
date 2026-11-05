@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-05T12:38:51.736109+00:00",
+ "syncedAt": "2026-11-05T13:02:59.394054+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -6623,19 +6623,19 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-05",
-   "orders": 16,
-   "units": 16,
-   "revenue": 1248000,
+   "orders": 17,
+   "units": 17,
+   "revenue": 1326000,
    "delivered": 13,
    "returned": 1,
-   "unitsBoughtFromSupplier": 16,
+   "unitsBoughtFromSupplier": 17,
    "returnedStock": 1,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.0,
+   "orderVelocity7d": 1.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 103,
-    "lastChecked": "2026-11-05T10:13:20Z",
+    "qty": 102,
+    "lastChecked": "2026-11-05T12:54:53Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6780,7 +6780,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "46",
-      "qty": 5,
+      "qty": 4,
       "product_id": 731672
      },
      {
@@ -34392,20 +34392,20 @@
    "sku": "L-1320",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-10-23",
    "firstOrderDate": "2025-10-23",
-   "lastOrderDate": "2026-08-17",
-   "orders": 487,
-   "units": 538,
-   "revenue": 20620000,
+   "lastOrderDate": "2026-11-05",
+   "orders": 488,
+   "units": 539,
+   "revenue": 20645000,
    "delivered": 537,
    "returned": 113,
    "unitsBoughtFromSupplier": 428,
    "returnedStock": 1,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 80,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -34961,19 +34961,19 @@
    "odooCreatedDate": "2025-10-08",
    "firstOrderDate": "2025-10-16",
    "lastOrderDate": "2026-11-05",
-   "orders": 670,
-   "units": 705,
-   "revenue": 34215000,
+   "orders": 671,
+   "units": 706,
+   "revenue": 34298000,
    "delivered": 700,
    "returned": 124,
    "unitsBoughtFromSupplier": 587,
    "returnedStock": 0,
    "unitPrice": 83000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 234,
-    "lastChecked": "2026-11-05T08:43:57Z",
+    "qty": 232,
+    "lastChecked": "2026-11-05T13:00:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -34986,7 +34986,7 @@
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 24,
+      "qty": 23,
       "product_id": 674649
      },
      {
@@ -34998,7 +34998,7 @@
      {
       "color": "بيج / Bej",
       "size": "3",
-      "qty": 46,
+      "qty": 45,
       "product_id": 676226
      },
      {
@@ -38487,9 +38487,9 @@
      78000
     ],
     "2026-11-05": [
-     2,
-     2,
-     156000
+     3,
+     3,
+     234000
     ]
    },
    "7432": {
@@ -51435,6 +51435,11 @@
      1,
      1,
      59000
+    ],
+    "2026-11-05": [
+     1,
+     1,
+     25000
     ]
    },
    "6088": {
@@ -51683,9 +51688,9 @@
      166000
     ],
     "2026-11-05": [
-     1,
-     1,
-     83000
+     2,
+     2,
+     166000
     ]
    },
    "5920": {
@@ -53018,10 +53023,71 @@
    "2026-11-02": 48,
    "2026-11-03": 55,
    "2026-11-04": 48,
-   "2026-11-05": 24
+   "2026-11-05": 27
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34323",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1729",
+     "pid": 676228,
+     "qty": 1,
+     "price": 83000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "بيج / Bej, 2"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34322",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1320-navy-1-1",
+     "pid": 676235,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "نيلي / Laci, 1"
+    }
+   ],
+   "src": "Instagram"
+  },
+  {
+   "id": "S34321",
+   "d": "2026-11-05",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1938",
+     "pid": 731670,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 42"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34320",
    "d": "2026-11-05",
