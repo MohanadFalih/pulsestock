@@ -224,6 +224,69 @@ function KpiRow({ t }: { t: Totals }) {
   );
 }
 
+// ─── Turkey vs stock clearance ───────────────────────────────────────────────
+
+function SplitTable({ t }: { t: Totals }) {
+  const perDay = (n: number) => iqd(n / Math.max(1, t.days));
+  const rows: { label: string; tr: number; st: number; strong?: boolean }[] = [
+    { label: "Revenue", tr: t.trRev, st: t.stRev },
+    { label: "Gross margin", tr: t.trGross, st: t.stGross },
+    { label: "Delivery (+1,000 / order)", tr: t.trDelivery, st: t.stDelivery },
+    { label: "Meta ads", tr: -t.trAds, st: -t.stAds },
+    { label: "Cargo + Selvim extras", tr: -(t.shipping + t.selvim), st: 0 },
+    { label: "Sales commission", tr: -t.trCommission, st: -t.stCommission },
+    { label: "= Before fixed costs", tr: t.trContribution, st: t.stContribution, strong: true },
+    { label: "Fixed costs (Turkey pays them)", tr: -t.fixedTotal, st: 0 },
+    { label: "= Profit", tr: t.trNet, st: t.stContribution, strong: true },
+  ];
+  const num = "text-right font-mono text-[13px] tnum";
+  const tone = (n: number) => (n < 0 ? "text-neg" : "text-text-primary");
+  return (
+    <section className="rounded-xl border border-hairline bg-panel p-5">
+      <h2 className="font-display text-[15px] font-semibold text-text-primary">Turkey vs stock clearance</h2>
+      <p className="text-[11.5px] text-text-muted">
+        Turkey = orders bought from suppliers (the real business). Stock = warehouse pieces sold off. Turkey carries
+        cargo, Selvim extras and all fixed costs; stock carries its own ads (LAST PIECES / liquidation campaigns).
+        Stock profit is measured against Odoo cost, which is already paid — selling below it still brings cash in.
+      </p>
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[420px] border-collapse">
+          <thead>
+            <tr className="text-[11px] uppercase tracking-[1px] text-text-muted">
+              <th className="py-1.5 text-left font-semibold"></th>
+              <th className="py-1.5 text-right font-semibold">Turkey</th>
+              <th className="py-1.5 text-right font-semibold">Stock clearance</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.label} className={cn("border-t border-hairline", r.strong && "bg-inset")}>
+                <td className={cn("py-1.5 pl-2 text-[13px]", r.strong ? "font-semibold text-text-primary" : "text-text-secondary")}>
+                  {r.label}
+                </td>
+                <td className={cn(num, "py-1.5", tone(r.tr), r.strong && "font-semibold")}>{iqd(r.tr)}</td>
+                <td className={cn(num, "py-1.5 pr-2", tone(r.st), r.strong && "font-semibold")}>{iqd(r.st)}</td>
+              </tr>
+            ))}
+            <tr className="border-t border-hairline text-[12px] text-text-muted">
+              <td className="py-1.5 pl-2">Cash in (revenue + delivery − ads − commission)</td>
+              <td className={cn(num, "py-1.5 text-[12px]")}>—</td>
+              <td className={cn(num, "py-1.5 pr-2 text-[12px]")}>
+                {iqd(t.stRev + t.stDelivery - t.stAds - t.stCommission)}
+              </td>
+            </tr>
+            <tr className="border-t border-hairline text-[12px] text-text-muted">
+              <td className="py-1.5 pl-2">Profit per day</td>
+              <td className={cn(num, "py-1.5 text-[12px]")}>{perDay(t.trNet)}</td>
+              <td className={cn(num, "py-1.5 pr-2 text-[12px]")}>{perDay(t.stContribution)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 // ─── P&L ladder ──────────────────────────────────────────────────────────────
 
 function Ladder({ t, model }: { t: Totals; model: ProfitModel }) {
@@ -603,6 +666,7 @@ export default function Profit() {
       ) : (
         <div className="space-y-4">
           <KpiRow t={totals} />
+          <SplitTable t={totals} />
           <div className="grid gap-4 xl:grid-cols-[1.6fr_1fr]">
             <Ladder t={totals} model={model} />
             <Notes t={totals} model={model} />

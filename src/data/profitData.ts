@@ -48,6 +48,9 @@ export interface ProfitMeta {
   skuSince?: string;
   /** SKU → campaigns it ran in over the last 7 complete days. */
   skuCampaigns7d?: Record<string, { campaign: string; spend: number; conv: number }[]>;
+  /** date → USD spent on stock-clearance campaigns (LAST PIECES / LIQU). */
+  stockDaily?: Record<string, number>;
+  stockCampaigns?: string[];
 }
 
 export interface ProfitPayload {

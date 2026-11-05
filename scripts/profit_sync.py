@@ -205,6 +205,8 @@ def fetch_odoo(today):
 # Per-SKU ad spend is fetched from this day on (budget experiment starts
 # 2026-10-22; one baseline week before it).
 SKU_SINCE = "2026-10-15"
+# Campaigns that sell warehouse stock (returns) rather than Turkey orders.
+STOCK_CAMPAIGN_RE = re.compile(r"LAST\s*PIECES|LIQU|تصفي", re.I)
 SKU_RE = re.compile(r"([A-Za-z]{1,4}-\d{3,6})")   # same as meta_campaigns.py
 CONVO_TYPES = ("onsite_conversion.messaging_conversation_started_7d",
                "messaging_conversation_started")
@@ -262,6 +264,25 @@ def fetch_meta(today):
                      "purch": round(_action(row.get("actions"), PURCHASE_TYPES))}
     log(f"  {len(daily)} days of Meta spend")
 
+    # Campaign level, per day: spend of stock-clearance campaigns, so the
+    # profit page can charge it to stock instead of Turkey.
+    stock_daily, stock_names = {}, set()
+    try:
+        camp_rows = _meta_rows(account, token, {
+            "level": "campaign", "time_increment": "1",
+            "fields": "campaign_name,spend",
+            "time_range": json.dumps({"since": SINCE, "until": today})})
+        for row in camp_rows:
+            name = row.get("campaign_name") or ""
+            spend = float(row.get("spend") or 0)
+            if spend > 0 and STOCK_CAMPAIGN_RE.search(name):
+                d = row["date_start"]
+                stock_daily[d] = round(stock_daily.get(d, 0.0) + spend, 2)
+                stock_names.add(name)
+        log(f"  stock-clearance ad spend: {len(stock_daily)} days, {sorted(stock_names)}")
+    except Exception as e:                       # never lose the account half
+        log(f"  stock campaign spend failed: {e}")
+
     # Ad level, per day, since SKU_SINCE: spend split across the SKUs named
     # in each ad (equal shares); ads naming no SKU go to "OTHER".
     sku_daily = {}
@@ -298,6 +319,8 @@ def fetch_meta(today):
     return {"error": None, "currency": "USD", "since": SINCE,
             "tz": "ad account timezone", "daily": dict(sorted(daily.items())),
             "detail": dict(sorted(detail.items())),
+            "stockDaily": dict(sorted(stock_daily.items())),
+            "stockCampaigns": sorted(stock_names),
             "skuSince": SKU_SINCE, "skuDaily": dict(sorted(sku_daily.items())),
             "skuCampaigns7d": {s: [{"campaign": k, "spend": round(v["spend"], 2), "conv": round(v["conv"])}
                                    for k, v in sorted(cs.items(), key=lambda x: -x[1]["spend"])]
