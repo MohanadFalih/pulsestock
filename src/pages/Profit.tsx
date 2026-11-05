@@ -52,10 +52,10 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const FIXED_LABEL: Record<FixedGroup, string> = {
   salaries: "Salaries (fixed)",
-  agent: "Turkey agent (450k / week)",
+  agent: "Turkey (agent + running costs)",
   rent: "Rent",
   utilities: "Electricity · internet · subscriptions",
-  other: "Other (sundries, packaging)",
+  other: "Other (to Oct: fixed 1M · from Nov: Odoo other accounts)",
 };
 
 /** Signed compact IQD: 12,400,000 → "12.4M", −850,000 → "−850,000". */
@@ -493,7 +493,8 @@ function Notes({ t, model }: { t: Totals; model: ProfitModel }) {
           )}% of ordered value`,
           "Goods cost from delivered lines × Odoo average cost — not from Odoo's COGS account",
           "Ads: Meta daily spend × 1,380 IQD until 5 Oct 2026, × 1,600 from 6 Oct",
-          "Fixed costs per month: salaries 4.4M · rent 1.7M · electricity, internet & subscriptions 670k · other 1M — spread evenly over the month's days. Turkey agent 450k / week",
+          "Fixed costs per month until Oct 2026: salaries 4.4M · rent 1.7M · electricity, internet & subscriptions 670k · other 1M · Turkey agent 450k / week",
+          "From Nov 2026: salaries 2.6M · rent 1.7M · electricity, internet & subscriptions 377k · Turkey agent 460k / week + Turkey running costs 1.36M · other = whatever Odoo posts on other expense accounts — all spread evenly over the month's days",
           "Cargo from Odoo (501115) on the day it is posted · sales commission 1,500 IQD per kept piece",
           "Modaselvim (M-, from 1 Nov 2026): broker 1$ + Turkish local cargo = 1,815 IQD per piece ordered from Turkey, on top of the supplier cost in Odoo",
           `Orders older than ${RULES.matureAfterDays} days are final. Odoo marks an order delivered when it goes to the courier; projected mode removes the refusals still expected to come back`,

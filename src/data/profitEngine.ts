@@ -20,12 +20,15 @@
  *                          (1,380 IQD/$ until 2026-10-05, 1,600 from 10-06).
  *   Cargo / shipping       Odoo account 501115, on the day it is posted.
  *   Sales commission       1,500 IQD per kept (delivered) piece.
- *   Fixed costs            the owner's monthly table (RULES.fixedMonthly),
- *                          spread evenly over each month's days, plus the
- *                          Turkey agent at a weekly rate (÷ 7 per day). Odoo's
- *                          salary / agent / other expense accounts are NOT
- *                          used: they follow the posting date (e.g. September
- *                          salaries paid on 1 October), not the month served.
+ *   Fixed costs            the owner's monthly table (RULES.fixedTables,
+ *                          versioned by date), spread evenly over each month's
+ *                          days, plus the Turkey agent at a weekly rate (÷ 7
+ *                          per day). Odoo's salary / agent expense accounts
+ *                          are NOT used: they follow the posting date (e.g.
+ *                          September salaries paid on 1 October), not the
+ *                          month served. From Nov 2026 there is no fixed
+ *                          "other": Odoo's other expense accounts are charged
+ *                          on their posting day.
  *   Drawings               shareholder debt repayments (ابو سلطان) — reported,
  *                          never subtracted from profit.
  *
@@ -47,16 +50,34 @@ import type { ProfitPayload } from "@/data/profitData";
 
 export const RULES = {
   rentMonthlyIQD: 1_700_000,
-  /** Owner's fixed-cost table (Oct 2026), IQD per month. Totals only — this
-   *  repo is public, so no per-person figures. */
-  fixedMonthly: {
-    salaries: 4_400_000, // fixed-salary staff in Baghdad
-    rent: 1_700_000,
-    utilities: 670_000, // electricity 300k + internet 70k + subscriptions 300k
-    other: 1_000_000, // Turkey + Baghdad sundries, packaging
-  },
-  /** Turkey agent, IQD per week. */
-  agentWeeklyIQD: 450_000,
+  /** Owner's fixed-cost table, IQD, versioned by the first day it applies.
+   *  Totals only — this repo is public, so no per-person figures.
+   *  `turkeyMonthly` (car rent, insurance, running costs) and the agent's
+   *  weekly pay together form the "Turkey" line. When `otherFromOdoo` is
+   *  true there is no fixed "other" amount: whatever is posted on Odoo's
+   *  other expense accounts is charged on its posting day instead. */
+  fixedTables: [
+    {
+      from: "2026-06-01", // Oct 2026 table, applied to every month up to Oct
+      salaries: 4_400_000,
+      rent: 1_700_000,
+      utilities: 670_000, // electricity 300k + internet 70k + subscriptions 300k
+      other: 1_000_000, // Turkey + Baghdad sundries, packaging
+      agentWeekly: 450_000,
+      turkeyMonthly: 0,
+      otherFromOdoo: false,
+    },
+    {
+      from: "2026-11-01",
+      salaries: 2_600_000,
+      rent: 1_700_000,
+      utilities: 377_000, // electricity 100k + internet 40$ + subscriptions (Zapier 73$ + other 50$), at 1,700
+      other: 0,
+      agentWeekly: 460_000, // lira pay converted at 48 TRY/$ × 1,700
+      turkeyMonthly: 1_360_000, // ~800$ × 1,700: rented car, insurance, running costs
+      otherFromOdoo: true,
+    },
+  ],
   /** Sales team commission per kept piece, IQD. */
   commissionPerPiece: 1_500,
   /** Modaselvim (codes "M-", Turkey route, from 1 Nov 2026): the broker takes
@@ -75,6 +96,15 @@ export const RULES = {
   /** Earliest day the page may start (profit_sync.py SINCE). */
   since: "2026-06-01",
 } as const;
+
+export type FixedTable = (typeof RULES.fixedTables)[number];
+
+/** The fixed-cost table in force on a given day (YYYY-MM-DD). */
+export function fixedTableFor(date: string): FixedTable {
+  let t: FixedTable = RULES.fixedTables[0];
+  for (const x of RULES.fixedTables) if (date >= x.from) t = x;
+  return t;
+}
 
 /** IQD per USD paid for Meta ads on a given day. */
 export function adsRate(date: string): number {
@@ -496,14 +526,14 @@ export function buildProfitModel(
     day.shipping += row.shipping ?? 0;
     day.drawings += row.drawings ?? 0;
   }
-  const F = RULES.fixedMonthly;
   for (const day of days) {
+    const F = fixedTableFor(day.date);
     const dim = daysInMonth(day.date.slice(0, 7));
     day.fixed.salaries = F.salaries / dim;
     day.fixed.rent = F.rent / dim;
     day.fixed.utilities = F.utilities / dim;
-    day.fixed.other = F.other / dim;
-    day.fixed.agent = RULES.agentWeeklyIQD / 7;
+    day.fixed.other = F.otherFromOdoo ? odooDaily[day.date]?.other ?? 0 : F.other / dim;
+    day.fixed.agent = F.agentWeekly / 7 + F.turkeyMonthly / dim;
   }
 
   return {
