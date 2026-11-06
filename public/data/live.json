@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-06T20:02:47.818927+00:00",
+ "syncedAt": "2026-11-06T20:32:24.144866+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -190,7 +190,7 @@
    "revenue": 142000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 71000.0,
    "orderVelocity7d": 0.29,
@@ -1311,15 +1311,15 @@
    "odooCreatedDate": "2026-11-04",
    "firstOrderDate": "2026-11-04",
    "lastOrderDate": "2026-11-06",
-   "orders": 3,
-   "units": 3,
-   "revenue": 228000,
+   "orders": 4,
+   "units": 5,
+   "revenue": 380000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.43,
+   "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -1945,7 +1945,7 @@
    "revenue": 76000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.14,
@@ -5074,19 +5074,19 @@
    "odooCreatedDate": "2026-10-24",
    "firstOrderDate": "2026-10-25",
    "lastOrderDate": "2026-11-06",
-   "orders": 90,
-   "units": 102,
-   "revenue": 8160000,
+   "orders": 91,
+   "units": 103,
+   "revenue": 8240000,
    "delivered": 23,
    "returned": 7,
-   "unitsBoughtFromSupplier": 95,
+   "unitsBoughtFromSupplier": 96,
    "returnedStock": 4,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 7.71,
+   "orderVelocity7d": 7.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 140,
-    "lastChecked": "2026-11-06T17:17:10Z",
+    "qty": 139,
+    "lastChecked": "2026-11-06T20:26:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5153,7 +5153,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 5,
+      "qty": 4,
       "product_id": 731947
      },
      {
@@ -35594,21 +35594,21 @@
    "revenue": 28689000,
    "delivered": 863,
    "returned": 182,
-   "unitsBoughtFromSupplier": 717,
+   "unitsBoughtFromSupplier": 718,
    "returnedStock": 7,
    "unitPrice": 39000.0,
    "orderVelocity7d": 3.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 311,
-    "lastChecked": "2026-11-06T15:45:33Z",
+    "qty": 310,
+    "lastChecked": "2026-11-06T20:05:19Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "فيزون / Vizon",
       "size": "STD",
-      "qty": 12,
+      "qty": 11,
       "product_id": 672394
      },
      {
@@ -38202,9 +38202,9 @@
      76000
     ],
     "2026-11-06": [
-     1,
-     1,
-     76000
+     2,
+     3,
+     228000
     ]
    },
    "7500": {
@@ -38545,9 +38545,9 @@
      480000
     ],
     "2026-11-06": [
-     7,
-     7,
-     560000
+     8,
+     8,
+     640000
     ]
    },
    "7462": {
@@ -53358,10 +53358,51 @@
    "2026-11-03": 55,
    "2026-11-04": 48,
    "2026-11-05": 41,
-   "2026-11-06": 46
+   "2026-11-06": 47
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34384",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1945",
+     "pid": 731945,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    },
+    {
+     "sku": "M-257NZRK1200",
+     "pid": 732715,
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 1"
+    },
+    {
+     "sku": "M-257NZRK1200",
+     "pid": 732723,
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أحمر / Bordo, 1"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34383",
    "d": "2026-11-06",
