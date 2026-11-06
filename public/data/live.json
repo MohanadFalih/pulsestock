@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-06T08:32:19.629531+00:00",
+ "syncedAt": "2026-11-06T09:02:41.444330+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -38,20 +38,20 @@
    "sku": "M-0259NZRK1200",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-06",
+   "lastOrderDate": "2026-11-06",
+   "orders": 1,
+   "units": 1,
+   "revenue": 71000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38072,6 +38072,13 @@
   "from": "2026-08-08",
   "to": "2026-11-06",
   "byProduct": {
+   "7515": {
+    "2026-11-06": [
+     1,
+     1,
+     71000
+    ]
+   },
    "7512": {
     "2026-11-05": [
      1,
@@ -53153,10 +53160,31 @@
    "2026-11-03": 55,
    "2026-11-04": 48,
    "2026-11-05": 41,
-   "2026-11-06": 9
+   "2026-11-06": 10
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34348",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-0259NZRK1200",
+     "pid": 733029,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 2"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34347",
    "d": "2026-11-06",
