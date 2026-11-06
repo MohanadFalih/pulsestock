@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-06T10:02:46.524361+00:00",
+ "syncedAt": "2026-11-06T10:32:57.144193+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -13557,20 +13557,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-30",
    "firstOrderDate": "2026-10-01",
-   "lastOrderDate": "2026-11-01",
-   "orders": 26,
-   "units": 28,
-   "revenue": 2115000,
+   "lastOrderDate": "2026-11-06",
+   "orders": 27,
+   "units": 29,
+   "revenue": 2191000,
    "delivered": 28,
    "returned": 4,
-   "unitsBoughtFromSupplier": 25,
+   "unitsBoughtFromSupplier": 26,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 116,
-    "lastChecked": "2026-11-05T15:24:08Z",
+    "lastChecked": "2026-11-06T10:26:54Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -24152,20 +24152,20 @@
    "sku": "T-7069",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-28",
    "firstOrderDate": "2026-07-28",
-   "lastOrderDate": "2026-10-24",
-   "orders": 36,
-   "units": 41,
-   "revenue": 3951100,
+   "lastOrderDate": "2026-11-06",
+   "orders": 37,
+   "units": 42,
+   "revenue": 3987100,
    "delivered": 41,
    "returned": 12,
    "unitsBoughtFromSupplier": 33,
    "returnedStock": 3,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 13,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 49,
     "lastChecked": "2026-11-05T15:05:43Z",
@@ -39929,6 +39929,11 @@
      1,
      1,
      76000
+    ],
+    "2026-11-06": [
+     1,
+     1,
+     76000
     ]
    },
    "7369": {
@@ -45119,6 +45124,11 @@
      98000
     ],
     "2026-10-24": [
+     1,
+     1,
+     36000
+    ],
+    "2026-11-06": [
      1,
      1,
      36000
@@ -53167,10 +53177,31 @@
    "2026-11-03": 55,
    "2026-11-04": 48,
    "2026-11-05": 41,
-   "2026-11-06": 12
+   "2026-11-06": 14
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34352",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1664",
+     "pid": 730616,
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34351",
    "d": "2026-11-06",
