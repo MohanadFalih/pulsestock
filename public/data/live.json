@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-06T05:32:47.281093+00:00",
+ "syncedAt": "2026-11-06T06:02:31.924038+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -13471,23 +13471,23 @@
    "sku": "K-66771",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-01",
    "firstOrderDate": "2026-10-11",
-   "lastOrderDate": "2026-10-18",
-   "orders": 2,
-   "units": 2,
-   "revenue": 254000,
+   "lastOrderDate": "2026-11-06",
+   "orders": 3,
+   "units": 3,
+   "revenue": 381000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 127000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 19,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 50,
-    "lastChecked": "2026-11-05T15:38:25Z",
+    "qty": 49,
+    "lastChecked": "2026-11-06T05:43:58Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -13536,7 +13536,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "1",
-      "qty": 6,
+      "qty": 5,
       "product_id": 730630
      },
      {
@@ -14954,7 +14954,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 60,
-    "lastChecked": "2026-11-05T22:06:57Z",
+    "lastChecked": "2026-11-06T05:43:58Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39824,6 +39824,11 @@
      1,
      1,
      127000
+    ],
+    "2026-11-06": [
+     1,
+     1,
+     127000
     ]
    },
    "7371": {
@@ -53166,6 +53171,16 @@
      "pid": 730392,
      "qty": 1,
      "price": 122000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 1"
+    },
+    {
+     "sku": "K-66771",
+     "pid": 730622,
+     "qty": 1,
+     "price": 127000,
      "discPct": 0,
      "del": 0,
      "route": "turkey",
