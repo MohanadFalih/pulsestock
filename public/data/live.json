@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-06T18:02:51.647337+00:00",
+ "syncedAt": "2026-11-06T18:33:02.923576+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -19563,15 +19563,15 @@
    "odooCreatedDate": "2026-09-07",
    "firstOrderDate": "2026-09-13",
    "lastOrderDate": "2026-11-06",
-   "orders": 32,
-   "units": 31,
-   "revenue": 2266000,
+   "orders": 33,
+   "units": 32,
+   "revenue": 2340000,
    "delivered": 20,
    "returned": 3,
    "unitsBoughtFromSupplier": 28,
    "returnedStock": 2,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 2.29,
+   "orderVelocity7d": 2.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 73,
@@ -37791,17 +37791,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-14",
-   "lastOrderDate": "2026-11-03",
-   "orders": 69,
-   "units": 70,
-   "revenue": 1761000,
+   "lastOrderDate": "2026-11-06",
+   "orders": 70,
+   "units": 71,
+   "revenue": 1786000,
    "delivered": 69,
    "returned": 14,
    "unitsBoughtFromSupplier": 54,
    "returnedStock": 3,
    "unitPrice": 37000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -42316,9 +42316,9 @@
      74000
     ],
     "2026-11-06": [
-     5,
-     5,
-     370000
+     6,
+     6,
+     444000
     ]
    },
    "7309": {
@@ -52816,6 +52816,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-06": [
+     1,
+     1,
+     25000
     ]
    },
    "4459": {
@@ -53353,10 +53358,31 @@
    "2026-11-03": 55,
    "2026-11-04": 48,
    "2026-11-05": 41,
-   "2026-11-06": 42
+   "2026-11-06": 44
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34381",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1899-navy-1-44",
+     "pid": 729483,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 44"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34380",
    "d": "2026-11-06",
