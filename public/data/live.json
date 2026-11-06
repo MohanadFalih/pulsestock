@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-06T07:32:45.697059+00:00",
+ "syncedAt": "2026-11-06T08:02:50.785259+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3146,19 +3146,19 @@
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-06",
-   "orders": 25,
-   "units": 26,
-   "revenue": 2106000,
+   "orders": 27,
+   "units": 28,
+   "revenue": 2268000,
    "delivered": 11,
    "returned": 1,
-   "unitsBoughtFromSupplier": 26,
+   "unitsBoughtFromSupplier": 28,
    "returnedStock": 1,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 3.0,
+   "orderVelocity7d": 3.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 92,
-    "lastChecked": "2026-11-05T21:12:42Z",
+    "qty": 89,
+    "lastChecked": "2026-11-06T07:49:16Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3231,7 +3231,7 @@
      {
       "color": "أسود / Siyah",
       "size": "10",
-      "qty": 3,
+      "qty": 2,
       "product_id": 732212
      },
      {
@@ -3297,7 +3297,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "9",
-      "qty": 2,
+      "qty": 1,
       "product_id": 732223
      },
      {
@@ -3309,7 +3309,7 @@
      {
       "color": "أسود / Siyah",
       "size": "11",
-      "qty": 2,
+      "qty": 1,
       "product_id": 732225
      },
      {
@@ -35186,33 +35186,33 @@
    "stage": "selling",
    "odooCreatedDate": "2025-10-08",
    "firstOrderDate": "2025-10-16",
-   "lastOrderDate": "2026-11-05",
-   "orders": 674,
-   "units": 709,
-   "revenue": 34547000,
+   "lastOrderDate": "2026-11-06",
+   "orders": 676,
+   "units": 711,
+   "revenue": 34713000,
    "delivered": 700,
    "returned": 124,
-   "unitsBoughtFromSupplier": 591,
+   "unitsBoughtFromSupplier": 593,
    "returnedStock": 0,
    "unitPrice": 83000.0,
-   "orderVelocity7d": 1.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 228,
-    "lastChecked": "2026-11-05T20:40:05Z",
+    "qty": 225,
+    "lastChecked": "2026-11-06T07:53:29Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "أسود / Siyah",
       "size": "1",
-      "qty": 24,
+      "qty": 23,
       "product_id": 674002
      },
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 21,
+      "qty": 20,
       "product_id": 674649
      },
      {
@@ -35236,7 +35236,7 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 29,
+      "qty": 28,
       "product_id": 676229
      }
     ]
@@ -38233,9 +38233,9 @@
      324000
     ],
     "2026-11-06": [
-     1,
-     1,
-     81000
+     3,
+     3,
+     243000
     ]
    },
    "7477": {
@@ -51816,6 +51816,11 @@
      5,
      5,
      415000
+    ],
+    "2026-11-06": [
+     2,
+     2,
+     166000
     ]
    },
    "5920": {
@@ -53148,10 +53153,94 @@
    "2026-11-03": 55,
    "2026-11-04": 48,
    "2026-11-05": 41,
-   "2026-11-06": 5
+   "2026-11-06": 9
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34347",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1729",
+     "pid": 676225,
+     "qty": 1,
+     "price": 83000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "بيج / Bej, 1"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34346",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1729",
+     "pid": 676226,
+     "qty": 1,
+     "price": 83000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "بيج / Bej, 3"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34345",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732208,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 6"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34344",
+   "d": "2026-11-06",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732212,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 10"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34343",
    "d": "2026-11-06",
