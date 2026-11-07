@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-07T18:02:35.158421+00:00",
+ "syncedAt": "2026-11-07T18:32:54.604347+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1738,7 +1738,7 @@
    "revenue": 532000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.71,
@@ -1878,7 +1878,7 @@
    "revenue": 96000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 96000.0,
    "orderVelocity7d": 0.14,
@@ -14911,15 +14911,15 @@
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
    "lastOrderDate": "2026-11-07",
-   "orders": 7,
-   "units": 7,
-   "revenue": 556000,
+   "orders": 8,
+   "units": 8,
+   "revenue": 636000,
    "delivered": 2,
    "returned": 1,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 1,
-   "unitPrice": 79000.0,
-   "orderVelocity7d": 0.71,
+   "unitPrice": 80000.0,
+   "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 341,
@@ -34037,20 +34037,20 @@
    "sku": "M-24006UKB139",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-11-27",
    "firstOrderDate": "2025-11-27",
-   "lastOrderDate": "2026-10-29",
-   "orders": 258,
-   "units": 279,
-   "revenue": 9297000,
+   "lastOrderDate": "2026-11-07",
+   "orders": 259,
+   "units": 280,
+   "revenue": 9322000,
    "delivered": 274,
    "returned": 40,
    "unitsBoughtFromSupplier": 233,
    "returnedStock": 3,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -40793,9 +40793,9 @@
      160000
     ],
     "2026-11-07": [
-     2,
-     2,
-     160000
+     3,
+     3,
+     240000
     ]
    },
    "7361": {
@@ -51726,6 +51726,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-07": [
+     1,
+     1,
+     25000
     ]
    },
    "6353": {
@@ -53777,10 +53782,59 @@
    "2026-11-04": 49,
    "2026-11-05": 41,
    "2026-11-06": 48,
-   "2026-11-07": 25
+   "2026-11-07": 28
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34416",
+   "d": "2026-11-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8014",
+     "pid": 730442,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34415",
+   "d": "2026-11-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-24006UKB139",
+     "pid": 682733,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "خاكي / Haki, 48"
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S34414",
+   "d": "2026-11-07",
+   "st": "sale",
+   "fee": 0,
+   "disc": 0,
+   "lines": [],
+   "src": "WhatsApp"
+  },
   {
    "id": "S34413",
    "d": "2026-11-07",
@@ -221708,6 +221762,13 @@
    "qty": 1,
    "cost": 23238,
    "created": "2025-12-04"
+  },
+  {
+   "sku": "M-803MRK805",
+   "model": "M-803MRK805",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-11-07"
   },
   {
    "sku": "M-8084AB368",
