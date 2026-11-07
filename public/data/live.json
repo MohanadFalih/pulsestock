@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-07T03:32:55.571432+00:00",
+ "syncedAt": "2026-11-07T04:03:04.438405+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -21,7 +21,7 @@
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
-   "unitPrice": 1.0,
+   "unitPrice": 83000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
@@ -35218,20 +35218,20 @@
    "sku": "L-1137",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "created",
    "odooCreatedDate": "2025-10-08",
-   "firstOrderDate": "2026-02-14",
-   "lastOrderDate": "2026-10-23",
-   "orders": 3,
-   "units": 2,
-   "revenue": 64000,
-   "delivered": 2,
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
-   "unitPrice": 55000.0,
+   "unitPrice": 94000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 15,
+   "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -51811,18 +51811,6 @@
    },
    "5949": {
     "2026-11-04": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "5947": {
-    "2026-10-10": [
-     1,
-     1,
-     39000
-    ],
-    "2026-10-23": [
      1,
      1,
      25000
@@ -69281,7 +69269,7 @@
      "price": 25000,
      "discPct": 15.6,
      "del": 1,
-     "var": "قهوائي / Kahve"
+     "var": "قهوائي / Kahve, STD"
     },
     {
      "sku": "K-6494-قهواييkahv-24244",
@@ -80059,7 +80047,7 @@
      "price": 39000,
      "discPct": 0,
      "del": 1,
-     "var": "قهوائي / Kahve"
+     "var": "قهوائي / Kahve, STD"
     }
    ],
    "src": "Instagram",
@@ -211638,8 +211626,9 @@
    "sku": "L-1137",
    "model": "L-1137",
    "qty": 0,
-   "cost": 30000,
-   "created": "2026-02-05"
+   "cost": 53125,
+   "created": "2026-11-07",
+   "costSrc": "vendor"
   },
   {
    "sku": "L-1140",
@@ -230776,6 +230765,13 @@
    "qty": 0,
    "cost": 62562,
    "created": "2025-12-20"
+  },
+  {
+   "sku": "L-1137",
+   "model": "L-1137",
+   "qty": 0,
+   "cost": 30000,
+   "created": "2026-02-05"
   }
  ]
 }
