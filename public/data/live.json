@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-07T21:32:40.752038+00:00",
+ "syncedAt": "2026-11-07T22:02:59.487138+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -662,7 +662,7 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
    "firstOrderDate": "2026-11-07",
-   "lastOrderDate": "2026-11-07",
+   "lastOrderDate": "2026-11-08",
    "orders": 2,
    "units": 2,
    "revenue": 152000,
@@ -672,7 +672,7 @@
    "returnedStock": 0,
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -880,8 +880,8 @@
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 204,
-    "lastChecked": "2026-11-07T19:33:24Z",
+    "qty": 203,
+    "lastChecked": "2026-11-07T21:42:11Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1062,7 +1062,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "44",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732906
      },
      {
@@ -23870,20 +23870,20 @@
    "sku": "T-7070",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-08-07",
    "firstOrderDate": "2026-08-10",
-   "lastOrderDate": "2026-10-25",
-   "orders": 23,
-   "units": 23,
-   "revenue": 1921000,
+   "lastOrderDate": "2026-11-08",
+   "orders": 24,
+   "units": 25,
+   "revenue": 1979000,
    "delivered": 23,
    "returned": 9,
    "unitsBoughtFromSupplier": 18,
    "returnedStock": 4,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 14,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": "2026-11-07T15:05:15Z",
@@ -38522,9 +38522,14 @@
    },
    "7514": {
     "2026-11-07": [
-     2,
-     2,
-     152000
+     1,
+     1,
+     76000
+    ],
+    "2026-11-08": [
+     1,
+     1,
+     76000
     ]
    },
    "7512": {
@@ -44940,6 +44945,11 @@
      1,
      1,
      29000
+    ],
+    "2026-11-08": [
+     1,
+     2,
+     58000
     ]
    },
    "7244": {
@@ -53578,10 +53588,39 @@
    "2026-11-04": 49,
    "2026-11-05": 41,
    "2026-11-06": 48,
-   "2026-11-07": 39
+   "2026-11-07": 39,
+   "2026-11-08": 1
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34428",
+   "d": "2026-11-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-7070-beige-2",
+     "pid": 728284,
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0,
+     "var": "بيج / Bej, 2"
+    },
+    {
+     "sku": "T-7070-kahve-2",
+     "pid": 728272,
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0,
+     "var": "قهوائي / Kahve, 2"
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S34427",
    "d": "2026-11-07",
@@ -53691,13 +53730,13 @@
     },
     {
      "sku": "M-1001MSA980",
-     "pid": 732971,
+     "pid": 732979,
      "qty": 1,
      "price": 76000,
      "discPct": 0,
      "del": 0,
      "route": "turkey",
-     "var": "بيج فاتح / Taş, 44"
+     "var": "Vizyon, 44"
     }
    ],
    "src": "Instagram",
