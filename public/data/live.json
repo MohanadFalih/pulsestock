@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-07T14:02:58.980910+00:00",
+ "syncedAt": "2026-11-07T14:32:55.671365+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -14442,19 +14442,19 @@
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
    "lastOrderDate": "2026-11-07",
-   "orders": 65,
-   "units": 66,
-   "revenue": 5063000,
+   "orders": 66,
+   "units": 67,
+   "revenue": 5140000,
    "delivered": 60,
    "returned": 8,
-   "unitsBoughtFromSupplier": 63,
+   "unitsBoughtFromSupplier": 64,
    "returnedStock": 4,
    "unitPrice": 77000.0,
-   "orderVelocity7d": 1.0,
+   "orderVelocity7d": 1.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 257,
-    "lastChecked": "2026-11-07T09:48:51Z",
+    "qty": 255,
+    "lastChecked": "2026-11-07T14:19:53Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14503,13 +14503,13 @@
      {
       "color": "أسود / Siyah",
       "size": "42",
-      "qty": 6,
+      "qty": 5,
       "product_id": 730467
      },
      {
       "color": "أسود / Siyah",
       "size": "44",
-      "qty": 7,
+      "qty": 6,
       "product_id": 730468
      },
      {
@@ -35729,15 +35729,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-07",
-   "orders": 779,
-   "units": 890,
-   "revenue": 28962000,
+   "orders": 778,
+   "units": 888,
+   "revenue": 28884000,
    "delivered": 863,
    "returned": 182,
-   "unitsBoughtFromSupplier": 725,
+   "unitsBoughtFromSupplier": 723,
    "returnedStock": 7,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 4.0,
+   "orderVelocity7d": 3.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 301,
@@ -40494,9 +40494,9 @@
      156000
     ],
     "2026-11-07": [
-     1,
-     1,
-     77000
+     2,
+     2,
+     154000
     ]
    },
    "7362": {
@@ -52390,9 +52390,9 @@
      78000
     ],
     "2026-11-07": [
-     3,
-     7,
-     273000
+     2,
+     5,
+     195000
     ]
    },
    "5855": {
@@ -53510,6 +53510,27 @@
  },
  "ordersDetail": [
   {
+   "id": "S34412",
+   "d": "2026-11-07",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "pid": 730468,
+     "qty": 1,
+     "price": 77000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 44"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
    "id": "S34410",
    "d": "2026-11-07",
    "st": "sale",
@@ -53635,37 +53656,6 @@
      "del": 0,
      "route": "turkey",
      "var": "نيلي / Laci, 11"
-    }
-   ],
-   "src": "Instagram",
-   "ful": "turkey"
-  },
-  {
-   "id": "S34404",
-   "d": "2026-11-07",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "L-1800",
-     "pid": 672394,
-     "qty": 1,
-     "price": 39000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey",
-     "var": "فيزون / Vizon"
-    },
-    {
-     "sku": "L-1800",
-     "pid": 715723,
-     "qty": 1,
-     "price": 39000,
-     "discPct": 0,
-     "del": 0,
-     "route": "turkey",
-     "var": "أسود / Siyah"
     }
    ],
    "src": "Instagram",
