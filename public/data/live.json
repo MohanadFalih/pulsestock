@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-07T22:02:59.487138+00:00",
+ "syncedAt": "2026-11-07T22:32:52.138052+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -14699,20 +14699,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-11-07",
-   "orders": 68,
-   "units": 69,
-   "revenue": 5296000,
+   "lastOrderDate": "2026-11-08",
+   "orders": 69,
+   "units": 70,
+   "revenue": 5374000,
    "delivered": 60,
    "returned": 8,
-   "unitsBoughtFromSupplier": 66,
+   "unitsBoughtFromSupplier": 67,
    "returnedStock": 4,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 251,
-    "lastChecked": "2026-11-07T20:10:34Z",
+    "qty": 250,
+    "lastChecked": "2026-11-07T22:24:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14821,7 +14821,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "48",
-      "qty": 8,
+      "qty": 7,
       "product_id": 730477
      },
      {
@@ -40737,6 +40737,11 @@
      4,
      4,
      310000
+    ],
+    "2026-11-08": [
+     1,
+     1,
+     78000
     ]
    },
    "7362": {
@@ -53589,10 +53594,31 @@
    "2026-11-05": 41,
    "2026-11-06": 48,
    "2026-11-07": 39,
-   "2026-11-08": 1
+   "2026-11-08": 2
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34429",
+   "d": "2026-11-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "pid": 730484,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 48"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34428",
    "d": "2026-11-08",
