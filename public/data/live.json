@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-08T07:15:13.239544+00:00",
+ "syncedAt": "2026-11-08T07:32:48.238764+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -35950,14 +35950,14 @@
    "revenue": 28962000,
    "delivered": 863,
    "returned": 182,
-   "unitsBoughtFromSupplier": 724,
+   "unitsBoughtFromSupplier": 725,
    "returnedStock": 7,
    "unitPrice": 39000.0,
    "orderVelocity7d": 3.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 301,
-    "lastChecked": "2026-11-07T18:58:25Z",
+    "qty": 299,
+    "lastChecked": "2026-11-08T07:18:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -35988,7 +35988,7 @@
      {
       "color": "قرميدي / Kiremit",
       "size": "STD",
-      "qty": 47,
+      "qty": 46,
       "product_id": 675801
      },
      {
@@ -36018,7 +36018,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 20,
+      "qty": 19,
       "product_id": 715723
      },
      {
@@ -53623,10 +53623,41 @@
    "2026-11-05": 41,
    "2026-11-06": 48,
    "2026-11-07": 39,
-   "2026-11-08": 6
+   "2026-11-08": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34434",
+   "d": "2026-11-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1925",
+     "pid": 730974,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 44"
+    },
+    {
+     "sku": "H-1959",
+     "pid": 732885,
+     "qty": 1,
+     "price": 73000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 44"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34433",
    "d": "2026-11-08",
