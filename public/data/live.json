@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-08T06:46:36.469521+00:00",
+ "syncedAt": "2026-11-08T07:02:57.655230+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -163,23 +163,23 @@
    "sku": "H-1962",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-07",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-08",
+   "lastOrderDate": "2026-11-08",
+   "orders": 1,
+   "units": 1,
+   "revenue": 81000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 116,
-    "lastChecked": "2026-11-07T15:36:52Z",
+    "qty": 114,
+    "lastChecked": "2026-11-08T06:53:18Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -306,13 +306,13 @@
      {
       "color": "رصاصي فاتح / Gri",
       "size": "46",
-      "qty": 4,
+      "qty": 3,
       "product_id": 733176
      },
      {
       "color": "رصاصي فاتح / Gri",
       "size": "48",
-      "qty": 4,
+      "qty": 3,
       "product_id": 733177
      },
      {
@@ -38513,6 +38513,13 @@
   "from": "2026-08-10",
   "to": "2026-11-08",
   "byProduct": {
+   "7522": {
+    "2026-11-08": [
+     1,
+     1,
+     81000
+    ]
+   },
    "7517": {
     "2026-11-08": [
      1,
@@ -53606,7 +53613,7 @@
    "2026-11-05": 41,
    "2026-11-06": 48,
    "2026-11-07": 39,
-   "2026-11-08": 3
+   "2026-11-08": 4
   }
  },
  "ordersDetail": [
