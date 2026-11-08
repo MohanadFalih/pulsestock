@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-08T07:32:48.238764+00:00",
+ "syncedAt": "2026-11-08T07:42:06.849759+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -868,20 +868,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
    "firstOrderDate": "2026-11-07",
-   "lastOrderDate": "2026-11-07",
-   "orders": 1,
-   "units": 1,
-   "revenue": 73000,
+   "lastOrderDate": "2026-11-08",
+   "orders": 2,
+   "units": 2,
+   "revenue": 146000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 73000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 203,
-    "lastChecked": "2026-11-07T21:42:11Z",
+    "qty": 202,
+    "lastChecked": "2026-11-08T07:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1062,7 +1062,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "44",
-      "qty": 4,
+      "qty": 3,
       "product_id": 732906
      },
      {
@@ -11540,20 +11540,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-08",
    "firstOrderDate": "2026-10-09",
-   "lastOrderDate": "2026-11-05",
-   "orders": 13,
-   "units": 15,
-   "revenue": 1215000,
+   "lastOrderDate": "2026-11-08",
+   "orders": 14,
+   "units": 16,
+   "revenue": 1296000,
    "delivered": 11,
    "returned": 0,
-   "unitsBoughtFromSupplier": 15,
+   "unitsBoughtFromSupplier": 16,
    "returnedStock": 1,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 201,
-    "lastChecked": "2026-11-07T15:24:10Z",
+    "lastChecked": "2026-11-08T07:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -38563,6 +38563,11 @@
      1,
      1,
      73000
+    ],
+    "2026-11-08": [
+     1,
+     1,
+     73000
     ]
    },
    "7510": {
@@ -40059,6 +40064,11 @@
      243000
     ],
     "2026-11-05": [
+     1,
+     1,
+     81000
+    ],
+    "2026-11-08": [
      1,
      1,
      81000
