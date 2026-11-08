@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-08T21:02:40.627762+00:00",
+ "syncedAt": "2026-11-08T21:33:05.116088+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -35802,7 +35802,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 84,
-    "lastChecked": "2026-11-08T20:50:59Z",
+    "lastChecked": "2026-11-08T21:22:07Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -53814,10 +53814,42 @@
    "2026-11-05": 41,
    "2026-11-06": 48,
    "2026-11-07": 39,
-   "2026-11-08": 50
+   "2026-11-08": 50,
+   "2026-11-09": 1
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34484",
+   "d": "2026-11-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732216,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 8"
+    },
+    {
+     "sku": "H-1954",
+     "pid": 732383,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 48"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34483",
    "d": "2026-11-08",
