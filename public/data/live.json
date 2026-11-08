@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-08T17:32:28.287422+00:00",
+ "syncedAt": "2026-11-08T18:02:58.209556+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -948,7 +948,7 @@
    "revenue": 152000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.29,
@@ -2632,20 +2632,20 @@
    "sku": "M-4950ORG1169",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-02",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-08",
+   "lastOrderDate": "2026-11-08",
+   "orders": 1,
+   "units": 1,
+   "revenue": 86000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -21943,20 +21943,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-31",
    "firstOrderDate": "2026-08-31",
-   "lastOrderDate": "2026-11-06",
-   "orders": 137,
-   "units": 141,
-   "revenue": 15486950,
+   "lastOrderDate": "2026-11-08",
+   "orders": 138,
+   "units": 142,
+   "revenue": 15602950,
    "delivered": 139,
    "returned": 26,
-   "unitsBoughtFromSupplier": 121,
+   "unitsBoughtFromSupplier": 122,
    "returnedStock": 6,
    "unitPrice": 116000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 159,
-    "lastChecked": "2026-11-08T15:24:25Z",
+    "lastChecked": "2026-11-08T17:48:07Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -35858,7 +35858,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 87,
-    "lastChecked": "2026-11-08T11:29:31Z",
+    "lastChecked": "2026-11-08T17:54:08Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -35877,7 +35877,7 @@
      {
       "color": "بيج / Bej",
       "size": "1",
-      "qty": 18,
+      "qty": 19,
       "product_id": 676225
      },
      {
@@ -35889,7 +35889,7 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 26,
+      "qty": 25,
       "product_id": 676229
      }
     ]
@@ -38872,6 +38872,13 @@
      1,
      1,
      96000
+    ]
+   },
+   "7491": {
+    "2026-11-08": [
+     1,
+     1,
+     86000
     ]
    },
    "7490": {
@@ -43602,6 +43609,11 @@
      116000
     ],
     "2026-11-06": [
+     1,
+     1,
+     116000
+    ],
+    "2026-11-08": [
      1,
      1,
      116000
@@ -53985,10 +53997,31 @@
    "2026-11-05": 41,
    "2026-11-06": 48,
    "2026-11-07": 39,
-   "2026-11-08": 37
+   "2026-11-08": 38
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34470",
+   "d": "2026-11-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -14500,
+   "lines": [
+    {
+     "sku": "K-6647-navy-1-42",
+     "pid": 729028,
+     "qty": 1,
+     "price": 116000,
+     "discPct": 12.0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 42"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
   {
    "id": "S34467",
    "d": "2026-11-08",
@@ -54937,6 +54970,16 @@
      "del": 0,
      "route": "turkey",
      "var": "Vizyon, 40"
+    },
+    {
+     "sku": "M-4950ORG1169",
+     "pid": 732473,
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 40"
     }
    ],
    "src": "Facebook",
