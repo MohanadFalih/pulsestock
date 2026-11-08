@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-08T13:32:42.899021+00:00",
+ "syncedAt": "2026-11-08T13:57:10.233557+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -9193,19 +9193,19 @@
    "odooCreatedDate": "2026-10-15",
    "firstOrderDate": "2026-10-16",
    "lastOrderDate": "2026-11-08",
-   "orders": 8,
-   "units": 9,
-   "revenue": 537000,
+   "orders": 9,
+   "units": 10,
+   "revenue": 599000,
    "delivered": 6,
    "returned": 2,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 2,
    "unitPrice": 62000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 52,
-    "lastChecked": "2026-11-07T15:13:00Z",
+    "lastChecked": "2026-11-08T13:39:38Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -36263,15 +36263,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-08",
-   "orders": 782,
-   "units": 892,
-   "revenue": 29040000,
+   "orders": 783,
+   "units": 893,
+   "revenue": 29079000,
    "delivered": 864,
    "returned": 184,
    "unitsBoughtFromSupplier": 725,
    "returnedStock": 15,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 3.29,
+   "orderVelocity7d": 3.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 298,
@@ -39698,9 +39698,9 @@
      62000
     ],
     "2026-11-08": [
-     1,
-     1,
-     62000
+     2,
+     2,
+     124000
     ]
    },
    "7419": {
@@ -52921,9 +52921,9 @@
      234000
     ],
     "2026-11-08": [
-     3,
-     3,
-     117000
+     4,
+     4,
+     156000
     ]
    },
    "5855": {
@@ -54041,10 +54041,52 @@
    "2026-11-05": 41,
    "2026-11-06": 48,
    "2026-11-07": 39,
-   "2026-11-08": 25
+   "2026-11-08": 27
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34457",
+   "d": "2026-11-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34456",
+   "d": "2026-11-08",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1056",
+     "pid": 731474,
+     "qty": 1,
+     "price": 62000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أخضر / Yesil, 3"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34455",
    "d": "2026-11-08",
