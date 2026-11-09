@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-09T08:33:06.413349+00:00",
+ "syncedAt": "2026-11-09T09:03:14.238264+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -25799,20 +25799,20 @@
    "sku": "T-7064",
    "category": "All",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-07-22",
    "firstOrderDate": "2026-07-23",
-   "lastOrderDate": "2026-11-09",
-   "orders": 128,
-   "units": 132,
-   "revenue": 8058000,
+   "lastOrderDate": "2026-11-02",
+   "orders": 127,
+   "units": 131,
+   "revenue": 8033000,
    "delivered": 130,
    "returned": 34,
    "unitsBoughtFromSupplier": 100,
    "returnedStock": 8,
    "unitPrice": 41000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 7,
    "supplierStock": {
     "qty": 35,
     "lastChecked": "2026-11-08T15:01:57Z",
@@ -32195,17 +32195,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-03-05",
    "firstOrderDate": "2026-03-06",
-   "lastOrderDate": "2026-11-04",
-   "orders": 134,
-   "units": 140,
-   "revenue": 7668000,
+   "lastOrderDate": "2026-11-09",
+   "orders": 135,
+   "units": 141,
+   "revenue": 7693000,
    "delivered": 139,
    "returned": 52,
    "unitsBoughtFromSupplier": 99,
    "returnedStock": 8,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -35914,7 +35914,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 84,
-    "lastChecked": "2026-11-09T08:21:34Z",
+    "lastChecked": "2026-11-09T08:52:47Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -36100,17 +36100,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-10-03",
    "firstOrderDate": "2025-10-03",
-   "lastOrderDate": "2026-11-09",
-   "orders": 194,
-   "units": 198,
-   "revenue": 10585000,
+   "lastOrderDate": "2026-11-06",
+   "orders": 193,
+   "units": 197,
+   "revenue": 10560000,
    "delivered": 195,
    "returned": 54,
    "unitsBoughtFromSupplier": 141,
    "returnedStock": 4,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 3,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -46613,11 +46613,6 @@
      1,
      1,
      25000
-    ],
-    "2026-11-09": [
-     1,
-     1,
-     25000
     ]
    },
    "7204": {
@@ -51015,6 +51010,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-09": [
+     1,
+     1,
+     25000
     ]
    },
    "6826": {
@@ -52639,11 +52639,6 @@
      1,
      1,
      25000
-    ],
-    "2026-11-09": [
-     1,
-     1,
-     25000
     ]
    },
    "5890": {
@@ -53967,6 +53962,25 @@
  },
  "ordersDetail": [
   {
+   "id": "S34495",
+   "d": "2026-11-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1812",
+     "pid": 721455,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "نيلي / Laci, 2"
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
    "id": "S34493",
    "d": "2026-11-09",
    "st": "sale",
@@ -54099,34 +54113,6 @@
    ],
    "src": "Instagram",
    "ful": "turkey"
-  },
-  {
-   "id": "S34487",
-   "d": "2026-11-09",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "T-6851",
-     "pid": 673214,
-     "qty": 1,
-     "price": 25000,
-     "discPct": 0,
-     "del": 0,
-     "var": "أزرق / Indigo, 4"
-    },
-    {
-     "sku": "T-7064",
-     "pid": 727514,
-     "qty": 1,
-     "price": 25000,
-     "discPct": 0,
-     "del": 0,
-     "var": "نيلي / Laci, 3"
-    }
-   ],
-   "src": "Facebook"
   },
   {
    "id": "S34486",
