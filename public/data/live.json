@@ -1,9 +1,37 @@
 {
- "syncedAt": "2026-11-09T15:32:46.570573+00:00",
+ "syncedAt": "2026-11-09T16:02:34.690704+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7545,
+   "name": "H-1964",
+   "sku": "H-1964",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-11-09",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 83000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
   {
    "odooId": 7544,
    "name": "M-2638MSA980",
@@ -137,11 +165,42 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 46,
+    "lastChecked": "2026-11-09T15:44:46Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "Haki",
+      "size": "STD38-50",
+      "qty": 9,
+      "in_odoo": null
+     },
+     {
+      "color": "Bordo",
+      "size": "STD38-50",
+      "qty": 9,
+      "in_odoo": null
+     },
+     {
+      "color": "KAHVE",
+      "size": "STD38-50",
+      "qty": 10,
+      "in_odoo": null
+     },
+     {
+      "color": "LACİVERT",
+      "size": "STD38--50",
+      "qty": 9,
+      "in_odoo": null
+     },
+     {
+      "color": "SİYAH",
+      "size": "STD38-50",
+      "qty": 9,
+      "in_odoo": null
+     }
+    ]
    }
   },
   {
@@ -193,11 +252,60 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 79,
+    "lastChecked": "2026-11-09T15:44:46Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "أسود / Siyah",
+      "size": "1",
+      "qty": 9,
+      "product_id": 733427
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "2",
+      "qty": 10,
+      "product_id": 733428
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "1",
+      "qty": 10,
+      "product_id": 733429
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "2",
+      "qty": 10,
+      "product_id": 733430
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "1",
+      "qty": 10,
+      "product_id": 733431
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "2",
+      "qty": 10,
+      "product_id": 733432
+     },
+     {
+      "color": "بيج / Bej",
+      "size": "1",
+      "qty": 10,
+      "product_id": 733433
+     },
+     {
+      "color": "بيج / Bej",
+      "size": "2",
+      "qty": 10,
+      "product_id": 733434
+     }
+    ]
    }
   },
   {
@@ -221,11 +329,84 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 117,
+    "lastChecked": "2026-11-09T15:44:46Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "أسود / Siyah",
+      "size": "38",
+      "qty": 10,
+      "product_id": 733414
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "40",
+      "qty": 9,
+      "product_id": 733415
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "42",
+      "qty": 10,
+      "product_id": 733416
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "44",
+      "qty": 9,
+      "product_id": 733417
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "38",
+      "qty": 10,
+      "product_id": 733418
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "40",
+      "qty": 10,
+      "product_id": 733419
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "42",
+      "qty": 10,
+      "product_id": 733420
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "44",
+      "qty": 10,
+      "product_id": 733421
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "38",
+      "qty": 9,
+      "product_id": 733422
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "40",
+      "qty": 10,
+      "product_id": 733423
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "42",
+      "qty": 10,
+      "product_id": 733424
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "44",
+      "qty": 10,
+      "product_id": 733425
+     }
+    ]
    }
   },
   {
@@ -249,11 +430,120 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 119,
+    "lastChecked": "2026-11-09T15:30:41Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "نيلي / Laci",
+      "size": "4",
+      "qty": 6,
+      "product_id": 733393
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "2",
+      "qty": 4,
+      "product_id": 733395
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "3",
+      "qty": 2,
+      "product_id": 733396
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "4",
+      "qty": 6,
+      "product_id": 733397
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "1",
+      "qty": 9,
+      "product_id": 733398
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "2",
+      "qty": 6,
+      "product_id": 733399
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "3",
+      "qty": 12,
+      "product_id": 733400
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "4",
+      "qty": 7,
+      "product_id": 733401
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "2",
+      "qty": 6,
+      "product_id": 733403
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "3",
+      "qty": 8,
+      "product_id": 733404
+     },
+     {
+      "color": "رصاصي غامق / Fume",
+      "size": "4",
+      "qty": 2,
+      "product_id": 733405
+     },
+     {
+      "color": "رصاصي غامق / Fume",
+      "size": "1",
+      "qty": 6,
+      "product_id": 733406
+     },
+     {
+      "color": "رصاصي غامق / Fume",
+      "size": "2",
+      "qty": 1,
+      "product_id": 733407
+     },
+     {
+      "color": "رصاصي غامق / Fume",
+      "size": "3",
+      "qty": 4,
+      "product_id": 733408
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "4",
+      "qty": 8,
+      "product_id": 733409
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "1",
+      "qty": 10,
+      "product_id": 733410
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "2",
+      "qty": 11,
+      "product_id": 733411
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "3",
+      "qty": 11,
+      "product_id": 733412
+     }
+    ]
    }
   },
   {
@@ -277,11 +567,192 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 149,
+    "lastChecked": "2026-11-09T15:39:22Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "فيزون / Vizon",
+      "size": "38",
+      "qty": 5,
+      "product_id": 733362
+     },
+     {
+      "color": "فيزون / Vizon",
+      "size": "40",
+      "qty": 5,
+      "product_id": 733363
+     },
+     {
+      "color": "فيزون / Vizon",
+      "size": "42",
+      "qty": 5,
+      "product_id": 733364
+     },
+     {
+      "color": "فيزون / Vizon",
+      "size": "44",
+      "qty": 5,
+      "product_id": 733365
+     },
+     {
+      "color": "فيزون / Vizon",
+      "size": "46",
+      "qty": 5,
+      "product_id": 733366
+     },
+     {
+      "color": "فيزون / Vizon",
+      "size": "48",
+      "qty": 5,
+      "product_id": 733367
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "38",
+      "qty": 5,
+      "product_id": 733368
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "40",
+      "qty": 5,
+      "product_id": 733369
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "42",
+      "qty": 5,
+      "product_id": 733370
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "44",
+      "qty": 5,
+      "product_id": 733371
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "46",
+      "qty": 5,
+      "product_id": 733372
+     },
+     {
+      "color": "نيلي / Laci",
+      "size": "48",
+      "qty": 5,
+      "product_id": 733373
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "38",
+      "qty": 5,
+      "product_id": 733374
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "40",
+      "qty": 5,
+      "product_id": 733375
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "42",
+      "qty": 5,
+      "product_id": 733376
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "44",
+      "qty": 5,
+      "product_id": 733377
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "46",
+      "qty": 5,
+      "product_id": 733378
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "48",
+      "qty": 5,
+      "product_id": 733379
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "38",
+      "qty": 5,
+      "product_id": 733380
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "40",
+      "qty": 5,
+      "product_id": 733381
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "42",
+      "qty": 5,
+      "product_id": 733382
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "44",
+      "qty": 5,
+      "product_id": 733383
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "46",
+      "qty": 5,
+      "product_id": 733384
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "48",
+      "qty": 5,
+      "product_id": 733385
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "38",
+      "qty": 5,
+      "product_id": 733386
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "40",
+      "qty": 5,
+      "product_id": 733387
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "42",
+      "qty": 4,
+      "product_id": 733388
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "44",
+      "qty": 5,
+      "product_id": 733389
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "46",
+      "qty": 5,
+      "product_id": 733390
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "48",
+      "qty": 5,
+      "product_id": 733391
+     }
+    ]
    }
   },
   {
@@ -379,8 +850,8 @@
    "firstOrderDate": "2026-11-09",
    "lastOrderDate": "2026-11-09",
    "orders": 1,
-   "units": 0,
-   "revenue": 0,
+   "units": 1,
+   "revenue": 102000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
@@ -418,7 +889,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": null,
-    "lastChecked": "2026-11-08T15:33:22Z",
+    "lastChecked": "2026-11-09T15:39:22Z",
     "source": "api",
     "status": "not_found",
     "variants": []
@@ -738,8 +1209,8 @@
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 114,
-    "lastChecked": "2026-11-08T06:53:18Z",
+    "qty": 108,
+    "lastChecked": "2026-11-09T15:39:22Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -818,7 +1289,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "42",
-      "qty": 5,
+      "qty": 3,
       "product_id": 733168
      },
      {
@@ -860,19 +1331,19 @@
      {
       "color": "رصاصي فاتح / Gri",
       "size": "44",
-      "qty": 5,
+      "qty": 4,
       "product_id": 733175
      },
      {
       "color": "رصاصي فاتح / Gri",
       "size": "46",
-      "qty": 3,
+      "qty": 2,
       "product_id": 733176
      },
      {
       "color": "رصاصي فاتح / Gri",
       "size": "48",
-      "qty": 3,
+      "qty": 1,
       "product_id": 733177
      },
      {
@@ -1024,7 +1495,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 100,
-    "lastChecked": "2026-11-08T15:33:22Z",
+    "lastChecked": "2026-11-09T15:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1262,8 +1733,8 @@
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 18,
-    "lastChecked": "2026-11-08T10:10:25Z",
+    "qty": 16,
+    "lastChecked": "2026-11-09T15:44:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1282,7 +1753,7 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732936
      },
      {
@@ -1294,7 +1765,7 @@
      {
       "color": "خاكي / Haki",
       "size": "1",
-      "qty": 3,
+      "qty": 2,
       "product_id": 732939
      },
      {
@@ -1434,8 +1905,8 @@
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 202,
-    "lastChecked": "2026-11-08T07:38:12Z",
+    "qty": 201,
+    "lastChecked": "2026-11-09T15:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1490,7 +1961,7 @@
      {
       "color": "أسود / Siyah",
       "size": "44",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732885
      },
      {
@@ -1716,7 +2187,7 @@
    "daysSinceLastOrder": 5,
    "supplierStock": {
     "qty": 117,
-    "lastChecked": "2026-11-08T15:38:58Z",
+    "lastChecked": "2026-11-09T15:44:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -2035,8 +2506,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 120,
-    "lastChecked": "2026-11-08T15:32:48Z",
+    "qty": 118,
+    "lastChecked": "2026-11-09T15:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -2061,7 +2532,7 @@
      {
       "color": "نيلي / Laci",
       "size": "52",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732816
      },
      {
@@ -2121,7 +2592,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "52",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732826
      },
      {
@@ -2620,7 +3091,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 148,
-    "lastChecked": "2026-11-08T15:32:48Z",
+    "lastChecked": "2026-11-09T15:37:01Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -2829,7 +3300,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 68,
-    "lastChecked": "2026-11-08T15:32:48Z",
+    "lastChecked": "2026-11-09T15:37:01Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3084,15 +3555,15 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 94,
-    "lastChecked": "2026-11-08T15:31:45Z",
+    "qty": 93,
+    "lastChecked": "2026-11-09T15:37:01Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "أسود / Siyah",
       "size": "42",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732392
      },
      {
@@ -3853,8 +4324,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 43,
-    "lastChecked": "2026-11-08T15:31:45Z",
+    "qty": 41,
+    "lastChecked": "2026-11-09T15:36:26Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3891,7 +4362,7 @@
      {
       "color": "بيج / Bej",
       "size": "STD",
-      "qty": 8,
+      "qty": 6,
       "product_id": 732308
      }
     ]
@@ -3919,7 +4390,7 @@
    "daysSinceLastOrder": 10,
    "supplierStock": {
     "qty": 126,
-    "lastChecked": "2026-11-08T15:37:25Z",
+    "lastChecked": "2026-11-09T15:42:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4043,22 +4514,22 @@
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 6,
    "supplierStock": {
-    "qty": 17,
-    "lastChecked": "2026-11-08T15:37:25Z",
+    "qty": 2,
+    "lastChecked": "2026-11-09T15:42:41Z",
     "source": "api",
-    "status": "available",
+    "status": "low",
     "variants": [
      {
       "color": "نيلي / Laci",
-      "size": "1",
-      "qty": 9,
-      "product_id": 732268
+      "size": "2",
+      "qty": 1,
+      "product_id": 732269
      },
      {
-      "color": "نيلي / Laci",
+      "color": "خاكي / Haki",
       "size": "2",
-      "qty": 8,
-      "product_id": 732269
+      "qty": 1,
+      "product_id": 732275
      }
     ]
    }
@@ -4197,7 +4668,7 @@
    "revenue": 332000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 83000.0,
    "orderVelocity7d": 0.29,
@@ -4502,7 +4973,7 @@
    "daysSinceLastOrder": 8,
    "supplierStock": {
     "qty": 24,
-    "lastChecked": "2026-11-08T15:37:25Z",
+    "lastChecked": "2026-11-09T15:42:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4579,7 +5050,7 @@
    "daysSinceLastOrder": 4,
    "supplierStock": {
     "qty": 36,
-    "lastChecked": "2026-11-08T15:27:39Z",
+    "lastChecked": "2026-11-09T15:33:28Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4638,7 +5109,7 @@
    "daysSinceLastOrder": 11,
    "supplierStock": {
     "qty": 107,
-    "lastChecked": "2026-11-08T15:27:39Z",
+    "lastChecked": "2026-11-09T15:32:52Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4811,7 +5282,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 56,
-    "lastChecked": "2026-11-08T15:31:45Z",
+    "lastChecked": "2026-11-09T15:36:26Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4983,7 +5454,7 @@
    "daysSinceLastOrder": 11,
    "supplierStock": {
     "qty": 144,
-    "lastChecked": "2026-11-08T15:25:56Z",
+    "lastChecked": "2026-11-09T15:32:52Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5192,7 +5663,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 82,
-    "lastChecked": "2026-11-08T15:29:58Z",
+    "lastChecked": "2026-11-09T15:36:26Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5329,7 +5800,7 @@
    "daysSinceLastOrder": 14,
    "supplierStock": {
     "qty": 5,
-    "lastChecked": "2026-11-08T15:36:44Z",
+    "lastChecked": "2026-11-09T15:41:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5387,8 +5858,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 60,
-    "lastChecked": "2026-11-08T15:38:10Z",
+    "qty": 40,
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5403,18 +5874,6 @@
       "size": "2",
       "qty": 10,
       "product_id": 732060
-     },
-     {
-      "color": "أسود / Siyah",
-      "size": "1",
-      "qty": 10,
-      "product_id": 732061
-     },
-     {
-      "color": "أسود / Siyah",
-      "size": "2",
-      "qty": 10,
-      "product_id": 732062
      },
      {
       "color": "بنفسجي / Mor",
@@ -5554,7 +6013,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 240,
-    "lastChecked": "2026-11-08T15:38:10Z",
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5726,8 +6185,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 158,
-    "lastChecked": "2026-11-08T15:38:10Z",
+    "qty": 157,
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -5776,7 +6235,7 @@
      {
       "color": "أسود / Siyah",
       "size": "44",
-      "qty": 10,
+      "qty": 9,
       "product_id": 732009
      },
      {
@@ -5864,7 +6323,7 @@
    "daysSinceLastOrder": 13,
    "supplierStock": {
     "qty": 195,
-    "lastChecked": "2026-11-08T15:36:44Z",
+    "lastChecked": "2026-11-09T15:41:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6102,19 +6561,19 @@
    "odooCreatedDate": "2026-10-24",
    "firstOrderDate": "2026-10-25",
    "lastOrderDate": "2026-11-09",
-   "orders": 101,
-   "units": 112,
-   "revenue": 8960000,
+   "orders": 103,
+   "units": 114,
+   "revenue": 9120000,
    "delivered": 35,
    "returned": 7,
-   "unitsBoughtFromSupplier": 106,
+   "unitsBoughtFromSupplier": 107,
    "returnedStock": 47,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 5.43,
+   "orderVelocity7d": 5.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 115,
-    "lastChecked": "2026-11-09T11:10:16Z",
+    "qty": 59,
+    "lastChecked": "2026-11-09T15:55:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6161,18 +6620,6 @@
       "product_id": 731944
      },
      {
-      "color": "أسود / Siyah",
-      "size": "2",
-      "qty": 1,
-      "product_id": 731945
-     },
-     {
-      "color": "أسود / Siyah",
-      "size": "3",
-      "qty": 2,
-      "product_id": 731946
-     },
-     {
       "color": "قهوائي / Kahve",
       "size": "4",
       "qty": 2,
@@ -6201,60 +6648,6 @@
       "size": "3",
       "qty": 4,
       "product_id": 731951
-     },
-     {
-      "color": "خاكي / Haki",
-      "size": "4",
-      "qty": 9,
-      "product_id": 731952
-     },
-     {
-      "color": "خاكي / Haki",
-      "size": "5",
-      "qty": 9,
-      "product_id": 731953
-     },
-     {
-      "color": "خاكي / Haki",
-      "size": "1",
-      "qty": 5,
-      "product_id": 731954
-     },
-     {
-      "color": "خاكي / Haki",
-      "size": "3",
-      "qty": 8,
-      "product_id": 731956
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "4",
-      "qty": 5,
-      "product_id": 731957
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "5",
-      "qty": 5,
-      "product_id": 731958
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "1",
-      "qty": 3,
-      "product_id": 731959
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "2",
-      "qty": 4,
-      "product_id": 731960
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "3",
-      "qty": 5,
-      "product_id": 731961
      },
      {
       "color": "رصاصي فاتح / Gri",
@@ -6311,7 +6704,7 @@
    "daysSinceLastOrder": 3,
    "supplierStock": {
     "qty": 198,
-    "lastChecked": "2026-11-08T15:37:25Z",
+    "lastChecked": "2026-11-09T15:42:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6459,8 +6852,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 10,
    "supplierStock": {
-    "qty": 193,
-    "lastChecked": "2026-11-08T15:36:44Z",
+    "qty": 191,
+    "lastChecked": "2026-11-09T15:41:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6479,7 +6872,7 @@
      {
       "color": "نيلي / Laci",
       "size": "42",
-      "qty": 10,
+      "qty": 9,
       "product_id": 731898
      },
      {
@@ -6539,7 +6932,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "42",
-      "qty": 10,
+      "qty": 9,
       "product_id": 731908
      },
      {
@@ -6716,7 +7109,7 @@
    "daysSinceLastOrder": 15,
    "supplierStock": {
     "qty": 59,
-    "lastChecked": "2026-11-08T15:25:56Z",
+    "lastChecked": "2026-11-09T15:32:52Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6816,8 +7209,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 15,
    "supplierStock": {
-    "qty": 156,
-    "lastChecked": "2026-11-08T15:25:11Z",
+    "qty": 154,
+    "lastChecked": "2026-11-09T15:30:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6878,7 +7271,7 @@
      {
       "color": "أسود / Siyah",
       "size": "50",
-      "qty": 10,
+      "qty": 9,
       "product_id": 731845
      },
      {
@@ -6896,7 +7289,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "46",
-      "qty": 2,
+      "qty": 1,
       "product_id": 731848
      },
      {
@@ -7115,7 +7508,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 72,
-    "lastChecked": "2026-11-08T15:37:25Z",
+    "lastChecked": "2026-11-09T15:42:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7708,7 +8101,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 45,
-    "lastChecked": "2026-11-08T15:29:58Z",
+    "lastChecked": "2026-11-09T15:35:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7767,7 +8160,7 @@
    "daysSinceLastOrder": 10,
    "supplierStock": {
     "qty": 26,
-    "lastChecked": "2026-11-08T15:36:44Z",
+    "lastChecked": "2026-11-09T15:41:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7850,7 +8243,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 24,
-    "lastChecked": "2026-11-08T15:29:58Z",
+    "lastChecked": "2026-11-09T15:35:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8075,7 +8468,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 37,
-    "lastChecked": "2026-11-08T15:29:16Z",
+    "lastChecked": "2026-11-09T15:34:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8155,8 +8548,8 @@
    "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 96,
-    "lastChecked": "2026-11-08T16:55:35Z",
+    "qty": 106,
+    "lastChecked": "2026-11-09T15:30:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8222,12 +8615,6 @@
      },
      {
       "color": "أسود / Siyah",
-      "size": "48",
-      "qty": 1,
-      "product_id": 731659
-     },
-     {
-      "color": "أسود / Siyah",
       "size": "52",
       "qty": 5,
       "product_id": 731660
@@ -8247,7 +8634,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "42",
-      "qty": 5,
+      "qty": 4,
       "product_id": 731663
      },
      {
@@ -8289,8 +8676,14 @@
      {
       "color": "عنابي / Murdum",
       "size": "42",
-      "qty": 1,
+      "qty": 4,
       "product_id": 731670
+     },
+     {
+      "color": "عنابي / Murdum",
+      "size": "44",
+      "qty": 4,
+      "product_id": 731671
      },
      {
       "color": "عنابي / Murdum",
@@ -8313,13 +8706,13 @@
      {
       "color": "عنابي / Murdum",
       "size": "54",
-      "qty": 2,
+      "qty": 4,
       "product_id": 731675
      },
      {
       "color": "عنابي / Murdum",
       "size": "50",
-      "qty": 1,
+      "qty": 4,
       "product_id": 731676
      }
     ]
@@ -8501,7 +8894,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 44,
-    "lastChecked": "2026-11-08T15:29:16Z",
+    "lastChecked": "2026-11-09T15:35:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8709,7 +9102,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 110,
-    "lastChecked": "2026-11-08T15:38:10Z",
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -8882,7 +9275,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 160,
-    "lastChecked": "2026-11-08T15:37:25Z",
+    "lastChecked": "2026-11-09T15:42:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -9065,11 +9458,24 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 0,
-    "lastChecked": "2026-11-08T15:29:16Z",
+    "qty": 60,
+    "lastChecked": "2026-11-09T15:34:34Z",
     "source": "api",
-    "status": "out",
-    "variants": []
+    "status": "available",
+    "variants": [
+     {
+      "color": "أسود / Siyah",
+      "size": "STD",
+      "qty": 30,
+      "product_id": 731549
+     },
+     {
+      "color": "قهوائي / Kahve",
+      "size": "STD",
+      "qty": 30,
+      "product_id": 731550
+     }
+    ]
    }
   },
   {
@@ -9093,8 +9499,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 31,
-    "lastChecked": "2026-11-08T15:28:29Z",
+    "qty": 30,
+    "lastChecked": "2026-11-09T15:34:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -9161,7 +9567,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "48",
-      "qty": 2,
+      "qty": 1,
       "product_id": 731547
      }
     ]
@@ -9325,7 +9731,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 144,
-    "lastChecked": "2026-11-08T15:38:10Z",
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -9586,7 +9992,7 @@
    "daysSinceLastOrder": null,
    "supplierStock": {
     "qty": 64,
-    "lastChecked": "2026-11-08T15:28:29Z",
+    "lastChecked": "2026-11-09T15:33:28Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -9705,7 +10111,7 @@
    "daysSinceLastOrder": 20,
    "supplierStock": {
     "qty": 97,
-    "lastChecked": "2026-11-08T15:36:44Z",
+    "lastChecked": "2026-11-09T15:41:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -10168,10 +10574,10 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": null,
    "supplierStock": {
-    "qty": 5,
-    "lastChecked": "2026-11-08T15:28:29Z",
+    "qty": 4,
+    "lastChecked": "2026-11-09T15:33:28Z",
     "source": "api",
-    "status": "available",
+    "status": "low",
     "variants": [
      {
       "color": "أسود / Siyah",
@@ -10196,12 +10602,6 @@
       "size": "48",
       "qty": 1,
       "product_id": 731348
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "52",
-      "qty": 1,
-      "product_id": 731349
      }
     ]
    }
@@ -11166,7 +11566,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 44,
-    "lastChecked": "2026-11-08T15:34:58Z",
+    "lastChecked": "2026-11-09T15:41:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11434,7 +11834,7 @@
    "daysSinceLastOrder": 16,
    "supplierStock": {
     "qty": 67,
-    "lastChecked": "2026-11-08T15:34:58Z",
+    "lastChecked": "2026-11-09T15:40:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11797,7 +12197,7 @@
    "daysSinceLastOrder": 17,
    "supplierStock": {
     "qty": 194,
-    "lastChecked": "2026-11-08T15:34:58Z",
+    "lastChecked": "2026-11-09T15:40:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -12463,7 +12863,7 @@
    "daysSinceLastOrder": 8,
    "supplierStock": {
     "qty": 19,
-    "lastChecked": "2026-11-08T15:38:10Z",
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14187,8 +14587,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 30,
    "supplierStock": {
-    "qty": 48,
-    "lastChecked": "2026-11-08T15:34:58Z",
+    "qty": 47,
+    "lastChecked": "2026-11-09T15:40:46Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14201,7 +14601,7 @@
      {
       "color": "أسود / Siyah",
       "size": "40",
-      "qty": 3,
+      "qty": 2,
       "product_id": 730668
      },
      {
@@ -14453,8 +14853,8 @@
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 3,
    "supplierStock": {
-    "qty": 48,
-    "lastChecked": "2026-11-08T15:34:58Z",
+    "qty": 47,
+    "lastChecked": "2026-11-09T15:39:22Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14491,7 +14891,7 @@
      {
       "color": "خاكي / Haki",
       "size": "1",
-      "qty": 9,
+      "qty": 8,
       "product_id": 730628
      },
      {
@@ -14618,7 +15018,7 @@
    "daysSinceLastOrder": 30,
    "supplierStock": {
     "qty": 145,
-    "lastChecked": "2026-11-08T15:34:58Z",
+    "lastChecked": "2026-11-09T15:39:22Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14736,8 +15136,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 32,
    "supplierStock": {
-    "qty": 101,
-    "lastChecked": "2026-11-08T15:33:56Z",
+    "qty": 99,
+    "lastChecked": "2026-11-09T15:39:22Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14768,7 +15168,7 @@
      {
       "color": "نيلي / Laci",
       "size": "2",
-      "qty": 4,
+      "qty": 5,
       "product_id": 730578
      },
      {
@@ -14812,12 +15212,6 @@
       "size": "3",
       "qty": 6,
       "product_id": 730585
-     },
-     {
-      "color": "أحمر / Bordo",
-      "size": "1",
-      "qty": 3,
-      "product_id": 730586
      }
     ]
    }
@@ -14843,8 +15237,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 37,
    "supplierStock": {
-    "qty": 29,
-    "lastChecked": "2026-11-08T15:33:56Z",
+    "qty": 30,
+    "lastChecked": "2026-11-09T15:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14853,6 +15247,12 @@
       "size": "STD38-46",
       "qty": 8,
       "product_id": 730569
+     },
+     {
+      "color": "أسود / Siyah",
+      "size": "STD38-46",
+      "qty": 1,
+      "product_id": 730570
      },
      {
       "color": "قهوائي / Kahve",
@@ -14896,8 +15296,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 36,
    "supplierStock": {
-    "qty": 261,
-    "lastChecked": "2026-11-08T15:33:56Z",
+    "qty": 259,
+    "lastChecked": "2026-11-09T15:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -15018,7 +15418,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "48",
-      "qty": 10,
+      "qty": 9,
       "product_id": 730558
      },
      {
@@ -15048,7 +15448,7 @@
      {
       "color": "خاكي / Haki",
       "size": "48",
-      "qty": 8,
+      "qty": 7,
       "product_id": 730563
      },
      {
@@ -15856,7 +16256,7 @@
    "daysSinceLastOrder": 36,
    "supplierStock": {
     "qty": 66,
-    "lastChecked": "2026-11-08T15:33:22Z",
+    "lastChecked": "2026-11-09T15:38:12Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -16427,7 +16827,7 @@
    "daysSinceLastOrder": 11,
    "supplierStock": {
     "qty": 129,
-    "lastChecked": "2026-11-08T15:32:48Z",
+    "lastChecked": "2026-11-09T15:37:01Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -16800,8 +17200,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 31,
    "supplierStock": {
-    "qty": 100,
-    "lastChecked": "2026-11-08T15:32:48Z",
+    "qty": 101,
+    "lastChecked": "2026-11-09T15:37:01Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -16856,7 +17256,7 @@
      {
       "color": "بيج / Bej",
       "size": "38",
-      "qty": 6,
+      "qty": 7,
       "product_id": 730232
      },
      {
@@ -16972,8 +17372,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 19,
    "supplierStock": {
-    "qty": 334,
-    "lastChecked": "2026-11-08T15:31:45Z",
+    "qty": 332,
+    "lastChecked": "2026-11-09T15:36:26Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -16986,7 +17386,7 @@
      {
       "color": "فيزون / Vizon",
       "size": "40",
-      "qty": 9,
+      "qty": 8,
       "product_id": 730172
      },
      {
@@ -17034,7 +17434,7 @@
      {
       "color": "نيلي / Laci",
       "size": "46",
-      "qty": 9,
+      "qty": 8,
       "product_id": 730180
      },
      {
@@ -17841,8 +18241,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 32,
    "supplierStock": {
-    "qty": 246,
-    "lastChecked": "2026-11-08T15:31:45Z",
+    "qty": 244,
+    "lastChecked": "2026-11-09T15:36:26Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -17915,7 +18315,7 @@
      {
       "color": "أسود / Siyah",
       "size": "42",
-      "qty": 8,
+      "qty": 7,
       "product_id": 730025
      },
      {
@@ -17927,7 +18327,7 @@
      {
       "color": "أسود / Siyah",
       "size": "46",
-      "qty": 10,
+      "qty": 9,
       "product_id": 730027
      },
      {
@@ -18050,15 +18450,15 @@
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 3,
    "supplierStock": {
-    "qty": 12,
-    "lastChecked": "2026-11-08T15:31:45Z",
+    "qty": 13,
+    "lastChecked": "2026-11-09T15:36:26Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "أسود / Siyah",
       "size": "1",
-      "qty": 4,
+      "qty": 5,
       "product_id": 730005
      },
      {
@@ -18511,7 +18911,7 @@
    "daysSinceLastOrder": 40,
    "supplierStock": {
     "qty": 18,
-    "lastChecked": "2026-11-08T15:29:58Z",
+    "lastChecked": "2026-11-09T15:35:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -18600,7 +19000,7 @@
    "daysSinceLastOrder": 9,
    "supplierStock": {
     "qty": 28,
-    "lastChecked": "2026-11-08T15:29:58Z",
+    "lastChecked": "2026-11-09T15:35:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -18613,7 +19013,7 @@
      {
       "color": "خاكي / Haki",
       "size": "S",
-      "qty": 1,
+      "qty": 2,
       "product_id": 729854
      },
      {
@@ -18661,7 +19061,7 @@
      {
       "color": "أسود / Siyah",
       "size": "L",
-      "qty": 3,
+      "qty": 2,
       "product_id": 729848
      },
      {
@@ -18706,8 +19106,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 8,
    "supplierStock": {
-    "qty": 115,
-    "lastChecked": "2026-11-08T15:29:58Z",
+    "qty": 112,
+    "lastChecked": "2026-11-09T15:35:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -18738,7 +19138,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "40",
-      "qty": 7,
+      "qty": 6,
       "product_id": 729830
      },
      {
@@ -18780,7 +19180,7 @@
      {
       "color": "أسود / Siyah",
       "size": "38",
-      "qty": 3,
+      "qty": 2,
       "product_id": 729825
      },
      {
@@ -18792,7 +19192,7 @@
      {
       "color": "أسود / Siyah",
       "size": "42",
-      "qty": 8,
+      "qty": 7,
       "product_id": 729827
      },
      {
@@ -19443,8 +19843,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 56,
    "supplierStock": {
-    "qty": 180,
-    "lastChecked": "2026-11-08T15:29:16Z",
+    "qty": 179,
+    "lastChecked": "2026-11-09T15:34:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -19499,7 +19899,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "38",
-      "qty": 8,
+      "qty": 7,
       "product_id": 729730
      },
      {
@@ -19545,28 +19945,28 @@
       "product_id": 729721
      },
      {
-      "color": "Çağla",
+      "color": "Olive",
       "size": "38",
       "qty": 10,
-      "product_id": 729714
+      "in_odoo": null
      },
      {
-      "color": "Çağla",
+      "color": "Olive",
       "size": "40",
       "qty": 9,
-      "product_id": 729715
+      "in_odoo": null
      },
      {
-      "color": "Çağla",
+      "color": "Olive",
       "size": "42",
       "qty": 9,
-      "product_id": 729716
+      "in_odoo": null
      },
      {
-      "color": "Çağla",
+      "color": "Olive",
       "size": "44",
       "qty": 10,
-      "product_id": 729717
+      "in_odoo": null
      }
     ]
    }
@@ -19870,8 +20270,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 27,
    "supplierStock": {
-    "qty": 39,
-    "lastChecked": "2026-11-08T15:29:16Z",
+    "qty": 38,
+    "lastChecked": "2026-11-09T15:34:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -19880,12 +20280,6 @@
       "size": "1",
       "qty": 5,
       "product_id": 729640
-     },
-     {
-      "color": "خاكي / Haki",
-      "size": "2",
-      "qty": 1,
-      "product_id": 729641
      },
      {
       "color": "قهوائي / Kahve",
@@ -19975,8 +20369,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 24,
    "supplierStock": {
-    "qty": 73,
-    "lastChecked": "2026-11-08T15:29:16Z",
+    "qty": 74,
+    "lastChecked": "2026-11-09T15:34:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -20061,7 +20455,7 @@
      {
       "color": "قهوائي غامق / Acı Kahve",
       "size": "44",
-      "qty": 3,
+      "qty": 4,
       "product_id": 729609
      }
     ]
@@ -20144,15 +20538,15 @@
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 2,
    "supplierStock": {
-    "qty": 5,
-    "lastChecked": "2026-11-08T15:28:29Z",
+    "qty": 2,
+    "lastChecked": "2026-11-09T15:33:28Z",
     "source": "api",
-    "status": "available",
+    "status": "low",
     "variants": [
      {
       "color": "نيلي / Laci",
       "size": "S",
-      "qty": 5,
+      "qty": 2,
       "product_id": 729580
      }
     ]
@@ -20757,7 +21151,7 @@
    "daysSinceLastOrder": 9,
    "supplierStock": {
     "qty": 267,
-    "lastChecked": "2026-11-08T15:28:29Z",
+    "lastChecked": "2026-11-09T15:33:28Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -20953,8 +21347,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 20,
    "supplierStock": {
-    "qty": 106,
-    "lastChecked": "2026-11-08T15:28:29Z",
+    "qty": 105,
+    "lastChecked": "2026-11-09T15:33:28Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -21069,7 +21463,7 @@
      {
       "color": "أسود / Siyah",
       "size": "44",
-      "qty": 2,
+      "qty": 1,
       "product_id": 729420
      },
      {
@@ -21217,7 +21611,7 @@
    "daysSinceLastOrder": 31,
    "supplierStock": {
     "qty": 43,
-    "lastChecked": "2026-11-08T15:27:39Z",
+    "lastChecked": "2026-11-09T15:32:52Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -21310,7 +21704,7 @@
    "daysSinceLastOrder": 30,
    "supplierStock": {
     "qty": 16,
-    "lastChecked": "2026-11-08T15:27:39Z",
+    "lastChecked": "2026-11-09T15:32:52Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -21362,8 +21756,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 34,
    "supplierStock": {
-    "qty": 7,
-    "lastChecked": "2026-11-08T15:27:39Z",
+    "qty": 6,
+    "lastChecked": "2026-11-09T15:32:52Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -21388,7 +21782,7 @@
      {
       "color": "نيلي / Laci",
       "size": "XL",
-      "qty": 4,
+      "qty": 3,
       "product_id": 729291
      }
     ]
@@ -21444,7 +21838,7 @@
    "daysSinceLastOrder": 43,
    "supplierStock": {
     "qty": 31,
-    "lastChecked": "2026-11-08T15:25:56Z",
+    "lastChecked": "2026-11-09T15:30:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -21549,7 +21943,7 @@
    "daysSinceLastOrder": 20,
    "supplierStock": {
     "qty": 45,
-    "lastChecked": "2026-11-08T15:25:56Z",
+    "lastChecked": "2026-11-09T15:30:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -26248,8 +26642,8 @@
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 43,
    "supplierStock": {
-    "qty": 84,
-    "lastChecked": "2026-11-08T15:33:22Z",
+    "qty": 82,
+    "lastChecked": "2026-11-09T15:37:01Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -26280,7 +26674,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "2",
-      "qty": 6,
+      "qty": 5,
       "product_id": 727402
      },
      {
@@ -26292,7 +26686,7 @@
      {
       "color": "بيج / Bej",
       "size": "2",
-      "qty": 12,
+      "qty": 11,
       "product_id": 727404
      },
      {
@@ -36070,7 +36464,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 79,
-    "lastChecked": "2026-11-09T15:12:51Z",
+    "lastChecked": "2026-11-09T15:43:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37256,109 +37650,25 @@
    }
   },
   {
-   "odooId": 4738,
-   "name": "T-6798",
-   "sku": "T-6798",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-11-07",
-   "orders": 23,
-   "units": 23,
-   "revenue": 1121000,
-   "delivered": 22,
-   "returned": 4,
-   "unitsBoughtFromSupplier": 8,
-   "returnedStock": 0,
-   "unitPrice": 31000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4748,
-   "name": "L-2050",
-   "sku": "L-2050",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-14",
-   "orders": 237,
-   "units": 268,
-   "revenue": 9364000,
-   "delivered": 264,
-   "returned": 89,
-   "unitsBoughtFromSupplier": 172,
-   "returnedStock": 3,
-   "unitPrice": 62000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 56,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4739,
-   "name": "T-6799",
-   "sku": "T-6799",
-   "category": "All",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-12-02",
-   "lastOrderDate": "2026-10-22",
-   "orders": 3,
-   "units": 3,
-   "revenue": 82000,
-   "delivered": 3,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
-   "unitPrice": 55000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 18,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4747,
-   "name": "L-5015",
-   "sku": "L-5015",
+   "odooId": 4740,
+   "name": "T-6800",
+   "sku": "T-6800",
    "category": "All",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2026-01-12",
-   "lastOrderDate": "2026-11-02",
-   "orders": 15,
-   "units": 18,
-   "revenue": 541000,
-   "delivered": 17,
-   "returned": 7,
-   "unitsBoughtFromSupplier": 5,
-   "returnedStock": 4,
-   "unitPrice": 31000.0,
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-09-24",
+   "orders": 118,
+   "units": 121,
+   "revenue": 5710000,
+   "delivered": 117,
+   "returned": 25,
+   "unitsBoughtFromSupplier": 93,
+   "returnedStock": 1,
+   "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
+   "daysSinceLastOrder": 46,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37517,25 +37827,25 @@
    }
   },
   {
-   "odooId": 4740,
-   "name": "T-6800",
-   "sku": "T-6800",
-   "category": "All",
+   "odooId": 4748,
+   "name": "L-2050",
+   "sku": "L-2050",
+   "category": "Ferace",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-09-24",
-   "orders": 118,
-   "units": 121,
-   "revenue": 5710000,
-   "delivered": 117,
-   "returned": 25,
-   "unitsBoughtFromSupplier": 93,
-   "returnedStock": 1,
-   "unitPrice": 41000.0,
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-14",
+   "orders": 237,
+   "units": 268,
+   "revenue": 9364000,
+   "delivered": 264,
+   "returned": 89,
+   "unitsBoughtFromSupplier": 172,
+   "returnedStock": 3,
+   "unitPrice": 62000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 46,
+   "daysSinceLastOrder": 56,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37545,25 +37855,137 @@
    }
   },
   {
-   "odooId": 4548,
-   "name": "L-1727",
-   "sku": "L-1727",
-   "category": "Takim (Tunik & Pantolon)",
+   "odooId": 4747,
+   "name": "L-5015",
+   "sku": "L-5015",
+   "category": "All",
    "supplier": null,
    "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-10-24",
-   "orders": 55,
-   "units": 63,
-   "revenue": 2122000,
-   "delivered": 58,
-   "returned": 14,
-   "unitsBoughtFromSupplier": 26,
-   "returnedStock": 6,
-   "unitPrice": 61000.0,
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2026-01-12",
+   "lastOrderDate": "2026-11-02",
+   "orders": 15,
+   "units": 18,
+   "revenue": 541000,
+   "delivered": 17,
+   "returned": 7,
+   "unitsBoughtFromSupplier": 5,
+   "returnedStock": 4,
+   "unitPrice": 31000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 16,
+   "daysSinceLastOrder": 7,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4738,
+   "name": "T-6798",
+   "sku": "T-6798",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-11-07",
+   "orders": 23,
+   "units": 23,
+   "revenue": 1121000,
+   "delivered": 22,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 8,
+   "returnedStock": 0,
+   "unitPrice": 31000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 2,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4739,
+   "name": "T-6799",
+   "sku": "T-6799",
+   "category": "All",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-12-02",
+   "lastOrderDate": "2026-10-22",
+   "orders": 3,
+   "units": 3,
+   "revenue": 82000,
+   "delivered": 3,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 55000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 18,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4564,
+   "name": "L-1931",
+   "sku": "L-1931",
+   "category": "Elbise",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-12-02",
+   "lastOrderDate": "2026-10-13",
+   "orders": 6,
+   "units": 6,
+   "revenue": 334000,
+   "delivered": 6,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 3,
+   "returnedStock": 0,
+   "unitPrice": 55000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 27,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4620,
+   "name": "T-6771",
+   "sku": "T-6771",
+   "category": "Takim (Tunik & Etek)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-15",
+   "lastOrderDate": "2026-11-07",
+   "orders": 76,
+   "units": 78,
+   "revenue": 2698000,
+   "delivered": 78,
+   "returned": 29,
+   "unitsBoughtFromSupplier": 13,
+   "returnedStock": 0,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 2,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37601,137 +38023,25 @@
    }
   },
   {
-   "odooId": 4621,
-   "name": "T-6772",
-   "sku": "T-6772",
-   "category": "Tunik",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-10-15",
-   "lastOrderDate": "2026-09-27",
-   "orders": 6,
-   "units": 6,
-   "revenue": 146000,
-   "delivered": 6,
-   "returned": 2,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 1,
-   "unitPrice": 33000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 43,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4643,
-   "name": "T-6795",
-   "sku": "T-6795",
+   "odooId": 4623,
+   "name": "T-6775",
+   "sku": "T-6775",
    "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-21",
-   "lastOrderDate": "2026-10-27",
-   "orders": 58,
-   "units": 62,
-   "revenue": 2247000,
-   "delivered": 61,
-   "returned": 20,
-   "unitsBoughtFromSupplier": 37,
-   "returnedStock": 2,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 13,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4466,
-   "name": "H-1429",
-   "sku": "H-1429",
-   "category": "Elbise",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-14",
-   "lastOrderDate": "2026-11-06",
-   "orders": 70,
-   "units": 71,
-   "revenue": 1786000,
-   "delivered": 69,
-   "returned": 14,
-   "unitsBoughtFromSupplier": 54,
-   "returnedStock": 3,
-   "unitPrice": 37000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 3,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4616,
-   "name": "T-6767",
-   "sku": "T-6767",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-09",
-   "lastOrderDate": "2026-09-29",
-   "orders": 11,
-   "units": 12,
-   "revenue": 342000,
-   "delivered": 12,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 2,
-   "returnedStock": 3,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 41,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4613,
-   "name": "T-6764",
-   "sku": "T-6764",
-   "category": "Kap",
    "supplier": null,
    "stage": "completed",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-14",
-   "lastOrderDate": "2026-10-10",
-   "orders": 34,
-   "units": 35,
-   "revenue": 1116000,
-   "delivered": 35,
-   "returned": 16,
-   "unitsBoughtFromSupplier": 1,
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-10-23",
+   "orders": 54,
+   "units": 56,
+   "revenue": 2108000,
+   "delivered": 56,
+   "returned": 6,
+   "unitsBoughtFromSupplier": 15,
    "returnedStock": 0,
    "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 30,
+   "daysSinceLastOrder": 17,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37741,109 +38051,25 @@
    }
   },
   {
-   "odooId": 4610,
-   "name": "T-6761",
-   "sku": "T-6761",
-   "category": "Takim (Caket & Pantolon)",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-26",
-   "lastOrderDate": "2026-11-02",
-   "orders": 12,
-   "units": 12,
-   "revenue": 352000,
-   "delivered": 12,
-   "returned": 3,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4600,
-   "name": "L-9745",
-   "sku": "L-9745",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-09",
-   "lastOrderDate": "2026-11-01",
-   "orders": 216,
-   "units": 239,
-   "revenue": 9430000,
-   "delivered": 241,
-   "returned": 42,
-   "unitsBoughtFromSupplier": 176,
-   "returnedStock": 0,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4597,
-   "name": "L-7300",
-   "sku": "L-7300",
-   "category": "Kap",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-05",
-   "lastOrderDate": "2026-11-01",
-   "orders": 57,
-   "units": 63,
-   "revenue": 2633000,
-   "delivered": 62,
-   "returned": 7,
-   "unitsBoughtFromSupplier": 57,
-   "returnedStock": 0,
-   "unitPrice": 64000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4602,
-   "name": "L-9967",
-   "sku": "L-9967",
-   "category": "Takim (Tunik & Pantolon)",
+   "odooId": 4625,
+   "name": "T-6777",
+   "sku": "T-6777",
+   "category": "Ferace",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-09-28",
-   "orders": 8,
-   "units": 8,
-   "revenue": 400000,
-   "delivered": 7,
-   "returned": 2,
-   "unitsBoughtFromSupplier": 4,
-   "returnedStock": 3,
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-08-16",
+   "orders": 42,
+   "units": 45,
+   "revenue": 1305000,
+   "delivered": 44,
+   "returned": 10,
+   "unitsBoughtFromSupplier": 5,
+   "returnedStock": 20,
    "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 42,
+   "daysSinceLastOrder": 85,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37853,25 +38079,25 @@
    }
   },
   {
-   "odooId": 4595,
-   "name": "L-5745",
-   "sku": "L-5745",
+   "odooId": 4640,
+   "name": "T-6792",
+   "sku": "T-6792",
    "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-10",
-   "lastOrderDate": "2026-11-01",
-   "orders": 39,
-   "units": 40,
-   "revenue": 1535000,
-   "delivered": 39,
-   "returned": 6,
-   "unitsBoughtFromSupplier": 18,
-   "returnedStock": 1,
-   "unitPrice": 59000.0,
+   "lastOrderDate": "2026-10-24",
+   "orders": 142,
+   "units": 147,
+   "revenue": 6711000,
+   "delivered": 152,
+   "returned": 36,
+   "unitsBoughtFromSupplier": 43,
+   "returnedStock": 2,
+   "unitPrice": 36000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
+   "daysSinceLastOrder": 16,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38102,25 +38328,25 @@
    }
   },
   {
-   "odooId": 4459,
-   "name": "H-1421",
-   "sku": "H-1421",
+   "odooId": 4513,
+   "name": "L-0707",
+   "sku": "L-0707",
    "category": "Takim (Tunik & Etek)",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2026-01-26",
-   "lastOrderDate": "2026-09-19",
-   "orders": 3,
-   "units": 3,
-   "revenue": 110000,
-   "delivered": 3,
-   "returned": 0,
+   "firstOrderDate": "2026-09-13",
+   "lastOrderDate": "2026-11-02",
+   "orders": 2,
+   "units": 2,
+   "revenue": 55000,
+   "delivered": 2,
+   "returned": 1,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 1,
-   "unitPrice": 31000.0,
+   "unitPrice": 60000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 51,
+   "daysSinceLastOrder": 7,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38130,53 +38356,81 @@
    }
   },
   {
-   "odooId": 4532,
-   "name": "L-1521",
-   "sku": "L-1521",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "ads-live",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2026-11-03",
-   "lastOrderDate": "2026-11-03",
-   "orders": 1,
-   "units": 1,
-   "revenue": 25000,
-   "delivered": 1,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
-   "unitPrice": 37000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 6,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4607,
-   "name": "T-6758",
-   "sku": "T-6758",
-   "category": "Takim (Tunik & Etek)",
+   "odooId": 4525,
+   "name": "L-1323",
+   "sku": "L-1323",
+   "category": "Elbise",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-10-10",
-   "lastOrderDate": "2026-09-25",
-   "orders": 3,
-   "units": 3,
-   "revenue": 109000,
-   "delivered": 3,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 2,
-   "unitPrice": 31000.0,
+   "firstOrderDate": "2025-07-09",
+   "lastOrderDate": "2026-09-27",
+   "orders": 10,
+   "units": 12,
+   "revenue": 442000,
+   "delivered": 11,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 8,
+   "returnedStock": 1,
+   "unitPrice": 38000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 45,
+   "daysSinceLastOrder": 43,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4538,
+   "name": "L-1575",
+   "sku": "L-1575",
+   "category": "Tunik",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-12",
+   "lastOrderDate": "2026-10-25",
+   "orders": 28,
+   "units": 29,
+   "revenue": 989000,
+   "delivered": 28,
+   "returned": 6,
+   "unitsBoughtFromSupplier": 23,
+   "returnedStock": 3,
+   "unitPrice": 64000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 15,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4616,
+   "name": "T-6767",
+   "sku": "T-6767",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-09",
+   "lastOrderDate": "2026-09-29",
+   "orders": 11,
+   "units": 12,
+   "revenue": 342000,
+   "delivered": 12,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 2,
+   "returnedStock": 3,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 41,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38305,25 +38559,137 @@
    }
   },
   {
-   "odooId": 4606,
-   "name": "T-6757",
-   "sku": "T-6757",
+   "odooId": 4613,
+   "name": "T-6764",
+   "sku": "T-6764",
+   "category": "Kap",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-08-14",
+   "lastOrderDate": "2026-10-10",
+   "orders": 34,
+   "units": 35,
+   "revenue": 1116000,
+   "delivered": 35,
+   "returned": 16,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 0,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 30,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4542,
+   "name": "L-1637",
+   "sku": "L-1637",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-11-07",
+   "orders": 86,
+   "units": 89,
+   "revenue": 4147000,
+   "delivered": 89,
+   "returned": 18,
+   "unitsBoughtFromSupplier": 44,
+   "returnedStock": 6,
+   "unitPrice": 75000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 2,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4610,
+   "name": "T-6761",
+   "sku": "T-6761",
+   "category": "Takim (Caket & Pantolon)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-26",
+   "lastOrderDate": "2026-11-02",
+   "orders": 12,
+   "units": 12,
+   "revenue": 352000,
+   "delivered": 12,
+   "returned": 3,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 7,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4607,
+   "name": "T-6758",
+   "sku": "T-6758",
+   "category": "Takim (Tunik & Etek)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-10-10",
+   "lastOrderDate": "2026-09-25",
+   "orders": 3,
+   "units": 3,
+   "revenue": 109000,
+   "delivered": 3,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 2,
+   "unitPrice": 31000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 45,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4600,
+   "name": "L-9745",
+   "sku": "L-9745",
    "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
    "stage": "selling",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-22",
-   "lastOrderDate": "2026-10-31",
-   "orders": 12,
-   "units": 13,
-   "revenue": 389000,
-   "delivered": 13,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "firstOrderDate": "2025-07-09",
+   "lastOrderDate": "2026-11-01",
+   "orders": 216,
+   "units": 239,
+   "revenue": 9430000,
+   "delivered": 241,
+   "returned": 42,
+   "unitsBoughtFromSupplier": 176,
    "returnedStock": 0,
-   "unitPrice": 37000.0,
+   "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
+   "daysSinceLastOrder": 8,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38333,53 +38699,25 @@
    }
   },
   {
-   "odooId": 4592,
-   "name": "L-4675",
-   "sku": "L-4675",
+   "odooId": 4548,
+   "name": "L-1727",
+   "sku": "L-1727",
    "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-11-01",
-   "lastOrderDate": "2026-09-23",
-   "orders": 6,
-   "units": 6,
-   "revenue": 214000,
-   "delivered": 6,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
-   "unitPrice": 49000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 47,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4588,
-   "name": "L-3729",
-   "sku": "L-3729",
-   "category": "Kap",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-14",
-   "lastOrderDate": "2026-10-01",
-   "orders": 11,
-   "units": 11,
-   "revenue": 497000,
-   "delivered": 11,
-   "returned": 5,
-   "unitsBoughtFromSupplier": 9,
-   "returnedStock": 3,
-   "unitPrice": 59000.0,
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-10-24",
+   "orders": 55,
+   "units": 63,
+   "revenue": 2122000,
+   "delivered": 58,
+   "returned": 14,
+   "unitsBoughtFromSupplier": 26,
+   "returnedStock": 6,
+   "unitPrice": 61000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 39,
+   "daysSinceLastOrder": 16,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38389,25 +38727,81 @@
    }
   },
   {
-   "odooId": 4473,
-   "name": "H-1436",
-   "sku": "H-1436",
-   "category": "Elbise",
+   "odooId": 4643,
+   "name": "T-6795",
+   "sku": "T-6795",
+   "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "completed",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-15",
-   "lastOrderDate": "2026-10-22",
-   "orders": 13,
-   "units": 14,
-   "revenue": 402000,
-   "delivered": 14,
-   "returned": 4,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
-   "unitPrice": 55000.0,
+   "firstOrderDate": "2025-07-21",
+   "lastOrderDate": "2026-10-27",
+   "orders": 58,
+   "units": 62,
+   "revenue": 2247000,
+   "delivered": 61,
+   "returned": 20,
+   "unitsBoughtFromSupplier": 37,
+   "returnedStock": 2,
+   "unitPrice": 41000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 18,
+   "daysSinceLastOrder": 13,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4597,
+   "name": "L-7300",
+   "sku": "L-7300",
+   "category": "Kap",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-08-05",
+   "lastOrderDate": "2026-11-01",
+   "orders": 57,
+   "units": 63,
+   "revenue": 2633000,
+   "delivered": 62,
+   "returned": 7,
+   "unitsBoughtFromSupplier": 57,
+   "returnedStock": 0,
+   "unitPrice": 64000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 8,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4595,
+   "name": "L-5745",
+   "sku": "L-5745",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-10",
+   "lastOrderDate": "2026-11-01",
+   "orders": 39,
+   "units": 40,
+   "revenue": 1535000,
+   "delivered": 39,
+   "returned": 6,
+   "unitsBoughtFromSupplier": 18,
+   "returnedStock": 1,
+   "unitPrice": 59000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 8,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38473,6 +38867,118 @@
    }
   },
   {
+   "odooId": 4592,
+   "name": "L-4675",
+   "sku": "L-4675",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-11-01",
+   "lastOrderDate": "2026-09-23",
+   "orders": 6,
+   "units": 6,
+   "revenue": 214000,
+   "delivered": 6,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 49000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 47,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4588,
+   "name": "L-3729",
+   "sku": "L-3729",
+   "category": "Kap",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-14",
+   "lastOrderDate": "2026-10-01",
+   "orders": 11,
+   "units": 11,
+   "revenue": 497000,
+   "delivered": 11,
+   "returned": 5,
+   "unitsBoughtFromSupplier": 9,
+   "returnedStock": 3,
+   "unitPrice": 59000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 39,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4602,
+   "name": "L-9967",
+   "sku": "L-9967",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-14",
+   "lastOrderDate": "2026-09-28",
+   "orders": 8,
+   "units": 8,
+   "revenue": 400000,
+   "delivered": 7,
+   "returned": 2,
+   "unitsBoughtFromSupplier": 4,
+   "returnedStock": 3,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 42,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4532,
+   "name": "L-1521",
+   "sku": "L-1521",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "ads-live",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2026-11-03",
+   "lastOrderDate": "2026-11-03",
+   "orders": 1,
+   "units": 1,
+   "revenue": 25000,
+   "delivered": 1,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 37000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 6,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
    "odooId": 4603,
    "name": "L-9999",
    "sku": "L-9999",
@@ -38492,6 +38998,174 @@
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 2,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4598,
+   "name": "L-7328",
+   "sku": "L-7328",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-27",
+   "lastOrderDate": "2026-10-22",
+   "orders": 36,
+   "units": 37,
+   "revenue": 1441000,
+   "delivered": 37,
+   "returned": 9,
+   "unitsBoughtFromSupplier": 16,
+   "returnedStock": 3,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 18,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4563,
+   "name": "L-1908",
+   "sku": "L-1908",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-10-07",
+   "lastOrderDate": "2026-10-16",
+   "orders": 6,
+   "units": 6,
+   "revenue": 184000,
+   "delivered": 6,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 24,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4502,
+   "name": "H-1465",
+   "sku": "H-1465",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-08-15",
+   "lastOrderDate": "2026-10-07",
+   "orders": 2,
+   "units": 2,
+   "revenue": 67000,
+   "delivered": 2,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 2,
+   "unitPrice": 39000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 33,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4466,
+   "name": "H-1429",
+   "sku": "H-1429",
+   "category": "Elbise",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-07-14",
+   "lastOrderDate": "2026-11-06",
+   "orders": 70,
+   "units": 71,
+   "revenue": 1786000,
+   "delivered": 69,
+   "returned": 14,
+   "unitsBoughtFromSupplier": 54,
+   "returnedStock": 3,
+   "unitPrice": 37000.0,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 3,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4459,
+   "name": "H-1421",
+   "sku": "H-1421",
+   "category": "Takim (Tunik & Etek)",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2026-01-26",
+   "lastOrderDate": "2026-09-19",
+   "orders": 3,
+   "units": 3,
+   "revenue": 110000,
+   "delivered": 3,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 1,
+   "unitPrice": 31000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 51,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4606,
+   "name": "T-6757",
+   "sku": "T-6757",
+   "category": "Takim (Tunik & Pantolon)",
+   "supplier": null,
+   "stage": "selling",
+   "odooCreatedDate": "2025-05-20",
+   "firstOrderDate": "2025-09-22",
+   "lastOrderDate": "2026-10-31",
+   "orders": 12,
+   "units": 13,
+   "revenue": 389000,
+   "delivered": 13,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 37000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 9,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38529,25 +39203,25 @@
    }
   },
   {
-   "odooId": 4620,
-   "name": "T-6771",
-   "sku": "T-6771",
-   "category": "Takim (Tunik & Etek)",
+   "odooId": 4473,
+   "name": "H-1436",
+   "sku": "H-1436",
+   "category": "Elbise",
    "supplier": null,
-   "stage": "selling",
+   "stage": "completed",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-15",
-   "lastOrderDate": "2026-11-07",
-   "orders": 76,
-   "units": 78,
-   "revenue": 2698000,
-   "delivered": 78,
-   "returned": 29,
-   "unitsBoughtFromSupplier": 13,
+   "lastOrderDate": "2026-10-22",
+   "orders": 13,
+   "units": 14,
+   "revenue": 402000,
+   "delivered": 14,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
+   "unitPrice": 55000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 18,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38613,305 +39287,25 @@
    }
   },
   {
-   "odooId": 4502,
-   "name": "H-1465",
-   "sku": "H-1465",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-08-15",
-   "lastOrderDate": "2026-10-07",
-   "orders": 2,
-   "units": 2,
-   "revenue": 67000,
-   "delivered": 2,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 1,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 33,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4564,
-   "name": "L-1931",
-   "sku": "L-1931",
-   "category": "Elbise",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-12-02",
-   "lastOrderDate": "2026-10-13",
-   "orders": 6,
-   "units": 6,
-   "revenue": 334000,
-   "delivered": 6,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 3,
-   "returnedStock": 0,
-   "unitPrice": 55000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 27,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4538,
-   "name": "L-1575",
-   "sku": "L-1575",
+   "odooId": 4621,
+   "name": "T-6772",
+   "sku": "T-6772",
    "category": "Tunik",
    "supplier": null,
    "stage": "selling-returns",
    "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-09-12",
-   "lastOrderDate": "2026-10-25",
-   "orders": 28,
-   "units": 29,
-   "revenue": 989000,
-   "delivered": 28,
-   "returned": 6,
-   "unitsBoughtFromSupplier": 23,
-   "returnedStock": 3,
-   "unitPrice": 64000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 15,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4542,
-   "name": "L-1637",
-   "sku": "L-1637",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "selling",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-11-07",
-   "orders": 86,
-   "units": 89,
-   "revenue": 4147000,
-   "delivered": 89,
-   "returned": 18,
-   "unitsBoughtFromSupplier": 44,
-   "returnedStock": 6,
-   "unitPrice": 75000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4525,
-   "name": "L-1323",
-   "sku": "L-1323",
-   "category": "Elbise",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-09",
+   "firstOrderDate": "2025-10-15",
    "lastOrderDate": "2026-09-27",
-   "orders": 10,
-   "units": 12,
-   "revenue": 442000,
-   "delivered": 11,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 8,
-   "returnedStock": 1,
-   "unitPrice": 38000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 43,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4563,
-   "name": "L-1908",
-   "sku": "L-1908",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-10-07",
-   "lastOrderDate": "2026-10-16",
    "orders": 6,
    "units": 6,
-   "revenue": 184000,
+   "revenue": 146000,
    "delivered": 6,
-   "returned": 4,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 2,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 24,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4598,
-   "name": "L-7328",
-   "sku": "L-7328",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-27",
-   "lastOrderDate": "2026-10-22",
-   "orders": 36,
-   "units": 37,
-   "revenue": 1441000,
-   "delivered": 37,
-   "returned": 9,
-   "unitsBoughtFromSupplier": 16,
-   "returnedStock": 3,
-   "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 18,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4513,
-   "name": "L-0707",
-   "sku": "L-0707",
-   "category": "Takim (Tunik & Etek)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2026-09-13",
-   "lastOrderDate": "2026-11-02",
-   "orders": 2,
-   "units": 2,
-   "revenue": 55000,
-   "delivered": 2,
-   "returned": 1,
+   "returned": 2,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 1,
-   "unitPrice": 60000.0,
+   "unitPrice": 33000.0,
    "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 7,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4640,
-   "name": "T-6792",
-   "sku": "T-6792",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-10",
-   "lastOrderDate": "2026-10-24",
-   "orders": 142,
-   "units": 147,
-   "revenue": 6711000,
-   "delivered": 152,
-   "returned": 36,
-   "unitsBoughtFromSupplier": 43,
-   "returnedStock": 2,
-   "unitPrice": 36000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 16,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4625,
-   "name": "T-6777",
-   "sku": "T-6777",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-08-16",
-   "orders": 42,
-   "units": 45,
-   "revenue": 1305000,
-   "delivered": 44,
-   "returned": 10,
-   "unitsBoughtFromSupplier": 5,
-   "returnedStock": 20,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 85,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4623,
-   "name": "T-6775",
-   "sku": "T-6775",
-   "category": "Takim (Tunik & Pantolon)",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-20",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-10-23",
-   "orders": 54,
-   "units": 56,
-   "revenue": 2108000,
-   "delivered": 56,
-   "returned": 6,
-   "unitsBoughtFromSupplier": 15,
-   "returnedStock": 0,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 17,
+   "daysSinceLastOrder": 43,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -39479,9 +39873,9 @@
      560000
     ],
     "2026-11-09": [
-     1,
-     1,
-     80000
+     3,
+     3,
+     240000
     ]
    },
    "7462": {
@@ -53249,16 +53643,23 @@
      31000
     ]
    },
-   "4738": {
-    "2026-09-27": [
+   "4740": {
+    "2026-09-24": [
      1,
      1,
      41000
+    ]
+   },
+   "4749": {
+    "2026-09-06": [
+     1,
+     1,
+     55000
     ],
-    "2026-11-07": [
+    "2026-09-28": [
      1,
      1,
-     25000
+     41000
     ]
    },
    "4748": {
@@ -53271,13 +53672,6 @@
      1,
      1,
      30000
-    ]
-   },
-   "4739": {
-    "2026-10-22": [
-     1,
-     1,
-     25000
     ]
    },
    "4747": {
@@ -53312,35 +53706,47 @@
      25000
     ]
    },
-   "4749": {
-    "2026-09-06": [
-     1,
-     1,
-     55000
-    ],
-    "2026-09-28": [
+   "4738": {
+    "2026-09-27": [
      1,
      1,
      41000
+    ],
+    "2026-11-07": [
+     1,
+     1,
+     25000
     ]
    },
-   "4740": {
-    "2026-09-24": [
+   "4739": {
+    "2026-10-22": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4564": {
+    "2026-10-07": [
+     1,
+     1,
+     39000
+    ],
+    "2026-10-13": [
+     1,
+     1,
+     39000
+    ]
+   },
+   "4620": {
+    "2026-09-30": [
      1,
      1,
      41000
-    ]
-   },
-   "4548": {
-    "2026-09-15": [
-     1,
-     1,
-     61000
     ],
-    "2026-10-24": [
+    "2026-11-07": [
      1,
-     2,
-     122000
+     1,
+     25000
     ]
    },
    "4622": {
@@ -53350,111 +53756,27 @@
      41000
     ]
    },
-   "4621": {
-    "2026-09-27": [
-     1,
-     1,
-     33000
-    ]
-   },
-   "4643": {
-    "2026-10-25": [
-     1,
-     1,
-     25000
-    ],
-    "2026-10-27": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4466": {
-    "2026-10-24": [
-     1,
-     1,
-     25000
-    ],
-    "2026-11-03": [
-     1,
-     1,
-     25000
-    ],
-    "2026-11-06": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4616": {
-    "2026-09-29": [
-     1,
-     1,
-     41000
-    ]
-   },
-   "4613": {
-    "2026-09-24": [
-     1,
-     1,
-     41000
-    ],
-    "2026-10-04": [
-     1,
-     1,
-     41000
-    ],
-    "2026-10-10": [
-     1,
-     1,
-     41000
-    ]
-   },
-   "4610": {
-    "2026-11-02": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4600": {
+   "4623": {
     "2026-10-23": [
-     2,
-     2,
-     50000
-    ],
-    "2026-11-01": [
      1,
      1,
      25000
     ]
    },
-   "4597": {
-    "2026-08-23": [
+   "4625": {
+    "2026-08-16": [
      1,
      1,
-     64000
-    ],
-    "2026-09-20": [
-     1,
-     1,
-     64000
-    ],
-    "2026-11-01": [
-     1,
-     1,
-     25000
+     49000
     ]
    },
-   "4602": {
-    "2026-09-28": [
+   "4640": {
+    "2026-09-23": [
      1,
      1,
-     59000
-    ]
-   },
-   "4595": {
-    "2026-11-01": [
+     36000
+    ],
+    "2026-10-24": [
      1,
      1,
      25000
@@ -53487,22 +53809,44 @@
      25000
     ]
    },
-   "4459": {
-    "2026-09-19": [
+   "4513": {
+    "2026-09-13": [
      1,
      1,
      30000
-    ]
-   },
-   "4532": {
-    "2026-11-03": [
+    ],
+    "2026-11-02": [
      1,
      1,
      25000
     ]
    },
-   "4607": {
-    "2026-09-25": [
+   "4525": {
+    "2026-09-10": [
+     1,
+     1,
+     38000
+    ],
+    "2026-09-27": [
+     2,
+     2,
+     76000
+    ]
+   },
+   "4538": {
+    "2026-10-15": [
+     1,
+     1,
+     64000
+    ],
+    "2026-10-25": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4616": {
+    "2026-09-29": [
      1,
      1,
      41000
@@ -53550,32 +53894,117 @@
      64000
     ]
    },
-   "4606": {
-    "2026-10-31": [
+   "4613": {
+    "2026-09-24": [
+     1,
+     1,
+     41000
+    ],
+    "2026-10-04": [
+     1,
+     1,
+     41000
+    ],
+    "2026-10-10": [
+     1,
+     1,
+     41000
+    ]
+   },
+   "4542": {
+    "2026-09-13": [
+     1,
+     1,
+     75000
+    ],
+    "2026-09-29": [
+     1,
+     1,
+     75000
+    ],
+    "2026-11-02": [
+     1,
+     1,
+     25000
+    ],
+    "2026-11-07": [
      1,
      1,
      25000
     ]
    },
-   "4592": {
-    "2026-09-23": [
+   "4610": {
+    "2026-11-02": [
      1,
      1,
-     49000
+     25000
     ]
    },
-   "4588": {
-    "2026-10-01": [
+   "4607": {
+    "2026-09-25": [
      1,
      1,
-     59000
+     41000
     ]
    },
-   "4473": {
-    "2026-10-22": [
+   "4600": {
+    "2026-10-23": [
+     2,
+     2,
+     50000
+    ],
+    "2026-11-01": [
      1,
      1,
-     39000
+     25000
+    ]
+   },
+   "4548": {
+    "2026-09-15": [
+     1,
+     1,
+     61000
+    ],
+    "2026-10-24": [
+     1,
+     2,
+     122000
+    ]
+   },
+   "4643": {
+    "2026-10-25": [
+     1,
+     1,
+     25000
+    ],
+    "2026-10-27": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4597": {
+    "2026-08-23": [
+     1,
+     1,
+     64000
+    ],
+    "2026-09-20": [
+     1,
+     1,
+     64000
+    ],
+    "2026-11-01": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4595": {
+    "2026-11-01": [
+     1,
+     1,
+     25000
     ]
    },
    "4512": {
@@ -53592,6 +54021,34 @@
      40000
     ]
    },
+   "4592": {
+    "2026-09-23": [
+     1,
+     1,
+     49000
+    ]
+   },
+   "4588": {
+    "2026-10-01": [
+     1,
+     1,
+     59000
+    ]
+   },
+   "4602": {
+    "2026-09-28": [
+     1,
+     1,
+     59000
+    ]
+   },
+   "4532": {
+    "2026-11-03": [
+     1,
+     1,
+     25000
+    ]
+   },
    "4603": {
     "2026-11-04": [
      1,
@@ -53599,6 +54056,63 @@
      25000
     ],
     "2026-11-07": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4598": {
+    "2026-10-16": [
+     1,
+     1,
+     39000
+    ],
+    "2026-10-22": [
+     1,
+     1,
+     39000
+    ]
+   },
+   "4563": {
+    "2026-10-16": [
+     1,
+     1,
+     39000
+    ]
+   },
+   "4502": {
+    "2026-10-07": [
+     1,
+     1,
+     39000
+    ]
+   },
+   "4466": {
+    "2026-10-24": [
+     1,
+     1,
+     25000
+    ],
+    "2026-11-03": [
+     1,
+     1,
+     25000
+    ],
+    "2026-11-06": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4459": {
+    "2026-09-19": [
+     1,
+     1,
+     30000
+    ]
+   },
+   "4606": {
+    "2026-10-31": [
      1,
      1,
      25000
@@ -53626,16 +54140,11 @@
      152000
     ]
    },
-   "4620": {
-    "2026-09-30": [
+   "4473": {
+    "2026-10-22": [
      1,
      1,
-     41000
-    ],
-    "2026-11-07": [
-     1,
-     1,
-     25000
+     39000
     ]
    },
    "4537": {
@@ -53657,126 +54166,11 @@
      49000
     ]
    },
-   "4502": {
-    "2026-10-07": [
-     1,
-     1,
-     39000
-    ]
-   },
-   "4564": {
-    "2026-10-07": [
-     1,
-     1,
-     39000
-    ],
-    "2026-10-13": [
-     1,
-     1,
-     39000
-    ]
-   },
-   "4538": {
-    "2026-10-15": [
-     1,
-     1,
-     64000
-    ],
-    "2026-10-25": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4542": {
-    "2026-09-13": [
-     1,
-     1,
-     75000
-    ],
-    "2026-09-29": [
-     1,
-     1,
-     75000
-    ],
-    "2026-11-02": [
-     1,
-     1,
-     25000
-    ],
-    "2026-11-07": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4525": {
-    "2026-09-10": [
-     1,
-     1,
-     38000
-    ],
+   "4621": {
     "2026-09-27": [
-     2,
-     2,
-     76000
-    ]
-   },
-   "4563": {
-    "2026-10-16": [
      1,
      1,
-     39000
-    ]
-   },
-   "4598": {
-    "2026-10-16": [
-     1,
-     1,
-     39000
-    ],
-    "2026-10-22": [
-     1,
-     1,
-     39000
-    ]
-   },
-   "4513": {
-    "2026-09-13": [
-     1,
-     1,
-     30000
-    ],
-    "2026-11-02": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4640": {
-    "2026-09-23": [
-     1,
-     1,
-     36000
-    ],
-    "2026-10-24": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4625": {
-    "2026-08-16": [
-     1,
-     1,
-     49000
-    ]
-   },
-   "4623": {
-    "2026-10-23": [
-     1,
-     1,
-     25000
+     33000
     ]
    }
   },
@@ -54205,10 +54599,52 @@
    "2026-11-06": 48,
    "2026-11-07": 39,
    "2026-11-08": 51,
-   "2026-11-09": 40
+   "2026-11-09": 42
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34526",
+   "d": "2026-11-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1945",
+     "pid": 731945,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34525",
+   "d": "2026-11-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1945",
+     "pid": 731953,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 5"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34523",
    "d": "2026-11-09",
@@ -199647,6 +200083,166 @@
    "model": "H-1963",
    "qty": 0,
    "cost": 38958,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
+   "created": "2026-11-09",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1964",
+   "model": "H-1964",
+   "qty": 0,
+   "cost": 42500,
    "created": "2026-11-09",
    "costSrc": "vendor"
   },
