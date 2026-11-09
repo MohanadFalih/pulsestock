@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-09T19:01:18.433549+00:00",
+ "syncedAt": "2026-11-09T19:33:04.273912+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4175,20 +4175,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-30",
    "firstOrderDate": "2026-11-01",
-   "lastOrderDate": "2026-11-01",
-   "orders": 1,
-   "units": 1,
-   "revenue": 76000,
+   "lastOrderDate": "2026-11-09",
+   "orders": 2,
+   "units": 2,
+   "revenue": 152000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 183,
-    "lastChecked": "2026-11-09T15:22:33Z",
+    "qty": 181,
+    "lastChecked": "2026-11-09T19:10:43Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4225,7 +4225,7 @@
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 4,
+      "qty": 2,
       "product_id": 732315
      },
      {
@@ -6579,7 +6579,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 59,
-    "lastChecked": "2026-11-09T18:31:31Z",
+    "lastChecked": "2026-11-09T19:03:21Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -12501,7 +12501,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 162,
-    "lastChecked": "2026-11-09T18:45:57Z",
+    "lastChecked": "2026-11-09T19:17:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39629,6 +39629,11 @@
      1,
      1,
      76000
+    ],
+    "2026-11-09": [
+     1,
+     1,
+     76000
     ]
    },
    "7482": {
@@ -54717,10 +54722,31 @@
    "2026-11-06": 48,
    "2026-11-07": 39,
    "2026-11-08": 51,
-   "2026-11-09": 56
+   "2026-11-09": 57
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34541",
+   "d": "2026-11-09",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8057",
+     "pid": 732319,
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي / Antrasit, 1"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34540",
    "d": "2026-11-09",
