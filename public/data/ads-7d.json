@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-11-10T01:02:39.257732+00:00",
- "metaSyncedAt": "2026-11-10T01:02:39.257732+00:00",
+ "syncedAt": "2026-11-10T01:33:06.749310+00:00",
+ "metaSyncedAt": "2026-11-10T01:33:06.749310+00:00",
  "window": {
   "since": "2026-11-04",
   "until": "2026-11-10",
@@ -9,6 +9,443 @@
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
  "note": "Per-SKU ad-level Meta performance over the 7-day window (including today). SKUs are extracted from ad names (e.g. 'H-1920'); an ad whose name mentions several SKUs attributes its full spend/purchases to each of them. purchases7d is null when zero (same convention as the 3-day fields in ad-brief.json) and counts the single action type 'omni_purchase' (fallback 'purchase') — the Ads Manager Purchases column; offsite_conversion.* excluded, no double counting). error!=null means the ad-level fetch failed — campaigns.json is unaffected.",
- "error": "meta ad-level fetch failed: HTTP Error 400: Bad Request",
- "skus": {}
+ "error": null,
+ "skus": {
+  "H-1664": {
+   "spend7dUSD": 39.98,
+   "purchases7d": 2,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 39.98,
+     "purchases7d": 2
+    }
+   }
+  },
+  "H-1899": {
+   "spend7dUSD": 69.31,
+   "purchases7d": 14,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 69.31,
+     "purchases7d": 14
+    }
+   }
+  },
+  "H-1908": {
+   "spend7dUSD": 49.37,
+   "purchases7d": 10,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 21.95,
+     "purchases7d": 8
+    },
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 27.42,
+     "purchases7d": 2
+    }
+   }
+  },
+  "H-1916": {
+   "spend7dUSD": 70.8,
+   "purchases7d": 12,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 70.8,
+     "purchases7d": 12
+    }
+   }
+  },
+  "H-1925": {
+   "spend7dUSD": 14.32,
+   "purchases7d": 1,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 14.32,
+     "purchases7d": 1
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1928": {
+   "spend7dUSD": 20.32,
+   "purchases7d": 4,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 20.32,
+     "purchases7d": 4
+    }
+   }
+  },
+  "H-1938": {
+   "spend7dUSD": 13.28,
+   "purchases7d": 2,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 13.28,
+     "purchases7d": 2
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    }
+   }
+  },
+  "H-1945": {
+   "spend7dUSD": 189.03,
+   "purchases7d": 36,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 115.03,
+     "purchases7d": 25
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 74.0,
+     "purchases7d": 11
+    }
+   }
+  },
+  "H-1950": {
+   "spend7dUSD": 109.54,
+   "purchases7d": 6,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 16.44,
+     "purchases7d": 3
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 93.1,
+     "purchases7d": 3
+    }
+   }
+  },
+  "H-1951": {
+   "spend7dUSD": 133.64,
+   "purchases7d": 16,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 133.64,
+     "purchases7d": 16
+    }
+   }
+  },
+  "H-1954": {
+   "spend7dUSD": 103.49,
+   "purchases7d": 11,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 38.42,
+     "purchases7d": 4
+    },
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 48.29,
+     "purchases7d": 2
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 16.78,
+     "purchases7d": 5
+    }
+   }
+  },
+  "K-6647": {
+   "spend7dUSD": 27.2,
+   "purchases7d": 3,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 13.2,
+     "purchases7d": 1
+    },
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 14.0,
+     "purchases7d": 2
+    }
+   }
+  },
+  "K-6674": {
+   "spend7dUSD": 0.0,
+   "purchases7d": null,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    }
+   }
+  },
+  "K-6676": {
+   "spend7dUSD": 37.52,
+   "purchases7d": 6,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    },
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 37.52,
+     "purchases7d": 6
+    }
+   }
+  },
+  "K-6682": {
+   "spend7dUSD": 21.59,
+   "purchases7d": null,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 21.59,
+     "purchases7d": null
+    }
+   }
+  },
+  "K-6699": {
+   "spend7dUSD": 30.22,
+   "purchases7d": 1,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 30.22,
+     "purchases7d": 1
+    }
+   }
+  },
+  "L-1056": {
+   "spend7dUSD": 40.34,
+   "purchases7d": 9,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 40.34,
+     "purchases7d": 9
+    }
+   }
+  },
+  "L-1729": {
+   "spend7dUSD": 169.33,
+   "purchases7d": 33,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 98.42,
+     "purchases7d": 19
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 38.7,
+     "purchases7d": 10
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 32.21,
+     "purchases7d": 4
+    }
+   }
+  },
+  "L-1800": {
+   "spend7dUSD": 145.87,
+   "purchases7d": 25,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 145.87,
+     "purchases7d": 25
+    }
+   }
+  },
+  "L-3434": {
+   "spend7dUSD": 9.26,
+   "purchases7d": null,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 9.26,
+     "purchases7d": null
+    }
+   }
+  },
+  "L-9076": {
+   "spend7dUSD": 0.0,
+   "purchases7d": null,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    }
+   }
+  },
+  "M-257": {
+   "spend7dUSD": 9.68,
+   "purchases7d": 2,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 9.68,
+     "purchases7d": 2
+    }
+   }
+  },
+  "M-3400": {
+   "spend7dUSD": 7.21,
+   "purchases7d": null,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 7.21,
+     "purchases7d": null
+    }
+   }
+  },
+  "M-4043": {
+   "spend7dUSD": 10.02,
+   "purchases7d": 1,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 10.02,
+     "purchases7d": 1
+    }
+   }
+  },
+  "T-8014": {
+   "spend7dUSD": 38.61,
+   "purchases7d": 6,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 22.9,
+     "purchases7d": 2
+    },
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 8.18,
+     "purchases7d": 4
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 7.53,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8017": {
+   "spend7dUSD": 0.0,
+   "purchases7d": null,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 0.0,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8020": {
+   "spend7dUSD": 9.05,
+   "purchases7d": 1,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 9.05,
+     "purchases7d": 1
+    }
+   }
+  },
+  "T-8023": {
+   "spend7dUSD": 14.82,
+   "purchases7d": 1,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 14.82,
+     "purchases7d": 1
+    }
+   }
+  },
+  "T-8024": {
+   "spend7dUSD": 57.14,
+   "purchases7d": 8,
+   "campaigns": {
+    "DENIZ | RETARGETING | WARM": {
+     "spend7dUSD": 26.24,
+     "purchases7d": 5
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 30.9,
+     "purchases7d": 3
+    }
+   }
+  },
+  "T-8025": {
+   "spend7dUSD": 35.17,
+   "purchases7d": null,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 10.39,
+     "purchases7d": null
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 24.78,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8031": {
+   "spend7dUSD": 7.01,
+   "purchases7d": 1,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 4.46,
+     "purchases7d": 1
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 2.55,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8034": {
+   "spend7dUSD": 7.16,
+   "purchases7d": null,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 7.16,
+     "purchases7d": null
+    }
+   }
+  },
+  "T-8035": {
+   "spend7dUSD": 53.76,
+   "purchases7d": 11,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 25.83,
+     "purchases7d": 4
+    },
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 27.93,
+     "purchases7d": 7
+    }
+   }
+  },
+  "T-8047": {
+   "spend7dUSD": 21.87,
+   "purchases7d": 3,
+   "campaigns": {
+    "MESSAGES CAMPAIGN": {
+     "spend7dUSD": 11.54,
+     "purchases7d": null
+    },
+    "TEST PRODUCTS": {
+     "spend7dUSD": 10.33,
+     "purchases7d": 3
+    }
+   }
+  },
+  "T-8048": {
+   "spend7dUSD": 0.9,
+   "purchases7d": 1,
+   "campaigns": {
+    "DENIZ | CUSTOMERS | STARS": {
+     "spend7dUSD": 0.9,
+     "purchases7d": 1
+    }
+   }
+  },
+  "T-8054": {
+   "spend7dUSD": 5.97,
+   "purchases7d": null,
+   "campaigns": {
+    "TIME | 24H – DAILY website advantage": {
+     "spend7dUSD": 5.97,
+     "purchases7d": null
+    }
+   }
+  }
+ }
 }
