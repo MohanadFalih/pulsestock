@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-10T18:32:52.897143+00:00",
+ "syncedAt": "2026-11-10T19:02:39.866468+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -18093,23 +18093,23 @@
    "sku": "T-8020",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-09-23",
    "firstOrderDate": "2026-09-25",
-   "lastOrderDate": "2026-11-01",
-   "orders": 8,
-   "units": 8,
-   "revenue": 764000,
+   "lastOrderDate": "2026-11-10",
+   "orders": 9,
+   "units": 9,
+   "revenue": 861000,
    "delivered": 8,
    "returned": 1,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 1,
    "unitPrice": 97000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 9,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 91,
-    "lastChecked": "2026-11-10T15:11:27Z",
+    "lastChecked": "2026-11-10T18:45:45Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -24417,17 +24417,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-08-12",
    "firstOrderDate": "2026-08-12",
-   "lastOrderDate": "2026-11-07",
-   "orders": 112,
-   "units": 117,
-   "revenue": 9663000,
+   "lastOrderDate": "2026-11-10",
+   "orders": 113,
+   "units": 118,
+   "revenue": 9692000,
    "delivered": 117,
    "returned": 32,
    "unitsBoughtFromSupplier": 83,
    "returnedStock": 2,
    "unitPrice": 68000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 0,
     "lastChecked": "2026-11-08T15:06:34Z",
@@ -37062,19 +37062,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-10",
-   "orders": 808,
-   "units": 926,
-   "revenue": 30366000,
+   "orders": 809,
+   "units": 927,
+   "revenue": 30405000,
    "delivered": 879,
    "returned": 184,
-   "unitsBoughtFromSupplier": 753,
+   "unitsBoughtFromSupplier": 754,
    "returnedStock": 7,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 5.71,
+   "orderVelocity7d": 5.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 258,
-    "lastChecked": "2026-11-10T18:03:30Z",
+    "qty": 257,
+    "lastChecked": "2026-11-10T18:48:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37111,7 +37111,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 4,
+      "qty": 3,
       "product_id": 675802
      },
      {
@@ -42804,6 +42804,11 @@
      1,
      1,
      98000
+    ],
+    "2026-11-10": [
+     1,
+     1,
+     97000
     ]
    },
    "7344": {
@@ -45792,6 +45797,11 @@
      58000
     ],
     "2026-11-07": [
+     1,
+     1,
+     29000
+    ],
+    "2026-11-10": [
      1,
      1,
      29000
@@ -53801,9 +53811,9 @@
      702000
     ],
     "2026-11-10": [
-     13,
-     17,
-     663000
+     14,
+     18,
+     702000
     ]
    },
    "5855": {
@@ -54948,10 +54958,52 @@
    "2026-11-07": 39,
    "2026-11-08": 51,
    "2026-11-09": 60,
-   "2026-11-10": 55
+   "2026-11-10": 57
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34605",
+   "d": "2026-11-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8020",
+     "pid": 730121,
+     "qty": 1,
+     "price": 97000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 3"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34604",
+   "d": "2026-11-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34603",
    "d": "2026-11-10",
@@ -58911,6 +58963,15 @@
      "del": 0,
      "route": "turkey",
      "var": "قهوائي / Kahve, 48"
+    },
+    {
+     "sku": "T-7079-beige-3",
+     "pid": 728540,
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0,
+     "var": "بيج / Bej, 3"
     }
    ],
    "src": "Instagram",
