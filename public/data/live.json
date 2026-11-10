@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-10T17:00:44.411194+00:00",
+ "syncedAt": "2026-11-10T17:32:38.907126+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -36757,26 +36757,26 @@
    "odooCreatedDate": "2025-10-08",
    "firstOrderDate": "2025-10-16",
    "lastOrderDate": "2026-11-10",
-   "orders": 689,
-   "units": 725,
-   "revenue": 35875000,
+   "orders": 690,
+   "units": 726,
+   "revenue": 35958000,
    "delivered": 706,
    "returned": 124,
-   "unitsBoughtFromSupplier": 607,
+   "unitsBoughtFromSupplier": 608,
    "returnedStock": 0,
    "unitPrice": 83000.0,
-   "orderVelocity7d": 3.14,
+   "orderVelocity7d": 3.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 73,
-    "lastChecked": "2026-11-10T09:14:39Z",
+    "qty": 68,
+    "lastChecked": "2026-11-10T17:23:09Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "أسود / Siyah",
       "size": "1",
-      "qty": 16,
+      "qty": 13,
       "product_id": 674002
      },
      {
@@ -36800,7 +36800,7 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 21,
+      "qty": 19,
       "product_id": 676229
      }
     ]
@@ -37107,8 +37107,8 @@
    "orderVelocity7d": 5.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 260,
-    "lastChecked": "2026-11-10T16:03:13Z",
+    "qty": 258,
+    "lastChecked": "2026-11-10T17:01:33Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37133,7 +37133,7 @@
      {
       "color": "سمائي / Mavi",
       "size": "STD",
-      "qty": 40,
+      "qty": 39,
       "product_id": 672399
      },
      {
@@ -37151,7 +37151,7 @@
      {
       "color": "رصاصي / Antrasit",
       "size": "STD",
-      "qty": 24,
+      "qty": 23,
       "product_id": 680501
      },
      {
@@ -53540,9 +53540,9 @@
      166000
     ],
     "2026-11-10": [
-     2,
-     2,
-     166000
+     3,
+     3,
+     249000
     ]
    },
    "5932": {
@@ -54979,10 +54979,31 @@
    "2026-11-07": 39,
    "2026-11-08": 51,
    "2026-11-09": 60,
-   "2026-11-10": 53
+   "2026-11-10": 54
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34601",
+   "d": "2026-11-10",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1729",
+     "pid": 674649,
+     "qty": 1,
+     "price": 83000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 3"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34600",
    "d": "2026-11-10",
