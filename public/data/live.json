@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-10T12:03:07.025784+00:00",
+ "syncedAt": "2026-11-10T12:32:36.493082+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4427,20 +4427,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-30",
-   "lastOrderDate": "2026-10-30",
-   "orders": 1,
-   "units": 1,
-   "revenue": 122000,
+   "lastOrderDate": "2026-11-10",
+   "orders": 2,
+   "units": 2,
+   "revenue": 244000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 122000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 11,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 126,
-    "lastChecked": "2026-11-09T15:42:41Z",
+    "qty": 276,
+    "lastChecked": "2026-11-10T12:07:03Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4539,6 +4539,96 @@
       "size": "38",
       "qty": 2,
       "product_id": 732297
+     },
+     {
+      "color": "Koyu Kahverengi",
+      "size": "38",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Koyu Kahverengi",
+      "size": "40",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Koyu Kahverengi",
+      "size": "42",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Koyu Kahverengi",
+      "size": "44",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Koyu Kahverengi",
+      "size": "46",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Siyah",
+      "size": "38",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Siyah",
+      "size": "40",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Siyah",
+      "size": "42",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Siyah",
+      "size": "44",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "Siyah",
+      "size": "46",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "BORDO",
+      "size": "38",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "BORDO",
+      "size": "40",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "BORDO",
+      "size": "42",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "BORDO",
+      "size": "44",
+      "qty": 10,
+      "in_odoo": false
+     },
+     {
+      "color": "BORDO",
+      "size": "46",
+      "qty": 10,
+      "in_odoo": false
      }
     ]
    }
@@ -39723,6 +39813,11 @@
      1,
      1,
      122000
+    ],
+    "2026-11-10": [
+     1,
+     1,
+     122000
     ]
    },
    "7481": {
@@ -54953,15 +55048,6 @@
      "var": "CAPPUCCINO, 46"
     },
     {
-     "sku": "H-1770-اسودsiyah-42",
-     "pid": 723608,
-     "qty": 1,
-     "price": 25000,
-     "discPct": 0,
-     "del": 0,
-     "var": "أسود / Siyah, 42"
-    },
-    {
      "sku": "M-7020UZ662",
      "pid": 670030,
      "qty": 1,
@@ -54969,6 +55055,15 @@
      "discPct": 0,
      "del": 0,
      "var": "رصاصي فاتح / Gri, 42"
+    },
+    {
+     "sku": "H-1770-اخضرزيتيya-40",
+     "pid": 723632,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أخضر زيتي / Yağ Yeşil, 40"
     }
    ],
    "src": "Instagram"
