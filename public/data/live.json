@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-12T11:02:48.844547+00:00",
+ "syncedAt": "2026-11-12T11:33:12.389425+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2680,17 +2680,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
    "firstOrderDate": "2026-11-06",
-   "lastOrderDate": "2026-11-10",
-   "orders": 4,
-   "units": 4,
-   "revenue": 284000,
+   "lastOrderDate": "2026-11-12",
+   "orders": 5,
+   "units": 5,
+   "revenue": 355000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -16762,14 +16762,14 @@
    "revenue": 1436000,
    "delivered": 13,
    "returned": 1,
-   "unitsBoughtFromSupplier": 17,
+   "unitsBoughtFromSupplier": 18,
    "returnedStock": 1,
    "unitPrice": 80000.0,
    "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 290,
-    "lastChecked": "2026-11-11T21:13:51Z",
+    "qty": 282,
+    "lastChecked": "2026-11-12T11:08:18Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -16788,7 +16788,7 @@
      {
       "color": "نيلي / Laci",
       "size": "2",
-      "qty": 13,
+      "qty": 12,
       "product_id": 730438
      },
      {
@@ -16806,7 +16806,7 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 13,
+      "qty": 12,
       "product_id": 730442
      },
      {
@@ -16818,25 +16818,25 @@
      {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 9,
+      "qty": 8,
       "product_id": 730444
      },
      {
       "color": "قهوائي / Kahve",
       "size": "1",
-      "qty": 18,
+      "qty": 17,
       "product_id": 730445
      },
      {
       "color": "قهوائي / Kahve",
       "size": "2",
-      "qty": 11,
+      "qty": 10,
       "product_id": 730446
      },
      {
       "color": "قهوائي / Kahve",
       "size": "3",
-      "qty": 10,
+      "qty": 9,
       "product_id": 730447
      },
      {
@@ -16872,7 +16872,7 @@
      {
       "color": "سمائي / Mavi",
       "size": "1",
-      "qty": 2,
+      "qty": 1,
       "product_id": 730453
      },
      {
@@ -16884,19 +16884,19 @@
      {
       "color": "سمائي / Mavi",
       "size": "3",
-      "qty": 2,
+      "qty": 3,
       "product_id": 730455
      },
      {
       "color": "بيج / Bej",
       "size": "4",
-      "qty": 19,
+      "qty": 18,
       "product_id": 730456
      },
      {
       "color": "بيج / Bej",
       "size": "1",
-      "qty": 24,
+      "qty": 23,
       "product_id": 730457
      },
      {
@@ -37328,7 +37328,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 175,
-    "lastChecked": "2026-11-12T10:53:10Z",
+    "lastChecked": "2026-11-12T11:24:09Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -40503,6 +40503,11 @@
      71000
     ],
     "2026-11-10": [
+     1,
+     1,
+     71000
+    ],
+    "2026-11-12": [
      1,
      1,
      71000
@@ -55750,10 +55755,31 @@
    "2026-11-09": 60,
    "2026-11-10": 62,
    "2026-11-11": 57,
-   "2026-11-12": 33
+   "2026-11-12": 34
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34703",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-0259NZRK1200",
+     "pid": 733042,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Vizyon, 3"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34702",
    "d": "2026-11-12",
@@ -56307,7 +56333,8 @@
      "var": "رصاصي / Antrasit, 3"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34683",
@@ -56504,7 +56531,8 @@
      "var": "أسود / Siyah, 48"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34674",
@@ -56544,7 +56572,8 @@
      "var": "أحمر / Bordo"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34672",
