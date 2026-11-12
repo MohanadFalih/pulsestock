@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-12T07:33:08.238949+00:00",
+ "syncedAt": "2026-11-12T08:02:38.361996+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3745,20 +3745,20 @@
    "sku": "M-3352NVX1208",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-04",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-12",
+   "lastOrderDate": "2026-11-12",
+   "orders": 1,
+   "units": 1,
+   "revenue": 56000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 56000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37328,7 +37328,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 175,
-    "lastChecked": "2026-11-12T07:14:35Z",
+    "lastChecked": "2026-11-12T07:44:38Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37686,19 +37686,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-12",
-   "orders": 831,
-   "units": 952,
-   "revenue": 31380000,
+   "orders": 832,
+   "units": 953,
+   "revenue": 31419000,
    "delivered": 899,
    "returned": 184,
-   "unitsBoughtFromSupplier": 782,
+   "unitsBoughtFromSupplier": 783,
    "returnedStock": 5,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 8.29,
+   "orderVelocity7d": 8.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 315,
-    "lastChecked": "2026-11-12T07:28:35Z",
+    "qty": 314,
+    "lastChecked": "2026-11-12T07:53:25Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37759,7 +37759,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 15,
+      "qty": 14,
       "product_id": 715723
      },
      {
@@ -40552,6 +40552,13 @@
      1,
      1,
      57000
+    ]
+   },
+   "7502": {
+    "2026-11-12": [
+     1,
+     1,
+     56000
     ]
    },
    "7501": {
@@ -54473,9 +54480,9 @@
      819000
     ],
     "2026-11-12": [
-     4,
-     4,
-     156000
+     5,
+     5,
+     195000
     ]
    },
    "5855": {
@@ -55635,10 +55642,52 @@
    "2026-11-09": 60,
    "2026-11-10": 62,
    "2026-11-11": 57,
-   "2026-11-12": 15
+   "2026-11-12": 17
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34687",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3352NVX1208",
+     "pid": 732739,
+     "qty": 1,
+     "price": 56000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Koyu çağla"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34686",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672394,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34684",
    "d": "2026-11-12",
