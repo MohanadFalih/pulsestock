@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-12T10:02:33.805348+00:00",
+ "syncedAt": "2026-11-12T10:32:32.558942+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2890,20 +2890,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
    "firstOrderDate": "2026-11-07",
-   "lastOrderDate": "2026-11-09",
-   "orders": 3,
-   "units": 3,
-   "revenue": 219000,
+   "lastOrderDate": "2026-11-12",
+   "orders": 5,
+   "units": 5,
+   "revenue": 365000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 73000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 199,
-    "lastChecked": "2026-11-11T15:36:07Z",
+    "qty": 197,
+    "lastChecked": "2026-11-12T10:29:54Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -2988,7 +2988,7 @@
      {
       "color": "أسود / Siyah",
       "size": "50",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732890
      },
      {
@@ -3078,7 +3078,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "42",
-      "qty": 5,
+      "qty": 4,
       "product_id": 732905
      },
      {
@@ -9469,15 +9469,15 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-12",
-   "orders": 43,
-   "units": 43,
-   "revenue": -238751,
+   "orders": 44,
+   "units": 44,
+   "revenue": -241751,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 2.14,
+   "orderVelocity7d": 2.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -37328,7 +37328,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 175,
-    "lastChecked": "2026-11-12T09:47:51Z",
+    "lastChecked": "2026-11-12T10:19:32Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37545,17 +37545,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-10-03",
    "firstOrderDate": "2025-10-03",
-   "lastOrderDate": "2026-11-09",
-   "orders": 195,
-   "units": 199,
-   "revenue": 10610000,
+   "lastOrderDate": "2026-11-12",
+   "orders": 196,
+   "units": 200,
+   "revenue": 10635000,
    "delivered": 197,
    "returned": 55,
    "unitsBoughtFromSupplier": 141,
    "returnedStock": 3,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37686,19 +37686,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-12",
-   "orders": 835,
-   "units": 958,
-   "revenue": 31614000,
+   "orders": 838,
+   "units": 964,
+   "revenue": 31848000,
    "delivered": 899,
    "returned": 188,
-   "unitsBoughtFromSupplier": 787,
+   "unitsBoughtFromSupplier": 793,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 8.86,
+   "orderVelocity7d": 9.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 309,
-    "lastChecked": "2026-11-12T08:53:02Z",
+    "qty": 308,
+    "lastChecked": "2026-11-12T10:29:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -37765,7 +37765,7 @@
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 23,
+      "qty": 22,
       "product_id": 730710
      }
     ]
@@ -40351,9 +40351,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1520,
-  "stockValue": 43972966,
-  "stockVariants": 1198
+  "stockUnits": 1519,
+  "stockValue": 43934714,
+  "stockVariants": 1197
  },
  "daily": {
   "days": 90,
@@ -40564,6 +40564,11 @@
      1,
      1,
      73000
+    ],
+    "2026-11-12": [
+     2,
+     2,
+     146000
     ]
    },
    "7510": {
@@ -41461,9 +41466,9 @@
      -10000
     ],
     "2026-11-12": [
-     2,
-     2,
-     -18250
+     3,
+     3,
+     -21250
     ]
    },
    "7436": {
@@ -54350,6 +54355,11 @@
      2,
      2,
      50000
+    ],
+    "2026-11-12": [
+     1,
+     1,
+     25000
     ]
    },
    "5890": {
@@ -54567,9 +54577,9 @@
      819000
     ],
     "2026-11-12": [
-     8,
-     10,
-     390000
+     11,
+     16,
+     624000
     ]
    },
    "5855": {
@@ -55740,10 +55750,145 @@
    "2026-11-09": 60,
    "2026-11-10": 62,
    "2026-11-11": 57,
-   "2026-11-12": 25
+   "2026-11-12": 31
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34700",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34699",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672395,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي غامق / Acı Kahve"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 680502,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "كريمي / Krem"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34698",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1959",
+     "pid": 732879,
+     "qty": 1,
+     "price": 73000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 46"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34697",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1959",
+     "pid": 732890,
+     "qty": 1,
+     "price": 73000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 50"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34696",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 730710,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 672398,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Kırmızı"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34695",
    "d": "2026-11-12",
@@ -55789,6 +55934,33 @@
      "discPct": 0,
      "del": 0,
      "var": "3"
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S34693",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6851",
+     "pid": 673210,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "رصاصي غامق / Fume, 4"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -3000,
+     "discPct": 0,
+     "del": 0
     }
    ],
    "src": "Facebook"
@@ -226889,9 +227061,66 @@
   {
    "sku": "M-5017HBS856",
    "model": "M-5017HBS856",
-   "qty": 1,
-   "cost": 38252,
-   "created": "2025-10-15"
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5017HBS856",
+   "model": "M-5017HBS856",
+   "qty": 0,
+   "cost": 37896,
+   "created": "2026-11-12",
+   "costSrc": "vendor"
   },
   {
    "sku": "M-5035ERK1158",
