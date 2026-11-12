@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-12T09:02:38.185690+00:00",
+ "syncedAt": "2026-11-12T09:32:56.953750+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4430,7 +4430,7 @@
    "sku": "T-8008",
    "category": "All",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-11-02",
    "firstOrderDate": "2026-11-03",
    "lastOrderDate": "2026-11-03",
@@ -4438,9 +4438,9 @@
    "units": 1,
    "revenue": 99000,
    "delivered": 1,
-   "returned": 0,
+   "returned": 1,
    "unitsBoughtFromSupplier": 1,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 99000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 9,
@@ -5842,9 +5842,9 @@
    "units": 51,
    "revenue": 4131000,
    "delivered": 31,
-   "returned": 2,
+   "returned": 3,
    "unitsBoughtFromSupplier": 50,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 81000.0,
    "orderVelocity7d": 3.57,
    "daysSinceLastOrder": 0,
@@ -9469,15 +9469,15 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-12",
-   "orders": 42,
-   "units": 42,
-   "revenue": -230001,
+   "orders": 43,
+   "units": 43,
+   "revenue": -238751,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 2.0,
+   "orderVelocity7d": 2.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -12049,20 +12049,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-10",
    "firstOrderDate": "2026-10-11",
-   "lastOrderDate": "2026-11-11",
-   "orders": 7,
-   "units": 11,
-   "revenue": 792000,
+   "lastOrderDate": "2026-11-12",
+   "orders": 8,
+   "units": 13,
+   "revenue": 936000,
    "delivered": 9,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 10,
    "returnedStock": 3,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 78,
-    "lastChecked": "2026-11-11T14:03:12Z",
+    "qty": 77,
+    "lastChecked": "2026-11-12T09:24:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -12201,7 +12201,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "50",
-      "qty": 5,
+      "qty": 4,
       "product_id": 731219
      }
     ]
@@ -16524,9 +16524,9 @@
    "delivered": 72,
    "returned": 8,
    "unitsBoughtFromSupplier": 75,
-   "returnedStock": 2,
+   "returnedStock": 3,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 2.29,
+   "orderVelocity7d": 2.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 230,
@@ -36984,9 +36984,9 @@
    "units": 57,
    "revenue": 2936000,
    "delivered": 56,
-   "returned": 18,
+   "returned": 19,
    "unitsBoughtFromSupplier": 41,
-   "returnedStock": 3,
+   "returnedStock": 4,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 7,
@@ -37328,7 +37328,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 175,
-    "lastChecked": "2026-11-12T08:45:25Z",
+    "lastChecked": "2026-11-12T09:15:47Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -40323,9 +40323,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1516,
-  "stockValue": 43784629,
-  "stockVariants": 1194
+  "stockUnits": 1520,
+  "stockValue": 43972966,
+  "stockVariants": 1198
  },
  "daily": {
   "days": 90,
@@ -41433,9 +41433,9 @@
      -10000
     ],
     "2026-11-12": [
-     1,
-     1,
-     -9500
+     2,
+     2,
+     -18250
     ]
    },
    "7436": {
@@ -41802,6 +41802,11 @@
      1,
      1,
      72000
+    ],
+    "2026-11-12": [
+     1,
+     2,
+     144000
     ]
    },
    "7405": {
@@ -43093,7 +43098,7 @@
      156000
     ],
     "2026-11-12": [
-     1,
+     2,
      1,
      78000
     ]
@@ -55596,7 +55601,7 @@
    ],
    "2026-11-12": [
     0,
-    7
+    10
    ]
   },
   "orders": {
@@ -55690,7 +55695,7 @@
    "2026-11-09": 60,
    "2026-11-10": 62,
    "2026-11-11": 57,
-   "2026-11-12": 22
+   "2026-11-12": 23
   }
  },
  "ordersDetail": [
@@ -55811,6 +55816,45 @@
      "del": 0,
      "route": "turkey",
      "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34688",
+   "d": "2026-11-12",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1928",
+     "pid": 731196,
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 40"
+    },
+    {
+     "sku": "H-1928",
+     "pid": 731214,
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 40"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -8750,
+     "discPct": 0,
+     "del": 0
     }
    ],
    "src": "Facebook",
@@ -64268,8 +64312,9 @@
      "qty": 1,
      "price": 31000,
      "discPct": 0,
-     "del": 1,
-     "var": "رصاصي / Antrasit, 42"
+     "del": 0,
+     "var": "رصاصي / Antrasit, 42",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -64557,6 +64602,15 @@
      "del": 1,
      "route": "turkey",
      "var": "خاكي / Haki, 44"
+    },
+    {
+     "sku": "H-1916",
+     "pid": 730483,
+     "qty": 0,
+     "price": 78000,
+     "discPct": 0,
+     "del": -1,
+     "var": "خاكي / Haki, 46"
     }
    ],
    "src": "Instagram",
@@ -66879,9 +66933,10 @@
      "qty": 1,
      "price": 99000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "قهوائي / Kahve, 4"
+     "var": "قهوائي / Kahve, 4",
+     "ret": 1
     }
    ],
    "src": "Instagram",
@@ -67435,9 +67490,10 @@
      "qty": 1,
      "price": 81000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "عنابي / Murdum, 7"
+     "var": "عنابي / Murdum, 7",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -195142,7 +195198,7 @@
   {
    "sku": "H-1916",
    "model": "H-1916",
-   "qty": 0,
+   "qty": 1,
    "cost": 36750,
    "created": "2026-09-28"
   },
@@ -199831,7 +199887,7 @@
   {
    "sku": "H-1951",
    "model": "H-1951",
-   "qty": 0,
+   "qty": 1,
    "cost": 40250,
    "created": "2026-10-29"
   },
@@ -224942,7 +224998,7 @@
   {
    "sku": "M-2824MSA980",
    "model": "M-2824MSA980",
-   "qty": 0,
+   "qty": 1,
    "cost": 51838,
    "created": "2025-10-14"
   },
@@ -236008,7 +236064,7 @@
   {
    "sku": "T-8008",
    "model": "T-8008",
-   "qty": 0,
+   "qty": 1,
    "cost": 59500,
    "created": "2026-11-02"
   },
