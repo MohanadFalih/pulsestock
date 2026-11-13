@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T12:32:36.199010+00:00",
+ "syncedAt": "2026-11-13T13:02:31.384767+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -383,8 +383,8 @@
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 1,
    "supplierStock": {
-    "qty": 228,
-    "lastChecked": "2026-11-12T20:31:40Z",
+    "qty": 219,
+    "lastChecked": "2026-11-13T12:53:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -397,13 +397,13 @@
      {
       "color": "أسود / Siyah",
       "size": "1",
-      "qty": 10,
+      "qty": 9,
       "product_id": 734012
      },
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 16,
+      "qty": 15,
       "product_id": 734013
      },
      {
@@ -415,19 +415,19 @@
      {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 16,
+      "qty": 14,
       "product_id": 734015
      },
      {
       "color": "قهوائي / Kahve",
       "size": "1",
-      "qty": 15,
+      "qty": 14,
       "product_id": 734016
      },
      {
       "color": "قهوائي / Kahve",
       "size": "2",
-      "qty": 15,
+      "qty": 14,
       "product_id": 734017
      },
      {
@@ -451,13 +451,13 @@
      {
       "color": "رصاصي / Antrasit",
       "size": "2",
-      "qty": 17,
+      "qty": 16,
       "product_id": 734021
      },
      {
       "color": "رصاصي / Antrasit",
       "size": "3",
-      "qty": 14,
+      "qty": 12,
       "product_id": 734022
      },
      {
@@ -12000,7 +12000,7 @@
    "returned": 2,
    "unitsBoughtFromSupplier": 18,
    "returnedStock": 2,
-   "unitPrice": 98000.0,
+   "unitPrice": 99000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 7,
    "supplierStock": {
@@ -56160,10 +56160,39 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 26
+   "2026-11-13": 27
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34765",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8025",
+     "pid": 731307,
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 4"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -6250,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34763",
    "d": "2026-11-13",
