@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T10:03:07.810022+00:00",
+ "syncedAt": "2026-11-13T10:32:36.928681+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2322,17 +2322,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-08",
    "firstOrderDate": "2026-11-09",
-   "lastOrderDate": "2026-11-12",
-   "orders": 6,
-   "units": 6,
-   "revenue": 612000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 7,
+   "units": 7,
+   "revenue": 714000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 102000.0,
-   "orderVelocity7d": 0.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -6266,17 +6266,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
-   "lastOrderDate": "2026-11-12",
-   "orders": 49,
-   "units": 52,
-   "revenue": 4212000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 50,
+   "units": 53,
+   "revenue": 4293000,
    "delivered": 31,
    "returned": 3,
    "unitsBoughtFromSupplier": 51,
    "returnedStock": 4,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 3.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 70,
     "lastChecked": "2026-11-12T16:15:44Z",
@@ -9879,17 +9879,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
-   "lastOrderDate": "2026-11-12",
-   "orders": 47,
-   "units": 47,
-   "revenue": -254251,
+   "lastOrderDate": "2026-11-13",
+   "orders": 48,
+   "units": 48,
+   "revenue": -262751,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 2.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 2.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -40800,6 +40800,11 @@
      3,
      3,
      306000
+    ],
+    "2026-11-13": [
+     1,
+     1,
+     102000
     ]
    },
    "7530": {
@@ -41297,6 +41302,11 @@
      2,
      2,
      162000
+    ],
+    "2026-11-13": [
+     1,
+     1,
+     81000
     ]
    },
    "7477": {
@@ -41857,6 +41867,11 @@
      6,
      6,
      -33750
+    ],
+    "2026-11-13": [
+     1,
+     1,
+     -8500
     ]
    },
    "7436": {
@@ -56048,10 +56063,60 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 19
+   "2026-11-13": 21
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34757",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-6255BSK463",
+     "pid": 733282,
+     "qty": 1,
+     "price": 102000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 44"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34756",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732210,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 8"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -8500,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34755",
    "d": "2026-11-13",
