@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T18:33:10.022675+00:00",
+ "syncedAt": "2026-11-13T19:03:04.210379+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -150,20 +150,20 @@
    "sku": "M-2991SL432",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-12",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-13",
+   "lastOrderDate": "2026-11-13",
+   "orders": 1,
+   "units": 1,
+   "revenue": 81000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -238,19 +238,19 @@
    "odooCreatedDate": "2026-11-12",
    "firstOrderDate": "2026-11-13",
    "lastOrderDate": "2026-11-13",
-   "orders": 3,
-   "units": 3,
-   "revenue": 222000,
+   "orders": 4,
+   "units": 4,
+   "revenue": 296000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.43,
+   "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 64,
-    "lastChecked": "2026-11-13T17:01:33Z",
+    "qty": 61,
+    "lastChecked": "2026-11-13T18:49:29Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -287,7 +287,7 @@
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 4,
+      "qty": 3,
       "product_id": 734058
      },
      {
@@ -305,7 +305,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "3",
-      "qty": 4,
+      "qty": 3,
       "product_id": 734061
      },
      {
@@ -341,7 +341,7 @@
      {
       "color": "رصاصي فاتح / Gri",
       "size": "3",
-      "qty": 5,
+      "qty": 4,
       "product_id": 734067
      }
     ]
@@ -6412,19 +6412,19 @@
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-13",
-   "orders": 52,
-   "units": 55,
-   "revenue": 4455000,
+   "orders": 53,
+   "units": 56,
+   "revenue": 4536000,
    "delivered": 31,
    "returned": 3,
-   "unitsBoughtFromSupplier": 54,
+   "unitsBoughtFromSupplier": 55,
    "returnedStock": 4,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 3.71,
+   "orderVelocity7d": 3.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 65,
-    "lastChecked": "2026-11-13T17:48:41Z",
+    "qty": 64,
+    "lastChecked": "2026-11-13T18:54:02Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -6437,7 +6437,7 @@
      {
       "color": "نيلي / Laci",
       "size": "6",
-      "qty": 4,
+      "qty": 3,
       "product_id": 732202
      },
      {
@@ -38191,19 +38191,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-13",
-   "orders": 864,
-   "units": 1005,
-   "revenue": 33447000,
+   "orders": 865,
+   "units": 1006,
+   "revenue": 33486000,
    "delivered": 899,
    "returned": 188,
-   "unitsBoughtFromSupplier": 835,
+   "unitsBoughtFromSupplier": 836,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 12.71,
+   "orderVelocity7d": 12.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 284,
-    "lastChecked": "2026-11-13T17:26:26Z",
+    "qty": 282,
+    "lastChecked": "2026-11-13T18:49:57Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -38216,7 +38216,7 @@
      {
       "color": "قهوائي غامق / Acı Kahve",
       "size": "STD",
-      "qty": 9,
+      "qty": 8,
       "product_id": 672395
      },
      {
@@ -38240,7 +38240,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 20,
+      "qty": 19,
       "product_id": 675802
      },
      {
@@ -40927,11 +40927,18 @@
   "from": "2026-08-15",
   "to": "2026-11-13",
   "byProduct": {
+   "7570": {
+    "2026-11-13": [
+     1,
+     1,
+     81000
+    ]
+   },
    "7567": {
     "2026-11-13": [
-     3,
-     3,
-     222000
+     4,
+     4,
+     296000
     ]
    },
    "7564": {
@@ -41589,9 +41596,9 @@
      162000
     ],
     "2026-11-13": [
-     3,
-     3,
-     243000
+     4,
+     4,
+     324000
     ]
    },
    "7477": {
@@ -55219,9 +55226,9 @@
      1092000
     ],
     "2026-11-13": [
-     16,
-     29,
-     1131000
+     17,
+     30,
+     1170000
     ]
    },
    "5855": {
@@ -56402,10 +56409,94 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 50
+   "2026-11-13": 54
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34792",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-2991SL432",
+     "pid": 734116,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 50"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34791",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732217,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 9"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34790",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34789",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1970",
+     "pid": 734053,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 1"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34788",
    "d": "2026-11-13",
