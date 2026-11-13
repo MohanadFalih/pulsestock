@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T14:32:58.092162+00:00",
+ "syncedAt": "2026-11-13T15:02:31.034395+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -38100,26 +38100,26 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-13",
-   "orders": 858,
-   "units": 993,
-   "revenue": 32979000,
+   "orders": 859,
+   "units": 999,
+   "revenue": 33213000,
    "delivered": 899,
    "returned": 188,
-   "unitsBoughtFromSupplier": 823,
+   "unitsBoughtFromSupplier": 828,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 11.86,
+   "orderVelocity7d": 12.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 299,
-    "lastChecked": "2026-11-13T14:00:55Z",
+    "qty": 294,
+    "lastChecked": "2026-11-13T14:37:58Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "فيزون / Vizon",
       "size": "STD",
-      "qty": 24,
+      "qty": 22,
       "product_id": 672394
      },
      {
@@ -38149,7 +38149,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 23,
+      "qty": 22,
       "product_id": 675802
      },
      {
@@ -38161,7 +38161,7 @@
      {
       "color": "كريمي / Krem",
       "size": "STD",
-      "qty": 31,
+      "qty": 30,
       "product_id": 680502
      },
      {
@@ -38173,7 +38173,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 24,
+      "qty": 23,
       "product_id": 715723
      },
      {
@@ -55097,9 +55097,9 @@
      1092000
     ],
     "2026-11-13": [
-     10,
-     22,
-     858000
+     11,
+     23,
+     897000
     ]
    },
    "5855": {
@@ -56280,10 +56280,31 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 34
+   "2026-11-13": 35
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34773",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34772",
    "d": "2026-11-13",
