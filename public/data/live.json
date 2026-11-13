@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T08:02:27.525887+00:00",
+ "syncedAt": "2026-11-13T08:32:53.830834+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -605,23 +605,23 @@
    "sku": "T-8043",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-11",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-13",
+   "lastOrderDate": "2026-11-13",
+   "orders": 1,
+   "units": 1,
+   "revenue": 99000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 164,
-    "lastChecked": "2026-11-12T15:33:20Z",
+    "qty": 162,
+    "lastChecked": "2026-11-13T08:22:33Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -658,7 +658,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "1",
-      "qty": 15,
+      "qty": 14,
       "product_id": 733850
      },
      {
@@ -682,7 +682,7 @@
      {
       "color": "خاكي / Haki",
       "size": "1",
-      "qty": 12,
+      "qty": 11,
       "product_id": 733854
      },
      {
@@ -1618,15 +1618,15 @@
    "odooCreatedDate": "2026-11-09",
    "firstOrderDate": "2026-11-10",
    "lastOrderDate": "2026-11-13",
-   "orders": 5,
-   "units": 5,
-   "revenue": 345000,
+   "orders": 7,
+   "units": 7,
+   "revenue": 483000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 0.71,
+   "orderVelocity7d": 1.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -9908,19 +9908,19 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-13",
-   "orders": 29,
-   "units": 29,
-   "revenue": 2262000,
+   "orders": 30,
+   "units": 30,
+   "revenue": 2340000,
    "delivered": 15,
    "returned": 1,
-   "unitsBoughtFromSupplier": 28,
+   "unitsBoughtFromSupplier": 29,
    "returnedStock": 1,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.71,
+   "orderVelocity7d": 1.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 97,
-    "lastChecked": "2026-11-13T07:58:23Z",
+    "qty": 96,
+    "lastChecked": "2026-11-13T08:26:55Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -9981,7 +9981,7 @@
      {
       "color": "أسود / Siyah",
       "size": "46",
-      "qty": 4,
+      "qty": 3,
       "product_id": 731658
      },
      {
@@ -13698,8 +13698,8 @@
    "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 377,
-    "lastChecked": "2026-11-12T21:13:19Z",
+    "qty": 374,
+    "lastChecked": "2026-11-13T08:22:33Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -13730,7 +13730,7 @@
      {
       "color": "أسود / Siyah",
       "size": "4",
-      "qty": 11,
+      "qty": 10,
       "product_id": 730997
      },
      {
@@ -13802,7 +13802,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "4",
-      "qty": 16,
+      "qty": 14,
       "product_id": 731009
      },
      {
@@ -37953,15 +37953,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-13",
-   "orders": 852,
-   "units": 982,
-   "revenue": 32550000,
+   "orders": 854,
+   "units": 985,
+   "revenue": 32667000,
    "delivered": 899,
    "returned": 188,
    "unitsBoughtFromSupplier": 812,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 11.0,
+   "orderVelocity7d": 11.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 310,
@@ -40697,6 +40697,13 @@
      220000
     ]
    },
+   "7555": {
+    "2026-11-13": [
+     1,
+     1,
+     99000
+    ]
+   },
    "7552": {
     "2026-11-12": [
      1,
@@ -40737,9 +40744,9 @@
      69000
     ],
     "2026-11-13": [
-     2,
-     2,
-     138000
+     4,
+     4,
+     276000
     ]
    },
    "7540": {
@@ -41929,9 +41936,9 @@
      156000
     ],
     "2026-11-13": [
-     1,
-     1,
-     78000
+     2,
+     2,
+     156000
     ]
    },
    "7432": {
@@ -54853,9 +54860,9 @@
      1092000
     ],
     "2026-11-13": [
-     4,
      6,
-     234000
+     9,
+     351000
     ]
    },
    "5855": {
@@ -56036,10 +56043,125 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 11
+   "2026-11-13": 16
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34752",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34751",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733468,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Koyu vizyon, 40"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34750",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672398,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Kırmızı"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34749",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1938",
+     "pid": 731676,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 50"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34748",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733473,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Koyu vizyon, 52"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34747",
    "d": "2026-11-13",
@@ -56293,6 +56415,16 @@
      "del": 0,
      "route": "turkey",
      "var": "عنابي / Murdum, 4"
+    },
+    {
+     "sku": "T-8043",
+     "pid": 733845,
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 4"
     }
    ],
    "src": "Facebook",
