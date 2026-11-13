@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T06:32:44.673287+00:00",
+ "syncedAt": "2026-11-13T07:03:07.436996+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1617,17 +1617,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-09",
    "firstOrderDate": "2026-11-10",
-   "lastOrderDate": "2026-11-12",
-   "orders": 3,
-   "units": 3,
-   "revenue": 207000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 5,
+   "units": 5,
+   "revenue": 345000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -37953,15 +37953,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-13",
-   "orders": 849,
-   "units": 977,
-   "revenue": 32355000,
+   "orders": 850,
+   "units": 979,
+   "revenue": 32433000,
    "delivered": 899,
    "returned": 188,
    "unitsBoughtFromSupplier": 807,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 10.57,
+   "orderVelocity7d": 10.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 286,
@@ -40735,6 +40735,11 @@
      1,
      1,
      69000
+    ],
+    "2026-11-13": [
+     2,
+     2,
+     138000
     ]
    },
    "7540": {
@@ -54833,9 +54838,9 @@
      1092000
     ],
     "2026-11-13": [
-     1,
-     1,
-     39000
+     2,
+     3,
+     117000
     ]
    },
    "5855": {
@@ -56016,10 +56021,83 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 4
+   "2026-11-13": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34743",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 672395,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي غامق / Acı Kahve"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34742",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733448,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أخضر زيتي / Yağ Yeşil, 48"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34741",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733471,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Koyu vizyon, 46"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34740",
    "d": "2026-11-13",
