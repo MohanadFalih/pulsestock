@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T16:33:02.094778+00:00",
+ "syncedAt": "2026-11-13T17:03:12.646182+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -210,15 +210,15 @@
    "odooCreatedDate": "2026-11-12",
    "firstOrderDate": "2026-11-13",
    "lastOrderDate": "2026-11-13",
-   "orders": 2,
-   "units": 2,
-   "revenue": 148000,
+   "orders": 3,
+   "units": 3,
+   "revenue": 222000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.29,
+   "orderVelocity7d": 0.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 65,
@@ -512,17 +512,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-12",
    "firstOrderDate": "2026-11-12",
-   "lastOrderDate": "2026-11-12",
-   "orders": 2,
-   "units": 2,
-   "revenue": 220000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 3,
+   "units": 3,
+   "revenue": 330000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 110000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 219,
     "lastChecked": "2026-11-13T12:53:34Z",
@@ -40901,9 +40901,9 @@
   "byProduct": {
    "7567": {
     "2026-11-13": [
-     2,
-     2,
-     148000
+     3,
+     3,
+     222000
     ]
    },
    "7564": {
@@ -40918,6 +40918,11 @@
      2,
      2,
      220000
+    ],
+    "2026-11-13": [
+     1,
+     1,
+     110000
     ]
    },
    "7555": {
@@ -56359,10 +56364,72 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 40
+   "2026-11-13": 41
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34780",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672394,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34779",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1970",
+     "pid": 734067,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي فاتح / Gri, 3"
+    },
+    {
+     "sku": "T-8041",
+     "pid": 734019,
+     "qty": 1,
+     "price": 110000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي / Antrasit, 4"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34778",
    "d": "2026-11-13",
