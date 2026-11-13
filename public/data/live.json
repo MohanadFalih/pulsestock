@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-13T10:32:36.928681+00:00",
+ "syncedAt": "2026-11-13T11:02:39.948897+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1241,20 +1241,20 @@
    "sku": "M-2627MSA980",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-10",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-13",
+   "lastOrderDate": "2026-11-13",
+   "orders": 1,
+   "units": 1,
+   "revenue": 74000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3139,17 +3139,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
    "firstOrderDate": "2026-11-06",
-   "lastOrderDate": "2026-11-12",
-   "orders": 5,
-   "units": 5,
-   "revenue": 355000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 6,
+   "units": 6,
+   "revenue": 426000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15475,17 +15475,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-04",
    "firstOrderDate": "2026-10-04",
-   "lastOrderDate": "2026-11-11",
-   "orders": 57,
-   "units": 60,
-   "revenue": 4730000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 58,
+   "units": 61,
+   "revenue": 4810000,
    "delivered": 59,
    "returned": 14,
    "unitsBoughtFromSupplier": 54,
    "returnedStock": 11,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 160,
     "lastChecked": "2026-11-12T15:25:24Z",
@@ -30831,6 +30831,34 @@
    }
   },
   {
+   "odooId": 7098,
+   "name": "T-7010",
+   "sku": "T-7010",
+   "category": "All",
+   "supplier": null,
+   "stage": "ads-live",
+   "odooCreatedDate": "2026-06-09",
+   "firstOrderDate": "2026-06-09",
+   "lastOrderDate": "2026-11-13",
+   "orders": 4,
+   "units": 4,
+   "revenue": 278000,
+   "delivered": 3,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 3,
+   "returnedStock": 2,
+   "unitPrice": 83000.0,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
    "odooId": 7096,
    "name": "H-1803",
    "sku": "H-1803",
@@ -35342,20 +35370,20 @@
    "sku": "M-3069KTR750",
    "category": "All",
    "supplier": null,
-   "stage": "selling",
+   "stage": "selling-returns",
    "odooCreatedDate": "2025-12-07",
    "firstOrderDate": "2025-12-07",
-   "lastOrderDate": "2026-11-13",
-   "orders": 17,
-   "units": 18,
-   "revenue": 642000,
+   "lastOrderDate": "2026-10-23",
+   "orders": 16,
+   "units": 17,
+   "revenue": 617000,
    "delivered": 17,
    "returned": 5,
    "unitsBoughtFromSupplier": 13,
    "returnedStock": 2,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 21,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -36930,20 +36958,20 @@
    "sku": "T-6887",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-10-23",
    "firstOrderDate": "2025-10-23",
-   "lastOrderDate": "2026-10-06",
-   "orders": 149,
-   "units": 158,
-   "revenue": 7741000,
+   "lastOrderDate": "2026-11-13",
+   "orders": 150,
+   "units": 159,
+   "revenue": 7766000,
    "delivered": 160,
    "returned": 44,
    "unitsBoughtFromSupplier": 119,
    "returnedStock": 2,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 38,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -40711,6 +40739,13 @@
      83000
     ]
    },
+   "7550": {
+    "2026-11-13": [
+     1,
+     1,
+     74000
+    ]
+   },
    "7549": {
     "2026-11-12": [
      1,
@@ -40874,6 +40909,11 @@
      71000
     ],
     "2026-11-12": [
+     1,
+     1,
+     71000
+    ],
+    "2026-11-13": [
      1,
      1,
      71000
@@ -43003,6 +43043,11 @@
      79000
     ],
     "2026-11-11": [
+     1,
+     1,
+     80000
+    ],
+    "2026-11-13": [
      1,
      1,
      80000
@@ -50967,6 +51012,13 @@
      95000
     ]
    },
+   "7098": {
+    "2026-11-13": [
+     1,
+     1,
+     29000
+    ]
+   },
    "7096": {
     "2026-09-13": [
      1,
@@ -53585,11 +53637,6 @@
      1,
      1,
      25000
-    ],
-    "2026-11-13": [
-     1,
-     1,
-     25000
     ]
    },
    "6420": {
@@ -54266,6 +54313,11 @@
      1,
      1,
      39000
+    ],
+    "2026-11-13": [
+     1,
+     1,
+     25000
     ]
    },
    "6090": {
@@ -56063,10 +56115,78 @@
    "2026-11-10": 62,
    "2026-11-11": 57,
    "2026-11-12": 66,
-   "2026-11-13": 21
+   "2026-11-13": 22
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34759",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1920",
+     "pid": 730743,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "var": "نيلي / Laci, 9"
+    },
+    {
+     "sku": "M-0259NZRK1200",
+     "pid": 733027,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 4"
+    },
+    {
+     "sku": "M-2627MSA980",
+     "pid": 733680,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 52"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34758",
+   "d": "2026-11-13",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-7010",
+     "pid": 725987,
+     "qty": 1,
+     "price": 29000,
+     "discPct": 0,
+     "del": 0,
+     "var": "بيج / Bej, 4"
+    },
+    {
+     "sku": "T-6887",
+     "pid": 676271,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "بيج / Bej, 4"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34757",
    "d": "2026-11-13",
@@ -56137,25 +56257,6 @@
    ],
    "src": "Instagram",
    "ful": "turkey"
-  },
-  {
-   "id": "S34754",
-   "d": "2026-11-13",
-   "st": "sale",
-   "fee": 5000,
-   "disc": 0,
-   "lines": [
-    {
-     "sku": "M-3069KTR750",
-     "pid": 684324,
-     "qty": 1,
-     "price": 25000,
-     "discPct": 0,
-     "del": 0,
-     "var": "فيزون / Vizon, 42"
-    }
-   ],
-   "src": "Facebook"
   },
   {
    "id": "S34753",
