@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-14T01:32:41.726578+00:00",
+ "syncedAt": "2026-11-14T02:02:57.587543+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -540,17 +540,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-12",
    "firstOrderDate": "2026-11-12",
-   "lastOrderDate": "2026-11-13",
-   "orders": 3,
-   "units": 3,
-   "revenue": 330000,
+   "lastOrderDate": "2026-11-14",
+   "orders": 4,
+   "units": 4,
+   "revenue": 440000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 110000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 216,
     "lastChecked": "2026-11-13T17:01:33Z",
@@ -1774,17 +1774,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-09",
    "firstOrderDate": "2026-11-10",
-   "lastOrderDate": "2026-11-13",
-   "orders": 7,
-   "units": 7,
-   "revenue": 483000,
+   "lastOrderDate": "2026-11-14",
+   "orders": 8,
+   "units": 8,
+   "revenue": 552000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 1.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -40980,6 +40980,11 @@
      1,
      1,
      110000
+    ],
+    "2026-11-14": [
+     1,
+     1,
+     110000
     ]
    },
    "7555": {
@@ -41051,6 +41056,11 @@
      4,
      4,
      276000
+    ],
+    "2026-11-14": [
+     1,
+     1,
+     69000
     ]
    },
    "7540": {
@@ -56334,10 +56344,52 @@
    "2026-11-11": 57,
    "2026-11-12": 66,
    "2026-11-13": 56,
-   "2026-11-14": 5
+   "2026-11-14": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34801",
+   "d": "2026-11-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8041",
+     "pid": 734020,
+     "qty": 1,
+     "price": 110000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي / Antrasit, 1"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34800",
+   "d": "2026-11-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733455,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 46"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34799",
    "d": "2026-11-14",
