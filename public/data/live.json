@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-14T06:32:42.477446+00:00",
+ "syncedAt": "2026-11-14T06:51:59.587260+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -36207,20 +36207,20 @@
    "sku": "M-8195AB368",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-11-26",
    "firstOrderDate": "2025-11-26",
-   "lastOrderDate": "2026-11-03",
-   "orders": 39,
-   "units": 40,
-   "revenue": 1816000,
+   "lastOrderDate": "2026-11-14",
+   "orders": 40,
+   "units": 41,
+   "revenue": 1847000,
    "delivered": 40,
    "returned": 13,
    "unitsBoughtFromSupplier": 30,
    "returnedStock": 2,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 11,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -38213,15 +38213,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-14",
-   "orders": 868,
-   "units": 1010,
-   "revenue": 33642000,
+   "orders": 869,
+   "units": 1012,
+   "revenue": 33720000,
    "delivered": 899,
    "returned": 188,
    "unitsBoughtFromSupplier": 839,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 12.86,
+   "orderVelocity7d": 13.0,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 279,
@@ -54103,6 +54103,11 @@
      1,
      1,
      31000
+    ],
+    "2026-11-14": [
+     1,
+     1,
+     31000
     ]
    },
    "6346": {
@@ -55170,9 +55175,9 @@
      1170000
     ],
     "2026-11-14": [
-     3,
      4,
-     156000
+     6,
+     234000
     ]
    },
    "5855": {
@@ -56349,10 +56354,60 @@
    "2026-11-11": 57,
    "2026-11-12": 66,
    "2026-11-13": 56,
-   "2026-11-14": 9
+   "2026-11-14": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34805",
+   "d": "2026-11-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 688392,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34804",
+   "d": "2026-11-14",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-8195AB368",
+     "pid": 682592,
+     "qty": 1,
+     "price": 31000,
+     "discPct": 0,
+     "del": 0,
+     "var": "فيزون / Vizon, 46"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34803",
    "d": "2026-11-14",
