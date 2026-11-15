@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-15T09:33:12.498607+00:00",
+ "syncedAt": "2026-11-15T10:02:51.024442+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -311,20 +311,20 @@
    "sku": "M-7021TRT545",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-13",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-15",
+   "lastOrderDate": "2026-11-15",
+   "orders": 1,
+   "units": 1,
+   "revenue": 84000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 84000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3547,17 +3547,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-05",
    "firstOrderDate": "2026-11-06",
-   "lastOrderDate": "2026-11-14",
-   "orders": 7,
-   "units": 7,
-   "revenue": 497000,
+   "lastOrderDate": "2026-11-15",
+   "orders": 8,
+   "units": 8,
+   "revenue": 568000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.71,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -17264,20 +17264,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-28",
    "firstOrderDate": "2026-09-29",
-   "lastOrderDate": "2026-11-14",
-   "orders": 80,
-   "units": 81,
-   "revenue": 6232000,
+   "lastOrderDate": "2026-11-15",
+   "orders": 81,
+   "units": 82,
+   "revenue": 6310000,
    "delivered": 76,
    "returned": 8,
-   "unitsBoughtFromSupplier": 77,
+   "unitsBoughtFromSupplier": 78,
    "returnedStock": 3,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 1.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 223,
-    "lastChecked": "2026-11-14T13:35:55Z",
+    "qty": 219,
+    "lastChecked": "2026-11-15T09:52:24Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -17290,7 +17290,7 @@
      {
       "color": "نيلي / Laci",
       "size": "44",
-      "qty": 7,
+      "qty": 6,
       "product_id": 730461
      },
      {
@@ -17320,7 +17320,7 @@
      {
       "color": "نيلي / Laci",
       "size": "50",
-      "qty": 8,
+      "qty": 7,
       "product_id": 730466
      },
      {
@@ -17332,7 +17332,7 @@
      {
       "color": "أسود / Siyah",
       "size": "44",
-      "qty": 3,
+      "qty": 2,
       "product_id": 730468
      },
      {
@@ -17440,7 +17440,7 @@
      {
       "color": "خاكي / Haki",
       "size": "54",
-      "qty": 4,
+      "qty": 3,
       "product_id": 730486
      },
      {
@@ -38502,7 +38502,7 @@
    "delivered": 940,
    "returned": 189,
    "unitsBoughtFromSupplier": 860,
-   "returnedStock": 8,
+   "returnedStock": 11,
    "unitPrice": 39000.0,
    "orderVelocity7d": 14.71,
    "daysSinceLastOrder": 0,
@@ -41167,15 +41167,22 @@
   }
  ],
  "shop": {
-  "stockUnits": 1557,
-  "stockValue": 45234798,
-  "stockVariants": 1225
+  "stockUnits": 1560,
+  "stockValue": 45290448,
+  "stockVariants": 1226
  },
  "daily": {
   "days": 90,
   "from": "2026-08-17",
   "to": "2026-11-15",
   "byProduct": {
+   "7573": {
+    "2026-11-15": [
+     1,
+     1,
+     84000
+    ]
+   },
    "7570": {
     "2026-11-13": [
      1,
@@ -41457,6 +41464,11 @@
      71000
     ],
     "2026-11-14": [
+     1,
+     1,
+     71000
+    ],
+    "2026-11-15": [
      1,
      1,
      71000
@@ -44252,6 +44264,11 @@
      156000
     ],
     "2026-11-14": [
+     1,
+     1,
+     78000
+    ],
+    "2026-11-15": [
      1,
      1,
      78000
@@ -56662,10 +56679,73 @@
    "2026-11-12": 66,
    "2026-11-13": 56,
    "2026-11-14": 38,
-   "2026-11-15": 19
+   "2026-11-15": 22
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34858",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-7021TRT545",
+     "pid": 734159,
+     "qty": 1,
+     "price": 84000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 50"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34857",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1916",
+     "pid": 730469,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 46"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34856",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-0259NZRK1200",
+     "pid": 733019,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 4"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34855",
    "d": "2026-11-15",
@@ -56683,7 +56763,8 @@
      "var": "قهوائي / Kahve, 4"
     }
    ],
-   "src": "Facebook"
+   "src": "Facebook",
+   "ful": "مدن"
   },
   {
    "id": "S34854",
@@ -60460,7 +60541,7 @@
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34691",
@@ -60520,7 +60601,7 @@
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34689",
@@ -60983,7 +61064,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34670",
@@ -61284,7 +61365,7 @@
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34658",
@@ -61490,7 +61571,7 @@
     }
    ],
    "src": "WhatsApp",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34648",
@@ -71644,7 +71725,7 @@
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34209",
@@ -167195,14 +167276,14 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 3,
+   "qty": 4,
    "cost": 18550,
    "created": "2026-02-23"
   },
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 0,
+   "qty": 2,
    "cost": 18550,
    "created": "2026-10-03"
   },
