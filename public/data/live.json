@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-15T19:03:12.882448+00:00",
+ "syncedAt": "2026-11-15T19:32:38.462786+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3916,19 +3916,19 @@
    "odooCreatedDate": "2026-11-07",
    "firstOrderDate": "2026-11-08",
    "lastOrderDate": "2026-11-15",
-   "orders": 8,
-   "units": 8,
-   "revenue": 648000,
+   "orders": 9,
+   "units": 9,
+   "revenue": 729000,
    "delivered": 4,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 1.0,
+   "orderVelocity7d": 1.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 92,
-    "lastChecked": "2026-11-15T14:43:30Z",
+    "qty": 91,
+    "lastChecked": "2026-11-15T19:20:32Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4049,7 +4049,7 @@
      {
       "color": "رصاصي فاتح / Gri",
       "size": "44",
-      "qty": 4,
+      "qty": 3,
       "product_id": 733175
      },
      {
@@ -11122,7 +11122,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 86,
-    "lastChecked": "2026-11-15T18:55:56Z",
+    "lastChecked": "2026-11-15T19:26:06Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39306,19 +39306,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-15",
-   "orders": 893,
-   "units": 1038,
-   "revenue": 34734000,
+   "orders": 895,
+   "units": 1041,
+   "revenue": 34851000,
    "delivered": 963,
    "returned": 189,
-   "unitsBoughtFromSupplier": 864,
+   "unitsBoughtFromSupplier": 867,
    "returnedStock": 11,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 15.57,
+   "orderVelocity7d": 15.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 251,
-    "lastChecked": "2026-11-15T17:33:26Z",
+    "qty": 249,
+    "lastChecked": "2026-11-15T19:29:02Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39355,7 +39355,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 13,
+      "qty": 12,
       "product_id": 675802
      },
      {
@@ -39379,7 +39379,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 7,
+      "qty": 6,
       "product_id": 715723
      },
      {
@@ -42283,9 +42283,9 @@
      81000
     ],
     "2026-11-15": [
-     2,
-     2,
-     162000
+     3,
+     3,
+     243000
     ]
    },
    "7518": {
@@ -56447,9 +56447,9 @@
      702000
     ],
     "2026-11-15": [
-     14,
-     14,
-     546000
+     16,
+     17,
+     663000
     ]
    },
    "5855": {
@@ -57621,10 +57621,83 @@
    "2026-11-12": 66,
    "2026-11-13": 55,
    "2026-11-14": 38,
-   "2026-11-15": 52
+   "2026-11-15": 55
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34892",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 688392,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34891",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1962",
+     "pid": 733171,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 48"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34890",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34889",
    "d": "2026-11-15",
