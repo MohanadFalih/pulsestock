@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-15T20:02:53.658966+00:00",
+ "syncedAt": "2026-11-15T20:32:53.171789+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7451,19 +7451,19 @@
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-15",
-   "orders": 55,
-   "units": 58,
-   "revenue": 4698000,
+   "orders": 56,
+   "units": 59,
+   "revenue": 4779000,
    "delivered": 51,
    "returned": 5,
-   "unitsBoughtFromSupplier": 56,
+   "unitsBoughtFromSupplier": 57,
    "returnedStock": 3,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 3.14,
+   "orderVelocity7d": 3.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 62,
-    "lastChecked": "2026-11-15T07:04:56Z",
+    "qty": 61,
+    "lastChecked": "2026-11-15T20:24:11Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7578,7 +7578,7 @@
      {
       "color": "نيلي / Laci",
       "size": "11",
-      "qty": 2,
+      "qty": 1,
       "product_id": 732226
      },
      {
@@ -11082,15 +11082,15 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-15",
-   "orders": 55,
-   "units": 55,
-   "revenue": -297501,
+   "orders": 56,
+   "units": 56,
+   "revenue": -307001,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 3.14,
+   "orderVelocity7d": 3.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11122,7 +11122,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 86,
-    "lastChecked": "2026-11-15T19:58:36Z",
+    "lastChecked": "2026-11-15T20:30:05Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -20063,20 +20063,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-09-23",
    "firstOrderDate": "2026-09-24",
-   "lastOrderDate": "2026-11-11",
-   "orders": 37,
-   "units": 38,
-   "revenue": 3190000,
+   "lastOrderDate": "2026-11-15",
+   "orders": 38,
+   "units": 39,
+   "revenue": 3280000,
    "delivered": 38,
    "returned": 10,
-   "unitsBoughtFromSupplier": 32,
+   "unitsBoughtFromSupplier": 33,
    "returnedStock": 4,
    "unitPrice": 90000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 4,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 75,
-    "lastChecked": "2026-11-15T15:06:58Z",
+    "qty": 73,
+    "lastChecked": "2026-11-15T20:12:57Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -20095,13 +20095,13 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 9,
+      "qty": 8,
       "product_id": 730124
      },
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 8,
+      "qty": 7,
       "product_id": 730125
      },
      {
@@ -42794,9 +42794,9 @@
      81000
     ],
     "2026-11-15": [
-     1,
-     1,
-     81000
+     2,
+     2,
+     162000
     ]
    },
    "7477": {
@@ -43399,9 +43399,9 @@
      -7250
     ],
     "2026-11-15": [
-     2,
-     2,
-     -9000
+     3,
+     3,
+     -18500
     ]
    },
    "7436": {
@@ -45803,6 +45803,11 @@
      90000
     ],
     "2026-11-11": [
+     1,
+     1,
+     90000
+    ],
+    "2026-11-15": [
      1,
      1,
      90000
@@ -57621,10 +57626,60 @@
    "2026-11-12": 66,
    "2026-11-13": 55,
    "2026-11-14": 38,
-   "2026-11-15": 55
+   "2026-11-15": 57
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34894",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732214,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 6"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34893",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8010",
+     "pid": 730124,
+     "qty": 1,
+     "price": 90000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -9500,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34892",
    "d": "2026-11-15",
