@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-15T06:02:53.746494+00:00",
+ "syncedAt": "2026-11-15T06:32:45.575382+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -482,17 +482,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-12",
    "firstOrderDate": "2026-11-13",
-   "lastOrderDate": "2026-11-13",
-   "orders": 4,
-   "units": 4,
-   "revenue": 296000,
+   "lastOrderDate": "2026-11-15",
+   "orders": 5,
+   "units": 5,
+   "revenue": 370000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 72,
     "lastChecked": "2026-11-14T15:36:31Z",
@@ -41188,6 +41188,11 @@
      4,
      4,
      296000
+    ],
+    "2026-11-15": [
+     1,
+     1,
+     74000
     ]
    },
    "7564": {
@@ -56613,10 +56618,31 @@
    "2026-11-12": 66,
    "2026-11-13": 56,
    "2026-11-14": 38,
-   "2026-11-15": 10
+   "2026-11-15": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34846",
+   "d": "2026-11-15",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1970",
+     "pid": 734056,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 1"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34845",
    "d": "2026-11-15",
