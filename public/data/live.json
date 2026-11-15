@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-15T23:14:33.872630+00:00",
+ "syncedAt": "2026-11-15T23:32:57.600716+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -664,20 +664,20 @@
    "sku": "M-5678ZNNK1102",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-15",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-16",
+   "lastOrderDate": "2026-11-16",
+   "orders": 1,
+   "units": 1,
+   "revenue": 79000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -11190,17 +11190,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
-   "lastOrderDate": "2026-11-15",
-   "orders": 56,
-   "units": 56,
-   "revenue": -307001,
+   "lastOrderDate": "2026-11-16",
+   "orders": 57,
+   "units": 57,
+   "revenue": -319001,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 3.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -13766,15 +13766,15 @@
    "odooCreatedDate": "2026-10-10",
    "firstOrderDate": "2026-10-11",
    "lastOrderDate": "2026-11-16",
-   "orders": 9,
-   "units": 14,
-   "revenue": 1008000,
+   "orders": 10,
+   "units": 15,
+   "revenue": 1080000,
    "delivered": 13,
    "returned": 1,
    "unitsBoughtFromSupplier": 11,
    "returnedStock": 4,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 80,
@@ -42102,6 +42102,13 @@
      84000
     ]
    },
+   "7585": {
+    "2026-11-16": [
+     1,
+     1,
+     79000
+    ]
+   },
    "7581": {
     "2026-11-15": [
      1,
@@ -43521,6 +43528,11 @@
      3,
      3,
      -18500
+    ],
+    "2026-11-16": [
+     1,
+     1,
+     -12000
     ]
    },
    "7436": {
@@ -43949,9 +43961,9 @@
      144000
     ],
     "2026-11-16": [
-     1,
-     1,
-     72000
+     2,
+     2,
+     144000
     ]
    },
    "7405": {
@@ -57581,10 +57593,49 @@
    "2026-11-13": 55,
    "2026-11-14": 38,
    "2026-11-15": 59,
-   "2026-11-16": 2
+   "2026-11-16": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34899",
+   "d": "2026-11-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1928",
+     "pid": 731218,
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 48"
+    },
+    {
+     "sku": "M-5678ZNNK1102",
+     "pid": 734374,
+     "qty": 1,
+     "price": 79000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي غامق / Acı Kahve, 3"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -12000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34897",
    "d": "2026-11-16",
