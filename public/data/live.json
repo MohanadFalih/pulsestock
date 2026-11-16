@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-16T07:02:44.564687+00:00",
+ "syncedAt": "2026-11-16T07:33:17.966814+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -32236,20 +32236,20 @@
    "sku": "L-0614",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-06-06",
    "firstOrderDate": "2026-06-06",
-   "lastOrderDate": "2026-10-27",
-   "orders": 8,
-   "units": 8,
-   "revenue": 476000,
+   "lastOrderDate": "2026-11-16",
+   "orders": 9,
+   "units": 9,
+   "revenue": 501000,
    "delivered": 8,
    "returned": 3,
    "unitsBoughtFromSupplier": 6,
    "returnedStock": 1,
    "unitPrice": 34000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 20,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -52643,6 +52643,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-16": [
+     1,
+     1,
+     25000
     ]
    },
    "7092": {
@@ -57753,10 +57758,29 @@
    "2026-11-13": 55,
    "2026-11-14": 38,
    "2026-11-15": 58,
-   "2026-11-16": 8
+   "2026-11-16": 9
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34905",
+   "d": "2026-11-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-0614-قهواييkahv-24652",
+     "pid": 725351,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "قهوائي / Kahve, 2"
+    }
+   ],
+   "src": "Facebook"
+  },
   {
    "id": "S34904",
    "d": "2026-11-16",
