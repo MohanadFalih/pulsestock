@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-16T17:03:08.849686+00:00",
+ "syncedAt": "2026-11-16T17:33:06.828117+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -39498,19 +39498,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-16",
-   "orders": 911,
-   "units": 1061,
-   "revenue": 35631000,
+   "orders": 912,
+   "units": 1062,
+   "revenue": 35670000,
    "delivered": 986,
    "returned": 189,
-   "unitsBoughtFromSupplier": 884,
+   "unitsBoughtFromSupplier": 885,
    "returnedStock": 8,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 16.57,
+   "orderVelocity7d": 16.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 230,
-    "lastChecked": "2026-11-16T16:51:55Z",
+    "qty": 229,
+    "lastChecked": "2026-11-16T17:28:28Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39535,7 +39535,7 @@
      {
       "color": "سمائي / Mavi",
       "size": "STD",
-      "qty": 35,
+      "qty": 34,
       "product_id": 672399
      },
      {
@@ -56740,9 +56740,9 @@
      702000
     ],
     "2026-11-16": [
-     15,
-     19,
-     741000
+     16,
+     20,
+     780000
     ]
    },
    "5855": {
@@ -57921,10 +57921,31 @@
    "2026-11-13": 55,
    "2026-11-14": 38,
    "2026-11-15": 59,
-   "2026-11-16": 45
+   "2026-11-16": 46
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34943",
+   "d": "2026-11-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672399,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "سمائي / Mavi"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34942",
    "d": "2026-11-16",
