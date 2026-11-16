@@ -1,9 +1,37 @@
 {
- "syncedAt": "2026-11-16T14:33:06.305755+00:00",
+ "syncedAt": "2026-11-16T15:03:14.762981+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
  "products": [
+  {
+   "odooId": 7595,
+   "name": "H-1975",
+   "sku": "H-1975",
+   "category": "All",
+   "supplier": null,
+   "stage": "created",
+   "odooCreatedDate": "2026-11-16",
+   "firstOrderDate": null,
+   "lastOrderDate": null,
+   "orders": 0,
+   "units": 0,
+   "revenue": 0,
+   "delivered": 0,
+   "returned": 0,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 73000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": null,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
   {
    "odooId": 7593,
    "name": "M-0855MSA980",
@@ -1621,14 +1649,14 @@
    "revenue": 1430000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 13,
+   "unitsBoughtFromSupplier": 14,
    "returnedStock": 2,
    "unitPrice": 110000.0,
    "orderVelocity7d": 1.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 172,
-    "lastChecked": "2026-11-16T13:57:35Z",
+    "qty": 171,
+    "lastChecked": "2026-11-16T14:34:31Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1689,7 +1717,7 @@
      {
       "color": "رصاصي / Antrasit",
       "size": "1",
-      "qty": 8,
+      "qty": 7,
       "product_id": 734020
      },
      {
@@ -21690,8 +21718,8 @@
    "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 97,
-    "lastChecked": "2026-11-16T14:01:30Z",
+    "qty": 96,
+    "lastChecked": "2026-11-16T14:33:30Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -21794,7 +21822,7 @@
      {
       "color": "أسود / Siyah",
       "size": "48",
-      "qty": 5,
+      "qty": 4,
       "product_id": 729808
      },
      {
@@ -23313,7 +23341,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 113,
-    "lastChecked": "2026-11-16T14:01:30Z",
+    "lastChecked": "2026-11-16T14:33:30Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39571,19 +39599,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-16",
-   "orders": 907,
-   "units": 1056,
-   "revenue": 35436000,
+   "orders": 908,
+   "units": 1058,
+   "revenue": 35514000,
    "delivered": 964,
    "returned": 189,
-   "unitsBoughtFromSupplier": 879,
+   "unitsBoughtFromSupplier": 882,
    "returnedStock": 30,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 16.0,
+   "orderVelocity7d": 16.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 235,
-    "lastChecked": "2026-11-16T14:22:28Z",
+    "qty": 232,
+    "lastChecked": "2026-11-16T14:37:20Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39608,7 +39636,7 @@
      {
       "color": "سمائي / Mavi",
       "size": "STD",
-      "qty": 36,
+      "qty": 35,
       "product_id": 672399
      },
      {
@@ -39620,7 +39648,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 10,
+      "qty": 9,
       "product_id": 675802
      },
      {
@@ -39644,7 +39672,7 @@
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 16,
+      "qty": 15,
       "product_id": 730710
      }
     ]
@@ -56813,9 +56841,9 @@
      702000
     ],
     "2026-11-16": [
-     11,
-     14,
-     546000
+     12,
+     16,
+     624000
     ]
    },
    "5855": {
@@ -57994,10 +58022,41 @@
    "2026-11-13": 55,
    "2026-11-14": 38,
    "2026-11-15": 59,
-   "2026-11-16": 39
+   "2026-11-16": 40
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34937",
+   "d": "2026-11-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
   {
    "id": "S34936",
    "d": "2026-11-16",
@@ -206487,6 +206546,102 @@
    "qty": 0,
    "cost": 40729,
    "created": "2026-11-15",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
+   "costSrc": "vendor"
+  },
+  {
+   "sku": "H-1975",
+   "model": "H-1975",
+   "qty": 0,
+   "cost": 31875,
+   "created": "2026-11-16",
    "costSrc": "vendor"
   },
   {
