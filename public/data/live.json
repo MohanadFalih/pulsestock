@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-16T03:16:51.970227+00:00",
+ "syncedAt": "2026-11-16T03:33:07.898420+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -11231,7 +11231,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 86,
-    "lastChecked": "2026-11-16T02:45:11Z",
+    "lastChecked": "2026-11-16T03:15:47Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39442,20 +39442,20 @@
    "stage": "selling",
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
-   "lastOrderDate": "2026-11-15",
-   "orders": 896,
-   "units": 1042,
-   "revenue": 34890000,
+   "lastOrderDate": "2026-11-16",
+   "orders": 898,
+   "units": 1044,
+   "revenue": 34968000,
    "delivered": 963,
    "returned": 189,
-   "unitsBoughtFromSupplier": 869,
+   "unitsBoughtFromSupplier": 871,
    "returnedStock": 11,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 14.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 14.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 247,
-    "lastChecked": "2026-11-15T21:45:52Z",
+    "qty": 245,
+    "lastChecked": "2026-11-16T03:28:33Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39498,7 +39498,7 @@
      {
       "color": "رصاصي / Antrasit",
       "size": "STD",
-      "qty": 19,
+      "qty": 18,
       "product_id": 680501
      },
      {
@@ -39516,7 +39516,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 5,
+      "qty": 4,
       "product_id": 715723
      },
      {
@@ -56476,6 +56476,11 @@
      17,
      18,
      702000
+    ],
+    "2026-11-16": [
+     2,
+     2,
+     78000
     ]
    },
    "5855": {
@@ -57638,10 +57643,52 @@
    "2026-11-13": 55,
    "2026-11-14": 38,
    "2026-11-15": 59,
-   "2026-11-16": 4
+   "2026-11-16": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34902",
+   "d": "2026-11-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -2000,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672394,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 4.5,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34901",
+   "d": "2026-11-16",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -2000,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 4.5,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Website",
+   "ful": "turkey"
+  },
   {
    "id": "S34900",
    "d": "2026-11-16",
