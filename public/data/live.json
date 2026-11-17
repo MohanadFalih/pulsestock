@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T10:02:56.081602+00:00",
+ "syncedAt": "2026-11-17T10:33:03.889717+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7793,19 +7793,19 @@
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
    "lastOrderDate": "2026-11-17",
-   "orders": 59,
-   "units": 62,
-   "revenue": 5022000,
+   "orders": 60,
+   "units": 63,
+   "revenue": 5103000,
    "delivered": 52,
    "returned": 8,
-   "unitsBoughtFromSupplier": 59,
+   "unitsBoughtFromSupplier": 60,
    "returnedStock": 6,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 2.0,
+   "orderVelocity7d": 2.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 57,
-    "lastChecked": "2026-11-17T09:19:38Z",
+    "qty": 56,
+    "lastChecked": "2026-11-17T10:24:56Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7848,7 +7848,7 @@
      {
       "color": "أسود / Siyah",
       "size": "5",
-      "qty": 2,
+      "qty": 1,
       "product_id": 732207
      },
      {
@@ -39721,21 +39721,21 @@
    "revenue": 35982000,
    "delivered": 986,
    "returned": 193,
-   "unitsBoughtFromSupplier": 892,
+   "unitsBoughtFromSupplier": 893,
    "returnedStock": 12,
    "unitPrice": 39000.0,
    "orderVelocity7d": 15.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 336,
-    "lastChecked": "2026-11-17T09:07:05Z",
+    "qty": 328,
+    "lastChecked": "2026-11-17T10:02:28Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "فيزون / Vizon",
       "size": "STD",
-      "qty": 10,
+      "qty": 9,
       "product_id": 672394
      },
      {
@@ -39765,7 +39765,7 @@
      {
       "color": "عنابي / Murdum",
       "size": "STD",
-      "qty": 41,
+      "qty": 40,
       "product_id": 675802
      },
      {
@@ -39789,13 +39789,13 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 41,
+      "qty": 36,
       "product_id": 715723
      },
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 15,
+      "qty": 14,
       "product_id": 730710
      }
     ]
@@ -43418,9 +43418,9 @@
      243000
     ],
     "2026-11-17": [
-     2,
-     2,
-     162000
+     3,
+     3,
+     243000
     ]
    },
    "7477": {
@@ -58177,10 +58177,31 @@
    "2026-11-14": 38,
    "2026-11-15": 60,
    "2026-11-16": 56,
-   "2026-11-17": 15
+   "2026-11-17": 16
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34974",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732206,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 10"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34973",
    "d": "2026-11-17",
@@ -203752,9 +203773,8 @@
    "sku": "H-1958",
    "model": "H-1958",
    "qty": 0,
-   "cost": 40729,
-   "created": "2026-11-04",
-   "costSrc": "vendor"
+   "cost": 40250,
+   "created": "2026-11-04"
   },
   {
    "sku": "H-1958",
@@ -205167,9 +205187,8 @@
    "sku": "H-1967",
    "model": "H-1967",
    "qty": 0,
-   "cost": 40729,
-   "created": "2026-11-11",
-   "costSrc": "vendor"
+   "cost": 40250,
+   "created": "2026-11-11"
   },
   {
    "sku": "H-1967",
@@ -205804,9 +205823,8 @@
    "sku": "H-1975",
    "model": "H-1975",
    "qty": 0,
-   "cost": 31875,
-   "created": "2026-11-16",
-   "costSrc": "vendor"
+   "cost": 31500,
+   "created": "2026-11-16"
   },
   {
    "sku": "H-924",
