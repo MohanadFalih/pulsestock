@@ -9,13 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: npm ci --no-audit --no-fund
+      - run: pnpm install --frozen-lockfile
       - name: Resale sync (writes public/data/resale.json)
         env:
           ODOO_URL: ${{ secrets.ODOO_URL }}
@@ -23,11 +26,11 @@ jobs:
           ODOO_USER: ${{ secrets.ODOO_USER }}
           ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
         run: python3 scripts/resale_sync.py
-      - run: npm run build
+      - run: pnpm run build
       - name: Screenshot /resale
         run: |
           npx --yes playwright@1.48.2 install --with-deps chromium >/dev/null
-          (npx vite preview --port 4173 >/dev/null 2>&1 &) ; sleep 5
+          (pnpm exec vite preview --port 4173 >/dev/null 2>&1 &) ; sleep 5
           cat > shot.cjs <<'JS'
           const { chromium } = require('playwright');
           (async () => {
