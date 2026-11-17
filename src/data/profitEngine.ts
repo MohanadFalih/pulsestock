@@ -93,6 +93,11 @@ export const RULES = {
   matureAfterDays: 14,
   keepRateMaxAgeDays: 90,
   minPlausibleCostIQD: 1_000,
+  /** A unit cost above this multiple of the line's selling price is treated
+   *  as a data-entry error (e.g. a lira supplier price typed with the IQD sale
+   *  price): the line is valued with the fallback cost ratio instead and the
+   *  model is listed in costAlerts so it gets fixed in Odoo. */
+  maxCostToPrice: 5,
   /** Earliest day the page may start (profit_sync.py SINCE). */
   since: "2026-06-01",
 } as const;
@@ -224,6 +229,8 @@ export interface ProfitModel {
   keep: KeepRates;
   /** Cost/revenue ratio used for lines without a usable unit cost. */
   fallbackCostRatio: number;
+  /** Products valued at the fallback ratio because their cost is implausible. */
+  costAlerts: CostAlert[];
   today: string;
   odooMonthly: NonNullable<ProfitPayload["odoo"]["monthly"]>;
   otherByAccount: Record<string, number>;
@@ -313,6 +320,18 @@ interface LineVal {
   undecidedQty: number;
   unitNet: number; // per-unit value after the allocated order discount
   cost: number | null;
+  /** Odoo/vendor cost that was rejected as implausible (see maxCostToPrice). */
+  badCost: number | null;
+  listPrice: number;
+}
+
+/** A product whose cost was rejected as implausible. */
+export interface CostAlert {
+  model: string;
+  cost: number;
+  price: number;
+  pieces: number;
+  lastDay: string;
 }
 
 function orderLines(order: OpsOrder, costs: CostLookup): LineVal[] {
@@ -322,6 +341,8 @@ function orderLines(order: OpsOrder, costs: CostLookup): LineVal[] {
   return lines.map((l) => {
     const kept = Math.min(l.qty, Math.max(0, l.del));
     const undecided = Math.max(0, l.qty - kept - (l.ret ?? 0));
+    const raw = unitCost(l.sku, costs);
+    const bad = raw != null && l.price > 0 && raw > l.price * RULES.maxCostToPrice;
     return {
       sku: l.sku,
       turkey: l.route === "turkey",
@@ -329,7 +350,9 @@ function orderLines(order: OpsOrder, costs: CostLookup): LineVal[] {
       keptQty: kept,
       undecidedQty: undecided,
       unitNet: l.price * discFactor,
-      cost: unitCost(l.sku, costs),
+      cost: bad ? null : raw,
+      badCost: bad ? raw : null,
+      listPrice: l.price,
     };
   });
 }
@@ -348,9 +371,17 @@ export function buildProfitModel(
   let costedCost = 0;
   let costedRev = 0;
   const keepAcc = { tr: [0, 0], st: [0, 0], ord: [0, 0] };
+  const alerts = new Map<string, CostAlert>();
   for (const o of orders) {
     const lines = orderLines(o, costs);
     for (const l of lines) {
+      if (l.badCost != null) {
+        const k = modelOf(l.sku);
+        const a = alerts.get(k) ?? { model: k, cost: l.badCost, price: l.listPrice, pieces: 0, lastDay: o.d };
+        a.pieces += l.orderedQty;
+        if (o.d > a.lastDay) a.lastDay = o.d;
+        alerts.set(k, a);
+      }
       if (l.cost != null && l.keptQty > 0) {
         costedCost += l.cost * l.keptQty;
         costedRev += l.unitNet * l.keptQty;
@@ -587,6 +618,7 @@ export function buildProfitModel(
     days,
     keep,
     fallbackCostRatio,
+    costAlerts: [...alerts.values()].sort((a, b) => b.lastDay.localeCompare(a.lastDay)),
     today,
     odooMonthly: profit?.odoo?.monthly ?? {},
     otherByAccount: profit?.odoo?.otherByAccount ?? {},
