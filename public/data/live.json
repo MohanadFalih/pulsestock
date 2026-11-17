@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T22:14:37.924946+00:00",
+ "syncedAt": "2026-11-17T22:33:12.728762+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -181,20 +181,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-17",
    "firstOrderDate": "2026-11-17",
-   "lastOrderDate": "2026-11-17",
-   "orders": 1,
-   "units": 1,
-   "revenue": 88000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 2,
+   "units": 2,
+   "revenue": 176000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 88000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 113,
-    "lastChecked": "2026-11-17T17:50:19Z",
+    "qty": 112,
+    "lastChecked": "2026-11-17T22:21:48Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -231,7 +231,7 @@
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 11,
+      "qty": 10,
       "product_id": 734808
      },
      {
@@ -42149,6 +42149,11 @@
      1,
      1,
      88000
+    ],
+    "2026-11-18": [
+     1,
+     1,
+     88000
     ]
    },
    "7602": {
@@ -57821,10 +57826,31 @@
    "2026-11-15": 60,
    "2026-11-16": 56,
    "2026-11-17": 55,
-   "2026-11-18": 1
+   "2026-11-18": 2
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35016",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8055",
+     "pid": 734807,
+     "qty": 1,
+     "price": 88000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35015",
    "d": "2026-11-18",
