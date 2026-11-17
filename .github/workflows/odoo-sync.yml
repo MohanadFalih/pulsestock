@@ -36,6 +36,15 @@ jobs:
           ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
         run: python3 scripts/odoo_sync.py
 
+      - name: Resale ladder monitor (Odoo + META LIQU sheet, read-only)
+        continue-on-error: true      # never block the main data commit
+        env:
+          ODOO_URL: ${{ secrets.ODOO_URL }}
+          ODOO_DB: ${{ secrets.ODOO_DB }}
+          ODOO_USER: ${{ secrets.ODOO_USER }}
+          ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
+        run: python3 scripts/resale_sync.py
+
       - name: Build ad brief (Odoo + Meta, compact per-SKU)
         run: python3 scripts/ad_brief.py
 
