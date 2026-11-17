@@ -220,7 +220,13 @@ def main():
 
     # ── 3. price match: Meta sheet vs «تصفية» pricelist ───────────────────────
     pls = read_all(odoo, "product.pricelist", [["name", "in", list(TASFIYA_NAMES)]], ["name"])
-    mismatches, checked, pl_note = [], 0, None
+    mismatches, checked, pl_note, samples = [], 0, None, []
+    integrated = None
+    try:
+        rr = read_all(odoo, "deniz.clearance.rule", [], ["tasfiya_integrated"])
+        integrated = any(r.get("tasfiya_integrated") for r in rr)
+    except Exception as exc:  # field may not exist on older module versions
+        log(f"tasfiya_integrated unreadable: {exc}")
     if not pls:
         pl_note = "pricelist «تصفية» not found"
     else:
@@ -274,6 +280,9 @@ def main():
                         "categs": categ_parents.get(m2o_id(v.get("categ_id")), []),
                         "lst": float(v.get("lst_price") or 0)}
                 odoo_price, rule = pricelist_price(rules, info, now)
+                if any(t in (code or "") for t in ("6987", "7054")) and len(samples) < 8:
+                    samples.append([kind, code, v["display_name"], ad_price, round(odoo_price),
+                                    rule and rule.get("applied_on")])
                 if abs(odoo_price - float(ad_price or 0)) > MISMATCH_IQD:
                     mismatches.append({
                         "kind": kind, "code": code, "feed": feed, "variant": v["display_name"],
@@ -292,6 +301,7 @@ def main():
         "steps": steps,
         "daily": {d: {str(k): round(q) for k, q in v.items()} for d, v in sorted(daily.items())},
         "priceCheck": {"checked": checked, "mismatchCount": len(mismatches),
+                       "tasfiyaIntegrated": integrated, "samples": samples,
                        "note": pl_note, "mismatches": mismatches[:400]},
         "items": item_rows,
         "logs": log_rows,
@@ -302,7 +312,9 @@ def main():
     if printing:
         print(json.dumps({k: payload[k] for k in ("byState", "byStep", "steps", "daily")},
                          ensure_ascii=False, indent=1))
-        print(json.dumps(payload["priceCheck"]["mismatches"][:15], ensure_ascii=False, indent=1))
+        pc = payload["priceCheck"]
+        print(json.dumps({"integrated": pc["tasfiyaIntegrated"], "samples": pc["samples"],
+                          "mismatches": pc["mismatches"][:15]}, ensure_ascii=False, indent=1))
         return 0
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     tmp = OUT_PATH + ".tmp"
