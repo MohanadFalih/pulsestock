@@ -10,6 +10,7 @@ import {
   LogOut,
   Megaphone,
   Package,
+  Tags,
   Settings,
   TrendingUp,
   Truck,
@@ -45,6 +46,7 @@ function navItems(): NavItem[] {
     { label: "Real Profit", to: "/profit", icon: TrendingUp },
     { label: "Finance", to: "/finance", icon: Wallet },
     { label: "Inventory", to: "/inventory", icon: Boxes },
+    { label: "Resale ladder", to: "/resale", icon: Tags },
     { label: "Suppliers", to: "/suppliers", icon: Truck, disabled: true },
     { label: "Settings", to: "/settings", icon: Settings, disabled: true },
   ];

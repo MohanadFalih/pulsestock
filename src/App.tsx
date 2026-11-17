@@ -10,6 +10,7 @@ import Tasks from "@/pages/Tasks";
 import Finance from "@/pages/Finance";
 import Profit from "@/pages/Profit";
 import Inventory from "@/pages/Inventory";
+import Resale from "@/pages/Resale";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/finance" element={<Finance />} />
           <Route path="/profit" element={<Profit />} />
           <Route path="/inventory" element={<Inventory />} />
+          <Route path="/resale" element={<Resale />} />
           <Route path="*" element={<Overview />} />
         </Routes>
       </Layout>
