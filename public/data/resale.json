@@ -1,11 +1,11 @@
 {
- "syncedAt": "2026-11-17T19:03:16.788785+00:00",
+ "syncedAt": "2026-11-17T19:33:20.385851+00:00",
  "today": "2026-11-17",
  "window": 14,
  "byState": {
   "active": {
    "lines": 46,
-   "pieces": 57
+   "pieces": 56
   },
   "suggested": {
    "lines": 351,
@@ -15,9 +15,9 @@
  "byStep": {
   "0": {
    "lines": 46,
-   "pieces": 57,
-   "cost": 1824411,
-   "price": 3087000
+   "pieces": 56,
+   "cost": 1800411,
+   "price": 3006000
   }
  },
  "steps": {
@@ -30,7 +30,7 @@
    "maturedSold14": 0,
    "sellThrough14": null,
    "medianDaysToSale": null,
-   "soldLast7": 0
+   "soldLast7": 1.0
   },
   "1": {
    "openVariants": 0,
@@ -77,9 +77,13 @@
    "soldLast7": 0
   }
  },
- "daily": {},
+ "daily": {
+  "2026-11-17": {
+   "0": 1
+  }
+ },
  "priceCheck": {
-  "checked": 422,
+  "checked": 421,
   "mismatchCount": 2,
   "tasfiyaIntegrated": true,
   "note": "sheet rows not matched to an in-stock Odoo model: 7",
@@ -677,7 +681,7 @@
    "shown": 0,
    "offSeason": false,
    "costIssue": null,
-   "qty": 1,
+   "qty": 0,
    "stageStart": "2026-11-17",
    "nextReview": "2026-12-01"
   },
