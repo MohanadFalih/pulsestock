@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T13:12:03.408445+00:00",
+ "syncedAt": "2026-11-17T13:33:13.469298+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -22135,56 +22135,32 @@
    "odooCreatedDate": "2026-09-16",
    "firstOrderDate": "2026-09-20",
    "lastOrderDate": "2026-11-17",
-   "orders": 12,
-   "units": 11,
-   "revenue": 842000,
+   "orders": 13,
+   "units": 12,
+   "revenue": 920000,
    "delivered": 10,
    "returned": 2,
    "unitsBoughtFromSupplier": 10,
    "returnedStock": 3,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 0.14,
+   "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 193,
-    "lastChecked": "2026-11-16T15:10:07Z",
+    "qty": 51,
+    "lastChecked": "2026-11-17T13:25:54Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "نيلي / Laci",
-      "size": "38",
-      "qty": 9,
-      "product_id": 729746
-     },
-     {
-      "color": "نيلي / Laci",
-      "size": "40",
-      "qty": 10,
-      "product_id": 729747
-     },
-     {
-      "color": "نيلي / Laci",
-      "size": "42",
-      "qty": 8,
-      "product_id": 729748
-     },
-     {
-      "color": "نيلي / Laci",
       "size": "44",
-      "qty": 10,
+      "qty": 1,
       "product_id": 729749
      },
      {
       "color": "نيلي / Laci",
-      "size": "46",
-      "qty": 8,
-      "product_id": 729750
-     },
-     {
-      "color": "نيلي / Laci",
       "size": "48",
-      "qty": 9,
+      "qty": 1,
       "product_id": 729751
      },
      {
@@ -22219,75 +22195,21 @@
      },
      {
       "color": "خاكي / Haki",
-      "size": "38",
-      "qty": 10,
-      "product_id": 729764
-     },
-     {
-      "color": "خاكي / Haki",
       "size": "40",
-      "qty": 6,
+      "qty": 1,
       "product_id": 729765
      },
      {
       "color": "خاكي / Haki",
-      "size": "42",
-      "qty": 9,
-      "product_id": 729766
-     },
-     {
-      "color": "خاكي / Haki",
-      "size": "44",
-      "qty": 9,
-      "product_id": 729767
-     },
-     {
-      "color": "خاكي / Haki",
       "size": "46",
-      "qty": 8,
+      "qty": 1,
       "product_id": 729768
      },
      {
       "color": "خاكي / Haki",
       "size": "48",
-      "qty": 6,
+      "qty": 2,
       "product_id": 729769
-     },
-     {
-      "color": "عنابي / Murdum",
-      "size": "38",
-      "qty": 10,
-      "product_id": 729770
-     },
-     {
-      "color": "عنابي / Murdum",
-      "size": "40",
-      "qty": 8,
-      "product_id": 729771
-     },
-     {
-      "color": "عنابي / Murdum",
-      "size": "42",
-      "qty": 8,
-      "product_id": 729772
-     },
-     {
-      "color": "عنابي / Murdum",
-      "size": "44",
-      "qty": 8,
-      "product_id": 729773
-     },
-     {
-      "color": "عنابي / Murdum",
-      "size": "46",
-      "qty": 6,
-      "product_id": 729774
-     },
-     {
-      "color": "عنابي / Murdum",
-      "size": "48",
-      "qty": 6,
-      "product_id": 729775
      }
     ]
    }
@@ -47602,9 +47524,9 @@
      78000
     ],
     "2026-11-17": [
-     1,
-     1,
-     78000
+     2,
+     2,
+     156000
     ]
    },
    "7325": {
@@ -58232,10 +58154,31 @@
    "2026-11-14": 38,
    "2026-11-15": 60,
    "2026-11-16": 56,
-   "2026-11-17": 23
+   "2026-11-17": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34983",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1906",
+     "pid": 729773,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 44"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S34982",
    "d": "2026-11-17",
