@@ -513,6 +513,32 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
   );
 }
 
+// ─── Implausible product costs ───────────────────────────────────────────────
+
+function CostAlerts({ model }: { model: ProfitModel }) {
+  const list = model.costAlerts;
+  if (list.length === 0) return null;
+  return (
+    <section dir="rtl" className="rounded-xl border border-amber/40 bg-amber/10 p-4">
+      <div className="flex items-center gap-2 text-[13.5px] font-semibold text-amber">
+        <AlertTriangle className="h-4 w-4 shrink-0" />
+        كلفة غير منطقية في Odoo — صحّحها في تبويب Purchase أو كلفة المنتج
+      </div>
+      <p className="mt-1 text-[12px] text-text-secondary">
+        كلفة القطعة أكبر من 5 أضعاف سعر بيعها، فالداشبورد تجاهلها وحسب الربح بنسبة الكلفة المعتادة (
+        {Math.round(model.fallbackCostRatio * 100)}%) حتى تُصحَّح.
+      </p>
+      <ul className="mt-2 space-y-1 text-[12.5px] text-text-primary">
+        {list.map((a) => (
+          <li key={a.model} className="font-mono tnum">
+            {a.model} — الكلفة {iqd(a.cost)} · سعر البيع {iqd(a.price)} · {a.pieces} قطعة · آخر طلب {a.lastDay}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 // ─── Notes & data health ─────────────────────────────────────────────────────
 
 function Notes({ t, model }: { t: Totals; model: ProfitModel }) {
@@ -665,6 +691,7 @@ export default function Profit() {
         <EmptyState title="Loading" message="Waiting for the Odoo sync data…" />
       ) : (
         <div className="space-y-4">
+          <CostAlerts model={model} />
           <KpiRow t={totals} />
           <SplitTable t={totals} />
           <div className="grid gap-4 xl:grid-cols-[1.6fr_1fr]">
