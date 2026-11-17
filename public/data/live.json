@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T07:03:07.327057+00:00",
+ "syncedAt": "2026-11-17T07:32:53.580987+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7792,17 +7792,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
-   "lastOrderDate": "2026-11-15",
-   "orders": 57,
-   "units": 60,
-   "revenue": 4860000,
+   "lastOrderDate": "2026-11-17",
+   "orders": 58,
+   "units": 61,
+   "revenue": 4941000,
    "delivered": 52,
    "returned": 7,
    "unitsBoughtFromSupplier": 57,
    "returnedStock": 5,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 1.71,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 1.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 59,
     "lastChecked": "2026-11-16T18:24:55Z",
@@ -30091,7 +30091,7 @@
    "returned": 13,
    "unitsBoughtFromSupplier": 34,
    "returnedStock": 0,
-   "unitPrice": 39000.0,
+   "unitPrice": 81000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 14,
    "supplierStock": {
@@ -43394,6 +43394,11 @@
      3,
      3,
      243000
+    ],
+    "2026-11-17": [
+     1,
+     1,
+     81000
     ]
    },
    "7477": {
@@ -58146,10 +58151,31 @@
    "2026-11-14": 38,
    "2026-11-15": 60,
    "2026-11-16": 56,
-   "2026-11-17": 6
+   "2026-11-17": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34962",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732228,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 11"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34961",
    "d": "2026-11-17",
