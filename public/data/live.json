@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T18:02:58.804799+00:00",
+ "syncedAt": "2026-11-17T18:32:50.055017+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4362,19 +4362,19 @@
    "odooCreatedDate": "2026-11-07",
    "firstOrderDate": "2026-11-08",
    "lastOrderDate": "2026-11-17",
-   "orders": 12,
-   "units": 12,
-   "revenue": 972000,
+   "orders": 13,
+   "units": 13,
+   "revenue": 1053000,
    "delivered": 6,
    "returned": 0,
-   "unitsBoughtFromSupplier": 12,
+   "unitsBoughtFromSupplier": 13,
    "returnedStock": 0,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 87,
-    "lastChecked": "2026-11-17T11:53:22Z",
+    "qty": 85,
+    "lastChecked": "2026-11-17T18:13:37Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4393,7 +4393,7 @@
      {
       "color": "فيزون / Vizon",
       "size": "46",
-      "qty": 3,
+      "qty": 2,
       "product_id": 733158
      },
      {
@@ -4503,12 +4503,6 @@
       "size": "46",
       "qty": 1,
       "product_id": 733176
-     },
-     {
-      "color": "رصاصي فاتح / Gri",
-      "size": "48",
-      "qty": 1,
-      "product_id": 733177
      },
      {
       "color": "رصاصي فاتح / Gri",
@@ -21882,19 +21876,19 @@
    "odooCreatedDate": "2026-09-16",
    "firstOrderDate": "2026-09-20",
    "lastOrderDate": "2026-11-17",
-   "orders": 12,
-   "units": 11,
-   "revenue": 842000,
+   "orders": 13,
+   "units": 12,
+   "revenue": 920000,
    "delivered": 10,
    "returned": 2,
-   "unitsBoughtFromSupplier": 10,
+   "unitsBoughtFromSupplier": 11,
    "returnedStock": 3,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 0.14,
+   "orderVelocity7d": 0.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 51,
-    "lastChecked": "2026-11-17T14:29:36Z",
+    "lastChecked": "2026-11-17T18:28:38Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39351,26 +39345,26 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-17",
-   "orders": 928,
-   "units": 1078,
-   "revenue": 36294000,
+   "orders": 930,
+   "units": 1080,
+   "revenue": 36372000,
    "delivered": 988,
    "returned": 193,
-   "unitsBoughtFromSupplier": 901,
+   "unitsBoughtFromSupplier": 903,
    "returnedStock": 11,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 17.0,
+   "orderVelocity7d": 17.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 321,
-    "lastChecked": "2026-11-17T17:38:34Z",
+    "qty": 319,
+    "lastChecked": "2026-11-17T18:12:27Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "فيزون / Vizon",
       "size": "STD",
-      "qty": 8,
+      "qty": 7,
       "product_id": 672394
      },
      {
@@ -39424,7 +39418,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 32,
+      "qty": 31,
       "product_id": 715723
      },
      {
@@ -42530,9 +42524,9 @@
      162000
     ],
     "2026-11-17": [
-     1,
-     1,
-     81000
+     2,
+     2,
+     162000
     ]
    },
    "7518": {
@@ -47277,9 +47271,9 @@
      78000
     ],
     "2026-11-17": [
-     1,
-     1,
-     78000
+     2,
+     2,
+     156000
     ]
    },
    "7325": {
@@ -56726,9 +56720,9 @@
      858000
     ],
     "2026-11-17": [
-     14,
-     14,
-     546000
+     16,
+     16,
+     624000
     ]
    },
    "5855": {
@@ -57914,10 +57908,52 @@
    "2026-11-14": 38,
    "2026-11-15": 60,
    "2026-11-16": 56,
-   "2026-11-17": 42
+   "2026-11-17": 46
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35005",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1962",
+     "pid": 733159,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon, 48"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35004",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35003",
    "d": "2026-11-17",
@@ -57958,6 +57994,27 @@
     }
    ],
    "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35001",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 675802,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum"
+    }
+   ],
+   "src": "Instagram",
    "ful": "turkey"
   },
   {
@@ -58340,6 +58397,27 @@
     }
    ],
    "src": "Instagram"
+  },
+  {
+   "id": "S34983",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1906-navy-1-44",
+     "pid": 729749,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 44"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
   },
   {
    "id": "S34982",
@@ -235828,6 +235906,13 @@
    "cost": 38250,
    "created": "2026-11-15",
    "costSrc": "vendor"
+  },
+  {
+   "sku": "M-5708ZNNK1102",
+   "model": "M-5708ZNNK1102",
+   "qty": 0,
+   "cost": 0,
+   "created": "2026-11-17"
   },
   {
    "sku": "M-5712ZNK1009",
