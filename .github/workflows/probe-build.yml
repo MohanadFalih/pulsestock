@@ -3,7 +3,7 @@ on:
   push:
     branches: [claude/resale-probe]
 permissions:
-  contents: read
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,10 +49,8 @@ jobs:
           JS
           npm i --no-save playwright@1.48.2 >/dev/null 2>&1
           node shot.cjs
-      - uses: actions/upload-artifact@v4
-        with:
-          name: shots
-          path: |
-            resale.png
-            resale-mobile.png
-            public/data/resale.json
+      - name: Push screenshots to probe branch
+        run: |
+          mkdir -p probe && cp resale.png resale-mobile.png probe/ && cp public/data/resale.json probe/
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add -f probe && git commit -m "probe shots [skip ci]" && git push
