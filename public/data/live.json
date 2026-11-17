@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T13:33:13.469298+00:00",
+ "syncedAt": "2026-11-17T14:02:54.831047+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -8034,17 +8034,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-28",
    "firstOrderDate": "2026-10-29",
-   "lastOrderDate": "2026-11-14",
-   "orders": 17,
-   "units": 19,
-   "revenue": 1348000,
+   "lastOrderDate": "2026-11-17",
+   "orders": 18,
+   "units": 20,
+   "revenue": 1419000,
    "delivered": 17,
    "returned": 4,
    "unitsBoughtFromSupplier": 18,
    "returnedStock": 3,
    "unitPrice": 71000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 38,
     "lastChecked": "2026-11-16T16:22:49Z",
@@ -22147,7 +22147,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 51,
-    "lastChecked": "2026-11-17T13:25:54Z",
+    "lastChecked": "2026-11-17T13:58:19Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -43447,6 +43447,11 @@
      1,
      1,
      71000
+    ],
+    "2026-11-17": [
+     1,
+     1,
+     71000
     ]
    },
    "7475": {
@@ -58154,10 +58159,29 @@
    "2026-11-14": 38,
    "2026-11-15": 60,
    "2026-11-16": 56,
-   "2026-11-17": 24
+   "2026-11-17": 25
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34984",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1950",
+     "pid": 732183,
+     "qty": 1,
+     "price": 71000,
+     "discPct": 0,
+     "del": 0,
+     "var": "رصاصي / Antrasit"
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S34983",
    "d": "2026-11-17",
