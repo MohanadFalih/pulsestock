@@ -105,6 +105,33 @@ def pricelist_price(rules, variant, now):
     return variant["lst"], None
 
 
+SHEET_CSV = ("https://docs.google.com/spreadsheets/d/1EaE2karm7nAJ5YoNPuBQdWND1t5fSufRlnoyFukZt5g"
+             "/export?format=csv&gid=0")
+
+
+def norm(s):
+    return "".join(ch for ch in str(s).upper() if ch.isascii() and ch.isalnum())
+
+
+def iqd(v):
+    digits = "".join(ch for ch in str(v or "") if ch.isdigit())
+    return float(digits) if digits else 0.0
+
+
+def fetch_sheet():
+    """META LIQU feed sheet (the Meta catalogue source) as dict rows."""
+    import csv
+    import io
+    import urllib.request
+    with urllib.request.urlopen(os.environ.get("META_LIQU_CSV", SHEET_CSV), timeout=60) as r:
+        text = r.read().decode("utf-8")
+    rows = list(csv.DictReader(io.StringIO(text)))
+    log(f"sheet rows: {len(rows)}")
+    return [{"id": (r.get("id") or "").strip(), "availability": (r.get("availability") or "").strip(),
+             "price": iqd(r.get("price")), "sale_price": iqd(r.get("sale_price")),
+             "label": (r.get("custom_label_0") or "").strip()} for r in rows if r.get("id")]
+
+
 def main():
     t0 = time.time()
     printing = "--print" in sys.argv
@@ -220,7 +247,7 @@ def main():
 
     # ── 3. price match: Meta sheet vs «تصفية» pricelist ───────────────────────
     pls = read_all(odoo, "product.pricelist", [["name", "in", list(TASFIYA_NAMES)]], ["name"])
-    mismatches, checked, pl_note, samples = [], 0, None, []
+    mismatches, checked, pl_note = [], 0, None
     integrated = None
     try:
         rr = read_all(odoo, "deniz.clearance.rule", [], ["tasfiya_integrated"])
@@ -241,55 +268,55 @@ def main():
                                   r["id"]))
         log(f"«تصفية» rules: {len(rules)}")
 
-        liq = read_all(odoo, "deniz.liquidation.item",
-                       [["state", "=", "live"]],
-                       ["code", "feed_id", "variant_ids", "sale_price", "published_price",
-                        "old_price", "product_tmpl_id", "availability"])
-        rows = []  # (kind, code, feed, ad_price, variant ids)
-        for r in liq:
-            if r.get("availability") != "in stock":   # computed field: filter here, not in domain
-                continue
-            rows.append(("قطعة اخيرة", r["code"], r.get("feed_id"),
-                         r.get("published_price") or r.get("sale_price"), r.get("variant_ids") or []))
-        for it in items:
-            if it["state"] in APPLIED and (it["current_price"] or 0) > 0 and (it["qty"] or 0) > 0:
-                rows.append(("اعادة بيع", it["display_code"], None, it["current_price"],
-                             it.get("variant_ids") or []))
-
-        vids = sorted({v for row in rows for v in row[4]})
+        # The ad price the customer sees = the Meta feed sheet itself (rows Mohanad
+        # wrote by hand and rows Odoo appends). Map each in-stock row to its Odoo
+        # model by the longest model code its id starts with, then accept the row
+        # if ANY in-stock variant of that model gets the ad price on «تصفية».
+        sheet = fetch_sheet()
         stock_loc = read_all(odoo, "stock.warehouse", [], ["lot_stock_id"])
         loc_ctx = {"location": m2o_id(stock_loc[0]["lot_stock_id"])} if stock_loc else None
-        variants = {}
-        for ids in chunks(vids):
-            for v in read_all(odoo, "product.product", [["id", "in", ids]],
-                              ["display_name", "lst_price", "product_tmpl_id", "categ_id", "free_qty"],
-                              ctx=loc_ctx):
-                variants[v["id"]] = v
+        variants = read_all(odoo, "product.product", [["qty_available", ">", 0]],
+                            ["display_name", "lst_price", "product_tmpl_id", "categ_id", "free_qty"],
+                            ctx=loc_ctx)
+        variants = [v for v in variants if float(v.get("free_qty") or 0) > 0]
         categ_parents = {}
-        cids = sorted({m2o_id(v.get("categ_id")) for v in variants.values() if v.get("categ_id")})
+        cids = sorted({m2o_id(v.get("categ_id")) for v in variants if v.get("categ_id")})
         for c in read_all(odoo, "product.category", [["id", "in", cids]], ["parent_path"]):
             categ_parents[c["id"]] = [int(x) for x in (c.get("parent_path") or "").strip("/").split("/") if x]
-
-        for kind, code, feed, ad_price, vlist in rows:
-            for vid in vlist:
-                v = variants.get(vid)
-                if not v or float(v.get("free_qty") or 0) <= 0:
-                    continue
-                checked += 1
-                info = {"id": vid, "tmpl": m2o_id(v["product_tmpl_id"]),
-                        "categs": categ_parents.get(m2o_id(v.get("categ_id")), []),
-                        "lst": float(v.get("lst_price") or 0)}
-                odoo_price, rule = pricelist_price(rules, info, now)
-                if any(t in (code or "") for t in ("6987", "7054")) and len(samples) < 8:
-                    samples.append([kind, code, v["display_name"], ad_price, round(odoo_price),
-                                    rule and rule.get("applied_on")])
-                if abs(odoo_price - float(ad_price or 0)) > MISMATCH_IQD:
-                    mismatches.append({
-                        "kind": kind, "code": code, "feed": feed, "variant": v["display_name"],
-                        "adPrice": int(ad_price or 0), "odooPrice": int(round(odoo_price)),
-                        "fullPrice": int(round(info["lst"])), "qty": int(v.get("free_qty") or 0),
-                        "rule": rule and rule.get("applied_on"),
-                    })
+        by_tmpl = defaultdict(list)
+        tmpl_name = {}
+        for v in variants:
+            tid = m2o_id(v["product_tmpl_id"])
+            info = {"id": v["id"], "tmpl": tid, "name": v["display_name"],
+                    "categs": categ_parents.get(m2o_id(v.get("categ_id")), []),
+                    "lst": float(v.get("lst_price") or 0), "qty": int(float(v.get("free_qty") or 0))}
+            info["price"], info["rule"] = pricelist_price(rules, info, now)
+            by_tmpl[tid].append(info)
+            tmpl_name[tid] = m2o_name(v["product_tmpl_id"]) or ""
+        codes = sorted(((norm(n), t) for t, n in tmpl_name.items() if len(norm(n)) >= 4),
+                       key=lambda z: -len(z[0]))
+        unmatched = 0
+        for row in sheet:
+            if row["availability"] != "in stock":
+                continue
+            key = norm(row["id"])
+            tid = next((t for c, t in codes if key.startswith(c)), None)
+            if not tid:
+                unmatched += 1
+                continue
+            checked += 1
+            vs = by_tmpl[tid]
+            ad = row["sale_price"] or row["price"]
+            prices = sorted({int(round(v["price"])) for v in vs})
+            if any(abs(v["price"] - ad) <= MISMATCH_IQD for v in vs):
+                continue
+            mismatches.append({
+                "kind": row["label"] or "-", "code": tmpl_name[tid], "feed": row["id"],
+                "adPrice": int(ad), "odooPrice": prices[0], "odooPrices": prices[:6],
+                "fullPrice": int(round(max(v["lst"] for v in vs))),
+                "qty": sum(v["qty"] for v in vs),
+            })
+        pl_note = f"sheet rows not matched to an in-stock Odoo model: {unmatched}" if unmatched else None
         mismatches.sort(key=lambda m: -(m["odooPrice"] - m["adPrice"]))
 
     payload = {
@@ -301,19 +328,19 @@ def main():
         "steps": steps,
         "daily": {d: {str(k): round(q) for k, q in v.items()} for d, v in sorted(daily.items())},
         "priceCheck": {"checked": checked, "mismatchCount": len(mismatches),
-                       "tasfiyaIntegrated": integrated, "samples": samples,
+                       "tasfiyaIntegrated": integrated,
                        "note": pl_note, "mismatches": mismatches[:400]},
         "items": item_rows,
         "logs": log_rows,
     }
 
     log(f"steps: { {k: (v['openPieces'], v['sellThrough14']) for k, v in steps.items()} }")
-    log(f"price check: {checked} variants, {len(mismatches)} mismatches")
+    log(f"price check: {checked} sheet rows, {len(mismatches)} mismatches")
     if printing:
         print(json.dumps({k: payload[k] for k in ("byState", "byStep", "steps", "daily")},
                          ensure_ascii=False, indent=1))
         pc = payload["priceCheck"]
-        print(json.dumps({"integrated": pc["tasfiyaIntegrated"], "samples": pc["samples"],
+        print(json.dumps({"integrated": pc["tasfiyaIntegrated"], "note": pc["note"],
                           "mismatches": pc["mismatches"][:15]}, ensure_ascii=False, indent=1))
         return 0
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
