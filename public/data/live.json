@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T07:32:53.580987+00:00",
+ "syncedAt": "2026-11-17T08:02:57.861499+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -66,20 +66,20 @@
    "sku": "M-1214ORG1169",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-16",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-17",
+   "lastOrderDate": "2026-11-17",
+   "orders": 1,
+   "units": 1,
+   "revenue": 86000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -4160,17 +4160,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-07",
    "firstOrderDate": "2026-11-08",
-   "lastOrderDate": "2026-11-16",
-   "orders": 11,
-   "units": 11,
-   "revenue": 891000,
+   "lastOrderDate": "2026-11-17",
+   "orders": 12,
+   "units": 12,
+   "revenue": 972000,
    "delivered": 6,
    "returned": 0,
    "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 1.0,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 1.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 89,
     "lastChecked": "2026-11-16T13:54:40Z",
@@ -6387,7 +6387,7 @@
    "sku": "M-2513MSA980",
    "category": "All",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-11-02",
    "firstOrderDate": "2026-11-06",
    "lastOrderDate": "2026-11-10",
@@ -6395,9 +6395,9 @@
    "units": 2,
    "revenue": 152000,
    "delivered": 2,
-   "returned": 0,
+   "returned": 1,
    "unitsBoughtFromSupplier": 2,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 76000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 7,
@@ -39722,15 +39722,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-17",
-   "orders": 916,
-   "units": 1066,
-   "revenue": 35826000,
+   "orders": 917,
+   "units": 1067,
+   "revenue": 35865000,
    "delivered": 986,
    "returned": 190,
    "unitsBoughtFromSupplier": 886,
    "returnedStock": 9,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 15.29,
+   "orderVelocity7d": 15.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 226,
@@ -42443,15 +42443,22 @@
   }
  ],
  "shop": {
-  "stockUnits": 1543,
-  "stockValue": 44788945,
-  "stockVariants": 1213
+  "stockUnits": 1544,
+  "stockValue": 44823040,
+  "stockVariants": 1214
  },
  "daily": {
   "days": 90,
   "from": "2026-08-19",
   "to": "2026-11-17",
   "byProduct": {
+   "7600": {
+    "2026-11-17": [
+     1,
+     1,
+     86000
+    ]
+   },
    "7595": {
     "2026-11-17": [
      1,
@@ -42831,6 +42838,11 @@
      2,
      2,
      162000
+    ],
+    "2026-11-17": [
+     1,
+     1,
+     81000
     ]
    },
    "7518": {
@@ -56967,9 +56979,9 @@
      858000
     ],
     "2026-11-17": [
-     2,
-     2,
-     78000
+     3,
+     3,
+     117000
     ]
    },
    "5855": {
@@ -58058,6 +58070,10 @@
    "2026-11-16": [
     93,
     15
+   ],
+   "2026-11-17": [
+    0,
+    1
    ]
   },
   "orders": {
@@ -58151,10 +58167,73 @@
    "2026-11-14": 38,
    "2026-11-15": 60,
    "2026-11-16": 56,
-   "2026-11-17": 7
+   "2026-11-17": 10
   }
  },
  "ordersDetail": [
+  {
+   "id": "S34966",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1962",
+     "pid": 733178,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي فاتح / Gri, 52"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34965",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672394,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S34964",
+   "d": "2026-11-17",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-1214ORG1169",
+     "pid": 734721,
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 44"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S34962",
    "d": "2026-11-17",
@@ -72263,9 +72342,10 @@
      "qty": 1,
      "price": 76000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "قهوائي / Kahve, 50"
+     "var": "قهوائي / Kahve, 50",
+     "ret": 1
     }
    ],
    "src": "Facebook",
@@ -226305,7 +226385,7 @@
   {
    "sku": "M-2513MSA980",
    "model": "M-2513MSA980",
-   "qty": 0,
+   "qty": 1,
    "cost": 34096,
    "created": "2026-11-02"
   },
