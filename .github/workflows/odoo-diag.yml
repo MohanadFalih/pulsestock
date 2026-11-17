@@ -27,4 +27,4 @@ jobs:
           ODOO_DB: ${{ secrets.ODOO_DB }}
           ODOO_USER: ${{ secrets.ODOO_USER }}
           ODOO_API_KEY: ${{ secrets.ODOO_API_KEY }}
-        run: python3 scripts/resale_sync.py --print
+        run: python3 scripts/_probe_sheet.py
