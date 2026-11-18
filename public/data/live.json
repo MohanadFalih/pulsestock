@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-18T09:33:07.520088+00:00",
+ "syncedAt": "2026-11-18T10:03:11.427408+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7408,33 +7408,33 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-30",
-   "lastOrderDate": "2026-11-17",
-   "orders": 4,
-   "units": 5,
-   "revenue": 610000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 5,
+   "units": 6,
+   "revenue": 732000,
    "delivered": 2,
    "returned": 1,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 1,
    "unitPrice": 122000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 272,
-    "lastChecked": "2026-11-17T11:30:30Z",
+    "qty": 269,
+    "lastChecked": "2026-11-18T09:46:21Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "فيزون / Vizon",
       "size": "38",
-      "qty": 15,
+      "qty": 14,
       "product_id": 732277
      },
      {
       "color": "فيزون / Vizon",
       "size": "40",
-      "qty": 13,
+      "qty": 12,
       "product_id": 732278
      },
      {
@@ -7446,7 +7446,7 @@
      {
       "color": "فيزون / Vizon",
       "size": "44",
-      "qty": 12,
+      "qty": 11,
       "product_id": 732280
      },
      {
@@ -8754,23 +8754,23 @@
    "sku": "K-6561",
    "category": "All",
    "supplier": null,
-   "stage": "completed",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-26",
    "firstOrderDate": "2026-10-26",
-   "lastOrderDate": "2026-10-26",
-   "orders": 1,
-   "units": 1,
-   "revenue": 109000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 2,
+   "units": 2,
+   "revenue": 218000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 109000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 23,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 5,
-    "lastChecked": "2026-11-17T15:40:47Z",
+    "lastChecked": "2026-11-18T09:46:21Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -42184,7 +42184,7 @@
  ],
  "shop": {
   "stockUnits": 1559,
-  "stockValue": 45491817,
+  "stockValue": 45491788,
   "stockVariants": 1224
  },
  "daily": {
@@ -43100,6 +43100,11 @@
      1,
      2,
      244000
+    ],
+    "2026-11-18": [
+     1,
+     1,
+     122000
     ]
    },
    "7481": {
@@ -43380,6 +43385,11 @@
    },
    "7470": {
     "2026-10-26": [
+     1,
+     1,
+     109000
+    ],
+    "2026-11-18": [
      1,
      1,
      109000
@@ -57925,10 +57935,41 @@
    "2026-11-15": 60,
    "2026-11-16": 56,
    "2026-11-17": 57,
-   "2026-11-18": 10
+   "2026-11-18": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35025",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6688",
+     "pid": 732281,
+     "qty": 1,
+     "price": 122000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon, 46"
+    },
+    {
+     "sku": "K-6561",
+     "pid": 732073,
+     "qty": 1,
+     "price": 109000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي / Antrasit, 2"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35024",
    "d": "2026-11-18",
@@ -169060,7 +169101,7 @@
    "sku": "L-1800",
    "model": "L-1800",
    "qty": 0,
-   "cost": 18542,
+   "cost": 18543,
    "created": "2025-09-27"
   },
   {
@@ -169081,7 +169122,7 @@
    "sku": "L-1800",
    "model": "L-1800",
    "qty": 0,
-   "cost": 18982,
+   "cost": 18934,
    "created": "2025-09-27"
   },
   {
@@ -169095,14 +169136,14 @@
    "sku": "L-1800",
    "model": "L-1800",
    "qty": 3,
-   "cost": 18561,
+   "cost": 18559,
    "created": "2025-10-19"
   },
   {
    "sku": "L-1800",
    "model": "L-1800",
    "qty": 1,
-   "cost": 18689,
+   "cost": 18666,
    "created": "2025-11-18"
   },
   {
