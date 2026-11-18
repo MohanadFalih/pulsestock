@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-17T23:32:36.089364+00:00",
+ "syncedAt": "2026-11-18T00:02:48.629762+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -7776,20 +7776,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-30",
-   "lastOrderDate": "2026-11-16",
-   "orders": 6,
-   "units": 7,
-   "revenue": 581000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 7,
+   "units": 8,
+   "revenue": 664000,
    "delivered": 5,
    "returned": 1,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 1,
    "unitPrice": 83000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 61,
-    "lastChecked": "2026-11-17T15:17:59Z",
+    "qty": 60,
+    "lastChecked": "2026-11-17T23:41:47Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -7850,7 +7850,7 @@
      {
       "color": "KAHVERENGİ",
       "size": "4-52-54",
-      "qty": 6,
+      "qty": 5,
       "in_odoo": null
      }
     ]
@@ -43084,6 +43084,11 @@
      1,
      1,
      83000
+    ],
+    "2026-11-18": [
+     1,
+     1,
+     83000
     ]
    },
    "7478": {
@@ -57826,10 +57831,31 @@
    "2026-11-15": 60,
    "2026-11-16": 56,
    "2026-11-17": 55,
-   "2026-11-18": 2
+   "2026-11-18": 3
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35017",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8059",
+     "pid": 732245,
+     "qty": 1,
+     "price": 83000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 3"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35016",
    "d": "2026-11-18",
