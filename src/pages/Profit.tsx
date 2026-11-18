@@ -200,6 +200,7 @@ function Kpi({
 
 function KpiRow({ t }: { t: Totals }) {
   const perDay = (n: number) => `${iqd(n / Math.max(1, t.days))} / day`;
+  const c = t.cash;
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
       <Kpi
@@ -207,6 +208,12 @@ function KpiRow({ t }: { t: Totals }) {
         value={iqd(t.net)}
         sub={`${perDay(t.net)} · after fixed costs`}
         tone={t.net >= 0 ? "pos" : "neg"}
+      />
+      <Kpi
+        label="Repayable surplus"
+        value={iqd(c.surplus)}
+        sub={`profit + stock sold at cost − Turkey returns · after ${iqd(t.drawings)} repaid: ${iqd(c.surplus - t.drawings)}`}
+        tone={c.surplus >= 0 ? "pos" : "neg"}
       />
       <Kpi
         label="Before fixed costs"
@@ -282,6 +289,85 @@ function SplitTable({ t }: { t: Totals }) {
             </tr>
           </tbody>
         </table>
+      </div>
+    </section>
+  );
+}
+
+// ─── Repayable surplus ───────────────────────────────────────────────────────
+
+function SurplusBreakdown({ t, model, stockValue }: { t: Totals; model: ProfitModel; stockValue: number | null }) {
+  const c = t.cash;
+  const left = c.surplus - t.drawings;
+  const num = "text-right font-mono text-[13px] tnum";
+  const row = (label: string, value: number, opts: { strong?: boolean; note?: string; muted?: boolean } = {}) => (
+    <tr className={cn("border-t border-hairline", opts.strong && "bg-inset")}>
+      <td
+        className={cn(
+          "py-1.5 pl-2 text-[13px]",
+          opts.strong ? "font-semibold text-text-primary" : opts.muted ? "pl-6 text-[12px] text-text-muted" : "text-text-secondary"
+        )}
+      >
+        {label}
+        {opts.note && <span className="ml-2 text-[11px] text-text-muted">{opts.note}</span>}
+      </td>
+      <td
+        className={cn(
+          num,
+          "py-1.5 pr-2",
+          opts.strong && "font-semibold",
+          opts.muted ? "text-[12px] text-text-muted" : value < 0 ? "text-neg" : opts.strong ? "text-pos" : "text-text-primary"
+        )}
+      >
+        {iqd(value)}
+      </td>
+    </tr>
+  );
+  return (
+    <section className="rounded-xl border border-hairline bg-panel p-5">
+      <h2 className="font-display text-[15px] font-semibold text-text-primary">Repayable surplus — cash you can use for old debt</h2>
+      <p className="text-[11.5px] text-text-muted">
+        Profit as above, plus the money that left the warehouse and minus the money that went into it. Stock pieces
+        were paid for long ago, so selling them releases their full cost whatever the clearance profit; a Turkey piece
+        that comes back ties up its supplier cost until it is resold.
+      </p>
+      <table className="mt-3 w-full border-collapse">
+        <tbody>
+          {row("Net profit", c.profit)}
+          {row("+ Stock sold — cost released from the warehouse", c.stockReleased)}
+          {row("− Turkey returns — cost tied up in the warehouse", -c.frozenCost, {
+            note: `${Math.round(c.frozenQty)} pieces came back`,
+          })}
+          {row("= Repayable surplus", c.surplus, { strong: true })}
+          {row(
+            `of which still at the courier (${Math.round(c.courierOrders)} orders, arrives within ~${RULES.courierPayDays} days${
+              model.paymentsSynced ? "" : " — estimated: order day + 6"
+            })`,
+            c.atCourier,
+            { muted: true }
+          )}
+          {row("− Debt already repaid (ابو سلطان)", -t.drawings)}
+          {row("= Still repayable", left, { strong: true })}
+        </tbody>
+      </table>
+      <p className="mt-2 text-[11px] text-text-muted">
+        Warehouse change this period: {iqd(c.stockReleased - c.frozenCost)} (
+        {c.stockReleased >= c.frozenCost ? "stock went down — cash released" : "stock went up — cash tied up"}).
+      </p>
+      <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3">
+        <div className="rounded-lg bg-inset p-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[1.1px] text-text-muted">Frozen in the warehouse</p>
+          <p className="mt-1 font-mono text-[18px] text-text-primary tnum">{stockValue == null ? "—" : iqd(stockValue)}</p>
+          <p className="text-[11.5px] text-text-muted">All stock on hand at cost, today — information, not subtracted</p>
+        </div>
+        <div className="rounded-lg bg-inset p-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[1.1px] text-text-muted">At the courier now</p>
+          <p className="mt-1 font-mono text-[18px] text-text-primary tnum">{iqd(model.courierNow.value)}</p>
+          <p className="text-[11.5px] text-text-muted">
+            {Math.round(model.courierNow.orders)} shipped orders not settled yet, all dates
+            {model.paymentsSynced ? " (from Odoo payments)" : " (estimated: order day + 6 days)"} — information
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -470,7 +556,7 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
         Odoo net leaves out ad spend from then on.
       </p>
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[860px] border-collapse">
+        <table className="w-full min-w-[940px] border-collapse">
           <thead>
             <tr className="border-b border-hairline">
               <th className={cn(head, "text-left")}>Month</th>
@@ -480,6 +566,7 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
               <th className={cn(head, "text-right")}>Before fixed</th>
               <th className={cn(head, "text-right")}>Fixed</th>
               <th className={cn(head, "text-right")}>Net profit</th>
+              <th className={cn(head, "text-right")}>Repayable</th>
               <th className={cn(head, "text-right")}>Odoo net</th>
               <th className={cn(head, "text-right")}>COGS gap</th>
             </tr>
@@ -500,6 +587,9 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
                   <td className={cn(num, "text-neg")}>{iqd(-t.fixedTotal)}</td>
                   <td className={cn(num, "font-semibold", t.net >= 0 ? "text-pos" : "text-neg")}>
                     {iqd(t.net)}
+                  </td>
+                  <td className={cn(num, "font-semibold", t.cash.surplus >= 0 ? "text-pos" : "text-neg")}>
+                    {iqd(t.cash.surplus)}
                   </td>
                   <td className={cn(num, "text-text-secondary")}>{r.odooNet == null ? "—" : iqd(r.odooNet)}</td>
                   <td className={cn(num, "text-text-secondary")}>{r.cogsGap == null ? "—" : iqd(r.cogsGap)}</td>
@@ -615,7 +705,11 @@ export default function Profit() {
 
   const model = useMemo(
     () =>
-      ops && profit !== undefined ? buildProfitModel(ops.ordersDetail, ops.stockDetail, profit) : null,
+      ops && profit !== undefined
+        ? buildProfitModel(ops.ordersDetail, ops.stockDetail, profit, new Date(), {
+            paymentsSynced: ops.paymentsSynced,
+          })
+        : null,
     [ops, profit]
   );
   const totals = useMemo(
@@ -693,6 +787,7 @@ export default function Profit() {
         <div className="space-y-4">
           <CostAlerts model={model} />
           <KpiRow t={totals} />
+          <SurplusBreakdown t={totals} model={model} stockValue={ops?.shop?.stockValue ?? null} />
           <SplitTable t={totals} />
           <div className="grid gap-4 xl:grid-cols-[1.6fr_1fr]">
             <Ladder t={totals} model={model} />

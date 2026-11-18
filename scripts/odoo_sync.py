@@ -540,20 +540,82 @@ def main():
                          [chunk, ["default_code"]]):
             sku_of_variant[v["id"]] = v.get("default_code") or None
 
-    # Returned qty per sale line (cheap: one read_group on stock.move).
+    # Returned qty and last return date per sale line (done return moves of
+    # the lines in this window). The date lets the cash view charge a
+    # returned Turkey piece on the day it comes back to the warehouse.
     ret_by_line = {}
+    ret_day_by_line = {}
     try:
-        for r in odoo.read_group(
-                "stock.move",
-                [("origin_returned_move_id", "!=", False),
-                 ("state", "=", "done"),
-                 ("sale_line_id", "!=", False)],
-                ["product_uom_qty:sum"], ["sale_line_id"]):
-            if r.get("sale_line_id"):
-                ret_by_line[r["sale_line_id"][0]] = \
-                    r.get("product_uom_qty") or 0.0
+        line_ids = [ln["id"] for ln in lines]
+        for i in range(0, len(line_ids), 500):
+            for mv in odoo.kw(
+                    "stock.move", "search_read",
+                    [[["origin_returned_move_id", "!=", False],
+                      ["state", "=", "done"],
+                      ["sale_line_id", "in", line_ids[i:i + 500]]]],
+                    {"fields": ["sale_line_id", "product_uom_qty", "date"],
+                     "limit": 20000}):
+                lid = mv["sale_line_id"][0]
+                ret_by_line[lid] = ret_by_line.get(lid, 0.0) + \
+                    (mv.get("product_uom_qty") or 0.0)
+                day = local_day(mv.get("date"))
+                if day and day > ret_day_by_line.get(lid, ""):
+                    ret_day_by_line[lid] = day
+        log(f"  returns: {len(ret_by_line)} lines with a done return")
     except Exception as e:
         log(f"  warning: per-line returns lookup failed ({e})")
+
+    # Courier settlements: the customer invoice of an order is paid when the
+    # courier's cash is registered in Odoo (account.payment, inbound,
+    # customer). pd = day the order's invoices were fully paid. Orders
+    # without pd are still at the courier (or refused). Counts only in logs.
+    paid_day_by_order = {}
+    payments_synced = False
+    try:
+        names = [o["name"] for o in orders if o.get("name")]
+        invs = []
+        for i in range(0, len(names), 400):
+            invs.extend(odoo.kw(
+                "account.move", "search_read",
+                [[["move_type", "=", "out_invoice"], ["state", "=", "posted"],
+                  ["invoice_origin", "in", names[i:i + 400]]]],
+                {"fields": ["invoice_origin", "payment_state",
+                            "amount_residual", "invoice_date"],
+                 "limit": 50000}))
+        pays = odoo.kw(
+            "account.payment", "search_read",
+            [[["payment_type", "=", "inbound"],
+              ["partner_type", "=", "customer"],
+              ["state", "not in", ["draft", "cancel"]],
+              ["date", ">=", detail_from]]],
+            {"fields": ["date", "reconciled_invoice_ids"], "limit": 50000})
+        pay_day_by_inv = {}
+        for py in pays:
+            for iid in py.get("reconciled_invoice_ids") or []:
+                d = py.get("date") or ""
+                if d > pay_day_by_inv.get(iid, ""):
+                    pay_day_by_inv[iid] = d
+        state_by_order = {}
+        for inv in invs:
+            if inv.get("payment_state") == "reversed":
+                continue                      # refused: credit note, no cash
+            so = inv.get("invoice_origin")
+            st = state_by_order.setdefault(so, {"paid": True, "day": ""})
+            if inv.get("payment_state") not in ("paid", "in_payment") or \
+                    (inv.get("amount_residual") or 0) > 0.5:
+                st["paid"] = False
+                continue
+            d = pay_day_by_inv.get(inv["id"]) or inv.get("invoice_date") or ""
+            if d > st["day"]:
+                st["day"] = d
+        for so, st in state_by_order.items():
+            if st["paid"] and st["day"]:
+                paid_day_by_order[so] = st["day"]
+        payments_synced = True
+        log(f"  courier settlements: {len(invs)} invoices, {len(pays)} "
+            f"payments, {len(paid_day_by_order)} orders fully paid")
+    except Exception as e:
+        log(f"  warning: courier settlement lookup failed ({e})")
 
     def line_sku(ln):
         pid = ln["product_id"][0]
@@ -625,6 +687,8 @@ def main():
             ret = ret_by_line.get(ln["id"], 0.0)
             if ret:
                 entry["ret"] = round(ret)
+                if ret_day_by_line.get(ln["id"]):
+                    entry["rd"] = ret_day_by_line[ln["id"]]
             product_lines.append(entry)
         # Attach the discount percent to product lines only when unambiguous
         # (every discount line in the order shows the same percent).
@@ -649,6 +713,8 @@ def main():
                "fee": round(fee),
                "disc": round(disc),
                "lines": product_lines}
+        if paid_day_by_order.get(o.get("name")):
+            rec["pd"] = paid_day_by_order[o["name"]]
         if src:
             rec["src"] = src
         if ful:
@@ -859,6 +925,7 @@ def main():
                        if day >= daily_from},
         },
         "ordersDetail": orders_detail,
+        "paymentsSynced": payments_synced,
         "stockDetail": stock_detail,
     }
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)

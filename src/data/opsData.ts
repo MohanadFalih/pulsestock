@@ -29,6 +29,8 @@ export interface OpsOrderLine {
   del: number;
   /** Returned qty from done return moves; omitted when 0. */
   ret?: number;
+  /** Local day of the last done return move ("YYYY-MM-DD"); with `ret`. */
+  rd?: string;
 }
 
 export interface OpsOrder {
@@ -46,6 +48,9 @@ export interface OpsOrder {
   fee: number;
   /** Order-level discount total (negative), IQD. */
   disc: number;
+  /** Local day the courier's cash for this order was registered in Odoo
+   *  (all its customer invoices paid). Omitted while unpaid or refused. */
+  pd?: string;
   lines: OpsOrderLine[];
 }
 
@@ -66,6 +71,10 @@ export interface OpsPayload {
   currency: string;
   ordersDetail: OpsOrder[];
   stockDetail: OpsStockItem[];
+  /** True when the sync read courier settlements (orders carry `pd`). */
+  paymentsSynced?: boolean;
+  /** Warehouse stock at cost (qty_available × standard_price). */
+  shop?: { stockUnits: number; stockValue: number; stockVariants: number };
 }
 
 const LIVE_URL = "/data/live.json";

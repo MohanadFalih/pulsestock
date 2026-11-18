@@ -40,10 +40,27 @@
  * by order age) and values not-yet-shipped quantity at the keep rate of
  * orders 14–90 days old.
  *
+ * Repayable surplus (beside profit) — cash that can go to old debt without
+ * eating working capital, in the same mode as the page (Projected / Shipped):
+ *   net profit
+ *   + goods cost of stock-clearance pieces sold (paid long ago: selling them
+ *     releases that money from the warehouse, whatever the clearance profit)
+ *   − supplier cost of Turkey pieces that came back (by return day): money
+ *     that goes into the warehouse until resold.
+ * Drawings (debt repaid) are shown against it, never subtracted from profit.
+ * "At the courier" = part of the period's sales whose courier cash is not
+ * registered in Odoo yet (order `pd`; without it: order day + 6 days).
+ *
  * Pure functions, no React.
  */
 
 import type { OpsOrder, OpsStockItem } from "@/data/opsData";
+
+/** Options for buildProfitModel beyond the order and stock lists. */
+export interface BuildOptions {
+  /** True when orders carry `pd` (courier settlement day from Odoo). */
+  paymentsSynced?: boolean;
+}
 import type { ProfitPayload } from "@/data/profitData";
 
 // ─── Business rules (confirmed by the owner) ────────────────────────────────
@@ -93,6 +110,12 @@ export const RULES = {
   matureAfterDays: 14,
   keepRateMaxAgeDays: 90,
   minPlausibleCostIQD: 1_000,
+  /** Courier cash usually arrives this many days after the order (owner,
+   *  5–6 days) — used only when Odoo settlements are not synced. */
+  courierPayDays: 6,
+  /** Return day assumed for a returned line synced before return days were
+   *  (order day + this). */
+  returnAfterDays: 11,
   /** A unit cost above this multiple of the line's selling price is treated
    *  as a data-entry error (e.g. a lira supplier price typed with the IQD sale
    *  price): the line is valued with the fallback cost ratio instead and the
@@ -169,6 +192,13 @@ export interface DayRaw {
   stAdsIQD: number;
   fixed: Record<FixedGroup, number>;
   drawings: number;
+  /** Cash view (see header): Turkey pieces returned this day (by return day)
+   *  and their supplier cost; value still at the courier for orders of this
+   *  day (shipped − expected refusals, + delivery net, unsettled). */
+  frozenQty: number;
+  frozenCost: number;
+  courierValue: number;
+  courierOrders: number;
 }
 
 export interface Totals {
@@ -214,6 +244,41 @@ export interface Totals {
   expectedReturnsRev: number;
   estCogs: number;
   days: number;
+  /** Repayable surplus and its lines (mode-independent, conservative). */
+  cash: CashTotals;
+}
+
+export interface CashTotals {
+  /** Net profit of the period (same as Totals.net). */
+  profit: number;
+  /** Goods cost of stock-clearance pieces sold — cash released from stock. */
+  stockReleased: number;
+  /** Turkey pieces that came back and their supplier cost (by return day). */
+  frozenQty: number;
+  frozenCost: number;
+  /** profit + stockReleased − frozenCost. */
+  surplus: number;
+  /** Sales of the period still at the courier (not settled in Odoo). */
+  atCourier: number;
+  courierOrders: number;
+}
+
+export function emptyCash(): CashTotals {
+  return {
+    profit: 0,
+    stockReleased: 0,
+    frozenQty: 0,
+    frozenCost: 0,
+    surplus: 0,
+    atCourier: 0,
+    courierOrders: 0,
+  };
+}
+
+function addCash(a: CashTotals, b: CashTotals): CashTotals {
+  const out = emptyCash();
+  for (const k of Object.keys(out) as (keyof CashTotals)[]) out[k] = a[k] + b[k];
+  return out;
 }
 
 export type Mode = "projected" | "realized";
@@ -232,6 +297,10 @@ export interface ProfitModel {
   /** Products valued at the fallback ratio because their cost is implausible. */
   costAlerts: CostAlert[];
   today: string;
+  /** Courier settlements come from Odoo (else order day + courierPayDays). */
+  paymentsSynced: boolean;
+  /** Value at the courier right now, all orders in the window (cash view). */
+  courierNow: { value: number; orders: number };
   odooMonthly: NonNullable<ProfitPayload["odoo"]["monthly"]>;
   otherByAccount: Record<string, number>;
   health: {
@@ -318,6 +387,8 @@ interface LineVal {
   orderedQty: number;
   keptQty: number;
   undecidedQty: number;
+  returnedQty: number;
+  returnDay: string | null;
   unitNet: number; // per-unit value after the allocated order discount
   cost: number | null;
   /** Odoo/vendor cost that was rejected as implausible (see maxCostToPrice). */
@@ -349,6 +420,8 @@ function orderLines(order: OpsOrder, costs: CostLookup): LineVal[] {
       orderedQty: l.qty,
       keptQty: kept,
       undecidedQty: undecided,
+      returnedQty: Math.max(0, l.ret ?? 0),
+      returnDay: l.rd ?? null,
       unitNet: l.price * discFactor,
       cost: bad ? null : raw,
       badCost: bad ? raw : null,
@@ -361,9 +434,11 @@ export function buildProfitModel(
   orders: OpsOrder[],
   stock: OpsStockItem[],
   profit: ProfitPayload | null,
-  now: Date = new Date()
+  now: Date = new Date(),
+  opts: BuildOptions = {}
 ): ProfitModel {
   const today = dayKey(now);
+  const paymentsSynced = Boolean(opts.paymentsSynced);
   const costs = buildCosts(stock);
 
   // 1. Fallback cost ratio and keep rates from history.
@@ -506,9 +581,27 @@ export function buildProfitModel(
       stAdsIQD: 0,
       fixed: zeroFixed(),
       drawings: 0,
+      frozenQty: 0,
+      frozenCost: 0,
+      courierValue: 0,
+      courierOrders: 0,
     });
   }
   const byDate = new Map(days.map((d) => [d.date, d]));
+
+  // 3a. Turkey returns → return-day buckets (cash view): supplier cost frozen
+  // in the warehouse until the piece is resold. Orders placed before the
+  // first day still count when their piece comes back inside the range.
+  for (const o of orders) {
+    for (const l of orderLines(o, costs)) {
+      if (!l.turkey || l.returnedQty <= 0) continue;
+      const rd = l.returnDay ?? addDays(o.d, RULES.returnAfterDays);
+      const rday = byDate.get(rd > today ? today : rd);
+      if (!rday) continue;
+      rday.frozenQty += l.returnedQty;
+      rday.frozenCost += (l.cost ?? l.unitNet * fallbackCostRatio) * l.returnedQty;
+    }
+  }
 
   // 3. Orders → order-date buckets.
   for (const o of orders) {
@@ -520,6 +613,7 @@ export function buildProfitModel(
     let anyKept = false;
     let anyUndecided = false;
     let isTurkey = false;
+    let keptValue = 0;
     const selvimDay = o.d >= RULES.selvim.since;
     for (const l of lines) {
       if (selvimDay && l.turkey && l.sku.trim().startsWith(RULES.selvim.prefix)) {
@@ -537,6 +631,7 @@ export function buildProfitModel(
         }
         const rev = l.unitNet * l.keptQty;
         const cogs = unitCostVal * l.keptQty;
+        keptValue += rev;
         if (l.cost == null) day.estCogs += cogs;
         if (l.turkey) {
           day.trRev += rev;
@@ -566,6 +661,13 @@ export function buildProfitModel(
       }
     }
     if (anyKept) {
+      const settled = paymentsSynced
+        ? Boolean(o.pd && o.pd <= today)
+        : daysBetween(o.d, today) >= RULES.courierPayDays;
+      if (!settled) {
+        day.courierValue += (keptValue + RULES.deliveryNetPerOrder) * (1 - q);
+        day.courierOrders += 1 - q;
+      }
       day.deliveredOrders += 1;
       day.riskOrders += q;
       if (isTurkey) {
@@ -620,6 +722,11 @@ export function buildProfitModel(
     fallbackCostRatio,
     costAlerts: [...alerts.values()].sort((a, b) => b.lastDay.localeCompare(a.lastDay)),
     today,
+    paymentsSynced,
+    courierNow: days.reduce(
+      (a, d) => ({ value: a.value + d.courierValue, orders: a.orders + d.courierOrders }),
+      { value: 0, orders: 0 }
+    ),
     odooMonthly: profit?.odoo?.monthly ?? {},
     otherByAccount: profit?.odoo?.otherByAccount ?? {},
     health: {
@@ -670,6 +777,7 @@ export function emptyTotals(): Totals {
     expectedReturnsRev: 0,
     estCogs: 0,
     days: 0,
+    cash: emptyCash(),
   };
 }
 
@@ -723,6 +831,16 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.expectedReturnsRev = p ? d.trRiskRev + d.stRiskRev : 0;
   t.estCogs = d.estCogs;
   t.days = 1;
+  const stockReleased = t.stRev - t.stGross;
+  t.cash = {
+    profit: t.net,
+    stockReleased,
+    frozenQty: d.frozenQty,
+    frozenCost: d.frozenCost,
+    surplus: t.net + stockReleased - d.frozenCost,
+    atCourier: d.courierValue,
+    courierOrders: d.courierOrders,
+  };
   return t;
 }
 
@@ -763,6 +881,7 @@ export function addTotals(a: Totals, b: Totals): Totals {
     expectedReturnsRev: a.expectedReturnsRev + b.expectedReturnsRev,
     estCogs: a.estCogs + b.estCogs,
     days: a.days + b.days,
+    cash: addCash(a.cash, b.cash),
   };
 }
 
