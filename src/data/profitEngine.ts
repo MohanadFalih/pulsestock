@@ -89,10 +89,10 @@ export const RULES = {
       salaries: 3_400_000, // fixed-salary staff in Baghdad (owner, 18 Nov 2026)
       rent: 1_700_000,
       utilities: 160_000, // generator 100k + internet 60k
-      other: 500_000, // other expenses + subscriptions (owner's fixed figure)
+      other: 0, // other expenses + subscriptions: as posted in Odoo (otherFromOdoo)
       agentWeekly: 460_000, // Turkey agent, paid from the Turkish bank (48 TRY/$ × 1,700)
       turkeyMonthly: 1_360_000, // ~800$ × 1,700: rented car, insurance, running costs
-      otherFromOdoo: false,
+      otherFromOdoo: true,
     },
   ],
   /** Sales team commission per kept piece, IQD. */
