@@ -40,19 +40,16 @@
  * by order age) and values not-yet-shipped quantity at the keep rate of
  * orders 14–90 days old.
  *
- * Repayable surplus (cash view, beside profit) — how much can go to old debt
- * without eating working capital. Deliberately conservative, mode-independent:
- *   + Turkey orders: shipped value − refusals still expected back (return
- *     curve), − supplier cost of every shipped piece (paid, even if on credit),
- *     − ads, cargo, Selvim extras, commission. Not-yet-shipped orders: nothing.
- *   + Stock clearance: full value of shipped pieces (their cost was paid long
- *     ago) + delivery net − its ads − its commission, refusals removed likewise.
- *   − Supplier cost of Turkey pieces that came back this period (by return
- *     day): money frozen in the warehouse until resold.
- *   − Fixed costs.
- * "At the courier" = part of the above whose order is not settled yet (order
- * has no `pd` = courier cash registered in Odoo; without settlement data:
- * order day + 6 days). Drawings are shown against it, never subtracted.
+ * Repayable surplus (beside profit) — cash that can go to old debt without
+ * eating working capital, in the same mode as the page (Projected / Shipped):
+ *   net profit
+ *   + goods cost of stock-clearance pieces sold (paid long ago: selling them
+ *     releases that money from the warehouse, whatever the clearance profit)
+ *   − supplier cost of Turkey pieces that came back (by return day): money
+ *     that goes into the warehouse until resold.
+ * Drawings (debt repaid) are shown against it, never subtracted from profit.
+ * "At the courier" = part of the period's sales whose courier cash is not
+ * registered in Odoo yet (order `pd`; without it: order day + 6 days).
  *
  * Pure functions, no React.
  */
@@ -252,44 +249,26 @@ export interface Totals {
 }
 
 export interface CashTotals {
-  trRev: number;
-  trCogs: number;
-  trDelivery: number;
-  trAds: number;
-  trCargo: number;
-  trCommission: number;
-  trProfit: number;
-  stRev: number;
-  stDelivery: number;
-  stAds: number;
-  stCommission: number;
-  stCash: number;
+  /** Net profit of the period (same as Totals.net). */
+  profit: number;
+  /** Goods cost of stock-clearance pieces sold — cash released from stock. */
+  stockReleased: number;
+  /** Turkey pieces that came back and their supplier cost (by return day). */
   frozenQty: number;
   frozenCost: number;
-  fixed: number;
+  /** profit + stockReleased − frozenCost. */
   surplus: number;
-  /** Part of the surplus still at the courier (orders not settled). */
+  /** Sales of the period still at the courier (not settled in Odoo). */
   atCourier: number;
   courierOrders: number;
 }
 
 export function emptyCash(): CashTotals {
   return {
-    trRev: 0,
-    trCogs: 0,
-    trDelivery: 0,
-    trAds: 0,
-    trCargo: 0,
-    trCommission: 0,
-    trProfit: 0,
-    stRev: 0,
-    stDelivery: 0,
-    stAds: 0,
-    stCommission: 0,
-    stCash: 0,
+    profit: 0,
+    stockReleased: 0,
     frozenQty: 0,
     frozenCost: 0,
-    fixed: 0,
     surplus: 0,
     atCourier: 0,
     courierOrders: 0,
@@ -802,33 +781,6 @@ export function emptyTotals(): Totals {
   };
 }
 
-/** One day's repayable-surplus lines (see header). Mode-independent. */
-export function dayCash(d: DayRaw): CashTotals {
-  const c = emptyCash();
-  const net = RULES.deliveryNetPerOrder;
-  c.trRev = d.trRev - d.trRiskRev;
-  c.trCogs = d.trCogs;
-  c.trDelivery = (d.trDeliveredOrders - d.trRiskOrders) * net;
-  c.trAds = d.adsIQD - d.stAdsIQD;
-  c.trCargo = d.shipping + d.selvimQty * RULES.selvim.extraPerPieceIQD;
-  c.trCommission = (d.trKeptQty - d.trRiskQty) * RULES.commissionPerPiece;
-  c.trProfit = c.trRev - c.trCogs + c.trDelivery - c.trAds - c.trCargo - c.trCommission;
-  c.stRev = d.stRev - d.stRiskRev;
-  c.stDelivery =
-    (d.deliveredOrders - d.trDeliveredOrders - (d.riskOrders - d.trRiskOrders)) * net;
-  c.stAds = d.stAdsIQD;
-  c.stCommission =
-    (d.keptQty - d.trKeptQty - (d.riskQty - d.trRiskQty)) * RULES.commissionPerPiece;
-  c.stCash = c.stRev + c.stDelivery - c.stAds - c.stCommission;
-  c.frozenQty = d.frozenQty;
-  c.frozenCost = d.frozenCost;
-  c.fixed = FIXED_GROUPS.reduce((s, g) => s + d.fixed[g], 0);
-  c.surplus = c.trProfit + c.stCash - c.frozenCost - c.fixed;
-  c.atCourier = d.courierValue;
-  c.courierOrders = d.courierOrders;
-  return c;
-}
-
 /** One day's totals in the chosen mode. */
 export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   const t = emptyTotals();
@@ -879,7 +831,16 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.expectedReturnsRev = p ? d.trRiskRev + d.stRiskRev : 0;
   t.estCogs = d.estCogs;
   t.days = 1;
-  t.cash = dayCash(d);
+  const stockReleased = t.stRev - t.stGross;
+  t.cash = {
+    profit: t.net,
+    stockReleased,
+    frozenQty: d.frozenQty,
+    frozenCost: d.frozenCost,
+    surplus: t.net + stockReleased - d.frozenCost,
+    atCourier: d.courierValue,
+    courierOrders: d.courierOrders,
+  };
   return t;
 }
 

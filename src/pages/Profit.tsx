@@ -212,7 +212,7 @@ function KpiRow({ t }: { t: Totals }) {
       <Kpi
         label="Repayable surplus"
         value={iqd(c.surplus)}
-        sub={`cash for old debt · of which ${iqd(Math.min(c.atCourier, Math.max(0, c.surplus)))} still at the courier`}
+        sub={`profit + stock sold at cost − Turkey returns · after ${iqd(t.drawings)} repaid: ${iqd(c.surplus - t.drawings)}`}
         tone={c.surplus >= 0 ? "pos" : "neg"}
       />
       <Kpi
@@ -298,89 +298,62 @@ function SplitTable({ t }: { t: Totals }) {
 
 function SurplusBreakdown({ t, model, stockValue }: { t: Totals; model: ProfitModel; stockValue: number | null }) {
   const c = t.cash;
-  const inHand = c.surplus - c.atCourier;
-  const rows: { label: string; value: number; sub?: boolean; strong?: boolean; note?: string }[] = [
-    { label: "Turkey orders — profit on shipped pieces", value: c.trProfit, strong: true },
-    { label: "Shipped value (refusals still expected removed)", value: c.trRev, sub: true },
-    { label: "Supplier cost (paid, even if on credit)", value: -c.trCogs, sub: true },
-    { label: "Delivery (+1,000 / order)", value: c.trDelivery, sub: true },
-    { label: "Meta ads (Turkey campaigns)", value: -c.trAds, sub: true },
-    { label: "Cargo + Selvim extras", value: -c.trCargo, sub: true },
-    { label: "Sales commission", value: -c.trCommission, sub: true },
-    { label: "Stock clearance — cash in", value: c.stCash, strong: true },
-    { label: "Full value of shipped pieces", value: c.stRev, sub: true },
-    { label: "Delivery (+1,000 / order)", value: c.stDelivery, sub: true },
-    { label: "Meta ads (stock campaigns)", value: -c.stAds, sub: true },
-    { label: "Sales commission", value: -c.stCommission, sub: true },
-    {
-      label: "Turkey returns frozen in the warehouse",
-      value: -c.frozenCost,
-      strong: true,
-      note: `${Math.round(c.frozenQty)} pieces came back, at supplier cost`,
-    },
-    { label: "Fixed costs", value: -c.fixed, strong: true },
-  ];
+  const left = c.surplus - t.drawings;
   const num = "text-right font-mono text-[13px] tnum";
-  const tone = (n: number) => (n < 0 ? "text-neg" : "text-text-primary");
+  const row = (label: string, value: number, opts: { strong?: boolean; note?: string; muted?: boolean } = {}) => (
+    <tr className={cn("border-t border-hairline", opts.strong && "bg-inset")}>
+      <td
+        className={cn(
+          "py-1.5 pl-2 text-[13px]",
+          opts.strong ? "font-semibold text-text-primary" : opts.muted ? "pl-6 text-[12px] text-text-muted" : "text-text-secondary"
+        )}
+      >
+        {label}
+        {opts.note && <span className="ml-2 text-[11px] text-text-muted">{opts.note}</span>}
+      </td>
+      <td
+        className={cn(
+          num,
+          "py-1.5 pr-2",
+          opts.strong && "font-semibold",
+          opts.muted ? "text-[12px] text-text-muted" : value < 0 ? "text-neg" : opts.strong ? "text-pos" : "text-text-primary"
+        )}
+      >
+        {iqd(value)}
+      </td>
+    </tr>
+  );
   return (
     <section className="rounded-xl border border-hairline bg-panel p-5">
-      <h2 className="font-display text-[15px] font-semibold text-text-primary">Repayable surplus — where the cash went</h2>
+      <h2 className="font-display text-[15px] font-semibold text-text-primary">Repayable surplus — cash you can use for old debt</h2>
       <p className="text-[11.5px] text-text-muted">
-        Cash this period can pay toward old debt without touching working capital. Conservative and the same in
-        Projected and Shipped: orders not shipped yet count nothing; refusals still expected back are removed;
-        a Turkey piece that comes back is charged at supplier cost on its return day until it is resold.
+        Profit as above, plus the money that left the warehouse and minus the money that went into it. Stock pieces
+        were paid for long ago, so selling them releases their full cost whatever the clearance profit; a Turkey piece
+        that comes back ties up its supplier cost until it is resold.
       </p>
       <table className="mt-3 w-full border-collapse">
         <tbody>
-          {rows.map((r, i) => (
-            <tr key={`${r.label}-${i}`} className={cn(!r.sub && "border-t border-hairline")}>
-              <td
-                className={cn(
-                  "py-1.5 text-[13px]",
-                  r.sub ? "pl-6 text-[12px] text-text-muted" : "pl-2 font-medium text-text-secondary"
-                )}
-              >
-                {r.label}
-                {r.note && <span className="ml-2 text-[11px] text-text-muted">{r.note}</span>}
-              </td>
-              <td className={cn(num, "py-1.5 pr-2", r.sub ? "text-[12px] text-text-muted" : tone(r.value))}>
-                {iqd(r.value)}
-              </td>
-            </tr>
-          ))}
-          <tr className="border-t border-hairline bg-inset">
-            <td className="py-2 pl-2 text-[13px] font-semibold text-text-primary">= Repayable surplus</td>
-            <td className={cn(num, "py-2 pr-2 font-semibold", c.surplus >= 0 ? "text-pos" : "text-neg")}>
-              {iqd(c.surplus)}
-            </td>
-          </tr>
-          <tr>
-            <td className="py-1.5 pl-6 text-[12px] text-text-muted">
-              of which still at the courier ({Math.round(c.courierOrders)} orders · arrives within ~
-              {RULES.courierPayDays} days){model.paymentsSynced ? "" : " — estimated: order day + 6 days"}
-            </td>
-            <td className={cn(num, "py-1.5 pr-2 text-[12px] text-text-muted")}>{iqd(c.atCourier)}</td>
-          </tr>
-          <tr>
-            <td className="py-1.5 pl-6 text-[12px] text-text-muted">in hand today</td>
-            <td className={cn(num, "py-1.5 pr-2 text-[12px]", inHand < 0 ? "text-neg" : "text-text-muted")}>
-              {iqd(inHand)}
-            </td>
-          </tr>
-          <tr className="border-t border-hairline">
-            <td className="py-1.5 pl-2 text-[12.5px] text-text-secondary">Already repaid this period (ابو سلطان)</td>
-            <td className={cn(num, "py-1.5 pr-2")}>{iqd(-t.drawings)}</td>
-          </tr>
-          <tr className="bg-inset">
-            <td className="py-2 pl-2 text-[13px] font-semibold text-text-primary">= Still repayable</td>
-            <td
-              className={cn(num, "py-2 pr-2 font-semibold", c.surplus - t.drawings >= 0 ? "text-pos" : "text-neg")}
-            >
-              {iqd(c.surplus - t.drawings)}
-            </td>
-          </tr>
+          {row("Net profit", c.profit)}
+          {row("+ Stock sold — cost released from the warehouse", c.stockReleased)}
+          {row("− Turkey returns — cost tied up in the warehouse", -c.frozenCost, {
+            note: `${Math.round(c.frozenQty)} pieces came back`,
+          })}
+          {row("= Repayable surplus", c.surplus, { strong: true })}
+          {row(
+            `of which still at the courier (${Math.round(c.courierOrders)} orders, arrives within ~${RULES.courierPayDays} days${
+              model.paymentsSynced ? "" : " — estimated: order day + 6"
+            })`,
+            c.atCourier,
+            { muted: true }
+          )}
+          {row("− Debt already repaid (ابو سلطان)", -t.drawings)}
+          {row("= Still repayable", left, { strong: true })}
         </tbody>
       </table>
+      <p className="mt-2 text-[11px] text-text-muted">
+        Warehouse change this period: {iqd(c.stockReleased - c.frozenCost)} (
+        {c.stockReleased >= c.frozenCost ? "stock went down — cash released" : "stock went up — cash tied up"}).
+      </p>
       <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3">
         <div className="rounded-lg bg-inset p-3">
           <p className="text-[11px] font-semibold uppercase tracking-[1.1px] text-text-muted">Frozen in the warehouse</p>
