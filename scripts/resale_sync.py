@@ -295,14 +295,14 @@ def main():
             tmpl_name[tid] = m2o_name(v["product_tmpl_id"]) or ""
         codes = sorted(((norm(n), t) for t, n in tmpl_name.items() if len(norm(n)) >= 4),
                        key=lambda z: -len(z[0]))
-        unmatched = 0
+        unmatched = []
         for row in sheet:
             if row["availability"] != "in stock":
                 continue
             key = norm(row["id"])
             tid = next((t for c, t in codes if key.startswith(c)), None)
             if not tid:
-                unmatched += 1
+                unmatched.append(row["id"])
                 continue
             checked += 1
             vs = by_tmpl[tid]
@@ -316,7 +316,8 @@ def main():
                 "fullPrice": int(round(max(v["lst"] for v in vs))),
                 "qty": sum(v["qty"] for v in vs),
             })
-        pl_note = f"sheet rows not matched to an in-stock Odoo model: {unmatched}" if unmatched else None
+        pl_note = (f"sheet rows in stock with no in-stock Odoo model: {len(unmatched)} "
+                   f"({', '.join(unmatched[:20])})") if unmatched else None
         mismatches.sort(key=lambda m: -(m["odooPrice"] - m["adPrice"]))
 
     payload = {
