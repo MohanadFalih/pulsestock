@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-18T12:33:25.823730+00:00",
+ "syncedAt": "2026-11-18T13:03:51.705758+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -533,17 +533,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-16",
    "firstOrderDate": "2026-11-17",
-   "lastOrderDate": "2026-11-17",
-   "orders": 1,
-   "units": 1,
-   "revenue": 86000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 2,
+   "units": 2,
+   "revenue": 172000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -14772,21 +14772,27 @@
    "revenue": 1782000,
    "delivered": 16,
    "returned": 0,
-   "unitsBoughtFromSupplier": 18,
+   "unitsBoughtFromSupplier": 19,
    "returnedStock": 0,
    "unitPrice": 99000.0,
    "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 102,
-    "lastChecked": "2026-11-17T15:12:35Z",
+    "qty": 121,
+    "lastChecked": "2026-11-18T12:34:14Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
+      "color": "أسود / Siyah",
+      "size": "3",
+      "qty": 1,
+      "product_id": 731055
+     },
+     {
       "color": "قهوائي / Kahve",
       "size": "4",
-      "qty": 8,
+      "qty": 11,
       "product_id": 731056
      },
      {
@@ -14798,19 +14804,19 @@
      {
       "color": "قهوائي / Kahve",
       "size": "2",
-      "qty": 14,
+      "qty": 15,
       "product_id": 731058
      },
      {
       "color": "قهوائي / Kahve",
       "size": "3",
-      "qty": 10,
+      "qty": 12,
       "product_id": 731059
      },
      {
       "color": "خاكي / Haki",
       "size": "4",
-      "qty": 1,
+      "qty": 4,
       "product_id": 731060
      },
      {
@@ -14822,31 +14828,37 @@
      {
       "color": "خاكي / Haki",
       "size": "2",
-      "qty": 12,
+      "qty": 13,
       "product_id": 731062
      },
      {
       "color": "خاكي / Haki",
       "size": "3",
-      "qty": 7,
+      "qty": 8,
       "product_id": 731063
      },
      {
       "color": "بيج / Bej",
+      "size": "4",
+      "qty": 2,
+      "product_id": 731064
+     },
+     {
+      "color": "بيج / Bej",
       "size": "1",
-      "qty": 10,
+      "qty": 11,
       "product_id": 731065
      },
      {
       "color": "بيج / Bej",
       "size": "2",
-      "qty": 6,
+      "qty": 8,
       "product_id": 731066
      },
      {
       "color": "بيج / Bej",
       "size": "3",
-      "qty": 5,
+      "qty": 7,
       "product_id": 731067
      }
     ]
@@ -39457,8 +39469,8 @@
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-18",
    "orders": 942,
-   "units": 1097,
-   "revenue": 37035000,
+   "units": 1098,
+   "revenue": 37074000,
    "delivered": 988,
    "returned": 194,
    "unitsBoughtFromSupplier": 918,
@@ -42227,6 +42239,11 @@
    },
    "7600": {
     "2026-11-17": [
+     1,
+     1,
+     86000
+    ],
+    "2026-11-18": [
      1,
      1,
      86000
@@ -56775,8 +56792,8 @@
     ],
     "2026-11-18": [
      7,
-     9,
-     351000
+     10,
+     390000
     ]
    },
    "5855": {
@@ -57962,10 +57979,31 @@
    "2026-11-15": 60,
    "2026-11-16": 56,
    "2026-11-17": 57,
-   "2026-11-18": 20
+   "2026-11-18": 21
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35035",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-1214ORG1169",
+     "pid": 734721,
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 44"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35034",
    "d": "2026-11-18",
@@ -58789,6 +58827,15 @@
      "del": 0,
      "route": "turkey",
      "var": "عنابي / Murdum"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أسود / Siyah"
     }
    ],
    "src": "WhatsApp",
