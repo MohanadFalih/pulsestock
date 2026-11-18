@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-18T19:33:26.755438+00:00",
+ "syncedAt": "2026-11-18T20:03:26.116785+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -561,19 +561,19 @@
    "odooCreatedDate": "2026-11-17",
    "firstOrderDate": "2026-11-17",
    "lastOrderDate": "2026-11-18",
-   "orders": 3,
-   "units": 4,
-   "revenue": 352000,
+   "orders": 4,
+   "units": 5,
+   "revenue": 440000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 4,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 88000.0,
-   "orderVelocity7d": 0.43,
+   "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 135,
-    "lastChecked": "2026-11-18T17:33:36Z",
+    "qty": 133,
+    "lastChecked": "2026-11-18T19:44:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -616,7 +616,7 @@
      {
       "color": "أسود / Siyah",
       "size": "2",
-      "qty": 9,
+      "qty": 8,
       "product_id": 734807
      },
      {
@@ -664,7 +664,7 @@
      {
       "color": "رصاصي غامق / Fume",
       "size": "2",
-      "qty": 5,
+      "qty": 4,
       "product_id": 734815
      },
      {
@@ -3889,15 +3889,15 @@
    "odooCreatedDate": "2026-11-09",
    "firstOrderDate": "2026-11-10",
    "lastOrderDate": "2026-11-18",
-   "orders": 12,
-   "units": 12,
-   "revenue": 828000,
+   "orders": 13,
+   "units": 13,
+   "revenue": 897000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 1.43,
+   "orderVelocity7d": 1.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -10071,20 +10071,20 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-24",
    "firstOrderDate": "2026-10-25",
-   "lastOrderDate": "2026-11-17",
-   "orders": 121,
-   "units": 132,
-   "revenue": 10560000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 122,
+   "units": 133,
+   "revenue": 10640000,
    "delivered": 114,
    "returned": 27,
-   "unitsBoughtFromSupplier": 117,
+   "unitsBoughtFromSupplier": 118,
    "returnedStock": 15,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 2.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 2.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 151,
-    "lastChecked": "2026-11-18T15:24:03Z",
+    "lastChecked": "2026-11-18T19:44:41Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -38064,20 +38064,20 @@
    "sku": " M-1983TRT545",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-11-26",
    "firstOrderDate": "2025-11-27",
-   "lastOrderDate": "2026-11-01",
-   "orders": 77,
-   "units": 78,
-   "revenue": 3492000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 78,
+   "units": 79,
+   "revenue": 3531000,
    "delivered": 78,
    "returned": 16,
    "unitsBoughtFromSupplier": 65,
    "returnedStock": 4,
    "unitPrice": 88000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 17,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -39124,20 +39124,20 @@
    "sku": "M-5620EDF311",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-10-24",
    "firstOrderDate": "2025-10-24",
-   "lastOrderDate": "2026-10-29",
-   "orders": 89,
-   "units": 93,
-   "revenue": 3988000,
+   "lastOrderDate": "2026-11-18",
+   "orders": 90,
+   "units": 94,
+   "revenue": 4027000,
    "delivered": 92,
    "returned": 30,
    "unitsBoughtFromSupplier": 69,
    "returnedStock": 4,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 20,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -43030,9 +43030,9 @@
      88000
     ],
     "2026-11-18": [
-     2,
      3,
-     264000
+     4,
+     352000
     ]
    },
    "7604": {
@@ -43370,9 +43370,9 @@
      69000
     ],
     "2026-11-18": [
-     2,
-     2,
-     138000
+     3,
+     3,
+     207000
     ]
    },
    "7540": {
@@ -44434,6 +44434,11 @@
      320000
     ],
     "2026-11-17": [
+     1,
+     1,
+     80000
+    ],
+    "2026-11-18": [
      1,
      1,
      80000
@@ -56495,6 +56500,11 @@
      1,
      1,
      39000
+    ],
+    "2026-11-18": [
+     1,
+     1,
+     39000
     ]
    },
    "6343": {
@@ -56955,6 +56965,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-18": [
+     1,
+     1,
+     39000
     ]
    },
    "6095": {
@@ -58845,10 +58860,90 @@
    "2026-11-15": 60,
    "2026-11-16": 56,
    "2026-11-17": 56,
-   "2026-11-18": 38
+   "2026-11-18": 41
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35056",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733471,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Koyu vizyon, 46"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35055",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-5620EDF311",
+     "pid": 676495,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "var": "فيزون غامق / Koyu Vizon, 48"
+    },
+    {
+     "sku": "M-1983TRT545",
+     "pid": 715843,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أسود / Siyah, 52"
+    }
+   ],
+   "src": "Facebook"
+  },
+  {
+   "id": "S35054",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8055",
+     "pid": 734801,
+     "qty": 1,
+     "price": 88000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 4"
+    },
+    {
+     "sku": "H-1945",
+     "pid": 731958,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أحمر / Bordo, 5"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35053",
    "d": "2026-11-18",
