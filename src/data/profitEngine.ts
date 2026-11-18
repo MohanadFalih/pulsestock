@@ -86,23 +86,23 @@ export const RULES = {
     },
     {
       from: "2026-11-01",
-      salaries: 2_600_000,
+      salaries: 3_400_000, // fixed-salary staff in Baghdad (owner, 18 Nov 2026)
       rent: 1_700_000,
-      utilities: 377_000, // electricity 100k + internet 40$ + subscriptions (Zapier 73$ + other 50$), at 1,700
-      other: 0,
-      agentWeekly: 460_000, // lira pay converted at 48 TRY/$ × 1,700
+      utilities: 160_000, // generator 100k + internet 60k
+      other: 500_000, // other expenses + subscriptions (owner's fixed figure)
+      agentWeekly: 460_000, // Turkey agent, paid from the Turkish bank (48 TRY/$ × 1,700)
       turkeyMonthly: 1_360_000, // ~800$ × 1,700: rented car, insurance, running costs
-      otherFromOdoo: true,
+      otherFromOdoo: false,
     },
   ],
   /** Sales team commission per kept piece, IQD. */
   commissionPerPiece: 1_500,
   /** Modaselvim (codes "M-", Turkey route, from 1 Nov 2026): the broker takes
-   *  1$ per piece (× 1,700) and local cargo in Turkey is ~1$ per 15-piece
-   *  parcel (~115). Charged per piece ordered from Turkey — the piece is
+   *  1$ per piece and local cargo in Turkey is ~1$ per 15-piece parcel,
+   *  paid by card at 1,520 IQD/$ (~1,520 + ~100). Charged per piece ordered from Turkey — the piece is
    *  bought whether it is kept or returned. Not part of Odoo's cost, which
    *  stays equal to what the supplier is paid. */
-  selvim: { prefix: "M-", since: "2026-11-01", extraPerPieceIQD: 1_815 },
+  selvim: { prefix: "M-", since: "2026-11-01", extraPerPieceIQD: 1_620 },
   deliveryNetPerOrder: 1_000,
   /** Orders older than this are final: undecided units count as not sold.
    *  Odoo data (Oct 2026): orders 9–10 days old show ~6% returned vs ~22% final;
@@ -136,7 +136,8 @@ export function fixedTableFor(date: string): FixedTable {
 
 /** IQD per USD paid for Meta ads on a given day. */
 export function adsRate(date: string): number {
-  return date < "2026-10-06" ? 1380 : 1600;
+  if (date < "2026-10-06") return 1380;
+  return date < "2026-11-01" ? 1600 : 1520; // card rate (owner, 18 Nov 2026)
 }
 
 export type FixedGroup = "salaries" | "agent" | "rent" | "utilities" | "other";
