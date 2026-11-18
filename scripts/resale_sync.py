@@ -247,7 +247,7 @@ def main():
 
     # ── 3. price match: Meta sheet vs «تصفية» pricelist ───────────────────────
     pls = read_all(odoo, "product.pricelist", [["name", "in", list(TASFIYA_NAMES)]], ["name"])
-    mismatches, checked, pl_note = [], 0, None
+    mismatches, checked, pl_note, model_summary = [], 0, None, None
     integrated = None
     try:
         rr = read_all(odoo, "deniz.clearance.rule", [], ["tasfiya_integrated"])
@@ -296,6 +296,7 @@ def main():
         codes = sorted(((norm(n), t) for t, n in tmpl_name.items() if len(norm(n)) >= 4),
                        key=lambda z: -len(z[0]))
         unmatched = []
+        model_prices = defaultdict(set)
         for row in sheet:
             if row["availability"] != "in stock":
                 continue
@@ -307,6 +308,7 @@ def main():
             checked += 1
             vs = by_tmpl[tid]
             ad = row["sale_price"] or row["price"]
+            model_prices[tmpl_name[tid]].add(int(ad))
             prices = sorted({int(round(v["price"])) for v in vs})
             if any(abs(v["price"] - ad) <= MISMATCH_IQD for v in vs):
                 continue
@@ -316,6 +318,9 @@ def main():
                 "fullPrice": int(round(max(v["lst"] for v in vs))),
                 "qty": sum(v["qty"] for v in vs),
             })
+        multi = {m: sorted(p) for m, p in model_prices.items() if len(p) > 1}
+        model_summary = {"models": len(model_prices), "multiPrice": len(multi),
+                         "examples": dict(sorted(multi.items(), key=lambda kv: -(kv[1][-1] - kv[1][0]))[:40])}
         pl_note = (f"sheet rows in stock with no in-stock Odoo model: {len(unmatched)} "
                    f"({', '.join(unmatched[:20])})") if unmatched else None
         mismatches.sort(key=lambda m: -(m["odooPrice"] - m["adPrice"]))
@@ -329,7 +334,7 @@ def main():
         "steps": steps,
         "daily": {d: {str(k): round(q) for k, q in v.items()} for d, v in sorted(daily.items())},
         "priceCheck": {"checked": checked, "mismatchCount": len(mismatches),
-                       "tasfiyaIntegrated": integrated,
+                       "tasfiyaIntegrated": integrated, "modelPrices": model_summary,
                        "note": pl_note, "mismatches": mismatches[:400]},
         "items": item_rows,
         "logs": log_rows,
