@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-18T01:32:42.341841+00:00",
+ "syncedAt": "2026-11-18T02:03:27.059220+00:00",
  "today": "2026-11-18",
  "window": 14,
  "byState": {
@@ -84,10 +84,34 @@
  },
  "priceCheck": {
   "checked": 420,
-  "mismatchCount": 2,
+  "mismatchCount": 4,
   "tasfiyaIntegrated": true,
   "note": "sheet rows not matched to an in-stock Odoo model: 7",
   "mismatches": [
+   {
+    "kind": "قطعة اخيرة",
+    "code": "H-1808",
+    "feed": "H-1808_2SIYAH",
+    "adPrice": 35000,
+    "odooPrice": 81000,
+    "odooPrices": [
+     81000
+    ],
+    "fullPrice": 81000,
+    "qty": 2
+   },
+   {
+    "kind": "قطعة اخيرة",
+    "code": "H-1802",
+    "feed": "H-1802_52",
+    "adPrice": 33000,
+    "odooPrice": 69000,
+    "odooPrices": [
+     69000
+    ],
+    "fullPrice": 69000,
+    "qty": 3
+   },
    {
     "kind": "قطعة اخيرة",
     "code": "T-6937",
@@ -95,9 +119,10 @@
     "adPrice": 33000,
     "odooPrice": 31000,
     "odooPrices": [
-     31000
+     31000,
+     88000
     ],
-    "fullPrice": 31000,
+    "fullPrice": 88000,
     "qty": 2
    },
    {
