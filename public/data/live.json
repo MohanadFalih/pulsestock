@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-18T13:03:51.705758+00:00",
+ "syncedAt": "2026-11-18T13:33:06.495195+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -38,20 +38,20 @@
    "sku": "M-1099ZNNK1102",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-17",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-18",
+   "lastOrderDate": "2026-11-18",
+   "orders": 1,
+   "units": 1,
+   "revenue": 80000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -39468,19 +39468,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-18",
-   "orders": 942,
-   "units": 1098,
-   "revenue": 37074000,
+   "orders": 943,
+   "units": 1099,
+   "revenue": 37113000,
    "delivered": 988,
    "returned": 194,
-   "unitsBoughtFromSupplier": 918,
+   "unitsBoughtFromSupplier": 919,
    "returnedStock": 23,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 16.43,
+   "orderVelocity7d": 16.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 301,
-    "lastChecked": "2026-11-18T11:46:26Z",
+    "qty": 298,
+    "lastChecked": "2026-11-18T13:20:33Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -39505,7 +39505,7 @@
      {
       "color": "سمائي / Mavi",
       "size": "STD",
-      "qty": 33,
+      "qty": 32,
       "product_id": 672399
      },
      {
@@ -39541,7 +39541,7 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 28,
+      "qty": 26,
       "product_id": 715723
      },
      {
@@ -42204,6 +42204,13 @@
   "from": "2026-08-20",
   "to": "2026-11-18",
   "byProduct": {
+   "7610": {
+    "2026-11-18": [
+     1,
+     1,
+     80000
+    ]
+   },
    "7609": {
     "2026-11-18": [
      1,
@@ -56791,9 +56798,9 @@
      936000
     ],
     "2026-11-18": [
-     7,
-     10,
-     390000
+     8,
+     11,
+     429000
     ]
    },
    "5855": {
@@ -57979,10 +57986,52 @@
    "2026-11-15": 60,
    "2026-11-16": 56,
    "2026-11-17": 57,
-   "2026-11-18": 21
+   "2026-11-18": 23
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35037",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-1099ZNNK1102",
+     "pid": 734966,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 42"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35036",
+   "d": "2026-11-18",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672394,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "فيزون / Vizon"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35035",
    "d": "2026-11-18",
@@ -60992,6 +61041,7 @@
      "var": "قهوائي / Kahve, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -61149,6 +61199,7 @@
      "var": "قهوائي / Kahve, 4"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -61404,6 +61455,7 @@
      "var": "نيلي / Laci, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -61648,6 +61700,7 @@
      "var": "خاكي / Haki, 3"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -61689,6 +61742,7 @@
      "var": "نيلي / Laci, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -61844,6 +61898,7 @@
      "var": "أخضر / Yesil, 3"
     }
    ],
+   "pd": "2026-11-18",
    "src": "WhatsApp",
    "ful": "مدن"
   },
@@ -61884,6 +61939,7 @@
      "var": "قهوائي / Kahve, 52"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -61904,6 +61960,7 @@
      "var": "أسود / Siyah, 3"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -61924,6 +61981,7 @@
      "var": "M-40"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -61994,6 +62052,7 @@
      "var": "رصاصي / Antrasit"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -62731,6 +62790,7 @@
      "var": "قهوائي / Kahve, 3"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -63786,6 +63846,7 @@
      "var": "نيلي / Laci, 6"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -64383,6 +64444,7 @@
      "del": 0
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -64670,6 +64732,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -64837,6 +64900,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -64898,6 +64962,7 @@
      "var": "قهوائي غامق / Acı Kahve"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -65004,6 +65069,7 @@
      "var": "أسود / Siyah, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Website",
    "ful": "مدن"
   },
@@ -65035,6 +65101,7 @@
      "var": "أسود / Siyah, 4"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -65056,6 +65123,7 @@
      "var": "أحمر / Bordo, 1"
     }
    ],
+   "pd": "2026-11-18",
    "src": "WhatsApp",
    "ful": "مدن"
   },
@@ -65077,6 +65145,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -65108,6 +65177,7 @@
      "var": "رصاصي / Antrasit"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -65129,6 +65199,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -65150,6 +65221,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "WhatsApp",
    "ful": "مدن"
   },
@@ -65171,6 +65243,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -65244,6 +65317,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "WhatsApp",
    "ful": "مدن"
   },
@@ -65265,6 +65339,7 @@
      "var": "عنابي / Murdum, 3"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -65286,6 +65361,7 @@
      "var": "أسود / Siyah, 54"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -65315,6 +65391,7 @@
      "del": 0
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -65419,6 +65496,7 @@
      "var": "قهوائي / Kahve, 1"
     }
    ],
+   "pd": "2026-11-18",
    "src": "WhatsApp",
    "ful": "مدن"
   },
@@ -65553,6 +65631,7 @@
      "var": "قهوائي / Kahve, 52"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -65647,6 +65726,7 @@
      "var": "نيلي / Laci"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -65774,6 +65854,7 @@
      "var": "أسود / Siyah, 4"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -66023,6 +66104,7 @@
      "var": "نيلي / Laci, 4"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -66382,6 +66464,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "WhatsApp",
    "ful": "مدن"
   },
@@ -66403,6 +66486,7 @@
      "var": "فيزون / Vizon, 48"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -67473,6 +67557,7 @@
      "var": "أسود / Siyah, 1"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -67852,6 +67937,7 @@
      "var": "أخضر / Yesil, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -68598,6 +68684,7 @@
      "var": "نيلي / Laci, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -68793,6 +68880,7 @@
      "var": "فيزون / Vizon, 42"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -69208,6 +69296,7 @@
      "del": 0
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -69345,6 +69434,7 @@
      "var": "قهوائي / Kahve, 42"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -69484,6 +69574,7 @@
      "var": "نيلي / Laci, 44"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
@@ -69725,6 +69816,7 @@
      "var": "أسود / Siyah, 3"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -71364,6 +71456,7 @@
      "var": "قهوائي / Kahve, 2"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -78888,6 +78981,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Instagram",
    "ful": "مدن"
   },
@@ -79881,6 +79975,7 @@
      "var": "أسود / Siyah"
     }
    ],
+   "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
   },
