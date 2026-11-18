@@ -200,6 +200,7 @@ function Kpi({
 
 function KpiRow({ t }: { t: Totals }) {
   const perDay = (n: number) => `${iqd(n / Math.max(1, t.days))} / day`;
+  const c = t.cash;
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
       <Kpi
@@ -207,6 +208,12 @@ function KpiRow({ t }: { t: Totals }) {
         value={iqd(t.net)}
         sub={`${perDay(t.net)} · after fixed costs`}
         tone={t.net >= 0 ? "pos" : "neg"}
+      />
+      <Kpi
+        label="Repayable surplus"
+        value={iqd(c.surplus)}
+        sub={`cash for old debt · of which ${iqd(Math.min(c.atCourier, Math.max(0, c.surplus)))} still at the courier`}
+        tone={c.surplus >= 0 ? "pos" : "neg"}
       />
       <Kpi
         label="Before fixed costs"
@@ -282,6 +289,112 @@ function SplitTable({ t }: { t: Totals }) {
             </tr>
           </tbody>
         </table>
+      </div>
+    </section>
+  );
+}
+
+// ─── Repayable surplus ───────────────────────────────────────────────────────
+
+function SurplusBreakdown({ t, model, stockValue }: { t: Totals; model: ProfitModel; stockValue: number | null }) {
+  const c = t.cash;
+  const inHand = c.surplus - c.atCourier;
+  const rows: { label: string; value: number; sub?: boolean; strong?: boolean; note?: string }[] = [
+    { label: "Turkey orders — profit on shipped pieces", value: c.trProfit, strong: true },
+    { label: "Shipped value (refusals still expected removed)", value: c.trRev, sub: true },
+    { label: "Supplier cost (paid, even if on credit)", value: -c.trCogs, sub: true },
+    { label: "Delivery (+1,000 / order)", value: c.trDelivery, sub: true },
+    { label: "Meta ads (Turkey campaigns)", value: -c.trAds, sub: true },
+    { label: "Cargo + Selvim extras", value: -c.trCargo, sub: true },
+    { label: "Sales commission", value: -c.trCommission, sub: true },
+    { label: "Stock clearance — cash in", value: c.stCash, strong: true },
+    { label: "Full value of shipped pieces", value: c.stRev, sub: true },
+    { label: "Delivery (+1,000 / order)", value: c.stDelivery, sub: true },
+    { label: "Meta ads (stock campaigns)", value: -c.stAds, sub: true },
+    { label: "Sales commission", value: -c.stCommission, sub: true },
+    {
+      label: "Turkey returns frozen in the warehouse",
+      value: -c.frozenCost,
+      strong: true,
+      note: `${Math.round(c.frozenQty)} pieces came back, at supplier cost`,
+    },
+    { label: "Fixed costs", value: -c.fixed, strong: true },
+  ];
+  const num = "text-right font-mono text-[13px] tnum";
+  const tone = (n: number) => (n < 0 ? "text-neg" : "text-text-primary");
+  return (
+    <section className="rounded-xl border border-hairline bg-panel p-5">
+      <h2 className="font-display text-[15px] font-semibold text-text-primary">Repayable surplus — where the cash went</h2>
+      <p className="text-[11.5px] text-text-muted">
+        Cash this period can pay toward old debt without touching working capital. Conservative and the same in
+        Projected and Shipped: orders not shipped yet count nothing; refusals still expected back are removed;
+        a Turkey piece that comes back is charged at supplier cost on its return day until it is resold.
+      </p>
+      <table className="mt-3 w-full border-collapse">
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={`${r.label}-${i}`} className={cn(!r.sub && "border-t border-hairline")}>
+              <td
+                className={cn(
+                  "py-1.5 text-[13px]",
+                  r.sub ? "pl-6 text-[12px] text-text-muted" : "pl-2 font-medium text-text-secondary"
+                )}
+              >
+                {r.label}
+                {r.note && <span className="ml-2 text-[11px] text-text-muted">{r.note}</span>}
+              </td>
+              <td className={cn(num, "py-1.5 pr-2", r.sub ? "text-[12px] text-text-muted" : tone(r.value))}>
+                {iqd(r.value)}
+              </td>
+            </tr>
+          ))}
+          <tr className="border-t border-hairline bg-inset">
+            <td className="py-2 pl-2 text-[13px] font-semibold text-text-primary">= Repayable surplus</td>
+            <td className={cn(num, "py-2 pr-2 font-semibold", c.surplus >= 0 ? "text-pos" : "text-neg")}>
+              {iqd(c.surplus)}
+            </td>
+          </tr>
+          <tr>
+            <td className="py-1.5 pl-6 text-[12px] text-text-muted">
+              of which still at the courier ({Math.round(c.courierOrders)} orders · arrives within ~
+              {RULES.courierPayDays} days){model.paymentsSynced ? "" : " — estimated: order day + 6 days"}
+            </td>
+            <td className={cn(num, "py-1.5 pr-2 text-[12px] text-text-muted")}>{iqd(c.atCourier)}</td>
+          </tr>
+          <tr>
+            <td className="py-1.5 pl-6 text-[12px] text-text-muted">in hand today</td>
+            <td className={cn(num, "py-1.5 pr-2 text-[12px]", inHand < 0 ? "text-neg" : "text-text-muted")}>
+              {iqd(inHand)}
+            </td>
+          </tr>
+          <tr className="border-t border-hairline">
+            <td className="py-1.5 pl-2 text-[12.5px] text-text-secondary">Already repaid this period (ابو سلطان)</td>
+            <td className={cn(num, "py-1.5 pr-2")}>{iqd(-t.drawings)}</td>
+          </tr>
+          <tr className="bg-inset">
+            <td className="py-2 pl-2 text-[13px] font-semibold text-text-primary">= Still repayable</td>
+            <td
+              className={cn(num, "py-2 pr-2 font-semibold", c.surplus - t.drawings >= 0 ? "text-pos" : "text-neg")}
+            >
+              {iqd(c.surplus - t.drawings)}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3">
+        <div className="rounded-lg bg-inset p-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[1.1px] text-text-muted">Frozen in the warehouse</p>
+          <p className="mt-1 font-mono text-[18px] text-text-primary tnum">{stockValue == null ? "—" : iqd(stockValue)}</p>
+          <p className="text-[11.5px] text-text-muted">All stock on hand at cost, today — information, not subtracted</p>
+        </div>
+        <div className="rounded-lg bg-inset p-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[1.1px] text-text-muted">At the courier now</p>
+          <p className="mt-1 font-mono text-[18px] text-text-primary tnum">{iqd(model.courierNow.value)}</p>
+          <p className="text-[11.5px] text-text-muted">
+            {Math.round(model.courierNow.orders)} shipped orders not settled yet, all dates
+            {model.paymentsSynced ? " (from Odoo payments)" : " (estimated: order day + 6 days)"} — information
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -470,7 +583,7 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
         Odoo net leaves out ad spend from then on.
       </p>
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[860px] border-collapse">
+        <table className="w-full min-w-[940px] border-collapse">
           <thead>
             <tr className="border-b border-hairline">
               <th className={cn(head, "text-left")}>Month</th>
@@ -480,6 +593,7 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
               <th className={cn(head, "text-right")}>Before fixed</th>
               <th className={cn(head, "text-right")}>Fixed</th>
               <th className={cn(head, "text-right")}>Net profit</th>
+              <th className={cn(head, "text-right")}>Repayable</th>
               <th className={cn(head, "text-right")}>Odoo net</th>
               <th className={cn(head, "text-right")}>COGS gap</th>
             </tr>
@@ -500,6 +614,9 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
                   <td className={cn(num, "text-neg")}>{iqd(-t.fixedTotal)}</td>
                   <td className={cn(num, "font-semibold", t.net >= 0 ? "text-pos" : "text-neg")}>
                     {iqd(t.net)}
+                  </td>
+                  <td className={cn(num, "font-semibold", t.cash.surplus >= 0 ? "text-pos" : "text-neg")}>
+                    {iqd(t.cash.surplus)}
                   </td>
                   <td className={cn(num, "text-text-secondary")}>{r.odooNet == null ? "—" : iqd(r.odooNet)}</td>
                   <td className={cn(num, "text-text-secondary")}>{r.cogsGap == null ? "—" : iqd(r.cogsGap)}</td>
@@ -615,7 +732,11 @@ export default function Profit() {
 
   const model = useMemo(
     () =>
-      ops && profit !== undefined ? buildProfitModel(ops.ordersDetail, ops.stockDetail, profit) : null,
+      ops && profit !== undefined
+        ? buildProfitModel(ops.ordersDetail, ops.stockDetail, profit, new Date(), {
+            paymentsSynced: ops.paymentsSynced,
+          })
+        : null,
     [ops, profit]
   );
   const totals = useMemo(
@@ -693,6 +814,7 @@ export default function Profit() {
         <div className="space-y-4">
           <CostAlerts model={model} />
           <KpiRow t={totals} />
+          <SurplusBreakdown t={totals} model={model} stockValue={ops?.shop?.stockValue ?? null} />
           <SplitTable t={totals} />
           <div className="grid gap-4 xl:grid-cols-[1.6fr_1fr]">
             <Ladder t={totals} model={model} />
