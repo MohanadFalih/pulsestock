@@ -6,7 +6,10 @@ def sr(m,dom,f,ctx=None,lim=0):
     kw={"fields":f}
     if ctx: kw["context"]=ctx
     if lim: kw["limit"]=lim
-    return o.kw(m,"search_read",[dom],kw)
+    try:
+        return o.kw(m,"search_read",[dom],kw)
+    except Exception as e:
+        print("DENIED",m,str(e)[:120]); return []
 strip=lambda h: re.sub(r"<[^>]+>"," ",h or "").strip()[:220]
 out={}
 # A. conversion decision
