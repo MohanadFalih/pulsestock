@@ -26,3 +26,11 @@ for x in cap:
 print("=== caption corrections",len(pairs),"up",sum(1 for p in pairs if p[3]>p[2]))
 for p in pairs: print("CAP",*p)
 # templates list price now for converted: liq_discount_on false & liq_base_price>0
+for x in res["product.template"]:
+    if x["b"].startswith("قطعة أخيرة: سعر الموديل"):
+        m=re.search(r"سعر الموديل ([\d,]+)",x["b"]); print("CONV",x["d"][:16],"|",x["rec"],"|",num(m.group(1)) if m else "")
+for x in res["deniz.liquidation.item"]:
+    if "اعتمد" in x["b"] or "سلم الكلفة" in x["b"] or "سعر واحد" in x["b"]:
+        print("LIQ",x["d"][:16],"|",x["rec"],"|",x["b"][:160])
+for x in res["deniz.clearance.item"]:
+    if "سعر واحد" in x["b"]: print("ONEP",x["d"][:16],"|",x["rec"],"|",x["b"][:120])
