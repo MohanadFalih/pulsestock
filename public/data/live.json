@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-19T18:03:22.170646+00:00",
+ "syncedAt": "2026-11-19T18:33:38.413106+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2427,17 +2427,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-14",
    "firstOrderDate": "2026-11-15",
-   "lastOrderDate": "2026-11-15",
-   "orders": 1,
-   "units": 1,
-   "revenue": 74000,
+   "lastOrderDate": "2026-11-19",
+   "orders": 2,
+   "units": 2,
+   "revenue": 148000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 74000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 4,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -40515,15 +40515,15 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-19",
-   "orders": 955,
-   "units": 1113,
-   "revenue": 37659000,
+   "orders": 956,
+   "units": 1114,
+   "revenue": 37698000,
    "delivered": 1065,
    "returned": 194,
    "unitsBoughtFromSupplier": 927,
    "returnedStock": 17,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 15.29,
+   "orderVelocity7d": 15.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 290,
@@ -43592,6 +43592,11 @@
    },
    "7579": {
     "2026-11-15": [
+     1,
+     1,
+     74000
+    ],
+    "2026-11-19": [
      1,
      1,
      74000
@@ -58095,9 +58100,9 @@
      546000
     ],
     "2026-11-19": [
-     9,
-     11,
-     429000
+     10,
+     12,
+     468000
     ]
    },
    "5855": {
@@ -59330,10 +59335,52 @@
    "2026-11-16": 56,
    "2026-11-17": 56,
    "2026-11-18": 43,
-   "2026-11-19": 35
+   "2026-11-19": 37
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35094",
+   "d": "2026-11-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 672395,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي غامق / Acı Kahve"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35093",
+   "d": "2026-11-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-269NZRK1200",
+     "pid": 734325,
+     "qty": 1,
+     "price": 74000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Toprak, 4"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35092",
    "d": "2026-11-19",
