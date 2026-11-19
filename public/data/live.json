@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-19T12:33:44.198166+00:00",
+ "syncedAt": "2026-11-19T12:55:26.892594+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5209,7 +5209,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 83,
-    "lastChecked": "2026-11-19T12:05:23Z",
+    "lastChecked": "2026-11-19T12:35:56Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -40455,19 +40455,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-19",
-   "orders": 950,
-   "units": 1108,
-   "revenue": 37464000,
+   "orders": 952,
+   "units": 1110,
+   "revenue": 37542000,
    "delivered": 1002,
    "returned": 194,
-   "unitsBoughtFromSupplier": 923,
+   "unitsBoughtFromSupplier": 926,
    "returnedStock": 80,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 14.57,
+   "orderVelocity7d": 14.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 295,
-    "lastChecked": "2026-11-19T10:18:47Z",
+    "qty": 291,
+    "lastChecked": "2026-11-19T12:46:10Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -40492,7 +40492,7 @@
      {
       "color": "سمائي / Mavi",
       "size": "STD",
-      "qty": 32,
+      "qty": 31,
       "product_id": 672399
      },
      {
@@ -40528,13 +40528,13 @@
      {
       "color": "أسود / Siyah",
       "size": "STD",
-      "qty": 25,
+      "qty": 23,
       "product_id": 715723
      },
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 12,
+      "qty": 11,
       "product_id": 730710
      }
     ]
@@ -57991,9 +57991,9 @@
      546000
     ],
     "2026-11-19": [
-     4,
      6,
-     234000
+     8,
+     312000
     ]
    },
    "5855": {
@@ -59221,10 +59221,31 @@
    "2026-11-16": 56,
    "2026-11-17": 56,
    "2026-11-18": 43,
-   "2026-11-19": 18
+   "2026-11-19": 20
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35077",
+   "d": "2026-11-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35076",
    "d": "2026-11-19",
@@ -66944,6 +66965,7 @@
      "var": "Koyu vizyon, 40"
     }
    ],
+   "pd": "2026-11-19",
    "src": "Facebook",
    "ful": "محمود"
   },
