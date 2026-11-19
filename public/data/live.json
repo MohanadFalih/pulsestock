@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-19T21:27:23.049048+00:00",
+ "syncedAt": "2026-11-19T21:33:19.966569+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -10,20 +10,20 @@
    "sku": "H-1978",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-19",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-20",
+   "lastOrderDate": "2026-11-20",
+   "orders": 1,
+   "units": 1,
+   "revenue": 80000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -3337,17 +3337,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-11",
    "firstOrderDate": "2026-11-13",
-   "lastOrderDate": "2026-11-19",
-   "orders": 4,
-   "units": 4,
-   "revenue": 396000,
+   "lastOrderDate": "2026-11-20",
+   "orders": 5,
+   "units": 5,
+   "revenue": 495000,
    "delivered": 2,
    "returned": 0,
    "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 162,
     "lastChecked": "2026-11-19T13:18:34Z",
@@ -10433,17 +10433,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-24",
    "firstOrderDate": "2026-10-25",
-   "lastOrderDate": "2026-11-19",
-   "orders": 125,
-   "units": 136,
-   "revenue": 10880000,
+   "lastOrderDate": "2026-11-20",
+   "orders": 126,
+   "units": 137,
+   "revenue": 10960000,
    "delivered": 120,
    "returned": 27,
    "unitsBoughtFromSupplier": 120,
    "returnedStock": 15,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 1.86,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 2.0,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 147,
     "lastChecked": "2026-11-19T16:56:58Z",
@@ -43475,6 +43475,13 @@
   "from": "2026-08-22",
   "to": "2026-11-20",
   "byProduct": {
+   "7627": {
+    "2026-11-20": [
+     1,
+     1,
+     80000
+    ]
+   },
    "7613": {
     "2026-11-18": [
      1,
@@ -43795,6 +43802,11 @@
      99000
     ],
     "2026-11-19": [
+     1,
+     1,
+     99000
+    ],
+    "2026-11-20": [
      1,
      1,
      99000
@@ -45011,6 +45023,11 @@
      3,
      3,
      240000
+    ],
+    "2026-11-20": [
+     1,
+     1,
+     80000
     ]
    },
    "7462": {
@@ -59270,10 +59287,52 @@
    "2026-11-16": 56,
    "2026-11-17": 56,
    "2026-11-18": 43,
-   "2026-11-19": 40
+   "2026-11-19": 40,
+   "2026-11-20": 1
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35099",
+   "d": "2026-11-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1945",
+     "pid": 731957,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أحمر / Bordo, 4"
+    },
+    {
+     "sku": "T-8043",
+     "pid": 733853,
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 4"
+    },
+    {
+     "sku": "H-1978",
+     "pid": 735454,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "عنابي / Murdum, 52"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35098",
    "d": "2026-11-19",
