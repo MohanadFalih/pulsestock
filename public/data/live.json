@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-19T13:03:47.341310+00:00",
+ "syncedAt": "2026-11-19T13:33:31.196715+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -3218,20 +3218,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-11",
    "firstOrderDate": "2026-11-13",
-   "lastOrderDate": "2026-11-18",
-   "orders": 3,
-   "units": 3,
-   "revenue": 297000,
+   "lastOrderDate": "2026-11-19",
+   "orders": 4,
+   "units": 4,
+   "revenue": 396000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 4,
    "returnedStock": 1,
    "unitPrice": 99000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 164,
-    "lastChecked": "2026-11-18T10:59:32Z",
+    "qty": 162,
+    "lastChecked": "2026-11-19T13:18:34Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3256,7 +3256,7 @@
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 15,
+      "qty": 14,
       "product_id": 733848
      },
      {
@@ -3280,7 +3280,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "3",
-      "qty": 14,
+      "qty": 13,
       "product_id": 733852
      },
      {
@@ -5209,7 +5209,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 83,
-    "lastChecked": "2026-11-19T12:35:56Z",
+    "lastChecked": "2026-11-19T13:06:11Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -43660,6 +43660,11 @@
      1,
      1,
      99000
+    ],
+    "2026-11-19": [
+     1,
+     1,
+     99000
     ]
    },
    "7553": {
@@ -59231,10 +59236,31 @@
    "2026-11-16": 56,
    "2026-11-17": 56,
    "2026-11-18": 43,
-   "2026-11-19": 21
+   "2026-11-19": 22
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35079",
+   "d": "2026-11-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8043",
+     "pid": 733848,
+     "qty": 1,
+     "price": 99000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 3"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35078",
    "d": "2026-11-19",
