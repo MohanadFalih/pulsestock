@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-19T09:03:16.727668+00:00",
+ "syncedAt": "2026-11-19T09:33:31.090763+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1266,17 +1266,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-16",
    "firstOrderDate": "2026-11-17",
-   "lastOrderDate": "2026-11-18",
-   "orders": 3,
-   "units": 3,
-   "revenue": 219000,
+   "lastOrderDate": "2026-11-19",
+   "orders": 4,
+   "units": 4,
+   "revenue": 292000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 3,
    "returnedStock": 1,
    "unitPrice": 73000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 51,
     "lastChecked": "2026-11-18T15:29:49Z",
@@ -2340,7 +2340,7 @@
    "orders": 1,
    "units": 1,
    "revenue": 74000,
-   "delivered": 0,
+   "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
@@ -2508,7 +2508,7 @@
    "orders": 1,
    "units": 1,
    "revenue": 84000,
-   "delivered": 0,
+   "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
@@ -5209,7 +5209,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 83,
-    "lastChecked": "2026-11-19T08:58:58Z",
+    "lastChecked": "2026-11-19T09:30:07Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11685,10 +11685,10 @@
    "orders": 10,
    "units": 11,
    "revenue": 1078000,
-   "delivered": 10,
+   "delivered": 11,
    "returned": 1,
    "unitsBoughtFromSupplier": 10,
-   "returnedStock": 1,
+   "returnedStock": 0,
    "unitPrice": 98000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 4,
@@ -40430,10 +40430,10 @@
    "orders": 948,
    "units": 1104,
    "revenue": 37308000,
-   "delivered": 1000,
+   "delivered": 1002,
    "returned": 194,
    "unitsBoughtFromSupplier": 921,
-   "returnedStock": 61,
+   "returnedStock": 78,
    "unitPrice": 39000.0,
    "orderVelocity7d": 14.29,
    "daysSinceLastOrder": 0,
@@ -43210,9 +43210,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1716,
-  "stockValue": 48986073,
-  "stockVariants": 1308
+  "stockUnits": 1736,
+  "stockValue": 49317183,
+  "stockVariants": 1309
  },
  "daily": {
   "days": 90,
@@ -43302,6 +43302,11 @@
      146000
     ],
     "2026-11-18": [
+     1,
+     1,
+     73000
+    ],
+    "2026-11-19": [
      1,
      1,
      73000
@@ -58936,7 +58941,7 @@
     17
    ],
    "2026-11-19": [
-    22,
+    27,
     0
    ]
   },
@@ -59031,10 +59036,31 @@
    "2026-11-16": 56,
    "2026-11-17": 56,
    "2026-11-18": 43,
-   "2026-11-19": 11
+   "2026-11-19": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35069",
+   "d": "2026-11-19",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1975",
+     "pid": 734624,
+     "qty": 1,
+     "price": 73000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "جملي / Camel, 50"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35068",
    "d": "2026-11-19",
@@ -61262,13 +61288,13 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "route": "turkey",
      "var": "أسود / Siyah"
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "محمود"
   },
   {
    "id": "S34972",
@@ -61310,7 +61336,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34969",
@@ -61394,7 +61420,7 @@
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34964",
@@ -61478,7 +61504,7 @@
     }
    ],
    "src": "Website",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34959",
@@ -61580,7 +61606,7 @@
     }
    ],
    "src": "Website",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34955",
@@ -61683,7 +61709,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34949",
@@ -61845,7 +61871,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34942",
@@ -61866,7 +61892,7 @@
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34941",
@@ -61887,7 +61913,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34940",
@@ -61950,7 +61976,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34937",
@@ -61981,7 +62007,7 @@
     }
    ],
    "src": "WhatsApp",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34936",
@@ -62022,7 +62048,7 @@
     }
    ],
    "src": "WhatsApp",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34935",
@@ -62064,7 +62090,7 @@
     }
    ],
    "src": "WhatsApp",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34933",
@@ -62158,7 +62184,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34929",
@@ -62246,13 +62272,13 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "route": "turkey",
      "var": "نيلي / Laci"
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "محمود"
   },
   {
    "id": "S34925",
@@ -62328,7 +62354,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34923",
@@ -63161,7 +63187,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34891",
@@ -63785,7 +63811,7 @@
      "qty": 1,
      "price": 98000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "var": "عنابي / Murdum"
     },
     {
@@ -63794,13 +63820,13 @@
      "qty": 1,
      "price": 74000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "route": "turkey",
      "var": "Toprak, 3"
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "محمود"
   },
   {
    "id": "S34864",
@@ -63969,13 +63995,13 @@
      "qty": 1,
      "price": 84000,
      "discPct": 0,
-     "del": 0,
+     "del": 1,
      "route": "turkey",
      "var": "أسود / Siyah, 50"
     }
    ],
    "src": "Instagram",
-   "ful": "turkey"
+   "ful": "محمود"
   },
   {
    "id": "S34857",
@@ -64027,7 +64053,7 @@
     }
    ],
    "src": "Facebook",
-   "ful": "turkey"
+   "ful": "مدن"
   },
   {
    "id": "S34855",
@@ -174274,7 +174300,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 6,
+   "qty": 9,
    "cost": 18543,
    "created": "2025-09-27"
   },
@@ -174295,21 +174321,21 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 1,
+   "qty": 3,
    "cost": 18934,
    "created": "2025-09-27"
   },
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 0,
+   "qty": 1,
    "cost": 18550,
    "created": "2025-10-19"
   },
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 13,
+   "qty": 17,
    "cost": 18559,
    "created": "2025-10-19"
   },
@@ -174330,21 +174356,21 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 2,
+   "qty": 3,
    "cost": 18555,
    "created": "2026-01-10"
   },
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 26,
+   "qty": 31,
    "cost": 18550,
    "created": "2026-02-23"
   },
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 2,
+   "qty": 5,
    "cost": 18550,
    "created": "2026-10-03"
   },
@@ -180368,7 +180394,7 @@
    "sku": "H-1892",
    "model": "H-1892",
    "qty": 1,
-   "cost": 33756,
+   "cost": 34028,
    "created": "2026-09-13"
   },
   {
@@ -206243,9 +206269,8 @@
    "sku": "H-1938",
    "model": "H-1938",
    "qty": 0,
-   "cost": 37188,
-   "created": "2026-10-19",
-   "costSrc": "vendor"
+   "cost": 36750,
+   "created": "2026-10-19"
   },
   {
    "sku": "H-1938",
@@ -206281,9 +206306,8 @@
    "sku": "H-1938",
    "model": "H-1938",
    "qty": 0,
-   "cost": 37188,
-   "created": "2026-10-19",
-   "costSrc": "vendor"
+   "cost": 36750,
+   "created": "2026-10-19"
   },
   {
    "sku": "H-1938",
@@ -206296,17 +206320,15 @@
    "sku": "H-1938",
    "model": "H-1938",
    "qty": 0,
-   "cost": 37188,
-   "created": "2026-10-19",
-   "costSrc": "vendor"
+   "cost": 36750,
+   "created": "2026-10-19"
   },
   {
    "sku": "H-1938",
    "model": "H-1938",
    "qty": 0,
-   "cost": 37188,
-   "created": "2026-10-19",
-   "costSrc": "vendor"
+   "cost": 36750,
+   "created": "2026-10-19"
   },
   {
    "sku": "H-1938",
@@ -206431,9 +206453,8 @@
    "sku": "H-1940",
    "model": "H-1940",
    "qty": 0,
-   "cost": 40729,
-   "created": "2026-10-21",
-   "costSrc": "vendor"
+   "cost": 2835000,
+   "created": "2026-10-21"
   },
   {
    "sku": "H-1940",
@@ -207838,9 +207859,8 @@
    "sku": "H-1951",
    "model": "H-1951",
    "qty": 0,
-   "cost": 40729,
-   "created": "2026-10-29",
-   "costSrc": "vendor"
+   "cost": 40250,
+   "created": "2026-10-29"
   },
   {
    "sku": "H-1951",
@@ -207911,9 +207931,8 @@
    "sku": "H-1951",
    "model": "H-1951",
    "qty": 0,
-   "cost": 40729,
-   "created": "2026-10-29",
-   "costSrc": "vendor"
+   "cost": 40250,
+   "created": "2026-10-29"
   },
   {
    "sku": "H-1951",
@@ -210726,9 +210745,8 @@
    "sku": "H-1975",
    "model": "H-1975",
    "qty": 0,
-   "cost": 31875,
-   "created": "2026-11-16",
-   "costSrc": "vendor"
+   "cost": 31500,
+   "created": "2026-11-16"
   },
   {
    "sku": "H-1975",
@@ -215774,9 +215792,8 @@
    "sku": "K-6561",
    "model": "K-6561",
    "qty": 0,
-   "cost": 62900,
-   "created": "2026-10-26",
-   "costSrc": "vendor"
+   "cost": 62160,
+   "created": "2026-10-26"
   },
   {
    "sku": "K-6563",
@@ -220926,17 +220943,15 @@
    "sku": "K-6688",
    "model": "K-6688",
    "qty": 0,
-   "cost": 76500,
-   "created": "2026-10-29",
-   "costSrc": "vendor"
+   "cost": 75600,
+   "created": "2026-10-29"
   },
   {
    "sku": "K-6688",
    "model": "K-6688",
    "qty": 0,
-   "cost": 76500,
-   "created": "2026-10-29",
-   "costSrc": "vendor"
+   "cost": 75600,
+   "created": "2026-10-29"
   },
   {
    "sku": "K-6688",
@@ -220956,9 +220971,8 @@
    "sku": "K-6688",
    "model": "K-6688",
    "qty": 0,
-   "cost": 76500,
-   "created": "2026-10-29",
-   "costSrc": "vendor"
+   "cost": 75600,
+   "created": "2026-10-29"
   },
   {
    "sku": "K-6688",
@@ -229143,7 +229157,7 @@
   {
    "sku": "L-9076",
    "model": "L-9076",
-   "qty": 1,
+   "qty": 0,
    "cost": 56000,
    "created": "2026-10-21"
   },
@@ -229440,7 +229454,7 @@
   {
    "sku": "M-0259NZRK1200",
    "model": "M-0259NZRK1200",
-   "qty": 0,
+   "qty": 1,
    "cost": 33600,
    "created": "2026-11-05"
   },
@@ -234798,7 +234812,7 @@
   {
    "sku": "M-2627MSA980",
    "model": "M-2627MSA980",
-   "qty": 0,
+   "qty": 1,
    "cost": 36960,
    "created": "2026-11-10"
   },
@@ -238530,7 +238544,7 @@
   {
    "sku": "M-2818MSA980",
    "model": "M-2818MSA980",
-   "qty": 0,
+   "qty": 1,
    "cost": 53592,
    "created": "2026-11-15"
   },
@@ -240639,7 +240653,7 @@
   {
    "sku": "M-3094KTR750",
    "model": "M-3094KTR750",
-   "qty": 0,
+   "qty": 1,
    "cost": 55440,
    "created": "2026-11-11"
   },
@@ -256444,9 +256458,8 @@
    "sku": "T-8033",
    "model": "T-8033",
    "qty": 0,
-   "cost": 46042,
-   "created": "2026-11-14",
-   "costSrc": "vendor"
+   "cost": 45500,
+   "created": "2026-11-14"
   },
   {
    "sku": "T-8033",
@@ -257272,7 +257285,7 @@
   {
    "sku": "T-8043",
    "model": "T-8043",
-   "qty": 0,
+   "qty": 1,
    "cost": 61250,
    "created": "2026-11-11"
   },
