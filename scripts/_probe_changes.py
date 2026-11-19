@@ -1,33 +1,22 @@
 import os,sys,re,collections as C
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from odoo_sync import Odoo,load_env,ENV_PATH
-from datetime import datetime,timedelta
 o=Odoo(load_env(ENV_PATH))
 def sr(m,dom,f):
     try: return o.kw(m,"search_read",[dom],{"fields":f})
     except Exception as e: print("DENIED",m,str(e)[:200]); return []
-loc=lambda s: (datetime.strptime(s,"%Y-%m-%d %H:%M:%S")+timedelta(hours=3))
-so=sr("sale.order",[["create_date",">=","2026-11-11 21:00:00"]],["name","state","create_date","date_order","amount_total","order_line"])
-print("orders",len(so))
-lines=sr("sale.order.line",[["order_id","in",[x["id"] for x in so]]],["order_id","product_id","price_unit","product_uom_qty","discount","route_id"])
-L=C.defaultdict(list)
-for l in lines: L[l["order_id"][0]].append(l)
-T=C.defaultdict(C.Counter)
-for x in so:
-    d=loc(x["create_date"]).strftime("%m-%d"); ls=L[x["id"]]
-    cheap=any(l["price_unit"]<=26000 and l["price_unit"]>0 for l in ls)
-    routes={(l["route_id"] or [0,"none"])[1] for l in ls}
-    T[d][x["state"]]+=1
-    if cheap: T[d]["cheap_"+x["state"]]+=1
-    for r in routes: T[d]["route:"+r+":"+x["state"]]+=1
-for d in sorted(T): print("DAY",d,dict(sorted(T[d].items())))
-ids=[x["id"] for x in so if x["state"] in ("draft","sent","cancel") and x["create_date"]>="2026-11-15 21:00:00"]
-ms=sr("mail.message",[["model","=","sale.order"],["res_id","in",ids]],["date","res_id","body","message_type"])
 strip=lambda h: re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",h or "")).strip()
-pat=C.Counter((loc(m["date"]).strftime("%m-%d"),re.sub(r"[\d,]+","#",strip(m["body"]))[:110]) for m in ms if strip(m["body"]))
-for (d,p),n in sorted(pat.items()):
-    if n>=2: print("MSG",d,n,"|",p)
-names={x["id"]:(x["name"],x["state"],loc(x["create_date"]).strftime("%m-%d %H:%M")) for x in so}
-for x in so:
-    if x["state"] in ("draft","sent") and x["create_date"]>="2026-11-15 21:00:00":
-        ls=L[x["id"]]; print("OPEN",*names[x["id"]],"|",[( (l["product_id"] or [0,""])[1][:30],l["price_unit"],(l["route_id"] or [0,""])[1]) for l in ls][:4])
+codes=["L-1800","H-1951","H-1938","T-8041","H-1945","H-1916","L-1729","T-8014","H-1908"]
+F=["name","default_code","list_price","purchase_ok","route_ids","x_supplier_status","catalog_price","liq_discount_on","write_date"]
+for c in codes:
+    t=sr("product.template",[["default_code","=ilike",c+"%"]],[f for f in F])
+    if not t: t=sr("product.template",[["name","ilike",c]],F)
+    for x in t[:2]:
+        print("TMPL",c,{k:x.get(k) for k in F})
+        ms=sr("mail.message",[["model","=","product.template"],["res_id","=",x["id"]],["date",">=","2026-11-14 00:00:00"]],["date","body","tracking_value_ids"])
+        for m in ms: print("   MSG",m["date"],strip(m["body"])[:200],m["tracking_value_ids"][:3])
+ms=sr("mail.message",[["model","=","product.template"],["date",">=","2026-11-17 18:00:00"],["date","<=","2026-11-18 12:00:00"]],["date","record_name","body","tracking_value_ids"])
+pat=C.Counter((m["date"][:13],re.sub(r"[\d,]+","#",strip(m["body"]))[:90]) for m in ms)
+for (h,p),n in sorted(pat.items()): print("PAT",h,n,"|",p)
+tv=sr("mail.tracking.value",[["create_date",">=","2026-11-17 18:00:00"],["create_date","<=","2026-11-18 12:00:00"]],["field_id","old_value_char","new_value_char","create_date","mail_message_id"])
+print("TV",C.Counter(((t["field_id"] or [0,""])[1],t["create_date"][:13]) for t in tv).most_common(20))
