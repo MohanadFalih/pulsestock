@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-20T18:55:07.286585+00:00",
+ "syncedAt": "2026-11-20T19:03:46.710031+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -8885,7 +8885,7 @@
    "delivered": 7,
    "returned": 2,
    "unitsBoughtFromSupplier": 10,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 83000.0,
    "orderVelocity7d": 1.0,
    "daysSinceLastOrder": 0,
@@ -15366,17 +15366,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-09",
    "firstOrderDate": "2026-10-09",
-   "lastOrderDate": "2026-11-18",
-   "orders": 81,
-   "units": 84,
-   "revenue": 11500000,
+   "lastOrderDate": "2026-11-20",
+   "orders": 82,
+   "units": 85,
+   "revenue": 11637000,
    "delivered": 84,
    "returned": 20,
    "unitsBoughtFromSupplier": 72,
    "returnedStock": 11,
    "unitPrice": 137000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 42,
     "lastChecked": "2026-11-20T15:33:34Z",
@@ -46451,6 +46451,11 @@
      1,
      1,
      137000
+    ],
+    "2026-11-20": [
+     1,
+     1,
+     137000
     ]
    },
    "7401": {
@@ -59630,10 +59635,31 @@
    "2026-11-17": 56,
    "2026-11-18": 43,
    "2026-11-19": 40,
-   "2026-11-20": 41
+   "2026-11-20": 42
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35142",
+   "d": "2026-11-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6676",
+     "pid": 731134,
+     "qty": 1,
+     "price": 137000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أحمر / Bordo, 1"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35141",
    "d": "2026-11-20",
@@ -65181,7 +65207,9 @@
      "price": 25000,
      "discPct": 0,
      "del": 1,
-     "var": "قهوائي / Kahve, XL"
+     "var": "قهوائي / Kahve, XL",
+     "ret": 1,
+     "rd": "2026-11-20"
     },
     {
      "sku": "T-6800",
@@ -65190,7 +65218,9 @@
      "price": 25000,
      "discPct": 0,
      "del": 1,
-     "var": "أسود / Siyah, 4"
+     "var": "أسود / Siyah, 4",
+     "ret": 1,
+     "rd": "2026-11-20"
     },
     {
      "sku": "M-1002ETT926",
@@ -244133,7 +244163,7 @@
   {
    "sku": "M-4092TEG847",
    "model": "M-4092TEG847",
-   "qty": 0,
+   "qty": 1,
    "cost": 26812,
    "created": "2025-10-04"
   },
@@ -250328,7 +250358,7 @@
   {
    "sku": "T-6800",
    "model": "T-6800",
-   "qty": 0,
+   "qty": 1,
    "cost": 28000,
    "created": "2025-05-26"
   },
