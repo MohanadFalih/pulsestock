@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-20T22:03:28.846887+00:00",
+ "syncedAt": "2026-11-20T22:33:09.759375+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5641,7 +5641,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 79,
-    "lastChecked": "2026-11-20T21:48:20Z",
+    "lastChecked": "2026-11-20T22:19:38Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -14974,17 +14974,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-10",
    "firstOrderDate": "2026-10-11",
-   "lastOrderDate": "2026-11-20",
-   "orders": 11,
-   "units": 16,
-   "revenue": 1152000,
+   "lastOrderDate": "2026-11-21",
+   "orders": 12,
+   "units": 17,
+   "revenue": 1224000,
    "delivered": 14,
    "returned": 2,
    "unitsBoughtFromSupplier": 12,
    "returnedStock": 5,
    "unitPrice": 72000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 77,
     "lastChecked": "2026-11-20T20:34:31Z",
@@ -46207,6 +46207,11 @@
      1,
      1,
      72000
+    ],
+    "2026-11-21": [
+     1,
+     1,
+     72000
     ]
    },
    "7405": {
@@ -59635,10 +59640,29 @@
    "2026-11-18": 43,
    "2026-11-19": 40,
    "2026-11-20": 53,
-   "2026-11-21": 9
+   "2026-11-21": 10
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35167",
+   "d": "2026-11-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -72000,
+   "lines": [
+    {
+     "sku": "H-1928",
+     "pid": 731203,
+     "qty": 1,
+     "price": 72000,
+     "discPct": 0,
+     "del": 0,
+     "var": "أسود / Siyah, 42"
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S35166",
    "d": "2026-11-21",
