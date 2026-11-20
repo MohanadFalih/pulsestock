@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-20T14:33:31.550980+00:00",
+ "syncedAt": "2026-11-20T15:04:10.332607+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -53,8 +53,8 @@
    "orderVelocity7d": 0.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 126,
-    "lastChecked": "2026-11-20T11:48:31Z",
+    "qty": 124,
+    "lastChecked": "2026-11-20T14:39:11Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -67,7 +67,7 @@
      {
       "color": "نيلي / Laci",
       "size": "44",
-      "qty": 4,
+      "qty": 3,
       "product_id": 735427
      },
      {
@@ -133,7 +133,7 @@
      {
       "color": "قهوائي / Kahve",
       "size": "42",
-      "qty": 5,
+      "qty": 4,
       "product_id": 735438
      },
      {
@@ -5513,7 +5513,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 80,
-    "lastChecked": "2026-11-20T14:04:45Z",
+    "lastChecked": "2026-11-20T14:35:28Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -40716,19 +40716,19 @@
    "odooCreatedDate": "2025-09-27",
    "firstOrderDate": "2025-09-27",
    "lastOrderDate": "2026-11-20",
-   "orders": 959,
-   "units": 1117,
-   "revenue": 37815000,
+   "orders": 960,
+   "units": 1120,
+   "revenue": 37932000,
    "delivered": 1065,
    "returned": 194,
-   "unitsBoughtFromSupplier": 933,
+   "unitsBoughtFromSupplier": 935,
    "returnedStock": 17,
    "unitPrice": 39000.0,
-   "orderVelocity7d": 13.43,
+   "orderVelocity7d": 13.57,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 304,
-    "lastChecked": "2026-11-20T14:06:15Z",
+    "qty": 303,
+    "lastChecked": "2026-11-20T14:42:21Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -40795,7 +40795,7 @@
      {
       "color": "خاكي / Haki",
       "size": "STD",
-      "qty": 11,
+      "qty": 10,
       "product_id": 730710
      }
     ]
@@ -58433,9 +58433,9 @@
      468000
     ],
     "2026-11-20": [
-     3,
-     3,
-     117000
+     4,
+     6,
+     234000
     ]
    },
    "5855": {
@@ -59703,10 +59703,50 @@
    "2026-11-17": 56,
    "2026-11-18": 43,
    "2026-11-19": 40,
-   "2026-11-20": 28
+   "2026-11-20": 29
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35128",
+   "d": "2026-11-20",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1800",
+     "pid": 715723,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 688392,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "var": "نيلي / Laci"
+    },
+    {
+     "sku": "L-1800",
+     "pid": 672398,
+     "qty": 1,
+     "price": 39000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Kırmızı"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35127",
    "d": "2026-11-20",
@@ -59862,13 +59902,13 @@
    "lines": [
     {
      "sku": "H-1978",
-     "pid": 735438,
+     "pid": 735450,
      "qty": 1,
      "price": 80000,
      "discPct": 0,
      "del": 0,
      "route": "turkey",
-     "var": "قهوائي / Kahve, 42"
+     "var": "عنابي / Murdum, 42"
     }
    ],
    "src": "Instagram",
