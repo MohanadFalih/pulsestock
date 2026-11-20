@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-20T22:33:09.759375+00:00",
+ "syncedAt": "2026-11-20T23:03:42.611516+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -720,20 +720,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-18",
    "firstOrderDate": "2026-11-18",
-   "lastOrderDate": "2026-11-19",
-   "orders": 2,
-   "units": 2,
-   "revenue": 156000,
+   "lastOrderDate": "2026-11-21",
+   "orders": 3,
+   "units": 3,
+   "revenue": 234000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 78000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 193,
-    "lastChecked": "2026-11-20T15:31:25Z",
+    "qty": 192,
+    "lastChecked": "2026-11-20T22:52:59Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -782,7 +782,7 @@
      {
       "color": "أسود / Siyah",
       "size": "42",
-      "qty": 5,
+      "qty": 4,
       "product_id": 735020
      },
      {
@@ -5641,7 +5641,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 79,
-    "lastChecked": "2026-11-20T22:19:38Z",
+    "lastChecked": "2026-11-20T22:49:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -43706,6 +43706,11 @@
      1,
      1,
      78000
+    ],
+    "2026-11-21": [
+     1,
+     1,
+     78000
     ]
    },
    "7610": {
@@ -59640,10 +59645,31 @@
    "2026-11-18": 43,
    "2026-11-19": 40,
    "2026-11-20": 53,
-   "2026-11-21": 10
+   "2026-11-21": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35168",
+   "d": "2026-11-21",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1977",
+     "pid": 735030,
+     "qty": 1,
+     "price": 78000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 48"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35167",
    "d": "2026-11-21",
