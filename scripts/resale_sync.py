@@ -24,6 +24,7 @@ Run with --print to dump a short summary instead of writing the file.
 import datetime
 import json
 import os
+import re
 import statistics
 import sys
 import time
@@ -292,7 +293,8 @@ def main():
                     "lst": float(v.get("lst_price") or 0), "qty": int(float(v.get("free_qty") or 0))}
             info["price"], info["rule"] = pricelist_price(rules, info, now)
             by_tmpl[tid].append(info)
-            tmpl_name[tid] = m2o_name(v["product_tmpl_id"]) or ""
+            # display name carries "[internal ref] " when the template has one (L-1433)
+            tmpl_name[tid] = re.sub(r"^\[[^\]]*\]\s*", "", m2o_name(v["product_tmpl_id"]) or "")
         codes = sorted(((norm(n), t) for t, n in tmpl_name.items() if len(norm(n)) >= 4),
                        key=lambda z: -len(z[0]))
         unmatched = []
@@ -346,8 +348,8 @@ def main():
         print(json.dumps({k: payload[k] for k in ("byState", "byStep", "steps", "daily")},
                          ensure_ascii=False, indent=1))
         pc = payload["priceCheck"]
-        print(json.dumps({"integrated": pc["tasfiyaIntegrated"], "note": pc["note"],
-                          "mismatches": pc["mismatches"][:15]}, ensure_ascii=False, indent=1))
+        print(json.dumps({"integrated": pc["integrated"] if "integrated" in pc else pc["tasfiyaIntegrated"],
+                          "note": pc["note"], "mismatches": pc["mismatches"][:15]}, ensure_ascii=False, indent=1))
         return 0
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     tmp = OUT_PATH + ".tmp"
