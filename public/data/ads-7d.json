@@ -1,9 +1,9 @@
 {
- "syncedAt": "2026-11-20T23:34:04.863696+00:00",
- "metaSyncedAt": "2026-11-20T23:34:04.863696+00:00",
+ "syncedAt": "2026-11-21T00:03:36.192465+00:00",
+ "metaSyncedAt": "2026-11-21T00:03:36.192465+00:00",
  "window": {
-  "since": "2026-11-14",
-  "until": "2026-11-20",
+  "since": "2026-11-15",
+  "until": "2026-11-21",
   "days": 7
  },
  "tz": "dates are in the ad account timezone as returned by Meta",
@@ -11,22 +11,12 @@
  "note": "Per-SKU ad-level Meta performance over the 7-day window (including today). SKUs are extracted from ad names (e.g. 'H-1920'); an ad whose name mentions several SKUs attributes its full spend/purchases to each of them. purchases7d is null when zero (same convention as the 3-day fields in ad-brief.json) and counts the single action type 'omni_purchase' (fallback 'purchase') — the Ads Manager Purchases column; offsite_conversion.* excluded, no double counting). error!=null means the ad-level fetch failed — campaigns.json is unaffected.",
  "error": null,
  "skus": {
-  "H-1899": {
-   "spend7dUSD": 0.0,
-   "purchases7d": null,
-   "campaigns": {
-    "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 0.0,
-     "purchases7d": null
-    }
-   }
-  },
   "H-1906": {
-   "spend7dUSD": 33.0,
+   "spend7dUSD": 33.57,
    "purchases7d": 2,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 33.0,
+     "spend7dUSD": 33.57,
      "purchases7d": 2
     }
    }
@@ -42,15 +32,15 @@
    }
   },
   "H-1916": {
-   "spend7dUSD": 125.33,
-   "purchases7d": 9,
+   "spend7dUSD": 111.44,
+   "purchases7d": 8,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 112.15,
-     "purchases7d": 9
+     "spend7dUSD": 99.11,
+     "purchases7d": 8
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 13.18,
+     "spend7dUSD": 12.33,
      "purchases7d": null
     }
    }
@@ -66,242 +56,242 @@
    }
   },
   "H-1938": {
-   "spend7dUSD": 156.85,
-   "purchases7d": 10,
+   "spend7dUSD": 116.17,
+   "purchases7d": 8,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 72.35,
-     "purchases7d": 7
+     "spend7dUSD": 60.9,
+     "purchases7d": 5
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 84.5,
+     "spend7dUSD": 55.27,
      "purchases7d": 3
     }
    }
   },
   "H-1940": {
-   "spend7dUSD": 6.16,
+   "spend7dUSD": 6.76,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.16,
+     "spend7dUSD": 6.76,
      "purchases7d": null
     }
    }
   },
   "H-1945": {
-   "spend7dUSD": 60.25,
+   "spend7dUSD": 64.49,
    "purchases7d": 8,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 16.98,
+     "spend7dUSD": 19.38,
      "purchases7d": 2
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 6.08,
-     "purchases7d": 2
+     "spend7dUSD": 5.53,
+     "purchases7d": 1
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 26.37,
-     "purchases7d": 4
+     "spend7dUSD": 27.85,
+     "purchases7d": 5
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 10.82,
+     "spend7dUSD": 11.73,
      "purchases7d": null
     }
    }
   },
   "H-1951": {
-   "spend7dUSD": 153.69,
-   "purchases7d": 23,
+   "spend7dUSD": 141.21,
+   "purchases7d": 20,
    "campaigns": {
     "DENIZ | CUSTOMERS | STARS": {
-     "spend7dUSD": 107.86,
-     "purchases7d": 19
+     "spend7dUSD": 96.07,
+     "purchases7d": 16
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 18.16,
+     "spend7dUSD": 16.4,
      "purchases7d": 2
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 23.43,
+     "spend7dUSD": 24.48,
      "purchases7d": 1
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 4.24,
+     "spend7dUSD": 4.26,
      "purchases7d": 1
     }
    }
   },
   "H-1954": {
-   "spend7dUSD": 29.16,
-   "purchases7d": 3,
+   "spend7dUSD": 28.91,
+   "purchases7d": 4,
    "campaigns": {
     "DENIZ | CUSTOMERS | STARS": {
-     "spend7dUSD": 14.72,
+     "spend7dUSD": 13.94,
      "purchases7d": 2
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 2.97,
+     "spend7dUSD": 2.89,
      "purchases7d": null
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 11.47,
-     "purchases7d": 1
+     "spend7dUSD": 12.08,
+     "purchases7d": 2
     }
    }
   },
   "H-1958": {
-   "spend7dUSD": 5.3,
+   "spend7dUSD": 5.77,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 5.3,
+     "spend7dUSD": 5.77,
      "purchases7d": null
     }
    }
   },
   "H-1959": {
-   "spend7dUSD": 33.28,
-   "purchases7d": 8,
+   "spend7dUSD": 26.94,
+   "purchases7d": 6,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 33.28,
-     "purchases7d": 8
+     "spend7dUSD": 26.94,
+     "purchases7d": 6
     }
    }
   },
   "H-1962": {
-   "spend7dUSD": 152.68,
-   "purchases7d": 19,
+   "spend7dUSD": 148.57,
+   "purchases7d": 20,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
      "spend7dUSD": 115.39,
      "purchases7d": 13
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 37.29,
-     "purchases7d": 6
+     "spend7dUSD": 33.18,
+     "purchases7d": 7
     }
    }
   },
   "H-1965": {
-   "spend7dUSD": 6.26,
+   "spend7dUSD": 7.04,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.26,
+     "spend7dUSD": 7.04,
      "purchases7d": null
     }
    }
   },
   "H-1967": {
-   "spend7dUSD": 32.64,
+   "spend7dUSD": 33.32,
    "purchases7d": 1,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 32.64,
+     "spend7dUSD": 33.32,
      "purchases7d": 1
     }
    }
   },
   "H-1970": {
-   "spend7dUSD": 55.57,
+   "spend7dUSD": 54.0,
    "purchases7d": 2,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 5.21,
+     "spend7dUSD": 5.48,
      "purchases7d": 1
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 50.36,
+     "spend7dUSD": 48.52,
      "purchases7d": 1
     }
    }
   },
   "H-1975": {
-   "spend7dUSD": 14.32,
+   "spend7dUSD": 14.73,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 14.32,
+     "spend7dUSD": 14.73,
      "purchases7d": null
     }
    }
   },
   "H-1977": {
-   "spend7dUSD": 6.16,
+   "spend7dUSD": 6.79,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.16,
+     "spend7dUSD": 6.79,
      "purchases7d": null
     }
    }
   },
   "K-6688": {
-   "spend7dUSD": 31.25,
+   "spend7dUSD": 32.05,
    "purchases7d": 1,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 31.25,
+     "spend7dUSD": 32.05,
      "purchases7d": 1
     }
    }
   },
   "L-0667": {
-   "spend7dUSD": 5.06,
+   "spend7dUSD": 5.63,
    "purchases7d": 1,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 5.06,
+     "spend7dUSD": 5.63,
      "purchases7d": 1
     }
    }
   },
   "L-1056": {
-   "spend7dUSD": 56.47,
-   "purchases7d": 5,
+   "spend7dUSD": 52.59,
+   "purchases7d": 6,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 50.18,
-     "purchases7d": 5
+     "spend7dUSD": 50.92,
+     "purchases7d": 6
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.29,
+     "spend7dUSD": 1.67,
      "purchases7d": null
     }
    }
   },
   "L-1729": {
-   "spend7dUSD": 63.94,
-   "purchases7d": 7,
+   "spend7dUSD": 59.3,
+   "purchases7d": 4,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 28.2,
-     "purchases7d": 1
+     "spend7dUSD": 25.96,
+     "purchases7d": null
     },
     "TEST PRODUCTS": {
      "spend7dUSD": 6.08,
      "purchases7d": null
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 29.66,
-     "purchases7d": 6
+     "spend7dUSD": 27.26,
+     "purchases7d": 4
     }
    }
   },
   "L-1800": {
-   "spend7dUSD": 648.55,
-   "purchases7d": 126,
+   "spend7dUSD": 582.42,
+   "purchases7d": 113,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 320.29,
-     "purchases7d": 57
+     "spend7dUSD": 285.99,
+     "purchases7d": 55
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 328.26,
-     "purchases7d": 69
+     "spend7dUSD": 296.43,
+     "purchases7d": 58
     }
    }
   },
@@ -316,45 +306,45 @@
    }
   },
   "L-7072": {
-   "spend7dUSD": 6.5,
+   "spend7dUSD": 7.02,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.5,
+     "spend7dUSD": 7.02,
      "purchases7d": null
     }
    }
   },
   "M-0259": {
-   "spend7dUSD": 61.97,
-   "purchases7d": 7,
+   "spend7dUSD": 57.33,
+   "purchases7d": 6,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 54.34,
+     "spend7dUSD": 55.46,
      "purchases7d": 5
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 7.63,
-     "purchases7d": 2
+     "spend7dUSD": 1.87,
+     "purchases7d": 1
     }
    }
   },
   "M-1006": {
-   "spend7dUSD": 49.31,
+   "spend7dUSD": 50.55,
    "purchases7d": 12,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 49.31,
+     "spend7dUSD": 50.55,
      "purchases7d": 12
     }
    }
   },
   "M-1214": {
-   "spend7dUSD": 5.27,
+   "spend7dUSD": 5.94,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 5.27,
+     "spend7dUSD": 5.94,
      "purchases7d": null
     }
    }
@@ -370,16 +360,16 @@
    }
   },
   "M-257": {
-   "spend7dUSD": 2.14,
-   "purchases7d": 5,
+   "spend7dUSD": 0.0,
+   "purchases7d": 2,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 0.99,
-     "purchases7d": 3
+     "spend7dUSD": 0.0,
+     "purchases7d": 2
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 1.15,
-     "purchases7d": 2
+     "spend7dUSD": 0.0,
+     "purchases7d": null
     },
     "TEST PRODUCTS": {
      "spend7dUSD": 0.0,
@@ -388,11 +378,11 @@
    }
   },
   "M-2602": {
-   "spend7dUSD": 7.34,
+   "spend7dUSD": 7.86,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 7.34,
+     "spend7dUSD": 7.86,
      "purchases7d": null
     }
    }
@@ -408,99 +398,99 @@
    }
   },
   "M-3400": {
-   "spend7dUSD": 1.55,
-   "purchases7d": 1,
+   "spend7dUSD": 0.0,
+   "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 1.55,
-     "purchases7d": 1
+     "spend7dUSD": 0.0,
+     "purchases7d": null
     }
    }
   },
   "M-3431": {
-   "spend7dUSD": 62.95,
-   "purchases7d": 12,
+   "spend7dUSD": 58.63,
+   "purchases7d": 10,
    "campaigns": {
     "DENIZ | CUSTOMERS | STARS": {
-     "spend7dUSD": 0.67,
+     "spend7dUSD": 0.68,
      "purchases7d": null
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 55.04,
+     "spend7dUSD": 56.25,
      "purchases7d": 8
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.97,
-     "purchases7d": 4
+     "spend7dUSD": 1.38,
+     "purchases7d": 2
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 0.27,
+     "spend7dUSD": 0.32,
      "purchases7d": null
     }
    }
   },
   "M-4043": {
-   "spend7dUSD": 69.19,
+   "spend7dUSD": 66.75,
    "purchases7d": 6,
    "campaigns": {
     "DENIZ | RETARGETING | WARM": {
-     "spend7dUSD": 2.48,
+     "spend7dUSD": 2.85,
      "purchases7d": null
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 57.72,
+     "spend7dUSD": 54.8,
      "purchases7d": 6
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 8.99,
+     "spend7dUSD": 9.1,
      "purchases7d": null
     }
    }
   },
   "M-5678": {
-   "spend7dUSD": 5.81,
+   "spend7dUSD": 6.31,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 5.81,
+     "spend7dUSD": 6.31,
      "purchases7d": null
     }
    }
   },
   "M-6255": {
-   "spend7dUSD": 30.67,
-   "purchases7d": 2,
+   "spend7dUSD": 25.53,
+   "purchases7d": 1,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
      "spend7dUSD": 23.96,
      "purchases7d": 1
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.71,
-     "purchases7d": 1
-    }
-   }
-  },
-  "T-8008": {
-   "spend7dUSD": 5.92,
-   "purchases7d": null,
-   "campaigns": {
-    "TEST PRODUCTS": {
-     "spend7dUSD": 5.92,
+     "spend7dUSD": 1.57,
      "purchases7d": null
     }
    }
   },
+  "T-8008": {
+   "spend7dUSD": 6.24,
+   "purchases7d": 1,
+   "campaigns": {
+    "TEST PRODUCTS": {
+     "spend7dUSD": 6.24,
+     "purchases7d": 1
+    }
+   }
+  },
   "T-8014": {
-   "spend7dUSD": 26.84,
+   "spend7dUSD": 8.06,
    "purchases7d": 4,
    "campaigns": {
     "DENIZ | CUSTOMERS | STARS": {
-     "spend7dUSD": 3.29,
+     "spend7dUSD": 2.26,
      "purchases7d": 1
     },
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 23.55,
+     "spend7dUSD": 5.8,
      "purchases7d": 3
     }
    }
@@ -516,12 +506,12 @@
    }
   },
   "T-8023": {
-   "spend7dUSD": 40.21,
-   "purchases7d": 7,
+   "spend7dUSD": 36.28,
+   "purchases7d": 6,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 40.21,
-     "purchases7d": 7
+     "spend7dUSD": 36.28,
+     "purchases7d": 6
     }
    }
   },
@@ -535,32 +525,22 @@
     }
    }
   },
-  "T-8025": {
-   "spend7dUSD": 0.0,
-   "purchases7d": null,
-   "campaigns": {
-    "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 0.0,
-     "purchases7d": null
-    }
-   }
-  },
   "T-8033": {
-   "spend7dUSD": 7.28,
+   "spend7dUSD": 7.66,
    "purchases7d": 1,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 7.28,
+     "spend7dUSD": 7.66,
      "purchases7d": 1
     }
    }
   },
   "T-8034": {
-   "spend7dUSD": 2.22,
+   "spend7dUSD": 0.0,
    "purchases7d": null,
    "campaigns": {
     "MESSAGES CAMPAIGN": {
-     "spend7dUSD": 2.22,
+     "spend7dUSD": 0.0,
      "purchases7d": null
     },
     "TEST PRODUCTS": {
@@ -569,22 +549,12 @@
     }
    }
   },
-  "T-8035": {
-   "spend7dUSD": 0.0,
-   "purchases7d": null,
-   "campaigns": {
-    "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 0.0,
-     "purchases7d": null
-    }
-   }
-  },
   "T-8041": {
-   "spend7dUSD": 61.92,
+   "spend7dUSD": 63.36,
    "purchases7d": 5,
    "campaigns": {
     "DENIZ | CUSTOMERS | STARS": {
-     "spend7dUSD": 8.85,
+     "spend7dUSD": 9.11,
      "purchases7d": 2
     },
     "MESSAGES CAMPAIGN": {
@@ -592,71 +562,71 @@
      "purchases7d": null
     },
     "TEST PRODUCTS": {
-     "spend7dUSD": 33.17,
+     "spend7dUSD": 34.33,
      "purchases7d": 3
     },
     "TIME | 24H – DAILY website advantage": {
-     "spend7dUSD": 0.5,
+     "spend7dUSD": 0.52,
      "purchases7d": null
     }
    }
   },
   "T-8043": {
-   "spend7dUSD": 19.66,
+   "spend7dUSD": 20.54,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 19.66,
+     "spend7dUSD": 20.54,
      "purchases7d": null
     }
    }
   },
   "T-8050": {
-   "spend7dUSD": 32.04,
+   "spend7dUSD": 26.88,
    "purchases7d": null,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 32.04,
+     "spend7dUSD": 26.88,
      "purchases7d": null
     }
    }
   },
   "T-8055": {
-   "spend7dUSD": 7.41,
+   "spend7dUSD": 7.9,
    "purchases7d": 2,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 7.41,
+     "spend7dUSD": 7.9,
      "purchases7d": 2
     }
    }
   },
   "T-8057": {
-   "spend7dUSD": 6.18,
+   "spend7dUSD": 6.88,
    "purchases7d": 1,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 6.18,
+     "spend7dUSD": 6.88,
      "purchases7d": 1
     }
    }
   },
   "T-8059": {
-   "spend7dUSD": 20.27,
+   "spend7dUSD": 21.16,
    "purchases7d": 2,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 20.27,
+     "spend7dUSD": 21.16,
      "purchases7d": 2
     }
    }
   },
   "T-8060": {
-   "spend7dUSD": 5.8,
+   "spend7dUSD": 6.19,
    "purchases7d": 1,
    "campaigns": {
     "TEST PRODUCTS": {
-     "spend7dUSD": 5.8,
+     "spend7dUSD": 6.19,
      "purchases7d": 1
     }
    }
