@@ -348,8 +348,8 @@ def main():
         print(json.dumps({k: payload[k] for k in ("byState", "byStep", "steps", "daily")},
                          ensure_ascii=False, indent=1))
         pc = payload["priceCheck"]
-        print(json.dumps({"integrated": pc["integrated"] if "integrated" in pc else pc["tasfiyaIntegrated"],
-                          "note": pc["note"], "mismatches": pc["mismatches"][:15]}, ensure_ascii=False, indent=1))
+        print(json.dumps({"integrated": pc["tasfiyaIntegrated"], "note": pc["note"],
+                          "mismatches": pc["mismatches"][:15]}, ensure_ascii=False, indent=1))
         return 0
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
     tmp = OUT_PATH + ".tmp"
