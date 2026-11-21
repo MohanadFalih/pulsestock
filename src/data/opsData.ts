@@ -66,6 +66,21 @@ export interface OpsStockItem {
   created: string;
 }
 
+/** One Odoo product (per model) from live.json `products` — only the
+ *  fields the Price lab reads. Supplier stock comes from the purchase
+ *  robot (Butik Sistem), refreshed daily after 18:00 Baghdad. */
+export interface OpsProduct {
+  sku: string;
+  unitPrice?: number | null;
+  odooCreatedDate?: string | null;
+  supplierStock?: {
+    qty: number | null;
+    status: string | null;
+    source?: string | null;
+    variants?: { color: string; size?: string; qty: number }[];
+  };
+}
+
 export interface OpsPayload {
   syncedAt: string;
   currency: string;
@@ -75,6 +90,8 @@ export interface OpsPayload {
   paymentsSynced?: boolean;
   /** Warehouse stock at cost (qty_available × standard_price). */
   shop?: { stockUnits: number; stockValue: number; stockVariants: number };
+  /** Odoo products with price, creation day and supplier stock. */
+  products?: OpsProduct[];
 }
 
 const LIVE_URL = "/data/live.json";

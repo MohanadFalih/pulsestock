@@ -27,6 +27,8 @@ import { computeExperiment } from "@/data/experimentEngine";
 import BudgetExperiment from "@/sections/profit/BudgetExperiment";
 import ModelScout from "@/sections/profit/ModelScout";
 import { computeScout } from "@/data/modelScout";
+import PriceLab from "@/sections/profit/PriceLab";
+import { computePriceLab, usePriceLabConfig } from "@/data/priceLabEngine";
 import {
   RULES,
   buildProfitModel,
@@ -717,8 +719,9 @@ export default function Profit() {
     [model, period, range, mode]
   );
   const months = useMemo(() => (model ? monthRows(model, mode) : []), [model, mode]);
-  type Tab = "profit" | "experiment" | "models";
-  const tabFromHash = (h: string): Tab => (h === "#experiment" ? "experiment" : h === "#models" ? "models" : "profit");
+  type Tab = "profit" | "experiment" | "models" | "lab";
+  const tabFromHash = (h: string): Tab =>
+    h === "#experiment" ? "experiment" : h === "#models" ? "models" : h === "#lab" ? "lab" : "profit";
   const [tab, setTab] = useState<Tab>(() => {
     try {
       return tabFromHash(window.location.hash);
@@ -734,6 +737,14 @@ export default function Profit() {
     () => (model && ops ? computeScout(ops.ordersDetail, ops.stockDetail, profit ?? null, model.today) : null),
     [model, ops, profit]
   );
+  const labCfg = usePriceLabConfig();
+  const lab = useMemo(
+    () =>
+      model && ops && labCfg !== undefined
+        ? computePriceLab(ops.ordersDetail, ops.stockDetail, ops.products ?? [], profit ?? null, labCfg, model.today)
+        : null,
+    [model, ops, profit, labCfg]
+  );
 
   return (
     <div>
@@ -744,6 +755,7 @@ export default function Profit() {
             { value: "profit", label: "Profit" },
             { value: "experiment", label: "Budget experiment" },
             { value: "models", label: "Ad models" },
+            { value: "lab", label: "Price lab" },
           ]}
           value={tab}
           onChange={(v) => {
@@ -757,7 +769,13 @@ export default function Profit() {
           }}
         />
       </div>
-      {tab === "models" ? (
+      {tab === "lab" ? (
+        lab ? (
+          <PriceLab r={lab} />
+        ) : (
+          <EmptyState title="Loading" message="Waiting for the Odoo sync data…" />
+        )
+      ) : tab === "models" ? (
         scout ? (
           <ModelScout r={scout} />
         ) : (
