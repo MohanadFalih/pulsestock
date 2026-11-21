@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-21T08:33:48.529255+00:00",
+ "syncedAt": "2026-11-21T08:53:47.058085+00:00",
  "today": "2026-11-21",
  "window": 14,
  "byState": {
@@ -9,7 +9,7 @@
   },
   "active": {
    "lines": 513,
-   "pieces": 786
+   "pieces": 787
   },
   "suggested": {
    "lines": 85,
@@ -19,15 +19,15 @@
  "byStep": {
   "0": {
    "lines": 53,
-   "pieces": 65,
-   "cost": 2350298,
-   "price": 3589000
+   "pieces": 64,
+   "cost": 2329298,
+   "price": 3527000
   },
   "1": {
    "lines": 442,
-   "pieces": 701,
-   "cost": 22995122,
-   "price": 20621000
+   "pieces": 703,
+   "cost": 23043442,
+   "price": 20671000
   },
   "2": {
    "lines": 25,
@@ -58,7 +58,7 @@
    "maturedSold14": 0,
    "sellThrough14": null,
    "medianDaysToSale": 0.0,
-   "soldLast7": 2.0
+   "soldLast7": 3.0
   },
   "1": {
    "openVariants": 527,
@@ -69,7 +69,7 @@
    "maturedSold14": 0,
    "sellThrough14": null,
    "medianDaysToSale": 2,
-   "soldLast7": 13.0
+   "soldLast7": 8.0
   },
   "2": {
    "openVariants": 28,
@@ -116,23 +116,42 @@
   "2026-11-20": {
    "0": 1,
    "4": 1,
-   "1": 6
+   "1": 1
   },
   "2026-11-21": {
+   "0": 1,
    "1": 1
   }
  },
  "priceCheck": {
-  "checked": 840,
-  "mismatchCount": 0,
+  "checked": 844,
+  "mismatchCount": 1,
   "tasfiyaIntegrated": true,
   "modelPrices": {
-   "models": 553,
-   "multiPrice": 0,
-   "examples": {}
+   "models": 554,
+   "multiPrice": 1,
+   "examples": {
+    "D-6401": [
+     25000,
+     41000
+    ]
+   }
   },
-  "note": "sheet rows in stock with no in-stock Odoo model: 7 (T-6401LACI4, L-1433LACIVERT2, L-1433ANTRASIT1-3, L-1433SIYAH1-2, D-6711KAHVE1, D-6711LACIVERT3, H-1370SIYAH44)",
-  "mismatches": []
+  "note": "sheet rows in stock with no in-stock Odoo model: 3 (L-1433LACIVERT2, L-1433ANTRASIT1-3, L-1433SIYAH1-2)",
+  "mismatches": [
+   {
+    "kind": "قطعة اخيرة",
+    "code": "D-6401",
+    "feed": "D-6401LACI4",
+    "adPrice": 41000,
+    "odooPrice": 25000,
+    "odooPrices": [
+     25000
+    ],
+    "fullPrice": 55000,
+    "qty": 1
+   }
+  ]
  },
  "items": [
   {
@@ -606,7 +625,7 @@
    "shown": 3,
    "offSeason": true,
    "costIssue": null,
-   "qty": 3,
+   "qty": 4,
    "stageStart": "2026-11-18",
    "nextReview": "2026-12-02"
   },
@@ -777,7 +796,7 @@
    "shown": 3,
    "offSeason": true,
    "costIssue": null,
-   "qty": 4,
+   "qty": 5,
    "stageStart": "2026-11-18",
    "nextReview": "2026-12-02"
   },
@@ -9878,7 +9897,7 @@
    "shown": 1,
    "offSeason": false,
    "costIssue": null,
-   "qty": 1,
+   "qty": 0,
    "stageStart": "2026-11-20",
    "nextReview": "2026-12-04"
   },
