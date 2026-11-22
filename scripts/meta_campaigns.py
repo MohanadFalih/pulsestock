@@ -298,6 +298,22 @@ def main():
                                  "error": f"meta placement fetch failed: {exc}",
                                  "campaigns": []})
 
+    # ---- v1.7: catalog campaigns broken down by product, rolled up per
+    # model code (independent — own fetch, own file, own failure path) ------
+    try:
+        build_catalog_products(today, now)
+    except Exception as exc:
+        c_since = today - dt.timedelta(days=13)
+        write_catalog_products({"syncedAt": now, "metaSyncedAt": now,
+                                "window": {"since": c_since.isoformat(),
+                                           "until": today.isoformat(),
+                                           "days": 14},
+                                "tz": "dates are in the ad account timezone as returned by Meta",
+                                "currency": "USD",
+                                "note": CATALOG_NOTE,
+                                "error": f"meta catalog product fetch failed: {exc}",
+                                "campaigns": []})
+
 
 SKU_RE = re.compile(r"([A-Za-z]{1,4}-\d{3,6})")
 
@@ -563,6 +579,119 @@ def write_placement_metrics(out):
     n_pl = sum(len(c["placements"]) for c in out["campaigns"])
     print(f"placement-metrics.json: {len(out['campaigns'])} campaigns, "
           f"{n_pl} platform-position pairs, error={out['error']}")
+
+
+# ---------------------------------------------------------------- v1.7 ----
+CATALOG_NOTE = ("Catalog campaigns (campaign name contains 'CATALOG') broken "
+                "down by product (Meta breakdowns=product_id), DAILY over "
+                "14 days including today, rolled up per MODEL CODE: every "
+                "color/size variant of a model is summed into one row. The "
+                "model code is the first 'X-1234' token found in the "
+                "product label (name + retailer id), upper-cased, digits "
+                "only after the dash (M-3352NVX1208 -> M-3352). Labels "
+                "without a code go to '?'. Per campaign: models{code: "
+                "{name, variants, totals7, totalsPrev7, daily[]}}; each "
+                "daily row: date, spendUSD, impressions, clicks, purchases "
+                "(omni_purchase, fallback purchase; null when zero). "
+                "totals7 = last 7 days incl. today, totalsPrev7 = the 7 "
+                "days before. error!=null means the fetch failed — the "
+                "other Meta files are unaffected.")
+
+CODE_RE = re.compile(r"([A-Za-z])\s?-\s?(\d{3,5})")
+
+
+def model_code(label):
+    m = CODE_RE.search(label or "")
+    return f"{m.group(1).upper()}-{m.group(2)}" if m else "?"
+
+
+def build_catalog_products(today, now):
+    c_since = today - dt.timedelta(days=13)
+    rows = get_all(f"act_{ACCOUNT}/insights", {
+        "level": "campaign",
+        "time_increment": "1",
+        "breakdowns": "product_id",
+        "filtering": json.dumps([{"field": "campaign.name",
+                                  "operator": "CONTAIN",
+                                  "value": "CATALOG"}]),
+        "time_range": json.dumps({"since": c_since.isoformat(),
+                                  "until": today.isoformat()}),
+        "fields": "campaign_id,campaign_name,spend,impressions,clicks,actions",
+        "limit": "500",
+    })
+    out_camps = aggregate_catalog_rows(rows, today)
+    write_catalog_products({"syncedAt": now, "metaSyncedAt": now,
+                            "window": {"since": c_since.isoformat(),
+                                       "until": today.isoformat(),
+                                       "days": 14},
+                            "tz": "dates are in the ad account timezone as returned by Meta",
+                            "currency": "USD",
+                            "note": CATALOG_NOTE,
+                            "error": None,
+                            "campaigns": out_camps})
+
+
+def aggregate_catalog_rows(rows, today):
+    cut7 = (today - dt.timedelta(days=6)).isoformat()
+    camps = {}
+    for row in rows:
+        cid = row.get("campaign_id") or row.get("campaign_name") or "?"
+        camp = camps.setdefault(cid, {"name": row.get("campaign_name"),
+                                      "models": {}})
+        label = str(row.get("product_id") or "")
+        code = model_code(label)
+        mod = camp["models"].setdefault(code, {"name": None, "variants": set(),
+                                               "daily": {}})
+        if mod["name"] is None and "," in label:
+            mod["name"] = label.split(",", 1)[1].strip()[:80]
+        mod["variants"].add(label.split(",", 1)[0].strip())
+        try:
+            spend = float(row.get("spend") or 0)
+        except (TypeError, ValueError):
+            spend = 0.0
+        purch = int(action_single(row.get("actions"), PURCHASE_TYPE,
+                                  PURCHASE_TYPE_FALLBACK))
+        date = row.get("date_start")
+        d = mod["daily"].setdefault(date, {"date": date, "spendUSD": 0.0,
+                                           "impressions": 0, "clicks": 0,
+                                           "purchases": 0})
+        d["spendUSD"] += spend
+        d["impressions"] += int(row.get("impressions") or 0)
+        d["clicks"] += int(row.get("clicks") or 0)
+        d["purchases"] += purch
+    out_camps = []
+    for cid in sorted(camps, key=lambda k: (camps[k]["name"] or "")):
+        camp = camps[cid]
+        models = {}
+        for code, mod in camp["models"].items():
+            daily = sorted(mod["daily"].values(), key=lambda x: x["date"] or "")
+            t7 = {"spendUSD": 0.0, "impressions": 0, "clicks": 0, "purchases": 0}
+            p7 = dict(t7)
+            for d in daily:
+                tgt = t7 if (d["date"] or "") >= cut7 else p7
+                for k in tgt:
+                    tgt[k] += d[k]
+                d["spendUSD"] = round(d["spendUSD"], 2)
+                d["purchases"] = d["purchases"] or None
+            for t in (t7, p7):
+                t["spendUSD"] = round(t["spendUSD"], 2)
+            models[code] = {"name": mod["name"],
+                            "variants": len(mod["variants"]),
+                            "totals7": t7, "totalsPrev7": p7,
+                            "daily": daily}
+        models = dict(sorted(models.items(),
+                             key=lambda kv: -kv[1]["totals7"]["spendUSD"]))
+        out_camps.append({"id": cid, "name": camp["name"], "models": models})
+    return out_camps
+
+
+def write_catalog_products(out):
+    path = os.path.join(DATA_DIR, "catalog-products.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    n = sum(len(c["models"]) for c in out["campaigns"])
+    print(f"catalog-products.json: {len(out['campaigns'])} campaigns, "
+          f"{n} models, error={out['error']}")
 
 
 def write(out):
