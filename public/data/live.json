@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-22T08:27:17.296924+00:00",
+ "syncedAt": "2026-11-22T08:33:07.858920+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5266,9 +5266,9 @@
    "units": 19,
    "revenue": 1311000,
    "delivered": 9,
-   "returned": 0,
+   "returned": 1,
    "unitsBoughtFromSupplier": 17,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 69000.0,
    "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
@@ -7125,9 +7125,9 @@
    "units": 6,
    "revenue": 438000,
    "delivered": 6,
-   "returned": 1,
+   "returned": 2,
    "unitsBoughtFromSupplier": 6,
-   "returnedStock": 1,
+   "returnedStock": 2,
    "unitPrice": 73000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 6,
@@ -11305,20 +11305,20 @@
    "sku": "T-8048",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-10-25",
    "firstOrderDate": "2026-10-25",
-   "lastOrderDate": "2026-11-02",
-   "orders": 7,
-   "units": 7,
-   "revenue": 595000,
+   "lastOrderDate": "2026-11-22",
+   "orders": 8,
+   "units": 8,
+   "revenue": 654000,
    "delivered": 7,
    "returned": 1,
    "unitsBoughtFromSupplier": 7,
    "returnedStock": 1,
    "unitPrice": 85000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 20,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 198,
     "lastChecked": "2026-11-21T15:13:09Z",
@@ -11422,7 +11422,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 129,
-    "lastChecked": "2026-11-22T07:55:38Z",
+    "lastChecked": "2026-11-22T08:26:36Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -41271,9 +41271,9 @@
    "units": 1125,
    "revenue": 38127000,
    "delivered": 1091,
-   "returned": 205,
+   "returned": 206,
    "unitsBoughtFromSupplier": 934,
-   "returnedStock": 22,
+   "returnedStock": 23,
    "unitPrice": 39000.0,
    "orderVelocity7d": 10.0,
    "daysSinceLastOrder": 1,
@@ -44442,9 +44442,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1621,
-  "stockValue": 46685845,
-  "stockVariants": 1268
+  "stockUnits": 1623,
+  "stockValue": 46735895,
+  "stockVariants": 1269
  },
  "daily": {
   "days": 90,
@@ -46085,6 +46085,11 @@
      1,
      1,
      85000
+    ],
+    "2026-11-22": [
+     1,
+     1,
+     59000
     ]
    },
    "7463": {
@@ -60313,7 +60318,7 @@
    ],
    "2026-11-22": [
     0,
-    14
+    16
    ]
   },
   "orders": {
@@ -60407,10 +60412,29 @@
    "2026-11-19": 40,
    "2026-11-20": 54,
    "2026-11-21": 49,
-   "2026-11-22": 6
+   "2026-11-22": 7
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35215",
+   "d": "2026-11-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8048",
+     "pid": 731974,
+     "qty": 1,
+     "price": 59000,
+     "discPct": 0,
+     "del": 0,
+     "var": "رصاصي / Antrasit, 2"
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S35213",
    "d": "2026-11-22",
@@ -70116,9 +70140,11 @@
      "qty": 1,
      "price": 39000,
      "discPct": 4.5,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "أسود / Siyah"
+     "var": "أسود / Siyah",
+     "ret": 1,
+     "rd": "2026-11-22"
     }
    ],
    "src": "Website",
@@ -72739,7 +72765,7 @@
      "qty": 1,
      "price": 73000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
      "var": "أسود / Siyah, 50",
      "ret": 1,
@@ -175917,7 +175943,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 9,
+   "qty": 10,
    "cost": 18550,
    "created": "2026-02-23"
   },
