@@ -5,8 +5,8 @@ o=Odoo(load_env(ENV_PATH))
 def sr(m,dom,f,**kw):
     try: return o.kw(m,"search_read",[dom],dict({"fields":f},**kw))
     except Exception as e: print("ERR",m,str(e)[:300]); return []
-sl=sr("sale.order.line",[["order_id.name","=","S35227"],["product_id.default_code","!=",False]],["product_id"])
-pid=[x["product_id"][0] for x in sl if "M-158" in x["product_id"][1]]
+sl=sr("sale.order.line",[["id","=",86796]],["product_id"])
+pid=[x["product_id"][0] for x in sl]
 P=sr("product.product",[["id","in",pid]],["display_name","default_code","lst_price","qty_available","free_qty","deniz_shelf_qty","product_tmpl_id"])
 for p in P: print("P",p["id"],p["display_name"][:60],p["lst_price"],"onhand",p["qty_available"],"free",p["free_qty"],"shelf",p["deniz_shelf_qty"])
 tgt=P
