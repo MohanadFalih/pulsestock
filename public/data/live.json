@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-22T07:03:27.494629+00:00",
+ "syncedAt": "2026-11-22T07:33:26.877088+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -11422,7 +11422,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 129,
-    "lastChecked": "2026-11-22T06:53:51Z",
+    "lastChecked": "2026-11-22T07:25:11Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -42271,20 +42271,20 @@
    "sku": "T-6827",
    "category": "Takim (Tunik & Pantolon)",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2025-07-02",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-11-14",
-   "orders": 126,
-   "units": 132,
-   "revenue": 5203000,
+   "lastOrderDate": "2026-11-22",
+   "orders": 127,
+   "units": 133,
+   "revenue": 5228000,
    "delivered": 126,
    "returned": 46,
    "unitsBoughtFromSupplier": 84,
    "returnedStock": 10,
    "unitPrice": 49000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -59300,6 +59300,11 @@
      1,
      0,
      0
+    ],
+    "2026-11-22": [
+     1,
+     1,
+     25000
     ]
    },
    "5482": {
@@ -60393,10 +60398,29 @@
    "2026-11-19": 40,
    "2026-11-20": 54,
    "2026-11-21": 49,
-   "2026-11-22": 4
+   "2026-11-22": 5
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35212",
+   "d": "2026-11-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-6827",
+     "pid": 665612,
+     "qty": 1,
+     "price": 25000,
+     "discPct": 0,
+     "del": 0,
+     "var": "رصاصي غامق / Fume, 2"
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S35211",
    "d": "2026-11-22",
