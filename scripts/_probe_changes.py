@@ -34,3 +34,8 @@ for m in sr("stock.move",[["product_id","=",680907],["create_date",">=","2026-11
     print("  MV",m["create_date"],m["write_date"],m["reference"],m["origin"],m["state"],m["product_uom_qty"],m["location_id"][1],"->",m["location_dest_id"][1],m["sale_line_id"] and m["sale_line_id"][1][:30])
 print("=== DELETED/ALL LINES")
 for l in sr("sale.order.line",[["product_id","=",680907]],["order_id","state","create_date","write_date","price_unit","product_uom_qty"],context={"active_test":False}): print("  AL",l)
+print("=== TRACK")
+for m in sr("mail.message",[["model","=","sale.order"],["res_id","=",39117]],["date","author_id","tracking_value_ids","subtype_id","message_type"]):
+    tv=sr("mail.tracking.value",[["id","in",m["tracking_value_ids"]]],["field_id","old_value_char","new_value_char","old_value_float","new_value_float"]) if m["tracking_value_ids"] else []
+    print("  T",m["date"],m["author_id"] and m["author_id"][1],m["message_type"],[(t["field_id"][1] if t["field_id"] else "",t["old_value_char"] or t["old_value_float"],t["new_value_char"] or t["new_value_float"]) for t in tv])
+for m in sr("mail.message",[["model","=","sale.order.line"],["res_id","=",86796]],["date","author_id","body"]): print("  TL",m)
