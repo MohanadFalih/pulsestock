@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-22T06:33:04.269481+00:00",
+ "syncedAt": "2026-11-22T07:03:27.494629+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5262,15 +5262,15 @@
    "odooCreatedDate": "2026-11-09",
    "firstOrderDate": "2026-11-10",
    "lastOrderDate": "2026-11-22",
-   "orders": 18,
-   "units": 18,
-   "revenue": 1242000,
+   "orders": 19,
+   "units": 19,
+   "revenue": 1311000,
    "delivered": 9,
    "returned": 0,
    "unitsBoughtFromSupplier": 17,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 1.29,
+   "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -11422,7 +11422,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 129,
-    "lastChecked": "2026-11-22T06:22:57Z",
+    "lastChecked": "2026-11-22T06:53:51Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -45033,9 +45033,9 @@
      138000
     ],
     "2026-11-22": [
-     1,
-     1,
-     69000
+     2,
+     2,
+     138000
     ]
    },
    "7540": {
@@ -60393,10 +60393,31 @@
    "2026-11-19": 40,
    "2026-11-20": 54,
    "2026-11-21": 49,
-   "2026-11-22": 3
+   "2026-11-22": 4
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35211",
+   "d": "2026-11-22",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-3431BLU797",
+     "pid": 733461,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 42"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35210",
    "d": "2026-11-22",
