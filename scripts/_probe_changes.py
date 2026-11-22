@@ -29,3 +29,8 @@ for p in tgt:
     print("TMPL",sr("product.template",[["id","=",t]],["name","purchase_ok","deniz_oneprice_on","list_price"]))
     for c in sr("deniz.clearance.item",[["product_tmpl_id","=",t]],["display_code","state","step_no","current_price","base_price","qty","write_date","close_reason"]): print("  CLR",c)
     for it in sr("deniz.liquidation.item",[["product_tmpl_id","=",t]],["feed_id","state","sale_price","old_price","write_date"],context={"active_test":False}): print("  LIQ",it)
+print("=== MOVES")
+for m in sr("stock.move",[["product_id","=",680907],["create_date",">=","2026-11-15 00:00:00"]],["reference","origin","state","product_uom_qty","location_id","location_dest_id","create_date","write_date","sale_line_id","picking_type_id"]):
+    print("  MV",m["create_date"],m["write_date"],m["reference"],m["origin"],m["state"],m["product_uom_qty"],m["location_id"][1],"->",m["location_dest_id"][1],m["sale_line_id"] and m["sale_line_id"][1][:30])
+print("=== DELETED/ALL LINES")
+for l in sr("sale.order.line",[["product_id","=",680907]],["order_id","state","create_date","write_date","price_unit","product_uom_qty"],context={"active_test":False}): print("  AL",l)
