@@ -304,7 +304,21 @@ def main():
         build_catalog_products(today, now)
     except Exception as exc:
         c_since = today - dt.timedelta(days=13)
-        write_catalog_products({"syncedAt": now, "metaSyncedAt": now,
+        # keep the last good data on a transient failure (rate limits);
+        # only the error field and syncedAt change.
+        try:
+            with open(os.path.join(DATA_DIR, "catalog-products.json"),
+                      encoding="utf-8") as f:
+                prev = json.load(f)
+            if prev.get("campaigns"):
+                prev["error"] = f"meta catalog product fetch failed: {exc} (showing data from metaSyncedAt)"
+                prev["syncedAt"] = now
+                write_catalog_products(prev)
+                prev = None
+        except Exception:
+            prev = {}
+        if prev is not None:
+          write_catalog_products({"syncedAt": now, "metaSyncedAt": now,
                                 "window": {"since": c_since.isoformat(),
                                            "until": today.isoformat(),
                                            "days": 14},
