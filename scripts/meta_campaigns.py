@@ -659,6 +659,8 @@ def aggregate_catalog_rows(rows, today):
         if mod["name"] is None and "," in label:
             mod["name"] = label.split(",", 1)[1].strip()[:80]
         mod["variants"].add(label.split(",", 1)[0].strip())
+        if code == "?":
+            mod.setdefault("labels", set()).add(label[:120])
         try:
             spend = float(row.get("spend") or 0)
         except (TypeError, ValueError):
@@ -689,6 +691,8 @@ def aggregate_catalog_rows(rows, today):
                 d["purchases"] = d["purchases"] or None
             for t in (t7, p7):
                 t["spendUSD"] = round(t["spendUSD"], 2)
+            if code == "?":
+                mod["name"] = " || ".join(sorted(mod.get("labels", set()))[:8])
             models[code] = {"name": mod["name"],
                             "variants": len(mod["variants"]),
                             "totals7": t7, "totalsPrev7": p7,
