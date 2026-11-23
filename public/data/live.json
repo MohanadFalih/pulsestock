@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-23T23:03:25.625906+00:00",
+ "syncedAt": "2026-11-23T23:33:48.983034+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -19,17 +19,72 @@
    "revenue": 61000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 61000.0,
    "orderVelocity7d": 0.14,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
+    "qty": 175,
+    "lastChecked": "2026-11-23T23:03:24Z",
+    "source": "api",
+    "status": "available",
+    "variants": [
+     {
+      "color": "Lila",
+      "size": "1",
+      "qty": 20,
+      "product_id": 736262
+     },
+     {
+      "color": "Lila",
+      "size": "2",
+      "qty": 20,
+      "product_id": 736263
+     },
+     {
+      "color": "Lila",
+      "size": "3",
+      "qty": 20,
+      "product_id": 736264
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "1",
+      "qty": 18,
+      "product_id": 736265
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "2",
+      "qty": 20,
+      "product_id": 736266
+     },
+     {
+      "color": "خاكي / Haki",
+      "size": "3",
+      "qty": 18,
+      "product_id": 736267
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "1",
+      "qty": 19,
+      "product_id": 736268
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "2",
+      "qty": 20,
+      "product_id": 736269
+     },
+     {
+      "color": "أحمر / Bordo",
+      "size": "3",
+      "qty": 20,
+      "product_id": 736270
+     }
+    ]
    }
   },
   {
@@ -5725,7 +5780,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 69,
-    "lastChecked": "2026-11-23T22:55:47Z",
+    "lastChecked": "2026-11-23T23:28:33Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11767,7 +11822,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 112,
-    "lastChecked": "2026-11-23T22:53:24Z",
+    "lastChecked": "2026-11-23T23:25:11Z",
     "source": "api",
     "status": "available",
     "variants": [
