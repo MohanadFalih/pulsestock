@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-23T19:33:13.416678+00:00",
+ "syncedAt": "2026-11-23T20:03:32.145804+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5712,20 +5712,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-09",
    "firstOrderDate": "2026-11-11",
-   "lastOrderDate": "2026-11-11",
-   "orders": 1,
-   "units": 1,
-   "revenue": 84000,
+   "lastOrderDate": "2026-11-23",
+   "orders": 2,
+   "units": 2,
+   "revenue": 168000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 84000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 70,
-    "lastChecked": "2026-11-23T15:40:59Z",
+    "lastChecked": "2026-11-23T19:55:51Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11767,7 +11767,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 115,
-    "lastChecked": "2026-11-23T19:24:36Z",
+    "lastChecked": "2026-11-23T19:55:49Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -13595,15 +13595,15 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-23",
-   "orders": 69,
-   "units": 69,
-   "revenue": -398501,
+   "orders": 70,
+   "units": 70,
+   "revenue": -408501,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 1.14,
+   "orderVelocity7d": 1.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -45606,6 +45606,11 @@
      1,
      1,
      84000
+    ],
+    "2026-11-23": [
+     1,
+     1,
+     84000
     ]
    },
    "7536": {
@@ -47196,9 +47201,9 @@
      -11000
     ],
     "2026-11-23": [
-     2,
-     2,
-     -15000
+     3,
+     3,
+     -25000
     ]
    },
    "7436": {
@@ -61013,10 +61018,39 @@
    "2026-11-20": 54,
    "2026-11-21": 47,
    "2026-11-22": 46,
-   "2026-11-23": 44
+   "2026-11-23": 45
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35303",
+   "d": "2026-11-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "K-6738",
+     "pid": 733437,
+     "qty": 1,
+     "price": 84000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -10000,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35302",
    "d": "2026-11-23",
