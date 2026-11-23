@@ -29,9 +29,22 @@ R["sheetCLR"]=[{"id":r.get("id"),"av":r.get("availability"),"p":r.get("price"),"
 R["oneprice"]=[{"id":t["id"],"n":t["name"],"po":t["purchase_ok"]} for t in sr("product.template",[["deniz_oneprice_on","=",True]],["name","purchase_ok"])]
 R["crons"]=sr("ir.cron",[["ir_actions_server_id.model_id.model","in",["deniz.clearance.item","deniz.clearance.rule","product.template"]]],["name","active","lastcall","nextcall","failure_count","first_failure_date"])
 R["logs"]=[{"d":l["create_date"],"lvl":l["level"],"n":l["name"],"m":(l["message"] or "")[:300]} for l in sr("ir.logging",[["create_date",">=","2026-11-21 00:00:00"],["level","in",["ERROR","WARNING"]]],["create_date","level","name","message"],limit=60,order="id desc")]
+import collections as C
+A={}
+items=R.pop("items")
+A["byStSt"]=C.Counter(f'{x["st"]}/{x["s"]}' for x in items)
+for k in ["img","cdn","pend","sheet","sImg"]:
+    A[k]=C.Counter(f'{x["st"]}/{x["s"]}:{bool(x[k])}' for x in items)
+A["sheetAv"]=C.Counter(f'{x["st"]}/{x["s"]}:{x["sAv"]}' for x in items)
+A["errs"]=C.Counter(x["err"] for x in items if x["err"]).most_common(8)
+A["s0noSheet"]=[x["c"] for x in items if x["s"]==0 and x["st"]=="active" and not x["sheet"]][:60]
+A["s0priceMismatch"]=[(x["c"],x["p"],x["full"],x["sP"],x["sSP"]) for x in items if x["s"]==0 and x["st"]=="active" and x["sheet"] and (x["sSP"] or "").strip()][:30]
+A["floor"]=[(x["c"],x["p"],x["sheet"],x["sAv"],x["sP"],x["sSP"]) for x in items if x["st"]=="floor"]
+clr=R.pop("sheetCLR")
+A["sheetCLR"]=C.Counter(f'{c["av"]}:img={c["img"]}' for c in clr)
+codes={x["c"] for x in items}
+A["oneprice"]=[(t["n"],t["po"]) for t in R.pop("oneprice")]
+R["A"]=A
 print("PROBE_BEGIN")
-for k,v in R.items():
-    if isinstance(v,list):
-        for x in v: print("L|"+k+"|"+json.dumps(x,ensure_ascii=False,default=str))
-    else: print("K|"+k+"|"+json.dumps(v,ensure_ascii=False,default=str))
+for k,v in R.items(): print("K|"+k+"|"+json.dumps(v,ensure_ascii=False,default=str))
 print("PROBE_END")
