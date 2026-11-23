@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-23T08:33:32.184837+00:00",
+ "syncedAt": "2026-11-23T08:58:12.552374+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -4383,17 +4383,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-12",
    "firstOrderDate": "2026-11-12",
-   "lastOrderDate": "2026-11-22",
-   "orders": 4,
-   "units": 4,
-   "revenue": 376000,
+   "lastOrderDate": "2026-11-23",
+   "orders": 5,
+   "units": 5,
+   "revenue": 470000,
    "delivered": 1,
    "returned": 0,
    "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 94000.0,
-   "orderVelocity7d": 0.29,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.43,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 115,
     "lastChecked": "2026-11-22T12:07:23Z",
@@ -10187,17 +10187,17 @@
    "stage": "selling",
    "odooCreatedDate": "2026-10-29",
    "firstOrderDate": "2026-10-29",
-   "lastOrderDate": "2026-11-20",
-   "orders": 69,
-   "units": 72,
-   "revenue": 5832000,
+   "lastOrderDate": "2026-11-23",
+   "orders": 70,
+   "units": 73,
+   "revenue": 5913000,
    "delivered": 61,
    "returned": 8,
    "unitsBoughtFromSupplier": 69,
    "returnedStock": 6,
    "unitPrice": 81000.0,
-   "orderVelocity7d": 1.71,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 1.86,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 41,
     "lastChecked": "2026-11-22T15:24:36Z",
@@ -43348,17 +43348,17 @@
    "stage": "selling",
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-11-21",
-   "orders": 39,
-   "units": 41,
-   "revenue": 1626000,
+   "lastOrderDate": "2026-11-23",
+   "orders": 40,
+   "units": 42,
+   "revenue": 1667000,
    "delivered": 40,
    "returned": 14,
    "unitsBoughtFromSupplier": 20,
    "returnedStock": 0,
    "unitPrice": 41000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -45419,6 +45419,11 @@
      1,
      1,
      94000
+    ],
+    "2026-11-23": [
+     1,
+     1,
+     94000
     ]
    },
    "7562": {
@@ -46524,6 +46529,11 @@
      3,
      3,
      243000
+    ],
+    "2026-11-23": [
+     1,
+     1,
+     81000
     ]
    },
    "7477": {
@@ -60093,6 +60103,11 @@
      1,
      1,
      25000
+    ],
+    "2026-11-23": [
+     1,
+     1,
+     41000
     ]
    },
    "4522": {
@@ -60994,10 +61009,92 @@
    "2026-11-20": 54,
    "2026-11-21": 47,
    "2026-11-22": 46,
-   "2026-11-23": 10
+   "2026-11-23": 14
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35273",
+   "d": "2026-11-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-7072",
+     "pid": 734049,
+     "qty": 1,
+     "price": 94000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "جملي / Camel"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35272",
+   "d": "2026-11-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -73000,
+   "lines": [
+    {
+     "sku": "H-1959",
+     "pid": 732917,
+     "qty": 1,
+     "price": 73000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "رصاصي فاتح / Gri, 54"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35271",
+   "d": "2026-11-23",
+   "st": "sale",
+   "fee": 5000,
+   "disc": -78000,
+   "lines": [
+    {
+     "sku": "H-1951",
+     "pid": 732203,
+     "qty": 1,
+     "price": 81000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 7"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35270",
+   "d": "2026-11-23",
+   "st": "sale",
+   "fee": 0,
+   "disc": -16000,
+   "lines": [
+    {
+     "sku": "T-6796",
+     "pid": 638213,
+     "qty": 1,
+     "price": 41000,
+     "discPct": 39.0,
+     "del": 0,
+     "var": "أسود / Siyah, 1"
+    }
+   ],
+   "src": "Instagram"
+  },
   {
    "id": "S35268",
    "d": "2026-11-23",
