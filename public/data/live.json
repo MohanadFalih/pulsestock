@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-24T08:33:49.178485+00:00",
+ "syncedAt": "2026-11-24T09:03:38.395082+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5774,7 +5774,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 69,
-    "lastChecked": "2026-11-24T08:00:03Z",
+    "lastChecked": "2026-11-24T08:35:22Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11809,10 +11809,10 @@
    "revenue": 13200000,
    "delivered": 139,
    "returned": 29,
-   "unitsBoughtFromSupplier": 141,
+   "unitsBoughtFromSupplier": 142,
    "returnedStock": 10,
    "unitPrice": 80000.0,
-   "orderVelocity7d": 4.57,
+   "orderVelocity7d": 4.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 112,
@@ -46902,13 +46902,13 @@
     ],
     "2026-11-23": [
      10,
-     11,
-     880000
+     10,
+     800000
     ],
     "2026-11-24": [
-     2,
-     2,
-     160000
+     3,
+     3,
+     240000
     ]
    },
    "7462": {
@@ -60994,10 +60994,31 @@
    "2026-11-21": 47,
    "2026-11-22": 46,
    "2026-11-23": 51,
-   "2026-11-24": 11
+   "2026-11-24": 12
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35325",
+   "d": "2026-11-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "H-1945",
+     "pid": 731960,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أحمر / Bordo, 2"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35323",
    "d": "2026-11-24",
@@ -61662,7 +61683,7 @@
     {
      "sku": "H-1945",
      "pid": 731953,
-     "qty": 1,
+     "qty": 0,
      "price": 80000,
      "discPct": 0,
      "del": 0,
@@ -61676,6 +61697,16 @@
      "price": -10000,
      "discPct": 0,
      "del": 0
+    },
+    {
+     "sku": "H-1945",
+     "pid": 731948,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 5"
     }
    ],
    "src": "Facebook",
@@ -263290,9 +263321,8 @@
    "sku": "T-8008",
    "model": "T-8008",
    "qty": 0,
-   "cost": 60208,
-   "created": "2026-11-02",
-   "costSrc": "vendor"
+   "cost": 59500,
+   "created": "2026-11-02"
   },
   {
    "sku": "T-8008",
