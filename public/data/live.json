@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-24T12:33:42.954241+00:00",
+ "syncedAt": "2026-11-24T12:53:09.181813+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -11703,19 +11703,19 @@
    "odooCreatedDate": "2026-10-25",
    "firstOrderDate": "2026-10-25",
    "lastOrderDate": "2026-11-24",
-   "orders": 11,
-   "units": 11,
-   "revenue": 909000,
+   "orders": 12,
+   "units": 12,
+   "revenue": 994000,
    "delivered": 8,
    "returned": 2,
-   "unitsBoughtFromSupplier": 9,
+   "unitsBoughtFromSupplier": 10,
    "returnedStock": 1,
    "unitPrice": 85000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 196,
-    "lastChecked": "2026-11-24T11:09:46Z",
+    "qty": 195,
+    "lastChecked": "2026-11-24T12:42:56Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11776,7 +11776,7 @@
      {
       "color": "بيج / Bej",
       "size": "1",
-      "qty": 19,
+      "qty": 18,
       "product_id": 731977
      },
      {
@@ -46820,9 +46820,9 @@
      229000
     ],
     "2026-11-24": [
-     1,
-     1,
-     85000
+     2,
+     2,
+     170000
     ]
    },
    "7463": {
@@ -61099,10 +61099,31 @@
    "2026-11-21": 47,
    "2026-11-22": 46,
    "2026-11-23": 51,
-   "2026-11-24": 23
+   "2026-11-24": 24
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35337",
+   "d": "2026-11-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8048",
+     "pid": 731970,
+     "qty": 1,
+     "price": 85000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 2"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35336",
    "d": "2026-11-24",
