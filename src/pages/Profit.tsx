@@ -212,9 +212,15 @@ function KpiRow({ t }: { t: Totals }) {
         tone={t.net >= 0 ? "pos" : "neg"}
       />
       <Kpi
-        label="Repayable surplus"
+        label="Liquidation"
+        value={iqd(c.stockReleased - c.frozenCost)}
+        sub={`cash from the warehouse: stock sold at cost ${iqd(c.stockReleased)} − Turkey returns ${iqd(c.frozenCost)}`}
+        tone={c.stockReleased - c.frozenCost >= 0 ? "pos" : "neg"}
+      />
+      <Kpi
+        label="Total income"
         value={iqd(c.surplus)}
-        sub={`profit + stock sold at cost − Turkey returns · after ${iqd(t.drawings)} repaid: ${iqd(c.surplus - t.drawings)}`}
+        sub={`net profit + liquidation · after ${iqd(t.drawings)} repaid: ${iqd(c.surplus - t.drawings)}`}
         tone={c.surplus >= 0 ? "pos" : "neg"}
       />
       <Kpi
@@ -327,7 +333,7 @@ function SurplusBreakdown({ t, model, stockValue }: { t: Totals; model: ProfitMo
   );
   return (
     <section className="rounded-xl border border-hairline bg-panel p-5">
-      <h2 className="font-display text-[15px] font-semibold text-text-primary">Repayable surplus — cash you can use for old debt</h2>
+      <h2 className="font-display text-[15px] font-semibold text-text-primary">Total income — cash you can use, incl. old debt</h2>
       <p className="text-[11.5px] text-text-muted">
         Profit as above, plus the money that left the warehouse and minus the money that went into it. Stock pieces
         were paid for long ago, so selling them releases their full cost whatever the clearance profit; a Turkey piece
@@ -340,7 +346,7 @@ function SurplusBreakdown({ t, model, stockValue }: { t: Totals; model: ProfitMo
           {row("− Turkey returns — cost tied up in the warehouse", -c.frozenCost, {
             note: `${Math.round(c.frozenQty)} pieces came back`,
           })}
-          {row("= Repayable surplus", c.surplus, { strong: true })}
+          {row("= Total income (net profit + liquidation)", c.surplus, { strong: true })}
           {row(
             `of which still at the courier (${Math.round(c.courierOrders)} orders, arrives within ~${RULES.courierPayDays} days${
               model.paymentsSynced ? "" : " — estimated: order day + 6"
@@ -353,7 +359,7 @@ function SurplusBreakdown({ t, model, stockValue }: { t: Totals; model: ProfitMo
         </tbody>
       </table>
       <p className="mt-2 text-[11px] text-text-muted">
-        Warehouse change this period: {iqd(c.stockReleased - c.frozenCost)} (
+        Liquidation (warehouse change) this period: {iqd(c.stockReleased - c.frozenCost)} (
         {c.stockReleased >= c.frozenCost ? "stock went down — cash released" : "stock went up — cash tied up"}).
       </p>
       <div className="mt-4 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3">
@@ -558,7 +564,7 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
         Odoo net leaves out ad spend from then on.
       </p>
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[940px] border-collapse">
+        <table className="w-full min-w-[1020px] border-collapse">
           <thead>
             <tr className="border-b border-hairline">
               <th className={cn(head, "text-left")}>Month</th>
@@ -568,7 +574,8 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
               <th className={cn(head, "text-right")}>Before fixed</th>
               <th className={cn(head, "text-right")}>Fixed</th>
               <th className={cn(head, "text-right")}>Net profit</th>
-              <th className={cn(head, "text-right")}>Repayable</th>
+              <th className={cn(head, "text-right")}>Liquidation</th>
+              <th className={cn(head, "text-right")}>Total income</th>
               <th className={cn(head, "text-right")}>Odoo net</th>
               <th className={cn(head, "text-right")}>COGS gap</th>
             </tr>
@@ -589,6 +596,9 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
                   <td className={cn(num, "text-neg")}>{iqd(-t.fixedTotal)}</td>
                   <td className={cn(num, "font-semibold", t.net >= 0 ? "text-pos" : "text-neg")}>
                     {iqd(t.net)}
+                  </td>
+                  <td className={cn(num, t.cash.stockReleased - t.cash.frozenCost >= 0 ? "text-text-primary" : "text-neg")}>
+                    {iqd(t.cash.stockReleased - t.cash.frozenCost)}
                   </td>
                   <td className={cn(num, "font-semibold", t.cash.surplus >= 0 ? "text-pos" : "text-neg")}>
                     {iqd(t.cash.surplus)}
