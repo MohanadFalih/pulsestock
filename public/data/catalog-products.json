@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-24T08:04:40.081620+00:00",
+ "syncedAt": "2026-11-24T08:34:14.526325+00:00",
  "metaSyncedAt": "2026-11-24T08:04:40.081620+00:00",
  "window": {
   "since": "2026-11-11",
@@ -9,7 +9,7 @@
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
  "note": "Catalog campaigns (campaign name contains 'CATALOG') broken down by product (Meta breakdowns=product_id), DAILY over 14 days including today, rolled up per MODEL CODE: every color/size variant of a model is summed into one row. The model code is the first 'X-1234' token found in the product label (name + retailer id), upper-cased, digits only after the dash (M-3352NVX1208 -> M-3352). Labels without a code go to '?'. Per campaign: models{code: {name, variants, totals7, totalsPrev7, daily[]}}; each daily row: date, spendUSD, impressions, clicks, purchases (omni_purchase, fallback purchase; null when zero). totals7 = last 7 days incl. today, totalsPrev7 = the 7 days before. error!=null means the fetch failed — the other Meta files are unaffected.",
- "error": null,
+ "error": "meta catalog product fetch failed: The read operation timed out (showing data from metaSyncedAt)",
  "campaigns": [
   {
    "id": "120253327710670723",
