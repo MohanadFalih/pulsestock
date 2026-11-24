@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-24T06:33:26.840706+00:00",
+ "syncedAt": "2026-11-24T07:03:59.205876+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -2934,9 +2934,9 @@
    "units": 7,
    "revenue": 511000,
    "delivered": 2,
-   "returned": 0,
-   "unitsBoughtFromSupplier": 7,
-   "returnedStock": 0,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 6,
+   "returnedStock": 1,
    "unitPrice": 73000.0,
    "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 1,
@@ -5780,7 +5780,7 @@
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 69,
-    "lastChecked": "2026-11-24T06:23:18Z",
+    "lastChecked": "2026-11-24T06:53:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -11822,7 +11822,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 112,
-    "lastChecked": "2026-11-24T06:23:18Z",
+    "lastChecked": "2026-11-24T06:54:32Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -41646,9 +41646,9 @@
    "units": 1126,
    "revenue": 37971000,
    "delivered": 1113,
-   "returned": 215,
+   "returned": 217,
    "unitsBoughtFromSupplier": 933,
-   "returnedStock": 27,
+   "returnedStock": 28,
    "unitPrice": 39000.0,
    "orderVelocity7d": 4.57,
    "daysSinceLastOrder": 2,
@@ -44873,9 +44873,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1604,
-  "stockValue": 46053163,
-  "stockVariants": 1249
+  "stockUnits": 1607,
+  "stockValue": 46121867,
+  "stockVariants": 1250
  },
  "daily": {
   "days": 90,
@@ -60878,6 +60878,10 @@
    "2026-11-23": [
     30,
     0
+   ],
+   "2026-11-24": [
+    0,
+    3
    ]
   },
   "orders": {
@@ -64831,8 +64835,10 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 1,
-     "var": "رصاصي / Antrasit"
+     "del": 0,
+     "var": "رصاصي / Antrasit",
+     "ret": 1,
+     "rd": "2026-11-24"
     }
    ],
    "src": "Facebook",
@@ -68360,9 +68366,11 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "أسود / Siyah"
+     "var": "أسود / Siyah",
+     "ret": 1,
+     "rd": "2026-11-24"
     }
    ],
    "src": "Facebook",
@@ -69228,9 +69236,11 @@
      "qty": 1,
      "price": 73000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "جملي / Camel, 50"
+     "var": "جملي / Camel, 50",
+     "ret": 1,
+     "rd": "2026-11-24"
     }
    ],
    "src": "Instagram",
@@ -72072,9 +72082,11 @@
      "qty": 1,
      "price": 39000,
      "discPct": 4.5,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "أسود / Siyah"
+     "var": "أسود / Siyah",
+     "ret": 1,
+     "rd": "2026-11-24"
     }
    ],
    "src": "Website",
@@ -177188,7 +177200,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 4,
+   "qty": 5,
    "cost": 18544,
    "created": "2025-09-27"
   },
@@ -177230,7 +177242,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 5,
+   "qty": 6,
    "cost": 18655,
    "created": "2025-11-18"
   },
@@ -177251,7 +177263,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 8,
+   "qty": 10,
    "cost": 18550,
    "created": "2026-02-23"
   },
@@ -213370,7 +213382,7 @@
   {
    "sku": "H-1975",
    "model": "H-1975",
-   "qty": 0,
+   "qty": 1,
    "cost": 31500,
    "created": "2026-11-16"
   },
