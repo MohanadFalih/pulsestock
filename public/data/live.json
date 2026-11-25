@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-25T10:49:03.046614+00:00",
+ "syncedAt": "2026-11-25T11:04:15.185207+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -210,19 +210,19 @@
    "odooCreatedDate": "2026-11-23",
    "firstOrderDate": "2026-11-24",
    "lastOrderDate": "2026-11-25",
-   "orders": 9,
-   "units": 10,
-   "revenue": 610000,
+   "orders": 10,
+   "units": 11,
+   "revenue": 671000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 10,
+   "unitsBoughtFromSupplier": 11,
    "returnedStock": 0,
    "unitPrice": 61000.0,
-   "orderVelocity7d": 1.29,
+   "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 165,
-    "lastChecked": "2026-11-25T09:07:07Z",
+    "qty": 164,
+    "lastChecked": "2026-11-25T10:55:50Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -253,7 +253,7 @@
      {
       "color": "خاكي / Haki",
       "size": "2",
-      "qty": 20,
+      "qty": 19,
       "product_id": 736266
      },
      {
@@ -44868,9 +44868,9 @@
      183000
     ],
     "2026-11-25": [
-     6,
      7,
-     427000
+     8,
+     488000
     ]
    },
    "7658": {
@@ -61019,10 +61019,31 @@
    "2026-11-22": 46,
    "2026-11-23": 51,
    "2026-11-24": 41,
-   "2026-11-25": 17
+   "2026-11-25": 18
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35373",
+   "d": "2026-11-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1240",
+     "pid": 736266,
+     "qty": 1,
+     "price": 61000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 2"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35372",
    "d": "2026-11-25",
@@ -212418,9 +212439,8 @@
    "sku": "H-1962",
    "model": "H-1962",
    "qty": 0,
-   "cost": 40729,
-   "created": "2026-11-07",
-   "costSrc": "vendor"
+   "cost": 40250,
+   "created": "2026-11-07"
   },
   {
    "sku": "H-1962",
@@ -213536,9 +213556,8 @@
    "sku": "H-1970",
    "model": "H-1970",
    "qty": 0,
-   "cost": 33646,
-   "created": "2026-11-12",
-   "costSrc": "vendor"
+   "cost": 33250,
+   "created": "2026-11-12"
   },
   {
    "sku": "H-1970",
