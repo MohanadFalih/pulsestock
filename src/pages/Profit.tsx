@@ -200,29 +200,70 @@ function Kpi({
   );
 }
 
+/** Owner's cash view: Turkey operating profit, clearance cash (sales − its
+ *  ads and commission, cost ignored), returns frozen into the warehouse. */
+function cashFlow(t: Totals) {
+  const operating = t.trNet; // Turkey after its costs and all fixed costs
+  const clearance = t.stRev + t.stDelivery - t.stAds - t.stCommission;
+  const frozen = t.cash.frozenCost;
+  const available = operating + clearance - frozen; // = t.cash.surplus
+  return { operating, clearance, frozen, available, remaining: available - t.drawings };
+}
+
+function CashFlowRow({ t }: { t: Totals }) {
+  const f = cashFlow(t);
+  const tone = (n: number) => (n >= 0 ? "pos" : "neg") as "pos" | "neg";
+  return (
+    <section>
+      <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-text-muted">
+        Cash flow — what came in, what got frozen, what is left
+      </p>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(190px,1fr))] gap-4">
+        <Kpi
+          label="Net profit (accounting)"
+          value={iqd(t.net)}
+          sub={`all orders incl. clearance sold under cost (${iqd(t.stContribution)}) · for reference`}
+          tone={tone(t.net)}
+        />
+        <Kpi
+          label="Operating profit"
+          value={iqd(f.operating)}
+          sub="Turkey orders after ads, cargo, commission and all fixed costs — no clearance loss"
+          tone={tone(f.operating)}
+        />
+        <Kpi
+          label="+ Clearance cash"
+          value={iqd(f.clearance)}
+          sub={`stock sold ${iqd(t.stRev)} − its ads ${iqd(t.stAds)} − commission, + delivery net (cost not deducted)`}
+          tone={tone(f.clearance)}
+        />
+        <Kpi
+          label="− Frozen into stock"
+          value={iqd(-f.frozen)}
+          sub={`${Math.round(t.cash.frozenQty)} Turkey pieces came back — supplier cost tied up until resold`}
+          tone="neg"
+        />
+        <Kpi
+          label="= Cash available"
+          value={iqd(f.available)}
+          sub={`of which ${iqd(t.cash.atCourier)} still at the courier`}
+          tone={tone(f.available)}
+        />
+        <Kpi
+          label="Debt repaid → left"
+          value={iqd(f.remaining)}
+          sub={`${iqd(t.drawings)} already repaid (ابو سلطان) this period`}
+          tone={tone(f.remaining)}
+        />
+      </div>
+    </section>
+  );
+}
+
 function KpiRow({ t }: { t: Totals }) {
   const perDay = (n: number) => `${iqd(n / Math.max(1, t.days))} / day`;
-  const c = t.cash;
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
-      <Kpi
-        label="Net profit"
-        value={iqd(t.net)}
-        sub={`${perDay(t.net)} · after fixed costs`}
-        tone={t.net >= 0 ? "pos" : "neg"}
-      />
-      <Kpi
-        label="Liquidation"
-        value={iqd(c.stockReleased - c.frozenCost)}
-        sub={`cash from the warehouse: stock sold at cost ${iqd(c.stockReleased)} − Turkey returns ${iqd(c.frozenCost)}`}
-        tone={c.stockReleased - c.frozenCost >= 0 ? "pos" : "neg"}
-      />
-      <Kpi
-        label="Total income"
-        value={iqd(c.surplus)}
-        sub={`net profit + liquidation · after ${iqd(t.drawings)} repaid: ${iqd(c.surplus - t.drawings)}`}
-        tone={c.surplus >= 0 ? "pos" : "neg"}
-      />
       <Kpi
         label="Before fixed costs"
         value={iqd(t.contribution)}
@@ -564,7 +605,7 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
         Odoo net leaves out ad spend from then on.
       </p>
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[1020px] border-collapse">
+        <table className="w-full min-w-[1180px] border-collapse">
           <thead>
             <tr className="border-b border-hairline">
               <th className={cn(head, "text-left")}>Month</th>
@@ -574,8 +615,10 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
               <th className={cn(head, "text-right")}>Before fixed</th>
               <th className={cn(head, "text-right")}>Fixed</th>
               <th className={cn(head, "text-right")}>Net profit</th>
-              <th className={cn(head, "text-right")}>Liquidation</th>
-              <th className={cn(head, "text-right")}>Total income</th>
+              <th className={cn(head, "text-right")}>Operating</th>
+              <th className={cn(head, "text-right")}>Clearance cash</th>
+              <th className={cn(head, "text-right")}>Frozen</th>
+              <th className={cn(head, "text-right")}>Cash available</th>
               <th className={cn(head, "text-right")}>Odoo net</th>
               <th className={cn(head, "text-right")}>COGS gap</th>
             </tr>
@@ -597,9 +640,11 @@ function MonthlyTable({ rows }: { rows: MonthRow[] }) {
                   <td className={cn(num, "font-semibold", t.net >= 0 ? "text-pos" : "text-neg")}>
                     {iqd(t.net)}
                   </td>
-                  <td className={cn(num, t.cash.stockReleased - t.cash.frozenCost >= 0 ? "text-text-primary" : "text-neg")}>
-                    {iqd(t.cash.stockReleased - t.cash.frozenCost)}
+                  <td className={cn(num, cashFlow(t).operating >= 0 ? "text-text-primary" : "text-neg")}>
+                    {iqd(cashFlow(t).operating)}
                   </td>
+                  <td className={num}>{iqd(cashFlow(t).clearance)}</td>
+                  <td className={cn(num, "text-neg")}>{iqd(-cashFlow(t).frozen)}</td>
                   <td className={cn(num, "font-semibold", t.cash.surplus >= 0 ? "text-pos" : "text-neg")}>
                     {iqd(t.cash.surplus)}
                   </td>
@@ -814,6 +859,7 @@ export default function Profit() {
       ) : (
         <div className="space-y-4">
           <CostAlerts model={model} />
+          <CashFlowRow t={totals} />
           <KpiRow t={totals} />
           <SurplusBreakdown t={totals} model={model} stockValue={ops?.shop?.stockValue ?? null} />
           <SplitTable t={totals} />
