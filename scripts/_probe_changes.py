@@ -1,11 +1,6 @@
-import os,sys,collections as C
-sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
-from odoo_sync import Odoo,load_env,ENV_PATH
-o=Odoo(load_env(ENV_PATH))
-print("MOD",o.kw("ir.module.module","search_read",[[["name","=","deniz_clearance"]]],{"fields":["latest_version"]}))
-for m in ("deniz.liquidation.item","deniz.clearance.item"):
-    st=[("state","=","live")] if "liquid" in m else [("state","in",["active","due","floor"])]
-    try: print("VIS",m,o.kw(m,"read_group",[[list(x) for x in st],["vis_state"],["vis_state"]],{"lazy":False}))
-    except Exception as e: print("ERR",str(e)[:200])
-try: print("CRON",o.kw("ir.cron","search_read",[[["name","ilike","مشاهدة"]]],{"fields":["nextcall","lastcall","active"]}))
-except Exception as e: print("ERRC",str(e)[:150])
+import urllib.request,csv,io,collections as C
+u="https://docs.google.com/spreadsheets/d/1EaE2karm7nAJ5YoNPuBQdWND1t5fSufRlnoyFukZt5g/export?format=csv&gid=0"
+t=urllib.request.urlopen(u,timeout=60).read().decode("utf-8")
+r=list(csv.DictReader(io.StringIO(t)))
+print("HDR",list(r[0].keys()))
+print("L1",C.Counter(x.get("custom_label_1","<no column>") for x in r))
