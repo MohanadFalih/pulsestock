@@ -1,6 +1,11 @@
-import urllib.request,csv,io,collections as C
+import os,sys,collections as C,urllib.request,csv,io
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from odoo_sync import Odoo,load_env,ENV_PATH
+o=Odoo(load_env(ENV_PATH))
+for m,st in (("deniz.liquidation.item",[["state","=","live"]]),("deniz.clearance.item",[["state","in",["active","due","floor"]]])):
+    g=o.kw(m,"read_group",[st,["vis_state","vis_imps:sum"],["vis_state"]],{"lazy":False})
+    print("VIS",m,[(x["vis_state"],x["__count"]) for x in g])
+print("CRON",o.kw("ir.cron","search_read",[[["name","ilike","مشاهدة"]]],{"fields":["nextcall","lastcall"]}))
 u="https://docs.google.com/spreadsheets/d/1EaE2karm7nAJ5YoNPuBQdWND1t5fSufRlnoyFukZt5g/export?format=csv&gid=0"
-t=urllib.request.urlopen(u,timeout=60).read().decode("utf-8")
-r=list(csv.DictReader(io.StringIO(t)))
-print("HDR",list(r[0].keys()))
-print("L1",C.Counter(x.get("custom_label_1","<no column>") for x in r))
+r=list(csv.DictReader(io.StringIO(urllib.request.urlopen(u,timeout=60).read().decode("utf-8"))))
+print("SHEET",C.Counter((x.get("availability"),x.get("custom_label_1")) for x in r))
