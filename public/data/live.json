@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-25T19:33:31.468993+00:00",
+ "syncedAt": "2026-11-25T20:03:55.615429+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1082,19 +1082,19 @@
    "odooCreatedDate": "2026-11-23",
    "firstOrderDate": "2026-11-24",
    "lastOrderDate": "2026-11-25",
-   "orders": 13,
-   "units": 14,
-   "revenue": 854000,
+   "orders": 16,
+   "units": 23,
+   "revenue": 1403000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 14,
+   "unitsBoughtFromSupplier": 16,
    "returnedStock": 0,
    "unitPrice": 61000.0,
-   "orderVelocity7d": 1.86,
+   "orderVelocity7d": 2.29,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 161,
-    "lastChecked": "2026-11-25T15:19:16Z",
+    "qty": 160,
+    "lastChecked": "2026-11-25T19:45:35Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1125,7 +1125,7 @@
      {
       "color": "خاكي / Haki",
       "size": "2",
-      "qty": 18,
+      "qty": 17,
       "product_id": 736266
      },
      {
@@ -2110,14 +2110,14 @@
    "revenue": 480000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 5,
+   "unitsBoughtFromSupplier": 6,
    "returnedStock": 0,
    "unitPrice": 80000.0,
    "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 1,
    "supplierStock": {
     "qty": 58,
-    "lastChecked": "2026-11-25T15:39:18Z",
+    "lastChecked": "2026-11-25T19:33:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3575,14 +3575,14 @@
    "revenue": 1320000,
    "delivered": 9,
    "returned": 1,
-   "unitsBoughtFromSupplier": 13,
+   "unitsBoughtFromSupplier": 14,
    "returnedStock": 1,
    "unitPrice": 88000.0,
    "orderVelocity7d": 1.43,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 45,
-    "lastChecked": "2026-11-25T13:11:32Z",
+    "qty": 43,
+    "lastChecked": "2026-11-25T19:34:39Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3595,7 +3595,7 @@
      {
       "color": "نيلي / Laci",
       "size": "1",
-      "qty": 2,
+      "qty": 1,
       "product_id": 734802
      },
      {
@@ -3621,12 +3621,6 @@
       "size": "2",
       "qty": 1,
       "product_id": 734807
-     },
-     {
-      "color": "أسود / Siyah",
-      "size": "3",
-      "qty": 1,
-      "product_id": 734808
      },
      {
       "color": "قهوائي / Kahve",
@@ -10604,7 +10598,7 @@
    "revenue": 976000,
    "delivered": 7,
    "returned": 1,
-   "unitsBoughtFromSupplier": 7,
+   "unitsBoughtFromSupplier": 8,
    "returnedStock": 1,
    "unitPrice": 122000.0,
    "orderVelocity7d": 0.29,
@@ -14525,15 +14519,15 @@
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
    "lastOrderDate": "2026-11-25",
-   "orders": 81,
-   "units": 81,
-   "revenue": -491001,
+   "orders": 82,
+   "units": 82,
+   "revenue": -496251,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 2.71,
+   "orderVelocity7d": 2.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
@@ -17383,14 +17377,14 @@
    "revenue": 12185000,
    "delivered": 86,
    "returned": 22,
-   "unitsBoughtFromSupplier": 73,
+   "unitsBoughtFromSupplier": 74,
    "returnedStock": 11,
    "unitPrice": 137000.0,
    "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 42,
-    "lastChecked": "2026-11-25T15:40:15Z",
+    "lastChecked": "2026-11-25T19:36:50Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -45544,9 +45538,9 @@
      183000
     ],
     "2026-11-25": [
-     10,
-     11,
-     671000
+     13,
+     20,
+     1220000
     ]
    },
    "7658": {
@@ -48097,9 +48091,9 @@
      -50250
     ],
     "2026-11-25": [
-     3,
-     3,
-     -15000
+     4,
+     4,
+     -20250
     ]
    },
    "7436": {
@@ -61819,11 +61813,40 @@
    "2026-11-21": 48,
    "2026-11-22": 47,
    "2026-11-23": 51,
-   "2026-11-24": 42,
-   "2026-11-25": 40
+   "2026-11-24": 43,
+   "2026-11-25": 41
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35395",
+   "d": "2026-11-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1240",
+     "pid": 736268,
+     "qty": 1,
+     "price": 61000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أحمر / Bordo, 1"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -5250,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35394",
    "d": "2026-11-25",
@@ -63164,6 +63187,27 @@
      "del": 0,
      "route": "turkey",
      "var": "نيلي / Laci, 1"
+    }
+   ],
+   "src": "WhatsApp",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35334",
+   "d": "2026-11-24",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-1240",
+     "pid": 736267,
+     "qty": 1,
+     "price": 61000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "خاكي / Haki, 3"
     }
    ],
    "src": "WhatsApp",
@@ -75003,37 +75047,6 @@
    "pd": "2026-11-18",
    "src": "Facebook",
    "ful": "مدن"
-  },
-  {
-   "id": "S34839",
-   "d": "2026-11-15",
-   "st": "sale",
-   "fee": 5000,
-   "disc": -4000,
-   "lines": [
-    {
-     "sku": "H-1931",
-     "pid": 731412,
-     "qty": 1,
-     "price": 83000,
-     "discPct": 2.4,
-     "del": 0,
-     "route": "turkey",
-     "var": "قهوائي / Kahve, 48"
-    },
-    {
-     "sku": "M-1001MSA980",
-     "pid": 732965,
-     "qty": 1,
-     "price": 76000,
-     "discPct": 2.4,
-     "del": 0,
-     "route": "turkey",
-     "var": "خاكي / Haki, 48"
-    }
-   ],
-   "src": "WhatsApp",
-   "ful": "turkey"
   },
   {
    "id": "S34838",
