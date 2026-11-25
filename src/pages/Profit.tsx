@@ -220,6 +220,12 @@ function CashFlowRow({ t }: { t: Totals }) {
       </p>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(190px,1fr))] gap-4">
         <Kpi
+          label="Net profit (accounting)"
+          value={iqd(t.net)}
+          sub={`all orders incl. clearance sold under cost (${iqd(t.stContribution)}) · for reference`}
+          tone={tone(t.net)}
+        />
+        <Kpi
           label="Operating profit"
           value={iqd(f.operating)}
           sub="Turkey orders after ads, cargo, commission and all fixed costs — no clearance loss"
@@ -258,12 +264,6 @@ function KpiRow({ t }: { t: Totals }) {
   const perDay = (n: number) => `${iqd(n / Math.max(1, t.days))} / day`;
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
-      <Kpi
-        label="Net profit (accounting)"
-        value={iqd(t.net)}
-        sub={`${perDay(t.net)} · incl. clearance sold under cost (${iqd(t.stContribution)})`}
-        tone={t.net >= 0 ? "pos" : "neg"}
-      />
       <Kpi
         label="Before fixed costs"
         value={iqd(t.contribution)}
