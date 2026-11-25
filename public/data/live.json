@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-25T10:03:35.759154+00:00",
+ "syncedAt": "2026-11-25T10:33:14.692887+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -488,20 +488,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-22",
    "firstOrderDate": "2026-11-22",
-   "lastOrderDate": "2026-11-22",
-   "orders": 1,
-   "units": 1,
-   "revenue": 90000,
+   "lastOrderDate": "2026-11-25",
+   "orders": 2,
+   "units": 2,
+   "revenue": 180000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 1,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 90000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 199,
-    "lastChecked": "2026-11-24T15:18:33Z",
+    "lastChecked": "2026-11-25T10:24:27Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -3779,20 +3779,20 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-15",
    "firstOrderDate": "2026-11-18",
-   "lastOrderDate": "2026-11-20",
-   "orders": 2,
-   "units": 2,
-   "revenue": 176000,
+   "lastOrderDate": "2026-11-25",
+   "orders": 3,
+   "units": 3,
+   "revenue": 264000,
    "delivered": 2,
    "returned": 0,
-   "unitsBoughtFromSupplier": 2,
+   "unitsBoughtFromSupplier": 3,
    "returnedStock": 0,
    "unitPrice": 88000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 5,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 198,
-    "lastChecked": "2026-11-24T15:17:32Z",
+    "lastChecked": "2026-11-25T10:24:27Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -4106,27 +4106,27 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-14",
    "firstOrderDate": "2026-11-16",
-   "lastOrderDate": "2026-11-22",
-   "orders": 3,
-   "units": 3,
-   "revenue": 258000,
+   "lastOrderDate": "2026-11-25",
+   "orders": 4,
+   "units": 4,
+   "revenue": 344000,
    "delivered": 2,
    "returned": 1,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 4,
    "returnedStock": 1,
    "unitPrice": 86000.0,
-   "orderVelocity7d": 0.14,
-   "daysSinceLastOrder": 3,
+   "orderVelocity7d": 0.29,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 51,
-    "lastChecked": "2026-11-24T15:23:59Z",
+    "qty": 49,
+    "lastChecked": "2026-11-25T10:23:29Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "نيلي / Laci",
       "size": "4",
-      "qty": 4,
+      "qty": 3,
       "product_id": 734333
      },
      {
@@ -4168,7 +4168,7 @@
      {
       "color": "أسود / Siyah",
       "size": "3",
-      "qty": 6,
+      "qty": 5,
       "product_id": 734340
      }
     ]
@@ -44885,6 +44885,11 @@
      1,
      1,
      90000
+    ],
+    "2026-11-25": [
+     1,
+     1,
+     90000
     ]
    },
    "7650": {
@@ -45266,6 +45271,11 @@
      1,
      1,
      88000
+    ],
+    "2026-11-25": [
+     1,
+     1,
+     88000
     ]
    },
    "7585": {
@@ -45319,6 +45329,11 @@
      86000
     ],
     "2026-11-22": [
+     1,
+     1,
+     86000
+    ],
+    "2026-11-25": [
      1,
      1,
      86000
@@ -61004,10 +61019,51 @@
    "2026-11-22": 46,
    "2026-11-23": 51,
    "2026-11-24": 41,
-   "2026-11-25": 16
+   "2026-11-25": 17
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35372",
+   "d": "2026-11-25",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-0667",
+     "pid": 734397,
+     "qty": 1,
+     "price": 88000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    },
+    {
+     "sku": "T-8033",
+     "pid": 734337,
+     "qty": 1,
+     "price": 86000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 4"
+    },
+    {
+     "sku": "L-0665",
+     "pid": 736028,
+     "qty": 1,
+     "price": 90000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35371",
    "d": "2026-11-25",
