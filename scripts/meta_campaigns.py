@@ -298,6 +298,13 @@ def main():
                                  "error": f"meta placement fetch failed: {exc}",
                                  "campaigns": []})
 
+    # ---- v1.8: per-piece visibility of the LAST PIECES campaign (Odoo reads
+    # it to decide when a clearance piece drops a step, owner 2026-11-25) ----
+    try:
+        build_visibility(today, now)
+    except Exception as exc:
+        mark_visibility_error(now, exc)
+
     # ---- v1.7: catalog campaigns broken down by product, rolled up per
     # model code (independent — own fetch, own file, own failure path) ------
     try:
@@ -701,6 +708,84 @@ def aggregate_catalog_rows(rows, today):
                              key=lambda kv: -kv[1]["totals7"]["spendUSD"]))
         out_camps.append({"id": cid, "name": camp["name"], "models": models})
     return out_camps
+
+
+VISIBILITY_FILE = "catalog-visibility.json"
+VISIBILITY_CAMPAIGN = "LAST PIECES"
+VISIBILITY_DAYS = 35          # covers the 28-day safety cap of the ladder + margin
+VISIBILITY_EVERY_H = 3        # heavy breakdown: refresh every 3 h, not every sync
+VISIBILITY_NOTE = (
+    "Per-piece delivery of the clearance catalog campaign (name contains "
+    "'LAST PIECES'), Meta breakdowns=product_id, DAILY. Key = retailer_id "
+    "(the 'id' column of the Odoo feed /liq/feed.csv). products[id] = list of "
+    "[date, impressions, clicks]; days with no delivery are omitted. Odoo "
+    "(deniz_clearance) sums them from the start of a piece's ladder step: "
+    "seen >= 500 impressions or >= 8 clicks, unseen < 150. Refreshed every "
+    f"{VISIBILITY_EVERY_H} h; error!=null keeps the last good data.")
+
+
+def _visibility_path():
+    return os.path.join(DATA_DIR, VISIBILITY_FILE)
+
+
+def build_visibility(today, now):
+    path = _visibility_path()
+    try:
+        with open(path, encoding="utf-8") as f:
+            prev = json.load(f)
+        last = dt.datetime.fromisoformat(prev.get("metaSyncedAt"))
+        age_h = (dt.datetime.fromisoformat(now) - last).total_seconds() / 3600
+        if prev.get("products") and age_h < VISIBILITY_EVERY_H and not prev.get("error"):
+            print(f"{VISIBILITY_FILE}: fresh ({age_h:.1f} h), skipped")
+            return
+    except Exception:
+        pass
+    since = today - dt.timedelta(days=VISIBILITY_DAYS - 1)
+    rows = get_all(f"act_{ACCOUNT}/insights", {
+        "level": "campaign",
+        "time_increment": "1",
+        "breakdowns": "product_id",
+        "filtering": json.dumps([{"field": "campaign.name", "operator": "CONTAIN",
+                                  "value": VISIBILITY_CAMPAIGN}]),
+        "time_range": json.dumps({"since": since.isoformat(), "until": today.isoformat()}),
+        "fields": "campaign_name,impressions,clicks",
+        "limit": "500",
+    })
+    products = {}
+    for row in rows:
+        rid = str(row.get("product_id") or "").split(",", 1)[0].strip()
+        imps, clicks = int(row.get("impressions") or 0), int(row.get("clicks") or 0)
+        if not rid or not (imps or clicks):
+            continue
+        day = products.setdefault(rid, {})
+        d = row.get("date_start")
+        old = day.get(d, (0, 0))
+        day[d] = (old[0] + imps, old[1] + clicks)
+    out = {"syncedAt": now, "metaSyncedAt": now,
+           "window": {"since": since.isoformat(), "until": today.isoformat(), "days": VISIBILITY_DAYS},
+           "tz": "dates are in the ad account timezone as returned by Meta",
+           "campaign": VISIBILITY_CAMPAIGN, "note": VISIBILITY_NOTE, "error": None,
+           "products": {rid: [[d, i, c] for d, (i, c) in sorted(days.items())]
+                        for rid, days in sorted(products.items())}}
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"{VISIBILITY_FILE}: {len(out['products'])} pieces, {len(rows)} rows")
+
+
+def mark_visibility_error(now, exc):
+    """Keep the last good data on a transient failure; only error/syncedAt change."""
+    path = _visibility_path()
+    try:
+        with open(path, encoding="utf-8") as f:
+            prev = json.load(f)
+    except Exception:
+        prev = {"metaSyncedAt": None, "window": None, "campaign": VISIBILITY_CAMPAIGN,
+                "note": VISIBILITY_NOTE, "products": {}}
+    prev["syncedAt"] = now
+    prev["error"] = f"meta visibility fetch failed: {exc}"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(prev, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"{VISIBILITY_FILE}: error {exc}")
 
 
 def write_catalog_products(out):
