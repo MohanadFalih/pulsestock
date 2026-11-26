@@ -305,7 +305,14 @@ def run_action(a, log, cents, today):
     if op == "multi_off":
         return multi_off(target)
     if op == "raw":  # read-only GET of one object with chosen fields
-        return {"raw": call("GET", target, {"fields": a.get("fields", "id,name")})}
+        global BASE
+        old = BASE
+        if a.get("api"):
+            BASE = f"https://graph.facebook.com/{a['api']}"
+        try:
+            return {"raw": call("GET", target, {"fields": a.get("fields", "id,name")})}
+        finally:
+            BASE = old
     if op == "inspect_set":
         return inspect_set(target)
     if op == "find_posts":

@@ -285,6 +285,14 @@
    "op": "multi_off",
    "target": "120253644832860723",
    "why": "owner: turn off multi-advertiser ads"
+  },
+  {
+   "id": "2026-11-26-raw-v26-H1978V2",
+   "op": "raw",
+   "api": "v26.0",
+   "target": "120253635638170723",
+   "fields": "id,name,creative_asset_groups_spec,creative{id,object_story_id,asset_feed_spec}",
+   "why": "read-only: does v26 show both videos?"
   }
  ]
 }
