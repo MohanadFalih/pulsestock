@@ -413,6 +413,13 @@
    "op": "set_welcome",
    "target": "120253644832860723",
    "why": "owner: saved chat template on tests"
+  },
+  {
+   "id": "2026-11-26-raw-lp-set",
+   "op": "raw",
+   "target": "120252218976630723",
+   "fields": "id,name,status,daily_budget,promoted_object,optimization_goal,destination_type,targeting,ads{id,name,status,creative{id,product_set_id,object_story_spec,asset_feed_spec,template_url_spec,page_welcome_message}}",
+   "why": "read-only: LAST PIECES ad set structure"
   }
  ]
 }
