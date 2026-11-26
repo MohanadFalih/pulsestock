@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-26T08:03:17.902178+00:00",
+ "syncedAt": "2026-11-26T08:33:17.520198+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -526,23 +526,23 @@
    "sku": "T-8045",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-25",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-26",
+   "lastOrderDate": "2026-11-26",
+   "orders": 1,
+   "units": 1,
+   "revenue": 98000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 98000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 171,
-    "lastChecked": "2026-11-25T15:32:14Z",
+    "qty": 170,
+    "lastChecked": "2026-11-26T08:18:25Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -573,7 +573,7 @@
      {
       "color": "أسود / Siyah",
       "size": "4",
-      "qty": 12,
+      "qty": 11,
       "product_id": 736450
      },
      {
@@ -1469,20 +1469,20 @@
    "sku": "M-PL9260",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-23",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-26",
+   "lastOrderDate": "2026-11-26",
+   "orders": 1,
+   "units": 1,
+   "revenue": 73000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 73000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -1935,20 +1935,20 @@
    "sku": "M-267NZRK1200",
    "category": "All",
    "supplier": null,
-   "stage": "created",
+   "stage": "ads-live",
    "odooCreatedDate": "2026-11-22",
-   "firstOrderDate": null,
-   "lastOrderDate": null,
-   "orders": 0,
-   "units": 0,
-   "revenue": 0,
+   "firstOrderDate": "2026-11-26",
+   "lastOrderDate": "2026-11-26",
+   "orders": 1,
+   "units": 1,
+   "revenue": 69000,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": 69000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": null,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -45706,6 +45706,13 @@
   "from": "2026-08-28",
   "to": "2026-11-26",
   "byProduct": {
+   "7670": {
+    "2026-11-26": [
+     1,
+     1,
+     98000
+    ]
+   },
    "7669": {
     "2026-11-25": [
      1,
@@ -45758,6 +45765,13 @@
      81000
     ]
    },
+   "7655": {
+    "2026-11-26": [
+     1,
+     1,
+     73000
+    ]
+   },
    "7652": {
     "2026-11-22": [
      1,
@@ -45782,6 +45796,13 @@
      2,
      2,
      178000
+    ]
+   },
+   "7644": {
+    "2026-11-26": [
+     1,
+     1,
+     69000
     ]
    },
    "7642": {
@@ -62007,10 +62028,42 @@
    "id": "S35406",
    "d": "2026-11-26",
    "st": "sale",
-   "fee": 0,
+   "fee": 5000,
    "disc": 0,
-   "lines": [],
-   "src": "Instagram"
+   "lines": [
+    {
+     "sku": "T-8045",
+     "pid": 736457,
+     "qty": 1,
+     "price": 98000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 3"
+    },
+    {
+     "sku": "M-267NZRK1200",
+     "pid": 735855,
+     "qty": 1,
+     "price": 69000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 3"
+    },
+    {
+     "sku": "M-PL9260",
+     "pid": 736154,
+     "qty": 1,
+     "price": 73000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "Vizyon, 52"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
   },
   {
    "id": "S35405",
