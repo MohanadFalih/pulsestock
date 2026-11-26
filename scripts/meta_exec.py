@@ -30,6 +30,7 @@ import datetime as dt
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -222,7 +223,10 @@ def create_test(a, cents):
     try:
         call("POST", new_set, {"name": f"TEST {code}"})
         step = "budget"
-        call("POST", new_set, {"daily_budget": str(int(TEST_BUDGET_USD * cents))})
+        cur = int(call("GET", new_set, {"fields": "daily_budget"}).get("daily_budget") or 0)
+        if cur != int(TEST_BUDGET_USD * cents):
+            time.sleep(35)
+            call("POST", new_set, {"daily_budget": str(int(TEST_BUDGET_USD * cents))})
         for i, post in enumerate(posts, 1):
             cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs)}
             if dof:
