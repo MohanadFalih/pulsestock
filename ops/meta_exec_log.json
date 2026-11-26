@@ -1202,5 +1202,699 @@
    }
   ],
   "result": "done"
+ },
+ {
+  "id": "2026-11-26-ad-170723",
+  "op": "inspect",
+  "target": "120253635638170723",
+  "why": "read-only: multi-video ad H-1978",
+  "at": "2026-11-26T14:14+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253635638170723",
+    "name": "H-1978",
+    "status": "ACTIVE",
+    "account_id": "2373500359518271",
+    "adset_id": "120253635638160723",
+    "campaign_id": "120252141524090723",
+    "creative": {
+     "id": "4716665645246477",
+     "name": "✨طقم أنيق وراقي يمنحكِ إطلالة محتشمة ومميزة✨\nالكود : H-1978\nالمقاسات : 42-44-46-48-50-52 \nطول التون 2026-11-25-bfd8bc7ce0b1d4b6af3742d929e70f79",
+     "object_story_id": "115435042437123_1629266139236506",
+     "effective_object_story_id": "115435042437123_1629266139236506",
+     "object_type": "VIDEO",
+     "video_id": "1819509115930345",
+     "call_to_action_type": "MESSAGE_PAGE",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253635638160723",
+    "name": "SCALE H-1978 V2",
+    "status": "ACTIVE",
+    "daily_budget": "1200",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "smart_pse_enabled": false,
+     "whatsapp_phone_number": "9647736000099"
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120252141524090723",
+    "name": "MESSAGES CAMPAIGN",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 23
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-raw-170723",
+  "op": "raw",
+  "target": "120253635638170723",
+  "why": "read-only",
+  "at": "2026-11-26T14:14+03:00",
+  "day": "2026-11-26",
+  "raw": {
+   "id": "120253635638170723",
+   "name": "H-1978",
+   "adset_id": "120253635638160723",
+   "adcreatives": {
+    "data": [
+     {
+      "id": "4716665645246477",
+      "object_story_id": "115435042437123_1629266139236506",
+      "asset_feed_spec": {
+       "call_to_actions": [
+        {
+         "type": "MESSAGE_PAGE",
+         "value": {
+          "app_destination": "MESSENGER",
+          "link": "https://fb.com/messenger_doc/"
+         }
+        },
+        {
+         "type": "WHATSAPP_MESSAGE",
+         "value": {
+          "app_destination": "WHATSAPP",
+          "link": "https://api.whatsapp.com/send"
+         }
+        },
+        {
+         "type": "INSTAGRAM_MESSAGE",
+         "value": {
+          "app_destination": "INSTAGRAM_DIRECT",
+          "app_link": "instagram://direct?userid=5753521979",
+          "link": "https://www.instagram.com/"
+         }
+        }
+       ],
+       "optimization_type": "DOF_MESSAGING_DESTINATION",
+       "additional_data": {
+        "multi_share_end_card": false,
+        "is_click_to_message": true
+       }
+      },
+      "object_type": "VIDEO",
+      "video_id": "1819509115930345"
+     }
+    ]
+   },
+   "tracking_specs": [
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "1196181193816522",
+      "1383401461763982",
+      "1389835307794751",
+      "1486137228144394",
+      "1502059743214209",
+      "1567460009959423",
+      "1748825398484179",
+      "1749526368450861",
+      "2261030757303080",
+      "4274278132644348",
+      "4278979975534867",
+      "4665657266894570",
+      "4693976764055424",
+      "4705350212916842",
+      "4713616355354213",
+      "4718318388237373",
+      "4761842187229114",
+      "4824118921005763",
+      "5246792725446978",
+      "5328549757177169",
+      "6978861922188015"
+     ]
+    },
+    {
+     "action.type": [
+      "messenger"
+     ],
+     "page": [
+      "115435042437123"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "page": [
+      "115435042437123"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "2261030757303080",
+      "4465575283508125",
+      "4855681831219190",
+      "7905661812798756"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "9091391787641546"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "4370564699659148",
+      "4465575283508125",
+      "4467399193297731",
+      "4730419253656003",
+      "4734563733221513",
+      "4750620838301800",
+      "6207439025994822",
+      "7466336723432622",
+      "7867456476599855",
+      "25503870709237725"
+     ]
+    },
+    {
+     "action.type": [
+      "offsite_conversion"
+     ],
+     "fb_pixel": [
+      "950131427639553"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "5933417403449243",
+      "6380069115451509",
+      "7105357619569390",
+      "7225617474206766",
+      "7677821892298307",
+      "7874889872521478",
+      "7905661812798756",
+      "8268812959796014",
+      "8586632718085388",
+      "25508286838816154",
+      "27155302777481671"
+     ]
+    },
+    {
+     "action.type": [
+      "offline_conversion"
+     ],
+     "dataset": [
+      "950131427639553"
+     ]
+    },
+    {
+     "action.type": [
+      "product_level_reporting"
+     ]
+    },
+    {
+     "action.type": [
+      "post_interaction_gross"
+     ],
+     "page": [
+      "115435042437123"
+     ],
+     "post": [
+      "1629266139236506"
+     ]
+    },
+    {
+     "action.type": [
+      "post_engagement"
+     ],
+     "page": [
+      "115435042437123"
+     ],
+     "post": [
+      "1629266139236506"
+     ]
+    },
+    {
+     "action.type": [
+      "link_click"
+     ],
+     "post": [
+      "1629266139236506"
+     ],
+     "post.wall": [
+      "115435042437123"
+     ]
+    }
+   ]
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-ad-280723",
+  "op": "inspect",
+  "target": "120253585987280723",
+  "why": "read-only: multi-video ad H-1978",
+  "at": "2026-11-26T14:14+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253585987280723",
+    "name": "H-1978",
+    "status": "ACTIVE",
+    "account_id": "2373500359518271",
+    "adset_id": "120253585987270723",
+    "campaign_id": "120252141524090723",
+    "creative": {
+     "id": "1453926309575029",
+     "name": "✨طقم أنيق وراقي يمنحكِ إطلالة محتشمة ومميزة✨\nالكود : H-1978\nالمقاسات : 42-44-46-48-50-52 \nطول التون 2026-11-22-25bf46215d4360ce220a94ae51dabece",
+     "object_story_id": "115435042437123_1628234356006351",
+     "effective_object_story_id": "115435042437123_1628234356006351",
+     "object_type": "VIDEO",
+     "video_id": "4172636806362769",
+     "call_to_action_type": "MESSAGE_PAGE",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253585987270723",
+    "name": "SCALE H-1978",
+    "status": "ACTIVE",
+    "daily_budget": "1200",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "smart_pse_enabled": false,
+     "whatsapp_phone_number": "9647736000099"
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120252141524090723",
+    "name": "MESSAGES CAMPAIGN",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 23
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-raw-280723",
+  "op": "raw",
+  "target": "120253585987280723",
+  "why": "read-only",
+  "at": "2026-11-26T14:14+03:00",
+  "day": "2026-11-26",
+  "raw": {
+   "id": "120253585987280723",
+   "name": "H-1978",
+   "adset_id": "120253585987270723",
+   "adcreatives": {
+    "data": [
+     {
+      "id": "1453926309575029",
+      "object_story_id": "115435042437123_1628234356006351",
+      "asset_feed_spec": {
+       "call_to_actions": [
+        {
+         "type": "MESSAGE_PAGE",
+         "value": {
+          "app_destination": "MESSENGER",
+          "link": "https://fb.com/messenger_doc/"
+         }
+        },
+        {
+         "type": "WHATSAPP_MESSAGE",
+         "value": {
+          "app_destination": "WHATSAPP",
+          "link": "https://api.whatsapp.com/send"
+         }
+        },
+        {
+         "type": "INSTAGRAM_MESSAGE",
+         "value": {
+          "app_destination": "INSTAGRAM_DIRECT",
+          "app_link": "instagram://direct?userid=5753521979",
+          "link": "https://www.instagram.com/"
+         }
+        }
+       ],
+       "optimization_type": "DOF_MESSAGING_DESTINATION",
+       "additional_data": {
+        "multi_share_end_card": false,
+        "is_click_to_message": true
+       }
+      },
+      "object_type": "VIDEO",
+      "video_id": "4172636806362769"
+     }
+    ]
+   },
+   "tracking_specs": [
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "1196181193816522",
+      "1383401461763982",
+      "1389835307794751",
+      "1486137228144394",
+      "1502059743214209",
+      "1567460009959423",
+      "1748825398484179",
+      "1749526368450861",
+      "2261030757303080",
+      "4274278132644348",
+      "4278979975534867",
+      "4665657266894570",
+      "4693976764055424",
+      "4705350212916842",
+      "4713616355354213",
+      "4718318388237373",
+      "4761842187229114",
+      "4824118921005763",
+      "5246792725446978",
+      "5328549757177169",
+      "6978861922188015"
+     ]
+    },
+    {
+     "action.type": [
+      "messenger"
+     ],
+     "page": [
+      "115435042437123"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "page": [
+      "115435042437123"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "2261030757303080",
+      "4465575283508125",
+      "4855681831219190",
+      "7905661812798756"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "9091391787641546"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "4370564699659148",
+      "4465575283508125",
+      "4467399193297731",
+      "4730419253656003",
+      "4734563733221513",
+      "4750620838301800",
+      "6207439025994822",
+      "7466336723432622",
+      "7867456476599855",
+      "25503870709237725"
+     ]
+    },
+    {
+     "action.type": [
+      "offsite_conversion"
+     ],
+     "fb_pixel": [
+      "950131427639553"
+     ]
+    },
+    {
+     "action.type": [
+      "onsite_conversion"
+     ],
+     "conversion_id": [
+      "5933417403449243",
+      "6380069115451509",
+      "7105357619569390",
+      "7225617474206766",
+      "7677821892298307",
+      "7874889872521478",
+      "7905661812798756",
+      "8268812959796014",
+      "8586632718085388",
+      "25508286838816154",
+      "27155302777481671"
+     ]
+    },
+    {
+     "action.type": [
+      "offline_conversion"
+     ],
+     "dataset": [
+      "950131427639553"
+     ]
+    },
+    {
+     "action.type": [
+      "product_level_reporting"
+     ]
+    },
+    {
+     "action.type": [
+      "post_engagement"
+     ],
+     "page": [
+      "115435042437123"
+     ],
+     "post": [
+      "1628234356006351"
+     ]
+    },
+    {
+     "action.type": [
+      "post_interaction_gross"
+     ],
+     "page": [
+      "115435042437123"
+     ],
+     "post": [
+      "1628234356006351"
+     ]
+    },
+    {
+     "action.type": [
+      "link_click"
+     ],
+     "post": [
+      "1628234356006351"
+     ],
+     "post.wall": [
+      "115435042437123"
+     ]
+    }
+   ]
+  },
+  "result": "done"
  }
 ]
