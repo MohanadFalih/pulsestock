@@ -71,7 +71,9 @@ def call(method, path, params=None):
         except Exception:
             raise RuntimeError(f"HTTP {e.code}")
     if isinstance(payload, dict) and "error" in payload:
-        raise RuntimeError(payload["error"].get("message", "meta api error"))
+        er = payload["error"]
+        raise RuntimeError(" | ".join(str(x) for x in (er.get("message"), er.get("error_subcode"),
+                                                       er.get("error_user_title"), er.get("error_user_msg")) if x))
     return payload
 
 
@@ -213,24 +215,30 @@ def create_test(a, cents):
     if not any("offline_conversion" in t.get("action.type", []) for t in tracking):
         tracking.append({"action.type": ["offline_conversion"], "dataset": ["950131427639553"]})
 
-    new_set = call("POST", f"{TEST_TEMPLATE_ADSET}/copies",
+    new_set = a.get("reuse_adset") or call("POST", f"{TEST_TEMPLATE_ADSET}/copies",
                    {"deep_copy": "false", "status_option": "PAUSED"})["copied_adset_id"]
     out = {"adset": new_set, "ads": []}
+    step = "rename"
     try:
-        call("POST", new_set, {"name": f"TEST {code}", "daily_budget": str(int(TEST_BUDGET_USD * cents))})
+        call("POST", new_set, {"name": f"TEST {code}"})
+        step = "budget"
+        call("POST", new_set, {"daily_budget": str(int(TEST_BUDGET_USD * cents))})
         for i, post in enumerate(posts, 1):
             cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs)}
             if dof:
                 cp["degrees_of_freedom_spec"] = json.dumps(dof)
+            step = f"creative {i}"
             cr = call("POST", f"act_{ACCOUNT}/adcreatives", cp)["id"]
+            step = f"ad {i}"
             ad = call("POST", f"act_{ACCOUNT}/ads", {
                 "name": code if len(posts) == 1 else f"{code} {i}", "adset_id": new_set,
                 "creative": json.dumps({"creative_id": cr}), "status": "ACTIVE",
                 "tracking_specs": json.dumps(tracking)})["id"]
             out["ads"].append({"ad": ad, "post": post})
+        step = "activate"
         call("POST", new_set, {"status": "ACTIVE"})
     except Exception as x:
-        out["error_after_copy"] = str(x)[:300]
+        out["error_after_copy"] = f"{step}: {str(x)[:400]}"
         try:
             call("POST", new_set, {"status": "PAUSED"})
         except Exception:
