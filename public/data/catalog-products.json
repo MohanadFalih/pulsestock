@@ -1,6 +1,6 @@
 {
- "syncedAt": "2026-11-26T02:34:05.703049+00:00",
- "metaSyncedAt": "2026-11-26T01:55:49.280833+00:00",
+ "syncedAt": "2026-11-26T03:03:26.926110+00:00",
+ "metaSyncedAt": "2026-11-26T03:03:26.926110+00:00",
  "window": {
   "since": "2026-11-13",
   "until": "2026-11-26",
@@ -9,7 +9,7 @@
  "tz": "dates are in the ad account timezone as returned by Meta",
  "currency": "USD",
  "note": "Catalog campaigns (campaign name contains 'CATALOG') broken down by product (Meta breakdowns=product_id), DAILY over 14 days including today, rolled up per MODEL CODE: every color/size variant of a model is summed into one row. The model code is the first 'X-1234' token found in the product label (name + retailer id), upper-cased, digits only after the dash (M-3352NVX1208 -> M-3352). Labels without a code go to '?'. Per campaign: models{code: {name, variants, totals7, totalsPrev7, daily[]}}; each daily row: date, spendUSD, impressions, clicks, purchases (omni_purchase, fallback purchase; null when zero). totals7 = last 7 days incl. today, totalsPrev7 = the 7 days before. error!=null means the fetch failed — the other Meta files are unaffected.",
- "error": "meta catalog product fetch failed: HTTP Error 403: Forbidden (showing data from metaSyncedAt)",
+ "error": null,
  "campaigns": [
   {
    "id": "120253327710670723",
@@ -121,6 +121,13 @@
        "impressions": 0,
        "clicks": 0,
        "purchases": null
+      },
+      {
+       "date": "2026-11-26",
+       "spendUSD": 0.0,
+       "impressions": 0,
+       "clicks": 0,
+       "purchases": null
       }
      ]
     },
@@ -129,7 +136,7 @@
      "variants": 2,
      "totals7": {
       "spendUSD": 17.93,
-      "impressions": 2143,
+      "impressions": 2144,
       "clicks": 1060,
       "purchases": 5
      },
@@ -206,7 +213,7 @@
       {
        "date": "2026-11-22",
        "spendUSD": 4.51,
-       "impressions": 514,
+       "impressions": 515,
        "clicks": 272,
        "purchases": null
       },
@@ -245,8 +252,8 @@
      "variants": 9,
      "totals7": {
       "spendUSD": 13.13,
-      "impressions": 10942,
-      "clicks": 1515,
+      "impressions": 10964,
+      "clicks": 1522,
       "purchases": 1
      },
      "totalsPrev7": {
@@ -350,8 +357,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.15,
-       "impressions": 185,
-       "clicks": 42,
+       "impressions": 207,
+       "clicks": 49,
        "purchases": null
       }
      ]
@@ -361,8 +368,8 @@
      "variants": 3,
      "totals7": {
       "spendUSD": 9.67,
-      "impressions": 7810,
-      "clicks": 1172,
+      "impressions": 7813,
+      "clicks": 1173,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -445,8 +452,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.02,
-       "impressions": 30,
-       "clicks": 8,
+       "impressions": 33,
+       "clicks": 9,
        "purchases": null
       }
      ]
@@ -456,8 +463,8 @@
      "variants": 38,
      "totals7": {
       "spendUSD": 9.43,
-      "impressions": 8002,
-      "clicks": 959,
+      "impressions": 8007,
+      "clicks": 961,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -554,15 +561,15 @@
       {
        "date": "2026-11-25",
        "spendUSD": 0.69,
-       "impressions": 812,
+       "impressions": 813,
        "clicks": 186,
        "purchases": null
       },
       {
        "date": "2026-11-26",
        "spendUSD": 0.07,
-       "impressions": 62,
-       "clicks": 18,
+       "impressions": 66,
+       "clicks": 20,
        "purchases": null
       }
      ]
@@ -571,9 +578,9 @@
      "name": "طقم عملي ومريح يناسب اطلالتك اليومية M-261NZRK1200",
      "variants": 23,
      "totals7": {
-      "spendUSD": 8.82,
-      "impressions": 6260,
-      "clicks": 1346,
+      "spendUSD": 8.84,
+      "impressions": 6279,
+      "clicks": 1348,
       "purchases": 2
      },
      "totalsPrev7": {
@@ -663,15 +670,15 @@
       {
        "date": "2026-11-25",
        "spendUSD": 2.02,
-       "impressions": 1244,
+       "impressions": 1245,
        "clicks": 267,
        "purchases": null
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.2,
-       "impressions": 199,
-       "clicks": 42,
+       "spendUSD": 0.22,
+       "impressions": 217,
+       "clicks": 44,
        "purchases": null
       }
      ]
@@ -790,8 +797,8 @@
      "variants": 6,
      "totals7": {
       "spendUSD": 7.63,
-      "impressions": 5446,
-      "clicks": 877,
+      "impressions": 5454,
+      "clicks": 880,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -895,8 +902,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.17,
-       "impressions": 98,
-       "clicks": 29,
+       "impressions": 106,
+       "clicks": 32,
        "purchases": null
       }
      ]
@@ -905,9 +912,9 @@
      "name": "طقم انيق وعملي بقصة مريحة M-2837AYD574",
      "variants": 6,
      "totals7": {
-      "spendUSD": 7.33,
-      "impressions": 7419,
-      "clicks": 2009,
+      "spendUSD": 7.34,
+      "impressions": 7444,
+      "clicks": 2017,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1004,15 +1011,15 @@
       {
        "date": "2026-11-25",
        "spendUSD": 1.95,
-       "impressions": 2150,
+       "impressions": 2151,
        "clicks": 554,
        "purchases": null
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.25,
-       "impressions": 255,
-       "clicks": 78,
+       "spendUSD": 0.26,
+       "impressions": 279,
+       "clicks": 86,
        "purchases": null
       }
      ]
@@ -1021,9 +1028,9 @@
      "name": "جاكيت طويل وانيق يمنحك اطلالة راقية M-3250NVX1208",
      "variants": 6,
      "totals7": {
-      "spendUSD": 7.15,
-      "impressions": 4089,
-      "clicks": 556,
+      "spendUSD": 7.17,
+      "impressions": 4095,
+      "clicks": 558,
       "purchases": 1
      },
      "totalsPrev7": {
@@ -1112,9 +1119,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.1,
-       "impressions": 79,
-       "clicks": 11,
+       "spendUSD": 0.12,
+       "impressions": 85,
+       "clicks": 13,
        "purchases": null
       }
      ]
@@ -1123,9 +1130,9 @@
      "name": "كاب يجمع بين البساطة والجمال M-6105BLU797",
      "variants": 40,
      "totals7": {
-      "spendUSD": 6.37,
-      "impressions": 5739,
-      "clicks": 718,
+      "spendUSD": 6.38,
+      "impressions": 5745,
+      "clicks": 720,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1228,9 +1235,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.05,
-       "impressions": 67,
-       "clicks": 12,
+       "spendUSD": 0.06,
+       "impressions": 73,
+       "clicks": 14,
        "purchases": null
       }
      ]
@@ -1240,7 +1247,7 @@
      "variants": 16,
      "totals7": {
       "spendUSD": 5.66,
-      "impressions": 5322,
+      "impressions": 5333,
       "clicks": 724,
       "purchases": 0
      },
@@ -1345,7 +1352,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.2,
-       "impressions": 106,
+       "impressions": 117,
        "clicks": 40,
        "purchases": null
       }
@@ -1356,8 +1363,8 @@
      "variants": 20,
      "totals7": {
       "spendUSD": 5.45,
-      "impressions": 3634,
-      "clicks": 852,
+      "impressions": 3641,
+      "clicks": 854,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1399,14 +1406,14 @@
        "date": "2026-11-25",
        "spendUSD": 2.32,
        "impressions": 1450,
-       "clicks": 286,
+       "clicks": 287,
        "purchases": null
       },
       {
        "date": "2026-11-26",
        "spendUSD": 0.22,
-       "impressions": 166,
-       "clicks": 30,
+       "impressions": 173,
+       "clicks": 31,
        "purchases": null
       }
      ]
@@ -1415,9 +1422,9 @@
      "name": "طقم انيق وراقي يمنحك اطلالة محتشمة M-24063UKB139",
      "variants": 40,
      "totals7": {
-      "spendUSD": 5.3,
-      "impressions": 5642,
-      "clicks": 1865,
+      "spendUSD": 5.34,
+      "impressions": 5677,
+      "clicks": 1881,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1450,9 +1457,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.37,
-       "impressions": 585,
-       "clicks": 204,
+       "spendUSD": 0.41,
+       "impressions": 620,
+       "clicks": 220,
        "purchases": null
       }
      ]
@@ -1462,8 +1469,8 @@
      "variants": 35,
      "totals7": {
       "spendUSD": 5.19,
-      "impressions": 5541,
-      "clicks": 738,
+      "impressions": 5553,
+      "clicks": 741,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1561,14 +1568,14 @@
        "date": "2026-11-25",
        "spendUSD": 0.95,
        "impressions": 931,
-       "clicks": 135,
+       "clicks": 136,
        "purchases": null
       },
       {
        "date": "2026-11-26",
        "spendUSD": 0.17,
-       "impressions": 146,
-       "clicks": 26,
+       "impressions": 158,
+       "clicks": 28,
        "purchases": null
       }
      ]
@@ -1578,8 +1585,8 @@
      "variants": 55,
      "totals7": {
       "spendUSD": 4.95,
-      "impressions": 4760,
-      "clicks": 1498,
+      "impressions": 4775,
+      "clicks": 1502,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1627,8 +1634,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.18,
-       "impressions": 230,
-       "clicks": 67,
+       "impressions": 245,
+       "clicks": 71,
        "purchases": null
       }
      ]
@@ -1637,9 +1644,9 @@
      "name": "كاب انيق وراقي بتصميم مميز M-3431BLU797",
      "variants": 30,
      "totals7": {
-      "spendUSD": 4.29,
-      "impressions": 4451,
-      "clicks": 1248,
+      "spendUSD": 4.31,
+      "impressions": 4468,
+      "clicks": 1255,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1742,9 +1749,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.15,
-       "impressions": 200,
-       "clicks": 69,
+       "spendUSD": 0.17,
+       "impressions": 217,
+       "clicks": 76,
        "purchases": null
       }
      ]
@@ -1754,7 +1761,7 @@
      "variants": 30,
      "totals7": {
       "spendUSD": 3.66,
-      "impressions": 3253,
+      "impressions": 3256,
       "clicks": 530,
       "purchases": 0
      },
@@ -1852,14 +1859,14 @@
       {
        "date": "2026-11-25",
        "spendUSD": 0.61,
-       "impressions": 415,
+       "impressions": 416,
        "clicks": 92,
        "purchases": null
       },
       {
        "date": "2026-11-26",
        "spendUSD": 0.06,
-       "impressions": 54,
+       "impressions": 56,
        "clicks": 16,
        "purchases": null
       }
@@ -1869,9 +1876,9 @@
      "name": "طقم بقماش مريح وعملي M-5708ZNNK1102",
      "variants": 18,
      "totals7": {
-      "spendUSD": 3.58,
-      "impressions": 4340,
-      "clicks": 1145,
+      "spendUSD": 3.59,
+      "impressions": 4352,
+      "clicks": 1147,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -1925,9 +1932,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.11,
-       "impressions": 135,
-       "clicks": 40,
+       "spendUSD": 0.12,
+       "impressions": 147,
+       "clicks": 42,
        "purchases": null
       }
      ]
@@ -1997,8 +2004,8 @@
      "variants": 39,
      "totals7": {
       "spendUSD": 3.0,
-      "impressions": 2629,
-      "clicks": 660,
+      "impressions": 2637,
+      "clicks": 664,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -2102,8 +2109,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.07,
-       "impressions": 131,
-       "clicks": 43,
+       "impressions": 139,
+       "clicks": 47,
        "purchases": null
       }
      ]
@@ -2112,9 +2119,9 @@
      "name": "طقم انيق وعملي بقصة مريحة M-258BO429",
      "variants": 39,
      "totals7": {
-      "spendUSD": 2.97,
-      "impressions": 2582,
-      "clicks": 712,
+      "spendUSD": 2.98,
+      "impressions": 2589,
+      "clicks": 715,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -2217,9 +2224,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.07,
-       "impressions": 110,
-       "clicks": 33,
+       "spendUSD": 0.08,
+       "impressions": 117,
+       "clicks": 36,
        "purchases": null
       }
      ]
@@ -2228,9 +2235,9 @@
      "name": "تونك انيق يجمع بين الاناقة والراحة M-803MRK805",
      "variants": 11,
      "totals7": {
-      "spendUSD": 2.71,
-      "impressions": 1992,
-      "clicks": 289,
+      "spendUSD": 2.72,
+      "impressions": 2000,
+      "clicks": 291,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -2333,9 +2340,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.03,
-       "impressions": 51,
-       "clicks": 9,
+       "spendUSD": 0.04,
+       "impressions": 59,
+       "clicks": 11,
        "purchases": null
       }
      ]
@@ -2426,7 +2433,7 @@
      "variants": 28,
      "totals7": {
       "spendUSD": 2.37,
-      "impressions": 1636,
+      "impressions": 1640,
       "clicks": 395,
       "purchases": 0
      },
@@ -2531,7 +2538,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.03,
-       "impressions": 54,
+       "impressions": 58,
        "clicks": 13,
        "purchases": null
       }
@@ -2542,8 +2549,8 @@
      "variants": 3,
      "totals7": {
       "spendUSD": 2.36,
-      "impressions": 1531,
-      "clicks": 244,
+      "impressions": 1532,
+      "clicks": 245,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -2619,8 +2626,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.03,
-       "impressions": 27,
-       "clicks": 9,
+       "impressions": 28,
+       "clicks": 10,
        "purchases": null
       }
      ]
@@ -2630,7 +2637,7 @@
      "variants": 29,
      "totals7": {
       "spendUSD": 2.26,
-      "impressions": 2373,
+      "impressions": 2377,
       "clicks": 666,
       "purchases": 0
      },
@@ -2735,7 +2742,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.07,
-       "impressions": 89,
+       "impressions": 93,
        "clicks": 27,
        "purchases": null
       }
@@ -2745,9 +2752,9 @@
      "name": "طقم مميز يجمع بين الاناقة والراحة M-8191TEG847",
      "variants": 19,
      "totals7": {
-      "spendUSD": 2.24,
-      "impressions": 2192,
-      "clicks": 499,
+      "spendUSD": 2.25,
+      "impressions": 2203,
+      "clicks": 503,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -2850,9 +2857,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.03,
-       "impressions": 75,
-       "clicks": 21,
+       "spendUSD": 0.04,
+       "impressions": 86,
+       "clicks": 25,
        "purchases": null
       }
      ]
@@ -2861,9 +2868,9 @@
      "name": "ترانشكوت انيق بجودة عالية M-1006MSA980",
      "variants": 22,
      "totals7": {
-      "spendUSD": 2.19,
-      "impressions": 1947,
-      "clicks": 268,
+      "spendUSD": 2.21,
+      "impressions": 1960,
+      "clicks": 273,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -2966,9 +2973,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.06,
-       "impressions": 49,
-       "clicks": 10,
+       "spendUSD": 0.08,
+       "impressions": 62,
+       "clicks": 15,
        "purchases": null
       }
      ]
@@ -2977,9 +2984,9 @@
      "name": "ترانشكوت انيق بجودة عالية M-2513MSA980",
      "variants": 38,
      "totals7": {
-      "spendUSD": 1.94,
-      "impressions": 2210,
-      "clicks": 567,
+      "spendUSD": 1.95,
+      "impressions": 2214,
+      "clicks": 569,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3082,9 +3089,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.08,
-       "impressions": 87,
-       "clicks": 28,
+       "spendUSD": 0.09,
+       "impressions": 91,
+       "clicks": 30,
        "purchases": null
       }
      ]
@@ -3093,9 +3100,9 @@
      "name": "طقم انيق وراقي M-257NZRK1200",
      "variants": 20,
      "totals7": {
-      "spendUSD": 1.83,
-      "impressions": 2034,
-      "clicks": 591,
+      "spendUSD": 1.84,
+      "impressions": 2036,
+      "clicks": 592,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3198,9 +3205,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.08,
-       "impressions": 124,
-       "clicks": 34,
+       "spendUSD": 0.09,
+       "impressions": 126,
+       "clicks": 35,
        "purchases": null
       }
      ]
@@ -3210,8 +3217,8 @@
      "variants": 12,
      "totals7": {
       "spendUSD": 1.82,
-      "impressions": 1009,
-      "clicks": 186,
+      "impressions": 1015,
+      "clicks": 187,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3315,8 +3322,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.02,
-       "impressions": 19,
-       "clicks": 10,
+       "impressions": 25,
+       "clicks": 11,
        "purchases": null
       }
      ]
@@ -3325,9 +3332,9 @@
      "name": "طقم مميز وانيق لاطلالة راقية M-7017UZ662",
      "variants": 6,
      "totals7": {
-      "spendUSD": 1.75,
-      "impressions": 1413,
-      "clicks": 290,
+      "spendUSD": 1.76,
+      "impressions": 1423,
+      "clicks": 294,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3430,9 +3437,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.05,
-       "impressions": 48,
-       "clicks": 21,
+       "spendUSD": 0.06,
+       "impressions": 58,
+       "clicks": 25,
        "purchases": null
       }
      ]
@@ -3442,8 +3449,8 @@
      "variants": 39,
      "totals7": {
       "spendUSD": 1.71,
-      "impressions": 1462,
-      "clicks": 344,
+      "impressions": 1465,
+      "clicks": 345,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3547,8 +3554,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.02,
-       "impressions": 32,
-       "clicks": 7,
+       "impressions": 35,
+       "clicks": 8,
        "purchases": null
       }
      ]
@@ -3558,8 +3565,8 @@
      "variants": 4,
      "totals7": {
       "spendUSD": 1.71,
-      "impressions": 1734,
-      "clicks": 276,
+      "impressions": 1738,
+      "clicks": 277,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3621,8 +3628,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.04,
-       "impressions": 63,
-       "clicks": 10,
+       "impressions": 67,
+       "clicks": 11,
        "purchases": null
       }
      ]
@@ -3632,8 +3639,8 @@
      "variants": 8,
      "totals7": {
       "spendUSD": 1.62,
-      "impressions": 1470,
-      "clicks": 332,
+      "impressions": 1472,
+      "clicks": 333,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3737,8 +3744,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.03,
-       "impressions": 36,
-       "clicks": 6,
+       "impressions": 38,
+       "clicks": 7,
        "purchases": null
       }
      ]
@@ -3748,8 +3755,8 @@
      "variants": 31,
      "totals7": {
       "spendUSD": 1.52,
-      "impressions": 1603,
-      "clicks": 472,
+      "impressions": 1606,
+      "clicks": 473,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3853,8 +3860,124 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.08,
-       "impressions": 69,
+       "impressions": 72,
+       "clicks": 19,
+       "purchases": null
+      }
+     ]
+    },
+    "M-249": {
+     "name": "كاب انيق بتصميم مميز M-249NZRK1200",
+     "variants": 31,
+     "totals7": {
+      "spendUSD": 1.4,
+      "impressions": 1165,
+      "clicks": 302,
+      "purchases": 0
+     },
+     "totalsPrev7": {
+      "spendUSD": 1.29,
+      "impressions": 1161,
+      "clicks": 242,
+      "purchases": 0
+     },
+     "daily": [
+      {
+       "date": "2026-11-13",
+       "spendUSD": 0.14,
+       "impressions": 136,
+       "clicks": 27,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-14",
+       "spendUSD": 0.14,
+       "impressions": 102,
+       "clicks": 19,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-15",
+       "spendUSD": 0.14,
+       "impressions": 160,
+       "clicks": 45,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-16",
+       "spendUSD": 0.07,
+       "impressions": 81,
        "clicks": 18,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-17",
+       "spendUSD": 0.25,
+       "impressions": 233,
+       "clicks": 45,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-18",
+       "spendUSD": 0.34,
+       "impressions": 304,
+       "clicks": 56,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-19",
+       "spendUSD": 0.21,
+       "impressions": 145,
+       "clicks": 32,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-20",
+       "spendUSD": 0.33,
+       "impressions": 272,
+       "clicks": 71,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-21",
+       "spendUSD": 0.18,
+       "impressions": 127,
+       "clicks": 29,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-22",
+       "spendUSD": 0.24,
+       "impressions": 177,
+       "clicks": 40,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-23",
+       "spendUSD": 0.13,
+       "impressions": 134,
+       "clicks": 39,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-24",
+       "spendUSD": 0.23,
+       "impressions": 169,
+       "clicks": 40,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-25",
+       "spendUSD": 0.26,
+       "impressions": 232,
+       "clicks": 63,
+       "purchases": null
+      },
+      {
+       "date": "2026-11-26",
+       "spendUSD": 0.03,
+       "impressions": 54,
+       "clicks": 20,
        "purchases": null
       }
      ]
@@ -3864,8 +3987,8 @@
      "variants": 39,
      "totals7": {
       "spendUSD": 1.39,
-      "impressions": 1178,
-      "clicks": 251,
+      "impressions": 1180,
+      "clicks": 252,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -3969,124 +4092,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.0,
-       "impressions": 37,
-       "clicks": 10,
-       "purchases": null
-      }
-     ]
-    },
-    "M-249": {
-     "name": "كاب انيق بتصميم مميز M-249NZRK1200",
-     "variants": 31,
-     "totals7": {
-      "spendUSD": 1.38,
-      "impressions": 1148,
-      "clicks": 298,
-      "purchases": 0
-     },
-     "totalsPrev7": {
-      "spendUSD": 1.29,
-      "impressions": 1161,
-      "clicks": 242,
-      "purchases": 0
-     },
-     "daily": [
-      {
-       "date": "2026-11-13",
-       "spendUSD": 0.14,
-       "impressions": 136,
-       "clicks": 27,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-14",
-       "spendUSD": 0.14,
-       "impressions": 102,
-       "clicks": 19,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-15",
-       "spendUSD": 0.14,
-       "impressions": 160,
-       "clicks": 45,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-16",
-       "spendUSD": 0.07,
-       "impressions": 81,
-       "clicks": 18,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-17",
-       "spendUSD": 0.25,
-       "impressions": 233,
-       "clicks": 45,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-18",
-       "spendUSD": 0.34,
-       "impressions": 304,
-       "clicks": 56,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-19",
-       "spendUSD": 0.21,
-       "impressions": 145,
-       "clicks": 32,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-20",
-       "spendUSD": 0.33,
-       "impressions": 272,
-       "clicks": 71,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-21",
-       "spendUSD": 0.18,
-       "impressions": 127,
-       "clicks": 29,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-22",
-       "spendUSD": 0.24,
-       "impressions": 177,
-       "clicks": 40,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-23",
-       "spendUSD": 0.13,
-       "impressions": 134,
-       "clicks": 39,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-24",
-       "spendUSD": 0.23,
-       "impressions": 169,
-       "clicks": 40,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-25",
-       "spendUSD": 0.26,
-       "impressions": 232,
-       "clicks": 63,
-       "purchases": null
-      },
-      {
-       "date": "2026-11-26",
-       "spendUSD": 0.01,
-       "impressions": 37,
-       "clicks": 16,
+       "impressions": 39,
+       "clicks": 11,
        "purchases": null
       }
      ]
@@ -4096,8 +4103,8 @@
      "variants": 1,
      "totals7": {
       "spendUSD": 1.31,
-      "impressions": 1253,
-      "clicks": 346,
+      "impressions": 1264,
+      "clicks": 348,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -4145,8 +4152,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.08,
-       "impressions": 131,
-       "clicks": 40,
+       "impressions": 142,
+       "clicks": 42,
        "purchases": null
       }
      ]
@@ -4156,8 +4163,8 @@
      "variants": 7,
      "totals7": {
       "spendUSD": 1.25,
-      "impressions": 1456,
-      "clicks": 392,
+      "impressions": 1457,
+      "clicks": 393,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -4205,8 +4212,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.06,
-       "impressions": 118,
-       "clicks": 31,
+       "impressions": 119,
+       "clicks": 32,
        "purchases": null
       }
      ]
@@ -4216,7 +4223,7 @@
      "variants": 5,
      "totals7": {
       "spendUSD": 1.22,
-      "impressions": 814,
+      "impressions": 815,
       "clicks": 138,
       "purchases": 0
      },
@@ -4321,7 +4328,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.04,
-       "impressions": 31,
+       "impressions": 32,
        "clicks": 13,
        "purchases": null
       }
@@ -4331,8 +4338,8 @@
      "name": "تونك راقي لأطلالة مميزة M-269NZRK1200",
      "variants": 3,
      "totals7": {
-      "spendUSD": 1.18,
-      "impressions": 917,
+      "spendUSD": 1.19,
+      "impressions": 922,
       "clicks": 160,
       "purchases": 0
      },
@@ -4380,8 +4387,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.07,
-       "impressions": 66,
+       "spendUSD": 0.08,
+       "impressions": 71,
        "clicks": 14,
        "purchases": null
       }
@@ -4391,8 +4398,8 @@
      "name": "ترانشكوت يجمع بين الاناقة والدفء M-26509MSA980",
      "variants": 29,
      "totals7": {
-      "spendUSD": 1.15,
-      "impressions": 1399,
+      "spendUSD": 1.16,
+      "impressions": 1400,
       "clicks": 394,
       "purchases": 0
      },
@@ -4496,8 +4503,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.06,
-       "impressions": 69,
+       "spendUSD": 0.07,
+       "impressions": 70,
        "clicks": 29,
        "purchases": null
       }
@@ -4595,9 +4602,9 @@
      "name": "طقم بتصميم مميز ولمسة من الاناقة T-8055",
      "variants": 18,
      "totals7": {
-      "spendUSD": 1.06,
-      "impressions": 1274,
-      "clicks": 378,
+      "spendUSD": 1.07,
+      "impressions": 1279,
+      "clicks": 380,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -4651,9 +4658,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.03,
-       "impressions": 49,
-       "clicks": 18,
+       "spendUSD": 0.04,
+       "impressions": 54,
+       "clicks": 20,
        "purchases": null
       }
      ]
@@ -4662,9 +4669,9 @@
      "name": "ترانشكوت انيق بجودة عالية M-1214ORG1169",
      "variants": 9,
      "totals7": {
-      "spendUSD": 1.03,
-      "impressions": 890,
-      "clicks": 226,
+      "spendUSD": 1.04,
+      "impressions": 895,
+      "clicks": 227,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -4705,15 +4712,15 @@
       {
        "date": "2026-11-25",
        "spendUSD": 0.38,
-       "impressions": 275,
+       "impressions": 276,
        "clicks": 55,
        "purchases": null
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.02,
-       "impressions": 46,
-       "clicks": 9,
+       "spendUSD": 0.03,
+       "impressions": 50,
+       "clicks": 10,
        "purchases": null
       }
      ]
@@ -4789,9 +4796,9 @@
      "name": "كوت مميز بتصميم راقي M-3461TRT545",
      "variants": 32,
      "totals7": {
-      "spendUSD": 0.91,
-      "impressions": 829,
-      "clicks": 219,
+      "spendUSD": 0.93,
+      "impressions": 832,
+      "clicks": 220,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -4887,16 +4894,16 @@
       },
       {
        "date": "2026-11-25",
-       "spendUSD": 0.14,
-       "impressions": 183,
+       "spendUSD": 0.15,
+       "impressions": 184,
        "clicks": 48,
        "purchases": null
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.05,
-       "impressions": 45,
-       "clicks": 21,
+       "spendUSD": 0.06,
+       "impressions": 47,
+       "clicks": 22,
        "purchases": null
       }
      ]
@@ -4906,7 +4913,7 @@
      "variants": 5,
      "totals7": {
       "spendUSD": 0.81,
-      "impressions": 781,
+      "impressions": 783,
       "clicks": 177,
       "purchases": 0
      },
@@ -5011,7 +5018,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.03,
-       "impressions": 15,
+       "impressions": 17,
        "clicks": 4,
        "purchases": null
       }
@@ -5198,7 +5205,7 @@
      "variants": 32,
      "totals7": {
       "spendUSD": 0.72,
-      "impressions": 532,
+      "impressions": 535,
       "clicks": 117,
       "purchases": 0
      },
@@ -5303,7 +5310,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.04,
-       "impressions": 21,
+       "impressions": 24,
        "clicks": 8,
        "purchases": null
       }
@@ -5380,8 +5387,8 @@
      "name": "معطف راقي يجمع بين الاناقة والاطلالة العصرية M-270NZRK1200",
      "variants": 8,
      "totals7": {
-      "spendUSD": 0.67,
-      "impressions": 503,
+      "spendUSD": 0.7,
+      "impressions": 504,
       "clicks": 140,
       "purchases": 0
      },
@@ -5429,8 +5436,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.0,
-       "impressions": 10,
+       "spendUSD": 0.03,
+       "impressions": 11,
        "clicks": 1,
        "purchases": null
       }
@@ -5441,7 +5448,7 @@
      "variants": 39,
      "totals7": {
       "spendUSD": 0.62,
-      "impressions": 604,
+      "impressions": 605,
       "clicks": 139,
       "purchases": 0
      },
@@ -5546,7 +5553,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.0,
-       "impressions": 14,
+       "impressions": 15,
        "clicks": 0,
        "purchases": null
       }
@@ -5557,7 +5564,7 @@
      "variants": 5,
      "totals7": {
       "spendUSD": 0.57,
-      "impressions": 723,
+      "impressions": 729,
       "clicks": 233,
       "purchases": 0
      },
@@ -5606,7 +5613,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.01,
-       "impressions": 71,
+       "impressions": 77,
        "clicks": 21,
        "purchases": null
       }
@@ -5744,8 +5751,8 @@
      "variants": 2,
      "totals7": {
       "spendUSD": 0.29,
-      "impressions": 461,
-      "clicks": 117,
+      "impressions": 465,
+      "clicks": 119,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -5814,8 +5821,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.02,
-       "impressions": 21,
-       "clicks": 6,
+       "impressions": 25,
+       "clicks": 8,
        "purchases": null
       }
      ]
@@ -6026,7 +6033,7 @@
      "variants": 2,
      "totals7": {
       "spendUSD": 0.12,
-      "impressions": 40,
+      "impressions": 41,
       "clicks": 14,
       "purchases": 0
      },
@@ -6061,7 +6068,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.01,
-       "impressions": 12,
+       "impressions": 13,
        "clicks": 6,
        "purchases": null
       }
@@ -6069,10 +6076,10 @@
     },
     "M-3092": {
      "name": "قميص بتصميم انيق ونقشة كاروهات M-3092KTR750",
-     "variants": 1,
+     "variants": 2,
      "totals7": {
       "spendUSD": 0.11,
-      "impressions": 89,
+      "impressions": 90,
       "clicks": 24,
       "purchases": 0
      },
@@ -6093,7 +6100,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.01,
-       "impressions": 14,
+       "impressions": 15,
        "clicks": 6,
        "purchases": null
       }
@@ -6104,8 +6111,8 @@
      "variants": 1,
      "totals7": {
       "spendUSD": 0.09,
-      "impressions": 119,
-      "clicks": 26,
+      "impressions": 121,
+      "clicks": 27,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -6132,8 +6139,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.0,
-       "impressions": 12,
-       "clicks": 5,
+       "impressions": 14,
+       "clicks": 6,
        "purchases": null
       }
      ]
@@ -6143,7 +6150,7 @@
      "variants": 3,
      "totals7": {
       "spendUSD": 0.07,
-      "impressions": 37,
+      "impressions": 38,
       "clicks": 12,
       "purchases": 0
      },
@@ -6178,7 +6185,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.03,
-       "impressions": 18,
+       "impressions": 19,
        "clicks": 7,
        "purchases": null
       }
@@ -6313,8 +6320,8 @@
      "variants": 4,
      "totals7": {
       "spendUSD": 0.03,
-      "impressions": 29,
-      "clicks": 7,
+      "impressions": 30,
+      "clicks": 8,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -6348,8 +6355,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.0,
-       "impressions": 2,
-       "clicks": 1,
+       "impressions": 3,
+       "clicks": 2,
        "purchases": null
       }
      ]
@@ -6461,8 +6468,8 @@
      "variants": 1,
      "totals7": {
       "spendUSD": 0.01,
-      "impressions": 26,
-      "clicks": 9,
+      "impressions": 29,
+      "clicks": 10,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -6496,8 +6503,8 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.0,
-       "impressions": 10,
-       "clicks": 2,
+       "impressions": 13,
+       "clicks": 3,
        "purchases": null
       }
      ]
@@ -6613,8 +6620,8 @@
      "variants": 1,
      "totals7": {
       "spendUSD": 53.61,
-      "impressions": 11003,
-      "clicks": 3307,
+      "impressions": 11016,
+      "clicks": 3315,
       "purchases": 2
      },
      "totalsPrev7": {
@@ -6697,22 +6704,22 @@
       {
        "date": "2026-11-23",
        "spendUSD": 6.04,
-       "impressions": 1133,
-       "clicks": 412,
+       "impressions": 1135,
+       "clicks": 413,
        "purchases": null
       },
       {
        "date": "2026-11-24",
        "spendUSD": 4.76,
-       "impressions": 1097,
+       "impressions": 1099,
        "clicks": 396,
        "purchases": null
       },
       {
        "date": "2026-11-25",
        "spendUSD": 27.88,
-       "impressions": 5491,
-       "clicks": 1240,
+       "impressions": 5500,
+       "clicks": 1247,
        "purchases": 1
       },
       {
@@ -6728,8 +6735,8 @@
      "name": "طقم رياضي أنيق ومريح H-1945",
      "variants": 30,
      "totals7": {
-      "spendUSD": 52.28,
-      "impressions": 49073,
+      "spendUSD": 52.31,
+      "impressions": 49084,
       "clicks": 4340,
       "purchases": 4
      },
@@ -6833,8 +6840,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.34,
-       "impressions": 121,
+       "spendUSD": 0.37,
+       "impressions": 132,
        "clicks": 7,
        "purchases": null
       }
@@ -7076,8 +7083,8 @@
      "name": "كاب طويل مميز وأنيق H-1938",
      "variants": 28,
      "totals7": {
-      "spendUSD": 17.05,
-      "impressions": 16831,
+      "spendUSD": 17.07,
+      "impressions": 16835,
       "clicks": 1706,
       "purchases": 2
      },
@@ -7181,8 +7188,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.33,
-       "impressions": 52,
+       "spendUSD": 0.35,
+       "impressions": 56,
        "clicks": 6,
        "purchases": null
       }
@@ -7294,9 +7301,9 @@
      "name": "H-1908 طقم جينز محتشم",
      "variants": 21,
      "totals7": {
-      "spendUSD": 14.81,
-      "impressions": 13519,
-      "clicks": 1180,
+      "spendUSD": 14.83,
+      "impressions": 13523,
+      "clicks": 1181,
       "purchases": 0
      },
      "totalsPrev7": {
@@ -7399,9 +7406,9 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.19,
-       "impressions": 46,
-       "clicks": 1,
+       "spendUSD": 0.21,
+       "impressions": 50,
+       "clicks": 2,
        "purchases": null
       }
      ]
@@ -7410,8 +7417,8 @@
      "name": "قميص بتصميم أنيق ونقشة كاروهات جذابة L-1056",
      "variants": 6,
      "totals7": {
-      "spendUSD": 13.58,
-      "impressions": 10425,
+      "spendUSD": 13.59,
+      "impressions": 10428,
       "clicks": 939,
       "purchases": 1
      },
@@ -7515,8 +7522,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.14,
-       "impressions": 33,
+       "spendUSD": 0.15,
+       "impressions": 36,
        "clicks": 2,
        "purchases": null
       }
@@ -7839,8 +7846,8 @@
      "name": "أناقة وراحة في إطلالة واحدة L-0656",
      "variants": 12,
      "totals7": {
-      "spendUSD": 9.46,
-      "impressions": 7227,
+      "spendUSD": 9.47,
+      "impressions": 7229,
       "clicks": 692,
       "purchases": 1
      },
@@ -7944,8 +7951,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.14,
-       "impressions": 24,
+       "spendUSD": 0.15,
+       "impressions": 26,
        "clicks": 5,
        "purchases": 1
       }
@@ -8275,8 +8282,8 @@
      "name": "طقم مميز أنيق ومحتشم H-1922",
      "variants": 30,
      "totals7": {
-      "spendUSD": 7.61,
-      "impressions": 7406,
+      "spendUSD": 7.67,
+      "impressions": 7407,
       "clicks": 712,
       "purchases": 0
      },
@@ -8380,8 +8387,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.01,
-       "impressions": 7,
+       "spendUSD": 0.07,
+       "impressions": 8,
        "clicks": 2,
        "purchases": null
       }
@@ -8391,8 +8398,8 @@
      "name": "طقم انيق بأطلالة راقية ومميزة H-1954",
      "variants": 25,
      "totals7": {
-      "spendUSD": 7.5,
-      "impressions": 5904,
+      "spendUSD": 7.51,
+      "impressions": 5906,
       "clicks": 454,
       "purchases": 0
      },
@@ -8496,8 +8503,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.22,
-       "impressions": 47,
+       "spendUSD": 0.23,
+       "impressions": 49,
        "clicks": 5,
        "purchases": null
       }
@@ -8508,7 +8515,7 @@
      "variants": 20,
      "totals7": {
       "spendUSD": 7.29,
-      "impressions": 5155,
+      "impressions": 5157,
       "clicks": 1162,
       "purchases": 1
      },
@@ -8613,7 +8620,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.16,
-       "impressions": 30,
+       "impressions": 32,
        "clicks": 1,
        "purchases": null
       }
@@ -8623,8 +8630,8 @@
      "name": "كاب طويل انيق وعملي H-1951",
      "variants": 27,
      "totals7": {
-      "spendUSD": 6.82,
-      "impressions": 6200,
+      "spendUSD": 6.84,
+      "impressions": 6202,
       "clicks": 719,
       "purchases": 1
      },
@@ -8728,8 +8735,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.18,
-       "impressions": 19,
+       "spendUSD": 0.2,
+       "impressions": 21,
        "clicks": 2,
        "purchases": null
       }
@@ -8740,7 +8747,7 @@
      "variants": 15,
      "totals7": {
       "spendUSD": 6.81,
-      "impressions": 6708,
+      "impressions": 6710,
       "clicks": 713,
       "purchases": 0
      },
@@ -8845,7 +8852,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.14,
-       "impressions": 31,
+       "impressions": 33,
        "clicks": 1,
        "purchases": null
       }
@@ -8856,7 +8863,7 @@
      "variants": 15,
      "totals7": {
       "spendUSD": 6.76,
-      "impressions": 4607,
+      "impressions": 4608,
       "clicks": 448,
       "purchases": 0
      },
@@ -8961,7 +8968,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.06,
-       "impressions": 28,
+       "impressions": 29,
        "clicks": 4,
        "purchases": null
       }
@@ -8972,7 +8979,7 @@
      "variants": 16,
      "totals7": {
       "spendUSD": 5.85,
-      "impressions": 3330,
+      "impressions": 3332,
       "clicks": 306,
       "purchases": 1
      },
@@ -9077,7 +9084,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.09,
-       "impressions": 39,
+       "impressions": 41,
        "clicks": 0,
        "purchases": null
       }
@@ -9088,7 +9095,7 @@
      "variants": 16,
      "totals7": {
       "spendUSD": 5.0,
-      "impressions": 2704,
+      "impressions": 2708,
       "clicks": 336,
       "purchases": 1
      },
@@ -9193,7 +9200,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.17,
-       "impressions": 48,
+       "impressions": 52,
        "clicks": 4,
        "purchases": null
       }
@@ -9204,7 +9211,7 @@
      "variants": 20,
      "totals7": {
       "spendUSD": 4.94,
-      "impressions": 3243,
+      "impressions": 3245,
       "clicks": 588,
       "purchases": 1
      },
@@ -9309,7 +9316,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.08,
-       "impressions": 26,
+       "impressions": 28,
        "clicks": 0,
        "purchases": null
       }
@@ -9551,8 +9558,8 @@
      "name": "طقم مميز وأنيق T-8054",
      "variants": 19,
      "totals7": {
-      "spendUSD": 4.26,
-      "impressions": 3722,
+      "spendUSD": 4.27,
+      "impressions": 3723,
       "clicks": 394,
       "purchases": 0
      },
@@ -9656,8 +9663,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.09,
-       "impressions": 19,
+       "spendUSD": 0.1,
+       "impressions": 20,
        "clicks": 1,
        "purchases": null
       }
@@ -10015,8 +10022,8 @@
      "name": "H-1906 طقم راقي مريح",
      "variants": 24,
      "totals7": {
-      "spendUSD": 2.77,
-      "impressions": 1831,
+      "spendUSD": 2.78,
+      "impressions": 1832,
       "clicks": 236,
       "purchases": 0
      },
@@ -10120,8 +10127,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.07,
-       "impressions": 18,
+       "spendUSD": 0.08,
+       "impressions": 19,
        "clicks": 3,
        "purchases": null
       }
@@ -10131,8 +10138,8 @@
      "name": "K-9909 طقم فخم وانيق",
      "variants": 19,
      "totals7": {
-      "spendUSD": 2.46,
-      "impressions": 2287,
+      "spendUSD": 2.47,
+      "impressions": 2288,
       "clicks": 214,
       "purchases": 0
      },
@@ -10236,8 +10243,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.08,
-       "impressions": 22,
+       "spendUSD": 0.09,
+       "impressions": 23,
        "clicks": 2,
        "purchases": null
       }
@@ -10247,8 +10254,8 @@
      "name": "ترانشكوت انيق ودافئ T-8024",
      "variants": 19,
      "totals7": {
-      "spendUSD": 2.35,
-      "impressions": 1771,
+      "spendUSD": 2.36,
+      "impressions": 1772,
       "clicks": 281,
       "purchases": 0
      },
@@ -10352,8 +10359,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.08,
-       "impressions": 6,
+       "spendUSD": 0.09,
+       "impressions": 7,
        "clicks": 0,
        "purchases": null
       }
@@ -10363,8 +10370,8 @@
      "name": "ترانشكوت مبطن أنيق وراقي T-8025",
      "variants": 15,
      "totals7": {
-      "spendUSD": 1.64,
-      "impressions": 1367,
+      "spendUSD": 1.65,
+      "impressions": 1368,
       "clicks": 153,
       "purchases": 0
      },
@@ -10468,8 +10475,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.08,
-       "impressions": 12,
+       "spendUSD": 0.09,
+       "impressions": 13,
        "clicks": 0,
        "purchases": null
       }
@@ -10480,7 +10487,7 @@
      "variants": 16,
      "totals7": {
       "spendUSD": 1.58,
-      "impressions": 998,
+      "impressions": 999,
       "clicks": 104,
       "purchases": 1
      },
@@ -10585,7 +10592,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.08,
-       "impressions": 15,
+       "impressions": 16,
        "clicks": 0,
        "purchases": null
       }
@@ -10596,7 +10603,7 @@
      "variants": 19,
      "totals7": {
       "spendUSD": 1.38,
-      "impressions": 858,
+      "impressions": 859,
       "clicks": 133,
       "purchases": 0
      },
@@ -10701,7 +10708,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.13,
-       "impressions": 16,
+       "impressions": 17,
        "clicks": 0,
        "purchases": null
       }
@@ -10827,8 +10834,8 @@
      "name": "طقم مميز وانيق يجمع بين الاحتشام والرقي T-8047",
      "variants": 16,
      "totals7": {
-      "spendUSD": 1.19,
-      "impressions": 558,
+      "spendUSD": 1.2,
+      "impressions": 559,
       "clicks": 114,
       "purchases": 0
      },
@@ -10932,8 +10939,8 @@
       },
       {
        "date": "2026-11-26",
-       "spendUSD": 0.04,
-       "impressions": 5,
+       "spendUSD": 0.05,
+       "impressions": 6,
        "clicks": 0,
        "purchases": null
       }
@@ -11060,7 +11067,7 @@
      "variants": 19,
      "totals7": {
       "spendUSD": 0.92,
-      "impressions": 936,
+      "impressions": 937,
       "clicks": 177,
       "purchases": 0
      },
@@ -11165,7 +11172,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.01,
-       "impressions": 4,
+       "impressions": 5,
        "clicks": 1,
        "purchases": null
       }
@@ -11524,7 +11531,7 @@
      "variants": 24,
      "totals7": {
       "spendUSD": 0.71,
-      "impressions": 778,
+      "impressions": 779,
       "clicks": 141,
       "purchases": 0
      },
@@ -11629,7 +11636,7 @@
       {
        "date": "2026-11-26",
        "spendUSD": 0.01,
-       "impressions": 3,
+       "impressions": 4,
        "clicks": 0,
        "purchases": null
       }
