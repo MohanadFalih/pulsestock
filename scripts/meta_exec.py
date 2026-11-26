@@ -192,7 +192,41 @@ _tpl_ad = None
 TEST_TEMPLATE_ADSET = "120253586159010723"   # TEST H-1980 (paused) — settings source
 TEST_TEMPLATE_AD = "120253586159070723"
 TEST_BUDGET_USD = 6.0
-MAX_POSTS = 3
+MAX_POSTS = 1   # owner adds a 2nd post by hand in Ads Manager
+
+
+def post_score(post_id):
+    """Engagement on a page post: reactions + 2*comments + 3*shares."""
+    p = {"fields": "reactions.summary(total_count).limit(0),comments.summary(total_count).limit(0),shares",
+         "access_token": page_token()}
+    url = f"{BASE}/{post_id}?" + urllib.parse.urlencode(p)
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url), timeout=30) as r:
+            d = json.load(r)
+    except Exception:
+        return 0
+    rc = d.get("reactions", {}).get("summary", {}).get("total_count", 0)
+    cc = d.get("comments", {}).get("summary", {}).get("total_count", 0)
+    sc = (d.get("shares") or {}).get("count", 0)
+    return rc + 2 * cc + 3 * sc
+
+
+def keep_best(adset_id):
+    """Keep the ad whose post has the most engagement; pause the others."""
+    st = call("GET", adset_id, {"fields": "account_id,name"})
+    if str(st.get("account_id", "")).replace("act_", "") != ACCOUNT:
+        raise Reject("target is not in our ad account")
+    ads = [x for x in get_all(f"{adset_id}/ads", {"fields": "id,name,status,creative{object_story_id}"})
+           if x.get("status") == "ACTIVE"]
+    if len(ads) < 2:
+        return {"name": st.get("name"), "note": "one active ad or fewer"}
+    for x in ads:
+        x["score"] = post_score(x["creative"]["object_story_id"])
+    ads.sort(key=lambda x: -x["score"])
+    for x in ads[1:]:
+        call("POST", x["id"], {"status": "PAUSED"})
+    return {"name": st.get("name"), "kept": {"ad": ads[0]["name"], "score": ads[0]["score"]},
+            "paused": [{"ad": x["name"], "score": x["score"]} for x in ads[1:]]}
 
 
 def create_test(a, cents):
@@ -206,7 +240,10 @@ def create_test(a, cents):
     existing = get_all(f"{camp}/adsets", {"fields": "id,name,effective_status"})
     if not a.get("reuse_adset") and any(x["name"].strip().upper() == f"TEST {code}" for x in existing):
         raise Reject(f"ad set 'TEST {code}' already exists")
-    posts = a.get("posts") or [p["id"] for p in find_posts(code)][:MAX_POSTS]
+    posts = a.get("posts")
+    if not posts:
+        cands = [p["id"] for p in find_posts(code)][:6]
+        posts = sorted(cands, key=lambda pid: -post_score(pid))[:MAX_POSTS]
     if not posts:
         raise Reject(f"no page post found for {code}")
     global _run_total, _tpl_ad
@@ -302,6 +339,8 @@ def run_action(a, log, cents, today):
         return inspect(target)
     if op == "create_test":
         return create_test(a, cents)
+    if op == "keep_best":
+        return keep_best(target)
     if op == "multi_off":
         return multi_off(target)
     if op == "raw":  # read-only GET of one object with chosen fields
