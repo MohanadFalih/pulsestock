@@ -1926,5 +1926,15 @@
   "day": "2026-11-26",
   "result": "error",
   "reason": "{\"adset\": \"120253643916940723\", \"ads\": [], \"error_after_copy\": \"budget: (#613) Calls to this API have exceeded the concurrent request rate limit of 1 calls per 30 seconds. | 4841018\"}"
+ },
+ {
+  "id": "2026-11-26-create-M269-d",
+  "op": "create_test",
+  "target": "",
+  "why": "retry: skip budget call when already 6$",
+  "at": "2026-11-26T14:20+03:00",
+  "day": "2026-11-26",
+  "result": "error",
+  "reason": "User request limit reached | 2446079 | يحتوي الحساب الإعلاني على الكثير من استدعاءات API | كانت هناك اتصالات كثيرة للغاية من هذا الحساب الإعلاني. انتظر قليلاً وأعد المحاولة."
  }
 ]
