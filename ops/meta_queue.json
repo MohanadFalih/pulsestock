@@ -59,6 +59,32 @@
    "op": "find_posts",
    "target": "M-269",
    "why": "read-only: page posts for M-269"
+  },
+  {
+   "id": "2026-11-26-ad-170723",
+   "op": "inspect",
+   "target": "120253635638170723",
+   "why": "read-only: multi-video ad H-1978"
+  },
+  {
+   "id": "2026-11-26-raw-170723",
+   "op": "raw",
+   "target": "120253635638170723",
+   "fields": "id,name,adset_id,creative_asset_groups_spec,adcreatives{id,object_story_id,asset_feed_spec,object_type,video_id},tracking_specs",
+   "why": "read-only"
+  },
+  {
+   "id": "2026-11-26-ad-280723",
+   "op": "inspect",
+   "target": "120253585987280723",
+   "why": "read-only: multi-video ad H-1978"
+  },
+  {
+   "id": "2026-11-26-raw-280723",
+   "op": "raw",
+   "target": "120253585987280723",
+   "fields": "id,name,adset_id,creative_asset_groups_spec,adcreatives{id,object_story_id,asset_feed_spec,object_type,video_id},tracking_specs",
+   "why": "read-only"
   }
  ]
 }

@@ -192,6 +192,8 @@ def run_action(a, log, cents, today):
     op, target = a.get("op"), str(a.get("target", ""))
     if op == "inspect":
         return inspect(target)
+    if op == "raw":  # read-only GET of one object with chosen fields
+        return {"raw": call("GET", target, {"fields": a.get("fields", "id,name")})}
     if op == "inspect_set":
         return inspect_set(target)
     if op == "find_posts":
