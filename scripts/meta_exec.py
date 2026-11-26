@@ -126,6 +126,17 @@ def obj(target):
     return o
 
 
+def inspect(ad_id):
+    """Read-only: structure of one ad, its ad set, campaign and creative."""
+    ad = call("GET", ad_id, {"fields": "id,name,status,account_id,adset_id,campaign_id,creative{id,name,object_story_id,effective_object_story_id,object_type,video_id,image_hash,call_to_action_type,asset_feed_spec,object_story_spec,degrees_of_freedom_spec}"})
+    if str(ad.get("account_id", "")).replace("act_", "") != ACCOUNT:
+        raise Reject("target is not in our ad account")
+    st = call("GET", ad["adset_id"], {"fields": "id,name,status,daily_budget,lifetime_budget,optimization_goal,billing_event,bid_strategy,destination_type,promoted_object,attribution_spec,targeting"})
+    cp = call("GET", ad["campaign_id"], {"fields": "id,name,objective,daily_budget,buying_type,special_ad_categories"})
+    n = len(get_all(f"{ad['campaign_id']}/adsets", {"fields": "id"}))
+    return {"inspect": {"ad": ad, "adset": st, "campaign": cp, "adsetsInCampaign": n}}
+
+
 def raised_today(log, target, today):
     return any(e.get("op") == "set_budget" and e.get("target") == target
                and e.get("result") == "done" and e.get("raise")
@@ -134,6 +145,8 @@ def raised_today(log, target, today):
 
 def run_action(a, log, cents, today):
     op, target = a.get("op"), str(a.get("target", ""))
+    if op == "inspect":
+        return inspect(target)
     if op not in ("pause", "activate", "set_budget") or not target:
         raise Reject(f"unsupported op {op!r}")
     o = obj(target)
