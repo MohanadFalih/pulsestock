@@ -199,7 +199,7 @@ def create_test(a, cents):
         raise Reject("template not in our account")
     camp = tpl["campaign_id"]
     existing = get_all(f"{camp}/adsets", {"fields": "id,name,effective_status"})
-    if any(x["name"].strip().upper() == f"TEST {code}" for x in existing):
+    if not a.get("reuse_adset") and any(x["name"].strip().upper() == f"TEST {code}" for x in existing):
         raise Reject(f"ad set 'TEST {code}' already exists")
     posts = a.get("posts") or [p["id"] for p in find_posts(code)][:MAX_POSTS]
     if not posts:
