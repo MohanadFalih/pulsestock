@@ -2653,5 +2653,162 @@
   "name": "L-3317 2",
   "creative": "1992467665046999",
   "result": "done"
+ },
+ {
+  "id": "2026-11-26-raw-lp-set",
+  "op": "raw",
+  "target": "120252218976630723",
+  "why": "read-only: LAST PIECES ad set structure",
+  "at": "2026-11-26T17:46+03:00",
+  "day": "2026-11-26",
+  "raw": {
+   "id": "120252218976630723",
+   "name": "DENIZ | LAST PIECES | CHAT",
+   "status": "ACTIVE",
+   "daily_budget": "4800",
+   "promoted_object": {
+    "page_id": "115435042437123",
+    "smart_pse_enabled": false
+   },
+   "optimization_goal": "CONVERSATIONS",
+   "destination_type": "MESSENGER",
+   "targeting": {
+    "age_max": 65,
+    "age_min": 18,
+    "age_range": [
+     20,
+     54
+    ],
+    "excluded_custom_audiences": [
+     {
+      "id": "120251981710710723",
+      "name": "DM_Purchase_Event_180d"
+     },
+     {
+      "id": "120251983136960723",
+      "name": "DM_Odoo_Customers_2026-08_plus"
+     }
+    ],
+    "genders": [
+     2
+    ],
+    "geo_locations": {
+     "countries": [
+      "IQ"
+     ],
+     "location_types": [
+      "home",
+      "recent"
+     ]
+    },
+    "brand_safety_content_filter_levels": [
+     "FACEBOOK_RELAXED",
+     "AN_RELAXED"
+    ],
+    "targeting_automation": {
+     "advantage_audience": 1,
+     "individual_setting": {
+      "age": 1,
+      "gender": 1
+     }
+    }
+   },
+   "ads": {
+    "data": [
+     {
+      "id": "120252218976650723",
+      "name": "CAROUSEL LAST",
+      "status": "ACTIVE",
+      "creative": {
+       "id": "2596446234138333",
+       "product_set_id": "1558331459665173",
+       "object_story_spec": {
+        "page_id": "115435042437123",
+        "instagram_user_id": "17841405579399190",
+        "template_data": {
+         "link": "https://fb.com/messenger_doc/",
+         "message": "قطعة أخيرة من كل موديل 🌸 خصم 50%\n\nكل قطعة وحيدة — ماكو غيرها بالمخزون!\nالكود والقياس مكتوب على الصورة 📌\nدزيلنا الكود مسج ونأكدلك التوفر خلال دقائق\n\nالحجز فقط بالتأكيد — اللي تدز أولاً تاخذها ✨",
+         "name": "قطعة أخيرة | خصم 20%",
+         "call_to_action": {
+          "type": "MESSAGE_PAGE",
+          "value": {
+           "app_destination": "MESSENGER"
+          }
+         },
+         "multi_share_end_card": false,
+         "format_option": "carousel_images_multi_items",
+         "page_welcome_message": "{\"type\":\"VISUAL_EDITOR\",\"version\":2,\"landing_screen_type\":\"welcome_message\",\"media_type\":\"text\",\"text_format\":{\"customer_action_type\":\"ice_breakers\",\"message\":{\"ice_breakers\":[{\"title\":\"كيف يمكنني تأكيد الطلب؟\",\"response\":\"بمجرد اختيارك للمنتج، يرجى إرسال صورة المنتج والمقاس المطلوب، وسنقوم بتأكيد الطلب معك مباشرة.\"},{\"title\":\"كم يستغرق التوصيل؟\",\"response\":\"مدة التوصيل تتراوح بين 2 يوم إلى 6 أيام، حسب موقعك ونوع الطلب ( متوفر في المخزن او طلب من تركيا )\"},{\"title\":\"ما هي سياسة الاستبدال؟\",\"response\":\"نقبل الاستبدال خلال ٤٨ ساعة من استلام الطلب، بشرط أن تكون القطعة غير مستخدمة وبحالتها الأصلية تماماً.\"}],\"quick_replies\":[],\"text\":\"مرحبا , {{user_first_name}}! كيف يمكننا مساعدتكِ؟\"}},\"image_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"generic\",\"elements\":[{\"title\":\"\",\"buttons\":[]}]}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\"}],\"text\":\"مرحبا , {{user_first_name}}! كيف يمكننا مساعدتكِ؟\"}},\"video_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"video\",\"payload\":{\"attachment_id\":\"\"}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\"}],\"text\":\"مرحبا , {{user_first_name}}! كيف يمكننا مساعدتكِ؟\"}},\"user_edit\":true,\"surface\":\"visual_editor_new\",\"ai_generated_icebreaker_toggle_enabled\":null,\"is_eligible_for_customized_greeting\":null,\"is_user_editing\":false,\"is_eligible_for_leveraging_inbox_faqs\":false,\"welcome_message_edited\":true,\"has_ai_generated_welcome_message\":false,\"ice_breakers_edited\":true,\"template_id\":\"4126189504297378\",\"performance_booster_enabled\":true,\"template_version\":0}"
+        }
+       },
+       "asset_feed_spec": {
+        "bodies": [
+         {
+          "text": "قطعة أخيرة من كل موديل 🌸 خصم 50%\n\nكل قطعة وحيدة — ماكو غيرها بالمخزون!\nالكود والقياس مكتوب على الصورة 📌\nدزيلنا الكود مسج ونأكدلك التوفر خلال دقائق\n\nالحجز فقط بالتأكيد — اللي تدز أولاً تاخذها ✨"
+         }
+        ],
+        "ad_formats": [
+         "CAROUSEL",
+         "COLLECTION"
+        ],
+        "optimization_type": "FORMAT_AUTOMATION"
+       }
+      }
+     },
+     {
+      "id": "120253345882780723",
+      "name": "LAST PIECES | PRICE HOOK",
+      "status": "ACTIVE",
+      "creative": {
+       "id": "1421076010107743",
+       "object_story_spec": {
+        "page_id": "115435042437123",
+        "instagram_user_id": "17841405579399190",
+        "video_data": {
+         "video_id": "3350838478431773",
+         "call_to_action": {
+          "type": "MESSAGE_PAGE",
+          "value": {
+           "app_destination": "MESSENGER",
+           "link": "https://fb.com/messenger_doc/"
+          }
+         },
+         "image_url": "https://www.facebook.com/ads/image/?d=AQJDfzdlugmFGslw88SCR3IVgi7MfU4bHFJTqDwG3NHhBGy1aE1XgNgktXYXfiL2lgpIxuywq8LX2z7IcYIoNk9cZu9khs5NKhMDGJh1BvcqWgkn6G2M-F9nq7q7COXCNFeWhFwLm5vA8beJiy_Mbx7G",
+         "image_hash": "68540d43270cbbfa60c25b794804a5ff",
+         "page_welcome_message": "{\"type\":\"VISUAL_EDITOR\",\"version\":2,\"landing_screen_type\":\"welcome_message\",\"media_type\":\"text\",\"text_format\":{\"customer_action_type\":\"ice_breakers\",\"message\":{\"ice_breakers\":[{\"title\":\"كيف يمكنني تأكيد الطلب؟\",\"response\":\"بمجرد اختيارك للمنتج، يرجى إرسال صورة المنتج والمقاس المطلوب، وسنقوم بتأكيد الطلب معك مباشرة.\"},{\"title\":\"كم يستغرق التوصيل؟\",\"response\":\"مدة التوصيل تتراوح بين 2 يوم إلى 6 أيام، حسب موقعك ونوع الطلب ( متوفر في المخزن او طلب من تركيا )\"},{\"title\":\"ما هي سياسة الاستبدال؟\",\"response\":\"نقبل الاستبدال خلال ٤٨ ساعة من استلام الطلب، بشرط أن تكون القطعة غير مستخدمة وبحالتها الأصلية تماماً.\"}],\"quick_replies\":[],\"text\":\"مرحبا , {{user_first_name}}! كيف يمكننا مساعدتكِ؟\"}},\"image_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"generic\",\"elements\":[{\"title\":\"\",\"buttons\":[]}]}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\"}],\"text\":\"مرحبا , {{user_first_name}}! كيف يمكننا مساعدتكِ؟\"}},\"video_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"video\",\"payload\":{\"attachment_id\":\"\"}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\"}],\"text\":\"مرحبا , {{user_first_name}}! كيف يمكننا مساعدتكِ؟\"}},\"user_edit\":true,\"surface\":\"visual_editor_new\",\"ai_generated_icebreaker_toggle_enabled\":true,\"is_eligible_for_customized_greeting\":null,\"is_user_editing\":false,\"is_eligible_for_leveraging_inbox_faqs\":false,\"welcome_message_edited\":true,\"has_ai_generated_welcome_message\":false,\"ice_breakers_edited\":true,\"template_id\":\"4126189504297378\",\"performance_booster_enabled\":true,\"template_version\":0}"
+        }
+       },
+       "asset_feed_spec": {
+        "bodies": [
+         {
+          "text": "تصفية القطع الأخيرة 🔥 موديلات دنيز بنص سعرها، قطعة وحدة بس من كل قياس. اكتبيلنا وانحجزلج قطعتج قبل لا تخلص"
+         },
+         {
+          "text": "قطع أخيرة من دنيز 🌸 أسعار تبدأ من 19 ألف وأغلبها تحت 30 ألف. قطعة وحدة من كل موديل، اللي تسبق تلحق ✨ ابعثيلنا صورة القطعة وقياسج"
+         }
+        ],
+        "descriptions": [
+         {
+          "text": "توصيل سريع لكل محافظات العراق"
+         }
+        ],
+        "titles": [
+         {
+          "text": "تبدأ من 19 ألف"
+         }
+        ],
+        "optimization_type": "DEGREES_OF_FREEDOM"
+       }
+      }
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIVFJZAdU4xQmZAfOWxGd0h5bnRTT2JYM3F2aVJPMXctaVYxNS16V2NJSUQtbjhBUmJhc2x1LTcySVhkVUxjNFBUZAmp6Q200ZA2xIaWJzMkFIOWNVUkpoTHZA3",
+      "after": "QVFIVEs5emE2T2VRT2NVMkVLUElzU003ZA1ZAmZAG5WZAFZAORXhSVEtQYWZABOU1NYUJQLUlWRGFZAbWN5WTNHLThJNk13NmJnMzN5ejBJWFo1UmhMaS1QTnVKdzRB"
+     }
+    }
+   }
+  },
+  "result": "done"
  }
 ]
