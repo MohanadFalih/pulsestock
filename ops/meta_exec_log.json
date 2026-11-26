@@ -1906,5 +1906,15 @@
   "day": "2026-11-26",
   "result": "error",
   "reason": "{\"adset\": \"120253643916940723\", \"ads\": [], \"error_after_copy\": \"Invalid parameter\"}"
+ },
+ {
+  "id": "2026-11-26-create-M269-b",
+  "op": "create_test",
+  "target": "",
+  "why": "retry with error detail, reuse copied set",
+  "at": "2026-11-26T14:17+03:00",
+  "day": "2026-11-26",
+  "result": "rejected",
+  "reason": "ad set 'TEST M-269' already exists"
  }
 ]
