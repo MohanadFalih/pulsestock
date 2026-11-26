@@ -1,0 +1,42 @@
+name: Meta executor
+
+# Executes ops/meta_queue.json (pause / activate / set ad-set budget).
+# Runs when the queue file is pushed, or by hand. Write token lives in the
+# META_WRITE_TOKEN secret; the repo variable META_EXEC_ENABLED=true is the
+# kill switch (set it to anything else to stop all execution).
+
+on:
+  push:
+    branches: [main]
+    paths: ["ops/meta_queue.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: meta-exec
+  cancel-in-progress: false
+
+jobs:
+  exec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Execute queue
+        env:
+          META_WRITE_TOKEN: ${{ secrets.META_WRITE_TOKEN }}
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+          META_EXEC_ENABLED: ${{ vars.META_EXEC_ENABLED }}
+        run: python3 scripts/meta_exec.py
+      - name: Commit log
+        run: |
+          git config user.name "pulsestock-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add ops/meta_exec_log.json
+          git diff --cached --quiet && exit 0
+          git commit -m "ops: meta exec log"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
