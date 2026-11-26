@@ -203,7 +203,11 @@ def post_score(post_id):
     try:
         with urllib.request.urlopen(urllib.request.Request(url), timeout=30) as r:
             d = json.load(r)
-    except Exception:
+    except urllib.error.HTTPError as e:
+        print("post_score error", post_id, e.read()[:300])
+        return 0
+    except Exception as e:
+        print("post_score error", post_id, e)
         return 0
     rc = d.get("reactions", {}).get("summary", {}).get("total_count", 0)
     cc = d.get("comments", {}).get("summary", {}).get("total_count", 0)
@@ -339,6 +343,8 @@ def run_action(a, log, cents, today):
         return inspect(target)
     if op == "create_test":
         return create_test(a, cents)
+    if op == "score":
+        return {"scores": {pid: post_score(pid) for pid in a.get("posts", [])}}
     if op == "keep_best":
         return keep_best(target)
     if op == "multi_off":
