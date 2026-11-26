@@ -334,6 +334,13 @@
     "115435042437123_1629266139236506"
    ],
    "why": "read-only: engagement probe"
+  },
+  {
+   "id": "2026-11-26-raw-welcome",
+   "op": "raw",
+   "target": "1453926309575029",
+   "fields": "id,page_welcome_message,messenger_sponsored_message,asset_feed_spec",
+   "why": "read-only: where the saved chat template lives (SCALE H-1978 creative)"
   }
  ]
 }
