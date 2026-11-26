@@ -241,7 +241,8 @@ def create_test(a, cents):
             time.sleep(35)
             call("POST", new_set, {"daily_budget": str(int(TEST_BUDGET_USD * cents))})
         for i, post in enumerate(posts, 1):
-            cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs)}
+            cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs),
+                  "contextual_multi_ads": json.dumps({"enroll_status": "OPT_OUT"})}
             if dof:
                 cp["degrees_of_freedom_spec"] = json.dumps(dof)
             step = f"creative {i}"
@@ -268,6 +269,27 @@ def create_test(a, cents):
     return out
 
 
+def multi_off(ad_id):
+    """Replace an ad's creative with an identical one that opts out of
+    multi-advertiser ads. Same post, same CTAs; the ad keeps its id."""
+    ad = call("GET", ad_id, {"fields": "account_id,name,creative{object_story_id,asset_feed_spec,degrees_of_freedom_spec,contextual_multi_ads}"})
+    if str(ad.get("account_id", "")).replace("act_", "") != ACCOUNT:
+        raise Reject("target is not in our ad account")
+    cr = ad["creative"]
+    if (cr.get("contextual_multi_ads") or {}).get("enroll_status") == "OPT_OUT":
+        return {"name": ad.get("name"), "note": "already opted out"}
+    dof = json.loads(json.dumps(cr.get("degrees_of_freedom_spec") or {}))
+    dof.get("creative_features_spec", {}).pop("standard_enhancements", None)
+    cp = {"name": ad.get("name"), "object_story_id": cr["object_story_id"],
+          "asset_feed_spec": json.dumps(cr["asset_feed_spec"]),
+          "contextual_multi_ads": json.dumps({"enroll_status": "OPT_OUT"})}
+    if dof.get("creative_features_spec"):
+        cp["degrees_of_freedom_spec"] = json.dumps(dof)
+    new = call("POST", f"act_{ACCOUNT}/adcreatives", cp)["id"]
+    call("POST", ad_id, {"creative": json.dumps({"creative_id": new})})
+    return {"name": ad.get("name"), "creative": new}
+
+
 def raised_today(log, target, today):
     return any(e.get("op") == "set_budget" and e.get("target") == target
                and e.get("result") == "done" and e.get("raise")
@@ -280,6 +302,8 @@ def run_action(a, log, cents, today):
         return inspect(target)
     if op == "create_test":
         return create_test(a, cents)
+    if op == "multi_off":
+        return multi_off(target)
     if op == "raw":  # read-only GET of one object with chosen fields
         return {"raw": call("GET", target, {"fields": a.get("fields", "id,name")})}
     if op == "inspect_set":
@@ -355,9 +379,9 @@ def main():
     today = now.date().isoformat()
     created = 0
     for a in todo:
-        if a.get("op") == "create_test":
+        if a.get("op") in ("create_test", "multi_off"):
             if created:
-                time.sleep(int(os.environ.get("META_EXEC_PACE", "120")))
+                time.sleep(int(os.environ.get("META_EXEC_PACE", "60")))
             created += 1
         e = {"id": a.get("id"), "op": a.get("op"), "target": str(a.get("target", "")),
              "why": a.get("why", ""), "at": now.isoformat(timespec="minutes"), "day": today}
