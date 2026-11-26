@@ -137,6 +137,51 @@ def inspect(ad_id):
     return {"inspect": {"ad": ad, "adset": st, "campaign": cp, "adsetsInCampaign": n}}
 
 
+PAGE_ID = "115435042437123"
+_page_token = None
+
+
+def page_token():
+    global _page_token
+    if _page_token is None:
+        _page_token = call("GET", PAGE_ID, {"fields": "access_token"}).get("access_token") or TOKEN
+    return _page_token
+
+
+def find_posts(code, limit_pages=6):
+    """Read-only: page posts whose text contains the model code (newest first)."""
+    import re
+    norm = lambda t: re.sub(r"\s+", "", (t or "").upper())
+    want = norm(code)
+    out, after = [], None
+    for _ in range(limit_pages):
+        p = {"fields": "id,message,created_time,status_type", "limit": 100, "access_token": page_token()}
+        if after:
+            p["after"] = after
+        url = f"{BASE}/{PAGE_ID}/posts?" + urllib.parse.urlencode(p)
+        with urllib.request.urlopen(urllib.request.Request(url), timeout=30) as r:
+            page = json.load(r)
+        for x in page.get("data", []):
+            m = norm(x.get("message"))
+            if re.search(r"(?<![A-Z0-9])" + re.escape(want) + r"(?![0-9])", m):
+                out.append({"id": x["id"], "at": x.get("created_time"), "type": x.get("status_type")})
+        after = page.get("paging", {}).get("cursors", {}).get("after")
+        if not page.get("paging", {}).get("next"):
+            break
+    return out
+
+
+def inspect_set(adset_id):
+    """Read-only: every ad in an ad set with all of its creatives."""
+    st = call("GET", adset_id, {"fields": "id,name,account_id"})
+    if str(st.get("account_id", "")).replace("act_", "") != ACCOUNT:
+        raise Reject("target is not in our ad account")
+    ads = get_all(f"{adset_id}/ads", {"fields": "id,name,status,tracking_specs,conversion_specs"})
+    for a in ads:
+        a["creatives"] = get_all(f"{a['id']}/adcreatives", {"fields": "id,object_story_id,object_type,asset_feed_spec,object_story_spec,video_id,url_tags"})
+    return {"adset": st, "ads": ads}
+
+
 def raised_today(log, target, today):
     return any(e.get("op") == "set_budget" and e.get("target") == target
                and e.get("result") == "done" and e.get("raise")
@@ -147,6 +192,10 @@ def run_action(a, log, cents, today):
     op, target = a.get("op"), str(a.get("target", ""))
     if op == "inspect":
         return inspect(target)
+    if op == "inspect_set":
+        return inspect_set(target)
+    if op == "find_posts":
+        return {"posts": find_posts(target)}
     if op not in ("pause", "activate", "set_budget") or not target:
         raise Reject(f"unsupported op {op!r}")
     o = obj(target)
