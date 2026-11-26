@@ -217,7 +217,11 @@ def create_test(a, cents):
         _tpl_ad = call("GET", TEST_TEMPLATE_AD, {"fields": "tracking_specs,creative{asset_feed_spec,degrees_of_freedom_spec}"})
     tad = _tpl_ad
     afs = tad["creative"]["asset_feed_spec"]
-    dof = tad["creative"].get("degrees_of_freedom_spec")
+    dof = json.loads(json.dumps(tad["creative"].get("degrees_of_freedom_spec") or {}))
+    feats = dof.get("creative_features_spec", {})
+    feats.pop("standard_enhancements", None)   # deprecated in creation calls
+    if not feats:
+        dof = None
     tracking = [t for t in tad.get("tracking_specs", []) if "post" not in t and "post.wall" not in t]
     if not any("offline_conversion" in t.get("action.type", []) for t in tracking):
         tracking.append({"action.type": ["offline_conversion"], "dataset": ["950131427639553"]})
