@@ -182,6 +182,66 @@ def inspect_set(adset_id):
     return {"adset": st, "ads": ads}
 
 
+TEST_TEMPLATE_ADSET = "120253586159010723"   # TEST H-1980 (paused) — settings source
+TEST_TEMPLATE_AD = "120253586159070723"
+TEST_BUDGET_USD = 6.0
+MAX_POSTS = 3
+
+
+def create_test(a, cents):
+    """Clone the TEST template ad set for one model code, one ad per post
+    (Meta's API exposes one post per ad), 6$/day, offline-event tracking kept."""
+    code = a["code"].strip().upper()
+    tpl = call("GET", TEST_TEMPLATE_ADSET, {"fields": "id,campaign_id,account_id"})
+    if str(tpl.get("account_id", "")).replace("act_", "") != ACCOUNT:
+        raise Reject("template not in our account")
+    camp = tpl["campaign_id"]
+    existing = get_all(f"{camp}/adsets", {"fields": "id,name,effective_status"})
+    if any(x["name"].strip().upper() == f"TEST {code}" for x in existing):
+        raise Reject(f"ad set 'TEST {code}' already exists")
+    posts = a.get("posts") or [p["id"] for p in find_posts(code)][:MAX_POSTS]
+    if not posts:
+        raise Reject(f"no page post found for {code}")
+    total = active_daily_total(cents)
+    if total + TEST_BUDGET_USD > CEILING_USD:
+        raise Reject(f"ceiling: {total:.0f}+{TEST_BUDGET_USD:.0f} > {CEILING_USD:.0f}$")
+
+    tad = call("GET", TEST_TEMPLATE_AD, {"fields": "tracking_specs,creative{asset_feed_spec,degrees_of_freedom_spec}"})
+    afs = tad["creative"]["asset_feed_spec"]
+    dof = tad["creative"].get("degrees_of_freedom_spec")
+    tracking = [t for t in tad.get("tracking_specs", []) if "post" not in t and "post.wall" not in t]
+    if not any("offline_conversion" in t.get("action.type", []) for t in tracking):
+        tracking.append({"action.type": ["offline_conversion"], "dataset": ["950131427639553"]})
+
+    new_set = call("POST", f"{TEST_TEMPLATE_ADSET}/copies",
+                   {"deep_copy": "false", "status_option": "PAUSED"})["copied_adset_id"]
+    out = {"adset": new_set, "ads": []}
+    try:
+        call("POST", new_set, {"name": f"TEST {code}", "daily_budget": str(int(TEST_BUDGET_USD * cents))})
+        for i, post in enumerate(posts, 1):
+            cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs)}
+            if dof:
+                cp["degrees_of_freedom_spec"] = json.dumps(dof)
+            cr = call("POST", f"act_{ACCOUNT}/adcreatives", cp)["id"]
+            ad = call("POST", f"act_{ACCOUNT}/ads", {
+                "name": code if len(posts) == 1 else f"{code} {i}", "adset_id": new_set,
+                "creative": json.dumps({"creative_id": cr}), "status": "ACTIVE",
+                "tracking_specs": json.dumps(tracking)})["id"]
+            out["ads"].append({"ad": ad, "post": post})
+        call("POST", new_set, {"status": "ACTIVE"})
+    except Exception as x:
+        out["error_after_copy"] = str(x)[:300]
+        try:
+            call("POST", new_set, {"status": "PAUSED"})
+        except Exception:
+            pass
+        raise RuntimeError(json.dumps(out))
+    chk = call("GET", out["ads"][0]["ad"], {"fields": "tracking_specs,effective_status"})
+    out["offline_tracking"] = any("offline_conversion" in t.get("action.type", []) for t in chk.get("tracking_specs", []))
+    out["status"] = chk.get("effective_status")
+    return out
+
+
 def raised_today(log, target, today):
     return any(e.get("op") == "set_budget" and e.get("target") == target
                and e.get("result") == "done" and e.get("raise")
@@ -192,6 +252,8 @@ def run_action(a, log, cents, today):
     op, target = a.get("op"), str(a.get("target", ""))
     if op == "inspect":
         return inspect(target)
+    if op == "create_test":
+        return create_test(a, cents)
     if op == "raw":  # read-only GET of one object with chosen fields
         return {"raw": call("GET", target, {"fields": a.get("fields", "id,name")})}
     if op == "inspect_set":
