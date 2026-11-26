@@ -2288,5 +2288,101 @@
   "name": "L-3317 2",
   "creative": "1667635388395261",
   "result": "done"
+ },
+ {
+  "id": "2026-11-26-raw-v26-H1978V2",
+  "op": "raw",
+  "target": "120253635638170723",
+  "why": "read-only: does v26 show both videos?",
+  "at": "2026-11-26T17:08+03:00",
+  "day": "2026-11-26",
+  "raw": {
+   "id": "120253635638170723",
+   "name": "H-1978",
+   "creative": {
+    "id": "4716665645246477",
+    "object_story_id": "115435042437123_1629266139236506",
+    "asset_feed_spec": {
+     "call_to_actions": [
+      {
+       "type": "MESSAGE_PAGE",
+       "value": {
+        "app_destination": "MESSENGER",
+        "link": "https://fb.com/messenger_doc/"
+       }
+      },
+      {
+       "type": "WHATSAPP_MESSAGE",
+       "value": {
+        "app_destination": "WHATSAPP",
+        "link": "https://api.whatsapp.com/send"
+       }
+      },
+      {
+       "type": "INSTAGRAM_MESSAGE",
+       "value": {
+        "app_destination": "INSTAGRAM_DIRECT",
+        "app_link": "instagram://direct?userid=5753521979",
+        "link": "https://www.instagram.com/"
+       }
+      }
+     ],
+     "optimization_type": "DOF_MESSAGING_DESTINATION",
+     "additional_data": {
+      "multi_share_end_card": false,
+      "is_click_to_message": true
+     }
+    }
+   }
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-raw-v26-H1978",
+  "op": "raw",
+  "target": "120253585987280723",
+  "why": "read-only: SCALE H-1978 (2 posts in UI) via v26",
+  "at": "2026-11-26T17:08+03:00",
+  "day": "2026-11-26",
+  "raw": {
+   "id": "120253585987280723",
+   "name": "H-1978",
+   "creative": {
+    "id": "1453926309575029",
+    "object_story_id": "115435042437123_1628234356006351",
+    "asset_feed_spec": {
+     "call_to_actions": [
+      {
+       "type": "MESSAGE_PAGE",
+       "value": {
+        "app_destination": "MESSENGER",
+        "link": "https://fb.com/messenger_doc/"
+       }
+      },
+      {
+       "type": "WHATSAPP_MESSAGE",
+       "value": {
+        "app_destination": "WHATSAPP",
+        "link": "https://api.whatsapp.com/send"
+       }
+      },
+      {
+       "type": "INSTAGRAM_MESSAGE",
+       "value": {
+        "app_destination": "INSTAGRAM_DIRECT",
+        "app_link": "instagram://direct?userid=5753521979",
+        "link": "https://www.instagram.com/"
+       }
+      }
+     ],
+     "optimization_type": "DOF_MESSAGING_DESTINATION",
+     "additional_data": {
+      "multi_share_end_card": false,
+      "is_click_to_message": true
+     }
+    }
+   }
+  },
+  "result": "done"
  }
 ]
