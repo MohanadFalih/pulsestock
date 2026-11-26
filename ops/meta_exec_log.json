@@ -144,5 +144,818 @@
    "adsetsInCampaign": 59
   },
   "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-H-1958",
+  "op": "inspect",
+  "target": "120253555718660723",
+  "why": "read-only: find multi-video ad structure",
+  "at": "2026-11-26T14:01+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253555718660723",
+    "name": "H-1958",
+    "status": "PAUSED",
+    "account_id": "2373500359518271",
+    "adset_id": "120253555718580723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "1487447543313656",
+     "name": "✨ طقم أنيق ومريح يجمع بين الرقي والبساطة✨\nالكود : H-1958\nالقياس : 44-46-48-50-52\nطول التونك : 100-1 2026-11-19-12984b8f45eb04ce8f18ac18d72735b1",
+     "object_story_id": "115435042437123_1609884474508006",
+     "effective_object_story_id": "115435042437123_1609884474508006",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253555718580723",
+    "name": "TEST H-1958",
+    "status": "PAUSED",
+    "daily_budget": "600",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-H-1970",
+  "op": "inspect",
+  "target": "120253462493760723",
+  "why": "read-only: find multi-video ad structure",
+  "at": "2026-11-26T14:01+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253462493760723",
+    "name": "H-1970",
+    "status": "ACTIVE",
+    "account_id": "2373500359518271",
+    "adset_id": "120253462493750723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "2771762596615220",
+     "name": "✨طقم عملي ومريح يناسب إطلالاتك اليومية✨\nالكود : H-1970\nالمقاسات :مقاس 1 يناسب 40-44 (S-M)\n          2026-11-13-372ec4ee879a43cd91c06c5b7706a43e",
+     "object_story_id": "115435042437123_1620352650127855",
+     "effective_object_story_id": "115435042437123_1620352650127855",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253462493750723",
+    "name": "SCALE H-1970",
+    "status": "ACTIVE",
+    "daily_budget": "1400",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-L-1240",
+  "op": "inspect",
+  "target": "120253615476050723",
+  "why": "read-only: find multi-video ad structure",
+  "at": "2026-11-26T14:01+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253615476050723",
+    "name": "L-1240",
+    "status": "PAUSED",
+    "account_id": "2373500359518271",
+    "adset_id": "120253615476000723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "1386398543397160",
+     "name": "✨قميص بتصميم أنيق ونقشة كاروهات جذابة✨\n▫️الكود : L-1240\n▫️القياس: رقم 1يناسب38-40-42\n               2026-11-24-fab3350013eb06b5f7a2cc341d4821ff",
+     "object_story_id": "115435042437123_1631964248966695",
+     "effective_object_story_id": "115435042437123_1631964248966695",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253615476000723",
+    "name": "TEST L-1240",
+    "status": "PAUSED",
+    "daily_budget": "600",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-M-1310",
+  "op": "inspect",
+  "target": "120253615476030723",
+  "why": "read-only: find multi-video ad structure",
+  "at": "2026-11-26T14:01+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253615476030723",
+    "name": "M-1310",
+    "status": "PAUSED",
+    "account_id": "2373500359518271",
+    "adset_id": "120253615475990723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "4230739563891661",
+     "name": "✨كاب  ناعم يجمع بين الرقي والبساطة يمنحكِ إطلالة شتوية مميزة ✨\nالكود  : H-1976\nالمقاسات : 42-44-46- 2026-11-24-fe6a7e69da6fa6553f15524e8072f2b6",
+     "object_story_id": "115435042437123_1625222556307531",
+     "effective_object_story_id": "115435042437123_1625222556307531",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253615475990723",
+    "name": "TEST M-1310",
+    "status": "PAUSED",
+    "daily_budget": "600",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-M-255",
+  "op": "inspect",
+  "target": "120253615476040723",
+  "why": "read-only: find multi-video ad structure",
+  "at": "2026-11-26T14:01+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253615476040723",
+    "name": "M-255",
+    "status": "PAUSED",
+    "account_id": "2373500359518271",
+    "adset_id": "120253615476010723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "2594063737774089",
+     "name": "✨ سوت راقي وأنيق بتصميم ناعم ومريح✨\nالكود : M-255BO429\nالمقاسات : 38-40-42-44-46-48-50-52\n▫️ طول ال 2026-11-24-5ef90364ecfe0a289de262a64f418123",
+     "object_story_id": "115435042437123_1629699245859862",
+     "effective_object_story_id": "115435042437123_1629699245859862",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "media_order": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253615476010723",
+    "name": "TEST M-255",
+    "status": "PAUSED",
+    "daily_budget": "600",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-T-8057",
+  "op": "inspect",
+  "target": "120253555718650723",
+  "why": "read-only: find multi-video ad structure",
+  "at": "2026-11-26T14:01+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253555718650723",
+    "name": "T-8057",
+    "status": "PAUSED",
+    "account_id": "2373500359518271",
+    "adset_id": "120253555718560723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "1521366836491175",
+     "name": "☘️طقم أنيق ومميز يجمع بين الراحة والأناقة☘️\nالكود : T-8057\nالمقاسات: قياس1يناسب: 38-42\n             2026-11-19-18e5c644390227b00c969a176e73926f",
+     "object_story_id": "115435042437123_1604018858427901",
+     "effective_object_story_id": "115435042437123_1604018858427901",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253555718560723",
+    "name": "TEST T-8057",
+    "status": "PAUSED",
+    "daily_budget": "600",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
  }
 ]
