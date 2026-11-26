@@ -222,7 +222,8 @@ def create_test(a, cents):
     feats.pop("standard_enhancements", None)   # deprecated in creation calls
     if not feats:
         dof = None
-    tracking = [t for t in tad.get("tracking_specs", []) if "post" not in t and "post.wall" not in t]
+    tracking = [t for t in tad.get("tracking_specs", [])
+                if "post" not in t and "post.wall" not in t and len(t) > 1]
     if not any("offline_conversion" in t.get("action.type", []) for t in tracking):
         tracking.append({"action.type": ["offline_conversion"], "dataset": ["950131427639553"]})
 
