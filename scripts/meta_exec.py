@@ -185,6 +185,8 @@ def inspect_set(adset_id):
     return {"adset": st, "ads": ads}
 
 
+_run_total = None
+_tpl_ad = None
 TEST_TEMPLATE_ADSET = "120253586159010723"   # TEST H-1980 (paused) — settings source
 TEST_TEMPLATE_AD = "120253586159070723"
 TEST_BUDGET_USD = 6.0
@@ -205,11 +207,15 @@ def create_test(a, cents):
     posts = a.get("posts") or [p["id"] for p in find_posts(code)][:MAX_POSTS]
     if not posts:
         raise Reject(f"no page post found for {code}")
-    total = active_daily_total(cents)
-    if total + TEST_BUDGET_USD > CEILING_USD:
-        raise Reject(f"ceiling: {total:.0f}+{TEST_BUDGET_USD:.0f} > {CEILING_USD:.0f}$")
+    global _run_total, _tpl_ad
+    if _run_total is None:
+        _run_total = active_daily_total(cents)
+    if _run_total + TEST_BUDGET_USD > CEILING_USD:
+        raise Reject(f"ceiling: {_run_total:.0f}+{TEST_BUDGET_USD:.0f} > {CEILING_USD:.0f}$")
 
-    tad = call("GET", TEST_TEMPLATE_AD, {"fields": "tracking_specs,creative{asset_feed_spec,degrees_of_freedom_spec}"})
+    if _tpl_ad is None:
+        _tpl_ad = call("GET", TEST_TEMPLATE_AD, {"fields": "tracking_specs,creative{asset_feed_spec,degrees_of_freedom_spec}"})
+    tad = _tpl_ad
     afs = tad["creative"]["asset_feed_spec"]
     dof = tad["creative"].get("degrees_of_freedom_spec")
     tracking = [t for t in tad.get("tracking_specs", []) if "post" not in t and "post.wall" not in t]
@@ -248,6 +254,7 @@ def create_test(a, cents):
         except Exception:
             pass
         raise RuntimeError(json.dumps(out))
+    _run_total += TEST_BUDGET_USD
     chk = call("GET", out["ads"][0]["ad"], {"fields": "tracking_specs,effective_status"})
     out["offline_tracking"] = any("offline_conversion" in t.get("action.type", []) for t in chk.get("tracking_specs", []))
     out["status"] = chk.get("effective_status")
@@ -339,7 +346,12 @@ def main():
     cents = money_factor()
     now = dt.datetime.now(BAGHDAD)
     today = now.date().isoformat()
+    created = 0
     for a in todo:
+        if a.get("op") == "create_test":
+            if created:
+                time.sleep(int(os.environ.get("META_EXEC_PACE", "45")))
+            created += 1
         e = {"id": a.get("id"), "op": a.get("op"), "target": str(a.get("target", "")),
              "why": a.get("why", ""), "at": now.isoformat(timespec="minutes"), "day": today}
         try:
@@ -348,9 +360,12 @@ def main():
         except Reject as r:
             e.update(result="rejected", reason=str(r))
         except Exception as x:
-            e.update(result="error", reason=str(x)[:300])
+            e.update(result="error", reason=str(x)[:600])
         log.append(e)
         print(json.dumps(e, ensure_ascii=False))
+        if e["result"] == "error" and ("limit" in e["reason"].lower() or "#613" in e["reason"] or "#17" in e["reason"]):
+            print("rate limited — stopping this run; remaining actions stay queued")
+            break
     os.makedirs(os.path.dirname(LOG), exist_ok=True)
     with open(LOG, "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=1)
