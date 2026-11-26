@@ -192,6 +192,17 @@ _tpl_ad = None
 TEST_TEMPLATE_ADSET = "120253586159010723"   # TEST H-1980 (paused) — settings source
 TEST_TEMPLATE_AD = "120253586159070723"
 TEST_BUDGET_USD = 6.0
+WELCOME_SOURCE_CREATIVE = "1453926309575029"  # SCALE H-1978: saved template "Start conversations 21/10/2026"
+_welcome = None
+
+
+def welcome_message():
+    global _welcome
+    if _welcome is None:
+        _welcome = call("GET", WELCOME_SOURCE_CREATIVE, {"fields": "page_welcome_message"}).get("page_welcome_message") or ""
+    return _welcome
+
+
 MAX_POSTS = 1   # owner adds a 2nd post by hand in Ads Manager
 
 
@@ -284,6 +295,8 @@ def create_test(a, cents):
         for i, post in enumerate(posts, 1):
             cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs),
                   "contextual_multi_ads": json.dumps({"enroll_status": "OPT_OUT"})}
+            if welcome_message():
+                cp["page_welcome_message"] = welcome_message()
             if dof:
                 cp["degrees_of_freedom_spec"] = json.dumps(dof)
             step = f"creative {i}"
@@ -331,6 +344,27 @@ def multi_off(ad_id):
     return {"name": ad.get("name"), "creative": new}
 
 
+def set_welcome(ad_id):
+    """Give an ad the saved chat template (same post/CTAs, multi-advertiser off)."""
+    ad = call("GET", ad_id, {"fields": "account_id,name,creative{object_story_id,asset_feed_spec,degrees_of_freedom_spec,page_welcome_message}"})
+    if str(ad.get("account_id", "")).replace("act_", "") != ACCOUNT:
+        raise Reject("target is not in our ad account")
+    cr = ad["creative"]
+    if "4706465049676723" in (cr.get("page_welcome_message") or ""):
+        return {"name": ad.get("name"), "note": "template already set"}
+    cp = {"name": ad.get("name"), "object_story_id": cr["object_story_id"],
+          "asset_feed_spec": json.dumps(cr["asset_feed_spec"]),
+          "contextual_multi_ads": json.dumps({"enroll_status": "OPT_OUT"}),
+          "page_welcome_message": welcome_message()}
+    dof = json.loads(json.dumps(cr.get("degrees_of_freedom_spec") or {}))
+    dof.get("creative_features_spec", {}).pop("standard_enhancements", None)
+    if dof.get("creative_features_spec"):
+        cp["degrees_of_freedom_spec"] = json.dumps(dof)
+    new = call("POST", f"act_{ACCOUNT}/adcreatives", cp)["id"]
+    call("POST", ad_id, {"creative": json.dumps({"creative_id": new})})
+    return {"name": ad.get("name"), "creative": new}
+
+
 def raised_today(log, target, today):
     return any(e.get("op") == "set_budget" and e.get("target") == target
                and e.get("result") == "done" and e.get("raise")
@@ -347,6 +381,8 @@ def run_action(a, log, cents, today):
         return {"scores": {pid: post_score(pid) for pid in a.get("posts", [])}}
     if op == "keep_best":
         return keep_best(target)
+    if op == "set_welcome":
+        return set_welcome(target)
     if op == "multi_off":
         return multi_off(target)
     if op == "raw":  # read-only GET of one object with chosen fields
@@ -431,7 +467,7 @@ def main():
     today = now.date().isoformat()
     created = 0
     for a in todo:
-        if a.get("op") in ("create_test", "multi_off"):
+        if a.get("op") in ("create_test", "multi_off", "set_welcome"):
             if created:
                 time.sleep(int(os.environ.get("META_EXEC_PACE", "60")))
             created += 1
