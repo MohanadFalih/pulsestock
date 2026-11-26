@@ -166,6 +166,8 @@ def find_posts(code, limit_pages=6):
             page = json.load(r)
         for x in page.get("data", []):
             m = norm(x.get("message"))
+            if x.get("status_type") not in ("added_video", "added_photos", "shared_story") and x.get("status_type"):
+                continue  # text-only posts cannot be used as ad creatives
             if re.search(r"(?<![A-Z0-9])" + re.escape(want) + r"(?![0-9])", m):
                 out.append({"id": x["id"], "at": x.get("created_time"), "type": x.get("status_type")})
         after = page.get("paging", {}).get("cursors", {}).get("after")
