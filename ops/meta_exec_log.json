@@ -9,5 +9,140 @@
   "name": "H-1906",
   "note": "already paused",
   "result": "done"
+ },
+ {
+  "id": "2026-11-26-inspect-01",
+  "op": "inspect",
+  "target": "120253586159070723",
+  "why": "read-only: structure of a TEST ad (H-1980) to clone new tests",
+  "at": "2026-11-26T13:55+03:00",
+  "day": "2026-11-26",
+  "inspect": {
+   "ad": {
+    "id": "120253586159070723",
+    "name": "H-1980",
+    "status": "ACTIVE",
+    "account_id": "2373500359518271",
+    "adset_id": "120253586159010723",
+    "campaign_id": "120253253012680723",
+    "creative": {
+     "id": "1119407720968109",
+     "name": "✨طقم أنيق وراقي يمنحكِ إطلالة محتشمة ومميزة✨\nالكود : H-1980\nالمقاسات : 42-44-46-48-50\nطول التونك :  2026-11-22-0ca9d5bc7c5407f69e054bb44777a663",
+     "object_story_id": "115435042437123_1629389762557477",
+     "effective_object_story_id": "115435042437123_1629389762557477",
+     "object_type": "STATUS",
+     "asset_feed_spec": {
+      "call_to_actions": [
+       {
+        "type": "MESSAGE_PAGE",
+        "value": {
+         "app_destination": "MESSENGER",
+         "link": "https://fb.com/messenger_doc/"
+        }
+       },
+       {
+        "type": "WHATSAPP_MESSAGE",
+        "value": {
+         "app_destination": "WHATSAPP",
+         "link": "https://api.whatsapp.com/send"
+        }
+       },
+       {
+        "type": "INSTAGRAM_MESSAGE",
+        "value": {
+         "app_destination": "INSTAGRAM_DIRECT",
+         "app_link": "instagram://direct?userid=5753521979",
+         "link": "https://www.instagram.com/"
+        }
+       }
+      ],
+      "optimization_type": "DOF_MESSAGING_DESTINATION",
+      "additional_data": {
+       "multi_share_end_card": false,
+       "is_click_to_message": true
+      }
+     },
+     "degrees_of_freedom_spec": {
+      "creative_features_spec": {
+       "ig_video_native_subtitle": {
+        "enroll_status": "OPT_IN"
+       },
+       "standard_enhancements": {
+        "enroll_status": "OPT_OUT"
+       }
+      }
+     }
+    }
+   },
+   "adset": {
+    "id": "120253586159010723",
+    "name": "TEST H-1980",
+    "status": "PAUSED",
+    "daily_budget": "600",
+    "lifetime_budget": "0",
+    "optimization_goal": "OFFSITE_CONVERSIONS",
+    "billing_event": "IMPRESSIONS",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "destination_type": "MESSAGING_INSTAGRAM_DIRECT_MESSENGER_WHATSAPP",
+    "promoted_object": {
+     "pixel_id": "950131427639553",
+     "custom_event_type": "PURCHASE",
+     "page_id": "115435042437123",
+     "smart_pse_enabled": false
+    },
+    "attribution_spec": [
+     {
+      "event_type": "CLICK_THROUGH",
+      "window_days": 7
+     },
+     {
+      "event_type": "VIEW_THROUGH",
+      "window_days": 1
+     }
+    ],
+    "targeting": {
+     "age_max": 65,
+     "age_min": 18,
+     "age_range": [
+      18,
+      65
+     ],
+     "genders": [
+      2
+     ],
+     "geo_locations": {
+      "countries": [
+       "IQ"
+      ],
+      "location_types": [
+       "frequently_in",
+       "home",
+       "recent"
+      ]
+     },
+     "brand_safety_content_filter_levels": [
+      "FACEBOOK_RELAXED",
+      "AN_RELAXED"
+     ],
+     "targeting_automation": {
+      "advantage_audience": 0,
+      "individual_setting": {
+       "age": 1,
+       "gender": 1
+      }
+     },
+     "user_age_unknown": true
+    }
+   },
+   "campaign": {
+    "id": "120253253012680723",
+    "name": "TEST PRODUCTS",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "special_ad_categories": []
+   },
+   "adsetsInCampaign": 59
+  },
+  "result": "done"
  }
 ]
