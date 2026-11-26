@@ -350,7 +350,7 @@ def main():
     for a in todo:
         if a.get("op") == "create_test":
             if created:
-                time.sleep(int(os.environ.get("META_EXEC_PACE", "45")))
+                time.sleep(int(os.environ.get("META_EXEC_PACE", "120")))
             created += 1
         e = {"id": a.get("id"), "op": a.get("op"), "target": str(a.get("target", "")),
              "why": a.get("why", ""), "at": now.isoformat(timespec="minutes"), "day": today}
