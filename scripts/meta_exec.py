@@ -188,7 +188,7 @@ def inspect_set(adset_id):
 
 
 _run_total = None
-_tpl_ad = None
+_tpl_ad = {}
 TEST_TEMPLATE_ADSET = "120253586159010723"   # TEST H-1980 (paused) — settings source
 TEST_TEMPLATE_AD = "120253586159070723"
 TEST_BUDGET_USD = 6.0
@@ -245,15 +245,19 @@ def keep_best(adset_id):
 
 
 def create_test(a, cents):
+    tpl_set = a.get("template_adset", TEST_TEMPLATE_ADSET)
+    tpl_ad = a.get("template_ad", TEST_TEMPLATE_AD)
+    prefix = a.get("prefix", "TEST")
+    budget = float(a.get("budget", TEST_BUDGET_USD))
     """Clone the TEST template ad set for one model code, one ad per post
     (Meta's API exposes one post per ad), 6$/day, offline-event tracking kept."""
     code = a["code"].strip().upper()
-    tpl = call("GET", TEST_TEMPLATE_ADSET, {"fields": "id,campaign_id,account_id"})
+    tpl = call("GET", tpl_set, {"fields": "id,campaign_id,account_id"})
     if str(tpl.get("account_id", "")).replace("act_", "") != ACCOUNT:
         raise Reject("template not in our account")
     camp = tpl["campaign_id"]
     existing = get_all(f"{camp}/adsets", {"fields": "id,name,effective_status"})
-    if not a.get("reuse_adset") and any(x["name"].strip().upper() == f"TEST {code}" for x in existing):
+    if not a.get("reuse_adset") and any(x["name"].strip().upper() == f"{prefix} {code}" for x in existing):
         raise Reject(f"ad set 'TEST {code}' already exists")
     posts = a.get("posts")
     if not posts:
@@ -264,12 +268,12 @@ def create_test(a, cents):
     global _run_total, _tpl_ad
     if _run_total is None:
         _run_total = active_daily_total(cents)
-    if _run_total + TEST_BUDGET_USD > CEILING_USD:
-        raise Reject(f"ceiling: {_run_total:.0f}+{TEST_BUDGET_USD:.0f} > {CEILING_USD:.0f}$")
+    if _run_total + budget > CEILING_USD:
+        raise Reject(f"ceiling: {_run_total:.0f}+{budget:.0f} > {CEILING_USD:.0f}$")
 
-    if _tpl_ad is None:
-        _tpl_ad = call("GET", TEST_TEMPLATE_AD, {"fields": "tracking_specs,creative{asset_feed_spec,degrees_of_freedom_spec}"})
-    tad = _tpl_ad
+    if tpl_ad not in _tpl_ad:
+        _tpl_ad[tpl_ad] = call("GET", tpl_ad, {"fields": "tracking_specs,creative{asset_feed_spec,degrees_of_freedom_spec}"})
+    tad = _tpl_ad[tpl_ad]
     afs = tad["creative"]["asset_feed_spec"]
     dof = json.loads(json.dumps(tad["creative"].get("degrees_of_freedom_spec") or {}))
     feats = dof.get("creative_features_spec", {})
@@ -281,17 +285,17 @@ def create_test(a, cents):
     if not any("offline_conversion" in t.get("action.type", []) for t in tracking):
         tracking.append({"action.type": ["offline_conversion"], "dataset": ["950131427639553"]})
 
-    new_set = a.get("reuse_adset") or call("POST", f"{TEST_TEMPLATE_ADSET}/copies",
+    new_set = a.get("reuse_adset") or call("POST", f"{tpl_set}/copies",
                    {"deep_copy": "false", "status_option": "PAUSED"})["copied_adset_id"]
     out = {"adset": new_set, "ads": []}
     step = "rename"
     try:
-        call("POST", new_set, {"name": f"TEST {code}"})
+        call("POST", new_set, {"name": f"{prefix} {code}"})
         step = "budget"
         cur = int(call("GET", new_set, {"fields": "daily_budget"}).get("daily_budget") or 0)
-        if cur != int(TEST_BUDGET_USD * cents):
+        if cur != int(budget * cents):
             time.sleep(35)
-            call("POST", new_set, {"daily_budget": str(int(TEST_BUDGET_USD * cents))})
+            call("POST", new_set, {"daily_budget": str(int(budget * cents))})
         for i, post in enumerate(posts, 1):
             cp = {"name": f"{code} {i}", "object_story_id": post, "asset_feed_spec": json.dumps(afs),
                   "contextual_multi_ads": json.dumps({"enroll_status": "OPT_OUT"})}
@@ -316,7 +320,7 @@ def create_test(a, cents):
         except Exception:
             pass
         raise RuntimeError(json.dumps(out))
-    _run_total += TEST_BUDGET_USD
+    _run_total += budget
     chk = call("GET", out["ads"][0]["ad"], {"fields": "tracking_specs,effective_status"})
     out["offline_tracking"] = any("offline_conversion" in t.get("action.type", []) for t in chk.get("tracking_specs", []))
     out["status"] = chk.get("effective_status")
