@@ -3266,5 +3266,210 @@
    }
   },
   "result": "done"
+ },
+ {
+  "id": "2026-11-27-billing-check",
+  "op": "raw",
+  "target": "act_2373500359518271",
+  "why": "read-only: billing status after failed payment (owner report)",
+  "at": "2026-11-27T23:09+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "account_status": 9,
+   "disable_reason": 0,
+   "balance": "61220",
+   "amount_spent": "19111137",
+   "currency": "USD",
+   "is_prepay_account": false,
+   "funding_source_details": {
+    "id": "26149652108058147",
+    "coupons": [
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2026-12-05T13:42:58+0000",
+      "start_date": "2026-06-06T01:42:58+0000",
+      "coupon_id": "27273240879032593",
+      "original_amount": 1,
+      "original_display_amount": "US$ ٠٫٠١ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2026-12-12T14:11:09+0000",
+      "start_date": "2026-06-13T02:11:09+0000",
+      "coupon_id": "27510694721953875",
+      "original_amount": 342,
+      "original_display_amount": "US$ ٣٫٤٢ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2026-12-17T06:13:31+0000",
+      "start_date": "2026-06-17T18:13:31+0000",
+      "coupon_id": "27429003016789711",
+      "original_amount": 2,
+      "original_display_amount": "US$ ٠٫٠٢ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-07-23T18:50:56+0000",
+      "coupon_id": "27760128927010448",
+      "original_amount": 222,
+      "original_display_amount": "US$ ٢٫٢٢ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2027-02-03T15:50:44+0000",
+      "start_date": "2026-08-05T03:50:44+0000",
+      "coupon_id": "28082875068069169",
+      "original_amount": 58,
+      "original_display_amount": "US$ ٠٫٥٨ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-08-06T18:52:52+0000",
+      "coupon_id": "28191429847213689",
+      "original_amount": 1013,
+      "original_display_amount": "US$ ١٠٫١٣ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2027-02-27T09:08:20+0000",
+      "start_date": "2026-08-28T21:08:20+0000",
+      "coupon_id": "28440001632356505",
+      "original_amount": 5,
+      "original_display_amount": "US$ ٠٫٠٥ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2026-12-31T20:59:59+0000",
+      "start_date": "2026-08-30T10:32:17+0000",
+      "coupon_id": "28431179199905419",
+      "original_amount": 30000,
+      "original_display_amount": "US$ ٣٠٠٫٠٠ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2027-03-23T03:52:25+0000",
+      "start_date": "2026-09-21T15:52:25+0000",
+      "coupon_id": "28796578470032151",
+      "original_amount": 96,
+      "original_display_amount": "US$ ٠٫٩٦ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-06T06:03:46+0000",
+      "coupon_id": "28930187243337936",
+      "original_amount": 628,
+      "original_display_amount": "US$ ٦٫٢٨ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-07T05:13:30+0000",
+      "coupon_id": "29004549782568357",
+      "original_amount": 11,
+      "original_display_amount": "US$ ٠٫١١ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-07T05:58:48+0000",
+      "coupon_id": "28996296146727052",
+      "original_amount": 59,
+      "original_display_amount": "US$ ٠٫٥٩ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-07T06:00:14+0000",
+      "coupon_id": "28958305410526120",
+      "original_amount": 96,
+      "original_display_amount": "US$ ٠٫٩٦ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-07T06:04:56+0000",
+      "coupon_id": "28945681995121794",
+      "original_amount": 11,
+      "original_display_amount": "US$ ٠٫١١ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-07T06:10:07+0000",
+      "coupon_id": "28885362874487048",
+      "original_amount": 4,
+      "original_display_amount": "US$ ٠٫٠٤ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2027-04-07T18:13:50+0000",
+      "start_date": "2026-10-07T06:13:50+0000",
+      "coupon_id": "28885395641150438",
+      "original_amount": 127,
+      "original_display_amount": "US$ ١٫٢٧ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-10-31T22:58:45+0000",
+      "coupon_id": "29433533649669960",
+      "original_amount": 1,
+      "original_display_amount": "US$ ٠٫٠١ USD"
+     },
+     {
+      "amount": 0,
+      "currency": "USD",
+      "display_amount": "US$ ٠٫٠٠ USD",
+      "expiration": "2038-01-19T03:14:07+0000",
+      "start_date": "2026-11-24T22:30:38+0000",
+      "coupon_id": "29773756622314324",
+      "original_amount": 4,
+      "original_display_amount": "US$ ٠٫٠٤ USD"
+     }
+    ],
+    "display_string": "‏‎Mastercard‎‏ * ‏7579‏",
+    "type": 1
+   },
+   "id": "act_2373500359518271"
+  },
+  "result": "done"
  }
 ]
