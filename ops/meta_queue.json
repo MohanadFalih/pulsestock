@@ -420,6 +420,60 @@
    "target": "120252218976630723",
    "fields": "id,name,status,daily_budget,promoted_object,optimization_goal,destination_type,targeting,ads{id,name,status,creative{id,product_set_id,object_story_spec,asset_feed_spec,template_url_spec,page_welcome_message}}",
    "why": "read-only: LAST PIECES ad set structure"
+  },
+  {
+   "id": "2026-11-27-pause-120253462493760723",
+   "op": "pause",
+   "target": "120253462493760723",
+   "why": "auto (rule 6 guard): H-1970 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253556121540723",
+   "op": "pause",
+   "target": "120253556121540723",
+   "why": "auto (rule 6 guard): H-1970 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253525857620723",
+   "op": "pause",
+   "target": "120253525857620723",
+   "why": "auto (rule 6 guard): H-1975 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253597510820723",
+   "op": "pause",
+   "target": "120253597510820723",
+   "why": "auto (rule 6 guard): H-1975 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253555718670723",
+   "op": "pause",
+   "target": "120253555718670723",
+   "why": "auto (rule 6 guard): L-7072 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253615302640723",
+   "op": "pause",
+   "target": "120253615302640723",
+   "why": "auto (rule 6 guard): L-7072 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253548183610723",
+   "op": "pause",
+   "target": "120253548183610723",
+   "why": "auto (rule 6 guard): T-8055 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253585715030723",
+   "op": "pause",
+   "target": "120253585715030723",
+   "why": "auto (rule 6 guard): T-8055 7-day cost per piece > BE"
+  },
+  {
+   "id": "2026-11-27-pause-120253586117270723",
+   "op": "pause",
+   "target": "120253586117270723",
+   "why": "auto (rule 6 guard): T-8055 7-day cost per piece > BE"
   }
  ]
 }
