@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-27T07:03:59.067325+00:00",
+ "syncedAt": "2026-11-27T07:33:31.664846+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1422,7 +1422,7 @@
    "revenue": 1708000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 27,
+   "unitsBoughtFromSupplier": 28,
    "returnedStock": 0,
    "unitPrice": 61000.0,
    "orderVelocity7d": 3.86,
@@ -42514,14 +42514,14 @@
    "revenue": 38166000,
    "delivered": 1125,
    "returned": 225,
-   "unitsBoughtFromSupplier": 933,
+   "unitsBoughtFromSupplier": 934,
    "returnedStock": 34,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 301,
-    "lastChecked": "2026-11-26T15:02:21Z",
+    "qty": 299,
+    "lastChecked": "2026-11-27T07:03:23Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -42564,13 +42564,13 @@
      {
       "color": "رصاصي / Antrasit",
       "size": "STD",
-      "qty": 15,
+      "qty": 14,
       "product_id": 680501
      },
      {
       "color": "كريمي / Krem",
       "size": "STD",
-      "qty": 28,
+      "qty": 27,
       "product_id": 680502
      },
      {
@@ -44226,19 +44226,19 @@
    "odooCreatedDate": "2025-05-20",
    "firstOrderDate": "2025-09-17",
    "lastOrderDate": "2026-11-27",
-   "orders": 17,
-   "units": 17,
-   "revenue": 809000,
+   "orders": 18,
+   "units": 18,
+   "revenue": 884000,
    "delivered": 12,
    "returned": 1,
-   "unitsBoughtFromSupplier": 15,
+   "unitsBoughtFromSupplier": 16,
    "returnedStock": 0,
    "unitPrice": 75000.0,
-   "orderVelocity7d": 0.57,
+   "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 130,
-    "lastChecked": "2026-11-27T06:36:45Z",
+    "qty": 129,
+    "lastChecked": "2026-11-27T07:29:56Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -44281,7 +44281,7 @@
      {
       "color": "جملي / Camel",
       "size": "STD",
-      "qty": 16,
+      "qty": 15,
       "product_id": 736273
      }
     ]
@@ -61341,9 +61341,9 @@
      150000
     ],
     "2026-11-27": [
-     1,
-     1,
-     75000
+     2,
+     2,
+     150000
     ]
    },
    "4602": {
@@ -62279,10 +62279,31 @@
    "2026-11-24": 43,
    "2026-11-25": 45,
    "2026-11-26": 39,
-   "2026-11-27": 10
+   "2026-11-27": 11
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35453",
+   "d": "2026-11-27",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "L-3317",
+     "pid": 717319,
+     "qty": 1,
+     "price": 75000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35452",
    "d": "2026-11-27",
