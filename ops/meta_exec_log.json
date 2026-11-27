@@ -3124,5 +3124,85 @@
   "day": "2026-11-27",
   "result": "error",
   "reason": "{\"adset\": \"120253656484700723\", \"ads\": [], \"error_after_copy\": \"creative 1: Invalid parameter | 1772101 | \\u0644\\u0627 \\u064a\\u062d\\u062a\\u0648\\u064a \\u0627\\u0644\\u0645\\u0646\\u0634\\u0648\\u0631 \\u0639\\u0644\\u0649 \\u0648\\u0633\\u0627\\u0626\\u0637 | \\u0644\\u0627 \\u064a\\u062d\\u062a\\u0648\\u064a \\u0645\\u0646\\u0634\\u0648\\u0631\\u0643 \\u0639\\u0644\\u0649 \\u0635\\u0648\\u0631\\u0629 \\u0623\\u0648 \\u0641\\u064a\\u062f\\u064a\\u0648. \\u062a\\u062f\\u0639\\u0645 \\u0625\\u0639\\u0644\\u0627\\u0646\\u0627\\u062a Instagram \\u0641\\u0642\\u0637 \\u0645\\u0646\\u0634\\u0648\\u0631\\u0627\\u062a \\u0627\\u0644\\u0631\\u0648\\u0627\\u0628\\u0637 \\u"
+ },
+ {
+  "id": "2026-11-27-pause-120253644832130723",
+  "op": "pause",
+  "target": "120253644832130723",
+  "why": "rule 5: TEST L-3317 — SCALE L-3317 spent 4.5$ (>2$)",
+  "at": "2026-11-27T21:02+03:00",
+  "day": "2026-11-27",
+  "name": "TEST L-3317",
+  "result": "done"
+ },
+ {
+  "id": "2026-11-27-n-status-120253462493760723",
+  "op": "raw",
+  "target": "120253462493760723",
+  "why": "read-only: confirm morning guard pause",
+  "at": "2026-11-27T21:02+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253462493760723",
+   "name": "H-1970",
+   "effective_status": "PAUSED"
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-27-n-status-120253556121540723",
+  "op": "raw",
+  "target": "120253556121540723",
+  "why": "read-only: confirm morning guard pause",
+  "at": "2026-11-27T21:02+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253556121540723",
+   "name": "H-1970",
+   "effective_status": "PAUSED"
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-27-n-status-120253597510820723",
+  "op": "raw",
+  "target": "120253597510820723",
+  "why": "read-only: confirm morning guard pause",
+  "at": "2026-11-27T21:02+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253597510820723",
+   "name": "H-1975",
+   "effective_status": "PAUSED"
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-27-n-status-120253615302640723",
+  "op": "raw",
+  "target": "120253615302640723",
+  "why": "read-only: confirm morning guard pause",
+  "at": "2026-11-27T21:02+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253615302640723",
+   "name": "L-7072",
+   "effective_status": "PAUSED"
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-27-n-status-120253586117270723",
+  "op": "raw",
+  "target": "120253586117270723",
+  "why": "read-only: confirm morning guard pause",
+  "at": "2026-11-27T21:02+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253586117270723",
+   "name": "T-8055",
+   "effective_status": "PAUSED"
+  },
+  "result": "done"
  }
 ]
