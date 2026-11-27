@@ -3222,5 +3222,49 @@
   "offline_tracking": true,
   "status": "IN_PROCESS",
   "result": "done"
+ },
+ {
+  "id": "2026-11-27-welcomecheck-L-0665",
+  "op": "raw",
+  "target": "120253644466170723",
+  "why": "read-only: check chat template (owner report)",
+  "at": "2026-11-27T23:06+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253644466170723",
+   "name": "L-0665 2",
+   "creative": {
+    "id": "1469736104626842",
+    "page_welcome_message": "{\"type\":\"VISUAL_EDITOR\",\"version\":2,\"landing_screen_type\":\"welcome_message\",\"media_type\":\"text\",\"text_format\":{\"customer_action_type\":\"ice_breakers\",\"message\":{\"ice_breakers\":[{\"title\":\"هل يتوفر في مقاسي؟\",\"response\":null},{\"title\":\"كم السعر؟\",\"response\":null},{\"title\":\"كم يوم مده التوصيل ؟\",\"response\":null}],\"quick_replies\":[],\"text\":\"مرحبا, {{user_first_name}}! تفضلوا شلون نكدر نساعدكم\"}},\"image_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"generic\",\"elements\":[{\"title\":\"\",\"buttons\":[],\"image_hash\":\"\"}]}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\",\"response_type\":null}],\"text\":\"مرحبا, {{user_first_name}}! تفضلوا شلون نكدر نساعدكم\"}},\"video_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"video\",\"payload\":{\"attachment_id\":\"\"}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\",\"response_type\":null}],\"text\":\"مرحبا, {{user_first_name}}! تفضلوا شلون نكدر نساعدكم\"}},\"user_edit\":true,\"surface\":\"visual_editor_new\",\"ai_generated_icebreaker_toggle_enabled\":true,\"ai_gen_welcome_message_model_version\":null,\"ai_gen_nudge_model_version\":null,\"is_eligible_for_customized_greeting\":false,\"is_user_editing\":false,\"is_eligible_for_leveraging_inbox_faqs\":false,\"reengagement_disabled\":true,\"reengagement\":{\"text\":\"Hi {{user_first_name}}! We wanted to follow up. Do you have any questions?\",\"include_products\":true},\"ai_gen_conversation_model_version\":\"IBV1\",\"welcome_message_edited\":true,\"has_ai_generated_welcome_message\":false,\"ice_breakers_edited\":true,\"performance_booster_enabled\":true,\"template_id\":\"4706465049676723\",\"template_version\":0}"
+   }
+  },
+  "result": "done"
+ },
+ {
+  "id": "2026-11-27-welcomecheck-H-1916",
+  "op": "raw",
+  "target": "120253655768020723",
+  "why": "read-only: check chat template (owner report)",
+  "at": "2026-11-27T23:06+03:00",
+  "day": "2026-11-27",
+  "result": "error",
+  "reason": "(#100) Tried accessing nonexisting field (creative)"
+ },
+ {
+  "id": "2026-11-27-welcomecheck-SCALE-H-1978",
+  "op": "raw",
+  "target": "120253585987280723",
+  "why": "read-only: check chat template (owner report)",
+  "at": "2026-11-27T23:06+03:00",
+  "day": "2026-11-27",
+  "raw": {
+   "id": "120253585987280723",
+   "name": "H-1978",
+   "creative": {
+    "id": "1453926309575029",
+    "page_welcome_message": "{\"type\":\"VISUAL_EDITOR\",\"version\":2,\"landing_screen_type\":\"welcome_message\",\"media_type\":\"text\",\"text_format\":{\"customer_action_type\":\"ice_breakers\",\"message\":{\"ice_breakers\":[{\"title\":\"هل يتوفر في مقاسي؟\",\"response\":null},{\"title\":\"كم السعر؟\",\"response\":null},{\"title\":\"كم يوم مده التوصيل ؟\",\"response\":null}],\"quick_replies\":[],\"text\":\"مرحبا, {{user_first_name}}! تفضلوا شلون نكدر نساعدكم\"}},\"image_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"generic\",\"elements\":[{\"title\":\"\",\"buttons\":[],\"image_hash\":\"\"}]}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\",\"response_type\":null}],\"text\":\"مرحبا, {{user_first_name}}! تفضلوا شلون نكدر نساعدكم\"}},\"video_format\":{\"customer_action_type\":\"quick_replies\",\"message\":{\"attachment\":{\"type\":\"video\",\"payload\":{\"attachment_id\":\"\"}},\"quick_replies\":[{\"title\":\"I'd like to learn more\",\"content_type\":\"text\",\"response_type\":null}],\"text\":\"مرحبا, {{user_first_name}}! تفضلوا شلون نكدر نساعدكم\"}},\"user_edit\":true,\"surface\":\"visual_editor_new\",\"ai_generated_icebreaker_toggle_enabled\":true,\"ai_gen_welcome_message_model_version\":null,\"ai_gen_nudge_model_version\":null,\"is_eligible_for_customized_greeting\":false,\"is_user_editing\":false,\"is_eligible_for_leveraging_inbox_faqs\":false,\"reengagement_disabled\":true,\"reengagement\":{\"text\":\"Hi {{user_first_name}}! We wanted to follow up. Do you have any questions?\",\"include_products\":true},\"ai_gen_conversation_model_version\":\"IBV1\",\"welcome_message_edited\":true,\"has_ai_generated_welcome_message\":false,\"ice_breakers_edited\":true,\"performance_booster_enabled\":true,\"template_id\":\"4706465049676723\",\"template_version\":0}"
+   }
+  },
+  "result": "done"
  }
 ]
