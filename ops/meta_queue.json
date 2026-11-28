@@ -661,6 +661,27 @@
    "target": "act_2373500359518271",
    "fields": "business{id,name}",
    "why": "read-only: business id for settings link"
+  },
+  {
+   "id": "2026-11-28-dof-M-5718-scale",
+   "op": "raw",
+   "target": "120253663517980723",
+   "fields": "id,name,creative{id,object_story_id,degrees_of_freedom_spec,asset_feed_spec{images,videos,optimization_type}}",
+   "why": "read-only: why IG ad image is cropped"
+  },
+  {
+   "id": "2026-11-28-dof-M-5718-test",
+   "op": "raw",
+   "target": "120253644815990723",
+   "fields": "id,name,creative{id,object_story_id,degrees_of_freedom_spec,asset_feed_spec{images,videos,optimization_type}}",
+   "why": "read-only: why IG ad image is cropped"
+  },
+  {
+   "id": "2026-11-28-dof-H-1978-tpl",
+   "op": "raw",
+   "target": "120253585987280723",
+   "fields": "id,name,creative{id,object_story_id,degrees_of_freedom_spec,asset_feed_spec{images,videos,optimization_type}}",
+   "why": "read-only: why IG ad image is cropped"
   }
  ]
 }
