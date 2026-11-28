@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-28T17:33:07.588411+00:00",
+ "syncedAt": "2026-11-28T18:03:18.755095+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5984,7 +5984,7 @@
    "sku": "H-1971",
    "category": "All",
    "supplier": null,
-   "stage": "ads-live",
+   "stage": "selling-returns",
    "odooCreatedDate": "2026-11-14",
    "firstOrderDate": "2026-11-15",
    "lastOrderDate": "2026-11-20",
@@ -5992,9 +5992,9 @@
    "units": 2,
    "revenue": 138000,
    "delivered": 2,
-   "returned": 0,
+   "returned": 1,
    "unitsBoughtFromSupplier": 2,
-   "returnedStock": 0,
+   "returnedStock": 1,
    "unitPrice": 69000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 8,
@@ -15260,7 +15260,7 @@
    "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": 7,
-    "lastChecked": "2026-11-28T17:05:13Z",
+    "lastChecked": "2026-11-28T17:35:48Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -31643,20 +31643,20 @@
    "sku": "T-7067",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-07-23",
    "firstOrderDate": "2026-07-24",
-   "lastOrderDate": "2026-11-02",
-   "orders": 64,
-   "units": 70,
-   "revenue": 6123000,
+   "lastOrderDate": "2026-11-28",
+   "orders": 65,
+   "units": 71,
+   "revenue": 6154000,
    "delivered": 70,
    "returned": 19,
    "unitsBoughtFromSupplier": 56,
    "returnedStock": 4,
    "unitPrice": 90000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 26,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -43060,9 +43060,9 @@
    "units": 1132,
    "revenue": 38205000,
    "delivered": 1126,
-   "returned": 225,
+   "returned": 227,
    "unitsBoughtFromSupplier": 934,
-   "returnedStock": 33,
+   "returnedStock": 35,
    "unitPrice": 39000.0,
    "orderVelocity7d": 0.71,
    "daysSinceLastOrder": 0,
@@ -46470,9 +46470,9 @@
   }
  ],
  "shop": {
-  "stockUnits": 1632,
-  "stockValue": 44960764,
-  "stockVariants": 1231
+  "stockUnits": 1636,
+  "stockValue": 45064364,
+  "stockVariants": 1233
  },
  "daily": {
   "days": 90,
@@ -55778,6 +55778,11 @@
      1,
      1,
      31000
+    ],
+    "2026-11-28": [
+     1,
+     1,
+     31000
     ]
    },
    "7209": {
@@ -63010,7 +63015,7 @@
    ],
    "2026-11-28": [
     18,
-    5
+    9
    ]
   },
   "orders": {
@@ -63389,6 +63394,15 @@
      "discPct": 0,
      "del": 0,
      "var": "أسود / Siyah, 1"
+    },
+    {
+     "sku": "T-7067",
+     "pid": 727632,
+     "qty": 1,
+     "price": 31000,
+     "discPct": 0,
+     "del": 0,
+     "var": "نيلي / Laci, 2"
     }
    ],
    "src": "Instagram"
@@ -71757,9 +71771,11 @@
      "qty": 1,
      "price": 39000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "أسود / Siyah"
+     "var": "أسود / Siyah",
+     "ret": 1,
+     "rd": "2026-11-28"
     }
    ],
    "src": "Facebook",
@@ -72910,9 +72926,11 @@
      "qty": 1,
      "price": 80000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "قهوائي / Kahve, 52"
+     "var": "قهوائي / Kahve, 52",
+     "ret": 1,
+     "rd": "2026-11-28"
     }
    ],
    "src": "Instagram",
@@ -73047,9 +73065,11 @@
      "qty": 1,
      "price": 69000,
      "discPct": 0,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "قهوائي / Kahve"
+     "var": "قهوائي / Kahve",
+     "ret": 1,
+     "rd": "2026-11-28"
     }
    ],
    "src": "Instagram",
@@ -74194,9 +74214,11 @@
      "qty": 1,
      "price": 39000,
      "discPct": 4.5,
-     "del": 1,
+     "del": 0,
      "route": "turkey",
-     "var": "أسود / Siyah"
+     "var": "أسود / Siyah",
+     "ret": 1,
+     "rd": "2026-11-28"
     }
    ],
    "src": "Website",
@@ -181714,7 +181736,7 @@
   {
    "sku": "L-1800",
    "model": "L-1800",
-   "qty": 11,
+   "qty": 13,
    "cost": 18550,
    "created": "2026-02-23"
   },
@@ -216913,7 +216935,7 @@
   {
    "sku": "H-1971",
    "model": "H-1971",
-   "qty": 0,
+   "qty": 1,
    "cost": 28000,
    "created": "2026-11-14"
   },
@@ -217859,7 +217881,7 @@
   {
    "sku": "H-1978",
    "model": "H-1978",
-   "qty": 0,
+   "qty": 1,
    "cost": 38500,
    "created": "2026-11-19"
   },
