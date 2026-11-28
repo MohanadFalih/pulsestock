@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-28T13:03:59.231961+00:00",
+ "syncedAt": "2026-11-28T13:27:47.319414+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -211,11 +211,11 @@
    "firstOrderDate": "2026-11-28",
    "lastOrderDate": "2026-11-28",
    "orders": 1,
-   "units": 3,
-   "revenue": 255000,
+   "units": 2,
+   "revenue": 170000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 85000.0,
    "orderVelocity7d": 0.14,
@@ -1147,27 +1147,27 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-25",
    "firstOrderDate": "2026-11-25",
-   "lastOrderDate": "2026-11-27",
-   "orders": 3,
-   "units": 3,
-   "revenue": 336000,
+   "lastOrderDate": "2026-11-28",
+   "orders": 4,
+   "units": 4,
+   "revenue": 448000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 112000.0,
-   "orderVelocity7d": 0.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 0.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 207,
-    "lastChecked": "2026-11-27T13:01:34Z",
+    "qty": 206,
+    "lastChecked": "2026-11-28T13:18:46Z",
     "source": "api",
     "status": "available",
     "variants": [
      {
       "color": "نيلي / Laci",
       "size": "4",
-      "qty": 16,
+      "qty": 15,
       "product_id": 736429
      },
      {
@@ -46141,8 +46141,8 @@
    "7693": {
     "2026-11-28": [
      1,
-     3,
-     255000
+     2,
+     170000
     ]
    },
    "7689": {
@@ -46169,6 +46169,11 @@
      2,
      2,
      224000
+    ],
+    "2026-11-28": [
+     1,
+     1,
+     112000
     ]
    },
    "7668": {
@@ -62722,10 +62727,31 @@
    "2026-11-25": 45,
    "2026-11-26": 39,
    "2026-11-27": 46,
-   "2026-11-28": 25
+   "2026-11-28": 26
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35521",
+   "d": "2026-11-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "T-8044",
+     "pid": 736429,
+     "qty": 1,
+     "price": 112000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "نيلي / Laci, 4"
+    }
+   ],
+   "src": "Facebook",
+   "ful": "turkey"
+  },
   {
    "id": "S35520",
    "d": "2026-11-28",
@@ -63044,7 +63070,7 @@
     {
      "sku": "H-1985",
      "pid": 736771,
-     "qty": 1,
+     "qty": 0,
      "price": 85000,
      "discPct": 0,
      "del": 0,
