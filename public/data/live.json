@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-28T06:33:58.134342+00:00",
+ "syncedAt": "2026-11-28T07:03:27.951013+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -5411,17 +5411,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-11-15",
    "firstOrderDate": "2026-11-16",
-   "lastOrderDate": "2026-11-26",
-   "orders": 8,
-   "units": 8,
-   "revenue": 632000,
+   "lastOrderDate": "2026-11-28",
+   "orders": 9,
+   "units": 9,
+   "revenue": 711000,
    "delivered": 4,
    "returned": 0,
    "unitsBoughtFromSupplier": 8,
    "returnedStock": 0,
    "unitPrice": 79000.0,
-   "orderVelocity7d": 0.57,
-   "daysSinceLastOrder": 2,
+   "orderVelocity7d": 0.71,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -9740,20 +9740,20 @@
    "sku": "M-257NZRK1200",
    "category": "All",
    "supplier": null,
-   "stage": "selling-returns",
+   "stage": "selling",
    "odooCreatedDate": "2026-11-04",
    "firstOrderDate": "2026-11-04",
-   "lastOrderDate": "2026-11-16",
-   "orders": 10,
-   "units": 11,
-   "revenue": 836000,
+   "lastOrderDate": "2026-11-28",
+   "orders": 11,
+   "units": 12,
+   "revenue": 912000,
    "delivered": 10,
    "returned": 3,
    "unitsBoughtFromSupplier": 10,
    "returnedStock": 3,
    "unitPrice": 76000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
+   "orderVelocity7d": 0.14,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -15104,17 +15104,17 @@
    "stage": "ads-live",
    "odooCreatedDate": "2026-10-19",
    "firstOrderDate": "2026-10-22",
-   "lastOrderDate": "2026-11-27",
-   "orders": 91,
-   "units": 91,
-   "revenue": -616751,
+   "lastOrderDate": "2026-11-28",
+   "orders": 92,
+   "units": 92,
+   "revenue": -621251,
    "delivered": 0,
    "returned": 0,
    "unitsBoughtFromSupplier": 0,
    "returnedStock": 0,
    "unitPrice": null,
-   "orderVelocity7d": 3.43,
-   "daysSinceLastOrder": 1,
+   "orderVelocity7d": 3.57,
+   "daysSinceLastOrder": 0,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -46755,6 +46755,11 @@
      2,
      2,
      158000
+    ],
+    "2026-11-28": [
+     1,
+     1,
+     79000
     ]
    },
    "7581": {
@@ -47645,6 +47650,11 @@
      76000
     ],
     "2026-11-16": [
+     1,
+     1,
+     76000
+    ],
+    "2026-11-28": [
      1,
      1,
      76000
@@ -48944,6 +48954,11 @@
      3,
      3,
      -40000
+    ],
+    "2026-11-28": [
+     1,
+     1,
+     -4500
     ]
    },
    "7436": {
@@ -62599,10 +62614,69 @@
    "2026-11-25": 45,
    "2026-11-26": 39,
    "2026-11-27": 45,
-   "2026-11-28": 4
+   "2026-11-28": 6
   }
  },
  "ordersDetail": [
+  {
+   "id": "S35499",
+   "d": "2026-11-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-257NZRK1200",
+     "pid": 732729,
+     "qty": 1,
+     "price": 76000,
+     "discPct": 0,
+     "del": 0,
+     "var": "رصاصي فاتح / Gri, 3"
+    },
+    {
+     "sku": "H-1980",
+     "pid": 735694,
+     "qty": 1,
+     "price": 80000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "قهوائي / Kahve, 48"
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
+  {
+   "id": "S35498",
+   "d": "2026-11-28",
+   "st": "sale",
+   "fee": 5000,
+   "disc": 0,
+   "lines": [
+    {
+     "sku": "M-5678ZNNK1102",
+     "pid": 734379,
+     "qty": 1,
+     "price": 79000,
+     "discPct": 0,
+     "del": 0,
+     "route": "turkey",
+     "var": "أسود / Siyah, 2"
+    },
+    {
+     "sku": "خصم الرصيد الترحيبي — حملة الاستعادة",
+     "pid": 731683,
+     "qty": 1,
+     "price": -4500,
+     "discPct": 0,
+     "del": 0
+    }
+   ],
+   "src": "Instagram",
+   "ful": "turkey"
+  },
   {
    "id": "S35497",
    "d": "2026-11-28",
