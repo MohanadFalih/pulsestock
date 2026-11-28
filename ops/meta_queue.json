@@ -682,6 +682,84 @@
    "target": "120253585987280723",
    "fields": "id,name,creative{id,object_story_id,degrees_of_freedom_spec,asset_feed_spec{images,videos,optimization_type}}",
    "why": "read-only: why IG ad image is cropped"
+  },
+  {
+   "id": "2026-11-28-pause-120253644464120723",
+   "op": "pause",
+   "target": "120253644464120723",
+   "why": "rule 3: TEST L-0665 day 3, 13.0$, 0 counted"
+  },
+  {
+   "id": "2026-11-28-pause-120253644522770723",
+   "op": "pause",
+   "target": "120253644522770723",
+   "why": "rule 3: TEST M-2183 day 3, 12.5$, 0 counted"
+  },
+  {
+   "id": "2026-11-28-pause-120253644489390723",
+   "op": "pause",
+   "target": "120253644489390723",
+   "why": "rule 3: TEST T-8003 day 3, 13.3$, 0 counted"
+  },
+  {
+   "id": "2026-11-28-pause-120253644814650723",
+   "op": "pause",
+   "target": "120253644814650723",
+   "why": "rule 5: TEST M-5718 — SCALE spent 9.7$ (>2$)"
+  },
+  {
+   "id": "2026-11-28-pause-120253630865630723",
+   "op": "pause",
+   "target": "120253630865630723",
+   "why": "rule 6 guard: H-1980 7d cost/piece inf > BE 18.5$"
+  },
+  {
+   "id": "2026-11-28-pause-120253615384980723",
+   "op": "pause",
+   "target": "120253615384980723",
+   "why": "rule 6 guard: M-5678 7d cost/piece 22.5$ > BE 16.3$"
+  },
+  {
+   "id": "2026-11-28-n-status-120253644464120723",
+   "op": "raw",
+   "target": "120253644464120723",
+   "fields": "id,name,effective_status",
+   "why": "read-only: confirm pause"
+  },
+  {
+   "id": "2026-11-28-n-status-120253644522770723",
+   "op": "raw",
+   "target": "120253644522770723",
+   "fields": "id,name,effective_status",
+   "why": "read-only: confirm pause"
+  },
+  {
+   "id": "2026-11-28-n-status-120253644489390723",
+   "op": "raw",
+   "target": "120253644489390723",
+   "fields": "id,name,effective_status",
+   "why": "read-only: confirm pause"
+  },
+  {
+   "id": "2026-11-28-n-status-120253644814650723",
+   "op": "raw",
+   "target": "120253644814650723",
+   "fields": "id,name,effective_status",
+   "why": "read-only: confirm pause"
+  },
+  {
+   "id": "2026-11-28-n-status-120253630865630723",
+   "op": "raw",
+   "target": "120253630865630723",
+   "fields": "id,name,effective_status",
+   "why": "read-only: confirm pause"
+  },
+  {
+   "id": "2026-11-28-n-status-120253615384980723",
+   "op": "raw",
+   "target": "120253615384980723",
+   "fields": "id,name,effective_status",
+   "why": "read-only: confirm pause"
   }
  ]
 }
