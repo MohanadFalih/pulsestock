@@ -654,6 +654,13 @@
    "target": "act_2373500359518271",
    "fields": "account_status,balance",
    "why": "read-only: confirm payment cleared"
+  },
+  {
+   "id": "2026-11-28-business-id",
+   "op": "raw",
+   "target": "act_2373500359518271",
+   "fields": "business{id,name}",
+   "why": "read-only: business id for settings link"
   }
  ]
 }
