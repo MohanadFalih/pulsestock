@@ -1,5 +1,5 @@
 {
- "syncedAt": "2026-11-28T11:04:08.371923+00:00",
+ "syncedAt": "2026-11-28T11:33:57.440967+00:00",
  "currency": "IQD",
  "source": "odoo-live",
  "tz": "Asia/Baghdad",
@@ -1747,19 +1747,19 @@
    "odooCreatedDate": "2026-11-23",
    "firstOrderDate": "2026-11-24",
    "lastOrderDate": "2026-11-28",
-   "orders": 33,
-   "units": 36,
-   "revenue": 2196000,
+   "orders": 34,
+   "units": 37,
+   "revenue": 2257000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 36,
+   "unitsBoughtFromSupplier": 37,
    "returnedStock": 0,
    "unitPrice": 61000.0,
-   "orderVelocity7d": 4.71,
+   "orderVelocity7d": 4.86,
    "daysSinceLastOrder": 0,
    "supplierStock": {
-    "qty": 140,
-    "lastChecked": "2026-11-28T10:31:46Z",
+    "qty": 138,
+    "lastChecked": "2026-11-28T11:09:31Z",
     "source": "api",
     "status": "available",
     "variants": [
@@ -1784,7 +1784,7 @@
      {
       "color": "خاكي / Haki",
       "size": "1",
-      "qty": 11,
+      "qty": 10,
       "product_id": 736265
      },
      {
@@ -1802,7 +1802,7 @@
      {
       "color": "أحمر / Bordo",
       "size": "1",
-      "qty": 17,
+      "qty": 16,
       "product_id": 736268
      },
      {
@@ -2245,7 +2245,7 @@
    "revenue": 415000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 4,
+   "unitsBoughtFromSupplier": 5,
    "returnedStock": 0,
    "unitPrice": 83000.0,
    "orderVelocity7d": 0.71,
@@ -3113,7 +3113,7 @@
    "revenue": 198000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 2,
    "returnedStock": 0,
    "unitPrice": 99000.0,
    "orderVelocity7d": 0.14,
@@ -4821,7 +4821,7 @@
    "revenue": 324000,
    "delivered": 1,
    "returned": 0,
-   "unitsBoughtFromSupplier": 3,
+   "unitsBoughtFromSupplier": 4,
    "returnedStock": 0,
    "unitPrice": 81000.0,
    "orderVelocity7d": 0.43,
@@ -4849,7 +4849,7 @@
    "revenue": 92000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 92000.0,
    "orderVelocity7d": 0.14,
@@ -5417,7 +5417,7 @@
    "revenue": 711000,
    "delivered": 4,
    "returned": 0,
-   "unitsBoughtFromSupplier": 8,
+   "unitsBoughtFromSupplier": 9,
    "returnedStock": 0,
    "unitPrice": 79000.0,
    "orderVelocity7d": 0.71,
@@ -7374,7 +7374,7 @@
    "revenue": 68000,
    "delivered": 0,
    "returned": 0,
-   "unitsBoughtFromSupplier": 0,
+   "unitsBoughtFromSupplier": 1,
    "returnedStock": 0,
    "unitPrice": 68000.0,
    "orderVelocity7d": 0.14,
@@ -43987,6 +43987,34 @@
    }
   },
   {
+   "odooId": 4744,
+   "name": "L-2023",
+   "sku": "L-2023",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2026-01-14",
+   "lastOrderDate": "2026-11-20",
+   "orders": 3,
+   "units": 3,
+   "revenue": 98000,
+   "delivered": 3,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 1,
+   "returnedStock": 5,
+   "unitPrice": 69000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 8,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
    "odooId": 4747,
    "name": "L-5015",
    "sku": "L-5015",
@@ -44006,6 +44034,118 @@
    "unitPrice": 31000.0,
    "orderVelocity7d": 0.0,
    "daysSinceLastOrder": 26,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4748,
+   "name": "L-2050",
+   "sku": "L-2050",
+   "category": "Ferace",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-09-14",
+   "orders": 237,
+   "units": 268,
+   "revenue": 9364000,
+   "delivered": 264,
+   "returned": 89,
+   "unitsBoughtFromSupplier": 172,
+   "returnedStock": 3,
+   "unitPrice": 62000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 75,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4739,
+   "name": "T-6799",
+   "sku": "T-6799",
+   "category": "All",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-12-02",
+   "lastOrderDate": "2026-10-22",
+   "orders": 3,
+   "units": 3,
+   "revenue": 82000,
+   "delivered": 3,
+   "returned": 1,
+   "unitsBoughtFromSupplier": 0,
+   "returnedStock": 0,
+   "unitPrice": 76000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 37,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4740,
+   "name": "T-6800",
+   "sku": "T-6800",
+   "category": "All",
+   "supplier": null,
+   "stage": "selling-returns",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-08",
+   "lastOrderDate": "2026-11-16",
+   "orders": 119,
+   "units": 122,
+   "revenue": 5735000,
+   "delivered": 118,
+   "returned": 26,
+   "unitsBoughtFromSupplier": 93,
+   "returnedStock": 1,
+   "unitPrice": 41000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 12,
+   "supplierStock": {
+    "qty": null,
+    "lastChecked": null,
+    "source": "manual",
+    "status": null,
+    "variants": []
+   }
+  },
+  {
+   "odooId": 4738,
+   "name": "T-6798",
+   "sku": "T-6798",
+   "category": "All",
+   "supplier": null,
+   "stage": "completed",
+   "odooCreatedDate": "2025-05-26",
+   "firstOrderDate": "2025-07-07",
+   "lastOrderDate": "2026-11-07",
+   "orders": 23,
+   "units": 23,
+   "revenue": 1121000,
+   "delivered": 22,
+   "returned": 4,
+   "unitsBoughtFromSupplier": 8,
+   "returnedStock": 0,
+   "unitPrice": 78000.0,
+   "orderVelocity7d": 0.0,
+   "daysSinceLastOrder": 21,
    "supplierStock": {
     "qty": null,
     "lastChecked": null,
@@ -44161,146 +44301,6 @@
       "in_odoo": null
      }
     ]
-   }
-  },
-  {
-   "odooId": 4738,
-   "name": "T-6798",
-   "sku": "T-6798",
-   "category": "All",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-11-07",
-   "orders": 23,
-   "units": 23,
-   "revenue": 1121000,
-   "delivered": 22,
-   "returned": 4,
-   "unitsBoughtFromSupplier": 8,
-   "returnedStock": 0,
-   "unitPrice": 78000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 21,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4739,
-   "name": "T-6799",
-   "sku": "T-6799",
-   "category": "All",
-   "supplier": null,
-   "stage": "completed",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-12-02",
-   "lastOrderDate": "2026-10-22",
-   "orders": 3,
-   "units": 3,
-   "revenue": 82000,
-   "delivered": 3,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 0,
-   "returnedStock": 0,
-   "unitPrice": 76000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 37,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4744,
-   "name": "L-2023",
-   "sku": "L-2023",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2026-01-14",
-   "lastOrderDate": "2026-11-20",
-   "orders": 3,
-   "units": 3,
-   "revenue": 98000,
-   "delivered": 3,
-   "returned": 1,
-   "unitsBoughtFromSupplier": 1,
-   "returnedStock": 5,
-   "unitPrice": 69000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 8,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4740,
-   "name": "T-6800",
-   "sku": "T-6800",
-   "category": "All",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-08",
-   "lastOrderDate": "2026-11-16",
-   "orders": 119,
-   "units": 122,
-   "revenue": 5735000,
-   "delivered": 118,
-   "returned": 26,
-   "unitsBoughtFromSupplier": 93,
-   "returnedStock": 1,
-   "unitPrice": 41000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 12,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
-   }
-  },
-  {
-   "odooId": 4748,
-   "name": "L-2050",
-   "sku": "L-2050",
-   "category": "Ferace",
-   "supplier": null,
-   "stage": "selling-returns",
-   "odooCreatedDate": "2025-05-26",
-   "firstOrderDate": "2025-07-07",
-   "lastOrderDate": "2026-09-14",
-   "orders": 237,
-   "units": 268,
-   "revenue": 9364000,
-   "delivered": 264,
-   "returned": 89,
-   "unitsBoughtFromSupplier": 172,
-   "returnedStock": 3,
-   "unitPrice": 62000.0,
-   "orderVelocity7d": 0.0,
-   "daysSinceLastOrder": 75,
-   "supplierStock": {
-    "qty": null,
-    "lastChecked": null,
-    "source": "manual",
-    "status": null,
-    "variants": []
    }
   },
   {
@@ -46221,9 +46221,9 @@
      488000
     ],
     "2026-11-28": [
-     2,
      3,
-     183000
+     4,
+     244000
     ]
    },
    "7658": {
@@ -61601,6 +61601,13 @@
      25000
     ]
    },
+   "4744": {
+    "2026-11-20": [
+     1,
+     1,
+     25000
+    ]
+   },
    "4747": {
     "2026-09-12": [
      1,
@@ -61633,6 +61640,49 @@
      25000
     ]
    },
+   "4748": {
+    "2026-09-13": [
+     1,
+     1,
+     30000
+    ],
+    "2026-09-14": [
+     1,
+     1,
+     30000
+    ]
+   },
+   "4739": {
+    "2026-10-22": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4740": {
+    "2026-09-24": [
+     1,
+     1,
+     41000
+    ],
+    "2026-11-16": [
+     1,
+     1,
+     25000
+    ]
+   },
+   "4738": {
+    "2026-09-27": [
+     1,
+     1,
+     41000
+    ],
+    "2026-11-07": [
+     1,
+     1,
+     25000
+    ]
+   },
    "4749": {
     "2026-09-06": [
      1,
@@ -61653,56 +61703,6 @@
      1,
      0,
      0
-    ]
-   },
-   "4738": {
-    "2026-09-27": [
-     1,
-     1,
-     41000
-    ],
-    "2026-11-07": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4739": {
-    "2026-10-22": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4744": {
-    "2026-11-20": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4740": {
-    "2026-09-24": [
-     1,
-     1,
-     41000
-    ],
-    "2026-11-16": [
-     1,
-     1,
-     25000
-    ]
-   },
-   "4748": {
-    "2026-09-13": [
-     1,
-     1,
-     30000
-    ],
-    "2026-09-14": [
-     1,
-     1,
-     30000
     ]
    },
    "4610": {
@@ -72136,6 +72136,7 @@
      "var": "نيلي / Laci, 40"
     }
    ],
+   "pd": "2026-11-28",
    "src": "Facebook",
    "ful": "محمود"
   },
@@ -82260,6 +82261,7 @@
      "var": "فيزون / Vizon"
     }
    ],
+   "pd": "2026-11-28",
    "src": "Instagram",
    "ful": "محمود"
   },
@@ -237240,9 +237242,8 @@
    "sku": "M-045ZMRK1203",
    "model": "M-045ZMRK1203",
    "qty": 0,
-   "cost": 27200,
-   "created": "2026-11-24",
-   "costSrc": "vendor"
+   "cost": 26880,
+   "created": "2026-11-24"
   },
   {
    "sku": "M-045ZMRK1203",
@@ -256901,9 +256902,8 @@
    "sku": "M-5678ZNNK1102",
    "model": "M-5678ZNNK1102",
    "qty": 0,
-   "cost": 38250,
-   "created": "2026-11-15",
-   "costSrc": "vendor"
+   "cost": 37800,
+   "created": "2026-11-15"
   },
   {
    "sku": "M-5678ZNNK1102",
@@ -256916,9 +256916,8 @@
    "sku": "M-5678ZNNK1102",
    "model": "M-5678ZNNK1102",
    "qty": 0,
-   "cost": 38250,
-   "created": "2026-11-15",
-   "costSrc": "vendor"
+   "cost": 37800,
+   "created": "2026-11-15"
   },
   {
    "sku": "M-5678ZNNK1102",
@@ -257463,9 +257462,8 @@
    "sku": "M-5718ZNNK1102",
    "model": "M-5718ZNNK1102",
    "qty": 0,
-   "cost": 42500,
-   "created": "2026-11-22",
-   "costSrc": "vendor"
+   "cost": 42000,
+   "created": "2026-11-22"
   },
   {
    "sku": "M-5718ZNNK1102",
@@ -258682,9 +258680,8 @@
    "sku": "M-6328BSK463",
    "model": "M-6328BSK463",
    "qty": 0,
-   "cost": 62333,
-   "created": "2026-11-16",
-   "costSrc": "vendor"
+   "cost": 61600,
+   "created": "2026-11-16"
   },
   {
    "sku": "M-6328BSK463",
@@ -260981,9 +260978,8 @@
    "sku": "M-803MRK805",
    "model": "M-803MRK805",
    "qty": 0,
-   "cost": 33150,
-   "created": "2026-11-07",
-   "costSrc": "vendor"
+   "cost": 36400,
+   "created": "2026-11-07"
   },
   {
    "sku": "M-803MRK805",
