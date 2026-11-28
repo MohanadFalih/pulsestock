@@ -86,7 +86,7 @@ export const RULES = {
     },
     {
       from: "2026-11-01",
-      salaries: 3_400_000, // fixed-salary staff in Baghdad (owner, 18 Nov 2026)
+      salaries: 3_000_000, // fixed-salary staff in Baghdad (owner, 18 + 28 Nov 2026)
       rent: 1_700_000,
       utilities: 160_000, // generator 100k + internet 60k
       other: 0, // other expenses + subscriptions: as posted in Odoo (otherFromOdoo)
