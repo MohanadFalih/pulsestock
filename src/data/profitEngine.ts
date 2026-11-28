@@ -95,8 +95,10 @@ export const RULES = {
       otherFromOdoo: true,
     },
   ],
-  /** Sales team commission per kept piece, IQD. */
+  /** Sales team commission per kept piece, IQD (see commissionFor). */
   commissionPerPiece: 1_500,
+  /** One-off rates by month (owner): November 2026 paid 1,800 as a bonus. */
+  commissionByMonth: { "2026-11": 1_800 } as Record<string, number>,
   /** Modaselvim (codes "M-", Turkey route, from 1 Nov 2026): the broker takes
    *  1$ per piece and local cargo in Turkey is ~1$ per 15-piece parcel,
    *  paid by card at 1,520 IQD/$ (~1,520 + ~100). Charged per piece ordered from Turkey — the piece is
@@ -782,6 +784,11 @@ export function emptyTotals(): Totals {
   };
 }
 
+/** Sales commission per kept piece on a given day (order day). */
+export function commissionFor(date: string): number {
+  return RULES.commissionByMonth[date.slice(0, 7)] ?? RULES.commissionPerPiece;
+}
+
 /** One day's totals in the chosen mode. */
 export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   const t = emptyTotals();
@@ -804,7 +811,8 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.shipping = d.shipping;
   t.pieces =
     d.keptQty + (p ? d.trPendQty * keep.turkey + d.stPendQty * keep.stock - d.riskQty : 0);
-  t.commission = t.pieces * RULES.commissionPerPiece;
+  const commissionRate = commissionFor(d.date);
+  t.commission = t.pieces * commissionRate;
   t.selvim = d.selvimQty * RULES.selvim.extraPerPieceIQD;
   t.fixed = { ...d.fixed };
   t.fixedTotal = FIXED_GROUPS.reduce((s, g) => s + d.fixed[g], 0);
@@ -819,7 +827,7 @@ export function dayTotals(d: DayRaw, keep: KeepRates, mode: Mode): Totals {
   t.stDelivery = t.delivery - t.trDelivery;
   t.stAds = d.stAdsIQD;
   t.trAds = t.ads - t.stAds;
-  t.trCommission = trPieces * RULES.commissionPerPiece;
+  t.trCommission = trPieces * commissionRate;
   t.stCommission = t.commission - t.trCommission;
   t.trContribution =
     t.trGross + t.trDelivery - t.trAds - t.shipping - t.trCommission - t.selvim;

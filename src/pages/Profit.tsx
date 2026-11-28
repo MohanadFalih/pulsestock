@@ -443,7 +443,7 @@ function Ladder({ t, model }: { t: Totals; model: ProfitModel }) {
     { label: "Meta ads", value: -t.ads },
     { label: "Cargo / shipping (Odoo)", value: -t.shipping },
     {
-      label: "Sales commission (1,500 / piece)",
+      label: "Sales commission (1,500 / piece; 1,800 in Nov 2026)",
       value: -t.commission,
       note: `${Math.round(t.pieces).toLocaleString("en-US")} pieces`,
     },
@@ -731,7 +731,7 @@ function Notes({ t, model }: { t: Totals; model: ProfitModel }) {
           "Ads: Meta daily spend × 1,380 IQD until 5 Oct 2026, × 1,600 from 6 Oct, × 1,520 from 1 Nov (card rate)",
           "Fixed costs per month until Oct 2026: salaries 4.4M · rent 1.7M · electricity, internet & subscriptions 670k · other 1M · Turkey agent 450k / week",
           "From Nov 2026: salaries 3.0M · rent 1.7M · generator & internet 160k · other & subscriptions = whatever Odoo posts on other expense accounts · Turkey agent 460k / week + Turkey running costs 1.36M — all spread evenly over the month's days",
-          "Cargo from Odoo (501115) on the day it is posted · sales commission 1,500 IQD per kept piece",
+          "Cargo from Odoo (501115) on the day it is posted · sales commission 1,500 IQD per kept piece (1,800 for November 2026 only)",
           "Modaselvim (M-, from 1 Nov 2026): broker 1$ + Turkish local cargo = 1,620 IQD per piece (card rate 1,520) ordered from Turkey, on top of the supplier cost in Odoo",
           `Orders older than ${RULES.matureAfterDays} days are final. Odoo marks an order delivered when it goes to the courier; projected mode removes the refusals still expected to come back`,
           h.syncedAt ? `Expenses & Meta synced ${new Date(h.syncedAt).toLocaleString("en-GB")}` : "Waiting for first sync",
