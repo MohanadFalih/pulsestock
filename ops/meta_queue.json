@@ -647,6 +647,13 @@
    "target": "act_2373500359518271",
    "fields": "account_status,disable_reason,balance,amount_spent,currency,is_prepay_account,funding_source_details",
    "why": "read-only: billing status after failed payment (owner report)"
+  },
+  {
+   "id": "2026-11-28-billing-check",
+   "op": "raw",
+   "target": "act_2373500359518271",
+   "fields": "account_status,balance",
+   "why": "read-only: confirm payment cleared"
   }
  ]
 }
