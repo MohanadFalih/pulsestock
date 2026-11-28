@@ -3485,5 +3485,15 @@
    "id": "act_2373500359518271"
   },
   "result": "done"
+ },
+ {
+  "id": "2026-11-28-business-id",
+  "op": "raw",
+  "target": "act_2373500359518271",
+  "why": "read-only: business id for settings link",
+  "at": "2026-11-28T13:48+03:00",
+  "day": "2026-11-28",
+  "result": "error",
+  "reason": "(#100) Requires business_management permission to access the field."
  }
 ]
